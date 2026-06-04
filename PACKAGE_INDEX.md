@@ -94,6 +94,7 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 15. `.github/ISSUE_TEMPLATE/documentation-improvement.yml`
 16. `.github/ISSUE_TEMPLATE/governance-safety-review.yml`
 17. `.github/ISSUE_TEMPLATE/accessibility-mobile.yml`
+18. `docs/github-templates/` public mirrors for viewing the GitHub templates in the static site.
 
 ### For Governance/Data Review
 

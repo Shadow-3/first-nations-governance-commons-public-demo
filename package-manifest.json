@@ -113,11 +113,19 @@
     "issueTriageBoard": "data/issue-triage-board-v1.4.csv",
     "maintainerResponsibilityMatrix": "data/maintainer-responsibility-matrix-v1.4.csv",
     "pullRequestTemplate": ".github/PULL_REQUEST_TEMPLATE.md",
+    "pullRequestTemplateMirror": "docs/github-templates/PULL_REQUEST_TEMPLATE.md",
     "issueTemplates": [
       ".github/ISSUE_TEMPLATE/fake-data-sandbox-task.yml",
       ".github/ISSUE_TEMPLATE/documentation-improvement.yml",
       ".github/ISSUE_TEMPLATE/governance-safety-review.yml",
       ".github/ISSUE_TEMPLATE/accessibility-mobile.yml"
+    ],
+    "issueTemplateMirrors": [
+      "docs/github-templates/ISSUE_TEMPLATE/config.yml",
+      "docs/github-templates/ISSUE_TEMPLATE/fake-data-sandbox-task.yml",
+      "docs/github-templates/ISSUE_TEMPLATE/documentation-improvement.yml",
+      "docs/github-templates/ISSUE_TEMPLATE/governance-safety-review.yml",
+      "docs/github-templates/ISSUE_TEMPLATE/accessibility-mobile.yml"
     ]
   },
   "decisionRoom": {
@@ -188,12 +196,12 @@
       "data/contributor-roadmap-v1.4.csv",
       "data/issue-triage-board-v1.4.csv",
       "data/maintainer-responsibility-matrix-v1.4.csv",
-      ".github/PULL_REQUEST_TEMPLATE.md",
-      ".github/ISSUE_TEMPLATE/config.yml",
-      ".github/ISSUE_TEMPLATE/fake-data-sandbox-task.yml",
-      ".github/ISSUE_TEMPLATE/documentation-improvement.yml",
-      ".github/ISSUE_TEMPLATE/governance-safety-review.yml",
-      ".github/ISSUE_TEMPLATE/accessibility-mobile.yml"
+      "docs/github-templates/PULL_REQUEST_TEMPLATE.md",
+      "docs/github-templates/ISSUE_TEMPLATE/config.yml",
+      "docs/github-templates/ISSUE_TEMPLATE/fake-data-sandbox-task.yml",
+      "docs/github-templates/ISSUE_TEMPLATE/documentation-improvement.yml",
+      "docs/github-templates/ISSUE_TEMPLATE/governance-safety-review.yml",
+      "docs/github-templates/ISSUE_TEMPLATE/accessibility-mobile.yml"
     ],
     "decisionPack": [
       "docs/decision-memo-v0.7.md",

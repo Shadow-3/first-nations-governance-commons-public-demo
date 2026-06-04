@@ -9,6 +9,7 @@ Mode: public demo with fake/sample data only
 - Added `contributor-room.html` as a public Contributor Room for the open-source/Wikipedia-style model.
 - Added root repository files: `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `GOVERNANCE.md`, `ROADMAP.md`, `SECURITY.md`, and `SUPPORT.md`.
 - Added GitHub issue templates and pull request template.
+- Added public mirrors of the GitHub templates under `docs/github-templates/` so the static document viewer can display them while the real `.github` templates remain available to GitHub.
 - Added contributor model, maintainer charter, community authority boundary, repo setup checklist, and first sandbox sprint board docs.
 - Added contributor roadmap, issue triage board, and maintainer responsibility matrix CSVs.
 - Added Contributor Room links from the demo, Action Center, Decision Room, Builder Room, Review Pack, and document viewer.
@@ -23,4 +24,3 @@ Mode: public demo with fake/sample data only
 ## Release Rule
 
 Open-source the infrastructure. Do not open-source community authority.
-

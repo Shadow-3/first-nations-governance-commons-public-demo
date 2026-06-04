@@ -1,0 +1,27 @@
+name: Governance or safety review
+description: Flag a governance, data, privacy, cultural safety, or public-claim concern.
+title: "[Safety] "
+labels: ["governance", "safety"]
+body:
+  - type: textarea
+    id: concern
+    attributes:
+      label: Concern
+      description: Describe the concern without disclosing private, cultural, personal, or sensitive information.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Fake-data boundary
+        - Public claim or wording
+        - Privacy
+        - Data sovereignty
+        - Cultural safety
+        - Hosting/support
+        - Other
+    validations:
+      required: true
+

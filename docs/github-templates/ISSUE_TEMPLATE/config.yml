@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Sensitive or private concern
+    url: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
+    about: Do not post private, cultural, personal, or sensitive material in a public issue. Use a private maintainer channel instead.
+

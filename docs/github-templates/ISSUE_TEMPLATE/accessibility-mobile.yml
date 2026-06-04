@@ -1,0 +1,22 @@
+name: Accessibility or mobile issue
+description: Report a usability, accessibility, or responsive layout issue.
+title: "[Access] "
+labels: ["accessibility", "mobile"]
+body:
+  - type: textarea
+    id: issue
+    attributes:
+      label: Issue
+      description: What is hard to read, use, navigate, or understand?
+    validations:
+      required: true
+  - type: input
+    id: viewport
+    attributes:
+      label: Device or viewport
+      placeholder: "Example: iPhone width 390px, desktop Chrome, screen reader"
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+

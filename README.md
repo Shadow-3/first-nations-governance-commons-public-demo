@@ -127,6 +127,7 @@ The demo shows:
 - `.github/ISSUE_TEMPLATE/documentation-improvement.yml`
 - `.github/ISSUE_TEMPLATE/governance-safety-review.yml`
 - `.github/ISSUE_TEMPLATE/accessibility-mobile.yml`
+- `docs/github-templates/` public mirrors of the GitHub templates for the document viewer.
 - `404.html`
 - `robots.txt`
 
