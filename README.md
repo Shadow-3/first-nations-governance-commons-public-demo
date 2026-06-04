@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v1.7
+Current package version: v1.8
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -28,6 +28,8 @@ Open `contributor-room.html` to use the Contributor Room for the open-source mai
 Open `sprint-room.html` to use the Sprint Room for the first fake-data Decidim sandbox issue board, sprint kickoff, evidence log, and RACI.
 
 Open `ops-room.html` to use the Sandbox Ops Room for run-day admin configuration, QA scenarios, evidence capture, risk controls, handover, and go/no-go status.
+
+Open `delivery-room.html` to use the Delivery Room for live sprint execution, blocker tracking, issue links, local status simulation, and sprint updates.
 
 The demo shows:
 
@@ -67,6 +69,9 @@ The demo shows:
 - `docs/public-demo-release-notes-v1.5.md`
 - `docs/public-demo-release-notes-v1.6.md`
 - `docs/public-demo-release-notes-v1.7.md`
+- `docs/public-demo-release-notes-v1.8.md`
+- `docs/sprint-execution-playbook-v1.8.md`
+- `docs/github-projects-scope-fix-v1.8.md`
 - `docs/github-sprint-launch-report-v1.7.md`
 - `docs/sandbox-ops-runbook-v1.6.md`
 - `docs/decidim-admin-configuration-checklist-v1.6.md`
@@ -130,6 +135,8 @@ The demo shows:
 - `data/ops-readiness-manifest-v1.6.json`
 - `data/github-sprint-live-issue-map-v1.7.csv`
 - `data/github-sprint-label-map-v1.7.csv`
+- `data/sprint-execution-tracker-v1.8.csv`
+- `data/delivery-readiness-snapshot-v1.8.json`
 - `data/sandbox-task-board.csv`
 - `data/decision-log-template.csv`
 - `PACKAGE_INDEX.md`
@@ -141,6 +148,7 @@ The demo shows:
 - `contributor-room.html`
 - `sprint-room.html`
 - `ops-room.html`
+- `delivery-room.html`
 - `document.html`
 - `CONTRIBUTING.md`
 - `CODE_OF_CONDUCT.md`
@@ -388,9 +396,27 @@ The v1.7 package records live GitHub sprint setup:
 
 Use this version to work from the live GitHub issues and milestone. The fallback board is the milestone plus status labels until native GitHub Projects access is available.
 
+## v1.8 Delivery Room And Sprint Execution Upgrade
+
+The v1.8 package adds a Delivery Room that turns the live GitHub sprint setup into a practical execution cockpit:
+
+- Live sprint board snapshot with blocked, ready, in-progress, review, and done columns.
+- Real GitHub issue links for all 12 sprint issues.
+- Local-only status simulation for planning and sprint updates.
+- Current blocker panel for the GitHub Projects scope issue.
+- Day-one run order for Barayamal / Dean Foley and maintainers.
+- Filters by status, lane, and search.
+- Downloadable generated sprint update.
+- Sprint execution playbook.
+- GitHub Projects scope-fix note.
+- Execution tracker CSV.
+- Delivery readiness snapshot JSON.
+
+Use this version to run the first fake-data Decidim sandbox sprint from the live milestone. GitHub remains the source of truth; Delivery Room is the public cockpit and update generator.
+
 ## Next Build Step
 
-Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, and Ops Room to configure and operate a fake-data Decidim sandbox:
+Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, and Delivery Room to configure and operate a fake-data Decidim sandbox:
 
 - One organisation.
 - One public assembly.

@@ -1,0 +1,37 @@
+{
+  "version": "1.8",
+  "date": "2026-06-04",
+  "mode": "public_demo_fake_sample_data_only",
+  "repository": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
+  "milestone": {
+    "title": "First fake-data Decidim sandbox sprint",
+    "url": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo/milestone/1",
+    "dueDate": "2026-06-17",
+    "openIssues": 12,
+    "closedIssues": 0
+  },
+  "statusCounts": {
+    "blocked": 1,
+    "ready": 11,
+    "inProgress": 0,
+    "review": 0,
+    "done": 0
+  },
+  "blockers": [
+    {
+      "issueId": "S-001",
+      "issueUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo/issues/1",
+      "reason": "Native GitHub Projects board creation needs project scope.",
+      "fallback": "Use milestone plus status labels."
+    }
+  ],
+  "runOrder": [
+    "Resolve or consciously defer S-001.",
+    "Complete S-002 before any Decidim setup work.",
+    "Complete S-003 before S-004.",
+    "Complete S-004 before Decidim configuration issues.",
+    "Complete S-005 through S-008 as the core sandbox build.",
+    "Complete S-009 through S-012 for QA, handover, and evidence."
+  ],
+  "safetyRule": "Fake/sample data only. No real community records, member lists, cultural material, eligibility data, voting data, or real decision outcomes."
+}

@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delivery Room - First Nations Governance Commons</title>
+  <meta name="description" content="Delivery cockpit for the live fake-data Decidim sandbox sprint issues.">
+  <style>
+    :root {
+      --bg: #f6f7f5;
+      --surface: #ffffff;
+      --surface-2: #eef3ef;
+      --text: #1d2523;
+      --muted: #61706b;
+      --line: #d9e0dc;
+      --teal: #0d675f;
+      --teal-2: #e5f1ee;
+      --ochre: #b66a25;
+      --ochre-2: #fff2e5;
+      --green: #247654;
+      --green-2: #e7f4ed;
+      --red: #aa3d36;
+      --red-2: #fae9e7;
+      --amber: #8b691d;
+      --amber-2: #fff6d9;
+      --blue: #205d9b;
+      --blue-2: #e7f0fa;
+      --radius: 6px;
+      --shadow: 0 14px 36px rgba(18, 33, 29, 0.08);
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.45;
+    }
+
+    a { color: inherit; }
+    button,
+    input,
+    select { font: inherit; }
+
+    .topbar {
+      min-height: 72px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .brand {
+      display: flex;
+      flex: 1 1 220px;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius);
+      background: var(--teal);
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .brand strong,
+    .brand span {
+      display: block;
+    }
+
+    .brand strong {
+      font-size: 15px;
+      line-height: 1.1;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .label {
+      width: fit-content;
+      color: var(--ochre);
+      background: var(--ochre-2);
+      border: 1px solid #f1d7b9;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .btn {
+      min-height: 38px;
+      border-radius: var(--radius);
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .btn.primary {
+      background: var(--teal);
+      color: #fff;
+      border-color: var(--teal);
+    }
+
+    .btn.small {
+      min-height: 31px;
+      padding: 6px 8px;
+      font-size: 12px;
+    }
+
+    .btn.linkish {
+      border-color: #c7dfda;
+      color: var(--teal);
+      background: var(--teal-2);
+    }
+
+    .topbar .btn,
+    .topbar .label {
+      flex: 0 0 auto;
+    }
+
+    main {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 28px 24px 44px;
+      display: grid;
+      gap: 22px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: end;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    h2,
+    h3 {
+      margin: 0;
+      letter-spacing: 0;
+    }
+
+    .intro p,
+    .metric span,
+    .issue-card p,
+    .resource span,
+    .run-step span,
+    .summary,
+    .board-empty {
+      color: var(--muted);
+    }
+
+    .intro p {
+      max-width: 900px;
+      margin: 12px 0 0;
+      font-size: 15px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .metric,
+    .panel,
+    .issue-card,
+    .resource,
+    .run-step,
+    .note {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      min-width: 0;
+    }
+
+    .metric {
+      padding: 16px;
+      min-height: 108px;
+      display: grid;
+      gap: 8px;
+      align-content: start;
+    }
+
+    .metric strong {
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 14px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 10px;
+    }
+
+    .filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .filter,
+    .search {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text);
+      padding: 7px 10px;
+      font-size: 13px;
+      min-width: 170px;
+    }
+
+    .filter-btn {
+      min-height: 34px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--muted);
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .filter-btn.is-active {
+      color: var(--teal);
+      background: var(--teal-2);
+      border-color: #c8ded8;
+    }
+
+    .delivery-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(300px, 0.36fr);
+      gap: 14px;
+      align-items: start;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      align-items: start;
+    }
+
+    .column {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fbfcfb;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .column-head {
+      min-height: 58px;
+      padding: 12px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      background: var(--surface);
+    }
+
+    .column-head strong {
+      font-size: 13px;
+    }
+
+    .column-head span {
+      min-width: 26px;
+      min-height: 26px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--surface-2);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .column-body {
+      display: grid;
+      gap: 10px;
+      padding: 10px;
+      min-height: 170px;
+    }
+
+    .issue-card {
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+      box-shadow: none;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .issue-card h3 {
+      font-size: 14px;
+      line-height: 1.25;
+    }
+
+    .issue-card p {
+      margin: 0;
+      font-size: 12px;
+    }
+
+    .card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 8px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 900;
+      background: var(--surface-2);
+      white-space: nowrap;
+    }
+
+    .pill.setup { color: var(--teal); background: var(--teal-2); border-color: #c8ded8; }
+    .pill.config { color: var(--green); background: var(--green-2); border-color: #c7e4d5; }
+    .pill.safety { color: var(--red); background: var(--red-2); border-color: #e7c5c1; }
+    .pill.handover { color: var(--ochre); background: var(--ochre-2); border-color: #f1d7b9; }
+    .pill.blocked { color: var(--red); background: var(--red-2); border-color: #e7c5c1; }
+    .pill.ready { color: var(--teal); background: var(--teal-2); border-color: #c8ded8; }
+    .pill.progress { color: var(--blue); background: var(--blue-2); border-color: #c9dbed; }
+    .pill.review { color: var(--amber); background: var(--amber-2); border-color: #eadb9e; }
+    .pill.done { color: var(--green); background: var(--green-2); border-color: #c7e4d5; }
+
+    .rail {
+      display: grid;
+      gap: 12px;
+    }
+
+    .panel,
+    .note {
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .panel h2,
+    .note h2 {
+      font-size: 17px;
+    }
+
+    .summary {
+      margin: 0;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      font-size: 13px;
+    }
+
+    .run-list,
+    .resource-grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    .run-step {
+      padding: 12px;
+      display: grid;
+      grid-template-columns: 34px minmax(0, 1fr);
+      gap: 10px;
+      box-shadow: none;
+    }
+
+    .run-num {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius);
+      color: #fff;
+      background: var(--teal);
+      font-weight: 900;
+      font-size: 13px;
+    }
+
+    .run-step strong,
+    .run-step span {
+      display: block;
+    }
+
+    .run-step strong {
+      font-size: 13px;
+      line-height: 1.25;
+    }
+
+    .run-step span {
+      margin-top: 3px;
+      font-size: 12px;
+    }
+
+    .resource-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .resource {
+      min-height: 104px;
+      padding: 15px;
+      display: grid;
+      gap: 6px;
+      align-content: start;
+      text-decoration: none;
+    }
+
+    .resource strong,
+    .resource span {
+      display: block;
+      overflow-wrap: anywhere;
+    }
+
+    .resource span {
+      font-size: 13px;
+    }
+
+    .board-empty {
+      padding: 10px;
+      font-size: 12px;
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .toast {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      background: var(--text);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 11px 13px;
+      font-size: 13px;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      transform: translateY(8px);
+      transition: 180ms ease;
+      pointer-events: none;
+      z-index: 30;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 13px;
+      padding-top: 6px;
+    }
+
+    @media (max-width: 1180px) {
+      .intro,
+      .delivery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .actions,
+      .filters {
+        justify-content: flex-start;
+      }
+
+      .metrics {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .board {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .topbar {
+        padding: 12px 16px;
+      }
+
+      main {
+        padding: 20px 16px 34px;
+      }
+
+      .metrics,
+      .board,
+      .resource-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head,
+      .card-top {
+        display: grid;
+        align-items: start;
+      }
+
+      .btn,
+      .filter,
+      .search {
+        width: 100%;
+        white-space: normal;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">B</div>
+      <div>
+        <strong>Barayamal</strong>
+        <span>First Nations Governance Commons</span>
+      </div>
+    </div>
+    <a class="btn primary" href="decision-room.html">Decision Room</a>
+    <a class="btn primary" href="build-room.html">Builder Room</a>
+    <a class="btn primary" href="contributor-room.html">Contributor Room</a>
+    <a class="btn primary" href="sprint-room.html">Sprint Room</a>
+    <a class="btn primary" href="ops-room.html">Ops Room</a>
+    <a class="btn" href="next-steps.html">Action Center</a>
+    <a class="btn" href="index.html">Open Demo</a>
+    <a class="btn" href="docs-index.html">Review Pack</a>
+    <span class="label">Fake/sample data only</span>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <h1>Delivery Room</h1>
+        <p>Use this cockpit to run the live fake-data Decidim sandbox sprint from the GitHub milestone. It turns the v1.7 issue setup into a visible board, blocker panel, day-one run order, issue links, local status simulation, and downloadable sprint update.</p>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="https://github.com/Shadow-3/first-nations-governance-commons-public-demo/milestone/1">Open Milestone</a>
+        <button class="btn" id="downloadUpdate" type="button">Download Sprint Update</button>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Delivery Room metrics">
+      <div class="metric"><strong id="metricOpen">12</strong><span>open sprint issues in the live milestone snapshot.</span></div>
+      <div class="metric"><strong id="metricReady">11</strong><span>ready issues available for fake-data sandbox work.</span></div>
+      <div class="metric"><strong id="metricBlocked">1</strong><span>blocked issue: native GitHub Projects needs extra scope.</span></div>
+      <div class="metric"><strong id="metricDone">0</strong><span>completed issues in the current local board view.</span></div>
+      <div class="metric"><strong>17 Jun</strong><span>milestone due date shown by GitHub as 2026-06-17.</span></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Live Sprint Board Snapshot</h2>
+          <p class="summary">This static board starts from the live GitHub issue map. Status changes here are local-only planning simulations; use the issue links to update GitHub.</p>
+        </div>
+        <div class="filters" aria-label="Delivery filters">
+          <button class="filter-btn is-active" type="button" data-quick-status="all">All</button>
+          <button class="filter-btn" type="button" data-quick-status="blocked">Blocked</button>
+          <button class="filter-btn" type="button" data-quick-status="ready">Ready</button>
+          <select class="filter" id="laneFilter" aria-label="Filter by lane">
+            <option value="All">All lanes</option>
+            <option value="Setup">Setup</option>
+            <option value="Decidim configuration">Decidim configuration</option>
+            <option value="Safety QA">Safety QA</option>
+            <option value="Handover">Handover</option>
+          </select>
+          <input class="search" id="searchBox" type="search" placeholder="Search issues">
+        </div>
+      </div>
+      <div class="delivery-grid">
+        <div class="board" id="board"></div>
+        <aside class="rail">
+          <section class="panel">
+            <h2>Current Blocker</h2>
+            <p class="summary" id="blockerSummary"></p>
+            <a class="btn linkish" href="https://github.com/Shadow-3/first-nations-governance-commons-public-demo/issues/1">Open S-001</a>
+          </section>
+          <section class="panel">
+            <h2>Day-One Run Order</h2>
+            <div class="run-list" id="runOrder"></div>
+          </section>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Delivery Resources</h2>
+          <p class="summary">Open these through the public package or GitHub to keep the sprint moving.</p>
+        </div>
+      </div>
+      <div class="resource-grid">
+        <a class="resource" href="document.html?file=docs%2Fsprint-execution-playbook-v1.8.md"><strong>Execution playbook</strong><span>Daily sprint routine, status rules, fallback board process, and no-go controls.</span></a>
+        <a class="resource" href="document.html?file=docs%2Fgithub-projects-scope-fix-v1.8.md"><strong>Projects scope fix</strong><span>Exact GitHub CLI path for adding project scope and creating the native board later.</span></a>
+        <a class="resource" href="document.html?file=data%2Fsprint-execution-tracker-v1.8.csv"><strong>Execution tracker CSV</strong><span>Status, owner, evidence, next action, and issue URL snapshot for the 12 live issues.</span></a>
+        <a class="resource" href="document.html?file=data%2Fdelivery-readiness-snapshot-v1.8.json"><strong>Readiness snapshot</strong><span>Machine-readable metrics, blockers, run order, and safety rule.</span></a>
+        <a class="resource" href="document.html?file=docs%2Fgithub-sprint-launch-report-v1.7.md"><strong>Launch report</strong><span>Milestone, issue URLs, label setup, fallback board, and Projects blocker evidence.</span></a>
+        <a class="resource" href="ops-room.html"><strong>Ops Room</strong><span>Run-day admin configuration, QA, evidence, risk, handover, and go/no-go controls.</span></a>
+      </div>
+    </section>
+
+    <section class="note">
+      <h2>Generated Sprint Update</h2>
+      <p class="summary">Local-only update generated from the current board state and filters.</p>
+      <div class="summary" id="updatePreview"></div>
+    </section>
+
+    <footer>
+      Version v1.8. Initial developer/custodian: Barayamal / Dean Foley.
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const statusColumns = [
+      { key: "blocked", label: "Blocked" },
+      { key: "ready", label: "Ready" },
+      { key: "in-progress", label: "In Progress" },
+      { key: "review", label: "Review" },
+      { key: "done", label: "Done" }
+    ];
+
+    const issues = [
+      { id: "S-001", number: 1, lane: "Setup", title: "Create GitHub sprint board", url: "https://github.com/Shadow-3/first-nations-governance-commons-public-demo/issues/1", status: "blocked", labels: "sandbox;fake-data", next: "Refresh GitHub auth with Projects scope or continue using milestone and status labels", owner: "Barayamal / Dean Foley", evidence: "Project board URL or fallback status-label board confirmed" },
+      { id: "S-002", number: 2, lane: "Setup", title: "Confirm maintainer and contributor rules", url: "https://github.com/Shadow-3/first-nations-governance-commons-public-demo/issues/2", status: "ready", labels: "sandbox;governance", next: "Confirm CONTRIBUTING and fake-data boundary", owner: "Barayamal / Dean Foley", evidence: "Maintainer note confirming repo rules and fake-data-only boundary" },
+      { id: "S-003", number: 3, lane: "Setup", title: "Confirm Decidim hosting pathway", url: "https://github.com/Shadow-3/first-nations-governance-commons-public-demo/issues/3", status: "ready", labels: "sandbox;decidim-config", next: "Choose managed provider VPS Docker or developer-hosted sandbox", owner: "Initial developer", evidence: "Hosting choice recorded with support and backup notes" },
+      { id: "S-004", number: 4, lane: "Setup", title: "Install or provision Decidim sandbox", url: "https://github.com/Shadow-3/first-nations-governance-commons-public-demo/issues/4", status: "ready", labels: "sandbox;decidim-config", next: "Provision sandbox and confirm admin login", owner: "Initial developer", evidence: "Sandbox URL and admin login screenshot" },
+      { id: "S-005", number: 5, lane: "Decidim configuration", title: "Create organisation and public labels", url: "https://github.com/Shadow-3/first-nations-governance-commons-public-demo/issues/5", status: "ready", labels: "sandbox;decidim-config", next: "Configure organisation with fake-data warning", owner: "Initial developer", evidence: "Organisation admin screenshot and public warning screenshot" },
+      { id: "S-006", number: 6, lane: "Decidim configuration", title: "Create assembly and governance context", url: "https://github.com/Shadow-3/first-nations-governance-commons-public-demo/issues/6", status: "ready", labels: "sandbox;decidim-config", next: "Create sample assembly with draft-only authority language", owner: "Initial developer", evidence: "Assembly screenshot with authority boundary text" },
+      { id: "S-007", number: 7, lane: "Decidim configuration", title: "Create sample participatory process", url: "https://github.com/Shadow-3/first-nations-governance-commons-public-demo/issues/7", status: "ready", labels: "sandbox;decidim-config", next: "Create sample process and phases", owner: "Initial developer", evidence: "Process screenshot showing sample phases" },
+      { id: "S-008", number: 8, lane: "Decidim configuration", title: "Configure proposals meetings survey and accountability", url: "https://github.com/Shadow-3/first-nations-governance-commons-public-demo/issues/8", status: "ready", labels: "sandbox;decidim-config", next: "Configure core Decidim components with fake data", owner: "Initial developer", evidence: "Component screenshots for proposals, meetings, survey, and accountability" },
+      { id: "S-009", number: 9, lane: "Safety QA", title: "Run fake-data content audit", url: "https://github.com/Shadow-3/first-nations-governance-commons-public-demo/issues/9", status: "ready", labels: "safety;fake-data;qa", next: "Audit for real data cultural material and unsafe authority language", owner: "Maintainer", evidence: "Audit note confirming no real records or cultural material" },
+      { id: "S-010", number: 10, lane: "Safety QA", title: "Run mobile and accessibility check", url: "https://github.com/Shadow-3/first-nations-governance-commons-public-demo/issues/10", status: "ready", labels: "accessibility;mobile;qa", next: "Run mobile and accessibility checks", owner: "Maintainer", evidence: "Desktop and mobile screenshots plus keyboard/accessibility notes" },
+      { id: "S-011", number: 11, lane: "Handover", title: "Complete admin handover notes", url: "https://github.com/Shadow-3/first-nations-governance-commons-public-demo/issues/11", status: "ready", labels: "handover;sandbox;ops", next: "Record admin support backup access and handover notes", owner: "Initial developer", evidence: "Handover note with admin, support, and backup access boundaries" },
+      { id: "S-012", number: 12, lane: "Handover", title: "Record sprint evidence and known limitations", url: "https://github.com/Shadow-3/first-nations-governance-commons-public-demo/issues/12", status: "ready", labels: "handover;safety;ops", next: "Record screenshots QA results limitations and open risks", owner: "Maintainer", evidence: "Evidence log with screenshots, QA outcomes, limitations, and risks" }
+    ];
+
+    const runOrder = [
+      ["S-001", "Decide whether to refresh GitHub Projects scope now or keep using the milestone/status fallback board."],
+      ["S-002", "Confirm maintainer rules and fake-data boundary before any sandbox setup starts."],
+      ["S-003", "Choose the Decidim hosting pathway and support owner."],
+      ["S-004", "Provision the fake-data Decidim sandbox and capture admin access evidence."],
+      ["S-005 to S-008", "Configure organisation, assembly, process, and core components."],
+      ["S-009 to S-012", "Run content QA, mobile/accessibility checks, handover, and evidence logging."]
+    ];
+
+    const state = {
+      quickStatus: "all",
+      lane: "All",
+      query: ""
+    };
+
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      window.clearTimeout(showToast.timer);
+      showToast.timer = window.setTimeout(() => toast.classList.remove("show"), 1800);
+    }
+
+    function laneClass(lane) {
+      if (lane === "Decidim configuration") return "config";
+      if (lane === "Safety QA") return "safety";
+      return lane.toLowerCase();
+    }
+
+    function visibleIssues() {
+      const query = state.query.trim().toLowerCase();
+      return issues.filter(issue => {
+        const statusMatch = state.quickStatus === "all" || issue.status === state.quickStatus;
+        const laneMatch = state.lane === "All" || issue.lane === state.lane;
+        const queryMatch = !query || [issue.id, issue.title, issue.next, issue.owner, issue.labels].join(" ").toLowerCase().includes(query);
+        return statusMatch && laneMatch && queryMatch;
+      });
+    }
+
+    function countStatus(key) {
+      return issues.filter(issue => issue.status === key).length;
+    }
+
+    function renderMetrics() {
+      document.getElementById("metricOpen").textContent = issues.filter(issue => issue.status !== "done").length;
+      document.getElementById("metricReady").textContent = countStatus("ready");
+      document.getElementById("metricBlocked").textContent = countStatus("blocked");
+      document.getElementById("metricDone").textContent = countStatus("done");
+    }
+
+    function renderBoard() {
+      const filtered = visibleIssues();
+      const board = document.getElementById("board");
+      board.innerHTML = statusColumns.map(column => {
+        const columnIssues = filtered.filter(issue => issue.status === column.key);
+        const cards = columnIssues.map(issue => `
+          <article class="issue-card">
+            <div class="card-top">
+              <div>
+                <h3>${issue.id}: ${issue.title}</h3>
+                <p>${issue.owner}</p>
+              </div>
+              <span class="pill ${laneClass(issue.lane)}">${issue.lane}</span>
+            </div>
+            <p><strong>Next:</strong> ${issue.next}</p>
+            <p><strong>Evidence:</strong> ${issue.evidence}</p>
+            <p><strong>Labels:</strong> ${issue.labels}</p>
+            <div class="card-actions">
+              <a class="btn small linkish" href="${issue.url}">Open Issue #${issue.number}</a>
+              <button class="btn small" type="button" data-move="${issue.id}" data-status="ready">Ready</button>
+              <button class="btn small" type="button" data-move="${issue.id}" data-status="in-progress">Start</button>
+              <button class="btn small" type="button" data-move="${issue.id}" data-status="review">Review</button>
+              <button class="btn small" type="button" data-move="${issue.id}" data-status="done">Done</button>
+            </div>
+          </article>
+        `).join("");
+        return `
+          <section class="column">
+            <div class="column-head">
+              <strong>${column.label}</strong>
+              <span>${columnIssues.length}</span>
+            </div>
+            <div class="column-body">
+              ${cards || `<div class="board-empty">No matching issues in this column.</div>`}
+            </div>
+          </section>
+        `;
+      }).join("");
+
+      board.querySelectorAll("[data-move]").forEach(button => {
+        button.addEventListener("click", () => {
+          const issue = issues.find(item => item.id === button.dataset.move);
+          issue.status = button.dataset.status;
+          renderAll();
+          showToast(`${issue.id} moved to ${button.dataset.status}`);
+        });
+      });
+    }
+
+    function renderBlocker() {
+      const blocked = issues.filter(issue => issue.status === "blocked");
+      const summary = document.getElementById("blockerSummary");
+      if (!blocked.length) {
+        summary.textContent = "No local blockers are currently marked. Continue from S-002 and keep the fallback board updated until the native GitHub Project is created.";
+        return;
+      }
+      summary.textContent = `${blocked.length} blocked issue(s): ${blocked.map(issue => `${issue.id} ${issue.title}`).join(", ")}. Current path: either run gh auth refresh --scopes project and create the native Project, or keep using milestone #1 plus status labels.`;
+    }
+
+    function renderRunOrder() {
+      document.getElementById("runOrder").innerHTML = runOrder.map(([title, detail], index) => `
+        <div class="run-step">
+          <span class="run-num">${index + 1}</span>
+          <div><strong>${title}</strong><span>${detail}</span></div>
+        </div>
+      `).join("");
+    }
+
+    function updateMarkdown() {
+      const filtered = visibleIssues();
+      const lines = [
+        "# Sprint Delivery Update v1.8",
+        "",
+        "Project: First Nations Governance Commons",
+        "Mode: fake-data Decidim sandbox sprint",
+        "Initial developer/custodian: Barayamal / Dean Foley",
+        "Milestone: First fake-data Decidim sandbox sprint",
+        "Live milestone: https://github.com/Shadow-3/first-nations-governance-commons-public-demo/milestone/1",
+        "",
+        "## Current Counts",
+        "",
+        `- Open or active: ${issues.filter(issue => issue.status !== "done").length}`,
+        `- Blocked: ${countStatus("blocked")}`,
+        `- Ready: ${countStatus("ready")}`,
+        `- In progress: ${countStatus("in-progress")}`,
+        `- Review: ${countStatus("review")}`,
+        `- Done: ${countStatus("done")}`,
+        "",
+        "## Filters",
+        "",
+        `- Status: ${state.quickStatus}`,
+        `- Lane: ${state.lane}`,
+        `- Search: ${state.query || "none"}`,
+        `- Issues shown: ${filtered.length}`,
+        "",
+        "## Visible Issues",
+        "",
+        ...filtered.map(issue => `- ${issue.id} [${issue.status}] ${issue.title} - ${issue.next} (${issue.url})`),
+        "",
+        "## Safety Rule",
+        "",
+        "This remains fake/sample data only. Do not add real community records, member lists, cultural material, eligibility data, voting data, or real decision outcomes."
+      ];
+      document.getElementById("updatePreview").textContent = lines.join("\n");
+    }
+
+    function downloadUpdate() {
+      const blob = new Blob([document.getElementById("updatePreview").textContent], { type: "text/markdown" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "sprint-delivery-update-v1.8.md";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    function renderAll() {
+      renderMetrics();
+      renderBoard();
+      renderBlocker();
+      updateMarkdown();
+    }
+
+    document.querySelectorAll("[data-quick-status]").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll("[data-quick-status]").forEach(item => item.classList.remove("is-active"));
+        button.classList.add("is-active");
+        state.quickStatus = button.dataset.quickStatus;
+        renderAll();
+      });
+    });
+
+    document.getElementById("laneFilter").addEventListener("change", event => {
+      state.lane = event.target.value;
+      renderAll();
+    });
+
+    document.getElementById("searchBox").addEventListener("input", event => {
+      state.query = event.target.value;
+      renderAll();
+    });
+
+    document.getElementById("downloadUpdate").addEventListener("click", downloadUpdate);
+    renderRunOrder();
+    renderAll();
+  </script>
+</body>
+</html>

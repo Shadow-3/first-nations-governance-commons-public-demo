@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "1.7",
+  "version": "1.8",
   "date": "2026-06-04",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use the live GitHub sprint issues and milestone to start the fake-data Decidim sandbox sprint, Sprint Room for issue intent, Ops Room for run-day controls, and Decision Room for go/hold/no-go status. Native GitHub Projects board creation remains blocked until project scopes are added.",
+  "recommendedDecision": "Use the live GitHub sprint issues and milestone to start the fake-data Decidim sandbox sprint, Delivery Room for day-to-day issue execution, Sprint Room for issue intent, Ops Room for run-day controls, and Decision Room for go/hold/no-go status. Native GitHub Projects board creation remains blocked until project scopes are added.",
   "localDecidimStatus": {
     "ruby": "not_installed",
     "rubygems": "not_installed",
@@ -23,6 +23,7 @@
     "contributor-room.html",
     "sprint-room.html",
     "ops-room.html",
+    "delivery-room.html",
     "docs-index.html",
     "document.html",
     "README.md",
@@ -34,6 +35,7 @@
     "SUPPORT.md",
     "PACKAGE_INDEX.md",
     "package-manifest.json",
+    "docs/public-demo-release-notes-v1.8.md",
     "docs/public-demo-release-notes-v1.7.md",
     "docs/public-demo-release-notes-v1.6.md",
     "docs/public-demo-release-notes-v1.5.md",
@@ -42,13 +44,17 @@
     "docs/public-demo-release-notes-v1.2.md",
     "docs/public-demo-release-notes-v1.1.md",
     "docs/public-demo-release-notes-v1.0.md",
-    "docs/public-demo-release-notes-v0.9.md"
+    "docs/public-demo-release-notes-v0.9.md",
+    "docs/sprint-execution-playbook-v1.8.md",
+    "docs/github-projects-scope-fix-v1.8.md",
+    "data/sprint-execution-tracker-v1.8.csv",
+    "data/delivery-readiness-snapshot-v1.8.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v1.7.md",
+    "releaseNotes": "docs/public-demo-release-notes-v1.8.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -171,11 +177,13 @@
       "contributor-room.html",
       "sprint-room.html",
       "ops-room.html",
+      "delivery-room.html",
       "docs-index.html",
       "document.html",
       "PACKAGE_INDEX.md",
       "docs/public-demo-release-notes-v1.5.md",
       "docs/public-demo-release-notes-v1.6.md",
+      "docs/public-demo-release-notes-v1.8.md",
       "docs/public-demo-release-notes-v1.7.md",
       "docs/public-demo-release-notes-v1.4.md",
       "docs/public-demo-release-notes-v1.3.md",
@@ -240,7 +248,11 @@
       "data/issue-import-manifest-v1.5.json",
       "data/github-sprint-label-map-v1.7.csv",
       "data/github-sprint-live-issue-map-v1.7.csv",
-      "docs/github-sprint-launch-report-v1.7.md"
+      "docs/github-sprint-launch-report-v1.7.md",
+      "docs/sprint-execution-playbook-v1.8.md",
+      "docs/github-projects-scope-fix-v1.8.md",
+      "data/sprint-execution-tracker-v1.8.csv",
+      "data/delivery-readiness-snapshot-v1.8.json"
     ],
     "decisionPack": [
       "docs/decision-memo-v0.7.md",
@@ -308,6 +320,10 @@
       "docs/sandbox-qa-scenario-pack-v1.6.md",
       "docs/decidim-admin-configuration-checklist-v1.6.md",
       "docs/sandbox-ops-runbook-v1.6.md",
+      "docs/sprint-execution-playbook-v1.8.md",
+      "docs/github-projects-scope-fix-v1.8.md",
+      "data/sprint-execution-tracker-v1.8.csv",
+      "data/delivery-readiness-snapshot-v1.8.json",
       "data/sandbox-task-board.csv",
       "data/decision-log-template.csv"
     ],
@@ -320,6 +336,15 @@
       "data/sandbox-qa-scenarios-v1.6.csv",
       "data/ops-risk-register-v1.6.csv",
       "data/ops-readiness-manifest-v1.6.json"
+    ],
+    "deliveryRoom": [
+      "docs/sprint-execution-playbook-v1.8.md",
+      "docs/github-projects-scope-fix-v1.8.md",
+      "data/sprint-execution-tracker-v1.8.csv",
+      "data/delivery-readiness-snapshot-v1.8.json",
+      "docs/github-sprint-launch-report-v1.7.md",
+      "data/github-sprint-live-issue-map-v1.7.csv",
+      "data/github-sprint-label-map-v1.7.csv"
     ],
     "githubSprintLaunch": [
       "docs/github-sprint-launch-report-v1.7.md",
@@ -357,6 +382,22 @@
     "adminConfigRows": 14,
     "qaScenarioCount": 12,
     "riskRows": 10
+  },
+  "deliveryRoom": {
+    "entrypoint": "delivery-room.html",
+    "executionPlaybook": "docs/sprint-execution-playbook-v1.8.md",
+    "projectsScopeFix": "docs/github-projects-scope-fix-v1.8.md",
+    "executionTracker": "data/sprint-execution-tracker-v1.8.csv",
+    "readinessSnapshot": "data/delivery-readiness-snapshot-v1.8.json",
+    "sourceIssueMap": "data/github-sprint-live-issue-map-v1.7.csv",
+    "sourceLabelMap": "data/github-sprint-label-map-v1.7.csv",
+    "milestoneUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo/milestone/1",
+    "issueCount": 12,
+    "readyIssues": 11,
+    "blockedIssues": 1,
+    "doneIssues": 0,
+    "nativeProjectStatus": "blocked_missing_project_scope",
+    "fallbackBoard": "milestone_plus_status_labels"
   },
   "githubSprintLaunch": {
     "milestone": "First fake-data Decidim sandbox sprint",
