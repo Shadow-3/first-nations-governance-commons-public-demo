@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assurance Room - First Nations Governance Commons</title>
+  <meta name="description" content="Assurance and sign-off room for the fake-data Decidim sandbox demo path.">
+  <style>
+    :root {
+      --bg: #f6f7f5;
+      --surface: #ffffff;
+      --surface-2: #eef3ef;
+      --text: #1d2523;
+      --muted: #61706b;
+      --line: #d9e0dc;
+      --teal: #0d675f;
+      --teal-2: #e5f1ee;
+      --ochre: #b66a25;
+      --ochre-2: #fff2e5;
+      --green: #247654;
+      --green-2: #e7f4ed;
+      --red: #aa3d36;
+      --red-2: #fae9e7;
+      --amber: #8b691d;
+      --amber-2: #fff6d9;
+      --blue: #205d9b;
+      --blue-2: #e7f0fa;
+      --radius: 6px;
+      --shadow: 0 14px 36px rgba(18, 33, 29, 0.08);
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.45;
+    }
+
+    a { color: inherit; }
+    button,
+    select { font: inherit; }
+
+    .topbar {
+      min-height: 72px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .brand {
+      display: flex;
+      flex: 1 1 220px;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius);
+      background: var(--teal);
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .brand strong,
+    .brand span {
+      display: block;
+    }
+
+    .brand strong {
+      font-size: 15px;
+      line-height: 1.1;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .label {
+      width: fit-content;
+      color: var(--ochre);
+      background: var(--ochre-2);
+      border: 1px solid #f1d7b9;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .btn {
+      min-height: 38px;
+      border-radius: var(--radius);
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .btn.primary {
+      background: var(--teal);
+      color: #fff;
+      border-color: var(--teal);
+    }
+
+    .topbar .btn,
+    .topbar .label {
+      flex: 0 0 auto;
+    }
+
+    main {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 28px 24px 44px;
+      display: grid;
+      gap: 22px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: end;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    h2,
+    h3 {
+      margin: 0;
+      letter-spacing: 0;
+    }
+
+    .intro p,
+    .metric span,
+    .gate-card span,
+    .check-card p,
+    .signoff-card span,
+    .resource span,
+    .summary {
+      color: var(--muted);
+    }
+
+    .intro p {
+      max-width: 920px;
+      margin: 12px 0 0;
+      font-size: 15px;
+    }
+
+    .actions,
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .metrics,
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .metric,
+    .gate-card,
+    .check-card,
+    .signoff-card,
+    .panel,
+    .resource,
+    .note {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      min-width: 0;
+    }
+
+    .metric {
+      padding: 16px;
+      min-height: 108px;
+      display: grid;
+      gap: 8px;
+      align-content: start;
+    }
+
+    .metric strong {
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 14px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 10px;
+    }
+
+    .filter {
+      min-height: 34px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--muted);
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .filter.is-active {
+      color: var(--teal);
+      background: var(--teal-2);
+      border-color: #c8ded8;
+    }
+
+    .assurance-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(300px, 0.36fr);
+      gap: 14px;
+      align-items: start;
+    }
+
+    .gate-grid,
+    .check-grid,
+    .signoff-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .gate-card,
+    .check-card,
+    .signoff-card,
+    .panel,
+    .note,
+    .resource {
+      padding: 16px;
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+
+    .gate-card label,
+    .signoff-card label {
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    .gate-select,
+    .signoff-select {
+      width: 100%;
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text);
+      padding: 7px 8px;
+      font-weight: 800;
+      text-transform: none;
+    }
+
+    .pill {
+      width: fit-content;
+      border-radius: 999px;
+      padding: 6px 9px;
+      font-size: 11px;
+      font-weight: 900;
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      color: var(--muted);
+    }
+
+    .pill.ready { color: var(--green); background: var(--green-2); border-color: #c7e4d5; }
+    .pill.hold { color: var(--amber); background: var(--amber-2); border-color: #eadb9e; }
+    .pill.no-go { color: var(--red); background: var(--red-2); border-color: #e7c5c1; }
+    .pill.safety { color: var(--red); background: var(--red-2); border-color: #e7c5c1; }
+    .pill.evidence { color: var(--blue); background: var(--blue-2); border-color: #c9dbed; }
+    .pill.governance { color: var(--teal); background: var(--teal-2); border-color: #c8ded8; }
+    .pill.handover { color: var(--ochre); background: var(--ochre-2); border-color: #f1d7b9; }
+
+    .panel h2,
+    .note h2 {
+      font-size: 17px;
+    }
+
+    .status-panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      padding: 16px;
+      display: grid;
+      gap: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    .summary {
+      margin: 0;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      font-size: 13px;
+    }
+
+    .resource {
+      min-height: 104px;
+      text-decoration: none;
+    }
+
+    .resource strong,
+    .resource span {
+      display: block;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 13px;
+      padding-top: 6px;
+    }
+
+    @media (max-width: 1120px) {
+      .intro,
+      .assurance-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .actions,
+      .filters {
+        justify-content: flex-start;
+      }
+
+      .metrics,
+      .gate-grid,
+      .check-grid,
+      .signoff-grid,
+      .resource-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 680px) {
+      .topbar {
+        padding: 12px 16px;
+      }
+
+      main {
+        padding: 20px 16px 34px;
+      }
+
+      .metrics,
+      .gate-grid,
+      .check-grid,
+      .signoff-grid,
+      .resource-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        display: grid;
+        align-items: start;
+      }
+
+      .btn,
+      .filter {
+        width: 100%;
+        white-space: normal;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">B</div>
+      <div>
+        <strong>Barayamal</strong>
+        <span>First Nations Governance Commons</span>
+      </div>
+    </div>
+    <a class="btn primary" href="decision-room.html">Decision Room</a>
+    <a class="btn primary" href="build-room.html">Builder Room</a>
+    <a class="btn primary" href="contributor-room.html">Contributor Room</a>
+    <a class="btn primary" href="sprint-room.html">Sprint Room</a>
+    <a class="btn primary" href="ops-room.html">Ops Room</a>
+    <a class="btn primary" href="delivery-room.html">Delivery Room</a>
+    <a class="btn primary" href="assurance-room.html">Assurance Room</a>
+    <a class="btn" href="next-steps.html">Action Center</a>
+    <a class="btn" href="index.html">Open Demo</a>
+    <a class="btn" href="docs-index.html">Review Pack</a>
+    <span class="label">Fake/sample data only</span>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <h1>Assurance Room</h1>
+        <p>Use this room to decide whether the fake-data Decidim sandbox is safe to show, ready for handover, or blocked. It combines evidence gates, safety checks, sign-off roles, no-go triggers, and a downloadable assurance memo.</p>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="delivery-room.html">Open Delivery Room</a>
+        <button class="btn" id="downloadMemo" type="button">Download Assurance Memo</button>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Assurance metrics">
+      <div class="metric"><strong id="readyMetric">3</strong><span>ready gates in the current assurance state.</span></div>
+      <div class="metric"><strong id="holdMetric">6</strong><span>hold gates that need evidence or sign-off.</span></div>
+      <div class="metric"><strong id="noGoMetric">0</strong><span>no-go gates in the current scenario.</span></div>
+      <div class="metric"><strong>0</strong><span>real records, member lists, cultural material, or real votes allowed.</span></div>
+    </section>
+
+    <section class="assurance-grid">
+      <div>
+        <div class="section-head">
+          <div>
+            <h2>Assurance Gates</h2>
+            <p class="summary">Change a gate to see the recommendation and generated memo update.</p>
+          </div>
+        </div>
+        <div class="gate-grid" id="gateGrid"></div>
+      </div>
+      <aside class="status-panel">
+        <span class="pill hold" id="statusPill">Hold</span>
+        <h2 id="statusTitle">Hold: assurance evidence incomplete</h2>
+        <p class="summary" id="statusSummary"></p>
+      </aside>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Evidence And Safety Checks</h2>
+          <p class="summary">Filter the assurance checklist by workstream.</p>
+        </div>
+        <div class="filters">
+          <button class="filter is-active" type="button" data-filter="All">All</button>
+          <button class="filter" type="button" data-filter="Safety">Safety</button>
+          <button class="filter" type="button" data-filter="Evidence">Evidence</button>
+          <button class="filter" type="button" data-filter="Governance">Governance</button>
+          <button class="filter" type="button" data-filter="Handover">Handover</button>
+        </div>
+      </div>
+      <div class="check-grid" id="checkGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Sign-Off Roles</h2>
+          <p class="summary">These are sample roles for the fake-data sandbox. Real pilot authority must be separately approved.</p>
+        </div>
+      </div>
+      <div class="signoff-grid" id="signoffGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Assurance Resources</h2>
+          <p class="summary">Open these through the public document viewer.</p>
+        </div>
+      </div>
+      <div class="resource-grid">
+        <a class="resource" href="document.html?file=docs%2Fsandbox-assurance-playbook-v1.9.md"><strong>Assurance playbook</strong><span>Decision routine, sign-off rules, evidence expectations, and no-go triggers.</span></a>
+        <a class="resource" href="document.html?file=docs%2Ffake-data-boundary-audit-v1.9.md"><strong>Fake-data audit</strong><span>Audit routine for excluding real records, cultural material, member data, and real votes.</span></a>
+        <a class="resource" href="document.html?file=data%2Fsandbox-assurance-checklist-v1.9.csv"><strong>Assurance checklist</strong><span>Checklist rows for safety, evidence, governance, and handover.</span></a>
+        <a class="resource" href="document.html?file=data%2Fgo-live-decision-gates-v1.9.csv"><strong>Decision gates CSV</strong><span>Gate statuses, owners, evidence, and stop conditions.</span></a>
+        <a class="resource" href="document.html?file=data%2Fassurance-readiness-snapshot-v1.9.json"><strong>Readiness snapshot</strong><span>Machine-readable assurance metrics, no-go triggers, and sign-off roles.</span></a>
+        <a class="resource" href="ops-room.html"><strong>Ops Room</strong><span>Run-day checks and evidence that feed assurance.</span></a>
+      </div>
+    </section>
+
+    <section class="note">
+      <h2>Generated Assurance Memo</h2>
+      <p class="summary">Local-only memo generated from current gates, filtered checks, and sign-off status.</p>
+      <div class="summary" id="memoPreview"></div>
+    </section>
+
+    <footer>
+      Version v1.9. Initial developer/custodian: Barayamal / Dean Foley.
+    </footer>
+  </main>
+
+  <script>
+    const gates = [
+      { name: "Fake-data boundary", status: "Ready", owner: "Maintainer", evidence: "Content audit confirms no real records, member lists, cultural material, eligibility data, voting data, or real outcomes." },
+      { name: "Authority language", status: "Ready", owner: "Barayamal / Dean Foley", evidence: "Public pages state this is a fake-data demo and not a real community mandate." },
+      { name: "Repository boundary", status: "Ready", owner: "Maintainer", evidence: "Contributing and governance docs separate infrastructure maintainership from community authority." },
+      { name: "Sandbox admin access", status: "Hold", owner: "Initial developer", evidence: "Admin URL, access owner, support path, and backup admin evidence required." },
+      { name: "Decidim configuration", status: "Hold", owner: "Initial developer", evidence: "Organisation, assembly, process, components, moderation, and labels need screenshots." },
+      { name: "QA evidence", status: "Hold", owner: "Maintainer", evidence: "Visitor, participant simulation, admin, mobile, and accessibility checks need recorded evidence." },
+      { name: "Privacy and data review", status: "Hold", owner: "Data reviewer", evidence: "Privacy, minimisation, retention, and no-real-data checks need sign-off." },
+      { name: "Handover support", status: "Hold", owner: "Initial developer", evidence: "Admin support, limitations, backup access, and update pathway need handover notes." },
+      { name: "Real pilot authority not claimed", status: "Hold", owner: "Future community authority", evidence: "Real pilot remains blocked until separate authority, privacy, cultural safety, eligibility, moderation, hosting, and support approvals exist." }
+    ];
+
+    const checks = [
+      { id: "A-001", stream: "Safety", title: "Confirm no real community records", owner: "Maintainer", evidence: "Audit note and sample data review" },
+      { id: "A-002", stream: "Safety", title: "Confirm no cultural material", owner: "Advisor or cultural safety reviewer", evidence: "Reviewer note or explicit not-present record" },
+      { id: "A-003", stream: "Safety", title: "Confirm no real voting or eligibility data", owner: "Maintainer", evidence: "Data classification review" },
+      { id: "A-004", stream: "Evidence", title: "Attach desktop and mobile screenshots", owner: "Maintainer", evidence: "Screenshots in sprint evidence log" },
+      { id: "A-005", stream: "Evidence", title: "Attach Decidim admin configuration evidence", owner: "Initial developer", evidence: "Admin configuration screenshots" },
+      { id: "A-006", stream: "Evidence", title: "Record known limitations", owner: "Maintainer", evidence: "Limitations section in issue S-012" },
+      { id: "A-007", stream: "Governance", title: "Confirm repository cannot claim community mandate", owner: "Barayamal / Dean Foley", evidence: "Maintainer note in S-002" },
+      { id: "A-008", stream: "Governance", title: "Confirm partner and funder roles cannot override process", owner: "Advisor", evidence: "Governance review note" },
+      { id: "A-009", stream: "Governance", title: "Confirm real pilot remains separately approved", owner: "Future community authority", evidence: "No-real-pilot approval boundary note" },
+      { id: "A-010", stream: "Handover", title: "Confirm admin support owner", owner: "Initial developer", evidence: "Handover note" },
+      { id: "A-011", stream: "Handover", title: "Confirm backup access and update path", owner: "Initial developer", evidence: "Backup and update note" },
+      { id: "A-012", stream: "Handover", title: "Confirm support limits and escalation", owner: "Maintainer", evidence: "Support policy and sprint limitation note" }
+    ];
+
+    const signoffs = [
+      { role: "Initial developer/custodian", name: "Barayamal / Dean Foley", status: "Draft" },
+      { role: "Maintainer", name: "Repository maintainer", status: "Needed" },
+      { role: "Decidim builder", name: "Sandbox implementer", status: "Needed" },
+      { role: "Advisor", name: "Governance or cultural safety advisor", status: "Needed" },
+      { role: "Data reviewer", name: "Privacy/data sovereignty reviewer", status: "Needed" },
+      { role: "Future community authority", name: "Real pilot authority holder", status: "Not applicable to fake-data demo" }
+    ];
+
+    let activeFilter = "All";
+
+    function statusClass(status) {
+      if (status === "Ready") return "ready";
+      if (status === "No-go") return "no-go";
+      return "hold";
+    }
+
+    function renderGates() {
+      document.getElementById("gateGrid").innerHTML = gates.map((gate, index) => `
+        <article class="gate-card">
+          <span class="pill ${statusClass(gate.status)}">${gate.status}</span>
+          <h3>${gate.name}</h3>
+          <span>${gate.evidence}</span>
+          <label>Status
+            <select class="gate-select" data-gate="${index}">
+              ${["Ready", "Hold", "No-go"].map(status => `<option value="${status}" ${status === gate.status ? "selected" : ""}>${status}</option>`).join("")}
+            </select>
+          </label>
+          <span>${gate.owner}</span>
+        </article>
+      `).join("");
+      document.querySelectorAll("[data-gate]").forEach(select => {
+        select.addEventListener("change", () => {
+          gates[Number(select.dataset.gate)].status = select.value;
+          renderAll();
+        });
+      });
+    }
+
+    function renderChecks() {
+      const selected = activeFilter === "All" ? checks : checks.filter(check => check.stream === activeFilter);
+      document.getElementById("checkGrid").innerHTML = selected.map(check => `
+        <article class="check-card">
+          <span class="pill ${check.stream.toLowerCase()}">${check.stream}</span>
+          <h3>${check.id}: ${check.title}</h3>
+          <p><strong>Owner:</strong> ${check.owner}</p>
+          <p><strong>Evidence:</strong> ${check.evidence}</p>
+        </article>
+      `).join("");
+    }
+
+    function renderSignoffs() {
+      document.getElementById("signoffGrid").innerHTML = signoffs.map((item, index) => `
+        <article class="signoff-card">
+          <h3>${item.role}</h3>
+          <span>${item.name}</span>
+          <label>Status
+            <select class="signoff-select" data-signoff="${index}">
+              ${["Draft", "Needed", "Signed", "Not applicable to fake-data demo"].map(status => `<option value="${status}" ${status === item.status ? "selected" : ""}>${status}</option>`).join("")}
+            </select>
+          </label>
+        </article>
+      `).join("");
+      document.querySelectorAll("[data-signoff]").forEach(select => {
+        select.addEventListener("change", () => {
+          signoffs[Number(select.dataset.signoff)].status = select.value;
+          updateMemo();
+        });
+      });
+    }
+
+    function updateStatus() {
+      const ready = gates.filter(gate => gate.status === "Ready").length;
+      const hold = gates.filter(gate => gate.status === "Hold").length;
+      const noGo = gates.filter(gate => gate.status === "No-go").length;
+      document.getElementById("readyMetric").textContent = ready;
+      document.getElementById("holdMetric").textContent = hold;
+      document.getElementById("noGoMetric").textContent = noGo;
+
+      const pill = document.getElementById("statusPill");
+      const title = document.getElementById("statusTitle");
+      const summary = document.getElementById("statusSummary");
+      pill.className = "pill";
+
+      if (noGo) {
+        pill.textContent = "No-go";
+        pill.classList.add("no-go");
+        title.textContent = "No-go: do not show or hand over yet";
+        summary.textContent = `${noGo} no-go gate(s) are active: ${gates.filter(gate => gate.status === "No-go").map(gate => gate.name).join(", ")}. Stop the sandbox demo path until these are resolved.`;
+        return;
+      }
+
+      if (hold) {
+        pill.textContent = "Hold";
+        pill.classList.add("hold");
+        title.textContent = "Hold: assurance evidence incomplete";
+        summary.textContent = `${hold} gate(s) still need evidence or sign-off. The sandbox can remain an internal fake-data rehearsal, but should not be presented as demo-ready or handover-ready.`;
+        return;
+      }
+
+      pill.textContent = "Demo-ready";
+      pill.classList.add("ready");
+      title.textContent = "Demo-ready for fake-data sandbox only";
+      summary.textContent = "All assurance gates are ready. This authorises only a fake-data sandbox demo and handover, not real community participation or a real pilot.";
+    }
+
+    function updateMemo() {
+      const selected = activeFilter === "All" ? checks : checks.filter(check => check.stream === activeFilter);
+      const lines = [
+        "# Sandbox Assurance Memo v1.9",
+        "",
+        "Project: First Nations Governance Commons",
+        "Mode: fake-data Decidim sandbox assurance",
+        "Initial developer/custodian: Barayamal / Dean Foley",
+        "",
+        "## Current Gate Counts",
+        "",
+        `- Ready: ${gates.filter(gate => gate.status === "Ready").length}`,
+        `- Hold: ${gates.filter(gate => gate.status === "Hold").length}`,
+        `- No-go: ${gates.filter(gate => gate.status === "No-go").length}`,
+        "",
+        "## Gate Status",
+        "",
+        ...gates.map(gate => `- ${gate.name}: ${gate.status} (${gate.owner})`),
+        "",
+        "## Visible Checklist",
+        "",
+        `Filter: ${activeFilter}`,
+        ...selected.map(check => `- ${check.id}: ${check.title} - ${check.evidence}`),
+        "",
+        "## Sign-Off Status",
+        "",
+        ...signoffs.map(item => `- ${item.role}: ${item.status}`),
+        "",
+        "## Non-Negotiable Boundary",
+        "",
+        "This remains fake/sample data only. No real community records, member lists, cultural material, eligibility data, voting data, or real decision outcomes are allowed."
+      ];
+      document.getElementById("memoPreview").textContent = lines.join("\n");
+    }
+
+    function renderAll() {
+      renderGates();
+      renderChecks();
+      renderSignoffs();
+      updateStatus();
+      updateMemo();
+    }
+
+    function downloadMemo() {
+      const blob = new Blob([document.getElementById("memoPreview").textContent], { type: "text/markdown" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "sandbox-assurance-memo-v1.9.md";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    document.querySelectorAll("[data-filter]").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll("[data-filter]").forEach(item => item.classList.remove("is-active"));
+        button.classList.add("is-active");
+        activeFilter = button.dataset.filter;
+        renderChecks();
+        updateMemo();
+      });
+    });
+
+    document.getElementById("downloadMemo").addEventListener("click", downloadMemo);
+    renderAll();
+  </script>
+</body>
+</html>

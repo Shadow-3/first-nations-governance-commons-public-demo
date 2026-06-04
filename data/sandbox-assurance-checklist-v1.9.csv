@@ -1,0 +1,14 @@
+check_id,stream,title,owner,evidence_needed,stop_condition
+A-001,Safety,Confirm no real community records,Maintainer,Audit note and sample data review,Any real record appears
+A-002,Safety,Confirm no cultural material,Advisor or cultural safety reviewer,Reviewer note or explicit not-present record,Cultural material appears without authority
+A-003,Safety,Confirm no real voting or eligibility data,Maintainer,Data classification review,Real voting or eligibility data appears
+A-004,Evidence,Attach desktop and mobile screenshots,Maintainer,Screenshots in sprint evidence log,Core page evidence missing
+A-005,Evidence,Attach Decidim admin configuration evidence,Initial developer,Admin configuration screenshots,Configuration cannot be verified
+A-006,Evidence,Record known limitations,Maintainer,Limitations section in issue S-012,High risk or limitation is unowned
+A-007,Governance,Confirm repository cannot claim community mandate,Barayamal / Dean Foley,Maintainer note in S-002,Repository language implies community authority
+A-008,Governance,Confirm partner and funder roles cannot override process,Advisor,Governance review note,Partner or funder control is implied
+A-009,Governance,Confirm real pilot remains separately approved,Future community authority,No-real-pilot approval boundary note,Real pilot authority is implied
+A-010,Handover,Confirm admin support owner,Initial developer,Handover note,No support owner exists
+A-011,Handover,Confirm backup access and update path,Initial developer,Backup and update note,No backup or update pathway exists
+A-012,Handover,Confirm support limits and escalation,Maintainer,Support policy and sprint limitation note,Support scope is unclear
+

@@ -303,6 +303,7 @@
     <a class="btn primary" href="sprint-room.html">Sprint Room</a>
     <a class="btn primary" href="ops-room.html">Ops Room</a>
     <a class="btn primary" href="delivery-room.html">Delivery Room</a>
+    <a class="btn primary" href="assurance-room.html">Assurance Room</a>
     <a class="btn" href="index.html">Open Demo</a>
     <div class="label">Public demo - fake data only</div>
   </header>
@@ -344,6 +345,10 @@
       <a href="#delivery">
         <strong>Delivery Team</strong>
         <span>Run the live GitHub milestone, blockers, status labels, issue links, and sprint updates.</span>
+      </a>
+      <a href="#assurance">
+        <strong>Assurance Team</strong>
+        <span>Check evidence gates, sign-off roles, no-go triggers, and fake-data boundary.</span>
       </a>
       <a href="#governance">
         <strong>Governance/Data</strong>
@@ -410,6 +415,13 @@
         </div>
         <div class="doc-row">
           <div>
+            <strong>Assurance Room</strong>
+            <span>Evidence gates, sign-off roles, no-go triggers, fake-data safety checks, and downloadable assurance memo.</span>
+          </div>
+          <a class="btn primary" href="assurance-room.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
             <strong>Public demo prototype</strong>
             <span>Sample Decidim-style participatory process.</span>
           </div>
@@ -439,9 +451,9 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v1.8 Delivery Room execution upgrade.</span>
+            <span>What changed in the v1.9 Assurance Room and sign-off upgrade.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v1.8.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v1.9.md">Open</a>
         </div>
       </div>
     </section>
@@ -501,6 +513,23 @@
         <div class="doc-row"><div><strong>Projects scope fix</strong><span>GitHub CLI path for adding project scope and creating the native Project later.</span></div><a class="btn" href="docs/github-projects-scope-fix-v1.8.md">Open</a></div>
         <div class="doc-row"><div><strong>Execution tracker</strong><span>CSV snapshot of issue status, owner, evidence, next action, and done condition.</span></div><a class="btn" href="data/sprint-execution-tracker-v1.8.csv">Open</a></div>
         <div class="doc-row"><div><strong>Readiness snapshot</strong><span>JSON metrics, blocker, milestone, run order, and safety rule.</span></div><a class="btn" href="data/delivery-readiness-snapshot-v1.8.json">Open</a></div>
+      </div>
+    </section>
+
+    <section id="assurance">
+      <div class="section-head">
+        <div>
+          <h2>Assurance Team</h2>
+          <p>Use these files to confirm the public demo and fake-data sandbox stay inside evidence, safety, and sign-off boundaries.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Assurance Room</strong><span>Interactive evidence gates, no-go triggers, sign-off roles, and generated assurance memo.</span></div><a class="btn primary" href="assurance-room.html">Open</a></div>
+        <div class="doc-row"><div><strong>Sandbox assurance playbook</strong><span>Gate rules, sign-off roles, no-go triggers, and done definition for public handover.</span></div><a class="btn" href="docs/sandbox-assurance-playbook-v1.9.md">Open</a></div>
+        <div class="doc-row"><div><strong>Fake-data boundary audit</strong><span>Explicit audit of excluded real records, member data, cultural material, eligibility data, voting data, and outcomes.</span></div><a class="btn" href="docs/fake-data-boundary-audit-v1.9.md">Open</a></div>
+        <div class="doc-row"><div><strong>Assurance checklist</strong><span>CSV checks for safety, evidence, governance, and handover.</span></div><a class="btn" href="data/sandbox-assurance-checklist-v1.9.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Go-live decision gates</strong><span>CSV gate statuses, owners, evidence, and stop conditions.</span></div><a class="btn" href="data/go-live-decision-gates-v1.9.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Assurance readiness snapshot</strong><span>JSON metrics, sign-off roles, no-go triggers, and fake-data safety rule.</span></div><a class="btn" href="data/assurance-readiness-snapshot-v1.9.json">Open</a></div>
       </div>
     </section>
 
@@ -618,7 +647,7 @@
     </section>
 
     <footer>
-      Version v1.8. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v1.9. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
   <script>

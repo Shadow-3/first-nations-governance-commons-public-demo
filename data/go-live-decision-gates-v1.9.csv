@@ -1,0 +1,11 @@
+gate_id,gate,default_status,owner,evidence_needed,stop_condition
+G-001,Fake-data boundary,Ready,Maintainer,Content audit confirms no real data,Any real data appears
+G-002,Authority language,Ready,Barayamal / Dean Foley,Public pages state fake-data demo only,Language implies a real mandate
+G-003,Repository boundary,Ready,Maintainer,Repo docs separate infrastructure from authority,Repository claims community authority
+G-004,Sandbox admin access,Hold,Initial developer,Admin URL access owner support and backup evidence,Admin access cannot be controlled
+G-005,Decidim configuration,Hold,Initial developer,Organisation assembly process components moderation screenshots,Configuration cannot be verified
+G-006,QA evidence,Hold,Maintainer,Visitor participant admin mobile and accessibility evidence,Core QA evidence missing
+G-007,Privacy and data review,Hold,Data reviewer,Privacy minimisation retention no-real-data sign-off,Privacy or data boundary unclear
+G-008,Handover support,Hold,Initial developer,Admin support limitations backup access and update pathway,No support or handover pathway
+G-009,Real pilot authority not claimed,Hold,Future community authority,Real pilot remains separately approved,Demo implies real pilot approval
+

@@ -1,0 +1,32 @@
+{
+  "version": "1.9",
+  "date": "2026-06-04",
+  "mode": "public_demo_fake_sample_data_only",
+  "entrypoint": "assurance-room.html",
+  "defaultStatus": "hold",
+  "gateCounts": {
+    "ready": 3,
+    "hold": 6,
+    "noGo": 0
+  },
+  "checkCount": 12,
+  "signoffRoles": [
+    "Initial developer/custodian",
+    "Maintainer",
+    "Decidim builder",
+    "Advisor",
+    "Data reviewer",
+    "Future community authority"
+  ],
+  "noGoTriggers": [
+    "Real community records appear",
+    "Member data appears",
+    "Cultural material appears",
+    "Real voting or eligibility data appears",
+    "Public language implies a real community decision",
+    "Admin access cannot be controlled",
+    "Moderation or removal path is missing",
+    "Handover support is not defined"
+  ],
+  "safetyRule": "Fake/sample data only. No real community records, member lists, cultural material, eligibility data, voting data, or real decision outcomes."
+}

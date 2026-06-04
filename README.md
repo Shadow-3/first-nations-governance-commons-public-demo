@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v1.8
+Current package version: v1.9
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -30,6 +30,8 @@ Open `sprint-room.html` to use the Sprint Room for the first fake-data Decidim s
 Open `ops-room.html` to use the Sandbox Ops Room for run-day admin configuration, QA scenarios, evidence capture, risk controls, handover, and go/no-go status.
 
 Open `delivery-room.html` to use the Delivery Room for live sprint execution, blocker tracking, issue links, local status simulation, and sprint updates.
+
+Open `assurance-room.html` to use the Assurance Room for evidence gates, sign-off roles, no-go triggers, fake-data safety checks, and a downloadable assurance memo.
 
 The demo shows:
 
@@ -69,7 +71,10 @@ The demo shows:
 - `docs/public-demo-release-notes-v1.5.md`
 - `docs/public-demo-release-notes-v1.6.md`
 - `docs/public-demo-release-notes-v1.7.md`
+- `docs/public-demo-release-notes-v1.9.md`
 - `docs/public-demo-release-notes-v1.8.md`
+- `docs/sandbox-assurance-playbook-v1.9.md`
+- `docs/fake-data-boundary-audit-v1.9.md`
 - `docs/sprint-execution-playbook-v1.8.md`
 - `docs/github-projects-scope-fix-v1.8.md`
 - `docs/github-sprint-launch-report-v1.7.md`
@@ -137,6 +142,9 @@ The demo shows:
 - `data/github-sprint-label-map-v1.7.csv`
 - `data/sprint-execution-tracker-v1.8.csv`
 - `data/delivery-readiness-snapshot-v1.8.json`
+- `data/sandbox-assurance-checklist-v1.9.csv`
+- `data/go-live-decision-gates-v1.9.csv`
+- `data/assurance-readiness-snapshot-v1.9.json`
 - `data/sandbox-task-board.csv`
 - `data/decision-log-template.csv`
 - `PACKAGE_INDEX.md`
@@ -149,6 +157,7 @@ The demo shows:
 - `sprint-room.html`
 - `ops-room.html`
 - `delivery-room.html`
+- `assurance-room.html`
 - `document.html`
 - `CONTRIBUTING.md`
 - `CODE_OF_CONDUCT.md`
@@ -414,9 +423,26 @@ The v1.8 package adds a Delivery Room that turns the live GitHub sprint setup in
 
 Use this version to run the first fake-data Decidim sandbox sprint from the live milestone. GitHub remains the source of truth; Delivery Room is the public cockpit and update generator.
 
+## v1.9 Assurance Room And Sign-Off Upgrade
+
+The v1.9 package adds an Assurance Room that turns the demo from an execution cockpit into a public handover and safety sign-off package:
+
+- Evidence gate status board with 9 Ready/Hold/No-go gates.
+- Fake-data boundary, authority language, repository boundary, admin access, configuration, QA, privacy, handover, and real-pilot authority checks.
+- 12 safety, evidence, governance, and handover checklist rows.
+- 6 sign-off roles with draft/needed/signed/not-applicable status controls.
+- Generated downloadable assurance memo.
+- Sandbox assurance playbook.
+- Fake-data boundary audit.
+- Assurance checklist CSV.
+- Go-live decision gates CSV.
+- Assurance readiness snapshot JSON.
+
+Use this version before public handover, advisor review close-out, or any claim that the fake-data sandbox is ready. It keeps the real-pilot boundary explicit: public demo and sandbox readiness do not create community authority, real consultation approval, or permission to use real data.
+
 ## Next Build Step
 
-Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, and Delivery Room to configure and operate a fake-data Decidim sandbox:
+Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, Delivery Room, and Assurance Room to configure, operate, and safely hand over a fake-data Decidim sandbox:
 
 - One organisation.
 - One public assembly.
