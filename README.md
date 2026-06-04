@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v1.3
+Current package version: v1.4
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -22,6 +22,8 @@ Open `next-steps.html` to use the Action Center for advisor review, sandbox RFQ,
 Open `decision-room.html` to score fake-data sandbox readiness and download a local decision summary.
 
 Open `build-room.html` to use the Builder Room for Decidim sandbox implementation mapping, imports, acceptance checks, and handover.
+
+Open `contributor-room.html` to use the Contributor Room for the open-source maintainer model, contribution lanes, roadmap, issue templates, and repository boundary.
 
 The demo shows:
 
@@ -57,6 +59,12 @@ The demo shows:
 - `docs/public-demo-release-notes-v1.1.md`
 - `docs/public-demo-release-notes-v1.2.md`
 - `docs/public-demo-release-notes-v1.3.md`
+- `docs/public-demo-release-notes-v1.4.md`
+- `docs/open-source-contributor-model-v1.4.md`
+- `docs/maintainer-charter-v1.4.md`
+- `docs/community-authority-boundary-v1.4.md`
+- `docs/github-repo-setup-checklist-v1.4.md`
+- `docs/first-sandbox-sprint-board-v1.4.md`
 - `docs/sandbox-readiness-gates-v1.2.md`
 - `docs/sandbox-decision-brief-template-v1.2.md`
 - `docs/decision-meeting-agenda-v1.2.md`
@@ -94,6 +102,9 @@ The demo shows:
 - `data/sandbox-acceptance-matrix-v1.3.csv`
 - `data/implementation-sprint-plan-v1.3.csv`
 - `data/sandbox-import-manifest-v1.3.json`
+- `data/contributor-roadmap-v1.4.csv`
+- `data/issue-triage-board-v1.4.csv`
+- `data/maintainer-responsibility-matrix-v1.4.csv`
 - `data/sandbox-task-board.csv`
 - `data/decision-log-template.csv`
 - `PACKAGE_INDEX.md`
@@ -102,7 +113,20 @@ The demo shows:
 - `decision-room.html`
 - `next-steps.html`
 - `build-room.html`
+- `contributor-room.html`
 - `document.html`
+- `CONTRIBUTING.md`
+- `CODE_OF_CONDUCT.md`
+- `GOVERNANCE.md`
+- `ROADMAP.md`
+- `SECURITY.md`
+- `SUPPORT.md`
+- `.github/PULL_REQUEST_TEMPLATE.md`
+- `.github/ISSUE_TEMPLATE/config.yml`
+- `.github/ISSUE_TEMPLATE/fake-data-sandbox-task.yml`
+- `.github/ISSUE_TEMPLATE/documentation-improvement.yml`
+- `.github/ISSUE_TEMPLATE/governance-safety-review.yml`
+- `.github/ISSUE_TEMPLATE/accessibility-mobile.yml`
 - `404.html`
 - `robots.txt`
 
@@ -266,9 +290,28 @@ The v1.3 package adds:
 
 Use this version after a proceed decision to brief Barayamal/Dean Foley or another Decidim-capable developer on the fake-data sandbox build.
 
+## v1.4 Contributor Room And Open Source Upgrade
+
+The v1.4 package adds:
+
+- `contributor-room.html` as a public open-source/contributor operating cockpit.
+- Root repository files for contribution, conduct, governance, security, support, and roadmap.
+- GitHub issue templates and pull request template.
+- Open-source contributor model.
+- Maintainer charter.
+- Community authority boundary.
+- GitHub repository setup checklist.
+- First fake-data sandbox sprint board.
+- Contributor roadmap CSV.
+- Issue triage board CSV.
+- Maintainer responsibility matrix CSV.
+- Contributor Room links from the demo, Decision Room, Action Center, Builder Room, Review Pack, and document viewer.
+
+Use this version to run a public contribution model with Barayamal / Dean Foley as initial developer/custodian while keeping real community authority separate from repository maintainership.
+
 ## Next Build Step
 
-Use this demo package to configure a fake-data Decidim sandbox:
+Use the Contributor Room and Builder Room to configure a fake-data Decidim sandbox:
 
 - One organisation.
 - One public assembly.

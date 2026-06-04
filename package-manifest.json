@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "1.3",
+  "version": "1.4",
   "date": "2026-06-04",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use the Decision Room to confirm proceed/hold/no-go status, then use the Builder Room as the implementation handoff for Barayamal/Dean Foley or another Decidim-capable developer. Proceed to fake-data Decidim sandbox only if no-go conditions are clear.",
+  "recommendedDecision": "Use the Contributor Room to run the open-source repository model with Barayamal/Dean Foley as initial developer/custodian, use the Decision Room to confirm proceed/hold/no-go status, then use the Builder Room as the implementation handoff. Proceed to fake-data Decidim sandbox only if no-go conditions are clear.",
   "localDecidimStatus": {
     "ruby": "not_installed",
     "rubygems": "not_installed",
@@ -20,11 +20,19 @@
     "decision-room.html",
     "next-steps.html",
     "build-room.html",
+    "contributor-room.html",
     "docs-index.html",
     "document.html",
     "README.md",
+    "CONTRIBUTING.md",
+    "CODE_OF_CONDUCT.md",
+    "GOVERNANCE.md",
+    "ROADMAP.md",
+    "SECURITY.md",
+    "SUPPORT.md",
     "PACKAGE_INDEX.md",
     "package-manifest.json",
+    "docs/public-demo-release-notes-v1.4.md",
     "docs/public-demo-release-notes-v1.3.md",
     "docs/public-demo-release-notes-v1.2.md",
     "docs/public-demo-release-notes-v1.1.md",
@@ -35,7 +43,7 @@
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v1.3.md",
+    "releaseNotes": "docs/public-demo-release-notes-v1.4.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -50,7 +58,8 @@
     "renders": [
       "markdown",
       "csv",
-      "json"
+      "json",
+      "text"
     ],
     "actions": [
       "open_raw",
@@ -87,6 +96,30 @@
       "handover"
     ]
   },
+  "contributorRoom": {
+    "entrypoint": "contributor-room.html",
+    "contributingGuide": "CONTRIBUTING.md",
+    "codeOfConduct": "CODE_OF_CONDUCT.md",
+    "governance": "GOVERNANCE.md",
+    "roadmap": "ROADMAP.md",
+    "security": "SECURITY.md",
+    "support": "SUPPORT.md",
+    "openSourceContributorModel": "docs/open-source-contributor-model-v1.4.md",
+    "maintainerCharter": "docs/maintainer-charter-v1.4.md",
+    "communityAuthorityBoundary": "docs/community-authority-boundary-v1.4.md",
+    "githubRepoSetupChecklist": "docs/github-repo-setup-checklist-v1.4.md",
+    "firstSandboxSprintBoard": "docs/first-sandbox-sprint-board-v1.4.md",
+    "contributorRoadmap": "data/contributor-roadmap-v1.4.csv",
+    "issueTriageBoard": "data/issue-triage-board-v1.4.csv",
+    "maintainerResponsibilityMatrix": "data/maintainer-responsibility-matrix-v1.4.csv",
+    "pullRequestTemplate": ".github/PULL_REQUEST_TEMPLATE.md",
+    "issueTemplates": [
+      ".github/ISSUE_TEMPLATE/fake-data-sandbox-task.yml",
+      ".github/ISSUE_TEMPLATE/documentation-improvement.yml",
+      ".github/ISSUE_TEMPLATE/governance-safety-review.yml",
+      ".github/ISSUE_TEMPLATE/accessibility-mobile.yml"
+    ]
+  },
   "decisionRoom": {
     "entrypoint": "decision-room.html",
     "readinessGates": "docs/sandbox-readiness-gates-v1.2.md",
@@ -105,9 +138,11 @@
       "decision-room.html",
       "next-steps.html",
       "build-room.html",
+      "contributor-room.html",
       "docs-index.html",
       "document.html",
       "PACKAGE_INDEX.md",
+      "docs/public-demo-release-notes-v1.4.md",
       "docs/public-demo-release-notes-v1.3.md",
       "docs/public-demo-release-notes-v1.2.md",
       "docs/public-demo-release-notes-v1.1.md",
@@ -137,6 +172,28 @@
       "data/sandbox-acceptance-matrix-v1.3.csv",
       "data/implementation-sprint-plan-v1.3.csv",
       "data/sandbox-import-manifest-v1.3.json"
+    ],
+    "contributorRoom": [
+      "CONTRIBUTING.md",
+      "CODE_OF_CONDUCT.md",
+      "GOVERNANCE.md",
+      "ROADMAP.md",
+      "SECURITY.md",
+      "SUPPORT.md",
+      "docs/open-source-contributor-model-v1.4.md",
+      "docs/maintainer-charter-v1.4.md",
+      "docs/community-authority-boundary-v1.4.md",
+      "docs/github-repo-setup-checklist-v1.4.md",
+      "docs/first-sandbox-sprint-board-v1.4.md",
+      "data/contributor-roadmap-v1.4.csv",
+      "data/issue-triage-board-v1.4.csv",
+      "data/maintainer-responsibility-matrix-v1.4.csv",
+      ".github/PULL_REQUEST_TEMPLATE.md",
+      ".github/ISSUE_TEMPLATE/config.yml",
+      ".github/ISSUE_TEMPLATE/fake-data-sandbox-task.yml",
+      ".github/ISSUE_TEMPLATE/documentation-improvement.yml",
+      ".github/ISSUE_TEMPLATE/governance-safety-review.yml",
+      ".github/ISSUE_TEMPLATE/accessibility-mobile.yml"
     ],
     "decisionPack": [
       "docs/decision-memo-v0.7.md",
@@ -172,6 +229,11 @@
       "docs/security-baseline-checklist-v0.8.md",
       "docs/data-classification-matrix-v0.8.md",
       "docs/static-demo-deployment-checklist-v0.8.md",
+      "docs/open-source-contributor-model-v1.4.md",
+      "docs/maintainer-charter-v1.4.md",
+      "docs/community-authority-boundary-v1.4.md",
+      "docs/github-repo-setup-checklist-v1.4.md",
+      "docs/first-sandbox-sprint-board-v1.4.md",
       "docs/decidim-sandbox-blueprint-v1.3.md",
       "docs/implementation-sprint-plan-v1.3.md",
       "docs/admin-handover-training-plan-v1.3.md",
@@ -181,6 +243,9 @@
       "data/sandbox-acceptance-matrix-v1.3.csv",
       "data/implementation-sprint-plan-v1.3.csv",
       "data/sandbox-import-manifest-v1.3.json",
+      "data/contributor-roadmap-v1.4.csv",
+      "data/issue-triage-board-v1.4.csv",
+      "data/maintainer-responsibility-matrix-v1.4.csv",
       "data/sandbox-task-board.csv",
       "data/decision-log-template.csv"
     ]

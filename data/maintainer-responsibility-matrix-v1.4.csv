@@ -1,0 +1,8 @@
+area,initial_owner,review_needed,public_repo_scope,blocked_until
+Repository maintenance,Barayamal / Dean Foley,Maintainer review,Issues pull requests releases labels,Maintainer unavailable
+Static demo,Barayamal / Dean Foley,QA review,HTML CSS JS fake/sample data,Unsafe data or broken public pages
+Decidim sandbox,Initial developer,Builder and acceptance review,Fake-data configuration guidance,Hosting or environment unavailable
+Governance wording,Barayamal / Dean Foley,Advisor/community review,Plain-language draft materials,Authority questions unresolved
+Data safety,Barayamal / Dean Foley,Privacy/data/cultural review,Fake-data boundary documentation,Real or sensitive data appears
+Real pilot,Community authority,Formal approvals,Out of public repo scope,Governance privacy data cultural hosting support approvals missing
+

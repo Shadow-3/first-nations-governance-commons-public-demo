@@ -41,7 +41,7 @@
       background: var(--surface);
       border-bottom: 1px solid var(--line);
       display: grid;
-      grid-template-columns: minmax(210px, 1fr) auto auto auto auto auto;
+      grid-template-columns: minmax(210px, 1fr) auto auto auto auto auto auto;
       align-items: center;
       gap: 14px;
       padding: 14px 24px;
@@ -150,7 +150,7 @@
 
     .quick {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 12px;
     }
 
@@ -293,6 +293,7 @@
     <a class="btn primary" href="decision-room.html">Decision Room</a>
     <a class="btn primary" href="next-steps.html">Action Center</a>
     <a class="btn primary" href="build-room.html">Builder Room</a>
+    <a class="btn primary" href="contributor-room.html">Contributor Room</a>
     <a class="btn" href="index.html">Open Demo</a>
     <div class="label">Public demo - fake data only</div>
   </header>
@@ -318,6 +319,10 @@
       <a href="#builders">
         <strong>Builders</strong>
         <span>Use the Builder Room, blueprint, component map, acceptance tests, and handover plan.</span>
+      </a>
+      <a href="#contributors">
+        <strong>Contributors</strong>
+        <span>Review the open-source model, maintainer rules, roadmap, and issue templates.</span>
       </a>
       <a href="#governance">
         <strong>Governance/Data</strong>
@@ -356,6 +361,13 @@
         </div>
         <div class="doc-row">
           <div>
+            <strong>Contributor Room</strong>
+            <span>Open-source maintainer model, contributor lanes, repo boundary, and roadmap.</span>
+          </div>
+          <a class="btn primary" href="contributor-room.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
             <strong>Public demo prototype</strong>
             <span>Sample Decidim-style participatory process.</span>
           </div>
@@ -385,10 +397,29 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v1.3 Builder Room and implementation package.</span>
+            <span>What changed in the v1.4 Contributor Room and open-source package.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v1.3.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v1.4.md">Open</a>
         </div>
+      </div>
+    </section>
+
+    <section id="contributors">
+      <div class="section-head">
+        <div>
+          <h2>Contributors</h2>
+          <p>Use these files to run the public repository without confusing code maintainership with community authority.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Contributor Room</strong><span>Interactive open-source operating cockpit.</span></div><a class="btn primary" href="contributor-room.html">Open</a></div>
+        <div class="doc-row"><div><strong>Contributing guide</strong><span>Contributor lanes, PR checklist, fake-data boundary.</span></div><a class="btn" href="document.html?file=CONTRIBUTING.md">Open</a></div>
+        <div class="doc-row"><div><strong>Repository governance</strong><span>Maintainer decisions vs community authority decisions.</span></div><a class="btn" href="document.html?file=GOVERNANCE.md">Open</a></div>
+        <div class="doc-row"><div><strong>Open-source model</strong><span>Wikipedia-style contributor model with authority boundary.</span></div><a class="btn" href="docs/open-source-contributor-model-v1.4.md">Open</a></div>
+        <div class="doc-row"><div><strong>Maintainer charter</strong><span>Merge, hold, and removal criteria.</span></div><a class="btn" href="docs/maintainer-charter-v1.4.md">Open</a></div>
+        <div class="doc-row"><div><strong>Community authority boundary</strong><span>What the repository can and cannot decide.</span></div><a class="btn" href="docs/community-authority-boundary-v1.4.md">Open</a></div>
+        <div class="doc-row"><div><strong>Repo setup checklist</strong><span>Required files, labels, branch rules, and project board.</span></div><a class="btn" href="docs/github-repo-setup-checklist-v1.4.md">Open</a></div>
+        <div class="doc-row"><div><strong>Issue triage board</strong><span>CSV lanes for contribution intake.</span></div><a class="btn" href="data/issue-triage-board-v1.4.csv">Open</a></div>
       </div>
     </section>
 
@@ -487,7 +518,7 @@
     </section>
 
     <footer>
-      Version v1.3. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v1.4. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
   <script>

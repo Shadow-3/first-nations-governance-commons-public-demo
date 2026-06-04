@@ -1,0 +1,8 @@
+phase,status,owner,summary,done_check
+Public demo,Done,Barayamal / Dean Foley,Static fake-data portal and review package deployed,Live v1.4 site passes QA
+Contributor model,Done,Barayamal / Dean Foley,Repository rules templates and Contributor Room added,Contributor files visible and linked
+Advisor review,Next,Barayamal / Dean Foley,Invite 3-5 advisors to review usefulness safety and readiness,Advisor feedback logged
+Fake-data Decidim sandbox,Next,Initial developer,Configure Decidim using Builder Room handoff,Sandbox acceptance matrix passed
+Admin handover,Planned,Initial developer,Document admin roles backup support and update path,Handover checklist completed
+Real pilot readiness,Blocked,Community authority,Consider real pilot only after approvals,Governance privacy data cultural hosting and support approvals exist
+

@@ -1,0 +1,8 @@
+lane,issue_type,example,default_label,decision_rule
+Inbox,Untriaged contribution,New idea or bug report,needs triage,Check fake-data boundary first
+Docs,Documentation improvement,Plain-language review or typo,documentation,Merge if safe and useful
+Sandbox,Decidim configuration task,Configure proposals component,sandbox,Use Builder Room acceptance checks
+Access,Accessibility or mobile issue,Layout overflow at 390px,accessibility,Prioritise blockers and public usability
+Safety,Governance privacy or cultural concern,Public wording implies real mandate,safety,Pause until reviewed
+Blocked,Real data or authority issue,Request includes real records,blocked-real-data,Reject or move to governed private process
+

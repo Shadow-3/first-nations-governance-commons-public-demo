@@ -1,0 +1,27 @@
+name: Fake-data sandbox task
+description: Plan or track work for the fake-data Decidim sandbox.
+title: "[Sandbox] "
+labels: ["sandbox", "fake-data"]
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: Task
+      description: What needs to be configured, mapped, tested, or documented?
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Safety boundary
+      options:
+        - label: This task uses fake/sample data only.
+          required: true
+        - label: This task does not include real community records, member data, cultural material, voting data, or sensitive information.
+          required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance check
+      description: How will the task be checked?
+

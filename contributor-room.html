@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Builder Room - First Nations Governance Commons</title>
-  <meta name="description" content="Decidim sandbox implementation cockpit for the First Nations Governance Commons fake-data public demo.">
+  <title>Contributor Room - First Nations Governance Commons</title>
+  <meta name="description" content="Open-source contributor and maintainer model for the First Nations Governance Commons fake-data public demo and Decidim sandbox.">
   <style>
     :root {
       --bg: #f6f7f5;
@@ -40,9 +40,7 @@
 
     a { color: inherit; }
 
-    button {
-      font: inherit;
-    }
+    button { font: inherit; }
 
     .topbar {
       min-height: 72px;
@@ -157,7 +155,7 @@
 
     .intro p,
     .metric span,
-    .build-card p,
+    .model-card p,
     .resource span,
     .step p,
     .summary {
@@ -177,14 +175,15 @@
       justify-content: flex-end;
     }
 
-    .metrics {
+    .metrics,
+    .resource-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 12px;
     }
 
     .metric,
-    .build-card,
+    .model-card,
     .resource,
     .step,
     .note {
@@ -240,18 +239,18 @@
       border-color: #c8ded8;
     }
 
-    .build-grid {
+    .model-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
     }
 
-    .build-card {
+    .model-card {
       padding: 16px;
       display: grid;
       gap: 12px;
       align-content: start;
-      min-height: 174px;
+      min-height: 170px;
     }
 
     .card-top {
@@ -261,7 +260,7 @@
       align-items: start;
     }
 
-    .build-card p {
+    .model-card p {
       margin: 0;
       font-size: 13px;
     }
@@ -274,11 +273,11 @@
       white-space: nowrap;
     }
 
-    .pill.spaces { color: var(--teal); background: var(--teal-2); }
-    .pill.components { color: var(--green); background: var(--green-2); }
-    .pill.data { color: var(--amber); background: var(--amber-2); }
+    .pill.maintainer { color: var(--teal); background: var(--teal-2); }
+    .pill.contributor { color: var(--green); background: var(--green-2); }
+    .pill.review { color: var(--amber); background: var(--amber-2); }
     .pill.safety { color: var(--red); background: var(--red-2); }
-    .pill.handover { color: var(--ochre); background: var(--ochre-2); }
+    .pill.roadmap { color: var(--ochre); background: var(--ochre-2); }
 
     .timeline {
       display: grid;
@@ -307,12 +306,6 @@
       color: #fff;
       background: var(--teal);
       font-weight: 900;
-    }
-
-    .resource-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
     }
 
     .resource {
@@ -349,11 +342,11 @@
       padding-top: 8px;
     }
 
-    @media (max-width: 1020px) {
+    @media (max-width: 1080px) {
       .topbar,
       .intro,
       .metrics,
-      .build-grid,
+      .model-grid,
       .timeline,
       .resource-grid {
         grid-template-columns: 1fr;
@@ -394,7 +387,7 @@
       </div>
     </div>
     <a class="btn primary" href="decision-room.html">Decision Room</a>
-    <a class="btn primary" href="contributor-room.html">Contributor Room</a>
+    <a class="btn primary" href="build-room.html">Builder Room</a>
     <a class="btn" href="next-steps.html">Action Center</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
@@ -404,76 +397,78 @@
   <main>
     <section class="intro">
       <div>
-        <h1>Builder Room</h1>
-        <p>Use this implementation cockpit to turn the public demo into a fake-data Decidim sandbox. It maps demo surfaces to Decidim spaces/components, sample imports, acceptance checks, sprint work, and handover outputs.</p>
+        <h1>Contributor Room</h1>
+        <p>Use this room to run the open-source/Wikipedia-style contribution model around Barayamal / Dean Foley as initial developer and custodian. It keeps public infrastructure open while keeping community authority, real data, and cultural material outside repository control.</p>
       </div>
       <div class="actions">
-        <button class="btn primary" id="downloadBrief" type="button">Download Builder Brief</button>
-        <a class="btn" href="document.html?file=docs%2Fdecidim-sandbox-blueprint-v1.3.md">Open Blueprint</a>
+        <button class="btn primary" id="downloadBrief" type="button">Download Contributor Brief</button>
+        <a class="btn" href="document.html?file=docs%2Fopen-source-contributor-model-v1.4.md">Open Model</a>
       </div>
     </section>
 
-    <section class="metrics" aria-label="Builder room metrics">
-      <div class="metric"><strong>10</strong><span>Decidim mapping items</span></div>
-      <div class="metric"><strong>12</strong><span>acceptance checks</span></div>
-      <div class="metric"><strong>4</strong><span>implementation sprints</span></div>
-      <div class="metric"><strong>0</strong><span>real data allowed</span></div>
+    <section class="metrics" aria-label="Contributor room metrics">
+      <div class="metric"><strong>6</strong><span>root repository governance files</span></div>
+      <div class="metric"><strong>5</strong><span>GitHub issue/PR templates</span></div>
+      <div class="metric"><strong>3</strong><span>CSV operating boards</span></div>
+      <div class="metric"><strong>0</strong><span>real authority replaced by repo process</span></div>
     </section>
 
     <section>
       <div class="section-head">
         <div>
-          <h2>Build Map</h2>
-          <p class="summary">Filter the implementation map by stream.</p>
+          <h2>Contribution Model</h2>
+          <p class="summary">Filter the model by operating stream.</p>
         </div>
-        <div class="filters" aria-label="Build stream filters">
+        <div class="filters" aria-label="Contribution stream filters">
           <button class="filter is-active" data-filter="All">All</button>
-          <button class="filter" data-filter="Spaces">Spaces</button>
-          <button class="filter" data-filter="Components">Components</button>
-          <button class="filter" data-filter="Data">Data</button>
+          <button class="filter" data-filter="Maintainer">Maintainer</button>
+          <button class="filter" data-filter="Contributor">Contributor</button>
+          <button class="filter" data-filter="Review">Review</button>
           <button class="filter" data-filter="Safety">Safety</button>
-          <button class="filter" data-filter="Handover">Handover</button>
+          <button class="filter" data-filter="Roadmap">Roadmap</button>
         </div>
       </div>
-      <div class="build-grid" id="buildGrid"></div>
+      <div class="model-grid" id="modelGrid"></div>
     </section>
 
     <section>
       <div class="section-head">
         <div>
-          <h2>Implementation Sequence</h2>
-          <p class="summary">A four-sprint path for the fake-data sandbox.</p>
+          <h2>Open-Source Sequence</h2>
+          <p class="summary">A practical path from public repository to fake-data sandbox contribution.</p>
         </div>
       </div>
       <div class="timeline">
-        <div class="step"><span class="step-num">0</span><h3>Inputs</h3><p>Confirm fake-data boundary, hosting, provider access, and acceptance test plan.</p></div>
-        <div class="step"><span class="step-num">1</span><h3>Environment</h3><p>Install Decidim, create organisation, admin roles, and public explanation pages.</p></div>
-        <div class="step"><span class="step-num">2</span><h3>Configuration</h3><p>Create assembly, process, proposals, meetings, surveys, and accountability tracking.</p></div>
-        <div class="step"><span class="step-num">3</span><h3>Data And Handover</h3><p>Add sample records, run acceptance tests, document support, and complete admin handover.</p></div>
+        <div class="step"><span class="step-num">0</span><h3>Boundary</h3><p>Confirm fake-data-only repository rules and community authority separation.</p></div>
+        <div class="step"><span class="step-num">1</span><h3>Repo Setup</h3><p>Use root docs, issue templates, pull request checklist, labels, and maintainer rules.</p></div>
+        <div class="step"><span class="step-num">2</span><h3>Contribution</h3><p>Triage docs, access, sandbox, safety, and Decidim configuration tasks.</p></div>
+        <div class="step"><span class="step-num">3</span><h3>Sandbox Sprint</h3><p>Move accepted tasks into the fake-data Decidim sandbox build and handover path.</p></div>
       </div>
     </section>
 
     <section>
       <div class="section-head">
         <div>
-          <h2>Builder Resources</h2>
+          <h2>Contributor Resources</h2>
           <p class="summary">Open these through the document viewer.</p>
         </div>
       </div>
       <div class="resource-grid">
-        <a class="resource" href="document.html?file=docs%2Fdecidim-sandbox-blueprint-v1.3.md"><strong>Sandbox blueprint</strong><span>Structure, boundary, imports, acceptance, and handover path.</span></a>
-        <a class="resource" href="document.html?file=data%2Fdecidim-component-map-v1.3.csv"><strong>Component map</strong><span>Maps demo surfaces to Decidim targets and acceptance checks.</span></a>
-        <a class="resource" href="document.html?file=data%2Fsandbox-acceptance-matrix-v1.3.csv"><strong>Acceptance matrix</strong><span>Checks for pages, spaces, components, safety, mobile, and support.</span></a>
-        <a class="resource" href="document.html?file=data%2Fsandbox-import-manifest-v1.3.json"><strong>Import manifest</strong><span>Sample data files, targets, methods, and required status.</span></a>
-        <a class="resource" href="document.html?file=docs%2Fimplementation-sprint-plan-v1.3.md"><strong>Sprint plan</strong><span>Four-sprint implementation path for provider/developer handoff.</span></a>
-        <a class="resource" href="document.html?file=docs%2Fadmin-handover-training-plan-v1.3.md"><strong>Admin handover</strong><span>Training topics, checklist, support, backup, and safety handover.</span></a>
+        <a class="resource" href="document.html?file=CONTRIBUTING.md"><strong>Contributing</strong><span>Contributor lanes, PR checklist, and fake-data rules.</span></a>
+        <a class="resource" href="document.html?file=GOVERNANCE.md"><strong>Repository governance</strong><span>Maintainer authority vs community authority.</span></a>
+        <a class="resource" href="document.html?file=ROADMAP.md"><strong>Roadmap</strong><span>Public demo, sandbox, review, and real-pilot readiness phases.</span></a>
+        <a class="resource" href="document.html?file=docs%2Fmaintainer-charter-v1.4.md"><strong>Maintainer charter</strong><span>Merge, hold, and removal criteria.</span></a>
+        <a class="resource" href="document.html?file=docs%2Fgithub-repo-setup-checklist-v1.4.md"><strong>Repo setup checklist</strong><span>Required files, labels, branch rules, and first project board.</span></a>
+        <a class="resource" href="document.html?file=data%2Fissue-triage-board-v1.4.csv"><strong>Issue triage board</strong><span>CSV lanes for docs, sandbox, access, safety, and blocked work.</span></a>
+        <a class="resource" href="document.html?file=data%2Fcontributor-roadmap-v1.4.csv"><strong>Contributor roadmap</strong><span>Operating roadmap from public demo to fake-data sandbox.</span></a>
+        <a class="resource" href="document.html?file=docs%2Ffirst-sandbox-sprint-board-v1.4.md"><strong>First sandbox sprint</strong><span>Initial Decidim sprint path for Barayamal/Dean Foley or another provider.</span></a>
       </div>
     </section>
 
     <section class="note">
-      <h2>Generated Builder Brief</h2>
-      <p class="summary">This local-only brief can be downloaded and sent with the RFQ or used in a builder kickoff.</p>
-      <div class="summary" id="builderSummary"></div>
+      <h2>Generated Contributor Brief</h2>
+      <p class="summary">This local-only brief can be downloaded and used as the repository kickoff note.</p>
+      <div class="summary" id="contributorSummary"></div>
     </section>
 
     <footer>
@@ -483,69 +478,72 @@
 
   <script>
     const items = [
-      { stream: "Spaces", title: "Organisation", target: "Organisation settings", action: "Create organisation and public identity", source: "Concept note", check: "Organisation has fake-data public explanation" },
-      { stream: "Spaces", title: "Governance context", target: "Assembly", action: "Create public assembly for governance context", source: "Governance charter", check: "Assembly states authority is draft/sample only" },
-      { stream: "Spaces", title: "2026 priorities process", target: "Participatory process", action: "Create one sample participatory process", source: "sample-process-data.json", check: "Process phases match static demo" },
-      { stream: "Components", title: "Proposals", target: "Proposals component", action: "Configure categories/statuses and sample proposals", source: "sample-proposals.csv", check: "Sample proposals visible with fake-data labels" },
-      { stream: "Components", title: "Meetings", target: "Meetings component", action: "Create sample meetings and offline session records", source: "sample-meetings.csv", check: "Meetings show sample/offline context" },
-      { stream: "Components", title: "Surveys", target: "Surveys component", action: "Create sample survey or feedback component", source: "sample-survey-questions.json", check: "Survey is clearly fake/sample only" },
-      { stream: "Components", title: "Accountability", target: "Accountability component", action: "Configure tracking or equivalent progress list", source: "sample-accountability.csv", check: "Actions show owners/status/review dates" },
-      { stream: "Data", title: "Mandate Record", target: "Evidence page", action: "Create sample Mandate Record page or attachment", source: "sample-mandate-record.json", check: "Record states no real decision was made" },
-      { stream: "Safety", title: "Fake-data boundary", target: "Labels and moderation settings", action: "Add public warning labels and upload restrictions", source: "Data classification matrix", check: "No real data/cultural material appears" },
-      { stream: "Handover", title: "Admin transition", target: "Admin roles and handover notes", action: "Document access, support, backup, and update path", source: "Admin handover plan", check: "Handover checklist completed" }
+      { stream: "Maintainer", title: "Initial maintainer", owner: "Barayamal / Dean Foley", action: "Review and merge public infrastructure changes", guardrail: "Cannot approve real community authority alone" },
+      { stream: "Maintainer", title: "Release steward", owner: "Initial maintainer", action: "Keep release notes, manifest, package index, and QA current", guardrail: "Must exclude working screenshots and unsafe data from public release" },
+      { stream: "Contributor", title: "Documentation contributor", owner: "Open contributor", action: "Improve plain-language docs, templates, and public guidance", guardrail: "No private, cultural, real community, or sensitive material" },
+      { stream: "Contributor", title: "Sandbox contributor", owner: "Open contributor", action: "Suggest fake-data Decidim configuration tasks", guardrail: "Must use Builder Room acceptance checks" },
+      { stream: "Review", title: "Advisor review", owner: "Advisors", action: "Review legitimacy, usefulness, access, and risk", guardrail: "Advisors do not replace community authority" },
+      { stream: "Review", title: "Pull request review", owner: "Maintainer", action: "Check fake-data, mobile, docs, and manifest updates", guardrail: "Pause if governance or data rules are affected" },
+      { stream: "Safety", title: "Data boundary", owner: "Maintainer", action: "Reject real records, member data, cultural material, voting data, and sensitive information", guardrail: "Remove unsafe material immediately" },
+      { stream: "Safety", title: "Authority boundary", owner: "Community authority", action: "Keep real pilot decisions outside repository maintainership", guardrail: "Repository decisions cannot create real mandate" },
+      { stream: "Roadmap", title: "Fake-data sandbox", owner: "Initial developer", action: "Use Builder Room to create Decidim sandbox", guardrail: "No real pilot without approvals" },
+      { stream: "Roadmap", title: "Maintainer expansion", owner: "Initial maintainer", action: "Add trusted maintainers only after role clarity and boundary acceptance", guardrail: "Access follows trust and necessity" }
     ];
 
     function renderItems(filter = "All") {
       const selected = filter === "All" ? items : items.filter(item => item.stream === filter);
-      document.getElementById("buildGrid").innerHTML = selected.map(item => `
-        <article class="build-card">
+      document.getElementById("modelGrid").innerHTML = selected.map(item => `
+        <article class="model-card">
           <div class="card-top">
             <div>
               <h3>${item.title}</h3>
-              <p>${item.target}</p>
+              <p>${item.owner}</p>
             </div>
             <span class="pill ${item.stream.toLowerCase()}">${item.stream}</span>
           </div>
-          <p><strong>Build action:</strong> ${item.action}</p>
-          <p><strong>Source:</strong> ${item.source}</p>
-          <p><strong>Acceptance:</strong> ${item.check}</p>
+          <p><strong>Can do:</strong> ${item.action}</p>
+          <p><strong>Guardrail:</strong> ${item.guardrail}</p>
         </article>
       `).join("");
       renderSummary(selected, filter);
     }
 
     function renderSummary(selected, filter) {
-      document.getElementById("builderSummary").textContent = `# Decidim Sandbox Builder Brief
+      document.getElementById("contributorSummary").textContent = `# Contributor Room Brief
 
 Project: First Nations Governance Commons
-Mode: fake-data Decidim sandbox
+Mode: public infrastructure and fake-data sandbox support
+Initial developer/custodian: Barayamal / Dean Foley
 Filter: ${filter}
-Mapping items shown: ${selected.length}
+Model items shown: ${selected.length}
 
-## Required Boundary
+## Core Rule
 
-Fake/sample data only. Do not import real community records, member lists, cultural material, real voting data, or sensitive personal information.
+Open-source the infrastructure. Do not open-source community authority.
 
-## Build Items
+## Selected Model Items
 
-${selected.map(item => `- ${item.stream}: ${item.title} -> ${item.target}; ${item.action}; acceptance: ${item.check}`).join("\n")}
+${selected.map(item => `- ${item.stream}: ${item.title}; owner: ${item.owner}; can do: ${item.action}; guardrail: ${item.guardrail}`).join("\n")}
 
-## Core Files
+## Required Files
 
-- docs/decidim-sandbox-blueprint-v1.3.md
-- data/decidim-component-map-v1.3.csv
-- data/sandbox-acceptance-matrix-v1.3.csv
-- data/sandbox-import-manifest-v1.3.json
-- docs/admin-handover-training-plan-v1.3.md
+- CONTRIBUTING.md
+- CODE_OF_CONDUCT.md
+- GOVERNANCE.md
+- SECURITY.md
+- SUPPORT.md
+- ROADMAP.md
+- .github/PULL_REQUEST_TEMPLATE.md
+- .github/ISSUE_TEMPLATE/
 `;
     }
 
     function downloadBrief() {
-      const blob = new Blob([document.getElementById("builderSummary").textContent], { type: "text/markdown" });
+      const blob = new Blob([document.getElementById("contributorSummary").textContent], { type: "text/markdown" });
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
-      link.download = "decidim-sandbox-builder-brief.md";
+      link.download = "contributor-room-brief.md";
       document.body.appendChild(link);
       link.click();
       link.remove();
@@ -565,3 +563,4 @@ ${selected.map(item => `- ${item.stream}: ${item.title} -> ${item.target}; ${ite
   </script>
 </body>
 </html>
+
