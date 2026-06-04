@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sprint Room - First Nations Governance Commons</title>
+  <meta name="description" content="First fake-data Decidim sandbox sprint room for the First Nations Governance Commons public demo.">
+  <style>
+    :root {
+      --bg: #f6f7f5;
+      --surface: #ffffff;
+      --surface-2: #eef3ef;
+      --text: #1d2523;
+      --muted: #61706b;
+      --line: #d9e0dc;
+      --teal: #0d675f;
+      --teal-2: #e5f1ee;
+      --ochre: #b66a25;
+      --ochre-2: #fff2e5;
+      --green: #247654;
+      --green-2: #e7f4ed;
+      --red: #aa3d36;
+      --red-2: #fae9e7;
+      --amber: #8b691d;
+      --amber-2: #fff6d9;
+      --radius: 6px;
+      --shadow: 0 14px 36px rgba(18, 33, 29, 0.08);
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.45;
+    }
+
+    a { color: inherit; }
+    button { font: inherit; }
+
+    .topbar {
+      min-height: 72px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) auto auto auto auto auto auto auto;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius);
+      background: var(--teal);
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .brand strong,
+    .brand span {
+      display: block;
+    }
+
+    .brand strong {
+      font-size: 15px;
+      line-height: 1.1;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .label {
+      width: fit-content;
+      color: var(--ochre);
+      background: var(--ochre-2);
+      border: 1px solid #f1d7b9;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .btn {
+      min-height: 38px;
+      border-radius: var(--radius);
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .btn.primary {
+      background: var(--teal);
+      color: #fff;
+      border-color: var(--teal);
+    }
+
+    main {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 28px 24px 44px;
+      display: grid;
+      gap: 22px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: end;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    h2,
+    h3 {
+      margin: 0;
+      letter-spacing: 0;
+    }
+
+    .intro p,
+    .metric span,
+    .issue-card p,
+    .resource span,
+    .step p,
+    .summary {
+      color: var(--muted);
+    }
+
+    .intro p {
+      max-width: 840px;
+      margin: 12px 0 0;
+      font-size: 15px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .metrics,
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .metric,
+    .issue-card,
+    .resource,
+    .step,
+    .note {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .metric {
+      padding: 16px;
+      min-height: 108px;
+      display: grid;
+      gap: 8px;
+      align-content: start;
+    }
+
+    .metric strong {
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 14px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 10px;
+    }
+
+    .filters {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .filter {
+      min-height: 34px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--muted);
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .filter.is-active {
+      color: var(--teal);
+      background: var(--teal-2);
+      border-color: #c8ded8;
+    }
+
+    .issue-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .issue-card {
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+      align-content: start;
+      min-height: 188px;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .issue-card p {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .pill {
+      border-radius: 999px;
+      padding: 5px 8px;
+      font-size: 11px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .pill.setup { color: var(--teal); background: var(--teal-2); }
+    .pill.config { color: var(--green); background: var(--green-2); }
+    .pill.safety { color: var(--red); background: var(--red-2); }
+    .pill.handover { color: var(--ochre); background: var(--ochre-2); }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .step,
+    .resource,
+    .note {
+      padding: 16px;
+    }
+
+    .step {
+      display: grid;
+      gap: 8px;
+      align-content: start;
+    }
+
+    .step-num {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius);
+      color: #fff;
+      background: var(--teal);
+      font-weight: 900;
+    }
+
+    .resource {
+      display: grid;
+      gap: 8px;
+      text-decoration: none;
+      align-content: start;
+    }
+
+    .resource strong,
+    .resource span {
+      display: block;
+    }
+
+    .resource span {
+      font-size: 13px;
+    }
+
+    .summary {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface-2);
+      padding: 12px;
+      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+      font-size: 12px;
+      white-space: pre-wrap;
+      overflow: auto;
+      max-height: 300px;
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 12px;
+      padding-top: 8px;
+    }
+
+    @media (max-width: 1120px) {
+      .topbar,
+      .intro,
+      .metrics,
+      .issue-grid,
+      .timeline,
+      .resource-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .topbar {
+        padding: 12px 16px;
+      }
+
+      main {
+        padding: 20px 16px 34px;
+      }
+
+      .section-head,
+      .card-top {
+        display: grid;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">B</div>
+      <div>
+        <strong>Barayamal</strong>
+        <span>First Nations Governance Commons</span>
+      </div>
+    </div>
+    <a class="btn primary" href="decision-room.html">Decision Room</a>
+    <a class="btn primary" href="build-room.html">Builder Room</a>
+    <a class="btn primary" href="contributor-room.html">Contributor Room</a>
+    <a class="btn" href="next-steps.html">Action Center</a>
+    <a class="btn" href="index.html">Open Demo</a>
+    <a class="btn" href="docs-index.html">Review Pack</a>
+    <div class="label">Public demo - fake data only</div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <h1>Sprint Room</h1>
+        <p>Use this room to run the first fake-data Decidim sandbox sprint. It converts the Contributor Room rules and Builder Room implementation map into actionable GitHub issues, acceptance checks, evidence capture, RACI, and handover tasks.</p>
+      </div>
+      <div class="actions">
+        <button class="btn primary" id="downloadIssues" type="button">Download Issue Pack</button>
+        <a class="btn" href="document.html?file=docs%2Fsandbox-sprint-kickoff-v1.5.md">Open Kickoff</a>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Sprint room metrics">
+      <div class="metric"><strong>12</strong><span>first-sprint GitHub issues</span></div>
+      <div class="metric"><strong>4</strong><span>sprint lanes</span></div>
+      <div class="metric"><strong>8</strong><span>evidence items to capture</span></div>
+      <div class="metric"><strong>0</strong><span>real data allowed</span></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Sprint Issue Board</h2>
+          <p class="summary">Filter the first sprint issues by lane.</p>
+        </div>
+        <div class="filters" aria-label="Sprint lane filters">
+          <button class="filter is-active" data-filter="All">All</button>
+          <button class="filter" data-filter="Setup">Setup</button>
+          <button class="filter" data-filter="Decidim configuration">Decidim Config</button>
+          <button class="filter" data-filter="Safety QA">Safety QA</button>
+          <button class="filter" data-filter="Handover">Handover</button>
+        </div>
+      </div>
+      <div class="issue-grid" id="issueGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Sprint Sequence</h2>
+          <p class="summary">A simple order for the first fake-data sandbox sprint.</p>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="step"><span class="step-num">0</span><h3>Open Board</h3><p>Create the GitHub sprint board and issue labels.</p></div>
+        <div class="step"><span class="step-num">1</span><h3>Provision</h3><p>Confirm hosting, install Decidim, create admin access, and add fake-data warnings.</p></div>
+        <div class="step"><span class="step-num">2</span><h3>Configure</h3><p>Create organisation, assembly, process, components, and sample records.</p></div>
+        <div class="step"><span class="step-num">3</span><h3>Accept</h3><p>Run QA, capture evidence, complete handover, and log limitations.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Sprint Resources</h2>
+          <p class="summary">Open these through the document viewer.</p>
+        </div>
+      </div>
+      <div class="resource-grid">
+        <a class="resource" href="document.html?file=docs%2Fsandbox-sprint-kickoff-v1.5.md"><strong>Sprint kickoff</strong><span>Start conditions, sprint goal, boundary, lanes, and done definition.</span></a>
+        <a class="resource" href="document.html?file=data%2Fsandbox-sprint-issues-v1.5.csv"><strong>Sprint issues CSV</strong><span>First 12 issues with owners, sources, labels, and acceptance checks.</span></a>
+        <a class="resource" href="document.html?file=docs%2Fgithub-issue-pack-v1.5.md"><strong>GitHub issue pack</strong><span>Issue opening order, labels, and standard issue fields.</span></a>
+        <a class="resource" href="document.html?file=data%2Fissue-import-manifest-v1.5.json"><strong>Issue import manifest</strong><span>Machine-readable issue pack metadata.</span></a>
+        <a class="resource" href="document.html?file=docs%2Fsprint-acceptance-and-evidence-plan-v1.5.md"><strong>Evidence plan</strong><span>Acceptance evidence, no-go evidence, and handover evidence.</span></a>
+        <a class="resource" href="document.html?file=data%2Fsprint-evidence-log-v1.5.csv"><strong>Evidence log</strong><span>Screenshot and handover evidence capture table.</span></a>
+        <a class="resource" href="document.html?file=data%2Fsprint-raci-v1.5.csv"><strong>Sprint RACI</strong><span>Responsible, accountable, consulted, and informed roles.</span></a>
+        <a class="resource" href="build-room.html"><strong>Builder Room</strong><span>Implementation map that feeds the sprint issues.</span></a>
+      </div>
+    </section>
+
+    <section class="note">
+      <h2>Generated Sprint Issue Pack</h2>
+      <p class="summary">Download this local-only brief and use it to open GitHub issues or run the sprint kickoff.</p>
+      <div class="summary" id="issueSummary"></div>
+    </section>
+
+    <footer>
+      Version v1.5. Initial developer/custodian: Barayamal / Dean Foley.
+    </footer>
+  </main>
+
+  <script>
+    const issues = [
+      { id: "S-001", lane: "Setup", title: "Create GitHub sprint board", owner: "Barayamal / Dean Foley", source: "github-repo-setup-checklist-v1.4.md", acceptance: "Board has Inbox, Ready, In progress, Review, Blocked, Done", labels: "sandbox; fake-data" },
+      { id: "S-002", lane: "Setup", title: "Confirm maintainer and contributor rules", owner: "Barayamal / Dean Foley", source: "CONTRIBUTING.md", acceptance: "Maintainer rules and fake-data boundary accepted", labels: "sandbox; governance" },
+      { id: "S-003", lane: "Setup", title: "Confirm Decidim hosting pathway", owner: "Initial developer", source: "hosting-decision-note.md", acceptance: "Hosting/support pathway documented", labels: "sandbox; decidim-config" },
+      { id: "S-004", lane: "Setup", title: "Install or provision Decidim sandbox", owner: "Initial developer", source: "technical-requirements-v0.8.md", acceptance: "Sandbox admin login works", labels: "sandbox; decidim-config" },
+      { id: "S-005", lane: "Decidim configuration", title: "Create organisation and public labels", owner: "Initial developer", source: "decidim-sandbox-blueprint-v1.3.md", acceptance: "Organisation loads with fake-data warning", labels: "sandbox; decidim-config" },
+      { id: "S-006", lane: "Decidim configuration", title: "Create assembly and governance context", owner: "Initial developer", source: "first-nations-governance-charter-draft.md", acceptance: "Assembly page states authority is draft/sample only", labels: "sandbox; decidim-config" },
+      { id: "S-007", lane: "Decidim configuration", title: "Create sample participatory process", owner: "Initial developer", source: "sample-process-data.json", acceptance: "Process phases match public demo", labels: "sandbox; decidim-config" },
+      { id: "S-008", lane: "Decidim configuration", title: "Configure proposals meetings survey and accountability", owner: "Initial developer", source: "decidim-component-map-v1.3.csv", acceptance: "Core components visible with fake/sample data", labels: "sandbox; decidim-config" },
+      { id: "S-009", lane: "Safety QA", title: "Run fake-data content audit", owner: "Maintainer", source: "data-classification-matrix-v0.8.md", acceptance: "No real data cultural material or sensitive records appear", labels: "safety; fake-data" },
+      { id: "S-010", lane: "Safety QA", title: "Run mobile and accessibility check", owner: "Maintainer", source: "public-demo-launch-checklist.md", acceptance: "Core public pages fit mobile viewport without blocking issues", labels: "accessibility; mobile" },
+      { id: "S-011", lane: "Handover", title: "Complete admin handover notes", owner: "Initial developer", source: "admin-handover-training-plan-v1.3.md", acceptance: "Admin support backup and update notes delivered", labels: "handover; sandbox" },
+      { id: "S-012", lane: "Handover", title: "Record sprint evidence and known limitations", owner: "Maintainer", source: "sprint-evidence-log-v1.5.csv", acceptance: "Evidence log has screenshots results and open risks", labels: "handover; safety" }
+    ];
+
+    function laneClass(lane) {
+      if (lane === "Decidim configuration") return "config";
+      if (lane === "Safety QA") return "safety";
+      return lane.toLowerCase();
+    }
+
+    function renderIssues(filter = "All") {
+      const selected = filter === "All" ? issues : issues.filter(issue => issue.lane === filter);
+      document.getElementById("issueGrid").innerHTML = selected.map(issue => `
+        <article class="issue-card">
+          <div class="card-top">
+            <div>
+              <h3>${issue.id}: ${issue.title}</h3>
+              <p>${issue.owner}</p>
+            </div>
+            <span class="pill ${laneClass(issue.lane)}">${issue.lane}</span>
+          </div>
+          <p><strong>Source:</strong> ${issue.source}</p>
+          <p><strong>Acceptance:</strong> ${issue.acceptance}</p>
+          <p><strong>Labels:</strong> ${issue.labels}</p>
+        </article>
+      `).join("");
+      renderSummary(selected, filter);
+    }
+
+    function renderSummary(selected, filter) {
+      document.getElementById("issueSummary").textContent = `# First Decidim Sandbox Sprint Issue Pack
+
+Project: First Nations Governance Commons
+Mode: fake-data Decidim sandbox sprint
+Initial developer/custodian: Barayamal / Dean Foley
+Filter: ${filter}
+Issues shown: ${selected.length}
+
+## Core Rule
+
+Open-source the infrastructure. Do not open-source community authority.
+
+## Fake-Data Boundary
+
+Do not add real community records, member data, cultural material, real voting data, or sensitive personal information.
+
+## Issues
+
+${selected.map(issue => `### ${issue.id}: ${issue.title}
+Lane: ${issue.lane}
+Owner: ${issue.owner}
+Source: ${issue.source}
+Labels: ${issue.labels}
+Acceptance: ${issue.acceptance}`).join("\n\n")}
+`;
+    }
+
+    function downloadIssues() {
+      const blob = new Blob([document.getElementById("issueSummary").textContent], { type: "text/markdown" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "first-sandbox-sprint-issue-pack.md";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    document.querySelectorAll("[data-filter]").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll("[data-filter]").forEach(item => item.classList.remove("is-active"));
+        button.classList.add("is-active");
+        renderIssues(button.dataset.filter);
+      });
+    });
+
+    document.getElementById("downloadIssues").addEventListener("click", downloadIssues);
+    renderIssues();
+  </script>
+</body>
+</html>
+

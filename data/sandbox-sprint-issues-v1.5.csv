@@ -1,0 +1,14 @@
+issue_id,lane,title,owner,source_file,acceptance_check,labels
+S-001,Setup,Create GitHub sprint board,Barayamal / Dean Foley,docs/github-repo-setup-checklist-v1.4.md,Board has Inbox Ready In progress Review Blocked Done,sandbox;fake-data
+S-002,Setup,Confirm maintainer and contributor rules,Barayamal / Dean Foley,CONTRIBUTING.md,Maintainer rules and fake-data boundary accepted,sandbox;governance
+S-003,Setup,Confirm Decidim hosting pathway,Initial developer,docs/hosting-decision-note.md,Hosting/support pathway documented,sandbox;decidim-config
+S-004,Setup,Install or provision Decidim sandbox,Initial developer,docs/technical-requirements-v0.8.md,Sandbox admin login works,sandbox;decidim-config
+S-005,Decidim configuration,Create organisation and public labels,Initial developer,docs/decidim-sandbox-blueprint-v1.3.md,Organisation loads with fake-data warning,sandbox;decidim-config
+S-006,Decidim configuration,Create assembly and governance context,Initial developer,docs/first-nations-governance-charter-draft.md,Assembly page states authority is draft/sample only,sandbox;decidim-config
+S-007,Decidim configuration,Create sample participatory process,Initial developer,data/sample-process-data.json,Process phases match public demo,sandbox;decidim-config
+S-008,Decidim configuration,Configure proposals meetings survey and accountability,Initial developer,data/decidim-component-map-v1.3.csv,Core components visible with fake/sample data,sandbox;decidim-config
+S-009,Safety QA,Run fake-data content audit,Maintainer,docs/data-classification-matrix-v0.8.md,No real data cultural material or sensitive records appear,safety;fake-data
+S-010,Safety QA,Run mobile and accessibility check,Maintainer,docs/public-demo-launch-checklist.md,Core public pages fit mobile viewport without blocking issues,accessibility;mobile
+S-011,Handover,Complete admin handover notes,Initial developer,docs/admin-handover-training-plan-v1.3.md,Admin support backup and update notes delivered,handover;sandbox
+S-012,Handover,Record sprint evidence and known limitations,Maintainer,data/sprint-evidence-log-v1.5.csv,Evidence log has screenshots results and open risks,handover;safety
+

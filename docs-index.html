@@ -41,7 +41,7 @@
       background: var(--surface);
       border-bottom: 1px solid var(--line);
       display: grid;
-      grid-template-columns: minmax(210px, 1fr) auto auto auto auto auto auto;
+      grid-template-columns: minmax(210px, 1fr) auto auto auto auto auto auto auto;
       align-items: center;
       gap: 14px;
       padding: 14px 24px;
@@ -150,7 +150,7 @@
 
     .quick {
       display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
+      grid-template-columns: repeat(6, minmax(0, 1fr));
       gap: 12px;
     }
 
@@ -294,6 +294,7 @@
     <a class="btn primary" href="next-steps.html">Action Center</a>
     <a class="btn primary" href="build-room.html">Builder Room</a>
     <a class="btn primary" href="contributor-room.html">Contributor Room</a>
+    <a class="btn primary" href="sprint-room.html">Sprint Room</a>
     <a class="btn" href="index.html">Open Demo</a>
     <div class="label">Public demo - fake data only</div>
   </header>
@@ -323,6 +324,10 @@
       <a href="#contributors">
         <strong>Contributors</strong>
         <span>Review the open-source model, maintainer rules, roadmap, and issue templates.</span>
+      </a>
+      <a href="#sprint">
+        <strong>Sprint Team</strong>
+        <span>Open the first fake-data Decidim sprint board, issue pack, RACI, and evidence log.</span>
       </a>
       <a href="#governance">
         <strong>Governance/Data</strong>
@@ -368,6 +373,13 @@
         </div>
         <div class="doc-row">
           <div>
+            <strong>Sprint Room</strong>
+            <span>First fake-data Decidim sandbox sprint board, issue pack, evidence log, and RACI.</span>
+          </div>
+          <a class="btn primary" href="sprint-room.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
             <strong>Public demo prototype</strong>
             <span>Sample Decidim-style participatory process.</span>
           </div>
@@ -397,10 +409,29 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v1.4 Contributor Room and open-source package.</span>
+            <span>What changed in the v1.5 Sprint Room and issue package.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v1.4.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v1.5.md">Open</a>
         </div>
+      </div>
+    </section>
+
+    <section id="sprint">
+      <div class="section-head">
+        <div>
+          <h2>Sprint Team</h2>
+          <p>Use these files to open and run the first fake-data Decidim sandbox sprint.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Sprint Room</strong><span>Interactive issue board and generated sprint issue pack.</span></div><a class="btn primary" href="sprint-room.html">Open</a></div>
+        <div class="doc-row"><div><strong>Sprint kickoff</strong><span>Start conditions, goal, lanes, boundary, and done definition.</span></div><a class="btn" href="docs/sandbox-sprint-kickoff-v1.5.md">Open</a></div>
+        <div class="doc-row"><div><strong>Sprint issues CSV</strong><span>First 12 issues with owners, labels, sources, and acceptance checks.</span></div><a class="btn" href="data/sandbox-sprint-issues-v1.5.csv">Open</a></div>
+        <div class="doc-row"><div><strong>GitHub issue pack</strong><span>Opening order, labels, standard fields, and issue rule.</span></div><a class="btn" href="docs/github-issue-pack-v1.5.md">Open</a></div>
+        <div class="doc-row"><div><strong>Issue import manifest</strong><span>JSON metadata for the first sprint issue pack.</span></div><a class="btn" href="data/issue-import-manifest-v1.5.json">Open</a></div>
+        <div class="doc-row"><div><strong>Evidence plan</strong><span>Acceptance evidence, no-go evidence, and handover evidence.</span></div><a class="btn" href="docs/sprint-acceptance-and-evidence-plan-v1.5.md">Open</a></div>
+        <div class="doc-row"><div><strong>Evidence log</strong><span>CSV table for screenshots, QA results, and handover records.</span></div><a class="btn" href="data/sprint-evidence-log-v1.5.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Sprint RACI</strong><span>Responsible, accountable, consulted, and informed roles.</span></div><a class="btn" href="data/sprint-raci-v1.5.csv">Open</a></div>
       </div>
     </section>
 
@@ -518,7 +549,7 @@
     </section>
 
     <footer>
-      Version v1.4. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v1.5. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
   <script>

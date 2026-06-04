@@ -1,0 +1,28 @@
+{
+  "manifestName": "First Nations Governance Commons Sprint Issue Import Manifest",
+  "version": "1.5",
+  "mode": "fake_sample_data_only",
+  "owner": "Barayamal / Dean Foley",
+  "source": "data/sandbox-sprint-issues-v1.5.csv",
+  "repository": "Shadow-3/first-nations-governance-commons-public-demo",
+  "rule": "Issues can organise infrastructure work, but cannot approve real community authority or real data use.",
+  "labels": [
+    "sandbox",
+    "fake-data",
+    "decidim-config",
+    "safety",
+    "handover",
+    "accessibility",
+    "mobile",
+    "governance"
+  ],
+  "issueCount": 12,
+  "requiredChecks": [
+    "fake-data boundary confirmed",
+    "source file named",
+    "acceptance check named",
+    "owner named",
+    "no real community data included"
+  ]
+}
+

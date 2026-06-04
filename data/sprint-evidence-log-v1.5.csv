@@ -1,0 +1,10 @@
+evidence_id,item,required_for,status,evidence_location,notes
+E-001,Sandbox homepage screenshot,Sprint acceptance,Needed,TBD,Must show fake-data warning
+E-002,Organisation settings screenshot,Sprint acceptance,Needed,TBD,Admin-only screenshot can be stored privately if needed
+E-003,Assembly page screenshot,Sprint acceptance,Needed,TBD,Must state authority is draft/sample only
+E-004,Process page screenshot,Sprint acceptance,Needed,TBD,Must match sample process phases
+E-005,Core components screenshots,Sprint acceptance,Needed,TBD,Proposals meetings survey accountability
+E-006,Fake-data audit result,Safety,Needed,TBD,Stop if real data appears
+E-007,Mobile QA result,Accessibility,Needed,TBD,Check public pages at phone width
+E-008,Handover notes,Handover,Needed,TBD,Admin access support backup update risks
+

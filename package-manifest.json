@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "1.4",
+  "version": "1.5",
   "date": "2026-06-04",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use the Contributor Room to run the open-source repository model with Barayamal/Dean Foley as initial developer/custodian, use the Decision Room to confirm proceed/hold/no-go status, then use the Builder Room as the implementation handoff. Proceed to fake-data Decidim sandbox only if no-go conditions are clear.",
+  "recommendedDecision": "Use the Contributor Room to run the open-source repository model, the Decision Room to confirm proceed/hold/no-go status, the Builder Room as the implementation handoff, and the Sprint Room to open the first fake-data Decidim sandbox issues and evidence log.",
   "localDecidimStatus": {
     "ruby": "not_installed",
     "rubygems": "not_installed",
@@ -21,6 +21,7 @@
     "next-steps.html",
     "build-room.html",
     "contributor-room.html",
+    "sprint-room.html",
     "docs-index.html",
     "document.html",
     "README.md",
@@ -32,6 +33,7 @@
     "SUPPORT.md",
     "PACKAGE_INDEX.md",
     "package-manifest.json",
+    "docs/public-demo-release-notes-v1.5.md",
     "docs/public-demo-release-notes-v1.4.md",
     "docs/public-demo-release-notes-v1.3.md",
     "docs/public-demo-release-notes-v1.2.md",
@@ -43,7 +45,7 @@
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v1.4.md",
+    "releaseNotes": "docs/public-demo-release-notes-v1.5.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -128,6 +130,23 @@
       "docs/github-templates/ISSUE_TEMPLATE/accessibility-mobile.yml"
     ]
   },
+  "sprintRoom": {
+    "entrypoint": "sprint-room.html",
+    "kickoff": "docs/sandbox-sprint-kickoff-v1.5.md",
+    "githubIssuePack": "docs/github-issue-pack-v1.5.md",
+    "acceptanceEvidencePlan": "docs/sprint-acceptance-and-evidence-plan-v1.5.md",
+    "sprintIssues": "data/sandbox-sprint-issues-v1.5.csv",
+    "evidenceLog": "data/sprint-evidence-log-v1.5.csv",
+    "sprintRaci": "data/sprint-raci-v1.5.csv",
+    "issueImportManifest": "data/issue-import-manifest-v1.5.json",
+    "lanes": [
+      "setup",
+      "decidim_configuration",
+      "safety_qa",
+      "handover"
+    ],
+    "issueCount": 12
+  },
   "decisionRoom": {
     "entrypoint": "decision-room.html",
     "readinessGates": "docs/sandbox-readiness-gates-v1.2.md",
@@ -147,9 +166,11 @@
       "next-steps.html",
       "build-room.html",
       "contributor-room.html",
+      "sprint-room.html",
       "docs-index.html",
       "document.html",
       "PACKAGE_INDEX.md",
+      "docs/public-demo-release-notes-v1.5.md",
       "docs/public-demo-release-notes-v1.4.md",
       "docs/public-demo-release-notes-v1.3.md",
       "docs/public-demo-release-notes-v1.2.md",
@@ -203,6 +224,15 @@
       "docs/github-templates/ISSUE_TEMPLATE/governance-safety-review.yml",
       "docs/github-templates/ISSUE_TEMPLATE/accessibility-mobile.yml"
     ],
+    "sprintRoom": [
+      "docs/sandbox-sprint-kickoff-v1.5.md",
+      "docs/github-issue-pack-v1.5.md",
+      "docs/sprint-acceptance-and-evidence-plan-v1.5.md",
+      "data/sandbox-sprint-issues-v1.5.csv",
+      "data/sprint-evidence-log-v1.5.csv",
+      "data/sprint-raci-v1.5.csv",
+      "data/issue-import-manifest-v1.5.json"
+    ],
     "decisionPack": [
       "docs/decision-memo-v0.7.md",
       "docs/scope-options-and-budget-model-v0.7.md",
@@ -237,6 +267,9 @@
       "docs/security-baseline-checklist-v0.8.md",
       "docs/data-classification-matrix-v0.8.md",
       "docs/static-demo-deployment-checklist-v0.8.md",
+      "docs/sandbox-sprint-kickoff-v1.5.md",
+      "docs/github-issue-pack-v1.5.md",
+      "docs/sprint-acceptance-and-evidence-plan-v1.5.md",
       "docs/open-source-contributor-model-v1.4.md",
       "docs/maintainer-charter-v1.4.md",
       "docs/community-authority-boundary-v1.4.md",
@@ -254,6 +287,10 @@
       "data/contributor-roadmap-v1.4.csv",
       "data/issue-triage-board-v1.4.csv",
       "data/maintainer-responsibility-matrix-v1.4.csv",
+      "data/sandbox-sprint-issues-v1.5.csv",
+      "data/sprint-evidence-log-v1.5.csv",
+      "data/sprint-raci-v1.5.csv",
+      "data/issue-import-manifest-v1.5.json",
       "data/sandbox-task-board.csv",
       "data/decision-log-template.csv"
     ]

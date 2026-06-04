@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v1.4
+Current package version: v1.5
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -24,6 +24,8 @@ Open `decision-room.html` to score fake-data sandbox readiness and download a lo
 Open `build-room.html` to use the Builder Room for Decidim sandbox implementation mapping, imports, acceptance checks, and handover.
 
 Open `contributor-room.html` to use the Contributor Room for the open-source maintainer model, contribution lanes, roadmap, issue templates, and repository boundary.
+
+Open `sprint-room.html` to use the Sprint Room for the first fake-data Decidim sandbox issue board, sprint kickoff, evidence log, and RACI.
 
 The demo shows:
 
@@ -60,6 +62,10 @@ The demo shows:
 - `docs/public-demo-release-notes-v1.2.md`
 - `docs/public-demo-release-notes-v1.3.md`
 - `docs/public-demo-release-notes-v1.4.md`
+- `docs/public-demo-release-notes-v1.5.md`
+- `docs/sandbox-sprint-kickoff-v1.5.md`
+- `docs/github-issue-pack-v1.5.md`
+- `docs/sprint-acceptance-and-evidence-plan-v1.5.md`
 - `docs/open-source-contributor-model-v1.4.md`
 - `docs/maintainer-charter-v1.4.md`
 - `docs/community-authority-boundary-v1.4.md`
@@ -105,6 +111,10 @@ The demo shows:
 - `data/contributor-roadmap-v1.4.csv`
 - `data/issue-triage-board-v1.4.csv`
 - `data/maintainer-responsibility-matrix-v1.4.csv`
+- `data/sandbox-sprint-issues-v1.5.csv`
+- `data/sprint-evidence-log-v1.5.csv`
+- `data/sprint-raci-v1.5.csv`
+- `data/issue-import-manifest-v1.5.json`
 - `data/sandbox-task-board.csv`
 - `data/decision-log-template.csv`
 - `PACKAGE_INDEX.md`
@@ -114,6 +124,7 @@ The demo shows:
 - `next-steps.html`
 - `build-room.html`
 - `contributor-room.html`
+- `sprint-room.html`
 - `document.html`
 - `CONTRIBUTING.md`
 - `CODE_OF_CONDUCT.md`
@@ -310,9 +321,26 @@ The v1.4 package adds:
 
 Use this version to run a public contribution model with Barayamal / Dean Foley as initial developer/custodian while keeping real community authority separate from repository maintainership.
 
+## v1.5 Sprint Room And First Sandbox Issue Pack
+
+The v1.5 package adds:
+
+- `sprint-room.html` as the first fake-data Decidim sandbox sprint operating room.
+- First-sprint issue board with 12 actionable issues.
+- Sprint kickoff brief.
+- GitHub issue pack.
+- Sprint acceptance and evidence plan.
+- Sprint evidence log CSV.
+- Sprint RACI CSV.
+- Issue import manifest JSON.
+- Downloadable generated Sprint Issue Pack.
+- Sprint Room links from the demo, Decision Room, Action Center, Builder Room, Contributor Room, Review Pack, and document viewer.
+
+Use this version to open the first GitHub sprint board and run the fake-data Decidim sandbox sprint with visible acceptance checks and evidence capture.
+
 ## Next Build Step
 
-Use the Contributor Room and Builder Room to configure a fake-data Decidim sandbox:
+Use the Contributor Room, Builder Room, and Sprint Room to configure a fake-data Decidim sandbox:
 
 - One organisation.
 - One public assembly.
