@@ -1,0 +1,7 @@
+decision_id,date,decision,owner,status,conditions,next_review,notes
+D-001,,Confirm advisor review group,Barayamal,Open,,,
+D-002,,Confirm public demo can be shared,Barayamal,Open,Fake/sample data only,,
+D-003,,Choose sandbox hosting path,Barayamal,Open,Managed/VPS/local decision,,
+D-004,,Choose Decidim builder,Barayamal,Open,Ruby/Rails or managed provider needed,,
+D-005,,Proceed to Decidim sandbox,Barayamal + advisors,Open,After advisor review,,
+D-006,,Proceed to real pilot,Community Authority,Blocked,Requires governance/data/cultural/privacy gates,,

@@ -1,0 +1,25 @@
+{
+  "demoStatus": "fake_sample_data_only",
+  "gates": [
+    {
+      "name": "Public demo",
+      "status": "Passed",
+      "description": "Safe to show with fake/sample data only."
+    },
+    {
+      "name": "Decidim sandbox",
+      "status": "Next",
+      "description": "Configure with sample imports and public warning labels."
+    },
+    {
+      "name": "Advisor review",
+      "status": "Required",
+      "description": "Review legitimacy, data, cultural safety, offline participation, and accountability."
+    },
+    {
+      "name": "Real pilot",
+      "status": "Blocked",
+      "description": "Requires approved authority, eligibility, privacy, data, and cultural rules."
+    }
+  ]
+}

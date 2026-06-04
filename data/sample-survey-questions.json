@@ -1,0 +1,57 @@
+{
+  "demoStatus": "fake_sample_data_only",
+  "survey": "2026 Community Priorities",
+  "questions": [
+    {
+      "id": "Q1",
+      "type": "multi_select",
+      "required": true,
+      "text": "What are the top three priorities you think should be considered for 2026?",
+      "options": [
+        "Housing",
+        "Youth",
+        "Health and wellbeing",
+        "Education and training",
+        "Caring for Country",
+        "Transport",
+        "Digital access",
+        "Community safety",
+        "Culture and language",
+        "Services accountability",
+        "Other"
+      ]
+    },
+    {
+      "id": "Q2",
+      "type": "single_select",
+      "required": true,
+      "text": "Which sample proposal should be prioritised first?",
+      "options": [
+        "Repair priority homes before wet season",
+        "Youth digital steward program",
+        "Caring for Country planning days",
+        "Service response scorecard"
+      ]
+    },
+    {
+      "id": "Q3",
+      "type": "single_select",
+      "required": false,
+      "text": "How would you prefer to participate?",
+      "options": [
+        "Online",
+        "Yarning circle",
+        "Paper form",
+        "Phone call",
+        "Assisted digital session",
+        "Through a local facilitator"
+      ]
+    },
+    {
+      "id": "Q4",
+      "type": "long_text",
+      "required": false,
+      "text": "What should decision-makers understand before setting the final priorities?"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "demoStatus": "fake_sample_data_only",
+  "processName": "2026 Community Priorities and Budget",
+  "authorisingBody": "Sample Community Reference Group",
+  "decisionAuthority": "To be confirmed before any real pilot",
+  "eligibilityRules": "Public input; verified community-only prioritisation",
+  "participationMethods": [
+    "Online proposals",
+    "Online survey",
+    "Yarning circles",
+    "Online meeting",
+    "Paper/phone assisted input",
+    "Facilitator-uploaded summaries"
+  ],
+  "informationProvided": [
+    "Plain-language process explainer",
+    "Proposal guide",
+    "Meeting schedule",
+    "Data and privacy notice",
+    "Cultural safety boundaries",
+    "Accountability rules"
+  ],
+  "sampleThemes": [
+    "Housing repairs and transparent progress reporting",
+    "Youth digital stewardship and local admin capability",
+    "Caring for Country planning",
+    "Service provider accountability"
+  ],
+  "decisionMethod": "Not yet confirmed",
+  "outcomeStatus": "No real community decision has been made",
+  "publicationStatus": "Public demo with fake/sample data only",
+  "reviewPathway": [
+    "Correction pathway",
+    "Moderation appeal",
+    "Dispute escalation",
+    "Data access or deletion request path"
+  ]
+}

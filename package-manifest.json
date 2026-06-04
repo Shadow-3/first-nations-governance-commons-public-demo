@@ -1,0 +1,70 @@
+{
+  "packageName": "First Nations Governance Commons Public Demo",
+  "version": "0.8",
+  "date": "2026-06-04",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "mode": "public_demo_fake_sample_data_only",
+  "recommendedDecision": "Run advisor review, then proceed to Decidim fake-data sandbox if no-go conditions are clear.",
+  "localDecidimStatus": {
+    "ruby": "not_installed",
+    "rubygems": "not_installed",
+    "rails": "not_installed",
+    "docker": "not_installed",
+    "wsl": "not_installed",
+    "result": "local_decidim_install_blocked_without_environment_setup"
+  },
+  "entrypoints": [
+    "index.html",
+    "README.md",
+    "PACKAGE_INDEX.md"
+  ],
+  "evidenceGroups": {
+    "decisionPack": [
+      "docs/decision-memo-v0.7.md",
+      "docs/scope-options-and-budget-model-v0.7.md",
+      "docs/raci-and-decision-rights-v0.7.md",
+      "docs/risk-register-v0.7.md",
+      "docs/privacy-impact-pre-assessment-v0.7.md",
+      "docs/mvp-backlog-prioritisation-v0.7.md"
+    ],
+    "coreGovernancePack": [
+      "docs/first-nations-governance-commons-concept-note.md",
+      "docs/first-nations-governance-charter-draft.md",
+      "docs/data-sovereignty-charter-draft.md",
+      "docs/pilot-process-rules-2026-community-priorities-budget.md",
+      "docs/decidim-sandbox-build-plan.md",
+      "docs/sample-survey-and-yarning-circle-templates.md"
+    ],
+    "advisorReviewPack": [
+      "docs/advisor-review-guide.md",
+      "docs/funder-and-partner-brief.md",
+      "docs/decidim-import-dataset-map.md",
+      "docs/advisor-outreach-email-template.md",
+      "docs/30-minute-demo-agenda.md",
+      "docs/advisor-feedback-form.md",
+      "docs/go-no-go-scorecard.md",
+      "docs/advisor-synthesis-template-v0.7.md",
+      "data/advisor-review-tracker.csv"
+    ],
+    "buildHandoff": [
+      "docs/statement-of-work-decidim-sandbox-v0.8.md",
+      "docs/technical-requirements-v0.8.md",
+      "docs/acceptance-test-plan-v0.8.md",
+      "docs/security-baseline-checklist-v0.8.md",
+      "docs/data-classification-matrix-v0.8.md",
+      "docs/static-demo-deployment-checklist-v0.8.md",
+      "docs/decidim-sandbox-kickoff-runbook.md",
+      "docs/hosting-decision-note.md",
+      "data/sandbox-task-board.csv",
+      "data/decision-log-template.csv"
+    ]
+  },
+  "safetyRules": [
+    "Fake/sample data only in public demo and sandbox.",
+    "No real community records.",
+    "No member lists.",
+    "No cultural material.",
+    "No real voting or eligibility data.",
+    "Real pilot requires separate governance, data, privacy, cultural safety, and hosting approvals."
+  ]
+}

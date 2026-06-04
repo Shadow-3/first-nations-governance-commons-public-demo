@@ -1,0 +1,57 @@
+{
+  "demoStatus": "fake_sample_data_only",
+  "platform": "First Nations Governance Commons",
+  "custodian": "Barayamal / Dean Foley",
+  "process": {
+    "name": "2026 Community Priorities and Budget",
+    "authorisingBody": "Sample Community Reference Group",
+    "decisionAuthority": "To be confirmed before any real pilot",
+    "eligibility": "Public input; verified community-only prioritisation",
+    "publicationLevel": "Public summary with restricted records excluded",
+    "outcomeStatus": "Draft process, not a real community decision"
+  },
+  "metrics": {
+    "participants": 184,
+    "offlineParticipants": 63,
+    "proposals": 18,
+    "accountabilityItems": 5
+  },
+  "phases": [
+    "Information",
+    "Input",
+    "Review",
+    "Prioritisation",
+    "Decision",
+    "Accountability"
+  ],
+  "proposals": [
+    {
+      "id": "P-001",
+      "title": "Repair priority homes before wet season",
+      "category": "Housing",
+      "status": "Ready for prioritisation",
+      "supports": 42
+    },
+    {
+      "id": "P-002",
+      "title": "Youth digital steward program",
+      "category": "Youth",
+      "status": "Under review",
+      "supports": 36
+    },
+    {
+      "id": "P-003",
+      "title": "Caring for Country planning days",
+      "category": "Country",
+      "status": "Ready for prioritisation",
+      "supports": 31
+    },
+    {
+      "id": "P-004",
+      "title": "Service response scorecard",
+      "category": "Services",
+      "status": "Needs partner response",
+      "supports": 28
+    }
+  ]
+}

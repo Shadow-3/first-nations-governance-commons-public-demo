@@ -1,0 +1,17 @@
+task_id,phase,task,owner,status,priority,notes
+S-001,Advisor review,Confirm 3-5 advisors,Barayamal,Open,High,Use advisor outreach email template.
+S-002,Advisor review,Run 30-minute walkthroughs,Barayamal,Open,High,Use demo agenda.
+S-003,Advisor review,Collect feedback forms,Barayamal,Open,High,Track in advisor-review-tracker.csv.
+S-004,Advisor review,Complete advisor synthesis,Barayamal,Open,High,Use advisor-synthesis-template-v0.7.md.
+S-005,Decision,Complete go/no-go scorecard,Barayamal + advisors,Open,High,Do not proceed with unresolved no-go conditions.
+S-006,Sandbox setup,Choose hosting path,Barayamal,Open,High,Managed provider or VPS/Docker recommended.
+S-007,Sandbox setup,Confirm Decidim builder,Barayamal,Open,High,Current local machine lacks Ruby/Rails/Docker/WSL.
+S-008,Sandbox setup,Create Decidim organisation,Technical maintainer,Open,Medium,First Nations Governance Commons - Public Demo.
+S-009,Sandbox setup,Create participatory process,Technical maintainer,Open,Medium,2026 Community Priorities and Budget.
+S-010,Sandbox setup,Import fake/sample proposals,Technical maintainer,Open,Medium,Use sample-proposals.csv.
+S-011,Sandbox setup,Add meetings/yarning examples,Technical maintainer,Open,Medium,Use sample-meetings.csv.
+S-012,Sandbox setup,Add survey questions,Technical maintainer,Open,Medium,Use sample-survey-questions.json.
+S-013,Sandbox setup,Add accountability items,Technical maintainer,Open,Medium,Use sample-accountability.csv.
+S-014,Sandbox review,Check fake-data labels,Barayamal,Open,High,Must be visible on key pages.
+S-015,Sandbox review,Mobile/admin QA,Technical maintainer,Open,Medium,Test public and admin flows.
+S-016,Sandbox review,Advisor review of sandbox,Advisors,Open,High,Decide next stage.

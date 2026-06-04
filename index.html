@@ -1,0 +1,1715 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>First Nations Governance Commons - Public Demo</title>
+  <style>
+    :root {
+      --bg: #f6f7f5;
+      --surface: #ffffff;
+      --surface-2: #eef3ef;
+      --text: #1d2523;
+      --muted: #61706b;
+      --line: #d9e0dc;
+      --teal: #0d675f;
+      --teal-2: #e5f1ee;
+      --ochre: #b66a25;
+      --ochre-2: #fff2e5;
+      --green: #247654;
+      --green-2: #e7f4ed;
+      --red: #aa3d36;
+      --red-2: #fae9e7;
+      --amber: #8b691d;
+      --amber-2: #fff6d9;
+      --shadow: 0 16px 40px rgba(18, 33, 29, 0.08);
+      --radius: 6px;
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.4;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+      cursor: pointer;
+    }
+
+    .app {
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    .topbar {
+      height: 72px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: minmax(180px, 260px) 1fr auto;
+      align-items: center;
+      gap: 18px;
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 34px;
+      height: 34px;
+      background: var(--teal);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      border-radius: 6px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 15px;
+      line-height: 1.1;
+    }
+
+    .brand-text span {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    .tabs {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      overflow: auto;
+      scrollbar-width: none;
+    }
+
+    .tabs::-webkit-scrollbar { display: none; }
+
+    .tab {
+      color: var(--muted);
+      padding: 9px 11px;
+      border-radius: 5px;
+      font-size: 13px;
+      white-space: nowrap;
+      background: transparent;
+    }
+
+    .tab.is-active {
+      background: var(--teal-2);
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    .demo-label {
+      font-size: 12px;
+      color: var(--ochre);
+      background: var(--ochre-2);
+      border: 1px solid #f1d7b9;
+      border-radius: 999px;
+      padding: 7px 10px;
+      white-space: nowrap;
+      font-weight: 700;
+    }
+
+    .shell {
+      display: grid;
+      grid-template-columns: 272px minmax(0, 1fr);
+      min-height: calc(100vh - 72px);
+    }
+
+    .sidebar {
+      border-right: 1px solid var(--line);
+      padding: 22px 18px;
+      background: #fbfcfb;
+    }
+
+    .section-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      color: var(--muted);
+      font-weight: 800;
+      margin: 0 0 10px;
+    }
+
+    .phase-list {
+      display: grid;
+      gap: 6px;
+      margin-bottom: 22px;
+    }
+
+    .phase {
+      width: 100%;
+      background: transparent;
+      color: var(--text);
+      display: grid;
+      grid-template-columns: 28px 1fr auto;
+      align-items: center;
+      gap: 8px;
+      border-radius: var(--radius);
+      padding: 9px 8px;
+      text-align: left;
+    }
+
+    .phase:hover,
+    .phase.is-active {
+      background: var(--surface-2);
+    }
+
+    .phase-num {
+      width: 24px;
+      height: 24px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      background: var(--surface);
+    }
+
+    .phase.is-active .phase-num {
+      border-color: var(--teal);
+      color: #fff;
+      background: var(--teal);
+      font-weight: 800;
+    }
+
+    .phase-main {
+      display: grid;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .phase-main strong {
+      font-size: 13px;
+    }
+
+    .phase-main span {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--line);
+    }
+
+    .dot.done { background: var(--green); }
+    .dot.now { background: var(--ochre); }
+
+    .side-panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      padding: 14px;
+      margin-bottom: 14px;
+    }
+
+    .side-panel strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .side-panel p {
+      color: var(--muted);
+      font-size: 12px;
+      margin: 0;
+    }
+
+    .content {
+      padding: 24px;
+      display: grid;
+      gap: 18px;
+      align-content: start;
+    }
+
+    .process-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .title-block h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.02;
+      letter-spacing: 0;
+      max-width: 850px;
+    }
+
+    .title-block p {
+      color: var(--muted);
+      max-width: 760px;
+      margin: 12px 0 0;
+      font-size: 15px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .btn {
+      min-height: 38px;
+      border-radius: var(--radius);
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 800;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn.primary {
+      background: var(--teal);
+      border-color: var(--teal);
+      color: #fff;
+    }
+
+    .btn.ghost {
+      background: transparent;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(320px, 0.85fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      min-width: 0;
+    }
+
+    .panel-head {
+      padding: 16px 16px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .panel-head h2 {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    .panel-head p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .mini-tabs {
+      display: flex;
+      background: var(--surface-2);
+      border-radius: var(--radius);
+      padding: 3px;
+      gap: 2px;
+    }
+
+    .mini-tab {
+      border-radius: 4px;
+      padding: 6px 9px;
+      background: transparent;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .mini-tab.is-active {
+      background: var(--surface);
+      color: var(--teal);
+      box-shadow: 0 1px 3px rgba(20, 34, 31, 0.08);
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      padding: 16px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 12px;
+      background: #fbfcfb;
+      min-width: 0;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 12px;
+      display: block;
+    }
+
+    .metric strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 22px;
+      line-height: 1.1;
+    }
+
+    .progress {
+      height: 8px;
+      background: var(--surface-2);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 9px;
+    }
+
+    .progress > span {
+      display: block;
+      height: 100%;
+      background: var(--teal);
+      border-radius: inherit;
+    }
+
+    .proposal-tools {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 0 16px 14px;
+      border-bottom: 1px solid var(--line);
+      flex-wrap: wrap;
+    }
+
+    .filter {
+      min-height: 34px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text);
+      padding: 7px 10px;
+      font-size: 13px;
+      min-width: 190px;
+    }
+
+    .proposal-list {
+      display: grid;
+    }
+
+    .proposal {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      padding: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .proposal:last-child { border-bottom: 0; }
+
+    .proposal h3 {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.25;
+    }
+
+    .proposal p {
+      margin: 6px 0 11px;
+      color: var(--muted);
+      font-size: 13px;
+      max-width: 720px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      background: var(--surface);
+      padding: 4px 8px;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .tag.ochre {
+      background: var(--ochre-2);
+      border-color: #efcfaa;
+      color: var(--ochre);
+    }
+
+    .tag.teal {
+      background: var(--teal-2);
+      border-color: #c7dfda;
+      color: var(--teal);
+    }
+
+    .support-box {
+      width: 110px;
+      display: grid;
+      gap: 8px;
+      align-content: center;
+      text-align: right;
+    }
+
+    .support-box strong {
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .support-box span {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .support-btn {
+      border: 1px solid #c7dfda;
+      color: var(--teal);
+      background: var(--teal-2);
+      border-radius: var(--radius);
+      min-height: 34px;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .support-btn.is-supported {
+      color: #fff;
+      background: var(--teal);
+      border-color: var(--teal);
+    }
+
+    .stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .mandate {
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .field {
+      display: grid;
+      gap: 4px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 10px;
+    }
+
+    .field:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .field span {
+      color: var(--muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      font-weight: 800;
+    }
+
+    .field strong {
+      font-size: 14px;
+    }
+
+    .status {
+      border-radius: 999px;
+      padding: 5px 8px;
+      font-size: 11px;
+      font-weight: 900;
+      width: fit-content;
+    }
+
+    .status.green { background: var(--green-2); color: var(--green); }
+    .status.amber { background: var(--amber-2); color: var(--amber); }
+    .status.red { background: var(--red-2); color: var(--red); }
+    .status.teal { background: var(--teal-2); color: var(--teal); }
+
+    .meetings {
+      padding: 4px 16px 16px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .meeting {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 10px;
+      background: #fbfcfb;
+    }
+
+    .date {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      min-height: 54px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: var(--teal);
+      font-weight: 900;
+      line-height: 1.1;
+      font-size: 13px;
+    }
+
+    .meeting strong {
+      font-size: 14px;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .meeting span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .table-wrap {
+      overflow: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--surface);
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      font-size: 13px;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      background: #fbfcfb;
+    }
+
+    td strong {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 2px;
+    }
+
+    td span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.55fr);
+      gap: 18px;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr) minmax(300px, 0.9fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .readiness,
+    .decision-list,
+    .advisor-list {
+      padding: 16px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .gate,
+    .decision,
+    .advisor-question {
+      display: grid;
+      gap: 4px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 10px;
+      background: #fbfcfb;
+    }
+
+    .gate {
+      grid-template-columns: 1fr auto;
+      align-items: start;
+      gap: 10px;
+    }
+
+    .gate strong,
+    .decision strong,
+    .advisor-question strong {
+      font-size: 13px;
+    }
+
+    .gate span,
+    .decision span,
+    .advisor-question span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .evidence {
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .evidence-heading {
+      color: var(--teal);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      margin: 6px 0 -4px;
+    }
+
+    .evidence-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 10px;
+      background: #fbfcfb;
+    }
+
+    .evidence-row strong {
+      font-size: 13px;
+      display: block;
+    }
+
+    .evidence-row span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .toast {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      background: var(--text);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 11px 13px;
+      font-size: 13px;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      transform: translateY(8px);
+      transition: 180ms ease;
+      pointer-events: none;
+      z-index: 20;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1120px) {
+      .topbar {
+        grid-template-columns: 1fr auto;
+        height: auto;
+        min-height: 72px;
+        padding: 12px 18px;
+      }
+
+      .tabs {
+        grid-column: 1 / -1;
+        order: 3;
+      }
+
+      .shell {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+        padding: 14px 18px;
+      }
+
+      .phase-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .grid,
+      .review-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .topbar {
+        grid-template-columns: 1fr;
+      }
+
+      .demo-label {
+        width: fit-content;
+      }
+
+      .content {
+        padding: 16px;
+      }
+
+      .process-head {
+        grid-template-columns: 1fr;
+      }
+
+      .actions {
+        justify-content: flex-start;
+      }
+
+      .panel-head {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .mini-tabs {
+        width: 100%;
+        overflow: auto;
+      }
+
+      .mini-tab {
+        flex: 1 0 auto;
+      }
+
+      .phase-list,
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .proposal {
+        grid-template-columns: 1fr;
+      }
+
+      .support-box {
+        width: 100%;
+        text-align: left;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+      }
+
+      .table-wrap {
+        overflow: visible;
+      }
+
+      table,
+      thead,
+      tbody,
+      tr,
+      th,
+      td {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        border-bottom: 1px solid var(--line);
+        padding: 12px 14px;
+      }
+
+      tr:last-child {
+        border-bottom: 0;
+      }
+
+      td {
+        border-bottom: 0;
+        padding: 5px 0;
+      }
+
+      td:nth-child(2)::before { content: "Responsible party"; }
+      td:nth-child(3)::before { content: "Status"; }
+      td:nth-child(4)::before { content: "Next review"; }
+
+      td::before {
+        display: block;
+        color: var(--muted);
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0;
+        font-weight: 900;
+        margin-bottom: 3px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="mark" aria-hidden="true">B</div>
+        <div class="brand-text">
+          <strong>Barayamal</strong>
+          <span>First Nations Governance Commons</span>
+        </div>
+      </div>
+
+      <nav class="tabs" aria-label="Demo navigation">
+        <button class="tab is-active" data-nav="process">Process</button>
+        <button class="tab" data-nav="proposals">Proposals</button>
+        <button class="tab" data-nav="meetings">Meetings</button>
+        <button class="tab" data-nav="mandate">Mandate Record</button>
+        <button class="tab" data-nav="accountability">Accountability</button>
+        <button class="tab" data-nav="readiness">Readiness</button>
+        <button class="tab" data-nav="evidence">Evidence Pack</button>
+      </nav>
+
+      <div class="demo-label">Public demo - fake data only</div>
+    </header>
+
+    <main class="shell">
+      <aside class="sidebar">
+        <p class="section-title">Process Phases</p>
+        <div class="phase-list" id="phaseList"></div>
+
+        <div class="side-panel">
+          <strong>Launch Mode</strong>
+          <p>Hybrid recommended: public demo uses fake data; any real pilot runs under approved community rules.</p>
+        </div>
+
+        <div class="side-panel">
+          <strong>Custodian</strong>
+          <p>Barayamal / Dean Foley as initial developer and platform custodian.</p>
+        </div>
+
+        <div class="side-panel">
+          <strong>Core Rule</strong>
+          <p>Open-source the infrastructure. Do not open-source community authority.</p>
+        </div>
+      </aside>
+
+      <section class="content">
+        <div class="process-head">
+          <div class="title-block">
+            <h1>2026 Community Priorities and Budget</h1>
+            <p>This public demo shows how a Decidim-powered process could gather proposals, include offline yarning circles, prioritise ideas, publish a Mandate Record, and track accountability. All names, numbers, dates, and records are sample data.</p>
+          </div>
+          <div class="actions">
+            <button class="btn primary" id="downloadMandate">Download Mandate</button>
+            <button class="btn" id="downloadEvidence">Download Evidence</button>
+          </div>
+        </div>
+
+        <section class="grid">
+          <div class="panel" id="processPanel">
+            <div class="panel-head">
+              <div>
+                <h2>Process Snapshot</h2>
+                <p>Fake sample process configured for a public Barayamal demo.</p>
+              </div>
+              <div class="mini-tabs" aria-label="Proposal category filter">
+                <button class="mini-tab is-active" data-filter="All">All</button>
+                <button class="mini-tab" data-filter="Housing">Housing</button>
+                <button class="mini-tab" data-filter="Youth">Youth</button>
+                <button class="mini-tab" data-filter="Country">Country</button>
+              </div>
+            </div>
+
+            <div class="metrics">
+              <div class="metric">
+                <span>Participation</span>
+                <strong id="metricParticipants">0</strong>
+                <div class="progress"><span style="width: 0%" id="participantProgress"></span></div>
+              </div>
+              <div class="metric">
+                <span>Offline voices</span>
+                <strong id="metricOffline">0</strong>
+                <div class="progress"><span style="width: 0%" id="offlineProgress"></span></div>
+              </div>
+              <div class="metric">
+                <span>Proposals</span>
+                <strong id="metricProposals">0</strong>
+                <div class="progress"><span style="width: 0%" id="proposalProgress"></span></div>
+              </div>
+              <div class="metric">
+                <span>Accountability items</span>
+                <strong id="metricActions">0</strong>
+                <div class="progress"><span style="width: 0%" id="actionProgress"></span></div>
+              </div>
+            </div>
+
+            <div class="proposal-tools">
+              <select class="filter" id="statusFilter" aria-label="Filter proposal status">
+                <option value="All">All statuses</option>
+                <option value="Under review">Under review</option>
+                <option value="Ready for prioritisation">Ready for prioritisation</option>
+                <option value="Needs partner response">Needs partner response</option>
+              </select>
+              <button class="btn ghost" id="resetSupports">Reset sample support</button>
+            </div>
+
+            <div class="proposal-list" id="proposalList"></div>
+          </div>
+
+          <div class="stack">
+            <div class="panel" id="mandatePanel">
+              <div class="panel-head">
+                <div>
+                  <h2>Mandate Record</h2>
+                  <p>The formal evidence record this process must produce.</p>
+                </div>
+                <span class="status amber">Draft</span>
+              </div>
+              <div class="mandate" id="mandateFields"></div>
+            </div>
+
+            <div class="panel" id="meetingsPanel">
+              <div class="panel-head">
+                <div>
+                  <h2>Meetings And Offline Input</h2>
+                  <p>Offline participation is part of the official record.</p>
+                </div>
+              </div>
+              <div class="meetings" id="meetingsList"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="review-grid" id="readinessPanel">
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Launch Gates</h2>
+                <p>What is ready now, and what blocks a real pilot.</p>
+              </div>
+            </div>
+            <div class="readiness" id="launchGates"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Open Decisions</h2>
+                <p>Items Barayamal and advisors should settle before Decidim sandbox build.</p>
+              </div>
+            </div>
+            <div class="decision-list" id="openDecisions"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Advisor Review</h2>
+                <p>Questions that test legitimacy, safety, and usefulness.</p>
+              </div>
+            </div>
+            <div class="advisor-list" id="advisorQuestions"></div>
+          </div>
+        </section>
+
+        <section class="footer-grid">
+          <div class="panel" id="accountabilityPanel">
+            <div class="panel-head">
+              <div>
+                <h2>Accountability Tracker</h2>
+                <p>Accepted priorities become actions with owners, status, and review dates.</p>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Priority</th>
+                    <th>Responsible Party</th>
+                    <th>Status</th>
+                    <th>Next Review</th>
+                  </tr>
+                </thead>
+                <tbody id="accountabilityRows"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="panel" id="evidencePanel">
+            <div class="panel-head">
+              <div>
+                <h2>Evidence Pack</h2>
+                <p>Sample files for advisor, funder, and builder review.</p>
+              </div>
+            </div>
+            <div class="evidence">
+              <div class="evidence-heading">Decision Pack</div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Decision memo</strong>
+                  <span>v0.7 recommendation</span>
+                </div>
+                <a class="btn" href="docs/decision-memo-v0.7.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Scope options</strong>
+                  <span>Budget model</span>
+                </div>
+                <a class="btn" href="docs/scope-options-and-budget-model-v0.7.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>RACI</strong>
+                  <span>Decision rights</span>
+                </div>
+                <a class="btn" href="docs/raci-and-decision-rights-v0.7.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Risk register</strong>
+                  <span>v0.7 controls</span>
+                </div>
+                <a class="btn" href="docs/risk-register-v0.7.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Privacy pre-check</strong>
+                  <span>Before real pilot</span>
+                </div>
+                <a class="btn" href="docs/privacy-impact-pre-assessment-v0.7.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>MVP backlog</strong>
+                  <span>Build now/later</span>
+                </div>
+                <a class="btn" href="docs/mvp-backlog-prioritisation-v0.7.md">Open</a>
+              </div>
+
+              <div class="evidence-heading">Core Governance Pack</div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Concept note</strong>
+                  <span>Public summary</span>
+                </div>
+                <a class="btn" href="docs/first-nations-governance-commons-concept-note.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Governance charter</strong>
+                  <span>Working draft</span>
+                </div>
+                <a class="btn" href="docs/first-nations-governance-charter-draft.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Data charter</strong>
+                  <span>Working draft</span>
+                </div>
+                <a class="btn" href="docs/data-sovereignty-charter-draft.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Pilot rules</strong>
+                  <span>Process draft</span>
+                </div>
+                <a class="btn" href="docs/pilot-process-rules-2026-community-priorities-budget.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Sandbox plan</strong>
+                  <span>Decidim build map</span>
+                </div>
+                <a class="btn" href="docs/decidim-sandbox-build-plan.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Survey templates</strong>
+                  <span>Offline input draft</span>
+                </div>
+                <a class="btn" href="docs/sample-survey-and-yarning-circle-templates.md">Open</a>
+              </div>
+
+              <div class="evidence-heading">Advisor Review Pack</div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Advisor guide</strong>
+                  <span>Review pack</span>
+                </div>
+                <a class="btn" href="docs/advisor-review-guide.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Funder brief</strong>
+                  <span>Investment framing</span>
+                </div>
+                <a class="btn" href="docs/funder-and-partner-brief.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Import map</strong>
+                  <span>Data to Decidim</span>
+                </div>
+                <a class="btn" href="docs/decidim-import-dataset-map.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Outreach email</strong>
+                  <span>Advisor invite</span>
+                </div>
+                <a class="btn" href="docs/advisor-outreach-email-template.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Demo agenda</strong>
+                  <span>30-minute script</span>
+                </div>
+                <a class="btn" href="docs/30-minute-demo-agenda.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Feedback form</strong>
+                  <span>Advisor response</span>
+                </div>
+                <a class="btn" href="docs/advisor-feedback-form.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Go/no-go</strong>
+                  <span>Decision scorecard</span>
+                </div>
+                <a class="btn" href="docs/go-no-go-scorecard.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Advisor synthesis</strong>
+                  <span>After feedback</span>
+                </div>
+                <a class="btn" href="docs/advisor-synthesis-template-v0.7.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Review tracker</strong>
+                  <span>Advisor CSV</span>
+                </div>
+                <a class="btn" href="data/advisor-review-tracker.csv">Open</a>
+              </div>
+
+              <div class="evidence-heading">Build Handoff</div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Statement of work</strong>
+                  <span>Provider scope</span>
+                </div>
+                <a class="btn" href="docs/statement-of-work-decidim-sandbox-v0.8.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Acceptance tests</strong>
+                  <span>QA plan</span>
+                </div>
+                <a class="btn" href="docs/acceptance-test-plan-v0.8.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Tech requirements</strong>
+                  <span>Sandbox needs</span>
+                </div>
+                <a class="btn" href="docs/technical-requirements-v0.8.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Security baseline</strong>
+                  <span>Checklist</span>
+                </div>
+                <a class="btn" href="docs/security-baseline-checklist-v0.8.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Data classification</strong>
+                  <span>Matrix</span>
+                </div>
+                <a class="btn" href="docs/data-classification-matrix-v0.8.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Static deployment</strong>
+                  <span>Demo checklist</span>
+                </div>
+                <a class="btn" href="docs/static-demo-deployment-checklist-v0.8.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Sandbox runbook</strong>
+                  <span>Builder handoff</span>
+                </div>
+                <a class="btn" href="docs/decidim-sandbox-kickoff-runbook.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Hosting note</strong>
+                  <span>Decision guide</span>
+                </div>
+                <a class="btn" href="docs/hosting-decision-note.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Sandbox task board</strong>
+                  <span>Build CSV</span>
+                </div>
+                <a class="btn" href="data/sandbox-task-board.csv">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Decision log</strong>
+                  <span>Decision CSV</span>
+                </div>
+                <a class="btn" href="data/decision-log-template.csv">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Package index</strong>
+                  <span>Read order</span>
+                </div>
+                <a class="btn" href="PACKAGE_INDEX.md">Open</a>
+              </div>
+              <div class="evidence-row">
+                <div>
+                  <strong>Manifest</strong>
+                  <span>Package JSON</span>
+                </div>
+                <a class="btn" href="package-manifest.json">Open</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const seed = {
+      phases: [
+        { name: "Information", detail: "Explainer live", state: "done" },
+        { name: "Input", detail: "Proposals open", state: "now" },
+        { name: "Review", detail: "Duplicates and scope", state: "todo" },
+        { name: "Prioritisation", detail: "Support or vote", state: "todo" },
+        { name: "Decision", detail: "Authority confirms", state: "todo" },
+        { name: "Accountability", detail: "Track delivery", state: "todo" }
+      ],
+      metrics: {
+        participants: 184,
+        offline: 63,
+        proposals: 18,
+        actions: 5
+      },
+      mandate: [
+        ["Authorising body", "Sample Community Reference Group"],
+        ["Decision authority", "To be confirmed before any real pilot"],
+        ["Eligibility", "Public input; verified community-only prioritisation"],
+        ["Participation methods", "Online proposals, survey, yarning circles, assisted phone input"],
+        ["Publication level", "Public summary with restricted records excluded"],
+        ["Outcome status", "Draft process, not a real community decision"]
+      ],
+      proposals: [
+        {
+          id: "P-001",
+          title: "Repair priority homes before wet season",
+          category: "Housing",
+          status: "Ready for prioritisation",
+          summary: "Create a transparent list of urgent repairs and publish monthly progress updates.",
+          tags: ["Housing", "Accountability", "Partner response"],
+          supports: 42
+        },
+        {
+          id: "P-002",
+          title: "Youth digital steward program",
+          category: "Youth",
+          status: "Under review",
+          summary: "Train young people to support meetings, online participation, evidence packs, and local admin tasks.",
+          tags: ["Youth", "Training", "Digital inclusion"],
+          supports: 36
+        },
+        {
+          id: "P-003",
+          title: "Caring for Country planning days",
+          category: "Country",
+          status: "Ready for prioritisation",
+          summary: "Run seasonal planning days to identify ranger, water, heritage, and climate priorities.",
+          tags: ["Country", "Meetings", "Budget"],
+          supports: 31
+        },
+        {
+          id: "P-004",
+          title: "Service response scorecard",
+          category: "Services",
+          status: "Needs partner response",
+          summary: "Track how housing, health, transport, and government service issues are answered over time.",
+          tags: ["Services", "Accountability", "Evidence"],
+          supports: 28
+        }
+      ],
+      meetings: [
+        {
+          date: "18 Jul",
+          title: "Yarning circle - community priorities",
+          meta: "Offline session. Facilitator summary only. Fake sample record."
+        },
+        {
+          date: "25 Jul",
+          title: "Online meeting - proposal review",
+          meta: "Open demo meeting with sample agenda and minutes."
+        },
+        {
+          date: "08 Aug",
+          title: "Prioritisation session",
+          meta: "Eligibility rules must be approved before a real vote."
+        }
+      ],
+      accountability: [
+        {
+          priority: "Housing repairs register",
+          note: "Convert accepted housing proposals into a public progress list.",
+          owner: "Sample housing partner",
+          status: "Awaiting partner response",
+          tone: "amber",
+          review: "15 Sep 2026"
+        },
+        {
+          priority: "Youth digital steward program",
+          note: "Draft training plan, roles, and support budget.",
+          owner: "Barayamal + local admin team",
+          status: "In design",
+          tone: "teal",
+          review: "01 Sep 2026"
+        },
+        {
+          priority: "Caring for Country planning days",
+          note: "Confirm cultural safety boundaries before public records are created.",
+          owner: "Sample cultural authority group",
+          status: "Protocol review",
+          tone: "green",
+          review: "22 Aug 2026"
+        },
+        {
+          priority: "Service response scorecard",
+          note: "Define partner response rules before external access is granted.",
+          owner: "Community authority",
+          status: "Rules needed",
+          tone: "red",
+          review: "29 Aug 2026"
+        }
+      ],
+      gates: [
+        {
+          name: "Public demo",
+          detail: "Safe to show with fake/sample data only.",
+          status: "Passed",
+          tone: "green"
+        },
+        {
+          name: "Decidim sandbox",
+          detail: "Ready to configure with sample imports and public warning labels.",
+          status: "Next",
+          tone: "teal"
+        },
+        {
+          name: "Advisor review",
+          detail: "Needed before any real community pilot or public claims of mandate.",
+          status: "Required",
+          tone: "amber"
+        },
+        {
+          name: "Real pilot",
+          detail: "Blocked until authority, eligibility, privacy, data, and cultural rules are approved.",
+          status: "Blocked",
+          tone: "red"
+        }
+      ],
+      openDecisions: [
+        ["Pilot mode", "Public demo is approved; decide whether the next Decidim sandbox is public, private, or hybrid."],
+        ["Authority", "Name who can authorise a real process and who can approve publication."],
+        ["Eligibility", "Decide who can submit, support, vote, observe, moderate, and respond."],
+        ["Hosting", "Choose demo hosting and the preferred Australian-hosted pathway for any real pilot."],
+        ["Evidence", "Confirm the Mandate Record fields that must be produced for every serious process."]
+      ],
+      advisorQuestions: [
+        ["Legitimacy", "Would this process be trusted as a real community decision pathway?"],
+        ["Safety", "What must never be uploaded or made public?"],
+        ["Access", "How do offline voices count equally with online input?"],
+        ["Power", "Where could partners, funders, or loud users capture the process?"],
+        ["Usefulness", "Would the evidence pack help in advocacy, funding, or accountability meetings?"]
+      ]
+    };
+
+    const state = {
+      proposals: seed.proposals.map(item => ({ ...item, supported: false })),
+      category: "All",
+      status: "All"
+    };
+
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      window.clearTimeout(showToast.timer);
+      showToast.timer = window.setTimeout(() => toast.classList.remove("show"), 2200);
+    }
+
+    function renderPhases() {
+      const list = document.getElementById("phaseList");
+      list.innerHTML = seed.phases.map((phase, index) => `
+        <button class="phase ${phase.state === "now" ? "is-active" : ""}" data-phase="${index}">
+          <span class="phase-num">${index + 1}</span>
+          <span class="phase-main"><strong>${phase.name}</strong><span>${phase.detail}</span></span>
+          <span class="dot ${phase.state}"></span>
+        </button>
+      `).join("");
+      list.querySelectorAll(".phase").forEach(button => {
+        button.addEventListener("click", () => {
+          list.querySelectorAll(".phase").forEach(item => item.classList.remove("is-active"));
+          button.classList.add("is-active");
+          showToast(`${button.querySelector("strong").textContent} phase selected`);
+        });
+      });
+    }
+
+    function renderMetrics() {
+      document.getElementById("metricParticipants").textContent = seed.metrics.participants;
+      document.getElementById("metricOffline").textContent = seed.metrics.offline;
+      document.getElementById("metricProposals").textContent = seed.metrics.proposals;
+      document.getElementById("metricActions").textContent = seed.metrics.actions;
+      document.getElementById("participantProgress").style.width = "74%";
+      document.getElementById("offlineProgress").style.width = "48%";
+      document.getElementById("proposalProgress").style.width = "68%";
+      document.getElementById("actionProgress").style.width = "42%";
+    }
+
+    function renderMandate() {
+      const panel = document.getElementById("mandateFields");
+      panel.innerHTML = seed.mandate.map(([label, value]) => `
+        <div class="field">
+          <span>${label}</span>
+          <strong>${value}</strong>
+        </div>
+      `).join("");
+    }
+
+    function renderProposals() {
+      const list = document.getElementById("proposalList");
+      const filtered = state.proposals.filter(proposal => {
+        const categoryMatch = state.category === "All" || proposal.category === state.category;
+        const statusMatch = state.status === "All" || proposal.status === state.status;
+        return categoryMatch && statusMatch;
+      });
+
+      if (!filtered.length) {
+        list.innerHTML = `<div class="proposal"><div><h3>No sample proposals match this filter</h3><p>Try another category or status.</p></div></div>`;
+        return;
+      }
+
+      list.innerHTML = filtered.map(proposal => `
+        <article class="proposal">
+          <div>
+            <h3>${proposal.title}</h3>
+            <p>${proposal.summary}</p>
+            <div class="tags">
+              <span class="tag teal">${proposal.id}</span>
+              <span class="tag ochre">${proposal.status}</span>
+              ${proposal.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
+            </div>
+          </div>
+          <div class="support-box">
+            <div>
+              <strong>${proposal.supports}</strong>
+              <span>Supports</span>
+            </div>
+            <button class="support-btn ${proposal.supported ? "is-supported" : ""}" data-support="${proposal.id}">
+              ${proposal.supported ? "Supported" : "Support"}
+            </button>
+          </div>
+        </article>
+      `).join("");
+
+      list.querySelectorAll("[data-support]").forEach(button => {
+        button.addEventListener("click", () => {
+          const proposal = state.proposals.find(item => item.id === button.dataset.support);
+          proposal.supported = !proposal.supported;
+          proposal.supports += proposal.supported ? 1 : -1;
+          renderProposals();
+          showToast(proposal.supported ? "Sample support added" : "Sample support removed");
+        });
+      });
+    }
+
+    function renderMeetings() {
+      const list = document.getElementById("meetingsList");
+      list.innerHTML = seed.meetings.map(meeting => `
+        <div class="meeting">
+          <div class="date">${meeting.date.replace(" ", "<br>")}</div>
+          <div>
+            <strong>${meeting.title}</strong>
+            <span>${meeting.meta}</span>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function renderAccountability() {
+      const rows = document.getElementById("accountabilityRows");
+      rows.innerHTML = seed.accountability.map(item => `
+        <tr>
+          <td><strong>${item.priority}</strong><span>${item.note}</span></td>
+          <td>${item.owner}</td>
+          <td><span class="status ${item.tone}">${item.status}</span></td>
+          <td>${item.review}</td>
+        </tr>
+      `).join("");
+    }
+
+    function renderReadiness() {
+      document.getElementById("launchGates").innerHTML = seed.gates.map(gate => `
+        <div class="gate">
+          <div>
+            <strong>${gate.name}</strong>
+            <span>${gate.detail}</span>
+          </div>
+          <span class="status ${gate.tone}">${gate.status}</span>
+        </div>
+      `).join("");
+
+      document.getElementById("openDecisions").innerHTML = seed.openDecisions.map(([name, detail]) => `
+        <div class="decision">
+          <strong>${name}</strong>
+          <span>${detail}</span>
+        </div>
+      `).join("");
+
+      document.getElementById("advisorQuestions").innerHTML = seed.advisorQuestions.map(([name, detail]) => `
+        <div class="advisor-question">
+          <strong>${name}</strong>
+          <span>${detail}</span>
+        </div>
+      `).join("");
+    }
+
+    function downloadFile(filename, content, type = "text/markdown") {
+      const blob = new Blob([content], { type });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    function makeMandateMarkdown() {
+      return `# Sample Mandate Record\n\nThis is fake demo data for the Barayamal public demo.\n\n## Process\n2026 Community Priorities and Budget\n\n## Authority\nSample Community Reference Group\n\n## Eligibility\nPublic input; verified community-only prioritisation before any real vote.\n\n## Participation Methods\nOnline proposals, survey, yarning circles, assisted phone input.\n\n## Draft Outcome Status\nNo real community decision has been made.\n\n## Accountability Items\n${seed.accountability.map(item => `- ${item.priority}: ${item.status} (${item.owner})`).join("\n")}\n`;
+    }
+
+    function makeEvidenceMarkdown() {
+      return `# Sample Evidence Pack\n\nDemo only. No real community records.\n\n## Process Snapshot\n- Participants: ${seed.metrics.participants}\n- Offline participants: ${seed.metrics.offline}\n- Proposals: ${seed.metrics.proposals}\n- Accountability items: ${seed.metrics.actions}\n\n## Top Sample Proposals\n${state.proposals.map(item => `- ${item.id}: ${item.title} (${item.supports} supports)`).join("\n")}\n\n## Rule\nOpen-source the infrastructure. Do not open-source community authority.\n`;
+    }
+
+    function init() {
+      renderPhases();
+      renderMetrics();
+      renderMandate();
+      renderProposals();
+      renderMeetings();
+      renderAccountability();
+      renderReadiness();
+
+      document.querySelectorAll("[data-filter]").forEach(button => {
+        button.addEventListener("click", () => {
+          document.querySelectorAll("[data-filter]").forEach(item => item.classList.remove("is-active"));
+          button.classList.add("is-active");
+          state.category = button.dataset.filter;
+          renderProposals();
+        });
+      });
+
+      document.getElementById("statusFilter").addEventListener("change", event => {
+        state.status = event.target.value;
+        renderProposals();
+      });
+
+      document.getElementById("resetSupports").addEventListener("click", () => {
+        state.proposals = seed.proposals.map(item => ({ ...item, supported: false }));
+        renderProposals();
+        showToast("Sample supports reset");
+      });
+
+      document.getElementById("downloadMandate").addEventListener("click", () => {
+        downloadFile("sample-mandate-record.md", makeMandateMarkdown());
+      });
+
+      document.getElementById("downloadEvidence").addEventListener("click", () => {
+        downloadFile("sample-evidence-pack.md", makeEvidenceMarkdown());
+      });
+
+      document.querySelectorAll("[data-nav]").forEach(button => {
+        button.addEventListener("click", () => {
+          document.querySelectorAll("[data-nav]").forEach(item => item.classList.remove("is-active"));
+          button.classList.add("is-active");
+          const target = {
+            process: "processPanel",
+            proposals: "processPanel",
+            meetings: "meetingsPanel",
+            mandate: "mandatePanel",
+            accountability: "accountabilityPanel",
+            readiness: "readinessPanel",
+            evidence: "evidencePanel"
+          }[button.dataset.nav];
+          document.getElementById(target).scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+    }
+
+    init();
+  </script>
+</body>
+</html>
