@@ -1,0 +1,11 @@
+map_id,stream,demo_surface,decidim_target,build_action,source_file,acceptance_check
+M-001,Spaces,Governance context,Organisation settings,Create organisation and public identity,docs/first-nations-governance-commons-concept-note.md,Organisation has fake-data public explanation
+M-002,Spaces,Governance charter,Assembly,Create public assembly for governance context,docs/first-nations-governance-charter-draft.md,Assembly page explains authority is draft/sample only
+M-003,Spaces,2026 priorities process,Participatory process,Create one sample participatory process,data/sample-process-data.json,Process phases match static demo
+M-004,Components,Sample proposals,Proposals component,Configure categories/statuses and enter sample proposals,data/sample-proposals.csv,Sample proposals visible with fake-data labels
+M-005,Components,Yarning circles and meetings,Meetings component,Create sample meetings and offline session records,data/sample-meetings.csv,Meetings show sample/offline context
+M-006,Components,Survey questions,Surveys component,Create sample survey or feedback component,data/sample-survey-questions.json,Survey is clearly fake/sample only
+M-007,Components,Accountability tracker,Accountability component,Configure tracking or equivalent progress list,data/sample-accountability.csv,Actions show owners/status/review dates
+M-008,Data,Mandate record,Pages or custom evidence page,Create sample Mandate Record page or attachment,data/sample-mandate-record.json,Record states no real decision was made
+M-009,Safety,Fake-data boundary,Public labels and moderation settings,Add public warning labels and upload restrictions,docs/data-classification-matrix-v0.8.md,No real data/cultural material appears
+M-010,Handover,Admin transition,Admin roles and handover notes,Document admin access support and backup path,docs/admin-handover-training-plan-v1.3.md,Handover checklist completed

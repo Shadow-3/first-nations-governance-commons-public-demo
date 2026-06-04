@@ -44,7 +44,7 @@
       background: var(--surface);
       border-bottom: 1px solid var(--line);
       display: grid;
-      grid-template-columns: minmax(220px, 1fr) auto auto auto auto auto;
+      grid-template-columns: minmax(220px, 1fr) auto auto auto auto auto auto;
       align-items: center;
       gap: 12px;
       padding: 14px 24px;
@@ -506,6 +506,7 @@
     </div>
     <a class="btn primary" href="decision-room.html">Decision Room</a>
     <a class="btn primary" href="next-steps.html">Action Center</a>
+    <a class="btn primary" href="build-room.html">Builder Room</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -555,9 +556,11 @@
       { category: "Start Here", title: "Package index", path: "PACKAGE_INDEX.md", type: "markdown", description: "Recommended reading order and release rules." },
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
+      { category: "Start Here", title: "Decidim sandbox blueprint", path: "docs/decidim-sandbox-blueprint-v1.3.md", type: "markdown", description: "v1.3 implementation blueprint for the fake-data Decidim sandbox." },
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v1.3", path: "docs/public-demo-release-notes-v1.3.md", type: "markdown", description: "Builder Room and Decidim sandbox implementation package summary." },
       { category: "Release Notes", title: "Release notes v1.2", path: "docs/public-demo-release-notes-v1.2.md", type: "markdown", description: "Decision Room and sandbox readiness assessment upgrade summary." },
       { category: "Release Notes", title: "Release notes v1.1", path: "docs/public-demo-release-notes-v1.1.md", type: "markdown", description: "Action Center, RFQ, and review-to-sandbox upgrade summary." },
       { category: "Release Notes", title: "Release notes v1.0", path: "docs/public-demo-release-notes-v1.0.md", type: "markdown", description: "Document viewer and portal upgrade summary." },
@@ -572,6 +575,14 @@
       { category: "Decision Room", title: "Decision meeting agenda", path: "docs/decision-meeting-agenda-v1.2.md", type: "markdown", description: "Agenda for deciding whether to proceed to fake-data sandbox." },
       { category: "Decision Room", title: "Sandbox readiness checklist", path: "data/sandbox-readiness-checklist.csv", type: "csv", description: "Gate-by-gate readiness checklist for sandbox decision." },
       { category: "Decision Room", title: "Decision readiness sample scores", path: "data/decision-readiness-sample-scores.csv", type: "csv", description: "Sample score inputs used by the Decision Room assessment." },
+
+      { category: "Builder Room", title: "Sandbox blueprint v1.3", path: "docs/decidim-sandbox-blueprint-v1.3.md", type: "markdown", description: "Recommended Decidim structure, imports, acceptance, and handover path." },
+      { category: "Builder Room", title: "Implementation sprint plan v1.3", path: "docs/implementation-sprint-plan-v1.3.md", type: "markdown", description: "Four-sprint implementation path for provider/developer delivery." },
+      { category: "Builder Room", title: "Admin handover training plan v1.3", path: "docs/admin-handover-training-plan-v1.3.md", type: "markdown", description: "Admin training, support, backup, update, and safety handover." },
+      { category: "Builder Room", title: "Component map v1.3", path: "data/decidim-component-map-v1.3.csv", type: "csv", description: "Maps demo surfaces to Decidim targets, build actions, sources, and acceptance checks." },
+      { category: "Builder Room", title: "Acceptance matrix v1.3", path: "data/sandbox-acceptance-matrix-v1.3.csv", type: "csv", description: "Sandbox checks for pages, spaces, components, safety, mobile, handover, and support." },
+      { category: "Builder Room", title: "Implementation sprint plan CSV v1.3", path: "data/implementation-sprint-plan-v1.3.csv", type: "csv", description: "Machine-readable sprint workplan for provider/developer tracking." },
+      { category: "Builder Room", title: "Import manifest v1.3", path: "data/sandbox-import-manifest-v1.3.json", type: "json", description: "Sample data sources, targets, import methods, and required status." },
 
       { category: "Decision Pack", title: "Scope options and budget model", path: "docs/scope-options-and-budget-model-v0.7.md", type: "markdown", description: "MVP, pilot, and fuller build options." },
       { category: "Decision Pack", title: "RACI and decision rights", path: "docs/raci-and-decision-rights-v0.7.md", type: "markdown", description: "Ownership, consultation, and approval responsibilities." },

@@ -41,7 +41,7 @@
       background: var(--surface);
       border-bottom: 1px solid var(--line);
       display: grid;
-      grid-template-columns: minmax(210px, 1fr) auto auto auto auto;
+      grid-template-columns: minmax(210px, 1fr) auto auto auto auto auto;
       align-items: center;
       gap: 14px;
       padding: 14px 24px;
@@ -292,6 +292,7 @@
     </div>
     <a class="btn primary" href="decision-room.html">Decision Room</a>
     <a class="btn primary" href="next-steps.html">Action Center</a>
+    <a class="btn primary" href="build-room.html">Builder Room</a>
     <a class="btn" href="index.html">Open Demo</a>
     <div class="label">Public demo - fake data only</div>
   </header>
@@ -316,7 +317,7 @@
       </a>
       <a href="#builders">
         <strong>Builders</strong>
-        <span>Use the statement of work, acceptance tests, and task board to quote a Decidim sandbox.</span>
+        <span>Use the Builder Room, blueprint, component map, acceptance tests, and handover plan.</span>
       </a>
       <a href="#governance">
         <strong>Governance/Data</strong>
@@ -345,6 +346,13 @@
             <span>Next steps, RFQ, provider scoring, trackers, and 30-day workplan.</span>
           </div>
           <a class="btn primary" href="next-steps.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
+            <strong>Builder Room</strong>
+            <span>Implementation cockpit for Decidim sandbox mapping, sample imports, acceptance, and handover.</span>
+          </div>
+          <a class="btn primary" href="build-room.html">Open</a>
         </div>
         <div class="doc-row">
           <div>
@@ -377,9 +385,9 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v1.2 decision/readiness package.</span>
+            <span>What changed in the v1.3 Builder Room and implementation package.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v1.2.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v1.3.md">Open</a>
         </div>
       </div>
     </section>
@@ -424,6 +432,12 @@
         </div>
       </div>
       <div class="doc-grid">
+        <div class="doc-row"><div><strong>Builder Room</strong><span>Interactive implementation cockpit for Decidim sandbox handoff.</span></div><a class="btn primary" href="build-room.html">Open</a></div>
+        <div class="doc-row"><div><strong>Sandbox blueprint v1.3</strong><span>Recommended Decidim structure, imports, acceptance, and handover path.</span></div><a class="btn" href="docs/decidim-sandbox-blueprint-v1.3.md">Open</a></div>
+        <div class="doc-row"><div><strong>Component map v1.3</strong><span>CSV map from demo surfaces to Decidim targets and acceptance checks.</span></div><a class="btn" href="data/decidim-component-map-v1.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Acceptance matrix v1.3</strong><span>Sandbox checks for spaces, components, safety, mobile, and support.</span></div><a class="btn" href="data/sandbox-acceptance-matrix-v1.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Import manifest v1.3</strong><span>JSON manifest for sample files, targets, import method, and required status.</span></div><a class="btn" href="data/sandbox-import-manifest-v1.3.json">Open</a></div>
+        <div class="doc-row"><div><strong>Admin handover v1.3</strong><span>Training, support, backup, update, and safety handover plan.</span></div><a class="btn" href="docs/admin-handover-training-plan-v1.3.md">Open</a></div>
         <div class="doc-row"><div><strong>Sandbox kickoff runbook</strong><span>Build sequence and first working sessions.</span></div><a class="btn" href="docs/decidim-sandbox-kickoff-runbook.md">Open</a></div>
         <div class="doc-row"><div><strong>Statement of work</strong><span>Scope, milestones, deliverables, and acceptance criteria.</span></div><a class="btn" href="docs/statement-of-work-decidim-sandbox-v0.8.md">Open</a></div>
         <div class="doc-row"><div><strong>Technical requirements</strong><span>Environment, configuration, integration, and support needs.</span></div><a class="btn" href="docs/technical-requirements-v0.8.md">Open</a></div>
@@ -473,7 +487,7 @@
     </section>
 
     <footer>
-      Version v1.2. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v1.3. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
   <script>

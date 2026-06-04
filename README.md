@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v1.2
+Current package version: v1.3
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -20,6 +20,8 @@ Open `document.html` to read package documents and sample data in the rendered p
 Open `next-steps.html` to use the Action Center for advisor review, sandbox RFQ, provider scoring, trackers, and decision gates.
 
 Open `decision-room.html` to score fake-data sandbox readiness and download a local decision summary.
+
+Open `build-room.html` to use the Builder Room for Decidim sandbox implementation mapping, imports, acceptance checks, and handover.
 
 The demo shows:
 
@@ -54,9 +56,13 @@ The demo shows:
 - `docs/public-demo-release-notes-v1.0.md`
 - `docs/public-demo-release-notes-v1.1.md`
 - `docs/public-demo-release-notes-v1.2.md`
+- `docs/public-demo-release-notes-v1.3.md`
 - `docs/sandbox-readiness-gates-v1.2.md`
 - `docs/sandbox-decision-brief-template-v1.2.md`
 - `docs/decision-meeting-agenda-v1.2.md`
+- `docs/decidim-sandbox-blueprint-v1.3.md`
+- `docs/implementation-sprint-plan-v1.3.md`
+- `docs/admin-handover-training-plan-v1.3.md`
 - `docs/next-steps-action-plan-v1.1.md`
 - `docs/advisor-review-kickoff-pack-v1.1.md`
 - `docs/sandbox-provider-rfq-v1.1.md`
@@ -84,6 +90,10 @@ The demo shows:
 - `data/provider-quote-tracker.csv`
 - `data/sandbox-readiness-checklist.csv`
 - `data/decision-readiness-sample-scores.csv`
+- `data/decidim-component-map-v1.3.csv`
+- `data/sandbox-acceptance-matrix-v1.3.csv`
+- `data/implementation-sprint-plan-v1.3.csv`
+- `data/sandbox-import-manifest-v1.3.json`
 - `data/sandbox-task-board.csv`
 - `data/decision-log-template.csv`
 - `PACKAGE_INDEX.md`
@@ -91,6 +101,7 @@ The demo shows:
 - `docs-index.html`
 - `decision-room.html`
 - `next-steps.html`
+- `build-room.html`
 - `document.html`
 - `404.html`
 - `robots.txt`
@@ -236,6 +247,24 @@ The v1.2 package adds:
 - Decision Room links from the demo, Action Center, Review Pack, and document viewer.
 
 Use this version to turn advisor feedback and provider quotes into a clear fake-data sandbox decision.
+
+## v1.3 Builder Room And Implementation Upgrade
+
+The v1.3 package adds:
+
+- `build-room.html` as a builder-facing Decidim sandbox implementation cockpit.
+- Filterable mapping from public demo surfaces to Decidim spaces, components, data, safety controls, and handover tasks.
+- Decidim sandbox blueprint.
+- Implementation sprint plan.
+- Admin handover and training plan.
+- Component map CSV.
+- Sandbox acceptance matrix CSV.
+- Implementation sprint plan CSV.
+- Sandbox import manifest JSON.
+- Downloadable local builder brief.
+- Builder Room links from the demo, Decision Room, Action Center, Review Pack, and document viewer.
+
+Use this version after a proceed decision to brief Barayamal/Dean Foley or another Decidim-capable developer on the fake-data sandbox build.
 
 ## Next Build Step
 

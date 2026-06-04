@@ -1,0 +1,11 @@
+sprint,focus,task,owner,status,output
+Sprint 0,Inputs,Confirm fake-data-only sandbox scope,Barayamal,Open,Approved sandbox boundary
+Sprint 0,Inputs,Confirm hosting/deployment approach,Provider,Open,Hosting decision
+Sprint 1,Environment,Install and configure Decidim,Provider,Not started,Running sandbox
+Sprint 1,Environment,Create organisation and admin roles,Provider,Not started,Admin access ready
+Sprint 2,Configuration,Create assembly and participatory process,Provider,Not started,Spaces configured
+Sprint 2,Configuration,Configure proposals meetings surveys accountability,Provider,Not started,Components configured
+Sprint 3,Sample data,Import or manually create sample records,Provider,Not started,Sample data visible
+Sprint 3,Review,Run advisor/developer walkthrough,Barayamal,Not started,Feedback captured
+Sprint 4,Acceptance,Run acceptance matrix,Provider,Not started,Acceptance result log
+Sprint 4,Handover,Deliver admin handover and support notes,Provider,Not started,Handover complete

@@ -1,0 +1,47 @@
+{
+  "manifestName": "First Nations Governance Commons Decidim Sandbox Import Manifest",
+  "version": "1.3",
+  "mode": "fake_sample_data_only",
+  "owner": "Barayamal / Dean Foley",
+  "rule": "No real community records, member data, cultural material, real voting data, or sensitive personal information.",
+  "imports": [
+    {
+      "source": "data/sample-process-data.json",
+      "target": "Participatory process",
+      "method": "manual configuration or scripted import",
+      "required": true
+    },
+    {
+      "source": "data/sample-proposals.csv",
+      "target": "Proposals component",
+      "method": "manual entry, CSV transform, or scripted import",
+      "required": true
+    },
+    {
+      "source": "data/sample-meetings.csv",
+      "target": "Meetings component",
+      "method": "manual entry or scripted import",
+      "required": true
+    },
+    {
+      "source": "data/sample-survey-questions.json",
+      "target": "Surveys component",
+      "method": "manual configuration",
+      "required": true
+    },
+    {
+      "source": "data/sample-accountability.csv",
+      "target": "Accountability component or tracking page",
+      "method": "manual entry, CSV transform, or equivalent component setup",
+      "required": true
+    },
+    {
+      "source": "data/sample-mandate-record.json",
+      "target": "Mandate Record page or evidence page",
+      "method": "manual content page",
+      "required": false
+    }
+  ],
+  "acceptanceMatrix": "data/sandbox-acceptance-matrix-v1.3.csv",
+  "componentMap": "data/decidim-component-map-v1.3.csv"
+}

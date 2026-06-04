@@ -1,0 +1,13 @@
+check_id,area,acceptance_check,method,expected_result,priority
+T-001,Page identity,Sandbox homepage loads,Manual browser check,Public fake-data sandbox loads without errors,High
+T-002,Boundary,Fake-data warning labels visible,Manual content check,Labels visible on homepage/process pages,High
+T-003,Spaces,Organisation and assembly configured,Admin/public check,Organisation and public assembly exist,High
+T-004,Process,Participatory process configured,Public process check,Process phases match sample process,High
+T-005,Proposals,Sample proposals visible,Public component check,Sample proposal list appears with categories/statuses,High
+T-006,Meetings,Sample meetings visible,Public component check,Sample meetings/yarning circles appear,Medium
+T-007,Survey,Sample survey available,Public component check,Survey/feedback component opens,Medium
+T-008,Accountability,Sample actions visible,Public tracking check,Owners statuses and review dates visible,Medium
+T-009,Safety,No real data present,Content audit,Only fake/sample data appears,High
+T-010,Handover,Admin notes delivered,Handover review,Admin/support/backup notes provided,High
+T-011,Mobile,Mobile layout usable,390px viewport check,Core pages fit without page-level horizontal overflow,Medium
+T-012,Support,Known limitations documented,Handover review,Risks exclusions and next steps documented,Medium

@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "1.2",
+  "version": "1.3",
   "date": "2026-06-04",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Share the v1.1 portal with advisors and send the sandbox RFQ to 2-3 Decidim-capable providers/developers in parallel. Proceed to fake-data Decidim sandbox only if no-go conditions are clear.",
+  "recommendedDecision": "Use the Decision Room to confirm proceed/hold/no-go status, then use the Builder Room as the implementation handoff for Barayamal/Dean Foley or another Decidim-capable developer. Proceed to fake-data Decidim sandbox only if no-go conditions are clear.",
   "localDecidimStatus": {
     "ruby": "not_installed",
     "rubygems": "not_installed",
@@ -19,11 +19,13 @@
     "index.html",
     "decision-room.html",
     "next-steps.html",
+    "build-room.html",
     "docs-index.html",
     "document.html",
     "README.md",
     "PACKAGE_INDEX.md",
     "package-manifest.json",
+    "docs/public-demo-release-notes-v1.3.md",
     "docs/public-demo-release-notes-v1.2.md",
     "docs/public-demo-release-notes-v1.1.md",
     "docs/public-demo-release-notes-v1.0.md",
@@ -33,7 +35,7 @@
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v1.2.md",
+    "releaseNotes": "docs/public-demo-release-notes-v1.3.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -68,6 +70,23 @@
     "actionBoard": "data/v1.1-action-board.csv",
     "quoteTracker": "data/provider-quote-tracker.csv"
   },
+  "builderRoom": {
+    "entrypoint": "build-room.html",
+    "sandboxBlueprint": "docs/decidim-sandbox-blueprint-v1.3.md",
+    "implementationSprintPlan": "docs/implementation-sprint-plan-v1.3.md",
+    "adminHandoverTrainingPlan": "docs/admin-handover-training-plan-v1.3.md",
+    "componentMap": "data/decidim-component-map-v1.3.csv",
+    "acceptanceMatrix": "data/sandbox-acceptance-matrix-v1.3.csv",
+    "implementationSprintPlanCsv": "data/implementation-sprint-plan-v1.3.csv",
+    "importManifest": "data/sandbox-import-manifest-v1.3.json",
+    "streams": [
+      "spaces",
+      "components",
+      "data",
+      "safety",
+      "handover"
+    ]
+  },
   "decisionRoom": {
     "entrypoint": "decision-room.html",
     "readinessGates": "docs/sandbox-readiness-gates-v1.2.md",
@@ -85,9 +104,11 @@
     "reviewerStartHere": [
       "decision-room.html",
       "next-steps.html",
+      "build-room.html",
       "docs-index.html",
       "document.html",
       "PACKAGE_INDEX.md",
+      "docs/public-demo-release-notes-v1.3.md",
       "docs/public-demo-release-notes-v1.2.md",
       "docs/public-demo-release-notes-v1.1.md",
       "docs/public-demo-release-notes-v1.0.md",
@@ -107,6 +128,15 @@
       "docs/decision-meeting-agenda-v1.2.md",
       "data/sandbox-readiness-checklist.csv",
       "data/decision-readiness-sample-scores.csv"
+    ],
+    "builderRoom": [
+      "docs/decidim-sandbox-blueprint-v1.3.md",
+      "docs/implementation-sprint-plan-v1.3.md",
+      "docs/admin-handover-training-plan-v1.3.md",
+      "data/decidim-component-map-v1.3.csv",
+      "data/sandbox-acceptance-matrix-v1.3.csv",
+      "data/implementation-sprint-plan-v1.3.csv",
+      "data/sandbox-import-manifest-v1.3.json"
     ],
     "decisionPack": [
       "docs/decision-memo-v0.7.md",
@@ -142,8 +172,15 @@
       "docs/security-baseline-checklist-v0.8.md",
       "docs/data-classification-matrix-v0.8.md",
       "docs/static-demo-deployment-checklist-v0.8.md",
+      "docs/decidim-sandbox-blueprint-v1.3.md",
+      "docs/implementation-sprint-plan-v1.3.md",
+      "docs/admin-handover-training-plan-v1.3.md",
       "docs/decidim-sandbox-kickoff-runbook.md",
       "docs/hosting-decision-note.md",
+      "data/decidim-component-map-v1.3.csv",
+      "data/sandbox-acceptance-matrix-v1.3.csv",
+      "data/implementation-sprint-plan-v1.3.csv",
+      "data/sandbox-import-manifest-v1.3.json",
       "data/sandbox-task-board.csv",
       "data/decision-log-template.csv"
     ]
