@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v2.0
+Current package version: v2.1
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -34,6 +34,8 @@ Open `delivery-room.html` to use the Delivery Room for live sprint execution, bl
 Open `assurance-room.html` to use the Assurance Room for evidence gates, sign-off roles, no-go triggers, fake-data safety checks, and a downloadable assurance memo.
 
 Open `sandbox-launcher.html` to use the Sandbox Launcher for fake-data Decidim launch pathway comparison, current environment readiness, setup output mapping, and a downloadable launch brief.
+
+Open `seed-studio.html` to use the Seed Studio for Decidim-shaped fake spaces, component recipes, fake content records, safety holds, and a downloadable seed handoff brief.
 
 The demo shows:
 
@@ -73,9 +75,12 @@ The demo shows:
 - `docs/public-demo-release-notes-v1.5.md`
 - `docs/public-demo-release-notes-v1.6.md`
 - `docs/public-demo-release-notes-v1.7.md`
+- `docs/public-demo-release-notes-v2.1.md`
 - `docs/public-demo-release-notes-v2.0.md`
 - `docs/public-demo-release-notes-v1.9.md`
 - `docs/public-demo-release-notes-v1.8.md`
+- `docs/fake-data-seed-playbook-v2.1.md`
+- `docs/decidim-seed-admin-guide-v2.1.md`
 - `docs/sandbox-launch-playbook-v2.0.md`
 - `docs/decidim-environment-options-v2.0.md`
 - `docs/sandbox-assurance-playbook-v1.9.md`
@@ -154,6 +159,10 @@ The demo shows:
 - `data/sandbox-pathway-comparison-v2.0.csv`
 - `data/decidim-sandbox-output-map-v2.0.csv`
 - `data/sandbox-launch-readiness-v2.0.json`
+- `data/decidim-space-component-seed-v2.1.csv`
+- `data/fake-content-seed-register-v2.1.csv`
+- `data/seed-safety-review-v2.1.csv`
+- `data/fake-seed-package-v2.1.json`
 - `data/sandbox-task-board.csv`
 - `data/decision-log-template.csv`
 - `PACKAGE_INDEX.md`
@@ -168,6 +177,7 @@ The demo shows:
 - `delivery-room.html`
 - `assurance-room.html`
 - `sandbox-launcher.html`
+- `seed-studio.html`
 - `document.html`
 - `CONTRIBUTING.md`
 - `CODE_OF_CONDUCT.md`
@@ -468,9 +478,27 @@ The v2.0 package adds a Sandbox Launcher that turns the assurance-ready package 
 
 Use this version to decide the actual first build path. The current recommendation is provider-assisted sandbox unless the local self-build environment is prepared first, because Ruby/Bundler, PostgreSQL, Docker, and GitHub project scope are not ready on this machine.
 
+## v2.1 Fake Seed Studio Upgrade
+
+The v2.1 package adds a Seed Studio that turns the public demo and launch path into a practical fake Decidim seed content handoff:
+
+- Four mapped seed spaces: Governance Commons Assembly, Community Priorities And Budget 2026, Youth Digital Stewardship Sprint, and Services Feedback And Follow-up.
+- Six official Decidim component types represented across the seed plan.
+- 24 fake content records mapped to spaces, components, source files, safety class, status, and seed method.
+- 8 safety holds for real records, cultural material, voting data, youth data, service cases, authority language, admin access, and real-pilot switch.
+- Downloadable generated seed handoff brief.
+- Fake data seed playbook.
+- Decidim seed admin guide.
+- Space/component seed CSV.
+- Fake content seed register CSV.
+- Seed safety review CSV.
+- Fake seed package JSON.
+
+Use this version after Sandbox Launcher and before Decidim configuration. It gives Barayamal, a provider, or a partner-hosted sandbox team the concrete fake content structure to configure first.
+
 ## Next Build Step
 
-Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, Delivery Room, Assurance Room, and Sandbox Launcher to configure, operate, and safely hand over a fake-data Decidim sandbox:
+Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, Delivery Room, Assurance Room, Sandbox Launcher, and Seed Studio to configure, operate, and safely hand over a fake-data Decidim sandbox:
 
 - One organisation.
 - One public assembly.

@@ -1,0 +1,910 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>Seed Studio - First Nations Governance Commons</title>
+  <meta name="description" content="Fake-data Decidim seed content studio for the First Nations Governance Commons public demo.">
+  <style>
+    :root {
+      --bg: #f6f7f5;
+      --surface: #ffffff;
+      --surface-2: #eef3ef;
+      --text: #1d2523;
+      --muted: #61706b;
+      --line: #d9e0dc;
+      --teal: #0d675f;
+      --teal-2: #e5f1ee;
+      --ochre: #b66a25;
+      --ochre-2: #fff2e5;
+      --green: #247654;
+      --green-2: #e7f4ed;
+      --red: #aa3d36;
+      --red-2: #fae9e7;
+      --amber: #8b691d;
+      --amber-2: #fff6d9;
+      --blue: #205d9b;
+      --blue-2: #e7f0fa;
+      --radius: 6px;
+      --shadow: 0 14px 36px rgba(18, 33, 29, 0.08);
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.45;
+    }
+
+    a { color: inherit; }
+
+    button,
+    select { font: inherit; }
+
+    button { cursor: pointer; }
+
+    .topbar {
+      min-height: 72px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .brand {
+      display: flex;
+      flex: 1 1 230px;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius);
+      background: var(--teal);
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .brand strong,
+    .brand span {
+      display: block;
+    }
+
+    .brand strong {
+      font-size: 15px;
+      line-height: 1.1;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .label {
+      width: fit-content;
+      color: var(--ochre);
+      background: var(--ochre-2);
+      border: 1px solid #f1d7b9;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .btn,
+    .filter {
+      min-height: 38px;
+      border-radius: var(--radius);
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
+
+    .btn.primary,
+    .filter.is-active {
+      background: var(--teal);
+      color: #fff;
+      border-color: var(--teal);
+    }
+
+    main {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 28px 24px 44px;
+      display: grid;
+      gap: 22px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: end;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    h2,
+    h3 {
+      margin: 0;
+      letter-spacing: 0;
+    }
+
+    .intro p,
+    .metric span,
+    .space-card p,
+    .component-card p,
+    .record-card span,
+    .safety-card p,
+    .resource span,
+    .selected p,
+    .summary {
+      color: var(--muted);
+    }
+
+    .intro p {
+      max-width: 920px;
+      margin: 12px 0 0;
+      font-size: 15px;
+    }
+
+    .actions,
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .metric,
+    .panel,
+    .space-card,
+    .component-card,
+    .record-card,
+    .safety-card,
+    .resource {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .metric {
+      min-height: 112px;
+      padding: 16px;
+      display: grid;
+      align-content: space-between;
+      gap: 10px;
+    }
+
+    .metric strong {
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .metric span {
+      font-size: 13px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .section-head h2 {
+      font-size: 22px;
+      line-height: 1.1;
+    }
+
+    .section-head p {
+      margin: 6px 0 0;
+      color: var(--muted);
+    }
+
+    .studio-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.9fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .space-grid,
+    .component-grid,
+    .record-grid,
+    .safety-grid,
+    .resource-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .space-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .component-grid,
+    .record-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .safety-grid,
+    .resource-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .panel {
+      padding: 18px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .space-card {
+      min-height: 236px;
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+      align-content: start;
+      border: 2px solid var(--line);
+    }
+
+    .space-card.is-selected {
+      border-color: var(--teal);
+      background: #fbfffd;
+    }
+
+    .space-top,
+    .component-top,
+    .record-top,
+    .safety-top,
+    .selected-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .space-card h3,
+    .component-card h3,
+    .record-card h3,
+    .safety-card h3 {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    .space-card p,
+    .component-card p,
+    .safety-card p {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .selected {
+      display: grid;
+      gap: 12px;
+    }
+
+    .selected h2 {
+      font-size: 24px;
+    }
+
+    .selected p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .kv-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .kv {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 10px;
+      display: grid;
+      gap: 4px;
+      background: #fbfcfb;
+    }
+
+    .kv strong {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .kv span {
+      overflow-wrap: anywhere;
+      font-size: 13px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 26px;
+      padding: 5px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .pill.ready { color: var(--green); background: var(--green-2); }
+    .pill.hold { color: var(--amber); background: var(--amber-2); }
+    .pill.blocked { color: var(--red); background: var(--red-2); }
+    .pill.info { color: var(--blue); background: var(--blue-2); }
+
+    .component-card,
+    .record-card,
+    .safety-card,
+    .resource {
+      padding: 14px;
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+
+    .component-card {
+      min-height: 210px;
+    }
+
+    .record-card {
+      min-height: 168px;
+    }
+
+    .record-card span {
+      font-size: 13px;
+    }
+
+    .record-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .safety-card {
+      min-height: 156px;
+    }
+
+    .brief {
+      margin: 0;
+      min-height: 420px;
+      max-height: 560px;
+      overflow: auto;
+      white-space: pre-wrap;
+      background: #17211f;
+      color: #edf7f2;
+      border-radius: var(--radius);
+      padding: 16px;
+      font-family: var(--mono);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .resource {
+      text-decoration: none;
+      min-height: 116px;
+    }
+
+    .resource strong,
+    .resource span {
+      display: block;
+    }
+
+    .resource span {
+      margin-top: 4px;
+      font-size: 13px;
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 12px;
+      padding-top: 6px;
+    }
+
+    @media (max-width: 1120px) {
+      .studio-grid,
+      .intro {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics,
+      .component-grid,
+      .record-grid,
+      .safety-grid,
+      .resource-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar,
+      main {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .space-grid,
+      .metrics,
+      .component-grid,
+      .record-grid,
+      .safety-grid,
+      .resource-grid,
+      .kv-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .btn,
+      .filter {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">B</div>
+      <div>
+        <strong>Seed Studio</strong>
+        <span>First Nations Governance Commons</span>
+      </div>
+    </div>
+    <a class="btn" href="index.html">Public Demo</a>
+    <a class="btn" href="docs-index.html">Review Pack</a>
+    <a class="btn" href="sandbox-launcher.html">Sandbox Launcher</a>
+    <a class="btn primary" href="seed-studio.html">Seed Studio</a>
+    <a class="btn primary" href="document.html?file=docs%2Ffake-data-seed-playbook-v2.1.md">Seed Playbook</a>
+    <div class="label">Fake seed data only</div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <h1>Fake Decidim Seed Studio</h1>
+        <p>Convert the public Barayamal demo into Decidim-shaped fake content for a first sandbox: spaces, components, phases, sample records, safety holds, and a handoff brief. This is not a real import, consultation, vote, mandate, or community record.</p>
+      </div>
+      <div class="actions">
+        <a class="btn" href="document.html?file=data%2Ffake-seed-package-v2.1.json">Seed JSON</a>
+        <button class="btn primary" id="downloadBrief" type="button">Download Brief</button>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Seed package metrics">
+      <article class="metric">
+        <strong id="spaceMetric">0</strong>
+        <span>Decidim spaces mapped</span>
+      </article>
+      <article class="metric">
+        <strong id="componentMetric">0</strong>
+        <span>Official component types used</span>
+      </article>
+      <article class="metric">
+        <strong id="recordMetric">0</strong>
+        <span>Fake content records registered</span>
+      </article>
+      <article class="metric">
+        <strong id="holdMetric">0</strong>
+        <span>Safety holds before real pilot</span>
+      </article>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Seed Pathways</h2>
+          <p>Select a fake Decidim space to see its recommended component recipe and records.</p>
+        </div>
+        <div class="filters" aria-label="Record filters">
+          <button class="filter is-active" type="button" data-filter="selected">Selected Space</button>
+          <button class="filter" type="button" data-filter="all">All Records</button>
+        </div>
+      </div>
+      <div class="studio-grid">
+        <div class="space-grid" id="spaceGrid"></div>
+        <aside class="panel selected" aria-live="polite">
+          <div class="selected-top">
+            <div>
+              <h2 id="selectedTitle"></h2>
+              <p id="selectedSummary"></p>
+            </div>
+            <span class="pill ready" id="selectedStatus"></span>
+          </div>
+          <div class="kv-grid">
+            <div class="kv"><strong>Space Type</strong><span id="selectedType"></span></div>
+            <div class="kv"><strong>Primary Use</strong><span id="selectedUse"></span></div>
+            <div class="kv"><strong>First Build</strong><span id="selectedBuild"></span></div>
+            <div class="kv"><strong>Evidence</strong><span id="selectedEvidence"></span></div>
+          </div>
+          <div class="summary" id="selectedBoundary"></div>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Component Recipe</h2>
+          <p>Decidim components to configure inside the selected space.</p>
+        </div>
+      </div>
+      <div class="component-grid" id="componentGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Fake Content Register</h2>
+          <p>Sample records that can be manually configured, imported where supported, or held for provider setup.</p>
+        </div>
+      </div>
+      <div class="record-grid" id="recordGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Safety Holds</h2>
+          <p>Items that must not move from fake demo into real pilot without separate approval.</p>
+        </div>
+      </div>
+      <div class="safety-grid" id="safetyGrid"></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <h2>Generated Seed Handoff Brief</h2>
+          <p>Use this as a local handoff note for the sandbox provider, developer, or Barayamal maintainer.</p>
+        </div>
+      </div>
+      <pre class="brief" id="seedBrief"></pre>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Seed Resources</h2>
+          <p>Open the source-backed files behind this studio.</p>
+        </div>
+      </div>
+      <div class="resource-grid">
+        <a class="resource" href="document.html?file=docs%2Ffake-data-seed-playbook-v2.1.md"><strong>Seed playbook</strong><span>Setup order, acceptance evidence, and stop conditions.</span></a>
+        <a class="resource" href="document.html?file=docs%2Fdecidim-seed-admin-guide-v2.1.md"><strong>Admin guide</strong><span>Manual Decidim configuration guidance for fake seed content.</span></a>
+        <a class="resource" href="document.html?file=data%2Fdecidim-space-component-seed-v2.1.csv"><strong>Space/component CSV</strong><span>Mapped spaces, components, owners, and acceptance evidence.</span></a>
+        <a class="resource" href="document.html?file=data%2Ffake-content-seed-register-v2.1.csv"><strong>Content register CSV</strong><span>Fake records, target components, source files, and safety class.</span></a>
+        <a class="resource" href="document.html?file=data%2Fseed-safety-review-v2.1.csv"><strong>Safety review CSV</strong><span>Excluded real-data categories and approval requirements.</span></a>
+        <a class="resource" href="document.html?file=data%2Ffake-seed-package-v2.1.json"><strong>Seed package JSON</strong><span>Machine-readable seed package summary, counts, sources, and boundaries.</span></a>
+        <a class="resource" href="document.html?file=docs%2Fpublic-demo-release-notes-v2.1.md"><strong>Release notes v2.1</strong><span>What changed in this upgrade.</span></a>
+        <a class="resource" href="sandbox-launcher.html"><strong>Sandbox Launcher</strong><span>Choose the build path before seed setup starts.</span></a>
+      </div>
+    </section>
+
+    <footer>
+      Version v2.1. Initial developer/custodian: Barayamal / Dean Foley. Public demo and seed data are fake/sample only.
+    </footer>
+  </main>
+
+  <script>
+    const spaces = [
+      {
+        id: "commons",
+        name: "Governance Commons Assembly",
+        type: "Assembly",
+        status: "Recommended base",
+        use: "Ongoing public shell for governance updates, meetings, proposals, and accountability.",
+        build: "Create first as the stable home for the demo organisation.",
+        evidence: "Assembly screenshot, public language review, components enabled, fake-data note.",
+        summary: "A long-lived assembly that explains the Commons, hosts public updates, and links to fake meetings and results without claiming real community authority.",
+        boundary: "Do not add real members, office holders, cultural governance material, or eligibility records."
+      },
+      {
+        id: "budget",
+        name: "Community Priorities And Budget 2026",
+        type: "Participatory process",
+        status: "Seed ready",
+        use: "Time-bound process for listening, proposals, prioritisation, budget projects, and accountability.",
+        build: "Use as the first sandbox walkthrough after the assembly exists.",
+        evidence: "Process phases, meetings, survey, proposals, budget projects, and result tracker screenshots.",
+        summary: "The best first sandbox process because it touches the Decidim workflow from listening through accountable follow-up.",
+        boundary: "Keep all votes, supports, participant names, places, budgets, and outcomes fake."
+      },
+      {
+        id: "youth",
+        name: "Youth Digital Stewardship Sprint",
+        type: "Participatory process",
+        status: "Optional seed",
+        use: "Training and contribution pathway for young people to support digital participation safely.",
+        build: "Add after the core budget process if the demo needs a capability-building use case.",
+        evidence: "Process page, training meeting, survey, proposals, and support pathway notes.",
+        summary: "A focused sample pathway for digital stewards, contributors, and youth training without collecting real youth data.",
+        boundary: "Do not include real youth names, guardianship, school data, or participant contact records."
+      },
+      {
+        id: "services",
+        name: "Services Feedback And Follow-up",
+        type: "Participatory process",
+        status: "Optional seed",
+        use: "Collect public service feedback and show transparent follow-up through accountability results.",
+        build: "Add only when moderation and privacy language are reviewed.",
+        evidence: "Survey, proposal intake, public meeting, accountability results, and moderation settings.",
+        summary: "A practical service improvement example that demonstrates feedback, triage, and public progress without sensitive service cases.",
+        boundary: "Exclude real complaints, personal cases, health data, service eligibility, and identifiable staff or clients."
+      }
+    ];
+
+    const components = [
+      { space: "commons", type: "Page", purpose: "Explain the fake demo, no-real-data boundary, and public review path.", action: "Create static page component with reviewed public language.", evidence: "Public page screenshot", status: "Ready" },
+      { space: "commons", type: "Meetings", purpose: "Show sample assembly information sessions and public walkthroughs.", action: "Create fake meetings with closed registrations and sample minutes.", evidence: "Meeting list and detail screenshot", status: "Ready" },
+      { space: "commons", type: "Proposals", purpose: "Show governance improvement ideas without binding authority.", action: "Create official fake proposals only; disable participant creation for first demo.", evidence: "Proposal list and settings screenshot", status: "Hold" },
+      { space: "commons", type: "Accountability", purpose: "Track fake commitments from the public demo review.", action: "Create results with sample statuses and progress values.", evidence: "Results list screenshot", status: "Ready" },
+      { space: "budget", type: "Meetings", purpose: "Publish fake yarning circles and community briefing sessions.", action: "Create meetings, agenda, minutes, and attendance disabled or fake-only.", evidence: "Meeting agenda and minutes screenshot", status: "Ready" },
+      { space: "budget", type: "Survey", purpose: "Collect sample priority questions for people who could not attend meetings.", action: "Create survey questions from sample files and export a fake response check.", evidence: "Survey preview screenshot", status: "Ready" },
+      { space: "budget", type: "Proposals", purpose: "Show sample ideas and supports for community priorities.", action: "Create official fake proposals with category and scope filters.", evidence: "Proposal list screenshot", status: "Ready" },
+      { space: "budget", type: "Budgets", purpose: "Show budget-project selection without real voting.", action: "Create fake projects, set voting disabled or demo-only, and mark selected results manually.", evidence: "Budget project screenshot", status: "Hold" },
+      { space: "budget", type: "Accountability", purpose: "Track selected fake projects after the process closes.", action: "Create linked results and update status manually or by CSV where supported.", evidence: "Accountability result screenshot", status: "Ready" },
+      { space: "youth", type: "Page", purpose: "Explain training, contribution rules, and support pathway.", action: "Create a plain-language page with no collection of youth personal data.", evidence: "Page screenshot", status: "Ready" },
+      { space: "youth", type: "Meetings", purpose: "Show fake training sessions and orientation circles.", action: "Create training meetings with sample agenda and no real registrations.", evidence: "Meeting screenshot", status: "Ready" },
+      { space: "youth", type: "Survey", purpose: "Capture sample learning needs and access barriers.", action: "Create fake survey questions and keep responses out of public demo.", evidence: "Survey screenshot", status: "Hold" },
+      { space: "youth", type: "Proposals", purpose: "Collect sample steward project ideas.", action: "Create official fake proposals and require moderation review.", evidence: "Proposal screenshot", status: "Hold" },
+      { space: "services", type: "Survey", purpose: "Ask general fake feedback questions without personal cases.", action: "Create generic survey; block free-text fields that could collect sensitive data.", evidence: "Survey settings screenshot", status: "Hold" },
+      { space: "services", type: "Accountability", purpose: "Show service follow-up commitments and progress.", action: "Create fake results with status and milestone records.", evidence: "Result screenshot", status: "Ready" },
+      { space: "services", type: "Meetings", purpose: "Publish public feedback sessions and closing summaries.", action: "Create fake meetings and sample minutes.", evidence: "Meeting screenshot", status: "Ready" }
+    ];
+
+    const records = [
+      { id: "FS-001", space: "commons", component: "Page", title: "About the Governance Commons", source: "docs/first-nations-governance-commons-concept-note.md", safety: "Public fake copy", status: "Ready" },
+      { id: "FS-002", space: "commons", component: "Meetings", title: "Public Demo Walkthrough", source: "data/sample-meetings.csv", safety: "Fake meeting", status: "Ready" },
+      { id: "FS-003", space: "commons", component: "Proposals", title: "Create a plain-language decision archive", source: "data/sample-proposals.csv", safety: "Fake proposal", status: "Hold" },
+      { id: "FS-004", space: "commons", component: "Accountability", title: "Publish review evidence pack", source: "data/sample-accountability.csv", safety: "Fake result", status: "Ready" },
+      { id: "FS-005", space: "budget", component: "Meetings", title: "Yarning Circle - Digital Access Priorities", source: "data/sample-meetings.csv", safety: "Fake meeting", status: "Ready" },
+      { id: "FS-006", space: "budget", component: "Meetings", title: "Budget Ideas Briefing", source: "data/sample-meetings.csv", safety: "Fake meeting", status: "Ready" },
+      { id: "FS-007", space: "budget", component: "Survey", title: "Priority Area Ranking", source: "data/sample-survey-questions.json", safety: "Fake survey", status: "Ready" },
+      { id: "FS-008", space: "budget", component: "Proposals", title: "Digital access support desk", source: "data/sample-proposals.csv", safety: "Fake proposal", status: "Ready" },
+      { id: "FS-009", space: "budget", component: "Proposals", title: "Community governance training sessions", source: "data/sample-proposals.csv", safety: "Fake proposal", status: "Ready" },
+      { id: "FS-010", space: "budget", component: "Proposals", title: "Youth digital stewardship pathway", source: "data/sample-proposals.csv", safety: "Fake proposal", status: "Ready" },
+      { id: "FS-011", space: "budget", component: "Budgets", title: "Sample budget project - Access desk", source: "data/fake-content-seed-register-v2.1.csv", safety: "Fake amount", status: "Hold" },
+      { id: "FS-012", space: "budget", component: "Budgets", title: "Sample budget project - Training sessions", source: "data/fake-content-seed-register-v2.1.csv", safety: "Fake amount", status: "Hold" },
+      { id: "FS-013", space: "budget", component: "Accountability", title: "Access desk setup tracked", source: "data/sample-accountability.csv", safety: "Fake result", status: "Ready" },
+      { id: "FS-014", space: "youth", component: "Page", title: "Youth digital stewardship overview", source: "docs/fake-data-seed-playbook-v2.1.md", safety: "Fake copy", status: "Ready" },
+      { id: "FS-015", space: "youth", component: "Meetings", title: "Digital steward orientation", source: "data/fake-content-seed-register-v2.1.csv", safety: "Fake meeting", status: "Ready" },
+      { id: "FS-016", space: "youth", component: "Survey", title: "Training needs pulse check", source: "data/fake-content-seed-register-v2.1.csv", safety: "No real youth data", status: "Hold" },
+      { id: "FS-017", space: "youth", component: "Proposals", title: "Create a community help desk roster", source: "data/fake-content-seed-register-v2.1.csv", safety: "Fake proposal", status: "Hold" },
+      { id: "FS-018", space: "youth", component: "Proposals", title: "Publish a glossary for online participation", source: "data/fake-content-seed-register-v2.1.csv", safety: "Fake proposal", status: "Hold" },
+      { id: "FS-019", space: "services", component: "Survey", title: "Service access feedback pulse", source: "data/fake-content-seed-register-v2.1.csv", safety: "No personal cases", status: "Hold" },
+      { id: "FS-020", space: "services", component: "Survey", title: "Information clarity check", source: "data/fake-content-seed-register-v2.1.csv", safety: "No identifiers", status: "Hold" },
+      { id: "FS-021", space: "services", component: "Meetings", title: "Service feedback public session", source: "data/fake-content-seed-register-v2.1.csv", safety: "Fake meeting", status: "Ready" },
+      { id: "FS-022", space: "services", component: "Proposals", title: "Plain-language service pathway map", source: "data/fake-content-seed-register-v2.1.csv", safety: "Fake proposal", status: "Hold" },
+      { id: "FS-023", space: "services", component: "Accountability", title: "Publish response-time explanation", source: "data/fake-content-seed-register-v2.1.csv", safety: "Fake result", status: "Ready" },
+      { id: "FS-024", space: "services", component: "Accountability", title: "Update service information page", source: "data/fake-content-seed-register-v2.1.csv", safety: "Fake result", status: "Ready" }
+    ];
+
+    const safetyHolds = [
+      { title: "Real participant records", status: "Blocked", detail: "No real names, member lists, contact details, attendance, or identity verification data." },
+      { title: "Cultural material", status: "Blocked", detail: "No cultural knowledge, restricted stories, images, names, or place-based cultural records." },
+      { title: "Real voting data", status: "Blocked", detail: "No real votes, supports, eligibility data, turnout records, or binding outcomes." },
+      { title: "Personal service cases", status: "Blocked", detail: "No complaints, case histories, health, housing, legal, family, or service records." },
+      { title: "Authority language", status: "Hold", detail: "Do not imply endorsement, mandate, consent, or community authority from the fake sandbox." },
+      { title: "Youth data", status: "Hold", detail: "No real youth records, guardianship, school, program, or contact data in the public demo." },
+      { title: "Admin access", status: "Hold", detail: "Real admin accounts require owner, backup owner, access recovery, and support process." },
+      { title: "Real pilot switch", status: "Hold", detail: "Separate community authority, privacy, data sovereignty, cultural safety, hosting, and moderation approvals are required." }
+    ];
+
+    let activeSpace = "budget";
+    let recordFilter = "selected";
+
+    function tone(status) {
+      if (status === "Ready" || status === "Seed ready" || status === "Recommended base") return "ready";
+      if (status === "Blocked") return "blocked";
+      if (status === "Optional seed") return "info";
+      return "hold";
+    }
+
+    function renderSpaces() {
+      document.getElementById("spaceGrid").innerHTML = spaces.map(space => `
+        <article class="space-card ${space.id === activeSpace ? "is-selected" : ""}">
+          <div class="space-top">
+            <h3>${space.name}</h3>
+            <span class="pill ${tone(space.status)}">${space.status}</span>
+          </div>
+          <p>${space.summary}</p>
+          <div class="kv"><strong>Type</strong><span>${space.type}</span></div>
+          <div class="kv"><strong>Use</strong><span>${space.use}</span></div>
+          <button class="btn ${space.id === activeSpace ? "primary" : ""}" data-space="${space.id}" type="button">Select Space</button>
+        </article>
+      `).join("");
+
+      document.querySelectorAll("[data-space]").forEach(button => {
+        button.addEventListener("click", () => {
+          activeSpace = button.dataset.space;
+          renderAll();
+        });
+      });
+    }
+
+    function renderSelected() {
+      const space = spaces.find(item => item.id === activeSpace);
+      document.getElementById("selectedTitle").textContent = space.name;
+      document.getElementById("selectedSummary").textContent = space.summary;
+      document.getElementById("selectedStatus").textContent = space.status;
+      document.getElementById("selectedStatus").className = `pill ${tone(space.status)}`;
+      document.getElementById("selectedType").textContent = space.type;
+      document.getElementById("selectedUse").textContent = space.use;
+      document.getElementById("selectedBuild").textContent = space.build;
+      document.getElementById("selectedEvidence").textContent = space.evidence;
+      document.getElementById("selectedBoundary").textContent = space.boundary;
+    }
+
+    function renderComponents() {
+      const selected = components.filter(item => item.space === activeSpace);
+      document.getElementById("componentGrid").innerHTML = selected.map(item => `
+        <article class="component-card">
+          <div class="component-top">
+            <h3>${item.type}</h3>
+            <span class="pill ${tone(item.status)}">${item.status}</span>
+          </div>
+          <p>${item.purpose}</p>
+          <div class="kv"><strong>Admin Action</strong><span>${item.action}</span></div>
+          <div class="kv"><strong>Evidence</strong><span>${item.evidence}</span></div>
+        </article>
+      `).join("");
+    }
+
+    function renderRecords() {
+      const selected = recordFilter === "all" ? records : records.filter(item => item.space === activeSpace);
+      document.getElementById("recordGrid").innerHTML = selected.map(item => `
+        <article class="record-card">
+          <div class="record-top">
+            <h3>${item.title}</h3>
+            <span class="pill ${tone(item.status)}">${item.status}</span>
+          </div>
+          <div class="record-meta">
+            <span class="pill info">${item.id}</span>
+            <span class="pill ready">${item.component}</span>
+          </div>
+          <span>${item.safety}</span>
+          <div class="kv"><strong>Source</strong><span>${item.source}</span></div>
+        </article>
+      `).join("");
+    }
+
+    function renderSafety() {
+      document.getElementById("safetyGrid").innerHTML = safetyHolds.map(item => `
+        <article class="safety-card">
+          <div class="safety-top">
+            <h3>${item.title}</h3>
+            <span class="pill ${tone(item.status)}">${item.status}</span>
+          </div>
+          <p>${item.detail}</p>
+        </article>
+      `).join("");
+    }
+
+    function updateMetrics() {
+      document.getElementById("spaceMetric").textContent = spaces.length;
+      document.getElementById("componentMetric").textContent = new Set(components.map(item => item.type)).size;
+      document.getElementById("recordMetric").textContent = records.length;
+      document.getElementById("holdMetric").textContent = safetyHolds.length;
+    }
+
+    function updateBrief() {
+      const space = spaces.find(item => item.id === activeSpace);
+      const selectedComponents = components.filter(item => item.space === activeSpace);
+      const selectedRecords = records.filter(item => item.space === activeSpace);
+      const lines = [
+        "# Fake Decidim Seed Handoff Brief v2.1",
+        "",
+        "Project: First Nations Governance Commons",
+        "Initial developer/custodian: Barayamal / Dean Foley",
+        "Mode: public demo and fake Decidim sandbox seed data only",
+        "",
+        "## Selected Seed Space",
+        `- Name: ${space.name}`,
+        `- Type: ${space.type}`,
+        `- Status: ${space.status}`,
+        `- Use: ${space.use}`,
+        `- First build: ${space.build}`,
+        `- Evidence: ${space.evidence}`,
+        `- Boundary: ${space.boundary}`,
+        "",
+        "## Component Recipe",
+        ...selectedComponents.map(item => `- ${item.type}: ${item.purpose} Status: ${item.status}. Evidence: ${item.evidence}`),
+        "",
+        "## Fake Content Records",
+        ...selectedRecords.map(item => `- ${item.id}: ${item.title} -> ${item.component}. Source: ${item.source}. Status: ${item.status}. Safety: ${item.safety}`),
+        "",
+        "## Safety Holds",
+        ...safetyHolds.map(item => `- ${item.title}: ${item.status}. ${item.detail}`),
+        "",
+        "## Required Next Step",
+        "Choose the build path in Sandbox Launcher, configure this seed space manually or with a Decidim-capable provider, capture screenshots, then run Ops Room and Assurance Room before public handover.",
+        "",
+        "## Non-Negotiable Boundary",
+        "No real community records, member lists, cultural material, eligibility data, voting data, private contact records, youth records, service cases, or real decision outcomes are allowed."
+      ];
+      document.getElementById("seedBrief").textContent = lines.join("\n");
+    }
+
+    function downloadBrief() {
+      const blob = new Blob([document.getElementById("seedBrief").textContent], { type: "text/markdown" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "fake-decidim-seed-handoff-brief-v2.1.md";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    function renderAll() {
+      renderSpaces();
+      renderSelected();
+      renderComponents();
+      renderRecords();
+      renderSafety();
+      updateMetrics();
+      updateBrief();
+    }
+
+    document.querySelectorAll("[data-filter]").forEach(button => {
+      button.addEventListener("click", () => {
+        recordFilter = button.dataset.filter;
+        document.querySelectorAll("[data-filter]").forEach(item => item.classList.remove("is-active"));
+        button.classList.add("is-active");
+        renderRecords();
+      });
+    });
+
+    document.getElementById("downloadBrief").addEventListener("click", downloadBrief);
+    renderAll();
+  </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+{
+  "package": "Fake Decidim Seed Package",
+  "version": "2.1",
+  "date": "2026-06-05",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "mode": "fake_sample_seed_data_only",
+  "recommendation": "Use Sandbox Launcher first, then seed the Governance Commons Assembly and Community Priorities And Budget 2026 process before optional youth or services examples.",
+  "counts": {
+    "spaces": 4,
+    "officialComponentTypes": 6,
+    "componentRows": 17,
+    "fakeContentRecords": 24,
+    "safetyHolds": 8
+  },
+  "spaces": [
+    {
+      "id": "commons",
+      "name": "Governance Commons Assembly",
+      "type": "Assembly",
+      "priority": 1,
+      "components": ["Page", "Meetings", "Proposals", "Accountability"],
+      "status": "recommended_base"
+    },
+    {
+      "id": "budget",
+      "name": "Community Priorities And Budget 2026",
+      "type": "Participatory process",
+      "priority": 2,
+      "components": ["Meetings", "Survey", "Proposals", "Budgets", "Accountability"],
+      "status": "seed_ready"
+    },
+    {
+      "id": "youth",
+      "name": "Youth Digital Stewardship Sprint",
+      "type": "Participatory process",
+      "priority": 3,
+      "components": ["Page", "Meetings", "Survey", "Proposals"],
+      "status": "optional_hold_until_youth_data_boundary_review"
+    },
+    {
+      "id": "services",
+      "name": "Services Feedback And Follow-up",
+      "type": "Participatory process",
+      "priority": 4,
+      "components": ["Survey", "Meetings", "Proposals", "Accountability"],
+      "status": "optional_hold_until_privacy_and_moderation_review"
+    }
+  ],
+  "files": {
+    "studio": "seed-studio.html",
+    "playbook": "docs/fake-data-seed-playbook-v2.1.md",
+    "adminGuide": "docs/decidim-seed-admin-guide-v2.1.md",
+    "spaceComponentSeed": "data/decidim-space-component-seed-v2.1.csv",
+    "contentRegister": "data/fake-content-seed-register-v2.1.csv",
+    "safetyReview": "data/seed-safety-review-v2.1.csv"
+  },
+  "sourceAnchors": [
+    "https://docs.decidim.org/en/develop/admin/spaces.html",
+    "https://docs.decidim.org/en/develop/features/participatory-spaces.html",
+    "https://docs.decidim.org/en/develop/admin/components.html",
+    "https://docs.decidim.org/en/develop/admin/components/proposals.html",
+    "https://docs.decidim.org/en/develop/admin/components/meetings.html",
+    "https://docs.decidim.org/en/develop/admin/components/budgets.html",
+    "https://docs.decidim.org/en/develop/admin/components/accountability.html"
+  ],
+  "safetyRule": "No real community records, member lists, cultural material, eligibility data, voting data, youth records, personal service cases, private contact records, or real decision outcomes are allowed."
+}

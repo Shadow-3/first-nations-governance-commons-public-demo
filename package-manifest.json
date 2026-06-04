@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "2.0",
+  "version": "2.1",
   "date": "2026-06-05",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use Sandbox Launcher to choose the first fake-data Decidim build path. Current recommendation: provider-assisted sandbox unless the Barayamal self-build environment is prepared first, because Ruby, Bundler, PostgreSQL, Docker, and GitHub project scope are not ready on this machine. Use Delivery Room for sprint execution, Ops Room for configuration and QA, Assurance Room for sign-off, and keep all data fake/sample only.",
+  "recommendedDecision": "Use Sandbox Launcher to choose the first fake-data Decidim build path, then use Seed Studio to prepare the fake spaces, components, content records, safety holds, and handoff brief before configuration starts. Current build recommendation remains provider-assisted sandbox unless the Barayamal self-build environment is prepared first. Use Delivery Room for sprint execution, Ops Room for configuration and QA, Assurance Room for sign-off, and keep all data fake/sample only.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -29,6 +29,7 @@
     "delivery-room.html",
     "assurance-room.html",
     "sandbox-launcher.html",
+    "seed-studio.html",
     "docs-index.html",
     "document.html",
     "README.md",
@@ -41,6 +42,13 @@
     "PACKAGE_INDEX.md",
     "package-manifest.json",
     "docs/public-demo-release-notes-v2.0.md",
+    "docs/public-demo-release-notes-v2.1.md",
+    "docs/fake-data-seed-playbook-v2.1.md",
+    "docs/decidim-seed-admin-guide-v2.1.md",
+    "data/decidim-space-component-seed-v2.1.csv",
+    "data/fake-content-seed-register-v2.1.csv",
+    "data/seed-safety-review-v2.1.csv",
+    "data/fake-seed-package-v2.1.json",
     "docs/sandbox-launch-playbook-v2.0.md",
     "docs/decidim-environment-options-v2.0.md",
     "data/sandbox-launch-checklist-v2.0.csv",
@@ -72,7 +80,7 @@
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v2.0.md",
+    "releaseNotes": "docs/public-demo-release-notes-v2.1.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -96,7 +104,17 @@
       "qa-v20-deployed-sandbox-launcher-self-build-desktop.png",
       "qa-v20-deployed-launch-checklist-desktop.png",
       "qa-v20-deployed-sandbox-launcher-mobile.png",
-      "qa-v20-deployed-launch-readiness-mobile.png"
+      "qa-v20-deployed-launch-readiness-mobile.png",
+      "qa-v21-local-seed-studio-desktop.png",
+      "qa-v21-local-seed-studio-all-records-desktop.png",
+      "qa-v21-local-seed-register-desktop.png",
+      "qa-v21-local-seed-studio-mobile.png",
+      "qa-v21-local-seed-package-mobile.png",
+      "qa-v21-deployed-seed-studio-desktop.png",
+      "qa-v21-deployed-seed-studio-all-records-desktop.png",
+      "qa-v21-deployed-seed-register-desktop.png",
+      "qa-v21-deployed-seed-studio-mobile.png",
+      "qa-v21-deployed-seed-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -230,7 +248,15 @@
       "docs/public-demo-release-notes-v1.2.md",
       "docs/public-demo-release-notes-v1.1.md",
       "docs/public-demo-release-notes-v1.0.md",
-      "docs/public-demo-release-notes-v0.9.md"
+      "docs/public-demo-release-notes-v0.9.md",
+      "seed-studio.html",
+      "docs/public-demo-release-notes-v2.1.md",
+      "docs/fake-data-seed-playbook-v2.1.md",
+      "docs/decidim-seed-admin-guide-v2.1.md",
+      "data/decidim-space-component-seed-v2.1.csv",
+      "data/fake-content-seed-register-v2.1.csv",
+      "data/seed-safety-review-v2.1.csv",
+      "data/fake-seed-package-v2.1.json"
     ],
     "actionCenter": [
       "docs/next-steps-action-plan-v1.1.md",
@@ -379,7 +405,15 @@
       "data/decidim-sandbox-output-map-v2.0.csv",
       "data/sandbox-launch-readiness-v2.0.json",
       "data/sandbox-task-board.csv",
-      "data/decision-log-template.csv"
+      "data/decision-log-template.csv",
+      "seed-studio.html",
+      "docs/public-demo-release-notes-v2.1.md",
+      "docs/fake-data-seed-playbook-v2.1.md",
+      "docs/decidim-seed-admin-guide-v2.1.md",
+      "data/decidim-space-component-seed-v2.1.csv",
+      "data/fake-content-seed-register-v2.1.csv",
+      "data/seed-safety-review-v2.1.csv",
+      "data/fake-seed-package-v2.1.json"
     ],
     "opsRoom": [
       "docs/sandbox-ops-runbook-v1.6.md",
@@ -449,7 +483,31 @@
       "ops-room.html",
       "docs/sandbox-assurance-playbook-v1.9.md",
       "docs/sprint-execution-playbook-v1.8.md",
-      "docs/sandbox-ops-runbook-v1.6.md"
+      "docs/sandbox-ops-runbook-v1.6.md",
+      "seed-studio.html",
+      "docs/public-demo-release-notes-v2.1.md",
+      "docs/fake-data-seed-playbook-v2.1.md",
+      "docs/decidim-seed-admin-guide-v2.1.md",
+      "data/decidim-space-component-seed-v2.1.csv",
+      "data/fake-content-seed-register-v2.1.csv",
+      "data/seed-safety-review-v2.1.csv",
+      "data/fake-seed-package-v2.1.json"
+    ],
+    "seedStudio": [
+      "seed-studio.html",
+      "docs/public-demo-release-notes-v2.1.md",
+      "docs/fake-data-seed-playbook-v2.1.md",
+      "docs/decidim-seed-admin-guide-v2.1.md",
+      "data/decidim-space-component-seed-v2.1.csv",
+      "data/fake-content-seed-register-v2.1.csv",
+      "data/seed-safety-review-v2.1.csv",
+      "data/fake-seed-package-v2.1.json",
+      "sandbox-launcher.html",
+      "ops-room.html",
+      "assurance-room.html",
+      "docs/sandbox-launch-playbook-v2.0.md",
+      "docs/sandbox-ops-runbook-v1.6.md",
+      "docs/sandbox-assurance-playbook-v1.9.md"
     ]
   },
   "safetyRules": [
@@ -458,7 +516,9 @@
     "No member lists.",
     "No cultural material.",
     "No real voting or eligibility data.",
-    "Real pilot requires separate governance, data, privacy, cultural safety, and hosting approvals."
+    "Real pilot requires separate governance, data, privacy, cultural safety, and hosting approvals.",
+    "No youth records or guardian/school/program records.",
+    "No personal service cases or complaints."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -546,5 +606,38 @@
       "github_project_scope_missing",
       "node_version_not_aligned_to_decidim_v0_31_docs"
     ]
+  },
+  "seedStudio": {
+    "entrypoint": "seed-studio.html",
+    "seedPlaybook": "docs/fake-data-seed-playbook-v2.1.md",
+    "adminGuide": "docs/decidim-seed-admin-guide-v2.1.md",
+    "spaceComponentSeed": "data/decidim-space-component-seed-v2.1.csv",
+    "contentRegister": "data/fake-content-seed-register-v2.1.csv",
+    "safetyReview": "data/seed-safety-review-v2.1.csv",
+    "seedPackage": "data/fake-seed-package-v2.1.json",
+    "seedSpaceCount": 4,
+    "officialComponentTypeCount": 6,
+    "componentRowCount": 17,
+    "fakeContentRecordCount": 24,
+    "safetyHoldCount": 8,
+    "defaultRecommendation": "seed_governance_commons_assembly_and_community_priorities_budget_first",
+    "requiredFirstSpaces": [
+      "Governance Commons Assembly",
+      "Community Priorities And Budget 2026"
+    ],
+    "optionalSpaces": [
+      "Youth Digital Stewardship Sprint",
+      "Services Feedback And Follow-up"
+    ],
+    "sourceAnchors": [
+      "https://docs.decidim.org/en/develop/admin/spaces.html",
+      "https://docs.decidim.org/en/develop/features/participatory-spaces.html",
+      "https://docs.decidim.org/en/develop/admin/components.html",
+      "https://docs.decidim.org/en/develop/admin/components/proposals.html",
+      "https://docs.decidim.org/en/develop/admin/components/meetings.html",
+      "https://docs.decidim.org/en/develop/admin/components/budgets.html",
+      "https://docs.decidim.org/en/develop/admin/components/accountability.html"
+    ],
+    "safetyRule": "No real community records, member lists, cultural material, eligibility data, voting data, youth records, personal service cases, private contact records, or real decision outcomes are allowed."
   }
 }

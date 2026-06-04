@@ -1,0 +1,9 @@
+hold_id,category,status,blocked_content,approval_needed,review_owner,evidence_required
+SH-001,Real participant records,Blocked,"Real names, member lists, contact details, attendance, identity verification records","Separate privacy and community authority approval",Data reviewer,Fake-data boundary audit
+SH-002,Cultural material,Blocked,"Cultural knowledge, restricted stories, images, names, place-based cultural records","Separate cultural authority and data sovereignty approval",Cultural safety reviewer,Written approval before any inclusion
+SH-003,Real voting data,Blocked,"Votes, supports, eligibility, turnout, preferences, real decision outcomes","Separate process authority and privacy approval",Governance reviewer,Approved real-pilot process rules
+SH-004,Personal service cases,Blocked,"Complaints, health, housing, legal, family, service eligibility, identifiable staff or client records","Separate privacy impact assessment and service-owner approval",Data reviewer,Privacy assessment and moderation plan
+SH-005,Authority language,Hold,"Claims of endorsement, mandate, consent, community decision, or representative authority","Separate governance sign-off",Governance reviewer,Reviewed public copy and sign-off record
+SH-006,Youth data,Hold,"Youth names, guardian details, school records, program attendance, contact records","Separate child/youth safety and privacy approval",Data reviewer,Youth-data risk review
+SH-007,Admin access,Hold,"Real admin accounts without owner, backup, recovery, and support path","Admin access approval and support owner",Initial developer,Admin access record and recovery plan
+SH-008,Real pilot switch,Hold,"Any move from fake sandbox to real participation","Community authority, data sovereignty, cultural safety, privacy, hosting, moderation approvals",Assurance team,Completed Assurance Room and real-pilot approval pack

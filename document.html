@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
   <title>Document Viewer - First Nations Governance Commons</title>
   <meta name="description" content="Rendered document and data viewer for the First Nations Governance Commons public demo package.">
   <style>
@@ -581,6 +582,7 @@
     <a class="btn primary" href="delivery-room.html">Delivery Room</a>
     <a class="btn primary" href="assurance-room.html">Assurance Room</a>
     <a class="btn primary" href="sandbox-launcher.html">Sandbox Launcher</a>
+    <a class="btn primary" href="seed-studio.html">Seed Studio</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -631,6 +633,7 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Fake data seed playbook", path: "docs/fake-data-seed-playbook-v2.1.md", type: "markdown", description: "v2.1 Decidim-shaped fake seed setup order, evidence, and no-go triggers." },
       { category: "Start Here", title: "Sandbox launch playbook", path: "docs/sandbox-launch-playbook-v2.0.md", type: "markdown", description: "v2.0 pathway decision, launch sequence, required outputs, and no-go triggers." },
       { category: "Start Here", title: "Sandbox assurance playbook", path: "docs/sandbox-assurance-playbook-v1.9.md", type: "markdown", description: "v1.9 evidence gates, sign-off roles, no-go triggers, and done definition." },
       { category: "Start Here", title: "Sprint execution playbook", path: "docs/sprint-execution-playbook-v1.8.md", type: "markdown", description: "v1.8 daily routine, status rules, fallback board process, and evidence rules." },
@@ -641,6 +644,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v2.1", path: "docs/public-demo-release-notes-v2.1.md", type: "markdown", description: "Seed Studio and fake Decidim seed content upgrade summary." },
       { category: "Release Notes", title: "Release notes v2.0", path: "docs/public-demo-release-notes-v2.0.md", type: "markdown", description: "Sandbox Launcher and Decidim launch-path upgrade summary." },
       { category: "Release Notes", title: "Release notes v1.9", path: "docs/public-demo-release-notes-v1.9.md", type: "markdown", description: "Assurance Room and sign-off upgrade summary." },
       { category: "Release Notes", title: "Release notes v1.8", path: "docs/public-demo-release-notes-v1.8.md", type: "markdown", description: "Delivery Room and sprint execution cockpit summary." },
@@ -730,6 +734,13 @@
       { category: "Sandbox Launcher", title: "Sandbox pathway comparison v2.0", path: "data/sandbox-pathway-comparison-v2.0.csv", type: "csv", description: "Timing, cost, technical risk, governance risk, and required proof by pathway." },
       { category: "Sandbox Launcher", title: "Decidim sandbox output map v2.0", path: "data/decidim-sandbox-output-map-v2.0.csv", type: "csv", description: "Required Decidim setup outputs and acceptance evidence." },
       { category: "Sandbox Launcher", title: "Sandbox launch readiness v2.0", path: "data/sandbox-launch-readiness-v2.0.json", type: "json", description: "Machine-readable environment status, blockers, counts, source anchors, and safety rule." },
+
+      { category: "Seed Studio", title: "Fake data seed playbook v2.1", path: "docs/fake-data-seed-playbook-v2.1.md", type: "markdown", description: "Seed setup order, acceptance evidence, no-go triggers, and source anchors." },
+      { category: "Seed Studio", title: "Decidim seed admin guide v2.1", path: "docs/decidim-seed-admin-guide-v2.1.md", type: "markdown", description: "Manual Decidim admin sequence for fake spaces, components, and handover." },
+      { category: "Seed Studio", title: "Space component seed v2.1", path: "data/decidim-space-component-seed-v2.1.csv", type: "csv", description: "Spaces, components, admin actions, sources, statuses, and acceptance evidence." },
+      { category: "Seed Studio", title: "Fake content seed register v2.1", path: "data/fake-content-seed-register-v2.1.csv", type: "csv", description: "Fake records mapped to Decidim spaces, components, source files, safety classes, and seed methods." },
+      { category: "Seed Studio", title: "Seed safety review v2.1", path: "data/seed-safety-review-v2.1.csv", type: "csv", description: "Safety holds for real records, cultural material, voting data, youth data, service cases, authority language, admin access, and real pilot switch." },
+      { category: "Seed Studio", title: "Fake seed package v2.1", path: "data/fake-seed-package-v2.1.json", type: "json", description: "Machine-readable seed package summary, counts, spaces, files, sources, and safety rule." },
 
       { category: "Decision Pack", title: "Scope options and budget model", path: "docs/scope-options-and-budget-model-v0.7.md", type: "markdown", description: "MVP, pilot, and fuller build options." },
       { category: "Decision Pack", title: "RACI and decision rights", path: "docs/raci-and-decision-rights-v0.7.md", type: "markdown", description: "Ownership, consultation, and approval responsibilities." },

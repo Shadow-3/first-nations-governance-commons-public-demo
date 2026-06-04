@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
   <title>Review Pack - First Nations Governance Commons</title>
   <meta name="description" content="Reviewer pathways, evidence documents, and sample data for the First Nations Governance Commons public demo.">
   <style>
@@ -305,6 +306,7 @@
     <a class="btn primary" href="delivery-room.html">Delivery Room</a>
     <a class="btn primary" href="assurance-room.html">Assurance Room</a>
     <a class="btn primary" href="sandbox-launcher.html">Sandbox Launcher</a>
+    <a class="btn primary" href="seed-studio.html">Seed Studio</a>
     <a class="btn" href="index.html">Open Demo</a>
     <div class="label">Public demo - fake data only</div>
   </header>
@@ -354,6 +356,10 @@
       <a href="#launch">
         <strong>Launch Team</strong>
         <span>Choose the sandbox build path, check environment readiness, and map Decidim outputs.</span>
+      </a>
+      <a href="#seed">
+        <strong>Seed Team</strong>
+        <span>Prepare Decidim-shaped fake spaces, components, content records, and safety holds.</span>
       </a>
       <a href="#governance">
         <strong>Governance/Data</strong>
@@ -434,6 +440,13 @@
         </div>
         <div class="doc-row">
           <div>
+            <strong>Seed Studio</strong>
+            <span>Decidim-shaped fake seed spaces, components, content records, safety holds, and generated seed handoff brief.</span>
+          </div>
+          <a class="btn primary" href="seed-studio.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
             <strong>Public demo prototype</strong>
             <span>Sample Decidim-style participatory process.</span>
           </div>
@@ -463,9 +476,9 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v2.0 Sandbox Launcher upgrade.</span>
+            <span>What changed in the v2.1 Seed Studio upgrade.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v2.0.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v2.1.md">Open</a>
         </div>
       </div>
     </section>
@@ -560,6 +573,26 @@
         <div class="doc-row"><div><strong>Pathway comparison</strong><span>CSV comparison of timing, cost, risk, and required proof.</span></div><a class="btn" href="data/sandbox-pathway-comparison-v2.0.csv">Open</a></div>
         <div class="doc-row"><div><strong>Decidim output map</strong><span>CSV map of required sandbox configuration outputs and acceptance evidence.</span></div><a class="btn" href="data/decidim-sandbox-output-map-v2.0.csv">Open</a></div>
         <div class="doc-row"><div><strong>Launch readiness snapshot</strong><span>JSON environment status, blockers, counts, source anchors, and safety rule.</span></div><a class="btn" href="data/sandbox-launch-readiness-v2.0.json">Open</a></div>
+        <div class="doc-row"><div><strong>Seed Studio</strong><span>Prepare fake Decidim seed spaces and content after choosing the launch path.</span></div><a class="btn primary" href="seed-studio.html">Open</a></div>
+      </div>
+    </section>
+
+    <section id="seed">
+      <div class="section-head">
+        <div>
+          <h2>Seed Team</h2>
+          <p>Use these files to turn the public demo into Decidim-shaped fake content for the first sandbox.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Seed Studio</strong><span>Interactive fake seed content workspace with selectable spaces, component recipes, safety holds, and generated handoff brief.</span></div><a class="btn primary" href="seed-studio.html">Open</a></div>
+        <div class="doc-row"><div><strong>Fake data seed playbook</strong><span>Setup order, acceptance evidence, no-go triggers, and Decidim source anchors.</span></div><a class="btn" href="docs/fake-data-seed-playbook-v2.1.md">Open</a></div>
+        <div class="doc-row"><div><strong>Seed admin guide</strong><span>Manual Decidim admin sequence for spaces, components, settings, and handover.</span></div><a class="btn" href="docs/decidim-seed-admin-guide-v2.1.md">Open</a></div>
+        <div class="doc-row"><div><strong>Space/component seed CSV</strong><span>Mapped spaces, component types, admin actions, sources, status, and acceptance evidence.</span></div><a class="btn" href="data/decidim-space-component-seed-v2.1.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Fake content register</strong><span>Twenty-four fake records mapped to Decidim components, source files, safety classes, and seed methods.</span></div><a class="btn" href="data/fake-content-seed-register-v2.1.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Seed safety review</strong><span>Eight hold rules for real records, cultural material, voting data, youth data, service cases, authority language, admin access, and real-pilot switch.</span></div><a class="btn" href="data/seed-safety-review-v2.1.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Fake seed package JSON</strong><span>Machine-readable seed package summary, counts, files, source anchors, and safety rule.</span></div><a class="btn" href="data/fake-seed-package-v2.1.json">Open</a></div>
+        <div class="doc-row"><div><strong>Release notes v2.1</strong><span>What changed in the Seed Studio upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v2.1.md">Open</a></div>
       </div>
     </section>
 
@@ -677,7 +710,7 @@
     </section>
 
     <footer>
-      Version v2.0. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v2.1. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
   <script>

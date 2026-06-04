@@ -1,0 +1,25 @@
+record_id,space_id,space_name,component_type,title,source_file,safety_class,status,seed_method,notes
+FS-001,commons,Governance Commons Assembly,Page,About the Governance Commons,docs/first-nations-governance-commons-concept-note.md,Public fake copy,Ready,Manual page setup,No authority claim
+FS-002,commons,Governance Commons Assembly,Meetings,Public Demo Walkthrough,data/sample-meetings.csv,Fake meeting,Ready,Manual meeting setup,Use fake date and online placeholder
+FS-003,commons,Governance Commons Assembly,Proposals,Create a plain-language decision archive,data/sample-proposals.csv,Fake proposal,Hold,Manual official proposal,Disable participant creation first
+FS-004,commons,Governance Commons Assembly,Accountability,Publish review evidence pack,data/sample-accountability.csv,Fake result,Ready,Manual result setup,Link to review pack only
+FS-005,budget,Community Priorities And Budget 2026,Meetings,Yarning Circle - Digital Access Priorities,data/sample-meetings.csv,Fake meeting,Ready,Manual meeting setup,No attendance records
+FS-006,budget,Community Priorities And Budget 2026,Meetings,Budget Ideas Briefing,data/sample-meetings.csv,Fake meeting,Ready,Manual meeting setup,Sample agenda and minutes only
+FS-007,budget,Community Priorities And Budget 2026,Survey,Priority Area Ranking,data/sample-survey-questions.json,Fake survey,Ready,Manual survey setup,No public real responses
+FS-008,budget,Community Priorities And Budget 2026,Proposals,Digital access support desk,data/sample-proposals.csv,Fake proposal,Ready,Manual official proposal,Use sample supports only
+FS-009,budget,Community Priorities And Budget 2026,Proposals,Community governance training sessions,data/sample-proposals.csv,Fake proposal,Ready,Manual official proposal,Use category and scope filters
+FS-010,budget,Community Priorities And Budget 2026,Proposals,Youth digital stewardship pathway,data/sample-proposals.csv,Fake proposal,Ready,Manual official proposal,No real youth records
+FS-011,budget,Community Priorities And Budget 2026,Budgets,Sample budget project - Access desk,data/fake-content-seed-register-v2.1.csv,Fake amount,Hold,Manual budget project,Keep voting disabled or demo-only
+FS-012,budget,Community Priorities And Budget 2026,Budgets,Sample budget project - Training sessions,data/fake-content-seed-register-v2.1.csv,Fake amount,Hold,Manual budget project,Use fake amount only
+FS-013,budget,Community Priorities And Budget 2026,Accountability,Access desk setup tracked,data/sample-accountability.csv,Fake result,Ready,Manual result setup,Link to fake proposal or project
+FS-014,youth,Youth Digital Stewardship Sprint,Page,Youth digital stewardship overview,docs/fake-data-seed-playbook-v2.1.md,Fake copy,Ready,Manual page setup,No youth personal data
+FS-015,youth,Youth Digital Stewardship Sprint,Meetings,Digital steward orientation,data/fake-content-seed-register-v2.1.csv,Fake meeting,Ready,Manual meeting setup,No real registration
+FS-016,youth,Youth Digital Stewardship Sprint,Survey,Training needs pulse check,data/fake-content-seed-register-v2.1.csv,No real youth data,Hold,Manual survey setup,Review youth data boundary first
+FS-017,youth,Youth Digital Stewardship Sprint,Proposals,Create a community help desk roster,data/fake-content-seed-register-v2.1.csv,Fake proposal,Hold,Manual official proposal,No real roster
+FS-018,youth,Youth Digital Stewardship Sprint,Proposals,Publish a glossary for online participation,data/fake-content-seed-register-v2.1.csv,Fake proposal,Hold,Manual official proposal,Public copy only
+FS-019,services,Services Feedback And Follow-up,Survey,Service access feedback pulse,data/fake-content-seed-register-v2.1.csv,No personal cases,Hold,Manual survey setup,Avoid open sensitive text
+FS-020,services,Services Feedback And Follow-up,Survey,Information clarity check,data/fake-content-seed-register-v2.1.csv,No identifiers,Hold,Manual survey setup,Generic public feedback only
+FS-021,services,Services Feedback And Follow-up,Meetings,Service feedback public session,data/fake-content-seed-register-v2.1.csv,Fake meeting,Ready,Manual meeting setup,Sample minutes only
+FS-022,services,Services Feedback And Follow-up,Proposals,Plain-language service pathway map,data/fake-content-seed-register-v2.1.csv,Fake proposal,Hold,Manual official proposal,No individual service cases
+FS-023,services,Services Feedback And Follow-up,Accountability,Publish response-time explanation,data/fake-content-seed-register-v2.1.csv,Fake result,Ready,Manual result setup,No real performance data
+FS-024,services,Services Feedback And Follow-up,Accountability,Update service information page,data/fake-content-seed-register-v2.1.csv,Fake result,Ready,Manual result setup,Fake milestone only
