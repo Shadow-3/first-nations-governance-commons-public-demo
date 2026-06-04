@@ -43,8 +43,8 @@
       min-height: 72px;
       background: var(--surface);
       border-bottom: 1px solid var(--line);
-      display: grid;
-      grid-template-columns: minmax(220px, 1fr) auto auto auto auto auto auto auto auto;
+      display: flex;
+      flex-wrap: wrap;
       align-items: center;
       gap: 12px;
       padding: 14px 24px;
@@ -55,9 +55,15 @@
 
     .brand {
       display: flex;
+      flex: 1 1 220px;
       align-items: center;
       gap: 12px;
       min-width: 0;
+    }
+
+    .topbar .btn,
+    .topbar .label {
+      flex: 0 0 auto;
     }
 
     .mark {
@@ -128,6 +134,7 @@
     }
 
     .shell {
+      width: 100%;
       max-width: 1320px;
       margin: 0 auto;
       padding: 24px;
@@ -147,6 +154,7 @@
     }
 
     .catalog {
+      min-width: 0;
       position: sticky;
       top: 94px;
       max-height: calc(100vh - 116px);
@@ -289,12 +297,19 @@
 
     .body-wrap {
       padding: 22px;
+      min-width: 0;
     }
 
     .doc-body {
+      min-width: 0;
       max-width: 860px;
       display: grid;
       gap: 12px;
+    }
+
+    .doc-body > * {
+      min-width: 0;
+      max-width: 100%;
     }
 
     .doc-body h1,
@@ -341,6 +356,8 @@
     .json-pre {
       margin: 0;
       overflow: auto;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
       border-radius: var(--radius);
       border: 1px solid var(--line);
       background: #101817;
@@ -361,6 +378,8 @@
     }
 
     .table-wrap {
+      min-width: 0;
+      max-width: 100%;
       width: 100%;
       overflow: auto;
       border: 1px solid var(--line);

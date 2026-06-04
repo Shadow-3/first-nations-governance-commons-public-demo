@@ -89,4 +89,4 @@ Barayamal
 
 ## SMS / LinkedIn Short Note
 
-Hi [Name], I’m building a Barayamal public fake-data demo for a First Nations Governance Commons using Decidim. It is about community mandate, offline participation, budgeting, consent-style processes, and accountability. Would you be open to a 30-min advisor review? I’m looking for honest feedback before any real pilot.
+Hi [Name], I'm building a Barayamal public fake-data demo for a First Nations Governance Commons using Decidim. It is about community mandate, offline participation, budgeting, consent-style processes, and accountability. Would you be open to a 30-min advisor review? I'm looking for honest feedback before any real pilot.

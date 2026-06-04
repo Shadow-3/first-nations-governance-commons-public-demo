@@ -45,8 +45,8 @@
       min-height: 72px;
       background: var(--surface);
       border-bottom: 1px solid var(--line);
-      display: grid;
-      grid-template-columns: minmax(220px, 1fr) auto auto auto auto auto auto auto;
+      display: flex;
+      flex-wrap: wrap;
       align-items: center;
       gap: 12px;
       padding: 14px 24px;
@@ -57,9 +57,15 @@
 
     .brand {
       display: flex;
+      flex: 1 1 220px;
       align-items: center;
       gap: 12px;
       min-width: 0;
+    }
+
+    .topbar .btn,
+    .topbar .label {
+      flex: 0 0 auto;
     }
 
     .mark {
@@ -568,4 +574,3 @@ Acceptance: ${issue.acceptance}`).join("\n\n")}
   </script>
 </body>
 </html>
-
