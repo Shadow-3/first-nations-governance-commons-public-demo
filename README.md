@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v1.0
+Current package version: v1.1
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -16,6 +16,8 @@ Open `index.html` in a browser to view the prototype.
 Open `docs-index.html` to use the reviewer-facing Review Pack hub.
 
 Open `document.html` to read package documents and sample data in the rendered public viewer.
+
+Open `next-steps.html` to use the Action Center for advisor review, sandbox RFQ, provider scoring, trackers, and decision gates.
 
 The demo shows:
 
@@ -48,6 +50,11 @@ The demo shows:
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
 - `docs/public-demo-release-notes-v1.0.md`
+- `docs/public-demo-release-notes-v1.1.md`
+- `docs/next-steps-action-plan-v1.1.md`
+- `docs/advisor-review-kickoff-pack-v1.1.md`
+- `docs/sandbox-provider-rfq-v1.1.md`
+- `docs/provider-evaluation-scorecard-v1.1.md`
 - `docs/public-demo-release-notes-v0.9.md`
 - `docs/decision-memo-v0.7.md`
 - `docs/raci-and-decision-rights-v0.7.md`
@@ -67,11 +74,14 @@ The demo shows:
 - `data/sample-mandate-record.json`
 - `data/sample-launch-gates.json`
 - `data/advisor-review-tracker.csv`
+- `data/v1.1-action-board.csv`
+- `data/provider-quote-tracker.csv`
 - `data/sandbox-task-board.csv`
 - `data/decision-log-template.csv`
 - `PACKAGE_INDEX.md`
 - `package-manifest.json`
 - `docs-index.html`
+- `next-steps.html`
 - `document.html`
 - `404.html`
 - `robots.txt`
@@ -187,9 +197,24 @@ The v1.0 package adds:
 
 Use this version for advisor/funder/builder sharing because reviewers can now stay inside the public demo instead of opening raw Markdown/CSV/JSON files.
 
+## v1.1 Action Center And RFQ Upgrade
+
+The v1.1 package adds:
+
+- `next-steps.html` as an Action Center for review-to-sandbox execution.
+- 30-day workplan for advisor review, sandbox RFQ, quote comparison, and decision meeting.
+- Advisor review kickoff pack.
+- Decidim sandbox provider/developer RFQ.
+- Provider evaluation scorecard.
+- Action board CSV.
+- Provider quote tracker CSV.
+- Action Center links from the demo, Review Pack hub, and document viewer.
+
+Use this version to run advisor review and request sandbox quotes in parallel.
+
 ## Next Build Step
 
-Use this demo package to configure a real Decidim sandbox:
+Use this demo package to configure a fake-data Decidim sandbox:
 
 - One organisation.
 - One public assembly.

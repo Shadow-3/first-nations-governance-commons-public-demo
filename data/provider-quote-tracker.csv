@@ -1,0 +1,4 @@
+provider_id,provider_name,contact,status,date_sent,date_response_due,estimated_setup_cost,estimated_monthly_cost,timeline_weeks,hosting_approach,score,risks,next_action
+Q-001,Provider A,TBD,Not sent,,,,,,,,,Send RFQ
+Q-002,Provider B,TBD,Not sent,,,,,,,,,Send RFQ
+Q-003,Developer C,TBD,Not sent,,,,,,,,,Send RFQ

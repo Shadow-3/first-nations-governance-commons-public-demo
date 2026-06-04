@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "1.0",
+  "version": "1.1",
   "date": "2026-06-04",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Run advisor review, then proceed to Decidim fake-data sandbox if no-go conditions are clear.",
+  "recommendedDecision": "Share the v1.1 portal with advisors and send the sandbox RFQ to 2-3 Decidim-capable providers/developers in parallel. Proceed to fake-data Decidim sandbox only if no-go conditions are clear.",
   "localDecidimStatus": {
     "ruby": "not_installed",
     "rubygems": "not_installed",
@@ -17,11 +17,13 @@
   },
   "entrypoints": [
     "index.html",
+    "next-steps.html",
     "docs-index.html",
     "document.html",
     "README.md",
     "PACKAGE_INDEX.md",
     "package-manifest.json",
+    "docs/public-demo-release-notes-v1.1.md",
     "docs/public-demo-release-notes-v1.0.md",
     "docs/public-demo-release-notes-v0.9.md"
   ],
@@ -29,7 +31,7 @@
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v1.0.md",
+    "releaseNotes": "docs/public-demo-release-notes-v1.1.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -55,13 +57,32 @@
       "search_catalog"
     ]
   },
+  "actionCenter": {
+    "entrypoint": "next-steps.html",
+    "workplan": "docs/next-steps-action-plan-v1.1.md",
+    "advisorKickoff": "docs/advisor-review-kickoff-pack-v1.1.md",
+    "sandboxRfq": "docs/sandbox-provider-rfq-v1.1.md",
+    "providerScorecard": "docs/provider-evaluation-scorecard-v1.1.md",
+    "actionBoard": "data/v1.1-action-board.csv",
+    "quoteTracker": "data/provider-quote-tracker.csv"
+  },
   "evidenceGroups": {
     "reviewerStartHere": [
+      "next-steps.html",
       "docs-index.html",
       "document.html",
       "PACKAGE_INDEX.md",
+      "docs/public-demo-release-notes-v1.1.md",
       "docs/public-demo-release-notes-v1.0.md",
       "docs/public-demo-release-notes-v0.9.md"
+    ],
+    "actionCenter": [
+      "docs/next-steps-action-plan-v1.1.md",
+      "docs/advisor-review-kickoff-pack-v1.1.md",
+      "docs/sandbox-provider-rfq-v1.1.md",
+      "docs/provider-evaluation-scorecard-v1.1.md",
+      "data/v1.1-action-board.csv",
+      "data/provider-quote-tracker.csv"
     ],
     "decisionPack": [
       "docs/decision-memo-v0.7.md",

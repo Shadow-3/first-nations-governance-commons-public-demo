@@ -1,0 +1,11 @@
+action_id,lane,action,owner,status,due,priority,notes
+A-001,Advisor review,Send v1.1 public portal to 3-5 advisors,Barayamal,Open,2026-06-11,High,Use advisor kickoff pack and outreach email template
+A-002,Advisor review,Run first advisor demo session,Barayamal,Open,2026-06-18,High,Use 30-minute demo agenda
+A-003,Advisor review,Complete advisor synthesis,Barayamal,Blocked,2026-06-25,High,Requires at least 3 advisor responses
+A-004,Provider RFQ,Send sandbox RFQ to 2-3 Decidim-capable providers,Barayamal,Open,2026-06-14,High,Attach SOW technical requirements and acceptance test plan
+A-005,Provider RFQ,Log provider responses,Barayamal,Not started,2026-06-21,Medium,Use provider quote tracker
+A-006,Provider RFQ,Score provider responses,Barayamal,Not started,2026-06-26,High,Use provider evaluation scorecard
+A-007,Governance gate,Confirm fake-data-only sandbox boundary,Barayamal,Open,2026-06-14,High,No real community records in sandbox
+A-008,Governance gate,List real pilot no-go items,Community authority,Not started,2026-06-24,High,Authority privacy data sovereignty cultural safety eligibility moderation hosting
+A-009,Decision,Hold review-to-sandbox decision meeting,Barayamal,Not started,2026-07-02,High,Proceed only if no unresolved no-go item
+A-010,Build handoff,Prepare selected provider/developer handoff pack,Barayamal,Not started,2026-07-05,Medium,Package v1.1 public portal plus sandbox task board
