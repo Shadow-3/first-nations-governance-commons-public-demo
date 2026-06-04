@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Review Pack - First Nations Governance Commons</title>
+  <meta name="description" content="Reviewer pathways, evidence documents, and sample data for the First Nations Governance Commons public demo.">
+  <style>
+    :root {
+      --bg: #f6f7f5;
+      --surface: #ffffff;
+      --surface-2: #eef3ef;
+      --text: #1d2523;
+      --muted: #61706b;
+      --line: #d9e0dc;
+      --teal: #0d675f;
+      --teal-2: #e5f1ee;
+      --ochre: #b66a25;
+      --ochre-2: #fff2e5;
+      --green: #247654;
+      --green-2: #e7f4ed;
+      --radius: 6px;
+      --shadow: 0 14px 36px rgba(18, 33, 29, 0.08);
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.45;
+    }
+
+    a { color: inherit; }
+
+    .topbar {
+      min-height: 72px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: minmax(210px, 1fr) auto auto;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius);
+      background: var(--teal);
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .brand strong,
+    .brand span {
+      display: block;
+    }
+
+    .brand strong {
+      font-size: 15px;
+      line-height: 1.1;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .label {
+      width: fit-content;
+      color: var(--ochre);
+      background: var(--ochre-2);
+      border: 1px solid #f1d7b9;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .btn {
+      min-height: 38px;
+      border-radius: var(--radius);
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .btn.primary {
+      background: var(--teal);
+      color: #fff;
+      border-color: var(--teal);
+    }
+
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 28px 24px 44px;
+      display: grid;
+      gap: 22px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: end;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .intro p {
+      color: var(--muted);
+      max-width: 780px;
+      margin: 12px 0 0;
+      font-size: 15px;
+    }
+
+    .quick {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .quick a,
+    .doc-row,
+    .note {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .quick a {
+      min-height: 122px;
+      text-decoration: none;
+      display: grid;
+      align-content: start;
+      gap: 8px;
+      padding: 16px;
+    }
+
+    .quick strong,
+    .doc-row strong {
+      font-size: 15px;
+    }
+
+    .quick span,
+    .doc-row span,
+    .note p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 14px;
+      margin-top: 8px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 10px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .doc-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .doc-row {
+      min-height: 82px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 12px;
+      padding: 13px;
+    }
+
+    .doc-row strong,
+    .doc-row span {
+      display: block;
+    }
+
+    .doc-row span {
+      margin-top: 3px;
+    }
+
+    .note {
+      padding: 16px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .note strong {
+      color: var(--teal);
+    }
+
+    .note p {
+      margin: 0;
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 12px;
+      padding-top: 8px;
+    }
+
+    @media (max-width: 960px) {
+      .topbar,
+      .intro {
+        grid-template-columns: 1fr;
+      }
+
+      .quick,
+      .doc-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .topbar {
+        padding: 12px 16px;
+      }
+
+      main {
+        padding: 20px 16px 34px;
+      }
+
+      .doc-row {
+        grid-template-columns: 1fr;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">B</div>
+      <div>
+        <strong>Barayamal</strong>
+        <span>First Nations Governance Commons</span>
+      </div>
+    </div>
+    <a class="btn" href="index.html">Open Demo</a>
+    <div class="label">Public demo - fake data only</div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <h1>Review Pack</h1>
+        <p>Use this hub to review the fake-data public demo, advisor materials, governance drafts, and Decidim sandbox build handoff. Real community data, member lists, cultural material, and real decision records are deliberately excluded.</p>
+      </div>
+      <a class="btn primary" href="PACKAGE_INDEX.md">Package Index</a>
+    </section>
+
+    <section class="quick" aria-label="Reviewer pathways">
+      <a href="#advisors">
+        <strong>Advisors</strong>
+        <span>Review the concept, score readiness, and record go/no-go conditions.</span>
+      </a>
+      <a href="#funders">
+        <strong>Funders</strong>
+        <span>Check the decision case, budget options, risk controls, and partner fit.</span>
+      </a>
+      <a href="#builders">
+        <strong>Builders</strong>
+        <span>Use the statement of work, acceptance tests, and task board to quote a Decidim sandbox.</span>
+      </a>
+      <a href="#governance">
+        <strong>Governance/Data</strong>
+        <span>Review authority, privacy, data sovereignty, classification, and security guardrails.</span>
+      </a>
+    </section>
+
+    <section id="start">
+      <div class="section-head">
+        <div>
+          <h2>Start Here</h2>
+          <p>The shortest path for a first review.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row">
+          <div>
+            <strong>Public demo prototype</strong>
+            <span>Sample Decidim-style participatory process.</span>
+          </div>
+          <a class="btn primary" href="index.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
+            <strong>Decision memo</strong>
+            <span>Recommended next step and decision rule.</span>
+          </div>
+          <a class="btn" href="docs/decision-memo-v0.7.md">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
+            <strong>Statement of work</strong>
+            <span>Provider/developer scope for Decidim sandbox.</span>
+          </div>
+          <a class="btn" href="docs/statement-of-work-decidim-sandbox-v0.8.md">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
+            <strong>Release notes</strong>
+            <span>What changed in the v0.9 public deployment package.</span>
+          </div>
+          <a class="btn" href="docs/public-demo-release-notes-v0.9.md">Open</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="advisors">
+      <div class="section-head">
+        <div>
+          <h2>Advisors</h2>
+          <p>Use these files for review meetings and feedback capture.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Advisor review guide</strong><span>How to assess usefulness, risk, and readiness.</span></div><a class="btn" href="docs/advisor-review-guide.md">Open</a></div>
+        <div class="doc-row"><div><strong>30-minute demo agenda</strong><span>Simple session flow for walkthroughs.</span></div><a class="btn" href="docs/30-minute-demo-agenda.md">Open</a></div>
+        <div class="doc-row"><div><strong>Advisor feedback form</strong><span>Structured response template.</span></div><a class="btn" href="docs/advisor-feedback-form.md">Open</a></div>
+        <div class="doc-row"><div><strong>Go/no-go scorecard</strong><span>Readiness score and stop conditions.</span></div><a class="btn" href="docs/go-no-go-scorecard.md">Open</a></div>
+        <div class="doc-row"><div><strong>Advisor synthesis</strong><span>Summary template after feedback.</span></div><a class="btn" href="docs/advisor-synthesis-template-v0.7.md">Open</a></div>
+        <div class="doc-row"><div><strong>Advisor tracker</strong><span>CSV for outreach and response status.</span></div><a class="btn" href="data/advisor-review-tracker.csv">Open</a></div>
+      </div>
+    </section>
+
+    <section id="funders">
+      <div class="section-head">
+        <div>
+          <h2>Funders And Partners</h2>
+          <p>Use these files to decide whether to support the sandbox step.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Funder and partner brief</strong><span>Problem, opportunity, and proposed pathway.</span></div><a class="btn" href="docs/funder-and-partner-brief.md">Open</a></div>
+        <div class="doc-row"><div><strong>Scope options and budget model</strong><span>MVP, pilot, and fuller build options.</span></div><a class="btn" href="docs/scope-options-and-budget-model-v0.7.md">Open</a></div>
+        <div class="doc-row"><div><strong>Risk register</strong><span>Operational, governance, and trust risks.</span></div><a class="btn" href="docs/risk-register-v0.7.md">Open</a></div>
+        <div class="doc-row"><div><strong>RACI and decision rights</strong><span>Who decides, reviews, owns, and is consulted.</span></div><a class="btn" href="docs/raci-and-decision-rights-v0.7.md">Open</a></div>
+      </div>
+    </section>
+
+    <section id="builders">
+      <div class="section-head">
+        <div>
+          <h2>Builders</h2>
+          <p>Use these files to quote, build, test, and hand over a fake-data Decidim sandbox.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Sandbox kickoff runbook</strong><span>Build sequence and first working sessions.</span></div><a class="btn" href="docs/decidim-sandbox-kickoff-runbook.md">Open</a></div>
+        <div class="doc-row"><div><strong>Statement of work</strong><span>Scope, milestones, deliverables, and acceptance criteria.</span></div><a class="btn" href="docs/statement-of-work-decidim-sandbox-v0.8.md">Open</a></div>
+        <div class="doc-row"><div><strong>Technical requirements</strong><span>Environment, configuration, integration, and support needs.</span></div><a class="btn" href="docs/technical-requirements-v0.8.md">Open</a></div>
+        <div class="doc-row"><div><strong>Acceptance test plan</strong><span>Functional and review checks before handover.</span></div><a class="btn" href="docs/acceptance-test-plan-v0.8.md">Open</a></div>
+        <div class="doc-row"><div><strong>Import dataset map</strong><span>How sample CSV/JSON maps into Decidim structures.</span></div><a class="btn" href="docs/decidim-import-dataset-map.md">Open</a></div>
+        <div class="doc-row"><div><strong>Sandbox task board</strong><span>CSV task list for provider/developer work.</span></div><a class="btn" href="data/sandbox-task-board.csv">Open</a></div>
+      </div>
+    </section>
+
+    <section id="governance">
+      <div class="section-head">
+        <div>
+          <h2>Governance And Data</h2>
+          <p>Review these before any real pilot, real data, or real decision process.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Governance charter</strong><span>Draft authority, roles, and participation principles.</span></div><a class="btn" href="docs/first-nations-governance-charter-draft.md">Open</a></div>
+        <div class="doc-row"><div><strong>Data sovereignty charter</strong><span>Draft data control and stewardship rules.</span></div><a class="btn" href="docs/data-sovereignty-charter-draft.md">Open</a></div>
+        <div class="doc-row"><div><strong>Privacy impact pre-assessment</strong><span>Questions to resolve before real data handling.</span></div><a class="btn" href="docs/privacy-impact-pre-assessment-v0.7.md">Open</a></div>
+        <div class="doc-row"><div><strong>Data classification matrix</strong><span>Public, internal, sensitive, and excluded categories.</span></div><a class="btn" href="docs/data-classification-matrix-v0.8.md">Open</a></div>
+        <div class="doc-row"><div><strong>Security baseline checklist</strong><span>Minimum controls for the sandbox/pilot path.</span></div><a class="btn" href="docs/security-baseline-checklist-v0.8.md">Open</a></div>
+        <div class="doc-row"><div><strong>Hosting decision note</strong><span>Public, private, and controlled hosting considerations.</span></div><a class="btn" href="docs/hosting-decision-note.md">Open</a></div>
+      </div>
+    </section>
+
+    <section id="data">
+      <div class="section-head">
+        <div>
+          <h2>Sample Data Files</h2>
+          <p>All files are fake/sample data for demo and sandbox configuration only.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Process data</strong><span>JSON process phases and sample metrics.</span></div><a class="btn" href="data/sample-process-data.json">Open</a></div>
+        <div class="doc-row"><div><strong>Proposals</strong><span>CSV sample proposals.</span></div><a class="btn" href="data/sample-proposals.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Meetings</strong><span>CSV sample yarning circles and meetings.</span></div><a class="btn" href="data/sample-meetings.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Accountability</strong><span>CSV sample actions and owners.</span></div><a class="btn" href="data/sample-accountability.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Launch gates</strong><span>JSON sample readiness gates.</span></div><a class="btn" href="data/sample-launch-gates.json">Open</a></div>
+        <div class="doc-row"><div><strong>Decision log template</strong><span>CSV template for future decisions.</span></div><a class="btn" href="data/decision-log-template.csv">Open</a></div>
+      </div>
+    </section>
+
+    <section class="note">
+      <strong>Package rule</strong>
+      <p>Only fake/sample data belongs in this public demo. A real pilot requires separate community governance approval, privacy review, data sovereignty controls, cultural safety review, hosting approval, and a clear support process.</p>
+    </section>
+
+    <footer>
+      Version v0.9. Initial developer/custodian: Barayamal / Dean Foley.
+    </footer>
+  </main>
+</body>
+</html>

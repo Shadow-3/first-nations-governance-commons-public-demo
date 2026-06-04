@@ -1,9 +1,11 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "0.8",
+  "version": "0.9",
   "date": "2026-06-04",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
+  "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
+  "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
   "recommendedDecision": "Run advisor review, then proceed to Decidim fake-data sandbox if no-go conditions are clear.",
   "localDecidimStatus": {
     "ruby": "not_installed",
@@ -15,10 +17,30 @@
   },
   "entrypoints": [
     "index.html",
+    "docs-index.html",
     "README.md",
-    "PACKAGE_INDEX.md"
+    "PACKAGE_INDEX.md",
+    "docs/public-demo-release-notes-v0.9.md"
   ],
+  "deployment": {
+    "host": "GitHub Pages",
+    "publicBranch": "main",
+    "publicPath": "/",
+    "releaseNotes": "docs/public-demo-release-notes-v0.9.md",
+    "excludedPublicArtifacts": [
+      "qa-desktop.png",
+      "qa-mobile.png",
+      "qa-deployed-desktop.png",
+      "qa-deployed-mobile.png",
+      "design-concept.png"
+    ]
+  },
   "evidenceGroups": {
+    "reviewerStartHere": [
+      "docs-index.html",
+      "PACKAGE_INDEX.md",
+      "docs/public-demo-release-notes-v0.9.md"
+    ],
     "decisionPack": [
       "docs/decision-memo-v0.7.md",
       "docs/scope-options-and-budget-model-v0.7.md",

@@ -3,13 +3,17 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v0.8
+Current package version: v0.9
+Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
+GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
 ## What This Is
 
 This folder contains a dependency-free public demo of the proposed First Nations Governance Commons.
 
 Open `index.html` in a browser to view the prototype.
+
+Open `docs-index.html` to use the reviewer-facing Review Pack hub.
 
 The demo shows:
 
@@ -41,6 +45,7 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v0.9.md`
 - `docs/decision-memo-v0.7.md`
 - `docs/raci-and-decision-rights-v0.7.md`
 - `docs/risk-register-v0.7.md`
@@ -63,6 +68,9 @@ The demo shows:
 - `data/decision-log-template.csv`
 - `PACKAGE_INDEX.md`
 - `package-manifest.json`
+- `docs-index.html`
+- `404.html`
+- `robots.txt`
 
 ## What This Is Not
 
@@ -147,6 +155,19 @@ The v0.8 package adds:
 - Package Manifest JSON.
 
 Use these to ask a Decidim provider or developer to quote/build the fake-data sandbox with clear deliverables and acceptance criteria.
+
+## v0.9 Public Deployment Upgrade
+
+The v0.9 package adds:
+
+- `docs-index.html` as a reviewer-facing Review Pack hub.
+- Advisor, funder/partner, builder, governance/data, and sample-data pathways.
+- Review Pack links from the main demo and Evidence Pack.
+- Public URL and GitHub repository metadata in the package manifest.
+- `404.html` and `robots.txt` for cleaner static hosting.
+- Public deploy cleanup so QA screenshots and design concept images stay local rather than becoming public release assets.
+
+Use this version for public sharing while the fake-data Decidim sandbox is being quoted or prepared.
 
 ## Next Build Step
 
