@@ -1,0 +1,43 @@
+{
+  "version": "1.6",
+  "mode": "fake-data Decidim sandbox operations",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "entrypoint": "ops-room.html",
+  "sourceFiles": {
+    "runbook": "docs/sandbox-ops-runbook-v1.6.md",
+    "adminChecklist": "docs/decidim-admin-configuration-checklist-v1.6.md",
+    "qaScenarioPack": "docs/sandbox-qa-scenario-pack-v1.6.md",
+    "opsChecklist": "data/sandbox-ops-checklist-v1.6.csv",
+    "adminConfigMap": "data/decidim-admin-config-map-v1.6.csv",
+    "qaScenarios": "data/sandbox-qa-scenarios-v1.6.csv",
+    "riskRegister": "data/ops-risk-register-v1.6.csv"
+  },
+  "metrics": {
+    "opsChecks": 18,
+    "adminConfigRows": 14,
+    "qaScenarios": 12,
+    "riskRows": 10,
+    "realDataAllowed": 0
+  },
+  "stages": [
+    "Setup Access",
+    "Configure Decidim",
+    "Content QA",
+    "Test Evidence",
+    "Handover",
+    "Go/No-Go"
+  ],
+  "gateStatuses": [
+    "Ready",
+    "Hold",
+    "No-go"
+  ],
+  "stopConditions": [
+    "real community records appear",
+    "member or eligibility data appears",
+    "cultural material appears",
+    "sandbox implies a real mandate",
+    "admin access is unavailable",
+    "unsafe content cannot be removed"
+  ]
+}

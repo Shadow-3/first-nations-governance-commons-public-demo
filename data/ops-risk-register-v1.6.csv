@@ -1,0 +1,11 @@
+risk_id,risk,trigger,mitigation,owner,status
+R-001,Fake data confused with real consultation,Public wording sounds binding,Use fake-data banner and authority boundary,Maintainer,Open
+R-002,Real records accidentally imported,Unapproved data source used,Use import manifest and data audit,Initial developer,Open
+R-003,Cultural material exposed,Sample content copied from real context,Block content and replace with neutral placeholder,Maintainer,Open
+R-004,Admin access lost,Only one admin account works,Create backup admin and support contact,Initial developer,Open
+R-005,Unsafe public comments,Moderation not configured,Enable reporting and removal path,Maintainer,Open
+R-006,Mobile review blocked,Pages overflow or controls are hidden,Run 390 px QA before handover,Maintainer,Open
+R-007,Contribution scope confusion,Contributor claims real authority,Point to governance boundary and maintainer charter,Barayamal / Dean Foley,Open
+R-008,Handover incomplete,Known limitations not recorded,Complete handover and evidence log,Initial developer,Open
+R-009,Provider lock-in,Configuration cannot be transferred,Keep docs CSVs and manifest exportable,Maintainer,Monitor
+R-010,Premature real pilot,Stakeholder treats sandbox as production,Require separate real-pilot approvals,Barayamal / Dean Foley,Open

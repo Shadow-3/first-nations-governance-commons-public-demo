@@ -1,0 +1,15 @@
+area,object,admin_action,source,acceptance,evidence
+Organisation,Public identity,Set name description locale timezone and contact,decidim-sandbox-blueprint-v1.3.md,Public identity is fake-data demo only,Organisation settings screenshot
+Organisation,Theme and footer,Add fake-data and support text,data-classification-matrix-v0.8.md,Warning visible from public pages,Footer screenshot
+Assembly,Governance context,Create sample assembly,first-nations-governance-charter-draft.md,Assembly says draft sample only,Assembly screenshot
+Assembly,Scope,Set purpose and limits,community-authority-boundary-v1.4.md,No real mandate implied,Scope screenshot
+Process,2026 priorities process,Create process and phases,pilot-process-rules-2026-community-priorities-budget.md,Phases match sample demo,Process screenshot
+Component,Proposals,Create sample proposals component,decidim-component-map-v1.3.csv,Sample proposals visible,Proposal listing screenshot
+Component,Meetings,Create sample yarning circle records,sample-survey-and-yarning-circle-templates.md,Meeting records are sample only,Meeting page screenshot
+Component,Survey,Create sample survey questions,sample-survey-questions.json,Survey uses sample questions,Survey screenshot
+Component,Accountability,Create sample mandate and tracker page,sample-mandate-record.md,Record says sample only,Accountability screenshot
+Moderation,Reporting,Enable reporting or moderation workflow,security-baseline-checklist-v0.8.md,Unsafe content can be handled,Moderation screenshot
+Users,Admin access,Confirm maintainer and backup admin accounts,admin-handover-training-plan-v1.3.md,Admin support path exists,Admin users screenshot
+Content,Import data,Load approved sample records only,sandbox-import-manifest-v1.3.json,No real data imported,Import evidence note
+Review,Public QA,Run visitor and participant scenarios,sandbox-qa-scenarios-v1.6.csv,Core flows pass,QA screenshot set
+Handover,Limitations,Record open risks and known limits,ops-risk-register-v1.6.csv,Limitations are visible to maintainer,Handover note

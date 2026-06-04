@@ -301,6 +301,7 @@
     <a class="btn primary" href="build-room.html">Builder Room</a>
     <a class="btn primary" href="contributor-room.html">Contributor Room</a>
     <a class="btn primary" href="sprint-room.html">Sprint Room</a>
+    <a class="btn primary" href="ops-room.html">Ops Room</a>
     <a class="btn" href="index.html">Open Demo</a>
     <div class="label">Public demo - fake data only</div>
   </header>
@@ -334,6 +335,10 @@
       <a href="#sprint">
         <strong>Sprint Team</strong>
         <span>Open the first fake-data Decidim sprint board, issue pack, RACI, and evidence log.</span>
+      </a>
+      <a href="#ops">
+        <strong>Ops Team</strong>
+        <span>Run admin configuration, QA scenarios, evidence, risk, handover, and go/no-go controls.</span>
       </a>
       <a href="#governance">
         <strong>Governance/Data</strong>
@@ -386,6 +391,13 @@
         </div>
         <div class="doc-row">
           <div>
+            <strong>Ops Room</strong>
+            <span>Run-day admin configuration, QA scenarios, evidence, risks, handover, and go/no-go controls.</span>
+          </div>
+          <a class="btn primary" href="ops-room.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
             <strong>Public demo prototype</strong>
             <span>Sample Decidim-style participatory process.</span>
           </div>
@@ -415,9 +427,9 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v1.5 Sprint Room and issue package.</span>
+            <span>What changed in the v1.6 Sandbox Ops Room and operating package.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v1.5.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v1.6.md">Open</a>
         </div>
       </div>
     </section>
@@ -438,6 +450,26 @@
         <div class="doc-row"><div><strong>Evidence plan</strong><span>Acceptance evidence, no-go evidence, and handover evidence.</span></div><a class="btn" href="docs/sprint-acceptance-and-evidence-plan-v1.5.md">Open</a></div>
         <div class="doc-row"><div><strong>Evidence log</strong><span>CSV table for screenshots, QA results, and handover records.</span></div><a class="btn" href="data/sprint-evidence-log-v1.5.csv">Open</a></div>
         <div class="doc-row"><div><strong>Sprint RACI</strong><span>Responsible, accountable, consulted, and informed roles.</span></div><a class="btn" href="data/sprint-raci-v1.5.csv">Open</a></div>
+      </div>
+    </section>
+
+    <section id="ops">
+      <div class="section-head">
+        <div>
+          <h2>Ops Team</h2>
+          <p>Use these files to run the fake-data Decidim sandbox sprint from setup through QA and handover.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Ops Room</strong><span>Interactive run state, ops checklist, gates, and generated Ops Pack.</span></div><a class="btn primary" href="ops-room.html">Open</a></div>
+        <div class="doc-row"><div><strong>Ops runbook</strong><span>Day 0 setup, configuration, QA, handover, and stop conditions.</span></div><a class="btn" href="docs/sandbox-ops-runbook-v1.6.md">Open</a></div>
+        <div class="doc-row"><div><strong>Ops checklist CSV</strong><span>Run-day tasks, owners, evidence, stop conditions, and source references.</span></div><a class="btn" href="data/sandbox-ops-checklist-v1.6.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Admin checklist</strong><span>Decidim organisation, assembly, process, components, moderation, and safety checks.</span></div><a class="btn" href="docs/decidim-admin-configuration-checklist-v1.6.md">Open</a></div>
+        <div class="doc-row"><div><strong>Admin config map</strong><span>Admin actions mapped to source, acceptance, and evidence.</span></div><a class="btn" href="data/decidim-admin-config-map-v1.6.csv">Open</a></div>
+        <div class="doc-row"><div><strong>QA scenario pack</strong><span>Public visitor, participant simulation, admin, mobile, and accessibility checks.</span></div><a class="btn" href="docs/sandbox-qa-scenario-pack-v1.6.md">Open</a></div>
+        <div class="doc-row"><div><strong>QA scenarios CSV</strong><span>Scenario rows with expected result, evidence, priority, and blocker status.</span></div><a class="btn" href="data/sandbox-qa-scenarios-v1.6.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Ops risk register</strong><span>Operating risks, triggers, mitigation, owners, and status.</span></div><a class="btn" href="data/ops-risk-register-v1.6.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Ops readiness manifest</strong><span>JSON source map, metrics, gate statuses, and stop conditions.</span></div><a class="btn" href="data/ops-readiness-manifest-v1.6.json">Open</a></div>
       </div>
     </section>
 
@@ -555,7 +587,7 @@
     </section>
 
     <footer>
-      Version v1.5. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v1.6. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
   <script>

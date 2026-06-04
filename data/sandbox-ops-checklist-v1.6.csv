@@ -1,0 +1,19 @@
+id,stage,owner,task,evidence,stop_condition,source
+O-001,Setup Access,Barayamal / Dean Foley,Create GitHub sprint board and labels,Board screenshot,Board or labels missing,github-repo-setup-checklist-v1.4.md
+O-002,Setup Access,Initial developer,Confirm sandbox URL and admin login,Admin dashboard screenshot,Admin login unavailable,technical-requirements-v0.8.md
+O-003,Setup Access,Maintainer,Add visible fake-data warning to public sandbox,Public page screenshot,Warning missing or unclear,data-classification-matrix-v0.8.md
+O-004,Configure Decidim,Initial developer,Set organisation name locale timezone and support details,Organisation admin screenshot,Organisation labels imply real authority,decidim-sandbox-blueprint-v1.3.md
+O-005,Configure Decidim,Initial developer,Create sample assembly and governance context,Assembly screenshot,Assembly implies real mandate,first-nations-governance-charter-draft.md
+O-006,Configure Decidim,Initial developer,Create sample participatory process and phases,Process screenshot,Process appears live or binding,pilot-process-rules-2026-community-priorities-budget.md
+O-007,Configure Decidim,Initial developer,Configure proposals meetings surveys and accountability components,Component screenshots,Core component missing,decidim-component-map-v1.3.csv
+O-008,Configure Decidim,Initial developer,Enable moderation reporting and content removal path,Moderation setting screenshot,Unsafe content cannot be removed,security-baseline-checklist-v0.8.md
+O-009,Content QA,Maintainer,Audit all sample proposals and meeting records,Audit note,Real data or cultural material appears,data-classification-matrix-v0.8.md
+O-010,Content QA,Maintainer,Check sample mandate and accountability records,Audit screenshot,Record suggests real outcome,sample-mandate-record.md
+O-011,Content QA,Advisor,Review public language for authority boundary,Advisor note,Language implies real community mandate,community-authority-boundary-v1.4.md
+O-012,Test Evidence,Maintainer,Run public visitor flow,Scenario screenshot,Visitor cannot understand fake-data status,sandbox-qa-scenarios-v1.6.csv
+O-013,Test Evidence,Maintainer,Run participant simulation flow,Scenario screenshot,Sample proposal or survey flow broken,sandbox-qa-scenarios-v1.6.csv
+O-014,Test Evidence,Maintainer,Run admin configuration flow,Admin scenario screenshot,Admin cannot inspect or edit sample content,sandbox-qa-scenarios-v1.6.csv
+O-015,Test Evidence,Maintainer,Run mobile 390 px and keyboard check,Mobile screenshot,Page-level horizontal overflow or blocked controls,sandbox-qa-scenarios-v1.6.csv
+O-016,Handover,Initial developer,Record admin handover support and backup access,Handover note,No support or backup admin path,admin-handover-training-plan-v1.3.md
+O-017,Handover,Maintainer,Record known limitations and open risks,Risk register,High risk unowned,ops-risk-register-v1.6.csv
+O-018,Go/No-Go,Maintainer,Record Ready Hold or No-go operating decision,Decision note,Any no-go gate unresolved,sandbox-ops-runbook-v1.6.md

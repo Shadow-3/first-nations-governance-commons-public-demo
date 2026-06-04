@@ -11,6 +11,8 @@ Status: complete
 - Decision Room.
 - Builder Room.
 - Contributor Room.
+- Sprint Room.
+- Ops Room.
 
 ## Phase 1: Fake-Data Decidim Sandbox
 
@@ -21,6 +23,7 @@ Status: next
 - Configure proposals, meetings, survey, accountability, and public explanation pages.
 - Import or manually enter fake/sample data.
 - Run acceptance matrix.
+- Run Ops Room QA scenarios and evidence capture.
 - Complete admin handover.
 
 ## Phase 2: Advisor And Partner Review
@@ -37,4 +40,3 @@ Status: planned
 Status: blocked until approvals
 
 No real pilot can proceed until governance, privacy, data sovereignty, cultural safety, eligibility, moderation, hosting, support, and publication approvals exist.
-

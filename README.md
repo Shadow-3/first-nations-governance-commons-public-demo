@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v1.5
+Current package version: v1.6
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -26,6 +26,8 @@ Open `build-room.html` to use the Builder Room for Decidim sandbox implementatio
 Open `contributor-room.html` to use the Contributor Room for the open-source maintainer model, contribution lanes, roadmap, issue templates, and repository boundary.
 
 Open `sprint-room.html` to use the Sprint Room for the first fake-data Decidim sandbox issue board, sprint kickoff, evidence log, and RACI.
+
+Open `ops-room.html` to use the Sandbox Ops Room for run-day admin configuration, QA scenarios, evidence capture, risk controls, handover, and go/no-go status.
 
 The demo shows:
 
@@ -63,6 +65,10 @@ The demo shows:
 - `docs/public-demo-release-notes-v1.3.md`
 - `docs/public-demo-release-notes-v1.4.md`
 - `docs/public-demo-release-notes-v1.5.md`
+- `docs/public-demo-release-notes-v1.6.md`
+- `docs/sandbox-ops-runbook-v1.6.md`
+- `docs/decidim-admin-configuration-checklist-v1.6.md`
+- `docs/sandbox-qa-scenario-pack-v1.6.md`
 - `docs/sandbox-sprint-kickoff-v1.5.md`
 - `docs/github-issue-pack-v1.5.md`
 - `docs/sprint-acceptance-and-evidence-plan-v1.5.md`
@@ -115,6 +121,11 @@ The demo shows:
 - `data/sprint-evidence-log-v1.5.csv`
 - `data/sprint-raci-v1.5.csv`
 - `data/issue-import-manifest-v1.5.json`
+- `data/sandbox-ops-checklist-v1.6.csv`
+- `data/decidim-admin-config-map-v1.6.csv`
+- `data/sandbox-qa-scenarios-v1.6.csv`
+- `data/ops-risk-register-v1.6.csv`
+- `data/ops-readiness-manifest-v1.6.json`
 - `data/sandbox-task-board.csv`
 - `data/decision-log-template.csv`
 - `PACKAGE_INDEX.md`
@@ -125,6 +136,7 @@ The demo shows:
 - `build-room.html`
 - `contributor-room.html`
 - `sprint-room.html`
+- `ops-room.html`
 - `document.html`
 - `CONTRIBUTING.md`
 - `CODE_OF_CONDUCT.md`
@@ -338,9 +350,27 @@ The v1.5 package adds:
 
 Use this version to open the first GitHub sprint board and run the fake-data Decidim sandbox sprint with visible acceptance checks and evidence capture.
 
+## v1.6 Sandbox Ops Room And Run-Day Controls
+
+The v1.6 package adds:
+
+- `ops-room.html` as the fake-data Decidim sandbox run-day operating room.
+- Interactive Ready/Hold/No-go gate controls.
+- Ops checklist with 18 run-day checks.
+- Decidim admin configuration checklist.
+- Decidim admin config map CSV.
+- Sandbox QA scenario pack.
+- QA scenarios CSV.
+- Ops risk register CSV.
+- Ops readiness manifest JSON.
+- Downloadable generated Ops Pack.
+- Ops Room links from the demo, Decision Room, Action Center, Builder Room, Contributor Room, Sprint Room, Review Pack, and document viewer.
+
+Use this version after opening the first sprint issues. Ops Room turns the board into a practical operating sequence for admin configuration, QA evidence, safety stop conditions, risk ownership, handover, and fake-data sandbox readiness.
+
 ## Next Build Step
 
-Use the Contributor Room, Builder Room, and Sprint Room to configure a fake-data Decidim sandbox:
+Use the Contributor Room, Builder Room, Sprint Room, and Ops Room to configure and operate a fake-data Decidim sandbox:
 
 - One organisation.
 - One public assembly.

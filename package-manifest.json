@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "1.5",
+  "version": "1.6",
   "date": "2026-06-04",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use the Contributor Room to run the open-source repository model, the Decision Room to confirm proceed/hold/no-go status, the Builder Room as the implementation handoff, and the Sprint Room to open the first fake-data Decidim sandbox issues and evidence log.",
+  "recommendedDecision": "Use the Contributor Room to run the open-source repository model, the Decision Room to confirm proceed/hold/no-go status, the Builder Room as the implementation handoff, the Sprint Room to open the first fake-data Decidim sandbox issues, and the Ops Room to run admin configuration, QA evidence, risk, handover, and operating go/no-go controls.",
   "localDecidimStatus": {
     "ruby": "not_installed",
     "rubygems": "not_installed",
@@ -22,6 +22,7 @@
     "build-room.html",
     "contributor-room.html",
     "sprint-room.html",
+    "ops-room.html",
     "docs-index.html",
     "document.html",
     "README.md",
@@ -33,6 +34,7 @@
     "SUPPORT.md",
     "PACKAGE_INDEX.md",
     "package-manifest.json",
+    "docs/public-demo-release-notes-v1.6.md",
     "docs/public-demo-release-notes-v1.5.md",
     "docs/public-demo-release-notes-v1.4.md",
     "docs/public-demo-release-notes-v1.3.md",
@@ -45,7 +47,7 @@
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v1.5.md",
+    "releaseNotes": "docs/public-demo-release-notes-v1.6.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -167,10 +169,12 @@
       "build-room.html",
       "contributor-room.html",
       "sprint-room.html",
+      "ops-room.html",
       "docs-index.html",
       "document.html",
       "PACKAGE_INDEX.md",
       "docs/public-demo-release-notes-v1.5.md",
+      "docs/public-demo-release-notes-v1.6.md",
       "docs/public-demo-release-notes-v1.4.md",
       "docs/public-demo-release-notes-v1.3.md",
       "docs/public-demo-release-notes-v1.2.md",
@@ -291,8 +295,26 @@
       "data/sprint-evidence-log-v1.5.csv",
       "data/sprint-raci-v1.5.csv",
       "data/issue-import-manifest-v1.5.json",
+      "data/ops-readiness-manifest-v1.6.json",
+      "data/ops-risk-register-v1.6.csv",
+      "data/sandbox-qa-scenarios-v1.6.csv",
+      "data/decidim-admin-config-map-v1.6.csv",
+      "data/sandbox-ops-checklist-v1.6.csv",
+      "docs/sandbox-qa-scenario-pack-v1.6.md",
+      "docs/decidim-admin-configuration-checklist-v1.6.md",
+      "docs/sandbox-ops-runbook-v1.6.md",
       "data/sandbox-task-board.csv",
       "data/decision-log-template.csv"
+    ],
+    "opsRoom": [
+      "docs/sandbox-ops-runbook-v1.6.md",
+      "docs/decidim-admin-configuration-checklist-v1.6.md",
+      "docs/sandbox-qa-scenario-pack-v1.6.md",
+      "data/sandbox-ops-checklist-v1.6.csv",
+      "data/decidim-admin-config-map-v1.6.csv",
+      "data/sandbox-qa-scenarios-v1.6.csv",
+      "data/ops-risk-register-v1.6.csv",
+      "data/ops-readiness-manifest-v1.6.json"
     ]
   },
   "safetyRules": [
@@ -302,5 +324,28 @@
     "No cultural material.",
     "No real voting or eligibility data.",
     "Real pilot requires separate governance, data, privacy, cultural safety, and hosting approvals."
-  ]
+  ],
+  "opsRoom": {
+    "entrypoint": "ops-room.html",
+    "runbook": "docs/sandbox-ops-runbook-v1.6.md",
+    "adminChecklist": "docs/decidim-admin-configuration-checklist-v1.6.md",
+    "qaScenarioPack": "docs/sandbox-qa-scenario-pack-v1.6.md",
+    "opsChecklist": "data/sandbox-ops-checklist-v1.6.csv",
+    "adminConfigMap": "data/decidim-admin-config-map-v1.6.csv",
+    "qaScenarios": "data/sandbox-qa-scenarios-v1.6.csv",
+    "riskRegister": "data/ops-risk-register-v1.6.csv",
+    "readinessManifest": "data/ops-readiness-manifest-v1.6.json",
+    "stages": [
+      "setup_access",
+      "configure_decidim",
+      "content_qa",
+      "test_evidence",
+      "handover",
+      "go_no_go"
+    ],
+    "opsCheckCount": 18,
+    "adminConfigRows": 14,
+    "qaScenarioCount": 12,
+    "riskRows": 10
+  }
 }

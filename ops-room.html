@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sandbox Ops Room - First Nations Governance Commons</title>
+  <meta name="description" content="Run-day operating room for the fake-data Decidim sandbox sprint.">
+  <style>
+    :root {
+      --bg: #f6f7f5;
+      --surface: #ffffff;
+      --surface-2: #eef3ef;
+      --text: #1d2523;
+      --muted: #61706b;
+      --line: #d9e0dc;
+      --teal: #0d675f;
+      --teal-2: #e5f1ee;
+      --ochre: #b66a25;
+      --ochre-2: #fff2e5;
+      --green: #247654;
+      --green-2: #e7f4ed;
+      --red: #aa3d36;
+      --red-2: #fae9e7;
+      --amber: #8b691d;
+      --amber-2: #fff6d9;
+      --radius: 6px;
+      --shadow: 0 14px 36px rgba(18, 33, 29, 0.08);
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.45;
+    }
+
+    a { color: inherit; }
+    button,
+    select { font: inherit; }
+
+    .topbar {
+      min-height: 72px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .brand {
+      display: flex;
+      flex: 1 1 220px;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius);
+      background: var(--teal);
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .brand strong,
+    .brand span {
+      display: block;
+    }
+
+    .brand strong {
+      font-size: 15px;
+      line-height: 1.1;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .label {
+      width: fit-content;
+      color: var(--ochre);
+      background: var(--ochre-2);
+      border: 1px solid #f1d7b9;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .btn {
+      min-height: 38px;
+      border-radius: var(--radius);
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .btn.primary {
+      background: var(--teal);
+      color: #fff;
+      border-color: var(--teal);
+    }
+
+    .topbar .btn,
+    .topbar .label {
+      flex: 0 0 auto;
+    }
+
+    main {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 28px 24px 44px;
+      display: grid;
+      gap: 22px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: end;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    h2,
+    h3 {
+      margin: 0;
+      letter-spacing: 0;
+    }
+
+    .intro p,
+    .metric span,
+    .ops-card p,
+    .resource span,
+    .gate-card span,
+    .summary {
+      color: var(--muted);
+    }
+
+    .intro p {
+      max-width: 850px;
+      margin: 12px 0 0;
+      font-size: 15px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .metrics,
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .metric,
+    .ops-card,
+    .resource,
+    .status-panel,
+    .gate-card,
+    .note {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .metric {
+      padding: 16px;
+      min-height: 108px;
+      display: grid;
+      gap: 8px;
+      align-content: start;
+    }
+
+    .metric strong {
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 14px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 10px;
+    }
+
+    .filters {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .filter {
+      min-height: 34px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--muted);
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .filter.is-active {
+      color: var(--teal);
+      background: var(--teal-2);
+      border-color: #c8ded8;
+    }
+
+    .run-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 12px;
+      align-items: start;
+    }
+
+    .status-panel {
+      padding: 18px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .status-pill {
+      width: fit-content;
+      border-radius: 999px;
+      padding: 8px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      color: var(--amber);
+      background: var(--amber-2);
+      border: 1px solid #eadb9e;
+    }
+
+    .status-pill.ready {
+      color: var(--green);
+      background: var(--green-2);
+      border-color: #c7e4d5;
+    }
+
+    .status-pill.no-go {
+      color: var(--red);
+      background: var(--red-2);
+      border-color: #e7c5c1;
+    }
+
+    .gate-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .gate-card {
+      padding: 14px;
+      display: grid;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .gate-card label {
+      display: grid;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 900;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .gate-card strong {
+      line-height: 1.25;
+    }
+
+    .gate-select {
+      width: 100%;
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text);
+      padding: 7px 8px;
+      font-weight: 800;
+    }
+
+    .ops-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .ops-card {
+      padding: 16px;
+      display: grid;
+      gap: 11px;
+      align-content: start;
+      min-height: 196px;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 9px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      background: var(--surface-2);
+      white-space: nowrap;
+    }
+
+    .pill.setup {
+      color: var(--teal);
+      background: var(--teal-2);
+      border-color: #c8ded8;
+    }
+
+    .pill.configure {
+      color: var(--ochre);
+      background: var(--ochre-2);
+      border-color: #f1d7b9;
+    }
+
+    .pill.qa,
+    .pill.test {
+      color: var(--green);
+      background: var(--green-2);
+      border-color: #c7e4d5;
+    }
+
+    .pill.handover {
+      color: var(--amber);
+      background: var(--amber-2);
+      border-color: #eadb9e;
+    }
+
+    .pill.stop {
+      color: var(--red);
+      background: var(--red-2);
+      border-color: #e7c5c1;
+    }
+
+    .ops-card p {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .ops-card strong {
+      color: var(--text);
+    }
+
+    .resource-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .resource {
+      min-height: 96px;
+      padding: 15px;
+      display: grid;
+      gap: 6px;
+      align-content: start;
+      text-decoration: none;
+    }
+
+    .resource strong,
+    .resource span {
+      display: block;
+      overflow-wrap: anywhere;
+    }
+
+    .resource span {
+      font-size: 13px;
+    }
+
+    .note {
+      padding: 18px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .summary {
+      margin: 0;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      font-size: 13px;
+      max-height: 360px;
+      overflow: auto;
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 13px;
+      padding-top: 6px;
+    }
+
+    @media (max-width: 960px) {
+      .intro,
+      .run-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .actions {
+        justify-content: flex-start;
+      }
+
+      .metrics,
+      .gate-grid,
+      .resource-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .topbar {
+        padding: 12px 16px;
+      }
+
+      main {
+        padding: 20px 16px 34px;
+      }
+
+      .metrics,
+      .gate-grid,
+      .ops-grid,
+      .resource-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        display: grid;
+        align-items: start;
+      }
+
+      .actions,
+      .filters {
+        justify-content: flex-start;
+      }
+
+      .btn,
+      .filter {
+        white-space: normal;
+      }
+
+      .card-top {
+        display: grid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">B</div>
+      <div>
+        <strong>Barayamal</strong>
+        <span>First Nations Governance Commons</span>
+      </div>
+    </div>
+    <a class="btn primary" href="decision-room.html">Decision Room</a>
+    <a class="btn primary" href="build-room.html">Builder Room</a>
+    <a class="btn primary" href="contributor-room.html">Contributor Room</a>
+    <a class="btn primary" href="sprint-room.html">Sprint Room</a>
+    <a class="btn" href="next-steps.html">Action Center</a>
+    <a class="btn" href="index.html">Open Demo</a>
+    <a class="btn" href="docs-index.html">Review Pack</a>
+    <span class="label">Fake/sample data only</span>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <h1>Sandbox Ops Room</h1>
+        <p>Run-day operating console for the first fake-data Decidim sandbox sprint. It turns the Sprint Room issues into admin configuration checks, QA scenarios, evidence capture, risk controls, handover tasks, and a Ready/Hold/No-go operating state.</p>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="document.html?file=docs%2Fsandbox-ops-runbook-v1.6.md">Open Runbook</a>
+        <button class="btn" id="downloadOps" type="button">Download Ops Pack</button>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Ops Room metrics">
+      <div class="metric"><strong>18</strong><span>Ops checks across setup, configuration, QA, evidence, handover, and go/no-go.</span></div>
+      <div class="metric"><strong>14</strong><span>Decidim admin configuration rows mapped to evidence.</span></div>
+      <div class="metric"><strong>12</strong><span>QA scenarios for public visitor, participant simulation, admin, mobile, and accessibility.</span></div>
+      <div class="metric"><strong>0</strong><span>Real records, member data, cultural material, or real voting data allowed.</span></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Run State</h2>
+          <p class="summary">The sample operating state updates as gates move between Ready, Hold, and No-go.</p>
+        </div>
+      </div>
+      <div class="run-grid">
+        <div class="status-panel">
+          <span class="status-pill" id="statusPill">Hold</span>
+          <h3 id="statusTitle">Hold: complete operating checks</h3>
+          <p class="summary" id="statusSummary"></p>
+        </div>
+        <div class="gate-grid" id="gateGrid"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Ops Checklist</h2>
+          <p class="summary">Filter by operating stage and generate the local pack for sprint handover.</p>
+        </div>
+        <div class="filters" aria-label="Ops checklist filters">
+          <button class="filter is-active" type="button" data-filter="All">All</button>
+          <button class="filter" type="button" data-filter="Setup Access">Setup Access</button>
+          <button class="filter" type="button" data-filter="Configure Decidim">Configure</button>
+          <button class="filter" type="button" data-filter="Content QA">Content QA</button>
+          <button class="filter" type="button" data-filter="Test Evidence">Test Evidence</button>
+          <button class="filter" type="button" data-filter="Handover">Handover</button>
+          <button class="filter" type="button" data-filter="Go/No-Go">Go/No-Go</button>
+        </div>
+      </div>
+      <div class="ops-grid" id="opsGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Ops Resources</h2>
+          <p class="summary">Open these through the document viewer.</p>
+        </div>
+      </div>
+      <div class="resource-grid">
+        <a class="resource" href="document.html?file=docs%2Fsandbox-ops-runbook-v1.6.md"><strong>Ops runbook</strong><span>Day 0 to handover operating sequence and stop conditions.</span></a>
+        <a class="resource" href="document.html?file=data%2Fsandbox-ops-checklist-v1.6.csv"><strong>Ops checklist CSV</strong><span>Run-day tasks, owners, evidence, stop conditions, and sources.</span></a>
+        <a class="resource" href="document.html?file=docs%2Fdecidim-admin-configuration-checklist-v1.6.md"><strong>Admin checklist</strong><span>Decidim organisation, assembly, process, components, moderation, and handover checks.</span></a>
+        <a class="resource" href="document.html?file=data%2Fdecidim-admin-config-map-v1.6.csv"><strong>Admin config map</strong><span>Admin actions mapped to source, acceptance, and evidence.</span></a>
+        <a class="resource" href="document.html?file=docs%2Fsandbox-qa-scenario-pack-v1.6.md"><strong>QA scenario pack</strong><span>Public visitor, participant simulation, admin, mobile, and accessibility checks.</span></a>
+        <a class="resource" href="document.html?file=data%2Fsandbox-qa-scenarios-v1.6.csv"><strong>QA scenarios CSV</strong><span>Scenario rows with expected result, evidence, priority, and blocker status.</span></a>
+        <a class="resource" href="document.html?file=data%2Fops-risk-register-v1.6.csv"><strong>Ops risk register</strong><span>Operating risks, triggers, mitigation, owners, and status.</span></a>
+        <a class="resource" href="document.html?file=data%2Fops-readiness-manifest-v1.6.json"><strong>Readiness manifest</strong><span>Machine-readable source map, metrics, gate statuses, and stop conditions.</span></a>
+        <a class="resource" href="sprint-room.html"><strong>Sprint Room</strong><span>First issue pack that feeds the Ops Room.</span></a>
+      </div>
+    </section>
+
+    <section class="note">
+      <h2>Generated Ops Pack</h2>
+      <p class="summary">Local-only text generated from current gates and visible checklist items.</p>
+      <div class="summary" id="opsSummary"></div>
+    </section>
+
+    <footer>
+      Version v1.6. Initial developer/custodian: Barayamal / Dean Foley.
+    </footer>
+  </main>
+
+  <script>
+    const opsItems = [
+      { id: "O-001", stage: "Setup Access", owner: "Barayamal / Dean Foley", task: "Create GitHub sprint board and labels", evidence: "Board screenshot", stop: "Board or labels missing", source: "github-repo-setup-checklist-v1.4.md" },
+      { id: "O-002", stage: "Setup Access", owner: "Initial developer", task: "Confirm sandbox URL and admin login", evidence: "Admin dashboard screenshot", stop: "Admin login unavailable", source: "technical-requirements-v0.8.md" },
+      { id: "O-003", stage: "Setup Access", owner: "Maintainer", task: "Add visible fake-data warning to public sandbox", evidence: "Public page screenshot", stop: "Warning missing or unclear", source: "data-classification-matrix-v0.8.md" },
+      { id: "O-004", stage: "Configure Decidim", owner: "Initial developer", task: "Set organisation name locale timezone and support details", evidence: "Organisation admin screenshot", stop: "Organisation labels imply real authority", source: "decidim-sandbox-blueprint-v1.3.md" },
+      { id: "O-005", stage: "Configure Decidim", owner: "Initial developer", task: "Create sample assembly and governance context", evidence: "Assembly screenshot", stop: "Assembly implies real mandate", source: "first-nations-governance-charter-draft.md" },
+      { id: "O-006", stage: "Configure Decidim", owner: "Initial developer", task: "Create sample participatory process and phases", evidence: "Process screenshot", stop: "Process appears live or binding", source: "pilot-process-rules-2026-community-priorities-budget.md" },
+      { id: "O-007", stage: "Configure Decidim", owner: "Initial developer", task: "Configure proposals meetings surveys and accountability components", evidence: "Component screenshots", stop: "Core component missing", source: "decidim-component-map-v1.3.csv" },
+      { id: "O-008", stage: "Configure Decidim", owner: "Initial developer", task: "Enable moderation reporting and content removal path", evidence: "Moderation setting screenshot", stop: "Unsafe content cannot be removed", source: "security-baseline-checklist-v0.8.md" },
+      { id: "O-009", stage: "Content QA", owner: "Maintainer", task: "Audit all sample proposals and meeting records", evidence: "Audit note", stop: "Real data or cultural material appears", source: "data-classification-matrix-v0.8.md" },
+      { id: "O-010", stage: "Content QA", owner: "Maintainer", task: "Check sample mandate and accountability records", evidence: "Audit screenshot", stop: "Record suggests real outcome", source: "sample-mandate-record.md" },
+      { id: "O-011", stage: "Content QA", owner: "Advisor", task: "Review public language for authority boundary", evidence: "Advisor note", stop: "Language implies real community mandate", source: "community-authority-boundary-v1.4.md" },
+      { id: "O-012", stage: "Test Evidence", owner: "Maintainer", task: "Run public visitor flow", evidence: "Scenario screenshot", stop: "Visitor cannot understand fake-data status", source: "sandbox-qa-scenarios-v1.6.csv" },
+      { id: "O-013", stage: "Test Evidence", owner: "Maintainer", task: "Run participant simulation flow", evidence: "Scenario screenshot", stop: "Sample proposal or survey flow broken", source: "sandbox-qa-scenarios-v1.6.csv" },
+      { id: "O-014", stage: "Test Evidence", owner: "Maintainer", task: "Run admin configuration flow", evidence: "Admin scenario screenshot", stop: "Admin cannot inspect or edit sample content", source: "sandbox-qa-scenarios-v1.6.csv" },
+      { id: "O-015", stage: "Test Evidence", owner: "Maintainer", task: "Run mobile 390 px and keyboard check", evidence: "Mobile screenshot", stop: "Page-level horizontal overflow or blocked controls", source: "sandbox-qa-scenarios-v1.6.csv" },
+      { id: "O-016", stage: "Handover", owner: "Initial developer", task: "Record admin handover support and backup access", evidence: "Handover note", stop: "No support or backup admin path", source: "admin-handover-training-plan-v1.3.md" },
+      { id: "O-017", stage: "Handover", owner: "Maintainer", task: "Record known limitations and open risks", evidence: "Risk register", stop: "High risk unowned", source: "ops-risk-register-v1.6.csv" },
+      { id: "O-018", stage: "Go/No-Go", owner: "Maintainer", task: "Record Ready Hold or No-go operating decision", evidence: "Decision note", stop: "Any no-go gate unresolved", source: "sandbox-ops-runbook-v1.6.md" }
+    ];
+
+    const gates = [
+      { name: "Fake-data boundary", status: "Ready", detail: "No real records, cultural material, member data, or real voting data." },
+      { name: "Sprint board and labels", status: "Ready", detail: "Repository board and issue lanes are prepared." },
+      { name: "Sandbox admin access", status: "Hold", detail: "Confirm URL, admin login, support contact, and backup admin." },
+      { name: "Decidim configuration", status: "Hold", detail: "Organisation, assembly, process, components, and moderation still need evidence." },
+      { name: "Content audit", status: "Hold", detail: "Sample proposals, meetings, surveys, and mandate text need final audit." },
+      { name: "QA evidence", status: "Hold", detail: "Visitor, participant, admin, mobile, and accessibility scenarios need screenshot evidence." },
+      { name: "Handover", status: "Hold", detail: "Support path, limitations, and open risks need sign-off." },
+      { name: "Real pilot authority not claimed", status: "Ready", detail: "Sandbox remains fake-data infrastructure rehearsal only." }
+    ];
+
+    function stageClass(stage) {
+      if (stage === "Setup Access") return "setup";
+      if (stage === "Configure Decidim") return "configure";
+      if (stage === "Content QA") return "qa";
+      if (stage === "Test Evidence") return "test";
+      if (stage === "Handover") return "handover";
+      return "stop";
+    }
+
+    function renderGates() {
+      document.getElementById("gateGrid").innerHTML = gates.map((gate, index) => `
+        <article class="gate-card">
+          <strong>${gate.name}</strong>
+          <span>${gate.detail}</span>
+          <label>Status
+            <select class="gate-select" data-gate-index="${index}">
+              ${["Ready", "Hold", "No-go"].map(status => `<option value="${status}" ${status === gate.status ? "selected" : ""}>${status}</option>`).join("")}
+            </select>
+          </label>
+        </article>
+      `).join("");
+
+      document.querySelectorAll("[data-gate-index]").forEach(select => {
+        select.addEventListener("change", () => {
+          gates[Number(select.dataset.gateIndex)].status = select.value;
+          updateRunState();
+          renderSummary(getActiveFilter());
+        });
+      });
+    }
+
+    function updateRunState() {
+      const noGo = gates.filter(gate => gate.status === "No-go");
+      const hold = gates.filter(gate => gate.status === "Hold");
+      const pill = document.getElementById("statusPill");
+      const title = document.getElementById("statusTitle");
+      const summary = document.getElementById("statusSummary");
+      pill.className = "status-pill";
+
+      if (noGo.length) {
+        pill.textContent = "No-go";
+        pill.classList.add("no-go");
+        title.textContent = "No-go: stop the sandbox sprint";
+        summary.textContent = `${noGo.length} gate(s) are no-go. Resolve these before showing the sandbox as ready: ${noGo.map(gate => gate.name).join(", ")}.`;
+        return;
+      }
+
+      if (hold.length) {
+        pill.textContent = "Hold";
+        title.textContent = "Hold: complete operating checks";
+        summary.textContent = `${hold.length} gate(s) remain on hold. Continue configuration, QA evidence, handover, and risk closure before presenting the sandbox as ready.`;
+        return;
+      }
+
+      pill.textContent = "Ready";
+      pill.classList.add("ready");
+      title.textContent = "Ready for fake-data sandbox demo";
+      summary.textContent = "All gates are ready. This still authorises only a fake-data sandbox demo, not a real community consultation or production pilot.";
+    }
+
+    function getActiveFilter() {
+      return document.querySelector(".filter.is-active")?.dataset.filter || "All";
+    }
+
+    function renderOps(filter = "All") {
+      const selected = filter === "All" ? opsItems : opsItems.filter(item => item.stage === filter);
+      document.getElementById("opsGrid").innerHTML = selected.map(item => `
+        <article class="ops-card">
+          <div class="card-top">
+            <div>
+              <h3>${item.id}: ${item.task}</h3>
+              <p>${item.owner}</p>
+            </div>
+            <span class="pill ${stageClass(item.stage)}">${item.stage}</span>
+          </div>
+          <p><strong>Evidence:</strong> ${item.evidence}</p>
+          <p><strong>Stop condition:</strong> ${item.stop}</p>
+          <p><strong>Source:</strong> ${item.source}</p>
+        </article>
+      `).join("");
+      renderSummary(filter);
+    }
+
+    function renderSummary(filter = "All") {
+      const selected = filter === "All" ? opsItems : opsItems.filter(item => item.stage === filter);
+      const gateText = gates.map(gate => `- ${gate.name}: ${gate.status}`).join("\n");
+      document.getElementById("opsSummary").textContent = `# Sandbox Ops Pack v1.6
+
+Project: First Nations Governance Commons
+Mode: fake-data Decidim sandbox operations
+Initial developer/custodian: Barayamal / Dean Foley
+Filter: ${filter}
+Ops checks shown: ${selected.length}
+
+## Current Gates
+
+${gateText}
+
+## Operating Rule
+
+Run the sandbox as infrastructure rehearsal only. Do not use real community records, member lists, cultural material, eligibility data, voting data, or real decision outcomes.
+
+## Ops Checks
+
+${selected.map(item => `### ${item.id}: ${item.task}
+Stage: ${item.stage}
+Owner: ${item.owner}
+Evidence: ${item.evidence}
+Stop condition: ${item.stop}
+Source: ${item.source}`).join("\n\n")}
+`;
+    }
+
+    function downloadOps() {
+      const blob = new Blob([document.getElementById("opsSummary").textContent], { type: "text/markdown" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "first-sandbox-ops-pack-v1.6.md";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    document.querySelectorAll("[data-filter]").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll("[data-filter]").forEach(item => item.classList.remove("is-active"));
+        button.classList.add("is-active");
+        renderOps(button.dataset.filter);
+      });
+    });
+
+    document.getElementById("downloadOps").addEventListener("click", downloadOps);
+    renderGates();
+    updateRunState();
+    renderOps();
+  </script>
+</body>
+</html>

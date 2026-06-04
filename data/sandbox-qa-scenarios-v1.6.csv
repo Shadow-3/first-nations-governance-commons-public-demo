@@ -1,0 +1,13 @@
+scenario_id,role,flow,expected_result,evidence,priority,blocker_if_fails
+QA-001,Public visitor,Open sandbox home page,Fake-data warning is visible,Homepage screenshot,High,Yes
+QA-002,Public visitor,Open sample assembly,Assembly states draft/sample context,Assembly screenshot,High,Yes
+QA-003,Public visitor,Open sample participatory process,Sample phases are visible,Process screenshot,High,Yes
+QA-004,Public visitor,Open proposal list,Sample proposals load without real identity,Proposal list screenshot,High,Yes
+QA-005,Participant simulation,Support or inspect a sample proposal,Action does not imply real vote,Proposal action screenshot,Medium,No
+QA-006,Participant simulation,Open sample meeting or yarning circle,Offline input appears sample only,Meeting screenshot,High,Yes
+QA-007,Participant simulation,Open or complete sample survey,Survey uses sample questions,Survey screenshot,Medium,No
+QA-008,Participant simulation,Open sample accountability or mandate record,Record states sample outcome only,Accountability screenshot,High,Yes
+QA-009,Admin,Inspect organisation assembly process and components,Admin can verify configuration,Admin screenshot,High,Yes
+QA-010,Admin,Edit or remove unsafe sample content,Maintainer can correct unsafe content,Moderation screenshot,High,Yes
+QA-011,Mobile,Check public pages at 390 px width,No page-level horizontal overflow,Mobile screenshot,High,Yes
+QA-012,Accessibility,Check keyboard focus and readable contrast,Core controls are reachable,Accessibility note,Medium,No
