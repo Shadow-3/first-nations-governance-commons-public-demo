@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v1.1
+Current package version: v1.2
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -18,6 +18,8 @@ Open `docs-index.html` to use the reviewer-facing Review Pack hub.
 Open `document.html` to read package documents and sample data in the rendered public viewer.
 
 Open `next-steps.html` to use the Action Center for advisor review, sandbox RFQ, provider scoring, trackers, and decision gates.
+
+Open `decision-room.html` to score fake-data sandbox readiness and download a local decision summary.
 
 The demo shows:
 
@@ -51,6 +53,10 @@ The demo shows:
 - `docs/static-demo-deployment-checklist-v0.8.md`
 - `docs/public-demo-release-notes-v1.0.md`
 - `docs/public-demo-release-notes-v1.1.md`
+- `docs/public-demo-release-notes-v1.2.md`
+- `docs/sandbox-readiness-gates-v1.2.md`
+- `docs/sandbox-decision-brief-template-v1.2.md`
+- `docs/decision-meeting-agenda-v1.2.md`
 - `docs/next-steps-action-plan-v1.1.md`
 - `docs/advisor-review-kickoff-pack-v1.1.md`
 - `docs/sandbox-provider-rfq-v1.1.md`
@@ -76,11 +82,14 @@ The demo shows:
 - `data/advisor-review-tracker.csv`
 - `data/v1.1-action-board.csv`
 - `data/provider-quote-tracker.csv`
+- `data/sandbox-readiness-checklist.csv`
+- `data/decision-readiness-sample-scores.csv`
 - `data/sandbox-task-board.csv`
 - `data/decision-log-template.csv`
 - `PACKAGE_INDEX.md`
 - `package-manifest.json`
 - `docs-index.html`
+- `decision-room.html`
 - `next-steps.html`
 - `document.html`
 - `404.html`
@@ -211,6 +220,22 @@ The v1.1 package adds:
 - Action Center links from the demo, Review Pack hub, and document viewer.
 
 Use this version to run advisor review and request sandbox quotes in parallel.
+
+## v1.2 Decision Room And Readiness Upgrade
+
+The v1.2 package adds:
+
+- `decision-room.html` as an interactive sandbox readiness assessment.
+- Weighted readiness score and proceed/hold/no-go recommendation.
+- Downloadable local decision summary.
+- Sandbox readiness gates.
+- Decision brief template.
+- Decision meeting agenda.
+- Sandbox readiness checklist CSV.
+- Decision readiness sample scores CSV.
+- Decision Room links from the demo, Action Center, Review Pack, and document viewer.
+
+Use this version to turn advisor feedback and provider quotes into a clear fake-data sandbox decision.
 
 ## Next Build Step
 

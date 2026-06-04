@@ -44,7 +44,7 @@
       background: var(--surface);
       border-bottom: 1px solid var(--line);
       display: grid;
-      grid-template-columns: minmax(220px, 1fr) auto auto auto auto;
+      grid-template-columns: minmax(220px, 1fr) auto auto auto auto auto;
       align-items: center;
       gap: 12px;
       padding: 14px 24px;
@@ -504,6 +504,7 @@
         <span>First Nations Governance Commons</span>
       </div>
     </div>
+    <a class="btn primary" href="decision-room.html">Decision Room</a>
     <a class="btn primary" href="next-steps.html">Action Center</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
@@ -554,8 +555,10 @@
       { category: "Start Here", title: "Package index", path: "PACKAGE_INDEX.md", type: "markdown", description: "Recommended reading order and release rules." },
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
+      { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v1.2", path: "docs/public-demo-release-notes-v1.2.md", type: "markdown", description: "Decision Room and sandbox readiness assessment upgrade summary." },
       { category: "Release Notes", title: "Release notes v1.1", path: "docs/public-demo-release-notes-v1.1.md", type: "markdown", description: "Action Center, RFQ, and review-to-sandbox upgrade summary." },
       { category: "Release Notes", title: "Release notes v1.0", path: "docs/public-demo-release-notes-v1.0.md", type: "markdown", description: "Document viewer and portal upgrade summary." },
       { category: "Release Notes", title: "Release notes v0.9", path: "docs/public-demo-release-notes-v0.9.md", type: "markdown", description: "Review Pack hub and clean deployment upgrade summary." },
@@ -565,6 +568,10 @@
       { category: "Action Center", title: "Provider evaluation scorecard", path: "docs/provider-evaluation-scorecard-v1.1.md", type: "markdown", description: "Weighted provider/developer comparison scorecard." },
       { category: "Action Center", title: "v1.1 action board", path: "data/v1.1-action-board.csv", type: "csv", description: "Review, RFQ, governance, decision, and handoff actions." },
       { category: "Action Center", title: "Provider quote tracker", path: "data/provider-quote-tracker.csv", type: "csv", description: "Track RFQ recipients, costs, timelines, scores, risks, and next actions." },
+      { category: "Decision Room", title: "Sandbox decision brief template", path: "docs/sandbox-decision-brief-template-v1.2.md", type: "markdown", description: "Decision record template for sandbox proceed, hold, or no-go." },
+      { category: "Decision Room", title: "Decision meeting agenda", path: "docs/decision-meeting-agenda-v1.2.md", type: "markdown", description: "Agenda for deciding whether to proceed to fake-data sandbox." },
+      { category: "Decision Room", title: "Sandbox readiness checklist", path: "data/sandbox-readiness-checklist.csv", type: "csv", description: "Gate-by-gate readiness checklist for sandbox decision." },
+      { category: "Decision Room", title: "Decision readiness sample scores", path: "data/decision-readiness-sample-scores.csv", type: "csv", description: "Sample score inputs used by the Decision Room assessment." },
 
       { category: "Decision Pack", title: "Scope options and budget model", path: "docs/scope-options-and-budget-model-v0.7.md", type: "markdown", description: "MVP, pilot, and fuller build options." },
       { category: "Decision Pack", title: "RACI and decision rights", path: "docs/raci-and-decision-rights-v0.7.md", type: "markdown", description: "Ownership, consultation, and approval responsibilities." },

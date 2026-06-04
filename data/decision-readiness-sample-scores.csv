@@ -1,0 +1,8 @@
+metric,example_value,weight,notes
+advisor_responses,3,20,Minimum threshold for sandbox decision
+no_go_status,Clear,25,Automatic no-go overrides score if unresolved
+provider_quotes,2,15,Quotes or build plans requested
+provider_score,380,15,Provider scorecard weighted result
+hosting_support_clarity,4,10,0-5 score
+handover_clarity,4,10,0-5 score
+fake_data_boundary,Confirmed,5,Automatic no-go if not confirmed

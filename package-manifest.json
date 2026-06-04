@@ -1,6 +1,6 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "1.1",
+  "version": "1.2",
   "date": "2026-06-04",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
@@ -17,12 +17,14 @@
   },
   "entrypoints": [
     "index.html",
+    "decision-room.html",
     "next-steps.html",
     "docs-index.html",
     "document.html",
     "README.md",
     "PACKAGE_INDEX.md",
     "package-manifest.json",
+    "docs/public-demo-release-notes-v1.2.md",
     "docs/public-demo-release-notes-v1.1.md",
     "docs/public-demo-release-notes-v1.0.md",
     "docs/public-demo-release-notes-v0.9.md"
@@ -31,7 +33,7 @@
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v1.1.md",
+    "releaseNotes": "docs/public-demo-release-notes-v1.2.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -66,12 +68,27 @@
     "actionBoard": "data/v1.1-action-board.csv",
     "quoteTracker": "data/provider-quote-tracker.csv"
   },
+  "decisionRoom": {
+    "entrypoint": "decision-room.html",
+    "readinessGates": "docs/sandbox-readiness-gates-v1.2.md",
+    "decisionBriefTemplate": "docs/sandbox-decision-brief-template-v1.2.md",
+    "decisionMeetingAgenda": "docs/decision-meeting-agenda-v1.2.md",
+    "readinessChecklist": "data/sandbox-readiness-checklist.csv",
+    "sampleScores": "data/decision-readiness-sample-scores.csv",
+    "recommendations": [
+      "proceed_to_fake_data_sandbox",
+      "hold_and_resolve_conditions",
+      "no_go_for_now"
+    ]
+  },
   "evidenceGroups": {
     "reviewerStartHere": [
+      "decision-room.html",
       "next-steps.html",
       "docs-index.html",
       "document.html",
       "PACKAGE_INDEX.md",
+      "docs/public-demo-release-notes-v1.2.md",
       "docs/public-demo-release-notes-v1.1.md",
       "docs/public-demo-release-notes-v1.0.md",
       "docs/public-demo-release-notes-v0.9.md"
@@ -83,6 +100,13 @@
       "docs/provider-evaluation-scorecard-v1.1.md",
       "data/v1.1-action-board.csv",
       "data/provider-quote-tracker.csv"
+    ],
+    "decisionRoom": [
+      "docs/sandbox-readiness-gates-v1.2.md",
+      "docs/sandbox-decision-brief-template-v1.2.md",
+      "docs/decision-meeting-agenda-v1.2.md",
+      "data/sandbox-readiness-checklist.csv",
+      "data/decision-readiness-sample-scores.csv"
     ],
     "decisionPack": [
       "docs/decision-memo-v0.7.md",

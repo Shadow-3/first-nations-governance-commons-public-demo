@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Decision Room - First Nations Governance Commons</title>
+  <meta name="description" content="Interactive readiness assessment for deciding whether to proceed to a fake-data Decidim sandbox.">
+  <style>
+    :root {
+      --bg: #f6f7f5;
+      --surface: #ffffff;
+      --surface-2: #eef3ef;
+      --text: #1d2523;
+      --muted: #61706b;
+      --line: #d9e0dc;
+      --teal: #0d675f;
+      --teal-2: #e5f1ee;
+      --ochre: #b66a25;
+      --ochre-2: #fff2e5;
+      --green: #247654;
+      --green-2: #e7f4ed;
+      --red: #aa3d36;
+      --red-2: #fae9e7;
+      --amber: #8b691d;
+      --amber-2: #fff6d9;
+      --radius: 6px;
+      --shadow: 0 14px 36px rgba(18, 33, 29, 0.08);
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.45;
+    }
+
+    a { color: inherit; }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    .topbar {
+      min-height: 72px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) auto auto auto auto;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius);
+      background: var(--teal);
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .brand strong,
+    .brand span {
+      display: block;
+    }
+
+    .brand strong {
+      font-size: 15px;
+      line-height: 1.1;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .label {
+      width: fit-content;
+      color: var(--ochre);
+      background: var(--ochre-2);
+      border: 1px solid #f1d7b9;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .btn {
+      min-height: 38px;
+      border-radius: var(--radius);
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .btn.primary {
+      background: var(--teal);
+      color: #fff;
+      border-color: var(--teal);
+    }
+
+    main {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 28px 24px 44px;
+      display: grid;
+      gap: 22px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: end;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    h2,
+    h3 {
+      margin: 0;
+      letter-spacing: 0;
+    }
+
+    .intro p,
+    .field p,
+    .result p,
+    .gate span,
+    .note p,
+    .small {
+      color: var(--muted);
+    }
+
+    .intro p {
+      max-width: 820px;
+      margin: 12px 0 0;
+      font-size: 15px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.6fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .panel,
+    .result,
+    .gate,
+    .note {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .panel {
+      padding: 18px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .field:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .field label {
+      font-weight: 900;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .field p {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .control {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 10px;
+      align-items: center;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--teal);
+    }
+
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text);
+      padding: 10px;
+      min-height: 38px;
+    }
+
+    textarea {
+      min-height: 92px;
+      resize: vertical;
+    }
+
+    .value {
+      min-width: 54px;
+      min-height: 34px;
+      border-radius: var(--radius);
+      background: var(--teal-2);
+      color: var(--teal);
+      font-weight: 900;
+      display: grid;
+      place-items: center;
+      padding: 6px 8px;
+    }
+
+    .result {
+      padding: 18px;
+      position: sticky;
+      top: 94px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .score {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 14px;
+      align-items: center;
+    }
+
+    .score-num {
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--teal);
+      font-size: 28px;
+      font-weight: 900;
+    }
+
+    .recommendation {
+      border-radius: var(--radius);
+      padding: 12px;
+      font-weight: 900;
+    }
+
+    .recommendation.proceed {
+      color: var(--green);
+      background: var(--green-2);
+    }
+
+    .recommendation.hold {
+      color: var(--amber);
+      background: var(--amber-2);
+    }
+
+    .recommendation.nogo {
+      color: var(--red);
+      background: var(--red-2);
+    }
+
+    .progress {
+      height: 9px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+    }
+
+    .progress span {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: var(--teal);
+      transition: 180ms ease;
+    }
+
+    .gate-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .gate {
+      padding: 13px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .gate strong,
+    .gate span {
+      display: block;
+    }
+
+    .gate span {
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    .pill {
+      border-radius: 999px;
+      padding: 5px 8px;
+      font-size: 11px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .pill.good { color: var(--green); background: var(--green-2); }
+    .pill.warn { color: var(--amber); background: var(--amber-2); }
+    .pill.bad { color: var(--red); background: var(--red-2); }
+
+    .note {
+      padding: 16px;
+    }
+
+    .note p {
+      margin: 6px 0 0;
+    }
+
+    .summary {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface-2);
+      padding: 12px;
+      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+      font-size: 12px;
+      white-space: pre-wrap;
+      overflow: auto;
+      max-height: 260px;
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 12px;
+      padding-top: 8px;
+    }
+
+    @media (max-width: 1020px) {
+      .topbar,
+      .intro,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .actions {
+        justify-content: flex-start;
+      }
+
+      .result {
+        position: static;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .topbar {
+        padding: 12px 16px;
+      }
+
+      main {
+        padding: 20px 16px 34px;
+      }
+
+      .control,
+      .score,
+      .gate {
+        grid-template-columns: 1fr;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">B</div>
+      <div>
+        <strong>Barayamal</strong>
+        <span>First Nations Governance Commons</span>
+      </div>
+    </div>
+    <a class="btn primary" href="next-steps.html">Action Center</a>
+    <a class="btn" href="index.html">Open Demo</a>
+    <a class="btn" href="docs-index.html">Review Pack</a>
+    <div class="label">Public demo - fake data only</div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <h1>Decision Room</h1>
+        <p>Use this interactive readiness assessment to decide whether the project is ready for a fake-data Decidim sandbox. It produces a local-only recommendation and downloadable decision summary. Do not enter real community records or sensitive information.</p>
+      </div>
+      <div class="actions">
+        <button class="btn primary" id="downloadSummary" type="button">Download Summary</button>
+        <a class="btn" href="document.html?file=docs%2Fsandbox-readiness-gates-v1.2.md">Read Gates</a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="panel" aria-label="Readiness assessment controls">
+        <div class="field">
+          <label for="advisorResponses">Advisor responses logged <span class="value" id="advisorValue">3</span></label>
+          <div class="control">
+            <input id="advisorResponses" type="range" min="0" max="8" value="3">
+            <span class="small">Minimum: 3</span>
+          </div>
+          <p>Use the advisor review tracker and synthesis template before relying on this score.</p>
+        </div>
+
+        <div class="field">
+          <label for="noGoStatus">Automatic no-go status</label>
+          <select id="noGoStatus">
+            <option value="clear">No automatic no-go item unresolved</option>
+            <option value="conditions">Some conditions need resolution</option>
+            <option value="blocked">Automatic no-go unresolved</option>
+          </select>
+          <p>Any unresolved automatic no-go should block a sandbox decision.</p>
+        </div>
+
+        <div class="field">
+          <label for="fakeDataBoundary">Fake-data boundary</label>
+          <select id="fakeDataBoundary">
+            <option value="confirmed">Confirmed: fake/sample data only</option>
+            <option value="unclear">Unclear or not yet accepted</option>
+            <option value="breached">Breached or real data proposed</option>
+          </select>
+          <p>The public demo and sandbox must not include real community data or cultural material.</p>
+        </div>
+
+        <div class="field">
+          <label for="providerQuotes">Provider/developer quotes requested <span class="value" id="quoteValue">2</span></label>
+          <div class="control">
+            <input id="providerQuotes" type="range" min="0" max="5" value="2">
+            <span class="small">Target: 2-3</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="providerScore">Best provider score <span class="value" id="providerValue">380</span></label>
+          <div class="control">
+            <input id="providerScore" type="range" min="0" max="500" step="10" value="380">
+            <span class="small">Scorecard max: 500</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="hostingClarity">Hosting/support clarity <span class="value" id="hostingValue">4</span></label>
+          <div class="control">
+            <input id="hostingClarity" type="range" min="0" max="5" value="4">
+            <span class="small">0-5</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="handoverClarity">Admin handover clarity <span class="value" id="handoverValue">4</span></label>
+          <div class="control">
+            <input id="handoverClarity" type="range" min="0" max="5" value="4">
+            <span class="small">0-5</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="decisionNotes">Decision notes</label>
+          <textarea id="decisionNotes" placeholder="Optional local-only notes for the downloadable summary. Do not enter sensitive or real community data."></textarea>
+        </div>
+      </div>
+
+      <aside class="result" aria-label="Readiness result">
+        <div class="score">
+          <div class="score-num" id="scoreNum">0</div>
+          <div>
+            <h2>Readiness Score</h2>
+            <p id="scoreText">Calculating assessment.</p>
+          </div>
+        </div>
+        <div class="progress"><span id="scoreBar"></span></div>
+        <div class="recommendation hold" id="recommendation">Calculating recommendation</div>
+        <div class="gate-list" id="gateList"></div>
+        <div class="note">
+          <strong>Decision boundary</strong>
+          <p>This tool can only support a fake-data sandbox decision. It does not approve a real pilot, real member verification, real voting, or real cultural/community data handling.</p>
+        </div>
+        <div class="summary" id="summary"></div>
+      </aside>
+    </section>
+
+    <footer>
+      Version v1.2. Initial developer/custodian: Barayamal / Dean Foley.
+    </footer>
+  </main>
+
+  <script>
+    const inputs = {
+      advisorResponses: document.getElementById("advisorResponses"),
+      noGoStatus: document.getElementById("noGoStatus"),
+      fakeDataBoundary: document.getElementById("fakeDataBoundary"),
+      providerQuotes: document.getElementById("providerQuotes"),
+      providerScore: document.getElementById("providerScore"),
+      hostingClarity: document.getElementById("hostingClarity"),
+      handoverClarity: document.getElementById("handoverClarity"),
+      decisionNotes: document.getElementById("decisionNotes")
+    };
+
+    const output = {
+      advisorValue: document.getElementById("advisorValue"),
+      quoteValue: document.getElementById("quoteValue"),
+      providerValue: document.getElementById("providerValue"),
+      hostingValue: document.getElementById("hostingValue"),
+      handoverValue: document.getElementById("handoverValue"),
+      scoreNum: document.getElementById("scoreNum"),
+      scoreText: document.getElementById("scoreText"),
+      scoreBar: document.getElementById("scoreBar"),
+      recommendation: document.getElementById("recommendation"),
+      gateList: document.getElementById("gateList"),
+      summary: document.getElementById("summary")
+    };
+
+    function clamp(value, min, max) {
+      return Math.max(min, Math.min(max, value));
+    }
+
+    function gate(label, detail, state) {
+      const tone = state === "Clear" ? "good" : state === "Blocked" ? "bad" : "warn";
+      return { label, detail, state, tone };
+    }
+
+    function calculate() {
+      const advisorResponses = Number(inputs.advisorResponses.value);
+      const providerQuotes = Number(inputs.providerQuotes.value);
+      const providerScore = Number(inputs.providerScore.value);
+      const hostingClarity = Number(inputs.hostingClarity.value);
+      const handoverClarity = Number(inputs.handoverClarity.value);
+      const noGoStatus = inputs.noGoStatus.value;
+      const fakeDataBoundary = inputs.fakeDataBoundary.value;
+
+      output.advisorValue.textContent = advisorResponses;
+      output.quoteValue.textContent = providerQuotes;
+      output.providerValue.textContent = providerScore;
+      output.hostingValue.textContent = hostingClarity;
+      output.handoverValue.textContent = handoverClarity;
+
+      const advisorScore = clamp(advisorResponses / 3, 0, 1) * 20;
+      const noGoScore = noGoStatus === "clear" ? 25 : noGoStatus === "conditions" ? 10 : 0;
+      const boundaryScore = fakeDataBoundary === "confirmed" ? 5 : 0;
+      const quoteScore = clamp(providerQuotes / 2, 0, 1) * 15;
+      const providerScoreWeighted = clamp(providerScore / 400, 0, 1) * 15;
+      const hostingScore = clamp(hostingClarity / 4, 0, 1) * 10;
+      const handoverScore = clamp(handoverClarity / 4, 0, 1) * 10;
+
+      const total = Math.round(advisorScore + noGoScore + boundaryScore + quoteScore + providerScoreWeighted + hostingScore + handoverScore);
+      const autoBlocked = noGoStatus === "blocked" || fakeDataBoundary !== "confirmed";
+
+      let recommendation = "Hold and resolve conditions";
+      let recommendationClass = "hold";
+      if (autoBlocked) {
+        recommendation = "No-go for now";
+        recommendationClass = "nogo";
+      } else if (total >= 80 && advisorResponses >= 3 && providerQuotes >= 1) {
+        recommendation = "Proceed to fake-data sandbox";
+        recommendationClass = "proceed";
+      }
+
+      const gates = [
+        gate("Advisor review", advisorResponses >= 3 ? `${advisorResponses} responses logged` : `${advisorResponses} responses logged; minimum is 3`, advisorResponses >= 3 ? "Clear" : "Condition"),
+        gate("No-go status", noGoStatus === "clear" ? "No automatic no-go unresolved" : noGoStatus === "conditions" ? "Conditions still need resolution" : "Automatic no-go unresolved", noGoStatus === "clear" ? "Clear" : noGoStatus === "conditions" ? "Condition" : "Blocked"),
+        gate("Fake-data boundary", fakeDataBoundary === "confirmed" ? "Fake/sample data only confirmed" : fakeDataBoundary === "unclear" ? "Boundary unclear" : "Boundary breached or real data proposed", fakeDataBoundary === "confirmed" ? "Clear" : "Blocked"),
+        gate("Provider readiness", providerQuotes >= 2 ? `${providerQuotes} quotes/build plans requested` : `${providerQuotes} quotes/build plans requested; target is 2-3`, providerQuotes >= 2 ? "Clear" : "Condition"),
+        gate("Provider score", providerScore >= 300 ? `${providerScore}/500 is usable for comparison` : `${providerScore}/500 needs review`, providerScore >= 300 ? "Clear" : "Condition"),
+        gate("Hosting and handover", hostingClarity >= 4 && handoverClarity >= 4 ? "Hosting/support and handover are clear" : "Hosting/support or handover needs more detail", hostingClarity >= 4 && handoverClarity >= 4 ? "Clear" : "Condition")
+      ];
+
+      output.scoreNum.textContent = total;
+      output.scoreText.textContent = autoBlocked ? "Automatic block triggered." : "Weighted score for fake-data sandbox readiness.";
+      output.scoreBar.style.width = `${total}%`;
+      output.recommendation.textContent = recommendation;
+      output.recommendation.className = `recommendation ${recommendationClass}`;
+      output.gateList.innerHTML = gates.map(item => `
+        <div class="gate">
+          <div>
+            <strong>${item.label}</strong>
+            <span>${item.detail}</span>
+          </div>
+          <span class="pill ${item.tone}">${item.state}</span>
+        </div>
+      `).join("");
+
+      output.summary.textContent = makeSummary({ total, recommendation, advisorResponses, noGoStatus, fakeDataBoundary, providerQuotes, providerScore, hostingClarity, handoverClarity, notes: inputs.decisionNotes.value });
+    }
+
+    function makeSummary(data) {
+      return `# Sandbox Decision Room Summary
+
+Date: ${new Date().toISOString().slice(0, 10)}
+Project: First Nations Governance Commons
+Mode: fake-data Decidim sandbox decision support
+
+## Recommendation
+
+${data.recommendation}
+
+## Readiness Score
+
+${data.total}/100
+
+## Inputs
+
+- Advisor responses logged: ${data.advisorResponses}
+- No-go status: ${data.noGoStatus}
+- Fake-data boundary: ${data.fakeDataBoundary}
+- Provider/developer quotes requested: ${data.providerQuotes}
+- Best provider score: ${data.providerScore}/500
+- Hosting/support clarity: ${data.hostingClarity}/5
+- Admin handover clarity: ${data.handoverClarity}/5
+
+## Notes
+
+${data.notes || "No local notes entered."}
+
+## Safety Boundary
+
+This summary can only support a fake-data sandbox decision. It does not approve a real pilot or real community data use.
+`;
+    }
+
+    function downloadSummary() {
+      const blob = new Blob([output.summary.textContent], { type: "text/markdown" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "sandbox-decision-room-summary.md";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    Object.values(inputs).forEach(input => input.addEventListener("input", calculate));
+    document.getElementById("downloadSummary").addEventListener("click", downloadSummary);
+    calculate();
+  </script>
+</body>
+</html>

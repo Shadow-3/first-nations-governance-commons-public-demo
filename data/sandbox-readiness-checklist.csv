@@ -1,0 +1,9 @@
+gate_id,gate,minimum_condition,status,owner,notes
+G-001,Advisor review,At least 3 advisor responses logged,Open,Barayamal,Use advisor review tracker
+G-002,Advisor review,Advisor synthesis completed,Open,Barayamal,Use advisor synthesis template
+G-003,No-go status,No automatic no-go item unresolved,Open,Barayamal,Review go/no-go scorecard
+G-004,Data boundary,Sandbox confirmed fake/sample data only,Required,Barayamal,No real community records
+G-005,Provider readiness,Provider scope cost timeline hosting support and handover documented,Open,Barayamal,Use provider quote tracker
+G-006,Provider readiness,Provider/developer acceptance test path clear,Open,Provider/developer,Use acceptance test plan
+G-007,Governance,Real pilot governance remains blocked/separate,Required,Community authority,Real pilot needs separate approvals
+G-008,Decision record,Decision owner next action and next review date recorded,Open,Barayamal,Use decision brief template
