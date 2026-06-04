@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v1.6  
+Version: v1.7  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -27,7 +27,10 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 17. `data/decidim-admin-config-map-v1.6.csv` - v1.6 Decidim admin config map.
 18. `data/decidim-component-map-v1.3.csv` - demo-to-Decidim component map.
 19. `data/sandbox-qa-scenarios-v1.6.csv` - v1.6 QA scenarios.
-20. `docs/public-demo-release-notes-v1.6.md` - v1.6 release summary.
+20. `docs/github-sprint-launch-report-v1.7.md` - live GitHub sprint setup report.
+21. `data/github-sprint-live-issue-map-v1.7.csv` - live issue URL map.
+22. `data/github-sprint-label-map-v1.7.csv` - label and status map.
+23. `docs/public-demo-release-notes-v1.7.md` - v1.7 release summary.
 
 ## Recommended Reading Order
 
@@ -119,17 +122,20 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 
 1. `sprint-room.html`
 2. `ops-room.html`
-3. `docs/sandbox-ops-runbook-v1.6.md`
-4. `data/sandbox-ops-checklist-v1.6.csv`
-5. `docs/sandbox-sprint-kickoff-v1.5.md`
-6. `data/sandbox-sprint-issues-v1.5.csv`
-7. `docs/github-issue-pack-v1.5.md`
-8. `data/issue-import-manifest-v1.5.json`
-9. `docs/sprint-acceptance-and-evidence-plan-v1.5.md`
-10. `data/sprint-evidence-log-v1.5.csv`
-11. `data/sprint-raci-v1.5.csv`
-12. `build-room.html`
-13. `contributor-room.html`
+3. `docs/github-sprint-launch-report-v1.7.md`
+4. `data/github-sprint-live-issue-map-v1.7.csv`
+5. `data/github-sprint-label-map-v1.7.csv`
+6. `docs/sandbox-ops-runbook-v1.6.md`
+7. `data/sandbox-ops-checklist-v1.6.csv`
+8. `docs/sandbox-sprint-kickoff-v1.5.md`
+9. `data/sandbox-sprint-issues-v1.5.csv`
+10. `docs/github-issue-pack-v1.5.md`
+11. `data/issue-import-manifest-v1.5.json`
+12. `docs/sprint-acceptance-and-evidence-plan-v1.5.md`
+13. `data/sprint-evidence-log-v1.5.csv`
+14. `data/sprint-raci-v1.5.csv`
+15. `build-room.html`
+16. `contributor-room.html`
 
 ### For Ops Team
 
@@ -183,6 +189,8 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 - `data/sandbox-qa-scenarios-v1.6.csv`
 - `data/ops-risk-register-v1.6.csv`
 - `data/ops-readiness-manifest-v1.6.json`
+- `data/github-sprint-live-issue-map-v1.7.csv`
+- `data/github-sprint-label-map-v1.7.csv`
 - `data/sandbox-task-board.csv`
 - `data/decision-log-template.csv`
 
@@ -194,6 +202,7 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 - `contributor-room.html` is the public Contributor Room for open-source maintainership and contribution intake.
 - `sprint-room.html` is the public Sprint Room for the first fake-data Decidim sandbox sprint.
 - `ops-room.html` is the public Ops Room for run-day configuration, QA, evidence, risk, handover, and go/no-go controls.
+- `docs/github-sprint-launch-report-v1.7.md` records the live GitHub issues, milestone, labels, and Projects blocker.
 - `docs-index.html` is the public reviewer hub.
 - `document.html` renders Markdown, CSV, and JSON files from a whitelisted package catalog.
 - `404.html` gives visitors a clean recovery page.

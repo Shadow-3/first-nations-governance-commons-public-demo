@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v1.6
+Current package version: v1.7
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -66,6 +66,8 @@ The demo shows:
 - `docs/public-demo-release-notes-v1.4.md`
 - `docs/public-demo-release-notes-v1.5.md`
 - `docs/public-demo-release-notes-v1.6.md`
+- `docs/public-demo-release-notes-v1.7.md`
+- `docs/github-sprint-launch-report-v1.7.md`
 - `docs/sandbox-ops-runbook-v1.6.md`
 - `docs/decidim-admin-configuration-checklist-v1.6.md`
 - `docs/sandbox-qa-scenario-pack-v1.6.md`
@@ -126,6 +128,8 @@ The demo shows:
 - `data/sandbox-qa-scenarios-v1.6.csv`
 - `data/ops-risk-register-v1.6.csv`
 - `data/ops-readiness-manifest-v1.6.json`
+- `data/github-sprint-live-issue-map-v1.7.csv`
+- `data/github-sprint-label-map-v1.7.csv`
 - `data/sandbox-task-board.csv`
 - `data/decision-log-template.csv`
 - `PACKAGE_INDEX.md`
@@ -368,9 +372,25 @@ The v1.6 package adds:
 
 Use this version after opening the first sprint issues. Ops Room turns the board into a practical operating sequence for admin configuration, QA evidence, safety stop conditions, risk ownership, handover, and fake-data sandbox readiness.
 
+## v1.7 GitHub Sprint Launch Setup
+
+The v1.7 package records live GitHub sprint setup:
+
+- First 12 GitHub issues created.
+- Sprint milestone created.
+- Domain labels created.
+- Status labels created.
+- S-001 marked `status:blocked` because native GitHub Projects board creation needs additional token scope.
+- S-002 through S-012 marked `status:ready`.
+- GitHub sprint launch report.
+- Live issue map CSV.
+- Label map CSV.
+
+Use this version to work from the live GitHub issues and milestone. The fallback board is the milestone plus status labels until native GitHub Projects access is available.
+
 ## Next Build Step
 
-Use the Contributor Room, Builder Room, Sprint Room, and Ops Room to configure and operate a fake-data Decidim sandbox:
+Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, and Ops Room to configure and operate a fake-data Decidim sandbox:
 
 - One organisation.
 - One public assembly.

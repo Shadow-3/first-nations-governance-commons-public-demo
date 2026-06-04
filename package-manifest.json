@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "1.6",
+  "version": "1.7",
   "date": "2026-06-04",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use the Contributor Room to run the open-source repository model, the Decision Room to confirm proceed/hold/no-go status, the Builder Room as the implementation handoff, the Sprint Room to open the first fake-data Decidim sandbox issues, and the Ops Room to run admin configuration, QA evidence, risk, handover, and operating go/no-go controls.",
+  "recommendedDecision": "Use the live GitHub sprint issues and milestone to start the fake-data Decidim sandbox sprint, Sprint Room for issue intent, Ops Room for run-day controls, and Decision Room for go/hold/no-go status. Native GitHub Projects board creation remains blocked until project scopes are added.",
   "localDecidimStatus": {
     "ruby": "not_installed",
     "rubygems": "not_installed",
@@ -34,6 +34,7 @@
     "SUPPORT.md",
     "PACKAGE_INDEX.md",
     "package-manifest.json",
+    "docs/public-demo-release-notes-v1.7.md",
     "docs/public-demo-release-notes-v1.6.md",
     "docs/public-demo-release-notes-v1.5.md",
     "docs/public-demo-release-notes-v1.4.md",
@@ -47,7 +48,7 @@
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v1.6.md",
+    "releaseNotes": "docs/public-demo-release-notes-v1.7.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -175,6 +176,7 @@
       "PACKAGE_INDEX.md",
       "docs/public-demo-release-notes-v1.5.md",
       "docs/public-demo-release-notes-v1.6.md",
+      "docs/public-demo-release-notes-v1.7.md",
       "docs/public-demo-release-notes-v1.4.md",
       "docs/public-demo-release-notes-v1.3.md",
       "docs/public-demo-release-notes-v1.2.md",
@@ -235,7 +237,10 @@
       "data/sandbox-sprint-issues-v1.5.csv",
       "data/sprint-evidence-log-v1.5.csv",
       "data/sprint-raci-v1.5.csv",
-      "data/issue-import-manifest-v1.5.json"
+      "data/issue-import-manifest-v1.5.json",
+      "data/github-sprint-label-map-v1.7.csv",
+      "data/github-sprint-live-issue-map-v1.7.csv",
+      "docs/github-sprint-launch-report-v1.7.md"
     ],
     "decisionPack": [
       "docs/decision-memo-v0.7.md",
@@ -315,6 +320,11 @@
       "data/sandbox-qa-scenarios-v1.6.csv",
       "data/ops-risk-register-v1.6.csv",
       "data/ops-readiness-manifest-v1.6.json"
+    ],
+    "githubSprintLaunch": [
+      "docs/github-sprint-launch-report-v1.7.md",
+      "data/github-sprint-live-issue-map-v1.7.csv",
+      "data/github-sprint-label-map-v1.7.csv"
     ]
   },
   "safetyRules": [
@@ -347,5 +357,18 @@
     "adminConfigRows": 14,
     "qaScenarioCount": 12,
     "riskRows": 10
+  },
+  "githubSprintLaunch": {
+    "milestone": "First fake-data Decidim sandbox sprint",
+    "milestoneUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo/milestone/1",
+    "openIssuesUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo/issues?q=is%3Aissue%20milestone%3A%22First%20fake-data%20Decidim%20sandbox%20sprint%22",
+    "launchReport": "docs/github-sprint-launch-report-v1.7.md",
+    "issueMap": "data/github-sprint-live-issue-map-v1.7.csv",
+    "labelMap": "data/github-sprint-label-map-v1.7.csv",
+    "issueCount": 12,
+    "createdDomainLabels": 10,
+    "createdStatusLabels": 5,
+    "nativeProjectStatus": "blocked_missing_project_scope",
+    "fallbackBoard": "milestone_plus_status_labels"
   }
 }

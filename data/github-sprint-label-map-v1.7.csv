@@ -1,0 +1,16 @@
+label,color,purpose
+sandbox,0d675f,Fake-data Decidim sandbox work
+fake-data,b66a25,Must use fake/sample data only
+governance,5319e7,Governance model or authority boundary
+decidim-config,0075ca,Decidim configuration or admin setup
+safety,aa3d36,Safety privacy data or cultural boundary
+accessibility,7057ff,Accessibility review or remediation
+mobile,1d76db,Mobile viewport and responsive behavior
+handover,8b691d,Admin handover support evidence or limitations
+ops,247654,Run-day Ops Room checks and readiness gates
+qa,2e7d32,QA scenario or acceptance evidence
+status:ready,c2e0c6,Ready to start
+status:in-progress,fbca04,Currently being worked on
+status:review,bfdadc,Ready for review or evidence check
+status:blocked,d73a4a,Blocked until dependency or permission is resolved
+status:done,0e8a16,Completed
