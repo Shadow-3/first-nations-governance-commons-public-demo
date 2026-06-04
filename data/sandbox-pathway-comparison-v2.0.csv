@@ -1,0 +1,6 @@
+pathway_id,pathway,recommended_status,best_for,timeline,cost_level,technical_risk,governance_risk,required_proof
+P-001,Provider-assisted sandbox,Recommended now,Fast controlled fake-data sandbox with Decidim capability,1-3 weeks after scope and access,Medium to high,Lower,Medium,"Signed quote, access plan, fake-data boundary, admin handover path, output map evidence"
+P-002,Barayamal developer self-build,Hold,Maximum learning and public maintainership,2-5 weeks after environment setup,Lower cash higher setup time,Higher,Medium,"Working local Decidim app, version pins, seeded fake data, screenshots, backups, handover evidence"
+P-003,Partner-hosted sandbox,Possible,Trusted partner infrastructure or Decidim support,2-4 weeks after partner agreement,Medium,Medium,Higher,"Partner role note, hosting owner, admin access record, privacy review, assurance sign-off"
+P-004,Static-only hold,Fallback,Reviewing concept while funding hosting or authority is unresolved,Immediate,Lowest,Lowest,Lowest,"Advisor feedback, Decision Room outcome, v1.9 assurance memo, dated no-build decision"
+

@@ -1,0 +1,916 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sandbox Launcher - First Nations Governance Commons</title>
+  <meta name="description" content="Launch console for moving from the public demo to a fake-data Decidim sandbox.">
+  <style>
+    :root {
+      --bg: #f6f7f5;
+      --surface: #ffffff;
+      --surface-2: #eef3ef;
+      --text: #1d2523;
+      --muted: #61706b;
+      --line: #d9e0dc;
+      --teal: #0d675f;
+      --teal-2: #e5f1ee;
+      --ochre: #b66a25;
+      --ochre-2: #fff2e5;
+      --green: #247654;
+      --green-2: #e7f4ed;
+      --red: #aa3d36;
+      --red-2: #fae9e7;
+      --amber: #8b691d;
+      --amber-2: #fff6d9;
+      --blue: #205d9b;
+      --blue-2: #e7f0fa;
+      --radius: 6px;
+      --shadow: 0 14px 36px rgba(18, 33, 29, 0.08);
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.45;
+    }
+
+    a { color: inherit; }
+    button,
+    select { font: inherit; }
+
+    .topbar {
+      min-height: 72px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .brand {
+      display: flex;
+      flex: 1 1 220px;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius);
+      background: var(--teal);
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .brand strong,
+    .brand span {
+      display: block;
+    }
+
+    .brand strong {
+      font-size: 15px;
+      line-height: 1.1;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .label {
+      width: fit-content;
+      color: var(--ochre);
+      background: var(--ochre-2);
+      border: 1px solid #f1d7b9;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .btn,
+    .filter {
+      min-height: 38px;
+      border-radius: var(--radius);
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .btn.primary,
+    .filter.is-active {
+      background: var(--teal);
+      color: #fff;
+      border-color: var(--teal);
+    }
+
+    .topbar .btn,
+    .topbar .label {
+      flex: 0 0 auto;
+    }
+
+    main {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 28px 24px 44px;
+      display: grid;
+      gap: 22px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: end;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    h2,
+    h3 {
+      margin: 0;
+      letter-spacing: 0;
+    }
+
+    .intro p,
+    .metric span,
+    .pathway-card span,
+    .check-card p,
+    .output-card span,
+    .resource span,
+    .summary,
+    .env-card span {
+      color: var(--muted);
+    }
+
+    .intro p {
+      max-width: 920px;
+      margin: 12px 0 0;
+      font-size: 15px;
+    }
+
+    .actions,
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .metric,
+    .panel,
+    .pathway-card,
+    .check-card,
+    .output-card,
+    .env-card,
+    .resource {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .metric {
+      min-height: 112px;
+      padding: 16px;
+      display: grid;
+      align-content: space-between;
+      gap: 10px;
+    }
+
+    .metric strong {
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .metric span {
+      font-size: 13px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .section-head h2 {
+      font-size: 22px;
+      line-height: 1.1;
+    }
+
+    .section-head p {
+      margin: 6px 0 0;
+    }
+
+    .launcher-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .pathway-grid,
+    .check-grid,
+    .output-grid,
+    .env-grid,
+    .resource-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .pathway-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .check-grid,
+    .output-grid,
+    .resource-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .env-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .pathway-card,
+    .check-card,
+    .output-card,
+    .env-card,
+    .resource,
+    .panel {
+      padding: 16px;
+    }
+
+    .pathway-card {
+      display: grid;
+      gap: 14px;
+      min-height: 252px;
+    }
+
+    .pathway-card.is-selected {
+      border-color: var(--teal);
+      background: linear-gradient(0deg, var(--teal-2), #fff 58%);
+    }
+
+    .pathway-top,
+    .check-top,
+    .output-top,
+    .env-top {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .pathway-card h3,
+    .check-card h3,
+    .output-card h3,
+    .env-card h3 {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    .pathway-card p,
+    .check-card p,
+    .output-card p,
+    .env-card p {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .pill {
+      width: fit-content;
+      border-radius: 999px;
+      padding: 6px 9px;
+      font-size: 11px;
+      font-weight: 900;
+      white-space: nowrap;
+      border: 1px solid transparent;
+    }
+
+    .pill.ready {
+      background: var(--green-2);
+      color: var(--green);
+      border-color: #b9dec8;
+    }
+
+    .pill.hold {
+      background: var(--amber-2);
+      color: var(--amber);
+      border-color: #ead99b;
+    }
+
+    .pill.blocked,
+    .pill.no-go {
+      background: var(--red-2);
+      color: var(--red);
+      border-color: #efc2bd;
+    }
+
+    .pill.info {
+      background: var(--blue-2);
+      color: var(--blue);
+      border-color: #c7d9ee;
+    }
+
+    .kv {
+      display: grid;
+      grid-template-columns: 100px minmax(0, 1fr);
+      gap: 8px;
+      font-size: 13px;
+    }
+
+    .kv strong {
+      color: var(--muted);
+    }
+
+    .panel {
+      display: grid;
+      gap: 16px;
+      position: sticky;
+      top: 94px;
+    }
+
+    .panel h2 {
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .status-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 900;
+      color: var(--muted);
+    }
+
+    select {
+      min-height: 38px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      color: var(--text);
+      padding: 7px 9px;
+      width: 100%;
+    }
+
+    .memo {
+      min-height: 260px;
+      white-space: pre-wrap;
+      overflow: auto;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: #fbfcfb;
+      padding: 14px;
+      color: var(--text);
+      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .resource {
+      display: grid;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .resource strong,
+    .resource span {
+      display: block;
+    }
+
+    .resource span {
+      font-size: 13px;
+    }
+
+    .note {
+      padding: 18px;
+      border-radius: var(--radius);
+      border: 1px solid #f1d7b9;
+      background: var(--ochre-2);
+    }
+
+    .note p {
+      margin: 6px 0 0;
+      color: var(--muted);
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 13px;
+      padding: 8px 0 0;
+    }
+
+    @media (max-width: 1040px) {
+      .intro,
+      .launcher-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .panel {
+        position: static;
+      }
+
+      .metrics,
+      .pathway-grid,
+      .check-grid,
+      .output-grid,
+      .env-grid,
+      .resource-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 680px) {
+      .topbar {
+        position: static;
+        padding: 12px;
+      }
+
+      main {
+        padding: 22px 12px 34px;
+      }
+
+      .metrics,
+      .pathway-grid,
+      .check-grid,
+      .output-grid,
+      .env-grid,
+      .resource-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head,
+      .pathway-top,
+      .check-top,
+      .output-top,
+      .env-top {
+        display: grid;
+      }
+
+      .kv {
+        grid-template-columns: 1fr;
+      }
+
+      .btn,
+      .filter {
+        white-space: normal;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">B</div>
+      <div>
+        <strong>Barayamal</strong>
+        <span>First Nations Governance Commons</span>
+      </div>
+    </div>
+    <a class="btn primary" href="decision-room.html">Decision Room</a>
+    <a class="btn primary" href="build-room.html">Builder Room</a>
+    <a class="btn primary" href="contributor-room.html">Contributor Room</a>
+    <a class="btn primary" href="sprint-room.html">Sprint Room</a>
+    <a class="btn primary" href="ops-room.html">Ops Room</a>
+    <a class="btn primary" href="delivery-room.html">Delivery Room</a>
+    <a class="btn primary" href="assurance-room.html">Assurance Room</a>
+    <a class="btn primary" href="sandbox-launcher.html">Sandbox Launcher</a>
+    <a class="btn" href="next-steps.html">Action Center</a>
+    <a class="btn" href="index.html">Open Demo</a>
+    <a class="btn" href="docs-index.html">Review Pack</a>
+    <span class="label">Fake/sample data only</span>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <h1>Sandbox Launcher</h1>
+        <p>Move from the public v2.0 package into a controlled fake-data Decidim sandbox build. The launcher compares build pathways, records environment readiness, maps Decidim setup outputs, and generates a local launch brief without using real community data.</p>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="assurance-room.html">Open Assurance Room</a>
+        <button class="btn" id="downloadBrief" type="button">Download Launch Brief</button>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Sandbox launcher metrics">
+      <div class="metric"><strong>4</strong><span>launch pathways compared for the fake-data sandbox.</span></div>
+      <div class="metric"><strong id="readyMetric">3</strong><span>readiness checks currently ready.</span></div>
+      <div class="metric"><strong id="holdMetric">9</strong><span>checks on hold until environment, access, or evidence exists.</span></div>
+      <div class="metric"><strong id="blockedMetric">2</strong><span>blocked checks that stop a self-build today.</span></div>
+    </section>
+
+    <section class="launcher-grid">
+      <div>
+        <div class="section-head">
+          <div>
+            <h2>Launch Pathways</h2>
+            <p class="summary">Select the build path that matches capability, budget, risk, and timing.</p>
+          </div>
+        </div>
+        <div class="pathway-grid" id="pathwayGrid"></div>
+      </div>
+
+      <aside class="panel">
+        <div class="status-row">
+          <span class="pill hold" id="pathwayStatus">Recommended now</span>
+          <span class="pill info" id="pathwayMode">Provider-assisted</span>
+        </div>
+        <h2 id="pathwayTitle">Use a provider-assisted fake-data sandbox build</h2>
+        <p class="summary" id="pathwaySummary"></p>
+        <div class="kv"><strong>Why</strong><span id="pathwayWhy"></span></div>
+        <div class="kv"><strong>Next proof</strong><span id="pathwayProof"></span></div>
+      </aside>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Current Environment Snapshot</h2>
+          <p class="summary">Local checks from this workspace, aligned with the official Decidim install pathway.</p>
+        </div>
+      </div>
+      <div class="env-grid" id="environmentGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Launch Readiness Checks</h2>
+          <p class="summary">Filter the checks by workstream and update status for the launch brief.</p>
+        </div>
+        <div class="filters">
+          <button class="filter is-active" data-filter="All">All</button>
+          <button class="filter" data-filter="Environment">Environment</button>
+          <button class="filter" data-filter="Access">Access</button>
+          <button class="filter" data-filter="Decidim setup">Decidim Setup</button>
+          <button class="filter" data-filter="Safety">Safety</button>
+          <button class="filter" data-filter="Handover">Handover</button>
+        </div>
+      </div>
+      <div class="check-grid" id="checkGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Decidim Setup Outputs</h2>
+          <p class="summary">The first sandbox build should produce these fake-data configuration outputs.</p>
+        </div>
+      </div>
+      <div class="output-grid" id="outputGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Launch Resources</h2>
+          <p class="summary">Open the v2.0 files through the document viewer.</p>
+        </div>
+      </div>
+      <div class="resource-grid">
+        <a class="resource" href="document.html?file=docs%2Fsandbox-launch-playbook-v2.0.md"><strong>Sandbox launch playbook</strong><span>Pathway decision, launch sequence, evidence rules, and no-go conditions.</span></a>
+        <a class="resource" href="document.html?file=docs%2Fdecidim-environment-options-v2.0.md"><strong>Environment options</strong><span>Provider-assisted, partner-hosted, self-build, and hold-only pathways.</span></a>
+        <a class="resource" href="document.html?file=data%2Fsandbox-launch-checklist-v2.0.csv"><strong>Launch checklist</strong><span>Readiness checks with owners, evidence, and stop conditions.</span></a>
+        <a class="resource" href="document.html?file=data%2Fsandbox-pathway-comparison-v2.0.csv"><strong>Pathway comparison</strong><span>Cost, risk, timing, owner, and recommended use cases.</span></a>
+        <a class="resource" href="document.html?file=data%2Fdecidim-sandbox-output-map-v2.0.csv"><strong>Output map</strong><span>Decidim organisation, assembly, process, components, evidence, and owners.</span></a>
+        <a class="resource" href="document.html?file=data%2Fsandbox-launch-readiness-v2.0.json"><strong>Readiness snapshot</strong><span>Machine-readable environment status, blockers, and source anchors.</span></a>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Generated Launch Brief</h2>
+          <p class="summary">Local-only brief generated from the selected pathway, current checks, and output map.</p>
+        </div>
+      </div>
+      <div class="memo" id="launchBrief"></div>
+    </section>
+
+    <section class="note">
+      <strong>Launch boundary</strong>
+      <p>The next build is still a fake-data sandbox. It must not contain real community records, member lists, cultural material, eligibility data, real votes, private contact records, or real decision outcomes.</p>
+    </section>
+
+    <footer>
+      Version v2.0. Initial developer/custodian: Barayamal / Dean Foley.
+    </footer>
+  </main>
+
+  <script>
+    const pathways = [
+      {
+        id: "provider",
+        name: "Provider-assisted sandbox",
+        mode: "Provider-assisted",
+        status: "Recommended now",
+        bestFor: "Fastest controlled fake-data sandbox with external Decidim capability.",
+        timeline: "1-3 weeks after scope and access",
+        cost: "Medium to high",
+        risk: "Lower technical setup risk",
+        why: "The current machine is missing Ruby, Bundler, PostgreSQL, Docker, and GitHub project scope, so a Decidim-capable provider can reduce setup delay.",
+        proof: "Signed quote, access plan, fake-data boundary, admin handover path, and v2.0 output map acceptance evidence."
+      },
+      {
+        id: "barayamal",
+        name: "Barayamal developer self-build",
+        mode: "Self-build",
+        status: "Hold",
+        bestFor: "Maximum learning, public maintainership, and lower cash cost if local environment is prepared.",
+        timeline: "2-5 weeks after environment setup",
+        cost: "Lower cash, higher setup time",
+        risk: "Higher environment and operations risk",
+        why: "This path needs Ruby/Bundler, PostgreSQL, compatible Node, image tools, SMTP, backup, and deployment support before Decidim can be installed reliably.",
+        proof: "Working local Decidim app, documented version pins, seeded fake data, screenshots, backups, and handover evidence."
+      },
+      {
+        id: "partner",
+        name: "Partner-hosted sandbox",
+        mode: "Partner-hosted",
+        status: "Possible",
+        bestFor: "Trusted partner support where hosting, admin, and review capacity can be shared.",
+        timeline: "2-4 weeks after partner agreement",
+        cost: "Medium",
+        risk: "Medium governance and support risk",
+        why: "A partner can provide infrastructure, but role boundaries, admin control, data rules, and public language need extra sign-off.",
+        proof: "Partner role note, hosting owner, admin access record, privacy review, and assurance sign-off."
+      },
+      {
+        id: "hold",
+        name: "Static-only hold",
+        mode: "Hold",
+        status: "Fallback",
+        bestFor: "Reviewing the concept while build funding, hosting, or authority is unresolved.",
+        timeline: "Immediate",
+        cost: "Lowest",
+        risk: "Lowest technical risk, no live sandbox",
+        why: "The public demo already supports review and assurance without infrastructure, but it cannot prove real Decidim admin configuration.",
+        proof: "Advisor feedback, Decision Room outcome, v1.9 assurance memo, and a dated no-build decision."
+      }
+    ];
+
+    const environment = [
+      { name: "Git", status: "Ready", detail: "Git 2.53.0 detected in this workspace." },
+      { name: "GitHub auth", status: "Hold", detail: "Logged in as Shadow-3, but token scopes do not include project." },
+      { name: "Ruby and Bundler", status: "Blocked", detail: "Ruby and Bundler were not detected on this machine." },
+      { name: "PostgreSQL", status: "Blocked", detail: "psql was not detected; Decidim manual setup needs PostgreSQL." },
+      { name: "Node and npm", status: "Hold", detail: "Node v24.14.0 and npm 11.9.0 detected; Decidim v0.31 docs list Node 22.14.x." },
+      { name: "Docker", status: "Hold", detail: "Docker was not detected; Docker path needs installation or hosted alternative." },
+      { name: "Sample data", status: "Ready", detail: "Static package includes fake proposals, meetings, survey, accountability, and mandate data." },
+      { name: "Assurance evidence", status: "Ready", detail: "v1.9 Assurance Room provides gates, checks, sign-off roles, and memo." }
+    ];
+
+    const checks = [
+      { stream: "Environment", title: "Choose launch pathway", status: "Ready", owner: "Barayamal / Dean Foley", evidence: "v2.0 pathway decision recorded" },
+      { stream: "Environment", title: "Prepare compatible Decidim runtime", status: "Blocked", owner: "Developer or provider", evidence: "Ruby, Bundler, PostgreSQL, Node, npm, image tools, and browser test path" },
+      { stream: "Environment", title: "Select hosting path", status: "Hold", owner: "Initial developer", evidence: "Provider, partner, VPS, Docker, or hold-only decision" },
+      { stream: "Access", title: "Refresh GitHub project scope", status: "Blocked", owner: "Maintainer", evidence: "gh auth refresh --scopes project completed if native Project board is required" },
+      { stream: "Access", title: "Create sandbox admin account plan", status: "Hold", owner: "Initial developer", evidence: "Admin owner, backup admin, support contact, and recovery path" },
+      { stream: "Decidim setup", title: "Create organisation shell", status: "Hold", owner: "Decidim builder", evidence: "Organisation URL, name, logo, languages, terms pages, and support content" },
+      { stream: "Decidim setup", title: "Create assembly and process", status: "Hold", owner: "Decidim builder", evidence: "Assembly, participatory process, phases, categories, and public pages" },
+      { stream: "Decidim setup", title: "Configure components", status: "Hold", owner: "Decidim builder", evidence: "Proposals, meetings, surveys, supports, accountability, and pages configured" },
+      { stream: "Decidim setup", title: "Seed fake data only", status: "Ready", owner: "Maintainer", evidence: "Static sample CSV/JSON mapped and reviewed before import" },
+      { stream: "Safety", title: "Run fake-data boundary audit", status: "Ready", owner: "Data reviewer", evidence: "v1.9 fake-data boundary audit passes" },
+      { stream: "Safety", title: "Run QA and accessibility checks", status: "Hold", owner: "Maintainer", evidence: "Desktop/mobile screenshots, public visitor path, admin path, keyboard and contrast notes" },
+      { stream: "Safety", title: "Confirm privacy and terms content", status: "Hold", owner: "Data reviewer", evidence: "Privacy note, terms page, retention note, and no-real-data statement" },
+      { stream: "Handover", title: "Create support and backup plan", status: "Hold", owner: "Initial developer", evidence: "Support window, escalation, update path, backup owner, and known limitations" },
+      { stream: "Handover", title: "Complete assurance sign-off", status: "Hold", owner: "Assurance team", evidence: "Assurance Room all gates ready or explicit hold/no-go decision" }
+    ];
+
+    const outputs = [
+      { area: "System", name: "Sandbox URL and environment record", owner: "Developer", evidence: "URL, hosting owner, deployment notes, and version pins" },
+      { area: "Organisation", name: "First Nations Governance Commons shell", owner: "Decidim builder", evidence: "Admin screenshot and public homepage screenshot" },
+      { area: "Assembly", name: "Governance Commons assembly", owner: "Decidim builder", evidence: "Assembly settings, members disabled or fake-only, public language reviewed" },
+      { area: "Process", name: "Community Priorities and Budget 2026", owner: "Decidim builder", evidence: "Process phases, categories, attachments, and public page screenshots" },
+      { area: "Component", name: "Proposals component", owner: "Decidim builder", evidence: "Fake proposal import, category filter, supports setting, and moderation rule" },
+      { area: "Component", name: "Meetings component", owner: "Decidim builder", evidence: "Fake yarning circle records and offline input note" },
+      { area: "Component", name: "Survey component", owner: "Decidim builder", evidence: "Fake survey questions and export check" },
+      { area: "Component", name: "Accountability/results component", owner: "Decidim builder", evidence: "Fake commitments, status labels, owners, and public progress view" },
+      { area: "Safety", name: "Terms, privacy, and no-real-data pages", owner: "Data reviewer", evidence: "Public pages confirm fake-data boundary and no real mandate" },
+      { area: "Handover", name: "Admin guide and evidence pack", owner: "Initial developer", evidence: "Screenshots, limitations, backup plan, support path, and assurance memo" }
+    ];
+
+    let activePathway = "provider";
+    let activeFilter = "All";
+
+    function tone(status) {
+      if (status === "Ready" || status === "Recommended now") return "ready";
+      if (status === "Blocked" || status === "No-go") return "blocked";
+      if (status === "Possible" || status === "Fallback") return "info";
+      return "hold";
+    }
+
+    function renderPathways() {
+      document.getElementById("pathwayGrid").innerHTML = pathways.map(pathway => `
+        <article class="pathway-card ${pathway.id === activePathway ? "is-selected" : ""}">
+          <div class="pathway-top">
+            <h3>${pathway.name}</h3>
+            <span class="pill ${tone(pathway.status)}">${pathway.status}</span>
+          </div>
+          <p>${pathway.bestFor}</p>
+          <div class="kv"><strong>Timeline</strong><span>${pathway.timeline}</span></div>
+          <div class="kv"><strong>Cost</strong><span>${pathway.cost}</span></div>
+          <div class="kv"><strong>Risk</strong><span>${pathway.risk}</span></div>
+          <button class="btn ${pathway.id === activePathway ? "primary" : ""}" data-pathway="${pathway.id}" type="button">Select Pathway</button>
+        </article>
+      `).join("");
+
+      document.querySelectorAll("[data-pathway]").forEach(button => {
+        button.addEventListener("click", () => {
+          activePathway = button.dataset.pathway;
+          renderAll();
+        });
+      });
+    }
+
+    function renderPathwayPanel() {
+      const pathway = pathways.find(item => item.id === activePathway);
+      document.getElementById("pathwayStatus").textContent = pathway.status;
+      document.getElementById("pathwayStatus").className = `pill ${tone(pathway.status)}`;
+      document.getElementById("pathwayMode").textContent = pathway.mode;
+      document.getElementById("pathwayTitle").textContent = pathway.name;
+      document.getElementById("pathwaySummary").textContent = pathway.bestFor;
+      document.getElementById("pathwayWhy").textContent = pathway.why;
+      document.getElementById("pathwayProof").textContent = pathway.proof;
+    }
+
+    function renderEnvironment() {
+      document.getElementById("environmentGrid").innerHTML = environment.map(item => `
+        <article class="env-card">
+          <div class="env-top">
+            <h3>${item.name}</h3>
+            <span class="pill ${tone(item.status)}">${item.status}</span>
+          </div>
+          <span>${item.detail}</span>
+        </article>
+      `).join("");
+    }
+
+    function renderChecks() {
+      const selected = activeFilter === "All" ? checks : checks.filter(check => check.stream === activeFilter);
+      document.getElementById("checkGrid").innerHTML = selected.map((check, visibleIndex) => {
+        const realIndex = checks.indexOf(check);
+        return `
+          <article class="check-card">
+            <div class="check-top">
+              <div>
+                <h3>${check.title}</h3>
+                <p>${check.stream} - ${check.owner}</p>
+              </div>
+              <span class="pill ${tone(check.status)}">${check.status}</span>
+            </div>
+            <p><strong>Evidence:</strong> ${check.evidence}</p>
+            <label>Status
+              <select class="check-select" data-check="${realIndex}" aria-label="Status for ${check.title}">
+                ${["Ready", "Hold", "Blocked"].map(status => `<option value="${status}" ${status === check.status ? "selected" : ""}>${status}</option>`).join("")}
+              </select>
+            </label>
+          </article>
+        `;
+      }).join("");
+
+      document.querySelectorAll(".check-select").forEach(select => {
+        select.addEventListener("change", event => {
+          checks[Number(event.target.dataset.check)].status = event.target.value;
+          renderAll();
+        });
+      });
+    }
+
+    function renderOutputs() {
+      document.getElementById("outputGrid").innerHTML = outputs.map(output => `
+        <article class="output-card">
+          <div class="output-top">
+            <h3>${output.name}</h3>
+            <span class="pill info">${output.area}</span>
+          </div>
+          <p><strong>Owner:</strong> ${output.owner}</p>
+          <span>${output.evidence}</span>
+        </article>
+      `).join("");
+    }
+
+    function updateMetrics() {
+      document.getElementById("readyMetric").textContent = checks.filter(check => check.status === "Ready").length;
+      document.getElementById("holdMetric").textContent = checks.filter(check => check.status === "Hold").length;
+      document.getElementById("blockedMetric").textContent = checks.filter(check => check.status === "Blocked").length;
+    }
+
+    function updateBrief() {
+      const pathway = pathways.find(item => item.id === activePathway);
+      const lines = [
+        "# Sandbox Launch Brief v2.0",
+        "",
+        "Project: First Nations Governance Commons",
+        "Mode: fake-data Decidim sandbox launch only",
+        "Initial developer/custodian: Barayamal / Dean Foley",
+        "",
+        "## Selected Pathway",
+        `- Pathway: ${pathway.name}`,
+        `- Status: ${pathway.status}`,
+        `- Timeline: ${pathway.timeline}`,
+        `- Cost: ${pathway.cost}`,
+        `- Risk: ${pathway.risk}`,
+        `- Reason: ${pathway.why}`,
+        `- Next proof: ${pathway.proof}`,
+        "",
+        "## Current Environment Snapshot",
+        ...environment.map(item => `- ${item.name}: ${item.status} - ${item.detail}`),
+        "",
+        "## Launch Readiness Checks",
+        ...checks.map(check => `- ${check.stream}: ${check.title} - ${check.status} (${check.owner})`),
+        "",
+        "## Required Decidim Setup Outputs",
+        ...outputs.map(output => `- ${output.area}: ${output.name} (${output.owner})`),
+        "",
+        "## Non-Negotiable Boundary",
+        "This remains fake/sample data only. No real community records, member lists, cultural material, eligibility data, voting data, private contact records, or real decision outcomes are allowed."
+      ];
+      document.getElementById("launchBrief").textContent = lines.join("\n");
+    }
+
+    function downloadBrief() {
+      const blob = new Blob([document.getElementById("launchBrief").textContent], { type: "text/markdown" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "sandbox-launch-brief-v2.0.md";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    function renderAll() {
+      renderPathways();
+      renderPathwayPanel();
+      renderEnvironment();
+      renderChecks();
+      renderOutputs();
+      updateMetrics();
+      updateBrief();
+    }
+
+    document.querySelectorAll("[data-filter]").forEach(button => {
+      button.addEventListener("click", () => {
+        activeFilter = button.dataset.filter;
+        document.querySelectorAll("[data-filter]").forEach(item => item.classList.remove("is-active"));
+        button.classList.add("is-active");
+        renderChecks();
+        updateBrief();
+      });
+    });
+
+    document.getElementById("downloadBrief").addEventListener("click", downloadBrief);
+    renderAll();
+  </script>
+</body>
+</html>

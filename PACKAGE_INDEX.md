@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v1.9  
+Version: v2.0  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -17,29 +17,36 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 7. `ops-room.html` - Ops Room for admin configuration, QA scenarios, evidence, risk, handover, and go/no-go.
 8. `delivery-room.html` - Delivery Room for live sprint execution, blockers, issue links, and sprint updates.
 9. `assurance-room.html` - Assurance Room for evidence gates, sign-off roles, no-go triggers, and fake-data safety.
-10. `docs-index.html` - reviewer-facing Review Pack hub.
-11. `document.html` - rendered document and data viewer.
-12. `README.md` - overview and review instructions.
-13. `docs/sandbox-assurance-playbook-v1.9.md` - v1.9 assurance playbook.
-14. `docs/fake-data-boundary-audit-v1.9.md` - v1.9 fake-data boundary audit.
-15. `data/sandbox-assurance-checklist-v1.9.csv` - v1.9 assurance checklist.
-16. `data/go-live-decision-gates-v1.9.csv` - v1.9 decision gates.
-17. `data/assurance-readiness-snapshot-v1.9.json` - v1.9 readiness snapshot.
-18. `docs/sprint-execution-playbook-v1.8.md` - v1.8 execution playbook.
-19. `data/sprint-execution-tracker-v1.8.csv` - v1.8 execution tracker.
-20. `docs/sandbox-ops-runbook-v1.6.md` - v1.6 ops runbook.
-21. `data/sandbox-ops-checklist-v1.6.csv` - 18 run-day ops checks.
-22. `docs/sandbox-sprint-kickoff-v1.5.md` - v1.5 sprint kickoff.
-23. `data/sandbox-sprint-issues-v1.5.csv` - first 12 sprint issues.
-24. `docs/open-source-contributor-model-v1.4.md` - v1.4 contributor model.
-25. `docs/decidim-sandbox-blueprint-v1.3.md` - v1.3 Decidim sandbox blueprint.
-26. `data/decidim-admin-config-map-v1.6.csv` - v1.6 Decidim admin config map.
-27. `data/decidim-component-map-v1.3.csv` - demo-to-Decidim component map.
-28. `data/sandbox-qa-scenarios-v1.6.csv` - v1.6 QA scenarios.
-29. `docs/github-sprint-launch-report-v1.7.md` - live GitHub sprint setup report.
-30. `data/github-sprint-live-issue-map-v1.7.csv` - live issue URL map.
-31. `data/github-sprint-label-map-v1.7.csv` - label and status map.
-32. `docs/public-demo-release-notes-v1.9.md` - v1.9 release summary.
+10. `sandbox-launcher.html` - Sandbox Launcher for build pathway, environment readiness, and launch brief.
+11. `docs-index.html` - reviewer-facing Review Pack hub.
+12. `document.html` - rendered document and data viewer.
+13. `README.md` - overview and review instructions.
+14. `docs/sandbox-launch-playbook-v2.0.md` - v2.0 launch playbook.
+15. `docs/decidim-environment-options-v2.0.md` - v2.0 environment options.
+16. `data/sandbox-launch-checklist-v2.0.csv` - v2.0 launch checklist.
+17. `data/sandbox-pathway-comparison-v2.0.csv` - v2.0 pathway comparison.
+18. `data/decidim-sandbox-output-map-v2.0.csv` - v2.0 setup output map.
+19. `data/sandbox-launch-readiness-v2.0.json` - v2.0 launch readiness snapshot.
+20. `docs/sandbox-assurance-playbook-v1.9.md` - v1.9 assurance playbook.
+21. `docs/fake-data-boundary-audit-v1.9.md` - v1.9 fake-data boundary audit.
+22. `data/sandbox-assurance-checklist-v1.9.csv` - v1.9 assurance checklist.
+23. `data/go-live-decision-gates-v1.9.csv` - v1.9 decision gates.
+24. `data/assurance-readiness-snapshot-v1.9.json` - v1.9 readiness snapshot.
+25. `docs/sprint-execution-playbook-v1.8.md` - v1.8 execution playbook.
+26. `data/sprint-execution-tracker-v1.8.csv` - v1.8 execution tracker.
+27. `docs/sandbox-ops-runbook-v1.6.md` - v1.6 ops runbook.
+28. `data/sandbox-ops-checklist-v1.6.csv` - 18 run-day ops checks.
+29. `docs/sandbox-sprint-kickoff-v1.5.md` - v1.5 sprint kickoff.
+30. `data/sandbox-sprint-issues-v1.5.csv` - first 12 sprint issues.
+31. `docs/open-source-contributor-model-v1.4.md` - v1.4 contributor model.
+32. `docs/decidim-sandbox-blueprint-v1.3.md` - v1.3 Decidim sandbox blueprint.
+33. `data/decidim-admin-config-map-v1.6.csv` - v1.6 Decidim admin config map.
+34. `data/decidim-component-map-v1.3.csv` - demo-to-Decidim component map.
+35. `data/sandbox-qa-scenarios-v1.6.csv` - v1.6 QA scenarios.
+36. `docs/github-sprint-launch-report-v1.7.md` - live GitHub sprint setup report.
+37. `data/github-sprint-live-issue-map-v1.7.csv` - live issue URL map.
+38. `data/github-sprint-label-map-v1.7.csv` - label and status map.
+39. `docs/public-demo-release-notes-v2.0.md` - v2.0 release summary.
 
 ## Recommended Reading Order
 
@@ -53,13 +60,14 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 6. `ops-room.html`
 7. `delivery-room.html`
 8. `assurance-room.html`
-9. `docs/advisor-review-kickoff-pack-v1.1.md`
-10. `docs-index.html#advisors`
-11. `docs/advisor-review-guide.md`
-12. `docs/30-minute-demo-agenda.md`
-13. `docs/advisor-feedback-form.md`
-14. `docs/go-no-go-scorecard.md`
-15. `docs/advisor-synthesis-template-v0.7.md`
+9. `sandbox-launcher.html`
+10. `docs/advisor-review-kickoff-pack-v1.1.md`
+11. `docs-index.html#advisors`
+12. `docs/advisor-review-guide.md`
+13. `docs/30-minute-demo-agenda.md`
+14. `docs/advisor-feedback-form.md`
+15. `docs/go-no-go-scorecard.md`
+16. `docs/advisor-synthesis-template-v0.7.md`
 
 ### For Funders And Partners
 
@@ -71,12 +79,13 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 6. `ops-room.html`
 7. `delivery-room.html`
 8. `assurance-room.html`
-9. `docs-index.html#funders`
-10. `docs/funder-and-partner-brief.md`
-11. `docs/scope-options-and-budget-model-v0.7.md`
-12. `docs/risk-register-v0.7.md`
-13. `docs/raci-and-decision-rights-v0.7.md`
-14. `docs/statement-of-work-decidim-sandbox-v0.8.md`
+9. `sandbox-launcher.html`
+10. `docs-index.html#funders`
+11. `docs/funder-and-partner-brief.md`
+12. `docs/scope-options-and-budget-model-v0.7.md`
+13. `docs/risk-register-v0.7.md`
+14. `docs/raci-and-decision-rights-v0.7.md`
+15. `docs/statement-of-work-decidim-sandbox-v0.8.md`
 
 ### For Builders
 
@@ -86,29 +95,35 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 4. `contributor-room.html`
 5. `sprint-room.html`
 6. `ops-room.html`
-7. `docs/sandbox-ops-runbook-v1.6.md`
-8. `data/sandbox-ops-checklist-v1.6.csv`
-9. `docs/decidim-admin-configuration-checklist-v1.6.md`
-10. `data/decidim-admin-config-map-v1.6.csv`
-11. `docs/sandbox-qa-scenario-pack-v1.6.md`
-12. `data/sandbox-qa-scenarios-v1.6.csv`
-13. `docs/sandbox-sprint-kickoff-v1.5.md`
-14. `data/sandbox-sprint-issues-v1.5.csv`
-15. `docs/decidim-sandbox-blueprint-v1.3.md`
-16. `data/decidim-component-map-v1.3.csv`
-17. `data/sandbox-acceptance-matrix-v1.3.csv`
-18. `data/sandbox-import-manifest-v1.3.json`
-19. `docs/implementation-sprint-plan-v1.3.md`
-20. `docs/admin-handover-training-plan-v1.3.md`
-21. `docs/sandbox-provider-rfq-v1.1.md`
-22. `docs/provider-evaluation-scorecard-v1.1.md`
-23. `docs-index.html#builders`
-24. `docs/decidim-sandbox-kickoff-runbook.md`
-25. `docs/statement-of-work-decidim-sandbox-v0.8.md`
-26. `docs/technical-requirements-v0.8.md`
-27. `docs/acceptance-test-plan-v0.8.md`
-28. `docs/decidim-import-dataset-map.md`
-29. `data/sandbox-task-board.csv`
+7. `sandbox-launcher.html`
+8. `docs/sandbox-launch-playbook-v2.0.md`
+9. `docs/decidim-environment-options-v2.0.md`
+10. `data/sandbox-launch-checklist-v2.0.csv`
+11. `data/sandbox-pathway-comparison-v2.0.csv`
+12. `data/decidim-sandbox-output-map-v2.0.csv`
+13. `docs/sandbox-ops-runbook-v1.6.md`
+14. `data/sandbox-ops-checklist-v1.6.csv`
+15. `docs/decidim-admin-configuration-checklist-v1.6.md`
+16. `data/decidim-admin-config-map-v1.6.csv`
+17. `docs/sandbox-qa-scenario-pack-v1.6.md`
+18. `data/sandbox-qa-scenarios-v1.6.csv`
+19. `docs/sandbox-sprint-kickoff-v1.5.md`
+20. `data/sandbox-sprint-issues-v1.5.csv`
+21. `docs/decidim-sandbox-blueprint-v1.3.md`
+22. `data/decidim-component-map-v1.3.csv`
+23. `data/sandbox-acceptance-matrix-v1.3.csv`
+24. `data/sandbox-import-manifest-v1.3.json`
+25. `docs/implementation-sprint-plan-v1.3.md`
+26. `docs/admin-handover-training-plan-v1.3.md`
+27. `docs/sandbox-provider-rfq-v1.1.md`
+28. `docs/provider-evaluation-scorecard-v1.1.md`
+29. `docs-index.html#builders`
+30. `docs/decidim-sandbox-kickoff-runbook.md`
+31. `docs/statement-of-work-decidim-sandbox-v0.8.md`
+32. `docs/technical-requirements-v0.8.md`
+33. `docs/acceptance-test-plan-v0.8.md`
+34. `docs/decidim-import-dataset-map.md`
+35. `data/sandbox-task-board.csv`
 
 ### For Contributors And Maintainers
 
@@ -185,6 +200,19 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 9. `docs/sprint-execution-playbook-v1.8.md`
 10. `data/delivery-readiness-snapshot-v1.8.json`
 
+### For Launch Team
+
+1. `sandbox-launcher.html`
+2. `docs/sandbox-launch-playbook-v2.0.md`
+3. `docs/decidim-environment-options-v2.0.md`
+4. `data/sandbox-launch-checklist-v2.0.csv`
+5. `data/sandbox-pathway-comparison-v2.0.csv`
+6. `data/decidim-sandbox-output-map-v2.0.csv`
+7. `data/sandbox-launch-readiness-v2.0.json`
+8. `assurance-room.html`
+9. `delivery-room.html`
+10. `ops-room.html`
+
 ### For Governance/Data Review
 
 1. `docs-index.html#governance`
@@ -231,6 +259,10 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 - `data/sandbox-assurance-checklist-v1.9.csv`
 - `data/go-live-decision-gates-v1.9.csv`
 - `data/assurance-readiness-snapshot-v1.9.json`
+- `data/sandbox-launch-checklist-v2.0.csv`
+- `data/sandbox-pathway-comparison-v2.0.csv`
+- `data/decidim-sandbox-output-map-v2.0.csv`
+- `data/sandbox-launch-readiness-v2.0.json`
 - `data/sandbox-task-board.csv`
 - `data/decision-log-template.csv`
 
@@ -244,6 +276,7 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 - `ops-room.html` is the public Ops Room for run-day configuration, QA, evidence, risk, handover, and go/no-go controls.
 - `delivery-room.html` is the public Delivery Room for live sprint execution, blockers, issue links, status simulation, and sprint updates.
 - `assurance-room.html` is the public Assurance Room for evidence gates, sign-off roles, no-go triggers, fake-data boundary checks, and public handover readiness.
+- `sandbox-launcher.html` is the public Sandbox Launcher for choosing the fake-data Decidim build path, checking environment readiness, mapping setup outputs, and generating a launch brief.
 - `docs/github-sprint-launch-report-v1.7.md` records the live GitHub issues, milestone, labels, and Projects blocker.
 - `docs-index.html` is the public reviewer hub.
 - `document.html` renders Markdown, CSV, and JSON files from a whitelisted package catalog.

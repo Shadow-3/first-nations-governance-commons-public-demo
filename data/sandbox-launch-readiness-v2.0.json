@@ -1,0 +1,38 @@
+{
+  "version": "2.0",
+  "date": "2026-06-05",
+  "mode": "fake_data_decidim_sandbox_launch_only",
+  "recommendedPathway": "provider-assisted sandbox unless local self-build environment is prepared first",
+  "currentEnvironment": {
+    "git": "ready: git 2.53.0 detected",
+    "githubAuth": "hold: logged in as Shadow-3 without project scope",
+    "ruby": "blocked: not detected",
+    "bundler": "blocked: not detected",
+    "postgresqlClient": "blocked: psql not detected",
+    "docker": "hold: not detected",
+    "node": "hold: Node v24.14.0 detected; Decidim v0.31 docs list Node 22.14.x",
+    "npm": "hold: npm 11.9.0 detected"
+  },
+  "counts": {
+    "launchPathways": 4,
+    "launchChecks": 14,
+    "readyChecks": 3,
+    "holdChecks": 9,
+    "blockedChecks": 2,
+    "requiredOutputs": 10
+  },
+  "blockers": [
+    "Ruby and Bundler are not installed.",
+    "PostgreSQL client is not installed.",
+    "GitHub auth lacks project scope for native GitHub Projects.",
+    "Docker is not installed for Docker-based local checkouts.",
+    "Node version should be aligned with the selected Decidim version before self-build."
+  ],
+  "officialSourceAnchors": [
+    "https://docs.decidim.org/en/develop/install/index.html",
+    "https://docs.decidim.org/en/develop/install/manual.html",
+    "https://docs.decidim.org/en/develop/develop/deploy.html",
+    "https://docs.decidim.org/en/develop/install/checklist.html"
+  ],
+  "safetyRule": "The launch remains fake/sample data only. No real community records, member lists, cultural material, eligibility data, voting data, private contact records, or real decision outcomes are allowed."
+}

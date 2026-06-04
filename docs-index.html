@@ -304,6 +304,7 @@
     <a class="btn primary" href="ops-room.html">Ops Room</a>
     <a class="btn primary" href="delivery-room.html">Delivery Room</a>
     <a class="btn primary" href="assurance-room.html">Assurance Room</a>
+    <a class="btn primary" href="sandbox-launcher.html">Sandbox Launcher</a>
     <a class="btn" href="index.html">Open Demo</a>
     <div class="label">Public demo - fake data only</div>
   </header>
@@ -349,6 +350,10 @@
       <a href="#assurance">
         <strong>Assurance Team</strong>
         <span>Check evidence gates, sign-off roles, no-go triggers, and fake-data boundary.</span>
+      </a>
+      <a href="#launch">
+        <strong>Launch Team</strong>
+        <span>Choose the sandbox build path, check environment readiness, and map Decidim outputs.</span>
       </a>
       <a href="#governance">
         <strong>Governance/Data</strong>
@@ -422,6 +427,13 @@
         </div>
         <div class="doc-row">
           <div>
+            <strong>Sandbox Launcher</strong>
+            <span>Build pathway comparison, current environment snapshot, launch checks, output map, and generated launch brief.</span>
+          </div>
+          <a class="btn primary" href="sandbox-launcher.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
             <strong>Public demo prototype</strong>
             <span>Sample Decidim-style participatory process.</span>
           </div>
@@ -451,9 +463,9 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v1.9 Assurance Room and sign-off upgrade.</span>
+            <span>What changed in the v2.0 Sandbox Launcher upgrade.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v1.9.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v2.0.md">Open</a>
         </div>
       </div>
     </section>
@@ -530,6 +542,24 @@
         <div class="doc-row"><div><strong>Assurance checklist</strong><span>CSV checks for safety, evidence, governance, and handover.</span></div><a class="btn" href="data/sandbox-assurance-checklist-v1.9.csv">Open</a></div>
         <div class="doc-row"><div><strong>Go-live decision gates</strong><span>CSV gate statuses, owners, evidence, and stop conditions.</span></div><a class="btn" href="data/go-live-decision-gates-v1.9.csv">Open</a></div>
         <div class="doc-row"><div><strong>Assurance readiness snapshot</strong><span>JSON metrics, sign-off roles, no-go triggers, and fake-data safety rule.</span></div><a class="btn" href="data/assurance-readiness-snapshot-v1.9.json">Open</a></div>
+      </div>
+    </section>
+
+    <section id="launch">
+      <div class="section-head">
+        <div>
+          <h2>Launch Team</h2>
+          <p>Use these files to choose the first fake-data Decidim sandbox build path and prepare launch evidence.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Sandbox Launcher</strong><span>Interactive pathway comparison, environment snapshot, readiness checks, setup output map, and generated launch brief.</span></div><a class="btn primary" href="sandbox-launcher.html">Open</a></div>
+        <div class="doc-row"><div><strong>Sandbox launch playbook</strong><span>Recommended launch decision, setup sequence, required outputs, no-go triggers, and source anchors.</span></div><a class="btn" href="docs/sandbox-launch-playbook-v2.0.md">Open</a></div>
+        <div class="doc-row"><div><strong>Environment options</strong><span>Provider-assisted, Barayamal self-build, partner-hosted, and static-only hold pathways.</span></div><a class="btn" href="docs/decidim-environment-options-v2.0.md">Open</a></div>
+        <div class="doc-row"><div><strong>Launch checklist</strong><span>CSV launch checks with owners, evidence, status, and stop conditions.</span></div><a class="btn" href="data/sandbox-launch-checklist-v2.0.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Pathway comparison</strong><span>CSV comparison of timing, cost, risk, and required proof.</span></div><a class="btn" href="data/sandbox-pathway-comparison-v2.0.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Decidim output map</strong><span>CSV map of required sandbox configuration outputs and acceptance evidence.</span></div><a class="btn" href="data/decidim-sandbox-output-map-v2.0.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Launch readiness snapshot</strong><span>JSON environment status, blockers, counts, source anchors, and safety rule.</span></div><a class="btn" href="data/sandbox-launch-readiness-v2.0.json">Open</a></div>
       </div>
     </section>
 
@@ -647,7 +677,7 @@
     </section>
 
     <footer>
-      Version v1.9. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v2.0. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
   <script>

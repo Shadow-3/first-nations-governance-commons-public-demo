@@ -1,0 +1,15 @@
+check_id,stream,title,status,owner,evidence,stop_condition
+L-001,Environment,Choose launch pathway,Ready,Barayamal / Dean Foley,v2.0 pathway decision recorded,No pathway owner or decision
+L-002,Environment,Prepare compatible Decidim runtime,Blocked,Developer or provider,"Ruby, Bundler, PostgreSQL, Node, npm, image tools, browser test path",Runtime cannot install or run Decidim
+L-003,Environment,Select hosting path,Hold,Initial developer,"Provider, partner, VPS, Docker, or hold-only decision",No hosting owner
+L-004,Access,Refresh GitHub project scope,Blocked,Maintainer,gh auth refresh --scopes project if native Project board is required,Native Project board required but project scope missing
+L-005,Access,Create sandbox admin account plan,Hold,Initial developer,"Admin owner, backup admin, support contact, recovery path",Admin access cannot be controlled
+L-006,Decidim setup,Create organisation shell,Hold,Decidim builder,"Organisation URL, name, logo, languages, terms pages, support content",Organisation cannot be configured
+L-007,Decidim setup,Create assembly and process,Hold,Decidim builder,"Assembly, participatory process, phases, categories, public pages",Core process cannot be represented
+L-008,Decidim setup,Configure components,Hold,Decidim builder,"Proposals, meetings, surveys, supports, accountability, pages",Required components cannot be configured
+L-009,Decidim setup,Seed fake data only,Ready,Maintainer,Static sample CSV/JSON mapped and reviewed before import,Real or unclear data enters sandbox
+L-010,Safety,Run fake-data boundary audit,Ready,Data reviewer,v1.9 fake-data boundary audit passes,Real data or cultural material appears
+L-011,Safety,Run QA and accessibility checks,Hold,Maintainer,"Desktop/mobile screenshots, public visitor path, admin path, keyboard and contrast notes",QA blocker remains unresolved
+L-012,Safety,Confirm privacy and terms content,Hold,Data reviewer,"Privacy note, terms page, retention note, no-real-data statement",Public legal/data language is missing
+L-013,Handover,Create support and backup plan,Hold,Initial developer,"Support window, escalation, update path, backup owner, known limitations",No support owner
+L-014,Handover,Complete assurance sign-off,Hold,Assurance team,Assurance Room all gates ready or explicit hold/no-go decision,No assurance decision

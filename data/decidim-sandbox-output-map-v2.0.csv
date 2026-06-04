@@ -1,0 +1,12 @@
+output_id,area,name,owner,source,evidence,acceptance_status
+O-001,System,Sandbox URL and environment record,Developer,package-manifest.json,"URL, hosting owner, deployment notes, version pins",Hold
+O-002,Organisation,First Nations Governance Commons shell,Decidim builder,docs/decidim-sandbox-blueprint-v1.3.md,Admin screenshot and public homepage screenshot,Hold
+O-003,Assembly,Governance Commons assembly,Decidim builder,docs/first-nations-governance-charter-draft.md,"Assembly settings, fake-only language, public screenshot",Hold
+O-004,Process,Community Priorities and Budget 2026,Decidim builder,data/sample-process-data.json,"Process phases, categories, attachments, public page screenshots",Hold
+O-005,Component,Proposals component,Decidim builder,data/sample-proposals.csv,"Fake proposal import, category filter, supports setting, moderation rule",Hold
+O-006,Component,Meetings component,Decidim builder,data/sample-meetings.csv,Fake yarning circle records and offline input note,Hold
+O-007,Component,Survey component,Decidim builder,data/sample-survey-questions.json,Fake survey questions and export check,Hold
+O-008,Component,Accountability/results component,Decidim builder,data/sample-accountability.csv,"Fake commitments, status labels, owners, public progress view",Hold
+O-009,Safety,"Terms, privacy, and no-real-data pages",Data reviewer,docs/fake-data-boundary-audit-v1.9.md,Public pages confirm fake-data boundary and no real mandate,Hold
+O-010,Handover,Admin guide and evidence pack,Initial developer,docs/sandbox-assurance-playbook-v1.9.md,"Screenshots, limitations, backup plan, support path, assurance memo",Hold
+

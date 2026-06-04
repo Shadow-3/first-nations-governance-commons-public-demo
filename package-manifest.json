@@ -1,19 +1,22 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "1.9",
-  "date": "2026-06-04",
+  "version": "2.0",
+  "date": "2026-06-05",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use the live GitHub sprint issues and milestone to start the fake-data Decidim sandbox sprint, Delivery Room for day-to-day issue execution, Assurance Room for evidence gates and sign-off, Sprint Room for issue intent, Ops Room for run-day controls, and Decision Room for go/hold/no-go status. Native GitHub Projects board creation remains blocked until project scopes are added.",
+  "recommendedDecision": "Use Sandbox Launcher to choose the first fake-data Decidim build path. Current recommendation: provider-assisted sandbox unless the Barayamal self-build environment is prepared first, because Ruby, Bundler, PostgreSQL, Docker, and GitHub project scope are not ready on this machine. Use Delivery Room for sprint execution, Ops Room for configuration and QA, Assurance Room for sign-off, and keep all data fake/sample only.",
   "localDecidimStatus": {
-    "ruby": "not_installed",
-    "rubygems": "not_installed",
-    "rails": "not_installed",
-    "docker": "not_installed",
-    "wsl": "not_installed",
-    "result": "local_decidim_install_blocked_without_environment_setup"
+    "git": "ready: git 2.53.0.windows.2 detected",
+    "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
+    "ruby": "blocked: not_installed",
+    "bundler": "blocked: not_installed",
+    "postgresqlClient": "blocked: psql_not_installed",
+    "docker": "hold: not_installed",
+    "node": "hold: v24.14.0 detected; Decidim v0.31 docs list Node 22.14.x",
+    "npm": "hold: 11.9.0 detected",
+    "result": "provider_assisted_sandbox_recommended_until_self_build_environment_is_prepared"
   },
   "entrypoints": [
     "index.html",
@@ -25,6 +28,7 @@
     "ops-room.html",
     "delivery-room.html",
     "assurance-room.html",
+    "sandbox-launcher.html",
     "docs-index.html",
     "document.html",
     "README.md",
@@ -36,6 +40,13 @@
     "SUPPORT.md",
     "PACKAGE_INDEX.md",
     "package-manifest.json",
+    "docs/public-demo-release-notes-v2.0.md",
+    "docs/sandbox-launch-playbook-v2.0.md",
+    "docs/decidim-environment-options-v2.0.md",
+    "data/sandbox-launch-checklist-v2.0.csv",
+    "data/sandbox-pathway-comparison-v2.0.csv",
+    "data/decidim-sandbox-output-map-v2.0.csv",
+    "data/sandbox-launch-readiness-v2.0.json",
     "docs/public-demo-release-notes-v1.9.md",
     "docs/sandbox-assurance-playbook-v1.9.md",
     "docs/fake-data-boundary-audit-v1.9.md",
@@ -61,7 +72,7 @@
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v1.9.md",
+    "releaseNotes": "docs/public-demo-release-notes-v2.0.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -75,7 +86,17 @@
       "qa-v19-deployed-assurance-room-nogo-desktop.png",
       "qa-v19-deployed-assurance-checklist-desktop.png",
       "qa-v19-deployed-assurance-room-mobile.png",
-      "qa-v19-deployed-assurance-checklist-mobile.png"
+      "qa-v19-deployed-assurance-checklist-mobile.png",
+      "qa-v20-local-sandbox-launcher-desktop.png",
+      "qa-v20-local-sandbox-launcher-self-build-desktop.png",
+      "qa-v20-local-launch-checklist-desktop.png",
+      "qa-v20-local-sandbox-launcher-mobile.png",
+      "qa-v20-local-launch-readiness-mobile.png",
+      "qa-v20-deployed-sandbox-launcher-desktop.png",
+      "qa-v20-deployed-sandbox-launcher-self-build-desktop.png",
+      "qa-v20-deployed-launch-checklist-desktop.png",
+      "qa-v20-deployed-sandbox-launcher-mobile.png",
+      "qa-v20-deployed-launch-readiness-mobile.png"
     ]
   },
   "documentViewer": {
@@ -194,11 +215,13 @@
       "ops-room.html",
       "delivery-room.html",
       "assurance-room.html",
+      "sandbox-launcher.html",
       "docs-index.html",
       "document.html",
       "PACKAGE_INDEX.md",
       "docs/public-demo-release-notes-v1.5.md",
       "docs/public-demo-release-notes-v1.6.md",
+      "docs/public-demo-release-notes-v2.0.md",
       "docs/public-demo-release-notes-v1.9.md",
       "docs/public-demo-release-notes-v1.8.md",
       "docs/public-demo-release-notes-v1.7.md",
@@ -349,6 +372,12 @@
       "data/sandbox-assurance-checklist-v1.9.csv",
       "data/go-live-decision-gates-v1.9.csv",
       "data/assurance-readiness-snapshot-v1.9.json",
+      "docs/sandbox-launch-playbook-v2.0.md",
+      "docs/decidim-environment-options-v2.0.md",
+      "data/sandbox-launch-checklist-v2.0.csv",
+      "data/sandbox-pathway-comparison-v2.0.csv",
+      "data/decidim-sandbox-output-map-v2.0.csv",
+      "data/sandbox-launch-readiness-v2.0.json",
       "data/sandbox-task-board.csv",
       "data/decision-log-template.csv"
     ],
@@ -364,7 +393,10 @@
       "docs/sandbox-assurance-playbook-v1.9.md",
       "data/sandbox-assurance-checklist-v1.9.csv",
       "data/go-live-decision-gates-v1.9.csv",
-      "data/assurance-readiness-snapshot-v1.9.json"
+      "data/assurance-readiness-snapshot-v1.9.json",
+      "sandbox-launcher.html",
+      "data/sandbox-launch-checklist-v2.0.csv",
+      "data/decidim-sandbox-output-map-v2.0.csv"
     ],
     "deliveryRoom": [
       "docs/sprint-execution-playbook-v1.8.md",
@@ -374,6 +406,9 @@
       "docs/sandbox-assurance-playbook-v1.9.md",
       "data/sandbox-assurance-checklist-v1.9.csv",
       "data/go-live-decision-gates-v1.9.csv",
+      "sandbox-launcher.html",
+      "data/sandbox-launch-checklist-v2.0.csv",
+      "data/decidim-sandbox-output-map-v2.0.csv",
       "docs/github-sprint-launch-report-v1.7.md",
       "data/github-sprint-live-issue-map-v1.7.csv",
       "data/github-sprint-label-map-v1.7.csv"
@@ -391,11 +426,30 @@
       "data/sandbox-assurance-checklist-v1.9.csv",
       "data/go-live-decision-gates-v1.9.csv",
       "data/assurance-readiness-snapshot-v1.9.json",
+      "sandbox-launcher.html",
+      "docs/sandbox-launch-playbook-v2.0.md",
+      "data/sandbox-launch-readiness-v2.0.json",
       "delivery-room.html",
       "ops-room.html",
       "docs/sprint-execution-playbook-v1.8.md",
       "data/delivery-readiness-snapshot-v1.8.json",
       "data/ops-readiness-manifest-v1.6.json"
+    ],
+    "sandboxLauncher": [
+      "sandbox-launcher.html",
+      "docs/public-demo-release-notes-v2.0.md",
+      "docs/sandbox-launch-playbook-v2.0.md",
+      "docs/decidim-environment-options-v2.0.md",
+      "data/sandbox-launch-checklist-v2.0.csv",
+      "data/sandbox-pathway-comparison-v2.0.csv",
+      "data/decidim-sandbox-output-map-v2.0.csv",
+      "data/sandbox-launch-readiness-v2.0.json",
+      "assurance-room.html",
+      "delivery-room.html",
+      "ops-room.html",
+      "docs/sandbox-assurance-playbook-v1.9.md",
+      "docs/sprint-execution-playbook-v1.8.md",
+      "docs/sandbox-ops-runbook-v1.6.md"
     ]
   },
   "safetyRules": [
@@ -471,5 +525,26 @@
     "defaultStatus": "hold_until_evidence_and_signoff_complete",
     "noGoTriggerCount": 8,
     "safetyRule": "No real community records, member data, cultural material, eligibility data, voting data, or real decision outcomes are allowed in the public demo or fake-data sandbox."
+  },
+  "sandboxLauncher": {
+    "entrypoint": "sandbox-launcher.html",
+    "launchPlaybook": "docs/sandbox-launch-playbook-v2.0.md",
+    "environmentOptions": "docs/decidim-environment-options-v2.0.md",
+    "launchChecklist": "data/sandbox-launch-checklist-v2.0.csv",
+    "pathwayComparison": "data/sandbox-pathway-comparison-v2.0.csv",
+    "outputMap": "data/decidim-sandbox-output-map-v2.0.csv",
+    "readinessSnapshot": "data/sandbox-launch-readiness-v2.0.json",
+    "launchPathwayCount": 4,
+    "launchCheckCount": 14,
+    "requiredOutputCount": 10,
+    "defaultRecommendation": "provider_assisted_sandbox_until_self_build_environment_is_prepared",
+    "localBlockers": [
+      "ruby_not_installed",
+      "bundler_not_installed",
+      "postgresql_client_not_installed",
+      "docker_not_installed",
+      "github_project_scope_missing",
+      "node_version_not_aligned_to_decidim_v0_31_docs"
+    ]
   }
 }

@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v1.9
+Current package version: v2.0
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -32,6 +32,8 @@ Open `ops-room.html` to use the Sandbox Ops Room for run-day admin configuration
 Open `delivery-room.html` to use the Delivery Room for live sprint execution, blocker tracking, issue links, local status simulation, and sprint updates.
 
 Open `assurance-room.html` to use the Assurance Room for evidence gates, sign-off roles, no-go triggers, fake-data safety checks, and a downloadable assurance memo.
+
+Open `sandbox-launcher.html` to use the Sandbox Launcher for fake-data Decidim launch pathway comparison, current environment readiness, setup output mapping, and a downloadable launch brief.
 
 The demo shows:
 
@@ -71,8 +73,11 @@ The demo shows:
 - `docs/public-demo-release-notes-v1.5.md`
 - `docs/public-demo-release-notes-v1.6.md`
 - `docs/public-demo-release-notes-v1.7.md`
+- `docs/public-demo-release-notes-v2.0.md`
 - `docs/public-demo-release-notes-v1.9.md`
 - `docs/public-demo-release-notes-v1.8.md`
+- `docs/sandbox-launch-playbook-v2.0.md`
+- `docs/decidim-environment-options-v2.0.md`
 - `docs/sandbox-assurance-playbook-v1.9.md`
 - `docs/fake-data-boundary-audit-v1.9.md`
 - `docs/sprint-execution-playbook-v1.8.md`
@@ -145,6 +150,10 @@ The demo shows:
 - `data/sandbox-assurance-checklist-v1.9.csv`
 - `data/go-live-decision-gates-v1.9.csv`
 - `data/assurance-readiness-snapshot-v1.9.json`
+- `data/sandbox-launch-checklist-v2.0.csv`
+- `data/sandbox-pathway-comparison-v2.0.csv`
+- `data/decidim-sandbox-output-map-v2.0.csv`
+- `data/sandbox-launch-readiness-v2.0.json`
 - `data/sandbox-task-board.csv`
 - `data/decision-log-template.csv`
 - `PACKAGE_INDEX.md`
@@ -158,6 +167,7 @@ The demo shows:
 - `ops-room.html`
 - `delivery-room.html`
 - `assurance-room.html`
+- `sandbox-launcher.html`
 - `document.html`
 - `CONTRIBUTING.md`
 - `CODE_OF_CONDUCT.md`
@@ -440,9 +450,27 @@ The v1.9 package adds an Assurance Room that turns the demo from an execution co
 
 Use this version before public handover, advisor review close-out, or any claim that the fake-data sandbox is ready. It keeps the real-pilot boundary explicit: public demo and sandbox readiness do not create community authority, real consultation approval, or permission to use real data.
 
+## v2.0 Sandbox Launcher And Build Path Upgrade
+
+The v2.0 package adds a Sandbox Launcher that turns the assurance-ready package into a practical fake-data Decidim launch plan:
+
+- Four build pathways: provider-assisted, Barayamal developer self-build, partner-hosted, and static-only hold.
+- Current environment snapshot for Git, GitHub auth, Ruby/Bundler, PostgreSQL, Node/npm, Docker, sample data, and assurance evidence.
+- 14 launch readiness checks across environment, access, Decidim setup, safety, and handover.
+- 10 Decidim setup outputs for the first fake-data sandbox.
+- Downloadable generated launch brief.
+- Sandbox launch playbook.
+- Decidim environment options note.
+- Launch checklist CSV.
+- Pathway comparison CSV.
+- Decidim sandbox output map CSV.
+- Launch readiness snapshot JSON.
+
+Use this version to decide the actual first build path. The current recommendation is provider-assisted sandbox unless the local self-build environment is prepared first, because Ruby/Bundler, PostgreSQL, Docker, and GitHub project scope are not ready on this machine.
+
 ## Next Build Step
 
-Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, Delivery Room, and Assurance Room to configure, operate, and safely hand over a fake-data Decidim sandbox:
+Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, Delivery Room, Assurance Room, and Sandbox Launcher to configure, operate, and safely hand over a fake-data Decidim sandbox:
 
 - One organisation.
 - One public assembly.
