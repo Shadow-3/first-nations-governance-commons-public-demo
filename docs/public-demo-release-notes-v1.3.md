@@ -13,6 +13,7 @@ Mode: public demo with fake/sample data only
 - Added downloadable builder brief generated in the browser.
 - Added Builder Room links from the demo, Action Center, Decision Room, Review Pack, and document viewer.
 - Added v1.3 files to the manifest and document viewer catalog.
+- Improved mobile table rendering in the document viewer so CSV/Markdown tables collapse into labelled rows instead of requiring sideways reading.
 
 ## What Did Not Change
 

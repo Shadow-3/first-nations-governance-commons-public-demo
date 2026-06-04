@@ -492,6 +492,55 @@
       .btn {
         width: 100%;
       }
+
+      .table-wrap {
+        overflow: visible;
+      }
+
+      table,
+      thead,
+      tbody,
+      tr,
+      th,
+      td {
+        display: block;
+        width: 100%;
+        min-width: 0;
+      }
+
+      thead {
+        display: none;
+      }
+
+      table {
+        min-width: 0;
+      }
+
+      tr {
+        border-bottom: 1px solid var(--line);
+        padding: 12px;
+      }
+
+      tr:last-child {
+        border-bottom: 0;
+      }
+
+      td {
+        border-bottom: 0;
+        padding: 6px 0;
+        overflow-wrap: anywhere;
+      }
+
+      td::before {
+        content: attr(data-label);
+        display: block;
+        color: var(--muted);
+        font-size: 10px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0;
+        margin-bottom: 3px;
+      }
     }
   </style>
 </head>
@@ -800,7 +849,7 @@
 
     function renderTable(headers, rows) {
       const head = headers.map(header => `<th>${inlineMarkdown(header)}</th>`).join("");
-      const body = rows.map(row => `<tr>${headers.map((_, index) => `<td>${inlineMarkdown(row[index] || "")}</td>`).join("")}</tr>`).join("");
+      const body = rows.map(row => `<tr>${headers.map((header, index) => `<td data-label="${escapeHtml(header)}">${inlineMarkdown(row[index] || "")}</td>`).join("")}</tr>`).join("");
       return `<div class="table-wrap"><table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>`;
     }
 
