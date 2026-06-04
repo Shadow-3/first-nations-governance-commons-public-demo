@@ -1,6 +1,6 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "0.9",
+  "version": "1.0",
   "date": "2026-06-04",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
@@ -18,15 +18,18 @@
   "entrypoints": [
     "index.html",
     "docs-index.html",
+    "document.html",
     "README.md",
     "PACKAGE_INDEX.md",
+    "package-manifest.json",
+    "docs/public-demo-release-notes-v1.0.md",
     "docs/public-demo-release-notes-v0.9.md"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v0.9.md",
+    "releaseNotes": "docs/public-demo-release-notes-v1.0.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -35,10 +38,29 @@
       "design-concept.png"
     ]
   },
+  "documentViewer": {
+    "entrypoint": "document.html",
+    "scope": "whitelisted_public_package_files_only",
+    "renders": [
+      "markdown",
+      "csv",
+      "json"
+    ],
+    "actions": [
+      "open_raw",
+      "download",
+      "copy_link",
+      "previous",
+      "next",
+      "search_catalog"
+    ]
+  },
   "evidenceGroups": {
     "reviewerStartHere": [
       "docs-index.html",
+      "document.html",
       "PACKAGE_INDEX.md",
+      "docs/public-demo-release-notes-v1.0.md",
       "docs/public-demo-release-notes-v0.9.md"
     ],
     "decisionPack": [

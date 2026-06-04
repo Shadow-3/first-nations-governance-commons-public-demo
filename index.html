@@ -1668,7 +1668,24 @@
       return `# Sample Evidence Pack\n\nDemo only. No real community records.\n\n## Process Snapshot\n- Participants: ${seed.metrics.participants}\n- Offline participants: ${seed.metrics.offline}\n- Proposals: ${seed.metrics.proposals}\n- Accountability items: ${seed.metrics.actions}\n\n## Top Sample Proposals\n${state.proposals.map(item => `- ${item.id}: ${item.title} (${item.supports} supports)`).join("\n")}\n\n## Rule\nOpen-source the infrastructure. Do not open-source community authority.\n`;
     }
 
+    function routeDocumentLinks() {
+      document.querySelectorAll("a[href]").forEach(link => {
+        const href = link.getAttribute("href");
+        if (!href || href.startsWith("#") || href.startsWith("http") || href.startsWith("document.html")) return;
+        const path = href.split("#")[0];
+        const isViewable =
+          path.startsWith("docs/") ||
+          path.startsWith("data/") ||
+          path === "PACKAGE_INDEX.md" ||
+          path === "README.md" ||
+          path === "package-manifest.json";
+        if (!isViewable) return;
+        link.setAttribute("href", `document.html?file=${encodeURIComponent(path)}`);
+      });
+    }
+
     function init() {
+      routeDocumentLinks();
       renderPhases();
       renderMetrics();
       renderMandate();

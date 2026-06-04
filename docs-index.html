@@ -339,6 +339,13 @@
         </div>
         <div class="doc-row">
           <div>
+            <strong>Document viewer</strong>
+            <span>Rendered documents, CSV tables, JSON views, and raw downloads.</span>
+          </div>
+          <a class="btn" href="document.html?file=docs%2Fdecision-memo-v0.7.md">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
             <strong>Decision memo</strong>
             <span>Recommended next step and decision rule.</span>
           </div>
@@ -354,9 +361,9 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v0.9 public deployment package.</span>
+            <span>What changed in the v1.0 review portal package.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v0.9.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v1.0.md">Open</a>
         </div>
       </div>
     </section>
@@ -450,8 +457,23 @@
     </section>
 
     <footer>
-      Version v0.9. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v1.0. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
+  <script>
+    document.querySelectorAll("a[href]").forEach(link => {
+      const href = link.getAttribute("href");
+      if (!href || href.startsWith("#") || href.startsWith("http") || href.startsWith("document.html")) return;
+      const path = href.split("#")[0];
+      const isViewable =
+        path.startsWith("docs/") ||
+        path.startsWith("data/") ||
+        path === "PACKAGE_INDEX.md" ||
+        path === "README.md" ||
+        path === "package-manifest.json";
+      if (!isViewable) return;
+      link.setAttribute("href", `document.html?file=${encodeURIComponent(path)}`);
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,934 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document Viewer - First Nations Governance Commons</title>
+  <meta name="description" content="Rendered document and data viewer for the First Nations Governance Commons public demo package.">
+  <style>
+    :root {
+      --bg: #f6f7f5;
+      --surface: #ffffff;
+      --surface-2: #eef3ef;
+      --text: #1d2523;
+      --muted: #61706b;
+      --line: #d9e0dc;
+      --teal: #0d675f;
+      --teal-2: #e5f1ee;
+      --ochre: #b66a25;
+      --ochre-2: #fff2e5;
+      --green: #247654;
+      --green-2: #e7f4ed;
+      --red: #aa3d36;
+      --red-2: #fae9e7;
+      --radius: 6px;
+      --shadow: 0 14px 36px rgba(18, 33, 29, 0.08);
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.48;
+    }
+
+    a { color: inherit; }
+
+    .topbar {
+      min-height: 72px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) auto auto auto;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius);
+      background: var(--teal);
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .brand strong,
+    .brand span {
+      display: block;
+    }
+
+    .brand strong {
+      font-size: 15px;
+      line-height: 1.1;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .label {
+      width: fit-content;
+      color: var(--ochre);
+      background: var(--ochre-2);
+      border: 1px solid #f1d7b9;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .btn {
+      min-height: 38px;
+      border-radius: var(--radius);
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .btn.primary {
+      background: var(--teal);
+      color: #fff;
+      border-color: var(--teal);
+    }
+
+    .btn[disabled] {
+      opacity: 0.45;
+      pointer-events: none;
+    }
+
+    .shell {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 310px minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .catalog,
+    .viewer,
+    .notice {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .catalog {
+      position: sticky;
+      top: 94px;
+      max-height: calc(100vh - 116px);
+      display: grid;
+      grid-template-rows: auto 1fr;
+      overflow: hidden;
+    }
+
+    .catalog-head {
+      padding: 16px;
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      gap: 10px;
+    }
+
+    .catalog-head h2 {
+      margin: 0;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+
+    .search {
+      width: 100%;
+      min-height: 38px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 9px 10px;
+      color: var(--text);
+      background: var(--surface);
+      font: inherit;
+      font-size: 13px;
+    }
+
+    .catalog-list {
+      overflow: auto;
+      padding: 10px;
+    }
+
+    .catalog-group {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      margin: 10px 6px 6px;
+    }
+
+    .catalog-link {
+      display: grid;
+      gap: 3px;
+      padding: 10px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      border: 1px solid transparent;
+    }
+
+    .catalog-link:hover,
+    .catalog-link.is-active {
+      background: var(--teal-2);
+      border-color: #c8ded8;
+    }
+
+    .catalog-link strong {
+      font-size: 13px;
+      line-height: 1.25;
+    }
+
+    .catalog-link span {
+      color: var(--muted);
+      font-size: 12px;
+      overflow-wrap: anywhere;
+    }
+
+    .viewer {
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .viewer-head {
+      padding: 20px;
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      gap: 14px;
+    }
+
+    .crumb {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .viewer-title {
+      display: grid;
+      gap: 8px;
+    }
+
+    .viewer-title h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.04;
+      letter-spacing: 0;
+    }
+
+    .viewer-title p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 780px;
+    }
+
+    .meta-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 9px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      background: var(--surface-2);
+    }
+
+    .pill.green {
+      color: var(--green);
+      background: var(--green-2);
+      border-color: #c7e4d5;
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .body-wrap {
+      padding: 22px;
+    }
+
+    .doc-body {
+      max-width: 860px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .doc-body h1,
+    .doc-body h2,
+    .doc-body h3,
+    .doc-body h4 {
+      margin: 8px 0 0;
+      letter-spacing: 0;
+      line-height: 1.18;
+    }
+
+    .doc-body h1 { font-size: 30px; }
+    .doc-body h2 { font-size: 23px; padding-top: 10px; border-top: 1px solid var(--line); }
+    .doc-body h3 { font-size: 18px; }
+    .doc-body h4 { font-size: 15px; }
+
+    .doc-body p {
+      margin: 0;
+      color: var(--text);
+    }
+
+    .doc-body ul,
+    .doc-body ol {
+      margin: 0;
+      padding-left: 22px;
+      display: grid;
+      gap: 6px;
+    }
+
+    .doc-body li {
+      padding-left: 2px;
+    }
+
+    .doc-body code {
+      font-family: var(--mono);
+      font-size: 0.92em;
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 1px 4px;
+    }
+
+    .doc-body pre,
+    .json-pre {
+      margin: 0;
+      overflow: auto;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: #101817;
+      color: #e8f0ed;
+      padding: 14px;
+      font-family: var(--mono);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .doc-body blockquote {
+      margin: 0;
+      padding: 11px 13px;
+      border-left: 4px solid var(--teal);
+      background: var(--teal-2);
+      color: var(--text);
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+
+    .table-wrap {
+      width: 100%;
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 620px;
+    }
+
+    th,
+    td {
+      padding: 10px 11px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      font-size: 13px;
+    }
+
+    th {
+      background: var(--surface-2);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .json-summary {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .notice {
+      padding: 16px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .notice strong {
+      color: var(--red);
+    }
+
+    .notice p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .pager {
+      border-top: 1px solid var(--line);
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .toast {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      color: #fff;
+      background: var(--teal);
+      border-radius: var(--radius);
+      padding: 11px 13px;
+      font-size: 13px;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      transform: translateY(8px);
+      transition: 180ms ease;
+      pointer-events: none;
+      z-index: 30;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 980px) {
+      .topbar {
+        grid-template-columns: 1fr auto;
+      }
+
+      .label {
+        grid-column: 1 / -1;
+      }
+
+      .shell {
+        grid-template-columns: 1fr;
+        padding: 18px;
+      }
+
+      .catalog {
+        position: static;
+        max-height: 380px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .topbar {
+        grid-template-columns: 1fr;
+        padding: 12px 16px;
+      }
+
+      .shell {
+        padding: 14px;
+      }
+
+      .viewer-head,
+      .body-wrap,
+      .pager {
+        padding: 16px;
+      }
+
+      .actions,
+      .pager {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">B</div>
+      <div>
+        <strong>Barayamal</strong>
+        <span>First Nations Governance Commons</span>
+      </div>
+    </div>
+    <a class="btn" href="index.html">Open Demo</a>
+    <a class="btn" href="docs-index.html">Review Pack</a>
+    <div class="label">Public demo - fake data only</div>
+  </header>
+
+  <main class="shell">
+    <aside class="catalog" aria-label="Document catalog">
+      <div class="catalog-head">
+        <h2>Document Viewer</h2>
+        <input class="search" id="search" type="search" placeholder="Search documents and data" aria-label="Search documents and data">
+      </div>
+      <nav class="catalog-list" id="catalogList"></nav>
+    </aside>
+
+    <article class="viewer">
+      <div class="viewer-head">
+        <div class="crumb" id="crumb">Loading</div>
+        <div class="viewer-title">
+          <h1 id="title">Loading document</h1>
+          <p id="description">Preparing the viewer.</p>
+        </div>
+        <div class="meta-row" id="metaRow"></div>
+        <div class="actions">
+          <a class="btn primary" id="rawLink" href="#">Open Raw</a>
+          <a class="btn" id="downloadLink" href="#">Download</a>
+          <button class="btn" id="copyLink" type="button">Copy Link</button>
+        </div>
+      </div>
+      <div class="body-wrap">
+        <div class="notice">
+          <strong>Fake/sample package rule</strong>
+          <p>This viewer only opens whitelisted files included in the public demo package. It must not be used for real member data, cultural material, private records, or real voting data.</p>
+        </div>
+        <div class="doc-body" id="documentBody" aria-live="polite"></div>
+      </div>
+      <div class="pager">
+        <a class="btn" id="prevLink" href="#">Previous</a>
+        <a class="btn" id="nextLink" href="#">Next</a>
+      </div>
+    </article>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const CATALOG = [
+      { category: "Start Here", title: "Package index", path: "PACKAGE_INDEX.md", type: "markdown", description: "Recommended reading order and release rules." },
+      { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
+      { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
+      { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v1.0", path: "docs/public-demo-release-notes-v1.0.md", type: "markdown", description: "Document viewer and portal upgrade summary." },
+      { category: "Release Notes", title: "Release notes v0.9", path: "docs/public-demo-release-notes-v0.9.md", type: "markdown", description: "Review Pack hub and clean deployment upgrade summary." },
+
+      { category: "Decision Pack", title: "Scope options and budget model", path: "docs/scope-options-and-budget-model-v0.7.md", type: "markdown", description: "MVP, pilot, and fuller build options." },
+      { category: "Decision Pack", title: "RACI and decision rights", path: "docs/raci-and-decision-rights-v0.7.md", type: "markdown", description: "Ownership, consultation, and approval responsibilities." },
+      { category: "Decision Pack", title: "Risk register", path: "docs/risk-register-v0.7.md", type: "markdown", description: "Key delivery, governance, trust, and safety risks." },
+      { category: "Decision Pack", title: "Privacy impact pre-assessment", path: "docs/privacy-impact-pre-assessment-v0.7.md", type: "markdown", description: "Privacy questions before any real pilot or real data." },
+      { category: "Decision Pack", title: "MVP backlog prioritisation", path: "docs/mvp-backlog-prioritisation-v0.7.md", type: "markdown", description: "Build now, build later, and hold decisions." },
+
+      { category: "Governance Pack", title: "Concept note", path: "docs/first-nations-governance-commons-concept-note.md", type: "markdown", description: "Public summary of the First Nations Governance Commons idea." },
+      { category: "Governance Pack", title: "Governance charter draft", path: "docs/first-nations-governance-charter-draft.md", type: "markdown", description: "Draft authority, roles, and participation principles." },
+      { category: "Governance Pack", title: "Data sovereignty charter draft", path: "docs/data-sovereignty-charter-draft.md", type: "markdown", description: "Draft data control and stewardship rules." },
+      { category: "Governance Pack", title: "Pilot process rules", path: "docs/pilot-process-rules-2026-community-priorities-budget.md", type: "markdown", description: "Sample rules for the 2026 priorities and budget process." },
+      { category: "Governance Pack", title: "Sample survey and yarning templates", path: "docs/sample-survey-and-yarning-circle-templates.md", type: "markdown", description: "Sample offline input and survey templates." },
+
+      { category: "Advisor Review", title: "Advisor review guide", path: "docs/advisor-review-guide.md", type: "markdown", description: "How to review usefulness, readiness, and risk." },
+      { category: "Advisor Review", title: "Funder and partner brief", path: "docs/funder-and-partner-brief.md", type: "markdown", description: "Partner-facing case for support." },
+      { category: "Advisor Review", title: "Advisor outreach email", path: "docs/advisor-outreach-email-template.md", type: "markdown", description: "Email template for inviting advisor feedback." },
+      { category: "Advisor Review", title: "30-minute demo agenda", path: "docs/30-minute-demo-agenda.md", type: "markdown", description: "Suggested review session flow." },
+      { category: "Advisor Review", title: "Advisor feedback form", path: "docs/advisor-feedback-form.md", type: "markdown", description: "Structured advisor response template." },
+      { category: "Advisor Review", title: "Go/no-go scorecard", path: "docs/go-no-go-scorecard.md", type: "markdown", description: "Decision scorecard and automatic no-go conditions." },
+      { category: "Advisor Review", title: "Advisor synthesis template", path: "docs/advisor-synthesis-template-v0.7.md", type: "markdown", description: "Template for summarising advisor feedback." },
+      { category: "Advisor Review", title: "Advisor review tracker", path: "data/advisor-review-tracker.csv", type: "csv", description: "CSV tracker for advisor outreach and review status." },
+
+      { category: "Build Handoff", title: "Decidim demo configuration map", path: "docs/decidim-demo-configuration-map.md", type: "markdown", description: "How the static demo maps to Decidim concepts." },
+      { category: "Build Handoff", title: "Decidim sandbox build plan", path: "docs/decidim-sandbox-build-plan.md", type: "markdown", description: "Plan for configuring the fake-data Decidim sandbox." },
+      { category: "Build Handoff", title: "Decidim import dataset map", path: "docs/decidim-import-dataset-map.md", type: "markdown", description: "How sample data maps into Decidim structures." },
+      { category: "Build Handoff", title: "Decidim sandbox kickoff runbook", path: "docs/decidim-sandbox-kickoff-runbook.md", type: "markdown", description: "Builder kickoff steps and handoff sequence." },
+      { category: "Build Handoff", title: "Statement of work", path: "docs/statement-of-work-decidim-sandbox-v0.8.md", type: "markdown", description: "Scope, deliverables, milestones, and acceptance criteria." },
+      { category: "Build Handoff", title: "Technical requirements", path: "docs/technical-requirements-v0.8.md", type: "markdown", description: "Environment, configuration, integration, and support needs." },
+      { category: "Build Handoff", title: "Acceptance test plan", path: "docs/acceptance-test-plan-v0.8.md", type: "markdown", description: "Functional checks before sandbox handover." },
+      { category: "Build Handoff", title: "Security baseline checklist", path: "docs/security-baseline-checklist-v0.8.md", type: "markdown", description: "Minimum controls for the fake-data sandbox and pilot path." },
+      { category: "Build Handoff", title: "Data classification matrix", path: "docs/data-classification-matrix-v0.8.md", type: "markdown", description: "Public, internal, sensitive, and excluded data categories." },
+      { category: "Build Handoff", title: "Static demo deployment checklist", path: "docs/static-demo-deployment-checklist-v0.8.md", type: "markdown", description: "Static hosting release checks." },
+      { category: "Build Handoff", title: "Hosting decision note", path: "docs/hosting-decision-note.md", type: "markdown", description: "Public, private, hybrid, and controlled hosting considerations." },
+      { category: "Build Handoff", title: "Public demo launch checklist", path: "docs/public-demo-launch-checklist.md", type: "markdown", description: "Launch checks for fake-data public sharing." },
+      { category: "Build Handoff", title: "v0.6 completion note", path: "docs/v0.6-next-steps-completion-note.md", type: "markdown", description: "Earlier completion note retained for context." },
+
+      { category: "Sample Records", title: "Sample mandate record", path: "docs/sample-mandate-record.md", type: "markdown", description: "Fake sample Mandate Record." },
+      { category: "Sample Records", title: "Sample evidence pack", path: "docs/sample-evidence-pack.md", type: "markdown", description: "Fake sample evidence pack." },
+      { category: "Sample Data", title: "Process data", path: "data/sample-process-data.json", type: "json", description: "JSON sample process phases and metrics." },
+      { category: "Sample Data", title: "Proposals", path: "data/sample-proposals.csv", type: "csv", description: "CSV sample proposals." },
+      { category: "Sample Data", title: "Meetings", path: "data/sample-meetings.csv", type: "csv", description: "CSV sample meetings and yarning circles." },
+      { category: "Sample Data", title: "Accountability", path: "data/sample-accountability.csv", type: "csv", description: "CSV sample accountability items." },
+      { category: "Sample Data", title: "Survey questions", path: "data/sample-survey-questions.json", type: "json", description: "JSON sample survey questions." },
+      { category: "Sample Data", title: "Mandate record data", path: "data/sample-mandate-record.json", type: "json", description: "JSON sample Mandate Record fields." },
+      { category: "Sample Data", title: "Launch gates", path: "data/sample-launch-gates.json", type: "json", description: "JSON sample launch gate status." },
+      { category: "Sample Data", title: "Sandbox task board", path: "data/sandbox-task-board.csv", type: "csv", description: "CSV task board for sandbox setup." },
+      { category: "Sample Data", title: "Decision log template", path: "data/decision-log-template.csv", type: "csv", description: "CSV decision log template." }
+    ];
+
+    const elements = {
+      catalogList: document.getElementById("catalogList"),
+      search: document.getElementById("search"),
+      crumb: document.getElementById("crumb"),
+      title: document.getElementById("title"),
+      description: document.getElementById("description"),
+      metaRow: document.getElementById("metaRow"),
+      rawLink: document.getElementById("rawLink"),
+      downloadLink: document.getElementById("downloadLink"),
+      copyLink: document.getElementById("copyLink"),
+      body: document.getElementById("documentBody"),
+      prevLink: document.getElementById("prevLink"),
+      nextLink: document.getElementById("nextLink"),
+      toast: document.getElementById("toast")
+    };
+
+    function viewerHref(path) {
+      return `document.html?file=${encodeURIComponent(path)}`;
+    }
+
+    function getRequestedPath() {
+      const requested = new URLSearchParams(window.location.search).get("file");
+      if (!requested) return "docs/decision-memo-v0.7.md";
+      return requested.replace(/^\/+/, "");
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+    }
+
+    function inlineMarkdown(value) {
+      let output = escapeHtml(value);
+      output = output.replace(/`([^`]+)`/g, "<code>$1</code>");
+      output = output.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+      output = output.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, label, href) => {
+        const safeHref = escapeHtml(routeInlineHref(href.trim()));
+        return `<a href="${safeHref}">${label}</a>`;
+      });
+      return output;
+    }
+
+    function routeInlineHref(href) {
+      if (/^(https?:|mailto:|#)/i.test(href)) return href;
+      const clean = href.replace(/^\.\//, "");
+      if (CATALOG.some(item => item.path === clean)) return viewerHref(clean);
+      return href;
+    }
+
+    function isTableSeparator(line) {
+      return /^\s*\|?[\s:-]+\|[\s|:-]+\|?\s*$/.test(line);
+    }
+
+    function splitTableRow(line) {
+      return line.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map(cell => cell.trim());
+    }
+
+    function renderMarkdown(markdown) {
+      const lines = markdown.replace(/\r\n/g, "\n").split("\n");
+      const html = [];
+      let listType = "";
+      let inCode = false;
+      let codeLines = [];
+
+      function closeList() {
+        if (listType) {
+          html.push(`</${listType}>`);
+          listType = "";
+        }
+      }
+
+      for (let i = 0; i < lines.length; i += 1) {
+        const line = lines[i];
+        const trimmed = line.trim();
+
+        if (trimmed.startsWith("```")) {
+          if (inCode) {
+            html.push(`<pre>${escapeHtml(codeLines.join("\n"))}</pre>`);
+            codeLines = [];
+            inCode = false;
+          } else {
+            closeList();
+            inCode = true;
+          }
+          continue;
+        }
+
+        if (inCode) {
+          codeLines.push(line);
+          continue;
+        }
+
+        if (!trimmed) {
+          closeList();
+          continue;
+        }
+
+        const heading = trimmed.match(/^(#{1,4})\s+(.+)$/);
+        if (heading) {
+          closeList();
+          const level = heading[1].length;
+          html.push(`<h${level}>${inlineMarkdown(heading[2])}</h${level}>`);
+          continue;
+        }
+
+        if (trimmed === "---") {
+          closeList();
+          html.push("<hr>");
+          continue;
+        }
+
+        if (trimmed.startsWith("> ")) {
+          closeList();
+          html.push(`<blockquote>${inlineMarkdown(trimmed.slice(2))}</blockquote>`);
+          continue;
+        }
+
+        if (line.includes("|") && lines[i + 1] && isTableSeparator(lines[i + 1])) {
+          closeList();
+          const headers = splitTableRow(line);
+          i += 2;
+          const rows = [];
+          while (i < lines.length && lines[i].includes("|") && lines[i].trim()) {
+            rows.push(splitTableRow(lines[i]));
+            i += 1;
+          }
+          i -= 1;
+          html.push(renderTable(headers, rows));
+          continue;
+        }
+
+        const bullet = trimmed.match(/^[-*]\s+(.+)$/);
+        if (bullet) {
+          if (listType !== "ul") {
+            closeList();
+            listType = "ul";
+            html.push("<ul>");
+          }
+          html.push(`<li>${inlineMarkdown(bullet[1])}</li>`);
+          continue;
+        }
+
+        const ordered = trimmed.match(/^\d+\.\s+(.+)$/);
+        if (ordered) {
+          if (listType !== "ol") {
+            closeList();
+            listType = "ol";
+            html.push("<ol>");
+          }
+          html.push(`<li>${inlineMarkdown(ordered[1])}</li>`);
+          continue;
+        }
+
+        closeList();
+        html.push(`<p>${inlineMarkdown(trimmed)}</p>`);
+      }
+
+      closeList();
+      if (inCode) html.push(`<pre>${escapeHtml(codeLines.join("\n"))}</pre>`);
+      return html.join("");
+    }
+
+    function renderTable(headers, rows) {
+      const head = headers.map(header => `<th>${inlineMarkdown(header)}</th>`).join("");
+      const body = rows.map(row => `<tr>${headers.map((_, index) => `<td>${inlineMarkdown(row[index] || "")}</td>`).join("")}</tr>`).join("");
+      return `<div class="table-wrap"><table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>`;
+    }
+
+    function parseCsv(csv) {
+      const rows = [];
+      let row = [];
+      let cell = "";
+      let inQuotes = false;
+
+      for (let i = 0; i < csv.length; i += 1) {
+        const char = csv[i];
+        const next = csv[i + 1];
+        if (char === '"' && inQuotes && next === '"') {
+          cell += '"';
+          i += 1;
+        } else if (char === '"') {
+          inQuotes = !inQuotes;
+        } else if (char === "," && !inQuotes) {
+          row.push(cell);
+          cell = "";
+        } else if ((char === "\n" || char === "\r") && !inQuotes) {
+          if (char === "\r" && next === "\n") i += 1;
+          row.push(cell);
+          if (row.some(value => value !== "")) rows.push(row);
+          row = [];
+          cell = "";
+        } else {
+          cell += char;
+        }
+      }
+
+      row.push(cell);
+      if (row.some(value => value !== "")) rows.push(row);
+      return rows;
+    }
+
+    function renderCsv(csv) {
+      const rows = parseCsv(csv);
+      if (!rows.length) return "<p>No rows found in this CSV file.</p>";
+      return renderTable(rows[0], rows.slice(1));
+    }
+
+    function renderJson(jsonText) {
+      const parsed = JSON.parse(jsonText);
+      const summary = Array.isArray(parsed)
+        ? [`Array`, `${parsed.length} records`]
+        : [`Object`, ...Object.keys(parsed).slice(0, 8)];
+      const chips = summary.map(item => `<span class="pill green">${escapeHtml(item)}</span>`).join("");
+      return `<div class="json-summary">${chips}</div><pre class="json-pre">${escapeHtml(JSON.stringify(parsed, null, 2))}</pre>`;
+    }
+
+    function showToast(message) {
+      elements.toast.textContent = message;
+      elements.toast.classList.add("show");
+      window.clearTimeout(showToast.timer);
+      showToast.timer = window.setTimeout(() => elements.toast.classList.remove("show"), 2200);
+    }
+
+    function renderCatalog(activePath) {
+      const query = elements.search.value.trim().toLowerCase();
+      const filtered = CATALOG.filter(item => {
+        const haystack = `${item.category} ${item.title} ${item.path} ${item.description}`.toLowerCase();
+        return !query || haystack.includes(query);
+      });
+      const groups = [...new Set(filtered.map(item => item.category))];
+      elements.catalogList.innerHTML = groups.map(group => {
+        const links = filtered
+          .filter(item => item.category === group)
+          .map(item => `
+            <a class="catalog-link ${item.path === activePath ? "is-active" : ""}" href="${viewerHref(item.path)}">
+              <strong>${escapeHtml(item.title)}</strong>
+              <span>${escapeHtml(item.path)}</span>
+            </a>
+          `).join("");
+        return `<div class="catalog-group">${escapeHtml(group)}</div>${links}`;
+      }).join("") || `<p style="padding: 10px; color: var(--muted);">No matching files.</p>`;
+    }
+
+    function basename(path) {
+      return path.split("/").pop() || "download.txt";
+    }
+
+    function renderPager(doc) {
+      const index = CATALOG.findIndex(item => item.path === doc.path);
+      const previous = CATALOG[index - 1];
+      const next = CATALOG[index + 1];
+      elements.prevLink.textContent = previous ? `Previous: ${previous.title}` : "Previous";
+      elements.nextLink.textContent = next ? `Next: ${next.title}` : "Next";
+      elements.prevLink.href = previous ? viewerHref(previous.path) : "#";
+      elements.nextLink.href = next ? viewerHref(next.path) : "#";
+      elements.prevLink.toggleAttribute("disabled", !previous);
+      elements.nextLink.toggleAttribute("disabled", !next);
+    }
+
+    async function loadDocument() {
+      const requestedPath = getRequestedPath();
+      const doc = CATALOG.find(item => item.path === requestedPath);
+      renderCatalog(doc ? doc.path : requestedPath);
+
+      if (!doc) {
+        elements.crumb.textContent = "Unavailable";
+        elements.title.textContent = "File is not in the public viewer whitelist";
+        elements.description.textContent = requestedPath;
+        elements.metaRow.innerHTML = `<span class="pill">Blocked</span>`;
+        elements.body.innerHTML = `<p>This viewer only opens files that are part of the approved public demo package catalog.</p>`;
+        elements.rawLink.setAttribute("disabled", "");
+        elements.downloadLink.setAttribute("disabled", "");
+        renderPager(CATALOG[0]);
+        return;
+      }
+
+      elements.crumb.textContent = doc.category;
+      elements.title.textContent = doc.title;
+      elements.description.textContent = doc.description;
+      elements.metaRow.innerHTML = `
+        <span class="pill green">${escapeHtml(doc.type.toUpperCase())}</span>
+        <span class="pill">${escapeHtml(doc.path)}</span>
+      `;
+      elements.rawLink.href = doc.path;
+      elements.downloadLink.href = doc.path;
+      elements.downloadLink.setAttribute("download", basename(doc.path));
+      renderPager(doc);
+
+      try {
+        const response = await fetch(doc.path, { cache: "no-store" });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const text = await response.text();
+        elements.metaRow.insertAdjacentHTML("beforeend", `<span class="pill">${text.length.toLocaleString()} chars</span>`);
+        if (doc.type === "markdown") {
+          elements.body.innerHTML = renderMarkdown(text);
+        } else if (doc.type === "csv") {
+          elements.body.innerHTML = renderCsv(text);
+        } else if (doc.type === "json") {
+          elements.body.innerHTML = renderJson(text);
+        } else {
+          elements.body.innerHTML = `<pre>${escapeHtml(text)}</pre>`;
+        }
+        document.title = `${doc.title} - First Nations Governance Commons`;
+      } catch (error) {
+        elements.body.innerHTML = `<p>Could not load this file: ${escapeHtml(error.message)}</p>`;
+      }
+    }
+
+    elements.search.addEventListener("input", () => renderCatalog(getRequestedPath()));
+    elements.copyLink.addEventListener("click", async () => {
+      const link = window.location.href;
+      try {
+        await navigator.clipboard.writeText(link);
+        showToast("Viewer link copied");
+      } catch (error) {
+        showToast("Copy unavailable in this browser");
+      }
+    });
+
+    loadDocument();
+  </script>
+</body>
+</html>

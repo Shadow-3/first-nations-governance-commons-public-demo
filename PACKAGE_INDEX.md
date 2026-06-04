@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v0.9  
+Version: v1.0  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -10,10 +10,11 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 
 1. `index.html` - public demo prototype.
 2. `docs-index.html` - reviewer-facing Review Pack hub.
-3. `README.md` - overview and review instructions.
-4. `docs/decision-memo-v0.7.md` - current recommended decision.
-5. `docs/statement-of-work-decidim-sandbox-v0.8.md` - provider/developer scope.
-6. `docs/public-demo-release-notes-v0.9.md` - v0.9 release summary.
+3. `document.html` - rendered document and data viewer.
+4. `README.md` - overview and review instructions.
+5. `docs/decision-memo-v0.7.md` - current recommended decision.
+6. `docs/statement-of-work-decidim-sandbox-v0.8.md` - provider/developer scope.
+7. `docs/public-demo-release-notes-v1.0.md` - v1.0 release summary.
 
 ## Recommended Reading Order
 
@@ -70,6 +71,7 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 ## Public Deployment Notes
 
 - `docs-index.html` is the public reviewer hub.
+- `document.html` renders Markdown, CSV, and JSON files from a whitelisted package catalog.
 - `404.html` gives visitors a clean recovery page.
 - `robots.txt` allows indexing of the demo package.
 - QA screenshots and design concept images are retained locally as evidence, but excluded from the public deployment bundle.

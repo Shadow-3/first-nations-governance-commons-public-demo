@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v0.9
+Current package version: v1.0
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -14,6 +14,8 @@ This folder contains a dependency-free public demo of the proposed First Nations
 Open `index.html` in a browser to view the prototype.
 
 Open `docs-index.html` to use the reviewer-facing Review Pack hub.
+
+Open `document.html` to read package documents and sample data in the rendered public viewer.
 
 The demo shows:
 
@@ -45,6 +47,7 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v1.0.md`
 - `docs/public-demo-release-notes-v0.9.md`
 - `docs/decision-memo-v0.7.md`
 - `docs/raci-and-decision-rights-v0.7.md`
@@ -69,6 +72,7 @@ The demo shows:
 - `PACKAGE_INDEX.md`
 - `package-manifest.json`
 - `docs-index.html`
+- `document.html`
 - `404.html`
 - `robots.txt`
 
@@ -168,6 +172,20 @@ The v0.9 package adds:
 - Public deploy cleanup so QA screenshots and design concept images stay local rather than becoming public release assets.
 
 Use this version for public sharing while the fake-data Decidim sandbox is being quoted or prepared.
+
+## v1.0 Review Portal Upgrade
+
+The v1.0 package adds:
+
+- `document.html` as a rendered document and data viewer.
+- Searchable catalog sidebar for package files, decision materials, governance drafts, advisor files, build handoff files, sample records, and sample data.
+- Markdown rendering for review documents.
+- CSV table rendering for sample data and trackers.
+- JSON summaries and formatted JSON views.
+- Raw-file, download, copy-link, previous, and next actions.
+- A whitelist rule so the viewer only opens approved public package files.
+
+Use this version for advisor/funder/builder sharing because reviewers can now stay inside the public demo instead of opening raw Markdown/CSV/JSON files.
 
 ## Next Build Step
 
