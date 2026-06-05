@@ -1,0 +1,920 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>Organisation Onboarding - First Nations Governance Commons</title>
+  <style>
+    :root {
+      --bg: #f6f7f5;
+      --panel: #ffffff;
+      --ink: #10211f;
+      --muted: #546865;
+      --line: #ccd8d5;
+      --teal: #0f7f70;
+      --teal-dark: #0a5d53;
+      --mint: #dff3ea;
+      --gold: #f5c451;
+      --amber: #fff3cf;
+      --red: #b94033;
+      --red-soft: #f8dfda;
+      --blue: #245f9d;
+      --blue-soft: #e2edf8;
+      --violet: #5f4fa2;
+      --violet-soft: #eee9fb;
+      --shadow: 0 18px 45px rgba(13, 42, 36, 0.12);
+      --radius: 8px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        linear-gradient(140deg, rgba(15, 127, 112, 0.08), transparent 28rem),
+        linear-gradient(320deg, rgba(95, 79, 162, 0.08), transparent 32rem),
+        var(--bg);
+      color: var(--ink);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 16px 24px;
+      background: rgba(255, 255, 255, 0.9);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 260px;
+    }
+
+    .mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: var(--teal);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+    }
+
+    .brand strong,
+    .brand span {
+      display: block;
+      line-height: 1.2;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn,
+    button,
+    select {
+      min-height: 40px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+      font-weight: 800;
+      padding: 0 16px;
+    }
+
+    button,
+    select {
+      cursor: pointer;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .btn.primary,
+    button.primary {
+      background: var(--teal);
+      border-color: var(--teal);
+      color: #fff;
+    }
+
+    .btn:hover,
+    button:hover,
+    select:hover {
+      border-color: var(--teal);
+    }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      border-radius: 999px;
+      background: var(--amber);
+      color: #7b5200;
+      padding: 0 14px;
+      font-weight: 900;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    main {
+      width: min(1280px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 64px 0 44px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(34px, 6vw, 64px);
+      line-height: 0.96;
+      letter-spacing: 0;
+    }
+
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .hero p {
+      max-width: 930px;
+      font-size: 17px;
+      margin-bottom: 0;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 26px 0 34px;
+    }
+
+    .metric {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 34px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    section {
+      margin-top: 36px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .section-head h2 {
+      font-size: 26px;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .section-head p {
+      margin-bottom: 0;
+    }
+
+    .segmented,
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .segmented button {
+      min-width: 86px;
+    }
+
+    .control-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .grid,
+    .track-grid,
+    .gate-grid,
+    .data-grid,
+    .resource-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .track-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .gate-grid,
+    .data-grid,
+    .resource-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card,
+    .track-card,
+    .gate-card,
+    .data-card,
+    .selected-panel,
+    .resource {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: 0 8px 28px rgba(13, 42, 36, 0.08);
+    }
+
+    .card.active,
+    .track-card.active {
+      border-color: var(--teal);
+      box-shadow: 0 0 0 1px var(--teal), var(--shadow);
+    }
+
+    .card-head,
+    .gate-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .card-head h3,
+    .gate-row h3 {
+      margin-bottom: 0;
+      font-size: 20px;
+      line-height: 1.1;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      border-radius: 999px;
+      padding: 0 12px;
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .badge.ready {
+      background: var(--mint);
+      color: #08735f;
+    }
+
+    .badge.hold {
+      background: var(--amber);
+      color: #815600;
+    }
+
+    .badge.blocked {
+      background: var(--red-soft);
+      color: var(--red);
+    }
+
+    .badge.open {
+      background: var(--blue-soft);
+      color: var(--blue);
+    }
+
+    .badge.restricted {
+      background: var(--violet-soft);
+      color: var(--violet);
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .detail {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .detail small {
+      display: block;
+      color: var(--muted);
+      text-transform: uppercase;
+      font-weight: 900;
+      margin-bottom: 6px;
+      font-size: 11px;
+    }
+
+    .detail span {
+      display: block;
+      line-height: 1.45;
+    }
+
+    .selected-panel {
+      position: sticky;
+      top: 96px;
+      box-shadow: var(--shadow);
+    }
+
+    .brief {
+      background: #fffaf1;
+      border: 1px solid #e9ca8b;
+      border-radius: var(--radius);
+      padding: 14px;
+      white-space: pre-wrap;
+      overflow-x: auto;
+      font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    }
+
+    .resource {
+      display: grid;
+      gap: 6px;
+    }
+
+    .resource strong {
+      color: var(--teal-dark);
+    }
+
+    .resource span {
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    footer {
+      margin-top: 44px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+
+    @media (max-width: 980px) {
+      .topbar,
+      .hero,
+      .section-head,
+      .control-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar,
+      .hero,
+      .section-head {
+        align-items: stretch;
+      }
+
+      .nav,
+      .actions {
+        justify-content: stretch;
+      }
+
+      .nav .btn,
+      .actions .btn,
+      .actions button,
+      .segmented button,
+      .toolbar select {
+        flex: 1 1 160px;
+      }
+
+      .brand {
+        min-width: 0;
+      }
+
+      .metrics,
+      .grid,
+      .track-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .selected-panel {
+        position: static;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .topbar {
+        position: static;
+        padding: 16px;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      main {
+        width: calc(100% - 32px);
+        padding-top: 56px;
+      }
+
+      .brand {
+        width: 100%;
+      }
+
+      .nav {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .metrics,
+      .grid,
+      .track-grid,
+      .gate-grid,
+      .data-grid,
+      .resource-grid,
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .btn,
+      button,
+      select {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="mark">O</span>
+      <span>
+        <strong>Organisation Onboarding</strong>
+        <span>First Nations Governance Commons</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a class="btn" href="index.html">Public Demo</a>
+      <a class="btn" href="sandbox-launcher.html">Sandbox Launcher</a>
+      <a class="btn" href="seed-studio.html">Seed Studio</a>
+      <a class="btn" href="build-partner-desk.html">Partner Desk</a>
+      <a class="btn" href="build-delivery-control.html">Delivery Control</a>
+      <a class="btn primary" href="organisation-onboarding.html">Org Onboarding</a>
+      <a class="btn" href="document.html?file=docs%2Ftoastmasters-first-nations-sample-test-v2.5.md">Sample Test</a>
+      <div class="label">Controlled sample only</div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1>Organisation Onboarding</h1>
+        <p>Test whether a First Nations organisation or initiative can join the Governance Commons model without turning the public demo into a real membership system. The controlled sample is Toastmasters First Nations, using fake readiness data while real intake, private contact details, official paperwork, and payments stay outside the demo.</p>
+      </div>
+      <div class="actions">
+        <a class="btn" href="document.html?file=data%2Forganisation-onboarding-package-v2.5.json">Onboarding JSON</a>
+        <button class="primary" type="button" onclick="downloadBrief()">Download Brief</button>
+      </div>
+    </div>
+
+    <div class="metrics" aria-label="Onboarding metrics">
+      <div class="metric"><strong id="trackMetric">0</strong><span>Join tracks</span></div>
+      <div class="metric"><strong id="gateMetric">0</strong><span>Readiness gates</span></div>
+      <div class="metric"><strong id="dataMetric">0</strong><span>Data rules</span></div>
+      <div class="metric"><strong id="componentMetric">0</strong><span>Decidim mappings</span></div>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Controlled Sample Initiative</h2>
+          <p>First Nations Toastmasters is modelled as a sample initiative space, not as official membership, payment, or application infrastructure.</p>
+        </div>
+      </div>
+      <div class="control-layout">
+        <div class="grid" id="initiativeGrid"></div>
+        <aside class="selected-panel" aria-live="polite">
+          <div class="card-head">
+            <h2 id="selectedInitiativeName">Initiative</h2>
+            <span class="badge hold" id="selectedInitiativeStatus">Sample</span>
+          </div>
+          <p id="selectedInitiativeSummary"></p>
+          <div class="detail-grid">
+            <div class="detail"><small>Public purpose</small><span id="selectedPurpose"></span></div>
+            <div class="detail"><small>Real intake boundary</small><span id="selectedBoundary"></span></div>
+            <div class="detail"><small>Sample success test</small><span id="selectedSuccess"></span></div>
+            <div class="detail"><small>No-go rule</small><span id="selectedNoGo"></span></div>
+          </div>
+          <h3>Generated Onboarding Brief</h3>
+          <pre class="brief" id="onboardingBrief"></pre>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Join Tracks</h2>
+          <p>Test whether people and organisations can choose a pathway without being counted as official members too early.</p>
+        </div>
+        <div class="segmented" aria-label="Track status filters">
+          <button class="primary" type="button" data-track-filter="All">All</button>
+          <button type="button" data-track-filter="Ready">Ready</button>
+          <button type="button" data-track-filter="Hold">Hold</button>
+          <button type="button" data-track-filter="Blocked">Blocked</button>
+        </div>
+      </div>
+      <div class="track-grid" id="trackGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Readiness Gates</h2>
+          <p>These gates decide whether the sample can move from public coordination into any real intake, charter, or pilot workflow.</p>
+        </div>
+        <div class="toolbar">
+          <select id="gateTheme" aria-label="Filter gates by theme"></select>
+        </div>
+      </div>
+      <div class="gate-grid" id="gateGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Data Boundary</h2>
+          <p>Public demo data is separated from real Toastmasters intake, private access needs, official applications, payment, and member records.</p>
+        </div>
+        <div class="toolbar">
+          <select id="dataLevel" aria-label="Filter data rules by level"></select>
+        </div>
+      </div>
+      <div class="data-grid" id="dataGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Decidim Space Mapping</h2>
+          <p>These sample mappings show what can be public in Decidim and what must stay outside until a real privacy and authority process exists.</p>
+        </div>
+      </div>
+      <div class="gate-grid" id="componentGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Onboarding Resources</h2>
+          <p>Open the files behind the v2.5 controlled organisation and initiative onboarding test.</p>
+        </div>
+      </div>
+      <div class="resource-grid">
+        <a class="resource" href="document.html?file=docs%2Forganisation-initiative-onboarding-playbook-v2.5.md"><strong>Onboarding playbook</strong><span>Rules for First Nations organisation and initiative onboarding.</span></a>
+        <a class="resource" href="document.html?file=docs%2Ftoastmasters-first-nations-sample-test-v2.5.md"><strong>Toastmasters sample test</strong><span>Controlled test plan for the First Nations Toastmasters initiative.</span></a>
+        <a class="resource" href="document.html?file=data%2Forganisation-onboarding-gates-v2.5.csv"><strong>Readiness gates CSV</strong><span>Sample gates for authority, privacy, charter readiness, and data safety.</span></a>
+        <a class="resource" href="document.html?file=data%2Ftoastmasters-initiative-tracks-v2.5.csv"><strong>Join tracks CSV</strong><span>Founding, demo-first, supporter, organisation, and not-sure tracks.</span></a>
+        <a class="resource" href="document.html?file=data%2Ftoastmasters-data-boundary-v2.5.csv"><strong>Data boundary CSV</strong><span>Public, restricted, and never-public data rules.</span></a>
+        <a class="resource" href="document.html?file=data%2Forganisation-initiative-component-map-v2.5.csv"><strong>Component map CSV</strong><span>Decidim space/component mapping for the sample initiative.</span></a>
+        <a class="resource" href="document.html?file=data%2Forganisation-onboarding-package-v2.5.json"><strong>Onboarding JSON</strong><span>Machine-readable v2.5 sample package.</span></a>
+        <a class="resource" href="document.html?file=docs%2Fpublic-demo-release-notes-v2.5.md"><strong>Release notes v2.5</strong><span>What changed in the onboarding upgrade.</span></a>
+      </div>
+    </section>
+
+    <footer>
+      Version v2.5. Initial developer/custodian: Barayamal / Dean Foley. Controlled sample initiative only.
+    </footer>
+  </main>
+
+  <script>
+    const initiatives = [
+      {
+        id: "I-001",
+        name: "Toastmasters First Nations",
+        status: "Controlled sample",
+        owner: "Barayamal / Dean Foley",
+        stage: "Club in formation",
+        summary: "A proposed online Toastmasters club in formation for First Nations leadership, storytelling, confidence, and public speaking.",
+        purpose: "Public coordination, demo information, charter-readiness tracking, and sample governance design.",
+        boundary: "Real intake remains on the Barayamal page and official Toastmasters paperwork. No private contact, address, access-need, member-number, payment, or signature data is stored here.",
+        success: "The sample can show tracks, gates, public questions, meeting info, and readiness evidence without counting anyone as an official member.",
+        noGo: "Stop if the demo collects or publishes real member records, private contact data, access needs, official applications, or payment information."
+      }
+    ];
+
+    const tracks = [
+      { id: "T-001", name: "Founding member now", status: "Hold", role: "Individual", publicUse: "Show pathway and requirements only", privateBoundary: "Real contact, address, application, age, signature, member number, and payment details stay outside the public demo" },
+      { id: "T-002", name: "Demo first", status: "Ready", role: "Individual", publicUse: "Register interest in a public sample pathway and view demo agenda", privateBoundary: "Real meeting link and attendance access needs stay in the Barayamal intake workflow" },
+      { id: "T-003", name: "Sponsor, mentor, or supporter", status: "Ready", role: "Supporter", publicUse: "Model support offers without counting supporter-only contacts as charter members", privateBoundary: "Real supporter identity and contact details stay outside the demo" },
+      { id: "T-004", name: "First Nations organisation supporter", status: "Ready", role: "Organisation", publicUse: "Test whether organisations can join as referrers, hosts, mentors, or community partners", privateBoundary: "No organisation receives authority over member data, charter acceptance, or community decisions through the public demo" },
+      { id: "T-005", name: "Not sure yet", status: "Ready", role: "Individual", publicUse: "Allow low-pressure information gathering without premature member counting", privateBoundary: "No one is treated as a charter-ready member until they choose the founding-member path" }
+    ];
+
+    const gates = [
+      { id: "G-001", theme: "Authority", title: "Controlled sample status clear", status: "Required", owner: "Barayamal", evidence: "Page states the initiative is a controlled sample and not official membership infrastructure", stop: "Public page implies official membership or charter acceptance" },
+      { id: "G-002", theme: "Data", title: "Real intake stays off demo", status: "Required", owner: "Barayamal", evidence: "Real intake remains on Barayamal/official Toastmasters forms", stop: "Public demo collects private contact, address, member number, access need, payment, or signature data" },
+      { id: "G-003", theme: "Charter", title: "20 founding member target modelled", status: "Open", owner: "Launch team", evidence: "Readiness dashboard can show fake count against 20-person charter target", stop: "Fake counts are treated as real charter roster" },
+      { id: "G-004", theme: "Charter", title: "17 non-dual gate modelled", status: "Open", owner: "Launch team", evidence: "Sample gate separates existing member/dual/supporter tracks from new/reinstating/transfer pathways", stop: "Supporters or demo-first contacts are counted as charter-ready members" },
+      { id: "G-005", theme: "Charter", title: "Officer slate modelled", status: "Open", owner: "Launch team", evidence: "Sample roles include President, one Vice President, and Secretary or Secretary/Treasurer held by three people", stop: "Officer interest is published with real names or treated as elected" },
+      { id: "G-006", theme: "Privacy", title: "Data classification approved", status: "Hold", owner: "Privacy reviewer", evidence: "Public, restricted, and never-public fields are classified before any live import", stop: "Real personal data appears in public demo, GitHub, screenshots, or Decidim exports" },
+      { id: "G-007", theme: "Access", title: "Demo access needs protected", status: "Hold", owner: "Launch team", evidence: "Access needs are handled privately, not published in public pages or issue trackers", stop: "Access needs become visible in public demo data" },
+      { id: "G-008", theme: "Organisation", title: "Organisation role boundary clear", status: "Ready", owner: "Barayamal", evidence: "Organisations can be supporters, referrers, hosts, mentors, or reviewers without controlling member data", stop: "Organisation role implies authority over Toastmasters acceptance or community/member records" },
+      { id: "G-009", theme: "Official process", title: "Official paperwork separate", status: "Required", owner: "Toastmasters launch team", evidence: "Official applications, roster, officer forms, sponsorship/payment reconciliation, and charter submission stay outside this public package", stop: "Governance Commons is treated as official Toastmasters paperwork" },
+      { id: "G-010", theme: "Safety", title: "Cultural safety and moderation path", status: "Hold", owner: "Barayamal", evidence: "Public participation rules, moderation path, and support contact are defined before live comments", stop: "Live public discussion opens without moderation or support path" },
+      { id: "G-011", theme: "Decidim", title: "Public components use fake data first", status: "Ready", owner: "Builder", evidence: "Pages, meetings, proposals, survey, and accountability use sample records only", stop: "Real member or application data is imported into public Decidim space" },
+      { id: "G-012", theme: "Decision", title: "Real pilot approval separate", status: "Required", owner: "Community authority", evidence: "Any real First Nations organisation onboarding requires separate authority, privacy, data, cultural safety, hosting, and support approvals", stop: "Sample initiative is treated as real community authority" }
+    ];
+
+    const dataRules = [
+      { id: "D-001", item: "Public initiative summary", level: "Public", rule: "Can be shown as sample public information", example: "Purpose, stage, demo agenda, public FAQ" },
+      { id: "D-002", item: "Fake readiness counts", level: "Public", rule: "Can be shown only when labelled fake/sample", example: "Sample progress toward 20 charter target" },
+      { id: "D-003", item: "Track choice", level: "Restricted", rule: "Real choices stay in private intake; demo may show aggregate or fake examples", example: "Founding member now, demo first, supporter" },
+      { id: "D-004", item: "Names and contact details", level: "Never public", rule: "Do not store or publish in public demo, repo, screenshots, or Decidim exports", example: "Email, phone, address, preferred contact method" },
+      { id: "D-005", item: "Toastmasters member numbers", level: "Never public", rule: "Official records only, never public sample data", example: "Existing member number or previous club details" },
+      { id: "D-006", item: "Access needs", level: "Restricted", rule: "Handle privately with consent and minimum necessary access", example: "Assistive technology needs, attendance support" },
+      { id: "D-007", item: "Officer interest", level: "Restricted", rule: "Can be summarised publicly only after consent and official confirmation", example: "President, Vice President, Secretary/Treasurer interest" },
+      { id: "D-008", item: "Official applications and signatures", level: "Never public", rule: "Stay in official Toastmasters process only", example: "Charter Membership Application and signatures" },
+      { id: "D-009", item: "Payment or sponsorship reconciliation", level: "Never public", rule: "No card/payment details in public demo", example: "Charter fee, new-member fee, dues, transfer/dual status" },
+      { id: "D-010", item: "Organisation support offer", level: "Restricted", rule: "Can be public only as an approved role, not private contact or authority claim", example: "Referral partner, mentor support, host offer" }
+    ];
+
+    const components = [
+      { id: "C-001", space: "Assembly", component: "Page", sampleUse: "Public overview for Toastmasters First Nations", boundary: "No official membership status" },
+      { id: "C-002", space: "Process", component: "Meetings", sampleUse: "Online demo agenda and sample meeting rhythm", boundary: "Real meeting link is shared after private signup review" },
+      { id: "C-003", space: "Process", component: "Survey", sampleUse: "Fake track-selection and readiness questions", boundary: "No real contact, age, address, access need, or member-number fields" },
+      { id: "C-004", space: "Process", component: "Proposals", sampleUse: "Club culture, meeting theme, and officer-support ideas", boundary: "No private member nominations or personal stories without consent" },
+      { id: "C-005", space: "Process", component: "Accountability", sampleUse: "20-member, 17 non-dual, officer slate, paperwork, and sponsorship gates", boundary: "Sample progress only until verified privately" },
+      { id: "C-006", space: "Assembly", component: "Page", sampleUse: "Organisation role and supporter boundaries", boundary: "Support does not confer authority over member data or charter acceptance" },
+      { id: "C-007", space: "Admin", component: "Moderation", sampleUse: "Public question and comment rules before live interaction", boundary: "No live public comments until moderation and support path are approved" }
+    ];
+
+    let activeInitiative = "I-001";
+    let activeTrackFilter = "All";
+    let activeGateTheme = "All";
+    let activeDataLevel = "All";
+
+    function tone(status) {
+      if (status === "Ready" || status === "Required") return "ready";
+      if (status === "Hold" || status === "Controlled sample") return "hold";
+      if (status === "Blocked" || status === "Never public") return "blocked";
+      if (status === "Restricted") return "restricted";
+      return "open";
+    }
+
+    function renderInitiatives() {
+      document.getElementById("initiativeGrid").innerHTML = initiatives.map(item => `
+        <article class="card ${item.id === activeInitiative ? "active" : ""}">
+          <div class="card-head">
+            <h3>${item.name}</h3>
+            <span class="badge ${tone(item.status)}">${item.status}</span>
+          </div>
+          <p>${item.summary}</p>
+          <div class="detail-grid">
+            <div class="detail"><small>Custodian</small><span>${item.owner}</span></div>
+            <div class="detail"><small>Stage</small><span>${item.stage}</span></div>
+          </div>
+          <button class="primary" type="button" onclick="selectInitiative('${item.id}')">Use Sample</button>
+        </article>
+      `).join("");
+    }
+
+    function renderSelectedInitiative() {
+      const item = initiatives.find(record => record.id === activeInitiative);
+      document.getElementById("selectedInitiativeName").textContent = item.name;
+      document.getElementById("selectedInitiativeStatus").textContent = item.status;
+      document.getElementById("selectedInitiativeStatus").className = `badge ${tone(item.status)}`;
+      document.getElementById("selectedInitiativeSummary").textContent = item.summary;
+      document.getElementById("selectedPurpose").textContent = item.purpose;
+      document.getElementById("selectedBoundary").textContent = item.boundary;
+      document.getElementById("selectedSuccess").textContent = item.success;
+      document.getElementById("selectedNoGo").textContent = item.noGo;
+    }
+
+    function renderTracks() {
+      const selected = activeTrackFilter === "All" ? tracks : tracks.filter(item => item.status === activeTrackFilter);
+      document.getElementById("trackGrid").innerHTML = selected.map(item => `
+        <article class="track-card">
+          <div class="card-head">
+            <h3>${item.name}</h3>
+            <span class="badge ${tone(item.status)}">${item.status}</span>
+          </div>
+          <div class="detail-grid">
+            <div class="detail"><small>Role type</small><span>${item.role}</span></div>
+            <div class="detail"><small>Public use</small><span>${item.publicUse}</span></div>
+          </div>
+          <div class="detail"><small>Private boundary</small><span>${item.privateBoundary}</span></div>
+        </article>
+      `).join("");
+    }
+
+    function renderGateFilters() {
+      const options = ["All", ...Array.from(new Set(gates.map(item => item.theme)))];
+      document.getElementById("gateTheme").innerHTML = options.map(value => `<option value="${value}" ${value === activeGateTheme ? "selected" : ""}>${value === "All" ? "All gate themes" : value}</option>`).join("");
+    }
+
+    function renderGates() {
+      const selected = activeGateTheme === "All" ? gates : gates.filter(item => item.theme === activeGateTheme);
+      document.getElementById("gateGrid").innerHTML = selected.map(item => `
+        <article class="gate-card">
+          <div class="gate-row">
+            <h3>${item.id}: ${item.title}</h3>
+            <span class="badge ${tone(item.status)}">${item.status}</span>
+          </div>
+          <p>${item.evidence}</p>
+          <div class="detail-grid">
+            <div class="detail"><small>Theme</small><span>${item.theme}</span></div>
+            <div class="detail"><small>Owner</small><span>${item.owner}</span></div>
+          </div>
+          <div class="detail"><small>Stop condition</small><span>${item.stop}</span></div>
+        </article>
+      `).join("");
+    }
+
+    function renderDataFilters() {
+      const options = ["All", ...Array.from(new Set(dataRules.map(item => item.level)))];
+      document.getElementById("dataLevel").innerHTML = options.map(value => `<option value="${value}" ${value === activeDataLevel ? "selected" : ""}>${value === "All" ? "All data levels" : value}</option>`).join("");
+    }
+
+    function renderDataRules() {
+      const selected = activeDataLevel === "All" ? dataRules : dataRules.filter(item => item.level === activeDataLevel);
+      document.getElementById("dataGrid").innerHTML = selected.map(item => `
+        <article class="data-card">
+          <div class="card-head">
+            <h3>${item.item}</h3>
+            <span class="badge ${tone(item.level)}">${item.level}</span>
+          </div>
+          <p>${item.rule}</p>
+          <div class="detail"><small>Example</small><span>${item.example}</span></div>
+        </article>
+      `).join("");
+    }
+
+    function renderComponents() {
+      document.getElementById("componentGrid").innerHTML = components.map(item => `
+        <article class="gate-card">
+          <div class="card-head">
+            <h3>${item.id}: ${item.component}</h3>
+            <span class="badge open">${item.space}</span>
+          </div>
+          <div class="detail-grid">
+            <div class="detail"><small>Sample use</small><span>${item.sampleUse}</span></div>
+            <div class="detail"><small>Boundary</small><span>${item.boundary}</span></div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function updateMetrics() {
+      document.getElementById("trackMetric").textContent = tracks.length;
+      document.getElementById("gateMetric").textContent = gates.length;
+      document.getElementById("dataMetric").textContent = dataRules.length;
+      document.getElementById("componentMetric").textContent = components.length;
+    }
+
+    function updateBrief() {
+      const item = initiatives.find(record => record.id === activeInitiative);
+      const gateSummary = gates.reduce((acc, gate) => {
+        acc[gate.status] = (acc[gate.status] || 0) + 1;
+        return acc;
+      }, {});
+      const holds = gates.filter(gate => gate.status === "Hold" || gate.status === "Open");
+      const blocked = gates.filter(gate => gate.status === "Blocked");
+      const decision = blocked.length > 0 ? "No-go" : holds.length > 0 ? "Controlled sample only" : "Ready for tightly scoped fake-data sandbox test";
+      document.getElementById("onboardingBrief").textContent = [
+        "# Organisation And Initiative Onboarding Brief",
+        "",
+        "Controlled sample only. No real membership, payment, application, address, phone, access-need, Toastmasters member-number, or signature data is stored here.",
+        "",
+        `## Sample initiative: ${item.name}`,
+        `- Custodian: ${item.owner}`,
+        `- Stage: ${item.stage}`,
+        `- Public purpose: ${item.purpose}`,
+        `- Real intake boundary: ${item.boundary}`,
+        "",
+        "## Join tracks",
+        ...tracks.map(track => `- ${track.id}: ${track.name} (${track.status}) - ${track.role}`),
+        "",
+        "## Gate summary",
+        ...Object.keys(gateSummary).sort().map(key => `- ${key}: ${gateSummary[key]}`),
+        "",
+        `## Recommendation: ${decision}`,
+        "",
+        "Next action: test the public coordination model only. Keep real intake on the Barayamal/official Toastmasters pathway until authority, privacy, data, cultural safety, moderation, hosting, and support approvals are explicit."
+      ].join("\n");
+    }
+
+    function selectInitiative(id) {
+      activeInitiative = id;
+      renderAll();
+    }
+
+    function downloadBrief() {
+      const blob = new Blob([document.getElementById("onboardingBrief").textContent], { type: "text/markdown" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "organisation-initiative-onboarding-brief-v2.5.md";
+      link.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function bindControls() {
+      document.querySelectorAll("[data-track-filter]").forEach(button => {
+        button.addEventListener("click", () => {
+          activeTrackFilter = button.dataset.trackFilter;
+          document.querySelectorAll("[data-track-filter]").forEach(item => item.classList.toggle("primary", item.dataset.trackFilter === activeTrackFilter));
+          renderTracks();
+        });
+      });
+
+      document.getElementById("gateTheme").addEventListener("change", event => {
+        activeGateTheme = event.target.value;
+        renderGates();
+      });
+
+      document.getElementById("dataLevel").addEventListener("change", event => {
+        activeDataLevel = event.target.value;
+        renderDataRules();
+      });
+    }
+
+    function renderAll() {
+      renderInitiatives();
+      renderSelectedInitiative();
+      renderTracks();
+      renderGateFilters();
+      renderGates();
+      renderDataFilters();
+      renderDataRules();
+      renderComponents();
+      updateMetrics();
+      updateBrief();
+    }
+
+    renderAll();
+    bindControls();
+  </script>
+</body>
+</html>

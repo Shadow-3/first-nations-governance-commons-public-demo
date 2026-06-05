@@ -1,0 +1,11 @@
+id,item,level,rule,example
+D-001,Public initiative summary,Public,Can be shown as sample public information,"Purpose, stage, demo agenda, public FAQ"
+D-002,Fake readiness counts,Public,Can be shown only when labelled fake/sample,Sample progress toward 20 charter target
+D-003,Track choice,Restricted,Real choices stay in private intake; demo may show aggregate or fake examples,"Founding member now, demo first, supporter"
+D-004,Names and contact details,Never public,"Do not store or publish in public demo, repo, screenshots, or Decidim exports","Email, phone, address, preferred contact method"
+D-005,Toastmasters member numbers,Never public,"Official records only, never public sample data",Existing member number or previous club details
+D-006,Access needs,Restricted,Handle privately with consent and minimum necessary access,"Assistive technology needs, attendance support"
+D-007,Officer interest,Restricted,Can be summarised publicly only after consent and official confirmation,"President, Vice President, Secretary/Treasurer interest"
+D-008,Official applications and signatures,Never public,Stay in official Toastmasters process only,Charter Membership Application and signatures
+D-009,Payment or sponsorship reconciliation,Never public,No card/payment details in public demo,"Charter fee, new-member fee, dues, transfer/dual status"
+D-010,Organisation support offer,Restricted,"Can be public only as an approved role, not private contact or authority claim","Referral partner, mentor support, host offer"

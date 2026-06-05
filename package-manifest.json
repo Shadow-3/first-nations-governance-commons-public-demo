@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "2.4",
+  "version": "2.5",
   "date": "2026-06-05",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use Sandbox Launcher to choose the first fake-data Decidim build path, use Seed Studio and Sandbox Build Pack to prepare the fake-data Decidim build handoff, use Build Partner Desk to send the RFQ pack to two or three Decidim-capable providers, then use Build Delivery Control to lock milestones, evidence gates, payment rules, RACI, handover, and no-go conditions before any build spend. Keep all data fake/sample only.",
+  "recommendedDecision": "Use Sandbox Launcher to choose the first fake-data Decidim build path, use Seed Studio and Sandbox Build Pack to prepare the fake-data Decidim build handoff, use Build Partner Desk and Build Delivery Control to manage provider selection and delivery, then use Organisation Onboarding with the Toastmasters First Nations controlled sample to test safe organisation/initiative join paths before any real member, payment, private contact, access-need, official paperwork, or real pilot data is introduced.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -37,6 +37,15 @@
     "sandbox-build-pack.html",
     "build-partner-desk.html",
     "build-delivery-control.html",
+    "organisation-onboarding.html",
+    "docs/public-demo-release-notes-v2.5.md",
+    "docs/organisation-initiative-onboarding-playbook-v2.5.md",
+    "docs/toastmasters-first-nations-sample-test-v2.5.md",
+    "data/organisation-onboarding-gates-v2.5.csv",
+    "data/toastmasters-initiative-tracks-v2.5.csv",
+    "data/toastmasters-data-boundary-v2.5.csv",
+    "data/organisation-initiative-component-map-v2.5.csv",
+    "data/organisation-onboarding-package-v2.5.json",
     "docs/public-demo-release-notes-v2.4.md",
     "docs/build-delivery-control-playbook-v2.4.md",
     "docs/provider-contract-gates-v2.4.md",
@@ -111,7 +120,7 @@
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v2.4.md",
+    "releaseNotes": "docs/public-demo-release-notes-v2.5.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -181,7 +190,19 @@
       "qa-v24-deployed-delivery-gates-desktop.png",
       "qa-v24-deployed-delivery-deliverables-desktop.png",
       "qa-v24-deployed-build-delivery-control-mobile.png",
-      "qa-v24-deployed-build-delivery-package-mobile.png"
+      "qa-v24-deployed-build-delivery-package-mobile.png",
+      "qa-v25-local-organisation-onboarding-desktop.png",
+      "qa-v25-local-organisation-onboarding-ready-desktop.png",
+      "qa-v25-local-onboarding-gates-desktop.png",
+      "qa-v25-local-data-boundary-desktop.png",
+      "qa-v25-local-organisation-onboarding-mobile.png",
+      "qa-v25-local-onboarding-package-mobile.png",
+      "qa-v25-deployed-organisation-onboarding-desktop.png",
+      "qa-v25-deployed-organisation-onboarding-ready-desktop.png",
+      "qa-v25-deployed-onboarding-gates-desktop.png",
+      "qa-v25-deployed-data-boundary-desktop.png",
+      "qa-v25-deployed-organisation-onboarding-mobile.png",
+      "qa-v25-deployed-onboarding-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -350,7 +371,16 @@
       "data/build-delivery-deliverables-v2.4.csv",
       "data/provider-payment-evidence-gates-v2.4.csv",
       "data/build-delivery-raci-v2.4.csv",
-      "data/build-delivery-package-v2.4.json"
+      "data/build-delivery-package-v2.4.json",
+      "organisation-onboarding.html",
+      "docs/public-demo-release-notes-v2.5.md",
+      "docs/organisation-initiative-onboarding-playbook-v2.5.md",
+      "docs/toastmasters-first-nations-sample-test-v2.5.md",
+      "data/organisation-onboarding-gates-v2.5.csv",
+      "data/toastmasters-initiative-tracks-v2.5.csv",
+      "data/toastmasters-data-boundary-v2.5.csv",
+      "data/organisation-initiative-component-map-v2.5.csv",
+      "data/organisation-onboarding-package-v2.5.json"
     ],
     "actionCenter": [
       "docs/next-steps-action-plan-v1.1.md",
@@ -534,7 +564,16 @@
       "data/build-delivery-deliverables-v2.4.csv",
       "data/provider-payment-evidence-gates-v2.4.csv",
       "data/build-delivery-raci-v2.4.csv",
-      "data/build-delivery-package-v2.4.json"
+      "data/build-delivery-package-v2.4.json",
+      "organisation-onboarding.html",
+      "docs/public-demo-release-notes-v2.5.md",
+      "docs/organisation-initiative-onboarding-playbook-v2.5.md",
+      "docs/toastmasters-first-nations-sample-test-v2.5.md",
+      "data/organisation-onboarding-gates-v2.5.csv",
+      "data/toastmasters-initiative-tracks-v2.5.csv",
+      "data/toastmasters-data-boundary-v2.5.csv",
+      "data/organisation-initiative-component-map-v2.5.csv",
+      "data/organisation-onboarding-package-v2.5.json"
     ],
     "opsRoom": [
       "docs/sandbox-ops-runbook-v1.6.md",
@@ -639,7 +678,16 @@
       "data/build-delivery-deliverables-v2.4.csv",
       "data/provider-payment-evidence-gates-v2.4.csv",
       "data/build-delivery-raci-v2.4.csv",
-      "data/build-delivery-package-v2.4.json"
+      "data/build-delivery-package-v2.4.json",
+      "organisation-onboarding.html",
+      "docs/public-demo-release-notes-v2.5.md",
+      "docs/organisation-initiative-onboarding-playbook-v2.5.md",
+      "docs/toastmasters-first-nations-sample-test-v2.5.md",
+      "data/organisation-onboarding-gates-v2.5.csv",
+      "data/toastmasters-initiative-tracks-v2.5.csv",
+      "data/toastmasters-data-boundary-v2.5.csv",
+      "data/organisation-initiative-component-map-v2.5.csv",
+      "data/organisation-onboarding-package-v2.5.json"
     ],
     "seedStudio": [
       "seed-studio.html",
@@ -682,7 +730,16 @@
       "data/build-delivery-deliverables-v2.4.csv",
       "data/provider-payment-evidence-gates-v2.4.csv",
       "data/build-delivery-raci-v2.4.csv",
-      "data/build-delivery-package-v2.4.json"
+      "data/build-delivery-package-v2.4.json",
+      "organisation-onboarding.html",
+      "docs/public-demo-release-notes-v2.5.md",
+      "docs/organisation-initiative-onboarding-playbook-v2.5.md",
+      "docs/toastmasters-first-nations-sample-test-v2.5.md",
+      "data/organisation-onboarding-gates-v2.5.csv",
+      "data/toastmasters-initiative-tracks-v2.5.csv",
+      "data/toastmasters-data-boundary-v2.5.csv",
+      "data/organisation-initiative-component-map-v2.5.csv",
+      "data/organisation-onboarding-package-v2.5.json"
     ],
     "buildPack": [
       "sandbox-build-pack.html",
@@ -718,7 +775,16 @@
       "data/build-delivery-deliverables-v2.4.csv",
       "data/provider-payment-evidence-gates-v2.4.csv",
       "data/build-delivery-raci-v2.4.csv",
-      "data/build-delivery-package-v2.4.json"
+      "data/build-delivery-package-v2.4.json",
+      "organisation-onboarding.html",
+      "docs/public-demo-release-notes-v2.5.md",
+      "docs/organisation-initiative-onboarding-playbook-v2.5.md",
+      "docs/toastmasters-first-nations-sample-test-v2.5.md",
+      "data/organisation-onboarding-gates-v2.5.csv",
+      "data/toastmasters-initiative-tracks-v2.5.csv",
+      "data/toastmasters-data-boundary-v2.5.csv",
+      "data/organisation-initiative-component-map-v2.5.csv",
+      "data/organisation-onboarding-package-v2.5.json"
     ],
     "buildPartnerDesk": [
       "build-partner-desk.html",
@@ -744,7 +810,16 @@
       "data/build-delivery-deliverables-v2.4.csv",
       "data/provider-payment-evidence-gates-v2.4.csv",
       "data/build-delivery-raci-v2.4.csv",
-      "data/build-delivery-package-v2.4.json"
+      "data/build-delivery-package-v2.4.json",
+      "organisation-onboarding.html",
+      "docs/public-demo-release-notes-v2.5.md",
+      "docs/organisation-initiative-onboarding-playbook-v2.5.md",
+      "docs/toastmasters-first-nations-sample-test-v2.5.md",
+      "data/organisation-onboarding-gates-v2.5.csv",
+      "data/toastmasters-initiative-tracks-v2.5.csv",
+      "data/toastmasters-data-boundary-v2.5.csv",
+      "data/organisation-initiative-component-map-v2.5.csv",
+      "data/organisation-onboarding-package-v2.5.json"
     ],
     "buildDeliveryControl": [
       "build-delivery-control.html",
@@ -756,11 +831,31 @@
       "data/provider-payment-evidence-gates-v2.4.csv",
       "data/build-delivery-raci-v2.4.csv",
       "data/build-delivery-package-v2.4.json",
+      "organisation-onboarding.html",
+      "docs/public-demo-release-notes-v2.5.md",
+      "docs/organisation-initiative-onboarding-playbook-v2.5.md",
+      "docs/toastmasters-first-nations-sample-test-v2.5.md",
+      "data/organisation-onboarding-gates-v2.5.csv",
+      "data/toastmasters-initiative-tracks-v2.5.csv",
+      "data/toastmasters-data-boundary-v2.5.csv",
+      "data/organisation-initiative-component-map-v2.5.csv",
+      "data/organisation-onboarding-package-v2.5.json",
       "build-partner-desk.html",
       "docs/build-partner-rfq-pack-v2.3.md",
       "sandbox-build-pack.html",
       "data/decidim-build-acceptance-tests-v2.2.csv",
       "assurance-room.html"
+    ],
+    "organisationOnboarding": [
+      "organisation-onboarding.html",
+      "docs/public-demo-release-notes-v2.5.md",
+      "docs/organisation-initiative-onboarding-playbook-v2.5.md",
+      "docs/toastmasters-first-nations-sample-test-v2.5.md",
+      "data/organisation-onboarding-gates-v2.5.csv",
+      "data/toastmasters-initiative-tracks-v2.5.csv",
+      "data/toastmasters-data-boundary-v2.5.csv",
+      "data/organisation-initiative-component-map-v2.5.csv",
+      "data/organisation-onboarding-package-v2.5.json"
     ]
   },
   "safetyRules": [
@@ -773,7 +868,10 @@
     "No youth records or guardian/school/program records.",
     "No personal service cases or complaints.",
     "No real provider contract or spend approval.",
-    "No real milestone payment release or procurement decision."
+    "No real milestone payment release or procurement decision.",
+    "No real membership applications or Toastmasters member numbers.",
+    "No payment, address, phone, email, access-need, signature, official club record, private organisation contact, or real authority data in the public demo.",
+    "Toastmasters First Nations is a controlled sample only; real intake, meeting links, official paperwork, sponsorship/payment reconciliation, and charter acceptance stay outside the package."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -1000,5 +1098,51 @@
       "https://github.com/decidim/decidim"
     ],
     "safetyRule": "No real provider contract, procurement decision, spend approval, community records, member lists, cultural material, eligibility data, voting data, youth records, personal service cases, private contact records, or real decision outcomes are included."
+  },
+  "organisationOnboarding": {
+    "entrypoint": "organisation-onboarding.html",
+    "playbook": "docs/organisation-initiative-onboarding-playbook-v2.5.md",
+    "sampleTest": "docs/toastmasters-first-nations-sample-test-v2.5.md",
+    "releaseNotes": "docs/public-demo-release-notes-v2.5.md",
+    "readinessGates": "data/organisation-onboarding-gates-v2.5.csv",
+    "joinTracks": "data/toastmasters-initiative-tracks-v2.5.csv",
+    "dataBoundary": "data/toastmasters-data-boundary-v2.5.csv",
+    "componentMap": "data/organisation-initiative-component-map-v2.5.csv",
+    "onboardingPackage": "data/organisation-onboarding-package-v2.5.json",
+    "sampleInitiative": "Toastmasters First Nations",
+    "mode": "public_demo_controlled_sample_initiative_only",
+    "joinTrackCount": 5,
+    "readinessGateCount": 12,
+    "dataBoundaryRuleCount": 10,
+    "componentMappingCount": 7,
+    "requiredGateCount": 4,
+    "holdGateCount": 3,
+    "toastmastersSampleFacts": {
+      "stage": "Club in formation",
+      "demoMeeting": "Monday 15 June 2026, 6:30-7:30 PM AEST",
+      "charterTarget": 20,
+      "nonDualTarget": 17,
+      "minimumOfficerSlate": "President, one Vice President, and Secretary or Secretary/Treasurer held by three different people",
+      "officialMembershipBoundary": "Official membership starts only after official Toastmasters paperwork, sponsorship/payment reconciliation, and charter acceptance."
+    },
+    "noGoTriggers": [
+      "public_demo_collects_real_member_or_contact_data",
+      "demo_first_or_supporter_contacts_counted_as_charter_members",
+      "official_toastmasters_paperwork_stored_in_public_package",
+      "payment_or_card_details_collected_in_public_demo",
+      "organisation_support_role_implies_authority_over_member_data",
+      "sample_initiative_treated_as_real_community_authority"
+    ],
+    "sourceAnchors": [
+      "https://barayamal.com.au/toastmasters-first-nations/",
+      "https://toastmasters.org/start-a-club",
+      "https://content.toastmasters.org/image/upload/1102-club-charter-requirments-form-ff.pdf",
+      "https://prod103.toastmasters.org/leadership-central/governing-documents",
+      "https://docs.decidim.org/en/develop/features/participatory-spaces.html",
+      "https://docs.decidim.org/en/develop/admin/spaces.html",
+      "https://docs.decidim.org/en/develop/admin/components.html"
+    ],
+    "safetyRule": "No real membership, address, phone, email, access-need, official application, Toastmasters member-number, payment, signature, private organisation contact, or real authority data belongs in the public demo, public repository, public screenshots, or fake-data Decidim sandbox.",
+    "controlledSampleRule": "This is not official Toastmasters membership, application, payment, meeting-link, or member-record infrastructure. It is a public fake/sample coordination test only."
   }
 }

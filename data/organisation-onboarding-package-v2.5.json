@@ -1,0 +1,54 @@
+{
+  "version": "2.5",
+  "name": "Organisation And Initiative Onboarding",
+  "mode": "public_demo_controlled_sample_initiative_only",
+  "sampleInitiative": "Toastmasters First Nations",
+  "sampleSource": "https://barayamal.com.au/toastmasters-first-nations/",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "recommendedUse": "Use as a controlled public coordination sample for whether First Nations organisations or initiatives can join Governance Commons without collecting real membership, payment, application, access-need, or private contact data.",
+  "counts": {
+    "initiatives": 1,
+    "joinTracks": 5,
+    "readinessGates": 12,
+    "dataBoundaryRules": 10,
+    "componentMappings": 7,
+    "requiredGates": 4,
+    "holdGates": 3
+  },
+  "files": {
+    "entrypoint": "organisation-onboarding.html",
+    "playbook": "docs/organisation-initiative-onboarding-playbook-v2.5.md",
+    "sampleTest": "docs/toastmasters-first-nations-sample-test-v2.5.md",
+    "releaseNotes": "docs/public-demo-release-notes-v2.5.md",
+    "readinessGates": "data/organisation-onboarding-gates-v2.5.csv",
+    "joinTracks": "data/toastmasters-initiative-tracks-v2.5.csv",
+    "dataBoundary": "data/toastmasters-data-boundary-v2.5.csv",
+    "componentMap": "data/organisation-initiative-component-map-v2.5.csv"
+  },
+  "toastmastersSampleFacts": {
+    "stage": "Club in formation",
+    "demoMeeting": "Monday 15 June 2026, 6:30-7:30 PM AEST",
+    "charterTarget": 20,
+    "nonDualTarget": 17,
+    "minimumOfficerSlate": "President, one Vice President, and Secretary or Secretary/Treasurer held by three different people",
+    "officialMembershipBoundary": "Official membership starts only after official Toastmasters paperwork, sponsorship/payment reconciliation, and charter acceptance."
+  },
+  "noGoTriggers": [
+    "public_demo_collects_real_member_or_contact_data",
+    "demo_first_or_supporter_contacts_counted_as_charter_members",
+    "official_toastmasters_paperwork_stored_in_public_package",
+    "payment_or_card_details_collected_in_public_demo",
+    "organisation_support_role_implies_authority_over_member_data",
+    "sample_initiative_treated_as_real_community_authority"
+  ],
+  "sourceAnchors": [
+    "https://barayamal.com.au/toastmasters-first-nations/",
+    "https://toastmasters.org/start-a-club",
+    "https://content.toastmasters.org/image/upload/1102-club-charter-requirments-form-ff.pdf",
+    "https://prod103.toastmasters.org/leadership-central/governing-documents",
+    "https://docs.decidim.org/en/develop/features/participatory-spaces.html",
+    "https://docs.decidim.org/en/develop/admin/spaces.html",
+    "https://docs.decidim.org/en/develop/admin/components.html"
+  ],
+  "safetyRule": "No real membership, address, phone, email, access-need, official application, Toastmasters member-number, payment, signature, private organisation contact, or real authority data belongs in the public demo, public repository, public screenshots, or fake-data Decidim sandbox."
+}

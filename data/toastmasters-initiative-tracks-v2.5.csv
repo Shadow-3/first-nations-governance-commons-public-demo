@@ -1,0 +1,6 @@
+id,name,status,role_type,public_use,private_boundary
+T-001,Founding member now,Hold,Individual,Show pathway and requirements only,"Real contact, address, application, age, signature, member number, and payment details stay outside the public demo"
+T-002,Demo first,Ready,Individual,Register interest in a public sample pathway and view demo agenda,Real meeting link and attendance access needs stay in the Barayamal intake workflow
+T-003,"Sponsor, mentor, or supporter",Ready,Supporter,Model support offers without counting supporter-only contacts as charter members,Real supporter identity and contact details stay outside the demo
+T-004,First Nations organisation supporter,Ready,Organisation,"Test whether organisations can join as referrers, hosts, mentors, or community partners","No organisation receives authority over member data, charter acceptance, or community decisions through the public demo"
+T-005,Not sure yet,Ready,Individual,Allow low-pressure information gathering without premature member counting,No one is treated as a charter-ready member until they choose the founding-member path

@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v2.4
+Current package version: v2.5
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -42,6 +42,8 @@ Open `sandbox-build-pack.html` to use the Decidim Sandbox Build Pack for environ
 Open `build-partner-desk.html` to use the Build Partner Desk for provider shortlist, RFQ question bank, evaluation scorecard, decision gates, and a downloadable partner brief.
 
 Open `build-delivery-control.html` to use Build Delivery Control for provider milestones, deliverables, evidence gates, payment rules, RACI, and a downloadable delivery brief.
+
+Open `organisation-onboarding.html` to use Organisation Onboarding with Toastmasters First Nations as a controlled sample for organisation/initiative join paths, readiness gates, data boundaries, Decidim mapping, and a downloadable onboarding brief.
 
 The demo shows:
 
@@ -82,6 +84,7 @@ The demo shows:
 - `docs/public-demo-release-notes-v1.6.md`
 - `docs/public-demo-release-notes-v1.7.md`
 - `docs/public-demo-release-notes-v2.4.md`
+- `docs/public-demo-release-notes-v2.5.md`
 - `docs/public-demo-release-notes-v2.3.md`
 - `docs/public-demo-release-notes-v2.2.md`
 - `docs/public-demo-release-notes-v2.1.md`
@@ -94,6 +97,8 @@ The demo shows:
 - `docs/provider-self-build-handoff-v2.2.md`
 - `docs/build-delivery-control-playbook-v2.4.md`
 - `docs/provider-contract-gates-v2.4.md`
+- `docs/organisation-initiative-onboarding-playbook-v2.5.md`
+- `docs/toastmasters-first-nations-sample-test-v2.5.md`
 - `docs/build-partner-rfq-pack-v2.3.md`
 - `docs/provider-evaluation-guide-v2.3.md`
 - `docs/sandbox-launch-playbook-v2.0.md`
@@ -193,6 +198,11 @@ The demo shows:
 - `data/provider-payment-evidence-gates-v2.4.csv`
 - `data/build-delivery-raci-v2.4.csv`
 - `data/build-delivery-package-v2.4.json`
+- `data/organisation-onboarding-gates-v2.5.csv`
+- `data/toastmasters-initiative-tracks-v2.5.csv`
+- `data/toastmasters-data-boundary-v2.5.csv`
+- `data/organisation-initiative-component-map-v2.5.csv`
+- `data/organisation-onboarding-package-v2.5.json`
 - `data/sandbox-task-board.csv`
 - `data/decision-log-template.csv`
 - `PACKAGE_INDEX.md`
@@ -583,9 +593,26 @@ The v2.4 package adds a delivery-control workflow after provider selection:
 
 Use this version after Build Partner Desk. Before any provider work proceeds, lock fake-data scope, source-code/repository control, Decidim version, hosting path, acceptance evidence, admin handover, support, and the separate real-pilot approval boundary.
 
+## v2.5 Organisation Onboarding Upgrade
+
+The v2.5 package adds an organisation and initiative onboarding workflow using Toastmasters First Nations as a controlled sample:
+
+- Interactive Organisation Onboarding page.
+- One controlled sample initiative profile.
+- Five safe join/support tracks.
+- Twelve readiness gates covering authority, charter readiness, privacy, access, Decidim setup, and real-pilot approval.
+- Ten data boundary rules separating public, restricted, and never-public fields.
+- Seven Decidim space/component mappings.
+- Browser-generated onboarding brief.
+- Organisation/initiative onboarding playbook and Toastmasters First Nations sample test.
+- Document viewer coverage for all v2.5 onboarding docs, CSVs, and JSON.
+- Package manifest coverage for the new onboarding evidence group.
+
+Use this version as a safe test of whether First Nations organisations or initiatives can join the Governance Commons model. The public demo must not collect real membership, address, phone, email, access-need, official application, Toastmasters member-number, payment, signature, private organisation contact, or real authority data. Real Toastmasters intake, official paperwork, payments, meeting links, member numbers, and acceptance records stay outside this package.
+
 ## Next Build Step
 
-Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, Delivery Room, Assurance Room, Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, and Build Delivery Control to configure, operate, select a provider for, control delivery of, and safely hand over a fake-data Decidim sandbox:
+Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, Delivery Room, Assurance Room, Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, Build Delivery Control, and Organisation Onboarding to configure, operate, select a provider for, control delivery of, test organisation/initiative onboarding for, and safely hand over a fake-data Decidim sandbox:
 
 - One organisation.
 - One public assembly.
@@ -596,5 +623,6 @@ Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Ro
 - Voting/support configuration.
 - Accountability component.
 - Public pages/newsletters.
+- Controlled organisation/initiative onboarding sample.
 
 Use the files in `docs/` and `data/` as the first mapping package.
