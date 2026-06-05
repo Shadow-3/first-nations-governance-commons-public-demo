@@ -1,0 +1,869 @@
+{
+  "packageName": "Private Pilot Activation Drill v3.2",
+  "version": "3.2",
+  "date": "2026-06-05",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "mode": "public_demo_activation_drill_template_only",
+  "sampleInitiative": "Toastmasters First Nations",
+  "activationRule": "Do not open real private pilot intake until the activation drill, signoff matrix, tabletop scenarios, evidence packet, rehearsal tasks, first-72-hour monitoring checks, and recorded go/hold/no-go decision have passed.",
+  "safetyRule": "This public v3.2 activation drill package is fake/sample only. It must not collect or expose real names, emails, access needs, incidents, official Toastmasters records, member numbers, payments, signatures, authority records, access logs, decision records, or private pilot evidence.",
+  "noGoTriggers": [
+    "Real intake opens before the activation drill, tabletop scenarios, and signoff matrix are completed.",
+    "Authority decision is recorded without quorum, delegation, conditions, expiry, or stop triggers.",
+    "Private pilot records, access logs, incident evidence, official Toastmasters records, payment details, member numbers, or support details appear in public files.",
+    "No-private-access roles, providers, public reviewers, or supporters can view private records.",
+    "Withdrawal, correction, support, incident pause, breach assessment, backup/restore, deletion, or public redaction QA fails.",
+    "Official Toastmasters forms, signatures, payments, member numbers, or charter records enter the public package or private pilot tool.",
+    "Activation continues past the first 72 hours without authority checkpoint, monitoring evidence, or closeout trigger."
+  ],
+  "sourceAnchors": [
+    {
+      "label": "Barayamal Toastmasters First Nations",
+      "url": "https://barayamal.com.au/toastmasters-first-nations/"
+    },
+    {
+      "label": "Toastmasters Start a Club",
+      "url": "https://www.toastmasters.org/Start-a-Club"
+    },
+    {
+      "label": "Toastmasters Club Charter Requirements Form",
+      "url": "https://content.toastmasters.org/image/upload/ATO-club-chartering-requirements-ff.pdf"
+    },
+    {
+      "label": "Toastmasters Governing Documents",
+      "url": "https://www.toastmasters.org/resources/governing-documents"
+    },
+    {
+      "label": "Maiam nayri Wingara Indigenous Data Sovereignty",
+      "url": "https://www.maiamnayriwingara.org/"
+    },
+    {
+      "label": "AIATSIS ethical research",
+      "url": "https://aiatsis.gov.au/research/ethical-research"
+    },
+    {
+      "label": "NHMRC Aboriginal and Torres Strait Islander research ethics",
+      "url": "https://www.nhmrc.gov.au/research-policy/ethics/ethical-guidelines-research-aboriginal-and-torres-strait-islander-peoples"
+    },
+    {
+      "label": "OAIC Australian Privacy Principles",
+      "url": "https://www.oaic.gov.au/privacy/australian-privacy-principles/"
+    },
+    {
+      "label": "OAIC Guide to undertaking privacy impact assessments",
+      "url": "https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/privacy-impact-assessments/guide-to-undertaking-privacy-impact-assessments"
+    },
+    {
+      "label": "OAIC Notifiable Data Breaches scheme",
+      "url": "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme"
+    },
+    {
+      "label": "OAIC Data Breach Preparation and Response",
+      "url": "https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/preventing-preparing-for-and-responding-to-data-breaches/data-breach-preparation-and-response/part-4-notifiable-data-breach-ndb-scheme"
+    },
+    {
+      "label": "Cyber.gov.au Essential Eight maturity model",
+      "url": "https://www.cyber.gov.au/resources-business-and-government/essential-cybersecurity/essential-eight/essential-eight-maturity-model"
+    },
+    {
+      "label": "Decidim administrators",
+      "url": "https://docs.decidim.org/en/develop/admin/participants/admins.html"
+    },
+    {
+      "label": "Decidim permissions",
+      "url": "https://docs.decidim.org/en/develop/develop/permissions.html"
+    }
+  ],
+  "counts": {
+    "decisionSteps": 14,
+    "signoffRows": 12,
+    "tabletopScenarios": 12,
+    "evidenceArtifacts": 16,
+    "rehearsalTasks": 12,
+    "monitorChecks": 10,
+    "readinessRecords": 76,
+    "requiredDecisionSteps": 10,
+    "requiredSignoffs": 8,
+    "noGoScenarios": 4,
+    "neverPublicEvidence": 3,
+    "requiredRehearsalTasks": 8,
+    "requiredMonitorChecks": 7
+  },
+  "files": {
+    "entrypoint": "private-pilot-activation-drill.html",
+    "playbook": "docs/private-pilot-activation-drill-playbook-v3.2.md",
+    "toastmastersPlan": "docs/toastmasters-private-pilot-activation-drill-plan-v3.2.md",
+    "decisionRecord": "docs/activation-decision-record-template-v3.2.md",
+    "incidentTabletop": "docs/incident-and-breach-tabletop-script-v3.2.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.2.md",
+    "decisionSequence": "data/activation-decision-sequence-v3.2.csv",
+    "signoffMatrix": "data/activation-signoff-matrix-v3.2.csv",
+    "tabletopScenarios": "data/activation-tabletop-scenarios-v3.2.csv",
+    "evidencePacket": "data/activation-evidence-packet-v3.2.csv",
+    "rehearsalTasks": "data/activation-rehearsal-tasks-v3.2.csv",
+    "monitorChecks": "data/activation-monitoring-checks-v3.2.csv",
+    "packageJson": "data/private-pilot-activation-drill-package-v3.2.json"
+  },
+  "decisionSequence": [
+    {
+      "id": "AD-001",
+      "lane": "Quorum",
+      "step": "Confirm approval quorum",
+      "status": "Required",
+      "owner": "Pilot authority",
+      "evidence": "Named authority, privacy reviewer, data reviewer, technical custodian, and safety reviewer are present or have delegated authority",
+      "drill": "Meeting cannot proceed without required roles",
+      "noGo": "Approval is recorded without quorum"
+    },
+    {
+      "id": "AD-002",
+      "lane": "Scope",
+      "step": "Read activation scope aloud",
+      "status": "Required",
+      "owner": "Pilot authority",
+      "evidence": "Purpose, participant group, exclusions, duration, data classes, and official Toastmasters boundary are restated",
+      "drill": "Scope matches v3.1 package",
+      "noGo": "Pilot scope expands during the meeting"
+    },
+    {
+      "id": "AD-003",
+      "lane": "Authority",
+      "step": "Confirm developer custody boundary",
+      "status": "Required",
+      "owner": "Barayamal / Dean Foley",
+      "evidence": "Developer can maintain package and tooling but cannot substitute for First Nations authority",
+      "drill": "Boundary note included in record",
+      "noGo": "Repository maintainer is treated as authority"
+    },
+    {
+      "id": "AD-004",
+      "lane": "Data",
+      "step": "Review IDS/data governance pass list",
+      "status": "Required",
+      "owner": "Data reviewer",
+      "evidence": "Required IDS controls have pass, hold, owner, and evidence status",
+      "drill": "Hold items have owner and no activation exposure",
+      "noGo": "Data controls are assumed complete without evidence"
+    },
+    {
+      "id": "AD-005",
+      "lane": "Privacy",
+      "step": "Review PIA and participant notice",
+      "status": "Required",
+      "owner": "Privacy reviewer",
+      "evidence": "PIA checks, notice version, consent wording, withdrawal/correction, and retention rules are current",
+      "drill": "Notice/consent version recorded",
+      "noGo": "Real intake opens on draft or stale wording"
+    },
+    {
+      "id": "AD-006",
+      "lane": "Access",
+      "step": "Test role access register",
+      "status": "Required",
+      "owner": "Technical custodian",
+      "evidence": "No-private-access roles cannot see private records; admin/reviewer access is named and expiring",
+      "drill": "Access test result recorded privately",
+      "noGo": "Shared login or broad provider access exists"
+    },
+    {
+      "id": "AD-007",
+      "lane": "Security",
+      "step": "Run private environment drill",
+      "status": "Required",
+      "owner": "Technical custodian",
+      "evidence": "MFA, backup/export/delete, log access, and recovery owner are checked",
+      "drill": "Drill result recorded privately",
+      "noGo": "Static demo or public repo becomes system of record"
+    },
+    {
+      "id": "AD-008",
+      "lane": "Incident",
+      "step": "Run breach and cultural safety tabletop",
+      "status": "Required",
+      "owner": "Safety reviewer",
+      "evidence": "Pause, containment, participant support, authority escalation, and notification assessment are rehearsed",
+      "drill": "Scenario outcome recorded without private details",
+      "noGo": "No one can pause after an incident"
+    },
+    {
+      "id": "AD-009",
+      "lane": "Official boundary",
+      "step": "Confirm Toastmasters official route",
+      "status": "Required",
+      "owner": "Toastmasters launch lead",
+      "evidence": "Charter forms, payments, member numbers, signatures, and official records remain outside this package",
+      "drill": "External route status recorded",
+      "noGo": "Official records enter public or pilot workspace"
+    },
+    {
+      "id": "AD-010",
+      "lane": "Public QA",
+      "step": "Run public-summary redaction check",
+      "status": "Required",
+      "owner": "QA reviewer",
+      "evidence": "Screenshots, CSVs, JSON, docs, and public update text contain fake/sample data only",
+      "drill": "Public-safe QA pass recorded",
+      "noGo": "Public evidence identifies real people or context"
+    },
+    {
+      "id": "AD-011",
+      "lane": "Support",
+      "step": "Confirm participant support response clocks",
+      "status": "Hold",
+      "owner": "Access support contact",
+      "evidence": "Withdrawal, correction, access support, and incident support have owner and response time",
+      "drill": "Support clock approved or hold recorded",
+      "noGo": "Participants cannot get help or withdraw safely"
+    },
+    {
+      "id": "AD-012",
+      "lane": "Advice",
+      "step": "Check legal/privacy advice threshold",
+      "status": "Hold",
+      "owner": "Pilot authority",
+      "evidence": "Formal advice route is known for high-risk uncertainty, breach questions, or official record handling",
+      "drill": "Advice trigger written into record",
+      "noGo": "High-risk uncertainty is waived informally"
+    },
+    {
+      "id": "AD-013",
+      "lane": "Decision",
+      "step": "Draft go/hold/no-go decision record",
+      "status": "Ready",
+      "owner": "Pilot authority",
+      "evidence": "Decision, conditions, holds, expiry, next review date, and no-go triggers are captured",
+      "drill": "Public status only; private evidence stays private",
+      "noGo": "Decision happens in chat only"
+    },
+    {
+      "id": "AD-014",
+      "lane": "Monitor",
+      "step": "Schedule first 72-hour monitoring review",
+      "status": "Ready",
+      "owner": "Pilot operator",
+      "evidence": "Post-activation checks, support route, incident watch, access review, and closeout trigger are scheduled",
+      "drill": "Monitoring dates recorded",
+      "noGo": "Activation opens with no early review"
+    }
+  ],
+  "signoffMatrix": [
+    {
+      "id": "SO-001",
+      "role": "Pilot authority",
+      "authority": "Final go/hold/no-go decision",
+      "status": "Required",
+      "evidence": "Decision record signed or minuted",
+      "scope": "Can approve, hold, stop, or expire activation",
+      "publicRule": "Public redacted status only",
+      "noGo": "Activation occurs without authority signoff"
+    },
+    {
+      "id": "SO-002",
+      "role": "Governance reviewer",
+      "authority": "Community authority pathway",
+      "status": "Required",
+      "evidence": "Decision rights and consultation path confirmed",
+      "scope": "Can require hold for authority ambiguity",
+      "publicRule": "Authority pathway summary only",
+      "noGo": "Developer custody becomes default authority"
+    },
+    {
+      "id": "SO-003",
+      "role": "Data reviewer",
+      "authority": "IDS/data governance",
+      "status": "Required",
+      "evidence": "Data classes, purpose, access, retention, deletion, and reporting checked",
+      "scope": "Can stop activation for data governance risk",
+      "publicRule": "Class labels and pass/hold counts only",
+      "noGo": "Data reuse or transfer is not controlled"
+    },
+    {
+      "id": "SO-004",
+      "role": "Privacy reviewer",
+      "authority": "PIA, notice, consent, withdrawal",
+      "status": "Required",
+      "evidence": "PIA status, notice version, consent wording, and withdrawal route checked",
+      "scope": "Can stop intake for privacy risk",
+      "publicRule": "Template version only",
+      "noGo": "People submit information without clear notice"
+    },
+    {
+      "id": "SO-005",
+      "role": "Safety reviewer",
+      "authority": "Incident and cultural safety route",
+      "status": "Required",
+      "evidence": "Pause, support, escalation, and cultural safety route rehearsed",
+      "scope": "Can pause activation immediately",
+      "publicRule": "Incident route status only",
+      "noGo": "Incident route is unclear or unsafe"
+    },
+    {
+      "id": "SO-006",
+      "role": "Technical custodian",
+      "authority": "Private environment and access",
+      "status": "Required",
+      "evidence": "MFA, backups, access register, logs, exports, deletion, and restore drill checked",
+      "scope": "Can hold for security/access weakness",
+      "publicRule": "Hosting/access model only",
+      "noGo": "Private records stored publicly or broadly"
+    },
+    {
+      "id": "SO-007",
+      "role": "Toastmasters launch lead",
+      "authority": "Official Toastmasters boundary",
+      "status": "Required",
+      "evidence": "Official forms, payments, signatures, member numbers, and charter path separated",
+      "scope": "Can hold if official data crosses boundary",
+      "publicRule": "External official status only",
+      "noGo": "Official records enter public package"
+    },
+    {
+      "id": "SO-008",
+      "role": "QA reviewer",
+      "authority": "Public-safe evidence",
+      "status": "Required",
+      "evidence": "Release, screenshots, document viewer, JSON, CSV, and public wording checked",
+      "scope": "Can hold public publication",
+      "publicRule": "QA pass/fail only",
+      "noGo": "Public package exposes private evidence"
+    },
+    {
+      "id": "SO-009",
+      "role": "Access support contact",
+      "authority": "Participant support",
+      "status": "Hold",
+      "evidence": "Support route, response clock, withdrawal/correction handoff ready",
+      "scope": "Can hold until support is staffed",
+      "publicRule": "Support model only",
+      "noGo": "Participants cannot get support"
+    },
+    {
+      "id": "SO-010",
+      "role": "Build delivery lead",
+      "authority": "Provider and budget boundary",
+      "status": "Hold",
+      "evidence": "Provider sees fake/sample data only until authority and contract are approved",
+      "scope": "Can hold provider handoff",
+      "publicRule": "Provider pathway only",
+      "noGo": "Provider gets real data too early"
+    },
+    {
+      "id": "SO-011",
+      "role": "Backup admin",
+      "authority": "Continuity",
+      "status": "Ready",
+      "evidence": "Backup admin activation rule and expiry documented",
+      "scope": "Can act only after authority activation",
+      "publicRule": "Backup role only",
+      "noGo": "Single-person dependency blocks stop/delete action"
+    },
+    {
+      "id": "SO-012",
+      "role": "Public communications owner",
+      "authority": "Public notice and updates",
+      "status": "Ready",
+      "evidence": "Public update wording is aggregate, fake/sample, and redacted",
+      "scope": "Can hold public update",
+      "publicRule": "Public-safe summary only",
+      "noGo": "Public post reveals private context"
+    }
+  ],
+  "tabletopScenarios": [
+    {
+      "id": "TS-001",
+      "scenario": "Real email accidentally added to public CSV",
+      "severity": "High",
+      "decision": "No-go",
+      "owner": "QA reviewer",
+      "expectedAction": "Stop release, remove file, audit history, check screenshots, document no-go privately",
+      "privateEvidence": "Private incident evidence",
+      "publicSummary": "Public status only",
+      "noGo": "Real contact detail remains public"
+    },
+    {
+      "id": "TS-002",
+      "scenario": "Participant asks to withdraw after intake opens",
+      "severity": "Medium",
+      "decision": "Hold",
+      "owner": "Privacy reviewer",
+      "expectedAction": "Confirm route works, remove/correct private record, record proof privately, update aggregate count only",
+      "privateEvidence": "Withdrawal proof",
+      "publicSummary": "Aggregate status only",
+      "noGo": "Withdrawal cannot be actioned"
+    },
+    {
+      "id": "TS-003",
+      "scenario": "Provider asks for sample production export",
+      "severity": "High",
+      "decision": "No-go",
+      "owner": "Technical custodian",
+      "expectedAction": "Deny real export, provide fake package only, require authority and contract before private access",
+      "privateEvidence": "Provider request record",
+      "publicSummary": "Provider boundary only",
+      "noGo": "Provider receives real private data"
+    },
+    {
+      "id": "TS-004",
+      "scenario": "Toastmasters member number entered in pilot form",
+      "severity": "High",
+      "decision": "No-go",
+      "owner": "Toastmasters launch lead",
+      "expectedAction": "Delete or move to official route, review form controls, pause intake until exclusion works",
+      "privateEvidence": "Official boundary evidence",
+      "publicSummary": "External official status only",
+      "noGo": "Official record remains in pilot tool"
+    },
+    {
+      "id": "TS-005",
+      "scenario": "Access support request includes sensitive details",
+      "severity": "Medium",
+      "decision": "Hold",
+      "owner": "Safety reviewer",
+      "expectedAction": "Move to private support route, limit access, check public evidence, confirm support owner",
+      "privateEvidence": "Support record private",
+      "publicSummary": "Support offered summary only",
+      "noGo": "Sensitive support details shared broadly"
+    },
+    {
+      "id": "TS-006",
+      "scenario": "Decidim admin role granted to wrong account",
+      "severity": "High",
+      "decision": "No-go",
+      "owner": "Technical custodian",
+      "expectedAction": "Revoke immediately, review logs, rotate access if needed, retest role register",
+      "privateEvidence": "Access log private",
+      "publicSummary": "Access model only",
+      "noGo": "Unapproved admin access persists"
+    },
+    {
+      "id": "TS-007",
+      "scenario": "Public learning note risks identifying a founder",
+      "severity": "Medium",
+      "decision": "Hold",
+      "owner": "QA reviewer",
+      "expectedAction": "Rewrite aggregate summary, raise threshold, get authority approval before publishing",
+      "privateEvidence": "Redaction QA notes",
+      "publicSummary": "Public-safe pass/fail only",
+      "noGo": "Small sample identity inference remains"
+    },
+    {
+      "id": "TS-008",
+      "scenario": "Backup restore fails during dry run",
+      "severity": "Medium",
+      "decision": "Hold",
+      "owner": "Technical custodian",
+      "expectedAction": "Hold activation until backup/export/delete and restore proof pass",
+      "privateEvidence": "Technical drill evidence",
+      "publicSummary": "Drill status only",
+      "noGo": "Pilot opens without recovery proof"
+    },
+    {
+      "id": "TS-009",
+      "scenario": "Authority quorum missing on approval day",
+      "severity": "Medium",
+      "decision": "Hold",
+      "owner": "Pilot authority",
+      "expectedAction": "Do not activate; reschedule or use approved delegation route",
+      "privateEvidence": "Meeting record private",
+      "publicSummary": "Authority status only",
+      "noGo": "Decision is made without quorum"
+    },
+    {
+      "id": "TS-010",
+      "scenario": "High-risk privacy question has no advice route",
+      "severity": "Medium",
+      "decision": "Hold",
+      "owner": "Pilot authority",
+      "expectedAction": "Pause decision, seek advice route, update threshold and decision record",
+      "privateEvidence": "Advice note private",
+      "publicSummary": "Advice route status only",
+      "noGo": "Unresolved high-risk uncertainty is waived"
+    },
+    {
+      "id": "TS-011",
+      "scenario": "All required checks pass with two conditions",
+      "severity": "Low",
+      "decision": "Approve with condition",
+      "owner": "Pilot authority",
+      "expectedAction": "Approve limited activation with explicit conditions, expiry, owner, review date, and stop trigger",
+      "privateEvidence": "Decision record private",
+      "publicSummary": "Redacted status only",
+      "noGo": "Conditions have no owner or expiry"
+    },
+    {
+      "id": "TS-012",
+      "scenario": "All required checks pass and monitor is scheduled",
+      "severity": "Low",
+      "decision": "Approve",
+      "owner": "Pilot authority",
+      "expectedAction": "Approve controlled activation with 72-hour monitoring and closeout triggers",
+      "privateEvidence": "Decision record private",
+      "publicSummary": "Redacted status only",
+      "noGo": "Activation opens without monitoring"
+    }
+  ],
+  "evidencePacket": [
+    {
+      "id": "EP-001",
+      "artifact": "Authority decision record",
+      "classification": "Never public",
+      "status": "Required",
+      "owner": "Pilot authority",
+      "proof": "Signed/minuted go/hold/no-go record",
+      "publicRule": "Redacted decision status only",
+      "noGo": "Decision record published or missing"
+    },
+    {
+      "id": "EP-002",
+      "artifact": "Quorum and delegation note",
+      "classification": "Private restricted",
+      "status": "Required",
+      "owner": "Governance reviewer",
+      "proof": "Attendance, role authority, and delegation status",
+      "publicRule": "Quorum status only",
+      "noGo": "Approval made by wrong authority"
+    },
+    {
+      "id": "EP-003",
+      "artifact": "IDS/data governance pass-hold list",
+      "classification": "Private restricted",
+      "status": "Required",
+      "owner": "Data reviewer",
+      "proof": "Controls with owner, evidence, holds, and no-go triggers",
+      "publicRule": "Counts and status only",
+      "noGo": "Data governance evidence absent"
+    },
+    {
+      "id": "EP-004",
+      "artifact": "PIA and notice version register",
+      "classification": "Private restricted",
+      "status": "Required",
+      "owner": "Privacy reviewer",
+      "proof": "PIA outcome, notice version, consent version, withdrawal route",
+      "publicRule": "Template version only",
+      "noGo": "People see stale or unclear notice"
+    },
+    {
+      "id": "EP-005",
+      "artifact": "Role access test log",
+      "classification": "Never public",
+      "status": "Required",
+      "owner": "Technical custodian",
+      "proof": "Named accounts, role test, expiry, and revocation route",
+      "publicRule": "Access model only",
+      "noGo": "Raw account access appears public"
+    },
+    {
+      "id": "EP-006",
+      "artifact": "Backup/export/delete/restore drill proof",
+      "classification": "Private restricted",
+      "status": "Required",
+      "owner": "Technical custodian",
+      "proof": "Drill result and recovery owner",
+      "publicRule": "Drill pass/fail only",
+      "noGo": "Team cannot recover or delete"
+    },
+    {
+      "id": "EP-007",
+      "artifact": "Incident tabletop outcome",
+      "classification": "Never public",
+      "status": "Required",
+      "owner": "Safety reviewer",
+      "proof": "Scenario result, pause owner, escalation, support route",
+      "publicRule": "Incident route status only",
+      "noGo": "Private incident details published"
+    },
+    {
+      "id": "EP-008",
+      "artifact": "Official Toastmasters boundary proof",
+      "classification": "Private restricted",
+      "status": "Required",
+      "owner": "Toastmasters launch lead",
+      "proof": "Official forms/payments/member records outside pilot",
+      "publicRule": "External status only",
+      "noGo": "Official records copied into pilot"
+    },
+    {
+      "id": "EP-009",
+      "artifact": "Public package redaction QA",
+      "classification": "Public safe",
+      "status": "Required",
+      "owner": "QA reviewer",
+      "proof": "Checklist over pages, docs, CSV, JSON, screenshots",
+      "publicRule": "Public QA pass/fail",
+      "noGo": "Public package leaks private data"
+    },
+    {
+      "id": "EP-010",
+      "artifact": "Participant support route proof",
+      "classification": "Private restricted",
+      "status": "Hold",
+      "owner": "Access support contact",
+      "proof": "Support owner and response clock",
+      "publicRule": "Support model only",
+      "noGo": "Support route is unavailable"
+    },
+    {
+      "id": "EP-011",
+      "artifact": "Provider boundary record",
+      "classification": "Private restricted",
+      "status": "Hold",
+      "owner": "Build delivery lead",
+      "proof": "Provider gets fake/sample package only before approval",
+      "publicRule": "Provider pathway only",
+      "noGo": "Provider sees real data before contract"
+    },
+    {
+      "id": "EP-012",
+      "artifact": "Legal/privacy advice threshold",
+      "classification": "Private restricted",
+      "status": "Hold",
+      "owner": "Pilot authority",
+      "proof": "When advice is required and who requests it",
+      "publicRule": "Advice route status only",
+      "noGo": "High-risk issues are improvised"
+    },
+    {
+      "id": "EP-013",
+      "artifact": "Public status wording",
+      "classification": "Public safe",
+      "status": "Ready",
+      "owner": "Public communications owner",
+      "proof": "Short public-safe status statement",
+      "publicRule": "Redacted status text",
+      "noGo": "Public wording overpromises authority"
+    },
+    {
+      "id": "EP-014",
+      "artifact": "72-hour monitoring schedule",
+      "classification": "Private restricted",
+      "status": "Ready",
+      "owner": "Pilot operator",
+      "proof": "Early checks, owners, escalation, and closeout trigger",
+      "publicRule": "Monitoring status only",
+      "noGo": "No early monitoring after activation"
+    },
+    {
+      "id": "EP-015",
+      "artifact": "Second-pilot criteria alignment",
+      "classification": "Public safe",
+      "status": "Ready",
+      "owner": "Pilot authority",
+      "proof": "Scale criteria referenced before wider rollout",
+      "publicRule": "Criteria summary only",
+      "noGo": "Scale starts without criteria"
+    },
+    {
+      "id": "EP-016",
+      "artifact": "Archive and expiry reminder",
+      "classification": "Public safe",
+      "status": "Ready",
+      "owner": "Data reviewer",
+      "proof": "Review date for delete/retain/archive decision",
+      "publicRule": "Review date only",
+      "noGo": "Pilot records linger by default"
+    }
+  ],
+  "rehearsalTasks": [
+    {
+      "id": "DR-001",
+      "lane": "Intake",
+      "task": "Submit fake EOI with notice and consent",
+      "status": "Required",
+      "owner": "Pilot operator",
+      "passSignal": "Fake intake creates expected private record class only",
+      "noGo": "Public form collects private data"
+    },
+    {
+      "id": "DR-002",
+      "lane": "Withdrawal",
+      "task": "Withdraw fake participant and prove deletion/correction route",
+      "status": "Required",
+      "owner": "Privacy reviewer",
+      "passSignal": "Withdrawal path works and proof is private",
+      "noGo": "Withdrawal cannot be processed"
+    },
+    {
+      "id": "DR-003",
+      "lane": "Access",
+      "task": "Try no-private-access role against private record",
+      "status": "Required",
+      "owner": "Technical custodian",
+      "passSignal": "Access denied and logged",
+      "noGo": "No-private-access role can view records"
+    },
+    {
+      "id": "DR-004",
+      "lane": "Admin",
+      "task": "Revoke and restore approved admin access",
+      "status": "Required",
+      "owner": "Technical custodian",
+      "passSignal": "Revocation and backup admin route tested",
+      "noGo": "Unapproved or stale access persists"
+    },
+    {
+      "id": "DR-005",
+      "lane": "Backup",
+      "task": "Export, backup, delete, and restore fake record",
+      "status": "Required",
+      "owner": "Technical custodian",
+      "passSignal": "Backup/restore and deletion proof pass",
+      "noGo": "Records cannot be deleted or restored"
+    },
+    {
+      "id": "DR-006",
+      "lane": "Incident",
+      "task": "Run breach notification assessment tabletop",
+      "status": "Required",
+      "owner": "Safety reviewer",
+      "passSignal": "Assessment owner, threshold, and notification route known",
+      "noGo": "Breach assessment route unclear"
+    },
+    {
+      "id": "DR-007",
+      "lane": "Official",
+      "task": "Route fake official membership question outside pilot",
+      "status": "Required",
+      "owner": "Toastmasters launch lead",
+      "passSignal": "Official handoff does not store official records",
+      "noGo": "Official record enters pilot"
+    },
+    {
+      "id": "DR-008",
+      "lane": "Public QA",
+      "task": "Publish fake aggregate update through redaction QA",
+      "status": "Required",
+      "owner": "QA reviewer",
+      "passSignal": "No private context or identity inference",
+      "noGo": "Public update identifies someone"
+    },
+    {
+      "id": "DR-009",
+      "lane": "Support",
+      "task": "Test access support response clock",
+      "status": "Hold",
+      "owner": "Access support contact",
+      "passSignal": "Support response owner can act",
+      "noGo": "Support queue lacks owner"
+    },
+    {
+      "id": "DR-010",
+      "lane": "Provider",
+      "task": "Send fake provider handoff package only",
+      "status": "Hold",
+      "owner": "Build delivery lead",
+      "passSignal": "Provider receives no private data",
+      "noGo": "Provider receives private export"
+    },
+    {
+      "id": "DR-011",
+      "lane": "Decision",
+      "task": "Generate activation decision record",
+      "status": "Ready",
+      "owner": "Pilot authority",
+      "passSignal": "Conditions, expiry, and stop triggers included",
+      "noGo": "Decision has no expiry or owner"
+    },
+    {
+      "id": "DR-012",
+      "lane": "Closeout",
+      "task": "Trigger closeout review date",
+      "status": "Ready",
+      "owner": "Data reviewer",
+      "passSignal": "Closeout review is scheduled before activation",
+      "noGo": "Records have no closeout trigger"
+    }
+  ],
+  "monitorChecks": [
+    {
+      "id": "MON-001",
+      "window": "Hour 0",
+      "check": "Confirm public demo still has fake/sample data only",
+      "status": "Required",
+      "owner": "QA reviewer",
+      "evidence": "Public route check logged",
+      "noGo": "Real data appears publicly"
+    },
+    {
+      "id": "MON-002",
+      "window": "Hour 2",
+      "check": "Review first private intake record classes",
+      "status": "Required",
+      "owner": "Privacy reviewer",
+      "evidence": "No unapproved fields or official records",
+      "noGo": "Unapproved field collected"
+    },
+    {
+      "id": "MON-003",
+      "window": "Hour 4",
+      "check": "Check access logs and admin changes",
+      "status": "Required",
+      "owner": "Technical custodian",
+      "evidence": "Only named roles accessed records",
+      "noGo": "Unapproved access appears"
+    },
+    {
+      "id": "MON-004",
+      "window": "Hour 8",
+      "check": "Check support and withdrawal queue",
+      "status": "Required",
+      "owner": "Access support contact",
+      "evidence": "Support/withdrawal route is responsive",
+      "noGo": "Support route fails"
+    },
+    {
+      "id": "MON-005",
+      "window": "Hour 12",
+      "check": "Review incident and safety watch",
+      "status": "Required",
+      "owner": "Safety reviewer",
+      "evidence": "No unresolved safety or incident concern",
+      "noGo": "Incident lacks pause path"
+    },
+    {
+      "id": "MON-006",
+      "window": "Hour 24",
+      "check": "Check official Toastmasters handoff boundary",
+      "status": "Required",
+      "owner": "Toastmasters launch lead",
+      "evidence": "Official records stayed external",
+      "noGo": "Official data enters pilot"
+    },
+    {
+      "id": "MON-007",
+      "window": "Hour 36",
+      "check": "Run public update redaction QA",
+      "status": "Required",
+      "owner": "QA reviewer",
+      "evidence": "Public status remains aggregate/redacted",
+      "noGo": "Public update identifies someone"
+    },
+    {
+      "id": "MON-008",
+      "window": "Hour 48",
+      "check": "Review operator load and capacity",
+      "status": "Hold",
+      "owner": "Pilot operator",
+      "evidence": "Operator can sustain response clocks",
+      "noGo": "Operator load exceeds safe capacity"
+    },
+    {
+      "id": "MON-009",
+      "window": "Hour 72",
+      "check": "Authority checkpoint go/hold/no-go",
+      "status": "Ready",
+      "owner": "Pilot authority",
+      "evidence": "Continue, hold, pause, or close decision recorded",
+      "noGo": "No early authority checkpoint"
+    },
+    {
+      "id": "MON-010",
+      "window": "Week 1",
+      "check": "Schedule closeout and archive review",
+      "status": "Ready",
+      "owner": "Data reviewer",
+      "evidence": "Closeout review and retention/deletion path confirmed",
+      "noGo": "Records drift without review"
+    }
+  ]
+}

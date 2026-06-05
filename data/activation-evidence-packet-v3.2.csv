@@ -1,0 +1,17 @@
+id,artifact,classification,status,owner,proof,publicRule,noGo
+EP-001,Authority decision record,Never public,Required,Pilot authority,Signed/minuted go/hold/no-go record,Redacted decision status only,Decision record published or missing
+EP-002,Quorum and delegation note,Private restricted,Required,Governance reviewer,"Attendance, role authority, and delegation status",Quorum status only,Approval made by wrong authority
+EP-003,IDS/data governance pass-hold list,Private restricted,Required,Data reviewer,"Controls with owner, evidence, holds, and no-go triggers",Counts and status only,Data governance evidence absent
+EP-004,PIA and notice version register,Private restricted,Required,Privacy reviewer,"PIA outcome, notice version, consent version, withdrawal route",Template version only,People see stale or unclear notice
+EP-005,Role access test log,Never public,Required,Technical custodian,"Named accounts, role test, expiry, and revocation route",Access model only,Raw account access appears public
+EP-006,Backup/export/delete/restore drill proof,Private restricted,Required,Technical custodian,Drill result and recovery owner,Drill pass/fail only,Team cannot recover or delete
+EP-007,Incident tabletop outcome,Never public,Required,Safety reviewer,"Scenario result, pause owner, escalation, support route",Incident route status only,Private incident details published
+EP-008,Official Toastmasters boundary proof,Private restricted,Required,Toastmasters launch lead,Official forms/payments/member records outside pilot,External status only,Official records copied into pilot
+EP-009,Public package redaction QA,Public safe,Required,QA reviewer,"Checklist over pages, docs, CSV, JSON, screenshots",Public QA pass/fail,Public package leaks private data
+EP-010,Participant support route proof,Private restricted,Hold,Access support contact,Support owner and response clock,Support model only,Support route is unavailable
+EP-011,Provider boundary record,Private restricted,Hold,Build delivery lead,Provider gets fake/sample package only before approval,Provider pathway only,Provider sees real data before contract
+EP-012,Legal/privacy advice threshold,Private restricted,Hold,Pilot authority,When advice is required and who requests it,Advice route status only,High-risk issues are improvised
+EP-013,Public status wording,Public safe,Ready,Public communications owner,Short public-safe status statement,Redacted status text,Public wording overpromises authority
+EP-014,72-hour monitoring schedule,Private restricted,Ready,Pilot operator,"Early checks, owners, escalation, and closeout trigger",Monitoring status only,No early monitoring after activation
+EP-015,Second-pilot criteria alignment,Public safe,Ready,Pilot authority,Scale criteria referenced before wider rollout,Criteria summary only,Scale starts without criteria
+EP-016,Archive and expiry reminder,Public safe,Ready,Data reviewer,Review date for delete/retain/archive decision,Review date only,Pilot records linger by default

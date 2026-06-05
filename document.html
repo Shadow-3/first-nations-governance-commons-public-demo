@@ -594,6 +594,7 @@
     <a class="btn" href="private-pilot-launch.html">Pilot Launch</a>
     <a class="btn" href="private-pilot-closeout.html">Pilot Closeout</a>
     <a class="btn" href="private-pilot-authority.html">Authority Approval</a>
+    <a class="btn" href="private-pilot-activation-drill.html">Activation Drill</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -644,6 +645,10 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Activation drill playbook", path: "docs/private-pilot-activation-drill-playbook-v3.2.md", type: "markdown", description: "v3.2 approval meeting, signoff, tabletop, evidence, and monitoring playbook." },
+      { category: "Start Here", title: "Toastmasters activation drill plan", path: "docs/toastmasters-private-pilot-activation-drill-plan-v3.2.md", type: "markdown", description: "Controlled First Nations Toastmasters activation drill plan and official boundary." },
+      { category: "Start Here", title: "Activation decision record template", path: "docs/activation-decision-record-template-v3.2.md", type: "markdown", description: "Go, hold, no-go, expiry, conditions, and public-safe status template." },
+      { category: "Start Here", title: "Incident and breach tabletop script", path: "docs/incident-and-breach-tabletop-script-v3.2.md", type: "markdown", description: "Public-safe incident, breach, support, access, and official-boundary tabletop script." },
       { category: "Start Here", title: "Private pilot authority and data governance pack", path: "docs/private-pilot-authority-and-data-governance-pack-v3.1.md", type: "markdown", description: "v3.1 authority, Indigenous Data Sovereignty, privacy, access, notice, activation, and scale approval pack." },
       { category: "Start Here", title: "Toastmasters private pilot authority approval plan", path: "docs/toastmasters-private-pilot-authority-approval-plan-v3.1.md", type: "markdown", description: "Controlled First Nations Toastmasters authority approval plan and official boundary." },
       { category: "Start Here", title: "Private pilot privacy impact mini assessment", path: "docs/private-pilot-privacy-impact-mini-assessment-v3.1.md", type: "markdown", description: "Privacy impact questions and hold rules before real intake." },
@@ -676,6 +681,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v3.2", path: "docs/public-demo-release-notes-v3.2.md", type: "markdown", description: "Activation Drill & Decision Record upgrade summary." },
       { category: "Release Notes", title: "Release notes v3.1", path: "docs/public-demo-release-notes-v3.1.md", type: "markdown", description: "Private Pilot Authority Approval upgrade summary." },
       { category: "Release Notes", title: "Release notes v3.0", path: "docs/public-demo-release-notes-v3.0.md", type: "markdown", description: "Private Pilot Closeout Decision upgrade summary." },
       { category: "Release Notes", title: "Release notes v2.9", path: "docs/public-demo-release-notes-v2.9.md", type: "markdown", description: "Private Pilot Launch Control upgrade summary." },
@@ -869,6 +875,17 @@
       { category: "Private Pilot Authority Approval", title: "Private environment activation plan v3.1", path: "data/private-environment-activation-plan-v3.1.csv", type: "csv", description: "Ten private activation tasks." },
       { category: "Private Pilot Authority Approval", title: "Second-pilot scale criteria v3.1", path: "data/second-pilot-scale-criteria-v3.1.csv", type: "csv", description: "Ten scale criteria." },
       { category: "Private Pilot Authority Approval", title: "Authority package v3.1", path: "data/private-pilot-authority-package-v3.1.json", type: "json", description: "Machine-readable v3.1 authority package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Activation Drill & Decision Record", title: "Activation drill playbook v3.2", path: "docs/private-pilot-activation-drill-playbook-v3.2.md", type: "markdown", description: "Meeting flow, evidence rules, no-go triggers, and monitoring path." },
+      { category: "Activation Drill & Decision Record", title: "Toastmasters activation drill plan v3.2", path: "docs/toastmasters-private-pilot-activation-drill-plan-v3.2.md", type: "markdown", description: "Controlled First Nations Toastmasters activation drill path." },
+      { category: "Activation Drill & Decision Record", title: "Activation decision record template v3.2", path: "docs/activation-decision-record-template-v3.2.md", type: "markdown", description: "Go, hold, no-go, expiry, conditions, and evidence references." },
+      { category: "Activation Drill & Decision Record", title: "Incident and breach tabletop script v3.2", path: "docs/incident-and-breach-tabletop-script-v3.2.md", type: "markdown", description: "Public-safe breach, cultural safety, support, and access scenario script." },
+      { category: "Activation Drill & Decision Record", title: "Decision sequence v3.2", path: "data/activation-decision-sequence-v3.2.csv", type: "csv", description: "Fourteen activation decision steps." },
+      { category: "Activation Drill & Decision Record", title: "Signoff matrix v3.2", path: "data/activation-signoff-matrix-v3.2.csv", type: "csv", description: "Twelve activation signoff rows." },
+      { category: "Activation Drill & Decision Record", title: "Tabletop scenarios v3.2", path: "data/activation-tabletop-scenarios-v3.2.csv", type: "csv", description: "Twelve go/hold/no-go scenarios." },
+      { category: "Activation Drill & Decision Record", title: "Evidence packet v3.2", path: "data/activation-evidence-packet-v3.2.csv", type: "csv", description: "Sixteen evidence packet items and classifications." },
+      { category: "Activation Drill & Decision Record", title: "Rehearsal tasks v3.2", path: "data/activation-rehearsal-tasks-v3.2.csv", type: "csv", description: "Twelve fake-data rehearsal tasks." },
+      { category: "Activation Drill & Decision Record", title: "Monitoring checks v3.2", path: "data/activation-monitoring-checks-v3.2.csv", type: "csv", description: "Ten first-72-hour monitoring checks." },
+      { category: "Activation Drill & Decision Record", title: "Activation drill package v3.2", path: "data/private-pilot-activation-drill-package-v3.2.json", type: "json", description: "Machine-readable v3.2 activation drill package summary, counts, no-go triggers, source anchors, and control arrays." },
 
       { category: "Decision Pack", title: "Scope options and budget model", path: "docs/scope-options-and-budget-model-v0.7.md", type: "markdown", description: "MVP, pilot, and fuller build options." },
       { category: "Decision Pack", title: "RACI and decision rights", path: "docs/raci-and-decision-rights-v0.7.md", type: "markdown", description: "Ownership, consultation, and approval responsibilities." },

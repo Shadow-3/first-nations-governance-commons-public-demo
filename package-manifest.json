@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "3.1",
+  "version": "3.2",
   "date": "2026-06-05",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, Build Delivery Control, Organisation Onboarding, Private Pilot Readiness, Pilot Operations Control, Private Pilot Implementation, and Private Pilot Launch Control, and Private Pilot Closeout Decision, and Private Pilot Authority Approval in sequence. Pilot Launch is only a public fake/sample launch template; any real private pilot needs a separate approved private environment, named operators, role access, privacy notice, consent and withdrawal, incident response, official handoff, retention, deletion, closeout evidence, and weekly learning review, closeout decision record, deletion/retention proof, access revocation or renewal, public summary redaction QA, and transition backlog, authority approval, Indigenous Data Sovereignty review, privacy impact decision, role access register, participant notice/consent, private environment activation, and scale criteria.",
+  "recommendedDecision": "Use Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, Build Delivery Control, Organisation Onboarding, Private Pilot Readiness, Pilot Operations Control, Private Pilot Implementation, Private Pilot Launch Control, Private Pilot Closeout Decision, Private Pilot Authority Approval, and Activation Drill & Decision Record in sequence. Pilot Launch and Activation Drill are public fake/sample templates only; any real private pilot needs a separate approved private environment, named operators, role access, privacy notice, consent and withdrawal, incident response, official handoff, retention, deletion, closeout evidence, authority approval, Indigenous Data Sovereignty review, privacy impact decision, role access register, participant notice/consent, private environment activation, signoff matrix, tabletop scenarios, evidence packet, activation decision record, and first-72-hour monitoring.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -176,13 +176,26 @@
     "data/participant-notice-consent-clauses-v3.1.csv",
     "data/private-environment-activation-plan-v3.1.csv",
     "data/second-pilot-scale-criteria-v3.1.csv",
-    "data/private-pilot-authority-package-v3.1.json"
+    "data/private-pilot-authority-package-v3.1.json",
+    "private-pilot-activation-drill.html",
+    "docs/private-pilot-activation-drill-playbook-v3.2.md",
+    "docs/toastmasters-private-pilot-activation-drill-plan-v3.2.md",
+    "docs/activation-decision-record-template-v3.2.md",
+    "docs/incident-and-breach-tabletop-script-v3.2.md",
+    "docs/public-demo-release-notes-v3.2.md",
+    "data/activation-decision-sequence-v3.2.csv",
+    "data/activation-signoff-matrix-v3.2.csv",
+    "data/activation-tabletop-scenarios-v3.2.csv",
+    "data/activation-evidence-packet-v3.2.csv",
+    "data/activation-rehearsal-tasks-v3.2.csv",
+    "data/activation-monitoring-checks-v3.2.csv",
+    "data/private-pilot-activation-drill-package-v3.2.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v3.1.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.2.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -324,7 +337,17 @@
       "qa-v31-deployed-private-pilot-authority-required-desktop.png",
       "qa-v31-deployed-private-pilot-authority-ids-desktop.png",
       "qa-v31-deployed-private-pilot-authority-mobile.png",
-      "qa-v31-deployed-private-pilot-authority-package-mobile.png"
+      "qa-v31-deployed-private-pilot-authority-package-mobile.png",
+      "qa-v32-local-private-pilot-activation-drill-desktop.png",
+      "qa-v32-local-private-pilot-activation-drill-required-desktop.png",
+      "qa-v32-local-private-pilot-activation-drill-nogo-desktop.png",
+      "qa-v32-local-private-pilot-activation-drill-mobile.png",
+      "qa-v32-local-private-pilot-activation-drill-package-mobile.png",
+      "qa-v32-deployed-private-pilot-activation-drill-desktop.png",
+      "qa-v32-deployed-private-pilot-activation-drill-required-desktop.png",
+      "qa-v32-deployed-private-pilot-activation-drill-nogo-desktop.png",
+      "qa-v32-deployed-private-pilot-activation-drill-mobile.png",
+      "qa-v32-deployed-private-pilot-activation-drill-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -1146,6 +1169,21 @@
       "data/private-environment-activation-plan-v3.1.csv",
       "data/second-pilot-scale-criteria-v3.1.csv",
       "data/private-pilot-authority-package-v3.1.json"
+    ],
+    "privatePilotActivationDrill": [
+      "private-pilot-activation-drill.html",
+      "docs/private-pilot-activation-drill-playbook-v3.2.md",
+      "docs/toastmasters-private-pilot-activation-drill-plan-v3.2.md",
+      "docs/activation-decision-record-template-v3.2.md",
+      "docs/incident-and-breach-tabletop-script-v3.2.md",
+      "docs/public-demo-release-notes-v3.2.md",
+      "data/activation-decision-sequence-v3.2.csv",
+      "data/activation-signoff-matrix-v3.2.csv",
+      "data/activation-tabletop-scenarios-v3.2.csv",
+      "data/activation-evidence-packet-v3.2.csv",
+      "data/activation-rehearsal-tasks-v3.2.csv",
+      "data/activation-monitoring-checks-v3.2.csv",
+      "data/private-pilot-activation-drill-package-v3.2.json"
     ]
   },
   "safetyRules": [
@@ -1179,7 +1217,9 @@
     "Public learning from the pilot must be aggregate, redacted, and approved; never-public evidence remains only in the approved private environment.",
     "Private Pilot Authority Approval is a public fake/sample template only; it must not collect or expose real names, emails, access needs, incidents, official Toastmasters records, member numbers, payments, signatures, authority records, or private pilot evidence.",
     "No real private pilot intake, private Decidim workspace, provider handoff, or second-pilot scale path should proceed until authority, Indigenous Data Sovereignty, privacy impact, role access, notice/consent, private environment activation, and scale criteria are approved.",
-    "Developer custody and repository maintainership do not equal First Nations community authority."
+    "Developer custody and repository maintainership do not equal First Nations community authority.",
+    "Activation Drill & Decision Record is a public fake/sample template only; it must not collect or expose real names, emails, access needs, incidents, official Toastmasters records, member numbers, payments, signatures, authority records, access logs, decision records, or private pilot evidence.",
+    "No real private pilot intake should proceed until activation drill, signoff matrix, tabletop scenarios, evidence packet, rehearsal tasks, first-72-hour monitoring checks, and recorded go/hold/no-go decision have passed."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -1846,5 +1886,106 @@
     ],
     "safetyRule": "This public v3.1 authority package is fake/sample only. It must not collect or expose real names, emails, access needs, incidents, official Toastmasters records, member numbers, payments, signatures, authority records, or private pilot evidence.",
     "approvalRule": "Do not activate any real private pilot, private Decidim workspace, EOI intake, provider handoff, or second pilot until authority, Indigenous Data Sovereignty, privacy impact, role access, participant notice, private environment, and scale criteria are approved."
+  },
+  "privatePilotActivationDrill": {
+    "entrypoint": "private-pilot-activation-drill.html",
+    "playbook": "docs/private-pilot-activation-drill-playbook-v3.2.md",
+    "toastmastersPlan": "docs/toastmasters-private-pilot-activation-drill-plan-v3.2.md",
+    "decisionRecord": "docs/activation-decision-record-template-v3.2.md",
+    "incidentTabletop": "docs/incident-and-breach-tabletop-script-v3.2.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.2.md",
+    "dataFiles": [
+      "data/activation-decision-sequence-v3.2.csv",
+      "data/activation-signoff-matrix-v3.2.csv",
+      "data/activation-tabletop-scenarios-v3.2.csv",
+      "data/activation-evidence-packet-v3.2.csv",
+      "data/activation-rehearsal-tasks-v3.2.csv",
+      "data/activation-monitoring-checks-v3.2.csv",
+      "data/private-pilot-activation-drill-package-v3.2.json"
+    ],
+    "counts": {
+      "decisionSteps": 14,
+      "signoffRows": 12,
+      "tabletopScenarios": 12,
+      "evidenceArtifacts": 16,
+      "rehearsalTasks": 12,
+      "monitorChecks": 10,
+      "readinessRecords": 76,
+      "requiredDecisionSteps": 10,
+      "requiredSignoffs": 8,
+      "noGoScenarios": 4,
+      "neverPublicEvidence": 3,
+      "requiredRehearsalTasks": 8,
+      "requiredMonitorChecks": 7
+    },
+    "noGoTriggers": [
+      "Real intake opens before the activation drill, tabletop scenarios, and signoff matrix are completed.",
+      "Authority decision is recorded without quorum, delegation, conditions, expiry, or stop triggers.",
+      "Private pilot records, access logs, incident evidence, official Toastmasters records, payment details, member numbers, or support details appear in public files.",
+      "No-private-access roles, providers, public reviewers, or supporters can view private records.",
+      "Withdrawal, correction, support, incident pause, breach assessment, backup/restore, deletion, or public redaction QA fails.",
+      "Official Toastmasters forms, signatures, payments, member numbers, or charter records enter the public package or private pilot tool.",
+      "Activation continues past the first 72 hours without authority checkpoint, monitoring evidence, or closeout trigger."
+    ],
+    "sourceAnchors": [
+      {
+        "label": "Barayamal Toastmasters First Nations",
+        "url": "https://barayamal.com.au/toastmasters-first-nations/"
+      },
+      {
+        "label": "Toastmasters Start a Club",
+        "url": "https://www.toastmasters.org/Start-a-Club"
+      },
+      {
+        "label": "Toastmasters Club Charter Requirements Form",
+        "url": "https://content.toastmasters.org/image/upload/ATO-club-chartering-requirements-ff.pdf"
+      },
+      {
+        "label": "Toastmasters Governing Documents",
+        "url": "https://www.toastmasters.org/resources/governing-documents"
+      },
+      {
+        "label": "Maiam nayri Wingara Indigenous Data Sovereignty",
+        "url": "https://www.maiamnayriwingara.org/"
+      },
+      {
+        "label": "AIATSIS ethical research",
+        "url": "https://aiatsis.gov.au/research/ethical-research"
+      },
+      {
+        "label": "NHMRC Aboriginal and Torres Strait Islander research ethics",
+        "url": "https://www.nhmrc.gov.au/research-policy/ethics/ethical-guidelines-research-aboriginal-and-torres-strait-islander-peoples"
+      },
+      {
+        "label": "OAIC Australian Privacy Principles",
+        "url": "https://www.oaic.gov.au/privacy/australian-privacy-principles/"
+      },
+      {
+        "label": "OAIC Guide to undertaking privacy impact assessments",
+        "url": "https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/privacy-impact-assessments/guide-to-undertaking-privacy-impact-assessments"
+      },
+      {
+        "label": "OAIC Notifiable Data Breaches scheme",
+        "url": "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme"
+      },
+      {
+        "label": "OAIC Data Breach Preparation and Response",
+        "url": "https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/preventing-preparing-for-and-responding-to-data-breaches/data-breach-preparation-and-response/part-4-notifiable-data-breach-ndb-scheme"
+      },
+      {
+        "label": "Cyber.gov.au Essential Eight maturity model",
+        "url": "https://www.cyber.gov.au/resources-business-and-government/essential-cybersecurity/essential-eight/essential-eight-maturity-model"
+      },
+      {
+        "label": "Decidim administrators",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/admins.html"
+      },
+      {
+        "label": "Decidim permissions",
+        "url": "https://docs.decidim.org/en/develop/develop/permissions.html"
+      }
+    ],
+    "safetyRule": "This public v3.2 activation drill package is fake/sample only. It must not collect or expose real names, emails, access needs, incidents, official Toastmasters records, member numbers, payments, signatures, authority records, access logs, decision records, or private pilot evidence.",
+    "activationRule": "Do not open real private pilot intake until the activation drill, signoff matrix, tabletop scenarios, evidence packet, rehearsal tasks, first-72-hour monitoring checks, and recorded go/hold/no-go decision have passed."
   }
 }

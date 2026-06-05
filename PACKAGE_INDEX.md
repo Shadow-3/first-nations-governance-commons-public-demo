@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v3.1  
+Version: v3.2  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -152,6 +152,23 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 142. `docs/public-demo-release-notes-v2.3.md` - v2.3 release summary.
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
+
+## v3.2 Activation Drill & Decision Record Additions
+
+- `private-pilot-activation-drill.html` - activation meeting rehearsal, signoff matrix, tabletop scenarios, evidence packet, fake-data drill, and monitoring checks.
+- `docs/private-pilot-activation-drill-playbook-v3.2.md`
+- `docs/toastmasters-private-pilot-activation-drill-plan-v3.2.md`
+- `docs/activation-decision-record-template-v3.2.md`
+- `docs/incident-and-breach-tabletop-script-v3.2.md`
+- `docs/public-demo-release-notes-v3.2.md`
+- `data/activation-decision-sequence-v3.2.csv`
+- `data/activation-signoff-matrix-v3.2.csv`
+- `data/activation-tabletop-scenarios-v3.2.csv`
+- `data/activation-evidence-packet-v3.2.csv`
+- `data/activation-rehearsal-tasks-v3.2.csv`
+- `data/activation-monitoring-checks-v3.2.csv`
+- `data/private-pilot-activation-drill-package-v3.2.json`
+
 
 ## Recommended Reading Order
 
@@ -720,6 +737,7 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 - `private-pilot-launch.html` is the public Private Pilot Launch Control page for controlled launch gates, intake states, communications, learning metrics, and closeout decision.
 - `private-pilot-closeout.html` is the public Private Pilot Closeout Decision page for closeout checks, scale decisions, evidence classification, deletion/retention proof, and transition backlog.
 - `private-pilot-authority.html` is the public Private Pilot Authority Approval page for authority, data governance, privacy, role access, participant notice, private environment activation, and scale criteria.
+- `private-pilot-activation-drill.html` is the public Activation Drill & Decision Record page for approval rehearsal, signoff, tabletop scenarios, evidence classification, fake-data drill tasks, and first-72-hour monitoring.
 - `docs-index.html` is the public reviewer hub.
 - `document.html` renders Markdown, CSV, and JSON files from a whitelisted package catalog.
 - `404.html` gives visitors a clean recovery page.

@@ -1,0 +1,11 @@
+id,window,check,status,owner,evidence,noGo
+MON-001,Hour 0,Confirm public demo still has fake/sample data only,Required,QA reviewer,Public route check logged,Real data appears publicly
+MON-002,Hour 2,Review first private intake record classes,Required,Privacy reviewer,No unapproved fields or official records,Unapproved field collected
+MON-003,Hour 4,Check access logs and admin changes,Required,Technical custodian,Only named roles accessed records,Unapproved access appears
+MON-004,Hour 8,Check support and withdrawal queue,Required,Access support contact,Support/withdrawal route is responsive,Support route fails
+MON-005,Hour 12,Review incident and safety watch,Required,Safety reviewer,No unresolved safety or incident concern,Incident lacks pause path
+MON-006,Hour 24,Check official Toastmasters handoff boundary,Required,Toastmasters launch lead,Official records stayed external,Official data enters pilot
+MON-007,Hour 36,Run public update redaction QA,Required,QA reviewer,Public status remains aggregate/redacted,Public update identifies someone
+MON-008,Hour 48,Review operator load and capacity,Hold,Pilot operator,Operator can sustain response clocks,Operator load exceeds safe capacity
+MON-009,Hour 72,Authority checkpoint go/hold/no-go,Ready,Pilot authority,"Continue, hold, pause, or close decision recorded",No early authority checkpoint
+MON-010,Week 1,Schedule closeout and archive review,Ready,Data reviewer,Closeout review and retention/deletion path confirmed,Records drift without review

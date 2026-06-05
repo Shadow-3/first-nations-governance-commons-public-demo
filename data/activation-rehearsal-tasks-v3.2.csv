@@ -1,0 +1,13 @@
+id,lane,task,status,owner,passSignal,noGo
+DR-001,Intake,Submit fake EOI with notice and consent,Required,Pilot operator,Fake intake creates expected private record class only,Public form collects private data
+DR-002,Withdrawal,Withdraw fake participant and prove deletion/correction route,Required,Privacy reviewer,Withdrawal path works and proof is private,Withdrawal cannot be processed
+DR-003,Access,Try no-private-access role against private record,Required,Technical custodian,Access denied and logged,No-private-access role can view records
+DR-004,Admin,Revoke and restore approved admin access,Required,Technical custodian,Revocation and backup admin route tested,Unapproved or stale access persists
+DR-005,Backup,"Export, backup, delete, and restore fake record",Required,Technical custodian,Backup/restore and deletion proof pass,Records cannot be deleted or restored
+DR-006,Incident,Run breach notification assessment tabletop,Required,Safety reviewer,"Assessment owner, threshold, and notification route known",Breach assessment route unclear
+DR-007,Official,Route fake official membership question outside pilot,Required,Toastmasters launch lead,Official handoff does not store official records,Official record enters pilot
+DR-008,Public QA,Publish fake aggregate update through redaction QA,Required,QA reviewer,No private context or identity inference,Public update identifies someone
+DR-009,Support,Test access support response clock,Hold,Access support contact,Support response owner can act,Support queue lacks owner
+DR-010,Provider,Send fake provider handoff package only,Hold,Build delivery lead,Provider receives no private data,Provider receives private export
+DR-011,Decision,Generate activation decision record,Ready,Pilot authority,"Conditions, expiry, and stop triggers included",Decision has no expiry or owner
+DR-012,Closeout,Trigger closeout review date,Ready,Data reviewer,Closeout review is scheduled before activation,Records have no closeout trigger

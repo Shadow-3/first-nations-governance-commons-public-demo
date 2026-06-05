@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v3.1
+Current package version: v3.2
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -54,6 +54,7 @@ Open `private-pilot-implementation.html` to use Private Pilot Implementation for
 Open `private-pilot-launch.html` to use Private Pilot Launch Control for controlled launch gates, intake states, communications, learning metrics, and a closeout decision before any wider rollout.
 Open `private-pilot-closeout.html` to use Private Pilot Closeout Decision for closeout checks, scale decision options, evidence ledger, deletion/retention proof, and transition backlog before any repeat, archive, handoff, or wider rollout.
 Open `private-pilot-authority.html` to use Private Pilot Authority Approval for authority gates, Indigenous Data Sovereignty controls, privacy impact checks, role access, participant notice/consent, private environment activation, and second-pilot scale criteria before any real intake opens.
+Open `private-pilot-activation-drill.html` to use Activation Drill & Decision Record for the approval meeting rehearsal, signoff matrix, incident tabletop, evidence packet, fake-data activation drill, and first-72-hour monitoring before real intake opens.
 
 The demo shows:
 
@@ -85,6 +86,19 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v3.2.md`
+- `docs/private-pilot-activation-drill-playbook-v3.2.md`
+- `docs/toastmasters-private-pilot-activation-drill-plan-v3.2.md`
+- `docs/activation-decision-record-template-v3.2.md`
+- `docs/incident-and-breach-tabletop-script-v3.2.md`
+- `data/activation-decision-sequence-v3.2.csv`
+- `data/activation-signoff-matrix-v3.2.csv`
+- `data/activation-tabletop-scenarios-v3.2.csv`
+- `data/activation-evidence-packet-v3.2.csv`
+- `data/activation-rehearsal-tasks-v3.2.csv`
+- `data/activation-monitoring-checks-v3.2.csv`
+- `data/private-pilot-activation-drill-package-v3.2.json`
+
 - `docs/public-demo-release-notes-v3.1.md`
 - `docs/private-pilot-authority-and-data-governance-pack-v3.1.md`
 - `docs/toastmasters-private-pilot-authority-approval-plan-v3.1.md`
@@ -757,6 +771,23 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v3.2 Activation Drill & Decision Record Upgrade
+
+The v3.2 package adds the practical rehearsal layer needed after authority approval and before real private intake opens:
+
+- Interactive Activation Drill & Decision Record page.
+- Fourteen activation decision steps.
+- Twelve signoff matrix rows.
+- Twelve go/hold/no-go tabletop scenarios.
+- Sixteen evidence packet items with public/private/never-public classifications.
+- Twelve fake-data rehearsal tasks.
+- Ten first-72-hour monitoring checks.
+- Browser-generated activation decision record.
+- Playbook, Toastmasters activation drill plan, decision record template, incident/breach tabletop script, CSV files, and machine-readable JSON package.
+
+Use this version after v3.1 authority approval. The activation drill still uses public fake/sample templates only. Real activation requires a separate approved private environment, authority quorum, IDS/data governance pass, privacy impact signoff, role access test, support route, incident pause path, official Toastmasters boundary, redaction QA, and first-72-hour monitoring.
+
 
 ## v3.1 Private Pilot Authority Approval Upgrade
 
