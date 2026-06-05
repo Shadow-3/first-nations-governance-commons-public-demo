@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v4.1
+Current package version: v4.2
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -64,6 +64,7 @@ Open `controlled-sandbox-test-lab.html` to run fake accounts, scripts, observer 
 Open `sandbox-rehearsal-scorecard.html` to convert fake-data rehearsal results into pass, hold, blocked, remediation, rollout, and public-summary decisions.
 Open `private-rehearsal-closeout.html` to execute and close the private fake-data rehearsal with gates, approvals, public updates, and launch decisions.
 Open `pilot-agreement-onboarding.html` to prepare safe joining terms, role commitments, notices, data schedules, support protocols, training, launch communications, and decision conditions.
+Open `private-intake-consent-triage.html` to rehearse private intake fields, consent checks, support routes, access provisioning, approval tickets, communications, risk controls, and decisions.
 
 The demo shows:
 
@@ -95,6 +96,23 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v4.2.md`
+- `docs/private-intake-consent-triage-playbook-v4.2.md`
+- `docs/private-intake-form-and-field-map-v4.2.md`
+- `docs/consent-support-and-withdrawal-protocol-v4.2.md`
+- `docs/access-provisioning-and-triage-runbook-v4.2.md`
+- `data/private-intake-journey-steps-v4.2.csv`
+- `data/intake-form-fields-v4.2.csv`
+- `data/consent-checks-v4.2.csv`
+- `data/triage-cases-v4.2.csv`
+- `data/support-withdrawal-routes-v4.2.csv`
+- `data/access-provisioning-queue-v4.2.csv`
+- `data/private-approval-tickets-v4.2.csv`
+- `data/comms-notification-templates-v4.2.csv`
+- `data/intake-risk-controls-v4.2.csv`
+- `data/intake-decision-options-v4.2.csv`
+- `data/private-intake-consent-triage-package-v4.2.json`
+
 - `docs/public-demo-release-notes-v4.1.md`
 - `docs/pilot-agreement-onboarding-playbook-v4.1.md`
 - `docs/first-nations-organisation-join-pathway-v4.1.md`
@@ -904,6 +922,17 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v4.2 Private Intake & Consent Triage Upgrade
+
+The v4.2 package adds the private intake rehearsal layer needed after agreement review:
+
+- Fourteen journey steps, sixteen intake fields, fourteen consent checks, and fourteen triage cases.
+- Twelve support routes, twelve access queue rows, fourteen approval tickets, twelve communications, fourteen risk controls, and ten decision options.
+- A stronger rule that real private intake remains blocked until private authority, privacy, IDS/data governance, official Toastmasters, support, access, retention, incident, and closeout approvals pass.
+
+Use this version to rehearse private intake safely with fake/sample data before any real participant intake.
+
 
 ## v4.1 Pilot Agreement & Organisation Onboarding Upgrade
 

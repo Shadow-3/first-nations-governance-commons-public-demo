@@ -627,6 +627,7 @@
 <a class="btn" href="sandbox-rehearsal-scorecard.html">Scorecard</a>
 <a class="btn" href="private-rehearsal-closeout.html">Closeout</a>
 <a class="btn" href="pilot-agreement-onboarding.html">Agreement</a>
+<a class="btn" href="private-intake-consent-triage.html">Intake</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -677,6 +678,10 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Private intake consent triage playbook", path: "docs/private-intake-consent-triage-playbook-v4.2.md", type: "markdown", description: "Run the private fake-data intake workflow." },
+      { category: "Start Here", title: "Private intake form and field map", path: "docs/private-intake-form-and-field-map-v4.2.md", type: "markdown", description: "Minimum fields and never-public field boundaries." },
+      { category: "Start Here", title: "Consent support and withdrawal protocol", path: "docs/consent-support-and-withdrawal-protocol-v4.2.md", type: "markdown", description: "Consent, support, complaint, incident, and withdrawal routes." },
+      { category: "Start Here", title: "Access provisioning and triage runbook", path: "docs/access-provisioning-and-triage-runbook-v4.2.md", type: "markdown", description: "Role access, revoke, triage cases, and approvals." },
       { category: "Start Here", title: "Pilot agreement onboarding playbook", path: "docs/pilot-agreement-onboarding-playbook-v4.1.md", type: "markdown", description: "Convert closeout into safe organisation onboarding." },
       { category: "Start Here", title: "First Nations organisation join pathway", path: "docs/first-nations-organisation-join-pathway-v4.1.md", type: "markdown", description: "Barayamal, Toastmasters, and approval paths." },
       { category: "Start Here", title: "Participant notice and role commitment pack", path: "docs/participant-notice-and-role-commitment-pack-v4.1.md", type: "markdown", description: "Notice clauses and role commitments." },
@@ -749,6 +754,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v4.2", path: "docs/public-demo-release-notes-v4.2.md", type: "markdown", description: "Private Intake & Consent Triage upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.1", path: "docs/public-demo-release-notes-v4.1.md", type: "markdown", description: "Pilot Agreement & Organisation Onboarding upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.0", path: "docs/public-demo-release-notes-v4.0.md", type: "markdown", description: "Private Rehearsal Closeout Board upgrade summary." },
       { category: "Release Notes", title: "Release notes v3.9", path: "docs/public-demo-release-notes-v3.9.md", type: "markdown", description: "Sandbox Rehearsal Scorecard upgrade summary." },
@@ -974,6 +980,21 @@
       { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
       { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
       { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Private Intake & Consent Triage", title: "Intake triage playbook v4.2", path: "docs/private-intake-consent-triage-playbook-v4.2.md", type: "markdown", description: "Run the private fake-data intake workflow." },
+      { category: "Private Intake & Consent Triage", title: "Private intake form and field map v4.2", path: "docs/private-intake-form-and-field-map-v4.2.md", type: "markdown", description: "Minimum fields and never-public field boundaries." },
+      { category: "Private Intake & Consent Triage", title: "Consent support and withdrawal protocol v4.2", path: "docs/consent-support-and-withdrawal-protocol-v4.2.md", type: "markdown", description: "Consent, support, complaint, incident, and withdrawal routes." },
+      { category: "Private Intake & Consent Triage", title: "Access provisioning and triage runbook v4.2", path: "docs/access-provisioning-and-triage-runbook-v4.2.md", type: "markdown", description: "Role access, revoke, triage cases, and approvals." },
+      { category: "Private Intake & Consent Triage", title: "Journey steps v4.2", path: "data/private-intake-journey-steps-v4.2.csv", type: "csv", description: "Fourteen private intake journey steps." },
+      { category: "Private Intake & Consent Triage", title: "Intake fields v4.2", path: "data/intake-form-fields-v4.2.csv", type: "csv", description: "Sixteen intake fields." },
+      { category: "Private Intake & Consent Triage", title: "Consent checks v4.2", path: "data/consent-checks-v4.2.csv", type: "csv", description: "Fourteen consent checks." },
+      { category: "Private Intake & Consent Triage", title: "Triage cases v4.2", path: "data/triage-cases-v4.2.csv", type: "csv", description: "Fourteen intake triage cases." },
+      { category: "Private Intake & Consent Triage", title: "Support routes v4.2", path: "data/support-withdrawal-routes-v4.2.csv", type: "csv", description: "Twelve support and withdrawal routes." },
+      { category: "Private Intake & Consent Triage", title: "Access queue v4.2", path: "data/access-provisioning-queue-v4.2.csv", type: "csv", description: "Twelve access provisioning rows." },
+      { category: "Private Intake & Consent Triage", title: "Approval tickets v4.2", path: "data/private-approval-tickets-v4.2.csv", type: "csv", description: "Fourteen private approval tickets." },
+      { category: "Private Intake & Consent Triage", title: "Comms templates v4.2", path: "data/comms-notification-templates-v4.2.csv", type: "csv", description: "Twelve communications templates." },
+      { category: "Private Intake & Consent Triage", title: "Risk controls v4.2", path: "data/intake-risk-controls-v4.2.csv", type: "csv", description: "Fourteen intake risk controls." },
+      { category: "Private Intake & Consent Triage", title: "Decision options v4.2", path: "data/intake-decision-options-v4.2.csv", type: "csv", description: "Ten intake decision options." },
+      { category: "Private Intake & Consent Triage", title: "Triage package v4.2", path: "data/private-intake-consent-triage-package-v4.2.json", type: "json", description: "Machine-readable v4.2 intake package." },
       { category: "Pilot Agreement & Organisation Onboarding", title: "Agreement playbook v4.1", path: "docs/pilot-agreement-onboarding-playbook-v4.1.md", type: "markdown", description: "Convert closeout into safe organisation onboarding." },
       { category: "Pilot Agreement & Organisation Onboarding", title: "First Nations organisation join pathway v4.1", path: "docs/first-nations-organisation-join-pathway-v4.1.md", type: "markdown", description: "Barayamal, Toastmasters, and approval paths." },
       { category: "Pilot Agreement & Organisation Onboarding", title: "Participant notice and role commitment pack v4.1", path: "docs/participant-notice-and-role-commitment-pack-v4.1.md", type: "markdown", description: "Notice clauses and role commitments." },

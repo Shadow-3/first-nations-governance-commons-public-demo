@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "4.1",
+  "version": "4.2",
   "date": "2026-06-05",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use Pilot Agreement & Organisation Onboarding as the default next fake-data agreement layer: prepare joining terms, role commitments, notices, data schedules, support protocols, training, launch communications, and decision conditions, while keeping real participant launch on hold until private authority, privacy, Indigenous Data Sovereignty/data governance, official Toastmasters boundary, support, access, backup/restore, monitoring, incident response, retention, and closeout approvals pass.",
+  "recommendedDecision": "Use Private Intake & Consent Triage as the default next fake-data intake layer: rehearse private intake fields, consent checks, support and withdrawal routes, access provisioning, approval tickets, communications, risk controls, and decision options, while keeping real participant intake on hold until private authority, privacy, Indigenous Data Sovereignty/data governance, official Toastmasters boundary, support, access, retention, incident response, and closeout approvals pass.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -313,13 +313,30 @@
     "data/onboarding-training-steps-v4.1.csv",
     "data/launch-communications-v4.1.csv",
     "data/launch-decision-conditions-v4.1.csv",
-    "data/pilot-agreement-onboarding-package-v4.1.json"
+    "data/pilot-agreement-onboarding-package-v4.1.json",
+    "private-intake-consent-triage.html",
+    "docs/private-intake-consent-triage-playbook-v4.2.md",
+    "docs/private-intake-form-and-field-map-v4.2.md",
+    "docs/consent-support-and-withdrawal-protocol-v4.2.md",
+    "docs/access-provisioning-and-triage-runbook-v4.2.md",
+    "docs/public-demo-release-notes-v4.2.md",
+    "data/private-intake-journey-steps-v4.2.csv",
+    "data/intake-form-fields-v4.2.csv",
+    "data/consent-checks-v4.2.csv",
+    "data/triage-cases-v4.2.csv",
+    "data/support-withdrawal-routes-v4.2.csv",
+    "data/access-provisioning-queue-v4.2.csv",
+    "data/private-approval-tickets-v4.2.csv",
+    "data/comms-notification-templates-v4.2.csv",
+    "data/intake-risk-controls-v4.2.csv",
+    "data/intake-decision-options-v4.2.csv",
+    "data/private-intake-consent-triage-package-v4.2.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v4.1.md",
+    "releaseNotes": "docs/public-demo-release-notes-v4.2.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -561,7 +578,17 @@
       "qa-v41-deployed-pilot-agreement-onboarding-barayamal-desktop.png",
       "qa-v41-deployed-pilot-agreement-onboarding-data-desktop.png",
       "qa-v41-deployed-pilot-agreement-onboarding-mobile.png",
-      "qa-v41-deployed-pilot-agreement-onboarding-package-mobile.png"
+      "qa-v41-deployed-pilot-agreement-onboarding-package-mobile.png",
+      "qa-v42-local-private-intake-consent-triage-desktop.png",
+      "qa-v42-local-private-intake-consent-triage-barayamal-desktop.png",
+      "qa-v42-local-private-intake-consent-triage-data-desktop.png",
+      "qa-v42-local-private-intake-consent-triage-mobile.png",
+      "qa-v42-local-private-intake-consent-triage-package-mobile.png",
+      "qa-v42-deployed-private-intake-consent-triage-desktop.png",
+      "qa-v42-deployed-private-intake-consent-triage-barayamal-desktop.png",
+      "qa-v42-deployed-private-intake-consent-triage-data-desktop.png",
+      "qa-v42-deployed-private-intake-consent-triage-mobile.png",
+      "qa-v42-deployed-private-intake-consent-triage-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -1540,6 +1567,25 @@
       "data/launch-communications-v4.1.csv",
       "data/launch-decision-conditions-v4.1.csv",
       "data/pilot-agreement-onboarding-package-v4.1.json"
+    ],
+    "privateIntakeConsentTriage": [
+      "private-intake-consent-triage.html",
+      "docs/private-intake-consent-triage-playbook-v4.2.md",
+      "docs/private-intake-form-and-field-map-v4.2.md",
+      "docs/consent-support-and-withdrawal-protocol-v4.2.md",
+      "docs/access-provisioning-and-triage-runbook-v4.2.md",
+      "docs/public-demo-release-notes-v4.2.md",
+      "data/private-intake-journey-steps-v4.2.csv",
+      "data/intake-form-fields-v4.2.csv",
+      "data/consent-checks-v4.2.csv",
+      "data/triage-cases-v4.2.csv",
+      "data/support-withdrawal-routes-v4.2.csv",
+      "data/access-provisioning-queue-v4.2.csv",
+      "data/private-approval-tickets-v4.2.csv",
+      "data/comms-notification-templates-v4.2.csv",
+      "data/intake-risk-controls-v4.2.csv",
+      "data/intake-decision-options-v4.2.csv",
+      "data/private-intake-consent-triage-package-v4.2.json"
     ]
   },
   "safetyRules": [
@@ -1608,7 +1654,11 @@
     "This v4.1 package is public fake/sample data only. Do not collect or publish real names, emails, phone numbers, founder or business details, member numbers, payments, signatures, authority minutes, consent evidence, access logs, support records, incident details, cultural material, official Toastmasters records, or private pilot evidence.",
     "Dean Foley / Barayamal may remain initial developer, custodian, advisory reviewer, and trusted reviewer, but cannot sign First Nations authority, privacy, Indigenous Data Sovereignty/data governance, official Toastmasters, participant consent, support, payment, or real pilot approvals on behalf of the relevant owners.",
     "Use the Pilot Agreement & Organisation Onboarding Pack after the v4.0 closeout board. It converts a private fake-data closeout decision into public-safe joining terms, role commitments, participant notices, data schedules, support protocols, training steps, launch communications, and go/hold/no-go conditions.",
-    "First Nations organisations can join only through a private approved pathway after authority, privacy, IDS/data governance, official-route, support, technical, access, retention, and closeout approvals pass. The public pack provides templates and boundaries, not approval itself."
+    "First Nations organisations can join only through a private approved pathway after authority, privacy, IDS/data governance, official-route, support, technical, access, retention, and closeout approvals pass. The public pack provides templates and boundaries, not approval itself.",
+    "This v4.2 package remains public fake/sample data only. Do not collect or publish real names, emails, phone numbers, business-sensitive details, member numbers, payments, signatures, authority minutes, consent evidence, access logs, support records, incident details, cultural material, official Toastmasters records, private URLs, or private pilot evidence.",
+    "Dean Foley / Barayamal may support intake design, trusted review, and developer triage, but cannot approve participant consent, First Nations authority, Indigenous Data Sovereignty/data governance, privacy, official Toastmasters, support, payment, access, or real pilot decisions for other owners.",
+    "Use the Private Intake & Consent Triage Pack after the v4.1 agreement pack. It turns public-safe joining templates into a private fake-data intake workflow with field minimisation, consent checks, support and withdrawal routes, access provisioning, approval tickets, communications, risk controls, and launch decisions.",
+    "Real private intake can open only after the blocked consent, authority, privacy, IDS/data governance, official-route, support, access, retention, and incident controls pass in private. Until then, use this pack as an intake rehearsal and reviewer checklist only."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -3156,5 +3206,91 @@
     "advisoryRule": "Dean Foley / Barayamal may remain initial developer, custodian, advisory reviewer, and trusted reviewer, but cannot sign First Nations authority, privacy, Indigenous Data Sovereignty/data governance, official Toastmasters, participant consent, support, payment, or real pilot approvals on behalf of the relevant owners.",
     "safetyRule": "This v4.1 package is public fake/sample data only. Do not collect or publish real names, emails, phone numbers, founder or business details, member numbers, payments, signatures, authority minutes, consent evidence, access logs, support records, incident details, cultural material, official Toastmasters records, or private pilot evidence.",
     "launchRule": "First Nations organisations can join only through a private approved pathway after authority, privacy, IDS/data governance, official-route, support, technical, access, retention, and closeout approvals pass. The public pack provides templates and boundaries, not approval itself."
+  },
+  "privateIntakeConsentTriage": {
+    "entrypoint": "private-intake-consent-triage.html",
+    "playbook": "docs/private-intake-consent-triage-playbook-v4.2.md",
+    "fieldMap": "docs/private-intake-form-and-field-map-v4.2.md",
+    "consentProtocol": "docs/consent-support-and-withdrawal-protocol-v4.2.md",
+    "accessRunbook": "docs/access-provisioning-and-triage-runbook-v4.2.md",
+    "releaseNotes": "docs/public-demo-release-notes-v4.2.md",
+    "dataFiles": [
+      "data/private-intake-journey-steps-v4.2.csv",
+      "data/intake-form-fields-v4.2.csv",
+      "data/consent-checks-v4.2.csv",
+      "data/triage-cases-v4.2.csv",
+      "data/support-withdrawal-routes-v4.2.csv",
+      "data/access-provisioning-queue-v4.2.csv",
+      "data/private-approval-tickets-v4.2.csv",
+      "data/comms-notification-templates-v4.2.csv",
+      "data/intake-risk-controls-v4.2.csv",
+      "data/intake-decision-options-v4.2.csv",
+      "data/private-intake-consent-triage-package-v4.2.json"
+    ],
+    "primaryOrganisationTest": "Barayamal",
+    "controlledMemberTester": "First Nations Toastmasters",
+    "counts": {
+      "journeySteps": 14,
+      "intakeFields": 16,
+      "consentChecks": 14,
+      "triageCases": 14,
+      "supportRoutes": 12,
+      "accessQueue": 12,
+      "approvalTickets": 14,
+      "commsTemplates": 12,
+      "riskControls": 14,
+      "decisionOptions": 10,
+      "intakeRecords": 132,
+      "barayamalCases": 5,
+      "toastmastersCases": 4,
+      "crossTrackCases": 5,
+      "blockedConsentChecks": 5,
+      "neverPublicFields": 5,
+      "blockedApprovalTickets": 6,
+      "criticalRisks": 8,
+      "readyPublicComms": 2
+    },
+    "sourceAnchors": [
+      {
+        "label": "Decidim spaces",
+        "url": "https://docs.decidim.org/en/develop/admin/spaces.html"
+      },
+      {
+        "label": "Decidim components",
+        "url": "https://docs.decidim.org/en/develop/admin/components.html"
+      },
+      {
+        "label": "Decidim authorizations",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+      },
+      {
+        "label": "Decidim admins",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/admins.html"
+      },
+      {
+        "label": "Decidim install checklist",
+        "url": "https://docs.decidim.org/en/develop/install/checklist.html"
+      },
+      {
+        "label": "Barayamal Toastmasters First Nations",
+        "url": "https://barayamal.com.au/toastmasters-first-nations/"
+      },
+      {
+        "label": "Toastmasters Start a Club",
+        "url": "https://www.toastmasters.org/Start-a-Club"
+      },
+      {
+        "label": "OAIC Australian Privacy Principles",
+        "url": "https://www.oaic.gov.au/privacy/australian-privacy-principles"
+      },
+      {
+        "label": "AIATSIS ethical research",
+        "url": "https://aiatsis.gov.au/research/ethical-research"
+      }
+    ],
+    "operatingRule": "Use the Private Intake & Consent Triage Pack after the v4.1 agreement pack. It turns public-safe joining templates into a private fake-data intake workflow with field minimisation, consent checks, support and withdrawal routes, access provisioning, approval tickets, communications, risk controls, and launch decisions.",
+    "advisoryRule": "Dean Foley / Barayamal may support intake design, trusted review, and developer triage, but cannot approve participant consent, First Nations authority, Indigenous Data Sovereignty/data governance, privacy, official Toastmasters, support, payment, access, or real pilot decisions for other owners.",
+    "safetyRule": "This v4.2 package remains public fake/sample data only. Do not collect or publish real names, emails, phone numbers, business-sensitive details, member numbers, payments, signatures, authority minutes, consent evidence, access logs, support records, incident details, cultural material, official Toastmasters records, private URLs, or private pilot evidence.",
+    "launchRule": "Real private intake can open only after the blocked consent, authority, privacy, IDS/data governance, official-route, support, access, retention, and incident controls pass in private. Until then, use this pack as an intake rehearsal and reviewer checklist only."
   }
 }

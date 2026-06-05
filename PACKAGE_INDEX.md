@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v4.1  
+Version: v4.2  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -153,9 +153,31 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
 
+## v4.2 Private Intake & Consent Triage Additions
+
+- `private-intake-consent-triage.html` - public-safe pack for private intake journey, fields, consent checks, triage cases, support routes, access provisioning, approval tickets, communications, risk controls, and decisions.
+- `docs/private-intake-consent-triage-playbook-v4.2.md`
+- `docs/private-intake-form-and-field-map-v4.2.md`
+- `docs/consent-support-and-withdrawal-protocol-v4.2.md`
+- `docs/access-provisioning-and-triage-runbook-v4.2.md`
+- `docs/public-demo-release-notes-v4.2.md`
+- `data/private-intake-journey-steps-v4.2.csv`
+- `data/intake-form-fields-v4.2.csv`
+- `data/consent-checks-v4.2.csv`
+- `data/triage-cases-v4.2.csv`
+- `data/support-withdrawal-routes-v4.2.csv`
+- `data/access-provisioning-queue-v4.2.csv`
+- `data/private-approval-tickets-v4.2.csv`
+- `data/comms-notification-templates-v4.2.csv`
+- `data/intake-risk-controls-v4.2.csv`
+- `data/intake-decision-options-v4.2.csv`
+- `data/private-intake-consent-triage-package-v4.2.json`
+
+
 ## v4.1 Pilot Agreement & Organisation Onboarding Additions
 
 - `pilot-agreement-onboarding.html` - public-safe pack for joining pathways, agreement sections, role commitments, notices, data schedules, support protocols, training, launch communications, and decision conditions.
+- `private-intake-consent-triage.html` is the public-safe Private Intake & Consent Triage Pack for fake-data private intake rehearsal, consent checks, support routes, access provisioning, approvals, comms, risks, and decisions.
 - `docs/pilot-agreement-onboarding-playbook-v4.1.md`
 - `docs/first-nations-organisation-join-pathway-v4.1.md`
 - `docs/participant-notice-and-role-commitment-pack-v4.1.md`
