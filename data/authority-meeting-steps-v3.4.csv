@@ -1,0 +1,15 @@
+id,step,status,owner,task,output
+AM-001,Open fake/sample boundary,Required,Meeting chair,Confirm no public page or public file contains real private pilot evidence,Boundary accepted
+AM-002,Confirm authority quorum,Blocked,Pilot authority,Confirm who can approve and who cannot,Authority quorum recorded privately
+AM-003,Receive Dean advisory note,Ready,Meeting chair,"Treat Dean note as advisory input, not approval",Advisory note tabled
+AM-004,Review evidence vault completeness,Required,Meeting chair,Check every evidence item status and classification,Vault gaps listed
+AM-005,IDS/data governance decision,Blocked,Data reviewer,"Approve or hold data classes, purpose, access, retention, deletion, reporting",IDS decision recorded
+AM-006,Privacy decision,Blocked,Privacy reviewer,"Approve or hold notice, consent, withdrawal, correction, incident, retention",Privacy decision recorded
+AM-007,Role access decision,Blocked,Technical custodian,"Approve or hold access register, MFA, roles, revoke test",Access decision recorded
+AM-008,Private environment decision,Blocked,Technical custodian,"Approve or hold workspace, backups, export, delete, restore, logging",Environment decision recorded
+AM-009,Official Toastmasters boundary decision,Hold,Toastmasters launch lead,Confirm official records and chartering route stay external,Boundary approved or held
+AM-010,Incident and support decision,Hold,Safety reviewer,"Confirm pause, support, escalation, breach assessment, response clocks",Support path approved or held
+AM-011,Provider handoff decision,Hold,Build delivery lead,Confirm no production export and provider fake-data lane,Provider boundary approved or held
+AM-012,Monitoring decision,Hold,Pilot operator,Confirm first-72-hour checks and authority checkpoint,Monitor approved or held
+AM-013,Conditions and expiry,Required,Meeting chair,"Name conditions, owner, expiry, stop triggers, closeout trigger",Conditions recorded privately
+AM-014,Go/hold/no-go decision,Blocked,Pilot authority,"Record limited private pilot, conditional hold, or no-go",Decision recorded privately

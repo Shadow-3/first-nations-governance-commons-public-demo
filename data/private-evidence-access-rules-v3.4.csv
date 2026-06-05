@@ -1,0 +1,13 @@
+id,role,status,classification,allowed,limit
+AR-001,Dean advisory access,Hold,Private restricted,Only public-safe package plus private evidence extracts approved by authority,Dean cannot receive unrestricted private vault access
+AR-002,Authority group access,Blocked,Never public,Full private evidence vault only for approved authority members,Names and access logs never public
+AR-003,Data reviewer access,Blocked,Private restricted,Data governance evidence and data classes only,No official Toastmasters payment/member records
+AR-004,Privacy reviewer access,Blocked,Private restricted,"PIA, notice, consent, withdrawal, correction, incident route",No public screenshots of private records
+AR-005,Technical custodian access,Blocked,Never public,"Admin roles, logs, backups, restore evidence, revoke checks",Technical proof stays private
+AR-006,Safety reviewer access,Hold,Never public,Incident tabletop and support evidence only,Real incident facts never public
+AR-007,Provider access,Hold,Public safe,"Fake/sample package only until contract, authority, privacy, and role access pass",No production export
+AR-008,Public reviewer access,Ready,Public safe,"GitHub Pages demo, docs, CSV, JSON with fake/sample data",No real names or decisions
+AR-009,Official Toastmasters access,Hold,External route,"Official forms, signatures, payments, member numbers, chartering records outside pilot tool",Official records remain external
+AR-010,Support route access,Hold,Private restricted,Support owner sees only what is needed to support participant request,Access-needs details never public
+AR-011,Audit access,Blocked,Never public,Private access logs and evidence change log only for approved reviewers,Audit logs never public
+AR-012,Public status summary,Ready,Public safe,"Aggregate status, blockers, next owner type, no real evidence",Status only

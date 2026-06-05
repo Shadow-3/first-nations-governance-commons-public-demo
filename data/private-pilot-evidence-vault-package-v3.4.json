@@ -1,0 +1,639 @@
+{
+  "packageName": "Private Pilot Evidence Vault & Advisory Review v3.4",
+  "version": "3.4",
+  "date": "2026-06-05",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "advisoryTrustedReviewer": "Dean Foley / Barayamal",
+  "advisoryRule": "Dean Foley / Barayamal may act as advisory and trusted reviewer for this public-safe control package, but does not replace First Nations authority, privacy approval, Indigenous Data Sovereignty approval, official Toastmasters processes, or a private pilot go/no-go decision.",
+  "approvalRule": "Do not open real intake, activate a private workspace, hand data to a provider, or scale the pilot until the evidence vault, advisory review boundary, authority meeting record, access rules, and decision gates are approved in a separate private environment.",
+  "safetyRule": "This public v3.4 evidence vault package is fake/sample only. It must not collect or expose real names, emails, access needs, incidents, official Toastmasters records, member numbers, payments, signatures, authority records, access logs, decision records, or private pilot evidence.",
+  "noGoTriggers": [
+    "Dean or Barayamal advisory review is treated as final First Nations authority.",
+    "Real evidence is uploaded to the public static demo, public repository, public screenshots, public CSVs, or fake-data Decidim sandbox.",
+    "Authority quorum, IDS/data governance, privacy, role access, or official Toastmasters boundary is missing.",
+    "Reviewer notes include real names, contact details, access needs, incidents, official records, payments, member numbers, signatures, or private decisions.",
+    "A provider or public reviewer receives real private evidence before contract, authority, privacy, and access approval.",
+    "The authority meeting records a go decision without conditions, expiry, no-go triggers, monitoring, support, and closeout owner."
+  ],
+  "mode": "public_demo_fake_sample_evidence_vault_template_only",
+  "sampleInitiative": "Toastmasters First Nations",
+  "sourceAnchors": [
+    {
+      "label": "Barayamal Toastmasters First Nations",
+      "url": "https://barayamal.com.au/toastmasters-first-nations/"
+    },
+    {
+      "label": "Toastmasters Start a Club",
+      "url": "https://www.toastmasters.org/Start-a-Club"
+    },
+    {
+      "label": "Toastmasters Club Charter Requirements Form",
+      "url": "https://content.toastmasters.org/image/upload/ATO-club-chartering-requirements-ff.pdf"
+    },
+    {
+      "label": "Toastmasters Governing Documents",
+      "url": "https://www.toastmasters.org/resources/governing-documents"
+    },
+    {
+      "label": "Maiam nayri Wingara Indigenous Data Sovereignty",
+      "url": "https://www.maiamnayriwingara.org/"
+    },
+    {
+      "label": "AIATSIS ethical research",
+      "url": "https://aiatsis.gov.au/research/ethical-research"
+    },
+    {
+      "label": "NHMRC Aboriginal and Torres Strait Islander research ethics",
+      "url": "https://www.nhmrc.gov.au/research-policy/ethics/ethical-guidelines-research-aboriginal-and-torres-strait-islander-peoples"
+    },
+    {
+      "label": "OAIC Australian Privacy Principles",
+      "url": "https://www.oaic.gov.au/privacy/australian-privacy-principles/"
+    },
+    {
+      "label": "OAIC privacy impact assessment guide",
+      "url": "https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/privacy-impact-assessments/guide-to-undertaking-privacy-impact-assessments"
+    },
+    {
+      "label": "OAIC Notifiable Data Breaches scheme",
+      "url": "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme"
+    },
+    {
+      "label": "Cyber.gov.au Essential Eight maturity model",
+      "url": "https://www.cyber.gov.au/resources-business-and-government/essential-cybersecurity/essential-eight/essential-eight-maturity-model"
+    },
+    {
+      "label": "Decidim administrators",
+      "url": "https://docs.decidim.org/en/develop/admin/participants/admins.html"
+    },
+    {
+      "label": "Decidim permissions",
+      "url": "https://docs.decidim.org/en/develop/develop/permissions.html"
+    }
+  ],
+  "counts": {
+    "evidenceItems": 16,
+    "reviewerChecks": 12,
+    "authoritySteps": 14,
+    "accessRules": 12,
+    "decisionGates": 10,
+    "controlRecords": 64,
+    "blockedEvidence": 7,
+    "requiredReviewerChecks": 10,
+    "blockedAuthoritySteps": 6,
+    "blockedDecisionGates": 5,
+    "neverPublicEvidence": 5
+  },
+  "files": {
+    "entrypoint": "private-pilot-evidence-vault.html",
+    "playbook": "docs/private-pilot-evidence-vault-playbook-v3.4.md",
+    "deanBrief": "docs/dean-trusted-reviewer-brief-v3.4.md",
+    "authorityMeetingPack": "docs/private-authority-meeting-pack-v3.4.md",
+    "dataRoomChecklist": "docs/evidence-vault-data-room-checklist-v3.4.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.4.md",
+    "evidenceVault": "data/evidence-vault-register-v3.4.csv",
+    "reviewerChecks": "data/advisory-reviewer-checks-v3.4.csv",
+    "authoritySteps": "data/authority-meeting-steps-v3.4.csv",
+    "accessRules": "data/private-evidence-access-rules-v3.4.csv",
+    "decisionGates": "data/private-pilot-decision-gates-v3.4.csv",
+    "packageJson": "data/private-pilot-evidence-vault-package-v3.4.json"
+  },
+  "evidenceVault": [
+    {
+      "id": "EVV-001",
+      "item": "Authority record shell",
+      "status": "Blocked",
+      "classification": "Never public",
+      "owner": "Pilot authority",
+      "proof": "Quorum, delegation, decision owner, conditions, expiry, stop triggers",
+      "publicRule": "Private vault only; public status can say missing or approved"
+    },
+    {
+      "id": "EVV-002",
+      "item": "Dean advisory reviewer note",
+      "status": "Ready",
+      "classification": "Public safe",
+      "owner": "Dean Foley / Barayamal",
+      "proof": "Reviewer role, assumptions, advisory findings, unresolved questions, no approval claim",
+      "publicRule": "Can publish if it contains no real participant or authority details"
+    },
+    {
+      "id": "EVV-003",
+      "item": "IDS/data governance record",
+      "status": "Blocked",
+      "classification": "Private restricted",
+      "owner": "Data reviewer",
+      "proof": "Purpose, benefit, authority to control, data classes, retention, deletion, reporting",
+      "publicRule": "Public can show pass/hold only"
+    },
+    {
+      "id": "EVV-004",
+      "item": "Privacy impact mini assessment",
+      "status": "Blocked",
+      "classification": "Private restricted",
+      "owner": "Privacy reviewer",
+      "proof": "Notice, consent, withdrawal, correction, incident response, retention, provider checks",
+      "publicRule": "Public can show pass/hold only"
+    },
+    {
+      "id": "EVV-005",
+      "item": "Participant notice and consent pack",
+      "status": "Hold",
+      "classification": "Private restricted",
+      "owner": "Privacy reviewer",
+      "proof": "Plain-language notice, consent, withdrawal, correction, support route",
+      "publicRule": "Do not publish real participant versions"
+    },
+    {
+      "id": "EVV-006",
+      "item": "Role access register",
+      "status": "Blocked",
+      "classification": "Never public",
+      "owner": "Technical custodian",
+      "proof": "Named users, roles, MFA, least privilege, revoke test, no-private-access roles",
+      "publicRule": "Never public because it can expose access paths"
+    },
+    {
+      "id": "EVV-007",
+      "item": "Private environment proof",
+      "status": "Blocked",
+      "classification": "Never public",
+      "owner": "Technical custodian",
+      "proof": "Workspace, hosting, backups, exports, delete/restore, logs, admin owner",
+      "publicRule": "Never public; summary only"
+    },
+    {
+      "id": "EVV-008",
+      "item": "Backup/delete/restore drill",
+      "status": "Hold",
+      "classification": "Never public",
+      "owner": "Technical custodian",
+      "proof": "Backup, export, delete, restore, audit, evidence timestamp",
+      "publicRule": "Public can say tested or not tested"
+    },
+    {
+      "id": "EVV-009",
+      "item": "Incident and breach tabletop record",
+      "status": "Blocked",
+      "classification": "Never public",
+      "owner": "Safety reviewer",
+      "proof": "Pause, support, escalation, breach assessment, affected-person route",
+      "publicRule": "Never public if based on real scenario"
+    },
+    {
+      "id": "EVV-010",
+      "item": "Official Toastmasters boundary memo",
+      "status": "Hold",
+      "classification": "Private restricted",
+      "owner": "Toastmasters launch lead",
+      "proof": "Forms, payments, member numbers, signatures, charter route outside pilot",
+      "publicRule": "Public can state official records remain external"
+    },
+    {
+      "id": "EVV-011",
+      "item": "Provider access boundary",
+      "status": "Hold",
+      "classification": "Private restricted",
+      "owner": "Build delivery lead",
+      "proof": "Contract, fake-data handoff, no production export, access owner",
+      "publicRule": "Public can state provider uses fake data only"
+    },
+    {
+      "id": "EVV-012",
+      "item": "Support and access-needs route",
+      "status": "Hold",
+      "classification": "Private restricted",
+      "owner": "Access support contact",
+      "proof": "Response owner, response clock, support escalation, access support",
+      "publicRule": "Do not publish individual support details"
+    },
+    {
+      "id": "EVV-013",
+      "item": "Withdrawal and correction test",
+      "status": "Blocked",
+      "classification": "Private restricted",
+      "owner": "Privacy reviewer",
+      "proof": "Test request, response owner, correction path, deletion path",
+      "publicRule": "Public can show route is tested"
+    },
+    {
+      "id": "EVV-014",
+      "item": "Public redaction QA proof",
+      "status": "Ready",
+      "classification": "Public safe",
+      "owner": "QA reviewer",
+      "proof": "Screenshots, docs, CSV, JSON, public wording, no real data checks",
+      "publicRule": "Can publish pass/fail summary"
+    },
+    {
+      "id": "EVV-015",
+      "item": "First-72-hour monitoring schedule",
+      "status": "Hold",
+      "classification": "Private restricted",
+      "owner": "Pilot operator",
+      "proof": "Hour 0,2,4,8,12,24,36,48,72, week 1, authority checkpoint",
+      "publicRule": "Public can state monitoring exists"
+    },
+    {
+      "id": "EVV-016",
+      "item": "Closeout and archive trigger",
+      "status": "Hold",
+      "classification": "Private restricted",
+      "owner": "Data reviewer",
+      "proof": "Review date, deletion/retention owner, access revocation, archive decision",
+      "publicRule": "Public can state closeout trigger exists"
+    }
+  ],
+  "reviewerChecks": [
+    {
+      "id": "RV-001",
+      "check": "Confirm advisory boundary",
+      "status": "Required",
+      "reviewer": "Dean Foley / Barayamal",
+      "task": "State advisory role only; no final authority or sole approval",
+      "doneSignal": "Boundary statement visible"
+    },
+    {
+      "id": "RV-002",
+      "check": "Conflict and custody note",
+      "status": "Required",
+      "reviewer": "Dean Foley / Barayamal",
+      "task": "Declare developer/custodian role and any review assumptions",
+      "doneSignal": "Reviewer note separates custody from authority"
+    },
+    {
+      "id": "RV-003",
+      "check": "Public data leak check",
+      "status": "Required",
+      "reviewer": "Dean Foley / Barayamal",
+      "task": "Check page, docs, CSV, JSON, screenshots, package files for real data",
+      "doneSignal": "No real data found"
+    },
+    {
+      "id": "RV-004",
+      "check": "Authority evidence question list",
+      "status": "Required",
+      "reviewer": "Dean Foley / Barayamal",
+      "task": "List missing authority evidence for the private authority group",
+      "doneSignal": "Questions ready for meeting"
+    },
+    {
+      "id": "RV-005",
+      "check": "IDS/data governance question list",
+      "status": "Required",
+      "reviewer": "Dean Foley / Barayamal",
+      "task": "List unresolved data governance and community benefit questions",
+      "doneSignal": "Questions ready for data reviewer"
+    },
+    {
+      "id": "RV-006",
+      "check": "Privacy question list",
+      "status": "Required",
+      "reviewer": "Dean Foley / Barayamal",
+      "task": "List notice, consent, withdrawal, correction, retention, and incident questions",
+      "doneSignal": "Questions ready for privacy reviewer"
+    },
+    {
+      "id": "RV-007",
+      "check": "Official Toastmasters boundary check",
+      "status": "Required",
+      "reviewer": "Dean Foley / Barayamal",
+      "task": "Confirm official records stay outside public and private pilot tools unless approved",
+      "doneSignal": "Boundary note ready"
+    },
+    {
+      "id": "RV-008",
+      "check": "Provider fake-data boundary check",
+      "status": "Hold",
+      "reviewer": "Dean Foley / Barayamal",
+      "task": "Confirm provider scope uses fake/sample data only until contract/access approval",
+      "doneSignal": "Provider handoff can stay public-safe"
+    },
+    {
+      "id": "RV-009",
+      "check": "Support and incident escalation check",
+      "status": "Hold",
+      "reviewer": "Dean Foley / Barayamal",
+      "task": "Ask whether participant support and incident pause route is staffed",
+      "doneSignal": "Support hold or owner identified"
+    },
+    {
+      "id": "RV-010",
+      "check": "Reviewer notes redaction check",
+      "status": "Required",
+      "reviewer": "Dean Foley / Barayamal",
+      "task": "Remove real names, contact details, access needs, incidents, or private decisions from notes",
+      "doneSignal": "Notes safe to share"
+    },
+    {
+      "id": "RV-011",
+      "check": "No-go escalation note",
+      "status": "Required",
+      "reviewer": "Dean Foley / Barayamal",
+      "task": "Escalate any blocked trigger to authority, data, privacy, technical, safety, or official owner",
+      "doneSignal": "Escalation route named"
+    },
+    {
+      "id": "RV-012",
+      "check": "Meeting readiness recommendation",
+      "status": "Required",
+      "reviewer": "Dean Foley / Barayamal",
+      "task": "Recommend public demo only, hold, or private authority meeting readiness",
+      "doneSignal": "Recommendation recorded as advisory only"
+    }
+  ],
+  "authoritySteps": [
+    {
+      "id": "AM-001",
+      "step": "Open fake/sample boundary",
+      "status": "Required",
+      "owner": "Meeting chair",
+      "task": "Confirm no public page or public file contains real private pilot evidence",
+      "output": "Boundary accepted"
+    },
+    {
+      "id": "AM-002",
+      "step": "Confirm authority quorum",
+      "status": "Blocked",
+      "owner": "Pilot authority",
+      "task": "Confirm who can approve and who cannot",
+      "output": "Authority quorum recorded privately"
+    },
+    {
+      "id": "AM-003",
+      "step": "Receive Dean advisory note",
+      "status": "Ready",
+      "owner": "Meeting chair",
+      "task": "Treat Dean note as advisory input, not approval",
+      "output": "Advisory note tabled"
+    },
+    {
+      "id": "AM-004",
+      "step": "Review evidence vault completeness",
+      "status": "Required",
+      "owner": "Meeting chair",
+      "task": "Check every evidence item status and classification",
+      "output": "Vault gaps listed"
+    },
+    {
+      "id": "AM-005",
+      "step": "IDS/data governance decision",
+      "status": "Blocked",
+      "owner": "Data reviewer",
+      "task": "Approve or hold data classes, purpose, access, retention, deletion, reporting",
+      "output": "IDS decision recorded"
+    },
+    {
+      "id": "AM-006",
+      "step": "Privacy decision",
+      "status": "Blocked",
+      "owner": "Privacy reviewer",
+      "task": "Approve or hold notice, consent, withdrawal, correction, incident, retention",
+      "output": "Privacy decision recorded"
+    },
+    {
+      "id": "AM-007",
+      "step": "Role access decision",
+      "status": "Blocked",
+      "owner": "Technical custodian",
+      "task": "Approve or hold access register, MFA, roles, revoke test",
+      "output": "Access decision recorded"
+    },
+    {
+      "id": "AM-008",
+      "step": "Private environment decision",
+      "status": "Blocked",
+      "owner": "Technical custodian",
+      "task": "Approve or hold workspace, backups, export, delete, restore, logging",
+      "output": "Environment decision recorded"
+    },
+    {
+      "id": "AM-009",
+      "step": "Official Toastmasters boundary decision",
+      "status": "Hold",
+      "owner": "Toastmasters launch lead",
+      "task": "Confirm official records and chartering route stay external",
+      "output": "Boundary approved or held"
+    },
+    {
+      "id": "AM-010",
+      "step": "Incident and support decision",
+      "status": "Hold",
+      "owner": "Safety reviewer",
+      "task": "Confirm pause, support, escalation, breach assessment, response clocks",
+      "output": "Support path approved or held"
+    },
+    {
+      "id": "AM-011",
+      "step": "Provider handoff decision",
+      "status": "Hold",
+      "owner": "Build delivery lead",
+      "task": "Confirm no production export and provider fake-data lane",
+      "output": "Provider boundary approved or held"
+    },
+    {
+      "id": "AM-012",
+      "step": "Monitoring decision",
+      "status": "Hold",
+      "owner": "Pilot operator",
+      "task": "Confirm first-72-hour checks and authority checkpoint",
+      "output": "Monitor approved or held"
+    },
+    {
+      "id": "AM-013",
+      "step": "Conditions and expiry",
+      "status": "Required",
+      "owner": "Meeting chair",
+      "task": "Name conditions, owner, expiry, stop triggers, closeout trigger",
+      "output": "Conditions recorded privately"
+    },
+    {
+      "id": "AM-014",
+      "step": "Go/hold/no-go decision",
+      "status": "Blocked",
+      "owner": "Pilot authority",
+      "task": "Record limited private pilot, conditional hold, or no-go",
+      "output": "Decision recorded privately"
+    }
+  ],
+  "accessRules": [
+    {
+      "id": "AR-001",
+      "role": "Dean advisory access",
+      "status": "Hold",
+      "classification": "Private restricted",
+      "allowed": "Only public-safe package plus private evidence extracts approved by authority",
+      "limit": "Dean cannot receive unrestricted private vault access"
+    },
+    {
+      "id": "AR-002",
+      "role": "Authority group access",
+      "status": "Blocked",
+      "classification": "Never public",
+      "allowed": "Full private evidence vault only for approved authority members",
+      "limit": "Names and access logs never public"
+    },
+    {
+      "id": "AR-003",
+      "role": "Data reviewer access",
+      "status": "Blocked",
+      "classification": "Private restricted",
+      "allowed": "Data governance evidence and data classes only",
+      "limit": "No official Toastmasters payment/member records"
+    },
+    {
+      "id": "AR-004",
+      "role": "Privacy reviewer access",
+      "status": "Blocked",
+      "classification": "Private restricted",
+      "allowed": "PIA, notice, consent, withdrawal, correction, incident route",
+      "limit": "No public screenshots of private records"
+    },
+    {
+      "id": "AR-005",
+      "role": "Technical custodian access",
+      "status": "Blocked",
+      "classification": "Never public",
+      "allowed": "Admin roles, logs, backups, restore evidence, revoke checks",
+      "limit": "Technical proof stays private"
+    },
+    {
+      "id": "AR-006",
+      "role": "Safety reviewer access",
+      "status": "Hold",
+      "classification": "Never public",
+      "allowed": "Incident tabletop and support evidence only",
+      "limit": "Real incident facts never public"
+    },
+    {
+      "id": "AR-007",
+      "role": "Provider access",
+      "status": "Hold",
+      "classification": "Public safe",
+      "allowed": "Fake/sample package only until contract, authority, privacy, and role access pass",
+      "limit": "No production export"
+    },
+    {
+      "id": "AR-008",
+      "role": "Public reviewer access",
+      "status": "Ready",
+      "classification": "Public safe",
+      "allowed": "GitHub Pages demo, docs, CSV, JSON with fake/sample data",
+      "limit": "No real names or decisions"
+    },
+    {
+      "id": "AR-009",
+      "role": "Official Toastmasters access",
+      "status": "Hold",
+      "classification": "External route",
+      "allowed": "Official forms, signatures, payments, member numbers, chartering records outside pilot tool",
+      "limit": "Official records remain external"
+    },
+    {
+      "id": "AR-010",
+      "role": "Support route access",
+      "status": "Hold",
+      "classification": "Private restricted",
+      "allowed": "Support owner sees only what is needed to support participant request",
+      "limit": "Access-needs details never public"
+    },
+    {
+      "id": "AR-011",
+      "role": "Audit access",
+      "status": "Blocked",
+      "classification": "Never public",
+      "allowed": "Private access logs and evidence change log only for approved reviewers",
+      "limit": "Audit logs never public"
+    },
+    {
+      "id": "AR-012",
+      "role": "Public status summary",
+      "status": "Ready",
+      "classification": "Public safe",
+      "allowed": "Aggregate status, blockers, next owner type, no real evidence",
+      "limit": "Status only"
+    }
+  ],
+  "decisionGates": [
+    {
+      "id": "DG-001",
+      "gate": "Public demo remains safe",
+      "status": "Ready",
+      "owner": "QA reviewer",
+      "evidence": "All public files pass fake/sample and redaction checks",
+      "nextRoute": "Continue public review"
+    },
+    {
+      "id": "DG-002",
+      "gate": "Dean advisory review complete",
+      "status": "Ready",
+      "owner": "Dean Foley / Barayamal",
+      "evidence": "Advisory note is public-safe and clearly non-authority",
+      "nextRoute": "Table advisory note"
+    },
+    {
+      "id": "DG-003",
+      "gate": "Authority quorum approved",
+      "status": "Blocked",
+      "owner": "Pilot authority",
+      "evidence": "Named First Nations authority and delegation exists",
+      "nextRoute": "Hold until approved"
+    },
+    {
+      "id": "DG-004",
+      "gate": "IDS/data governance approved",
+      "status": "Blocked",
+      "owner": "Data reviewer",
+      "evidence": "Data classes, purpose, access, retention, deletion, reporting approved",
+      "nextRoute": "Hold until approved"
+    },
+    {
+      "id": "DG-005",
+      "gate": "Privacy approved",
+      "status": "Blocked",
+      "owner": "Privacy reviewer",
+      "evidence": "PIA, notice, consent, withdrawal, correction, incident route approved",
+      "nextRoute": "Hold until approved"
+    },
+    {
+      "id": "DG-006",
+      "gate": "Private environment approved",
+      "status": "Blocked",
+      "owner": "Technical custodian",
+      "evidence": "Access register, MFA, backup, export, delete, restore, logs approved",
+      "nextRoute": "Hold until approved"
+    },
+    {
+      "id": "DG-007",
+      "gate": "Official boundary approved",
+      "status": "Hold",
+      "owner": "Toastmasters launch lead",
+      "evidence": "Official Toastmasters records remain external or approved pathway exists",
+      "nextRoute": "Hold official claims"
+    },
+    {
+      "id": "DG-008",
+      "gate": "Support and incident route approved",
+      "status": "Hold",
+      "owner": "Safety reviewer",
+      "evidence": "Pause, support, breach assessment, response clocks approved",
+      "nextRoute": "Hold if unstaffed"
+    },
+    {
+      "id": "DG-009",
+      "gate": "Activation drill rerun with private evidence",
+      "status": "Hold",
+      "owner": "Pilot authority",
+      "evidence": "v3.2 drill rerun with approved private evidence and signoff matrix",
+      "nextRoute": "Hold until rerun"
+    },
+    {
+      "id": "DG-010",
+      "gate": "Limited private pilot go/no-go",
+      "status": "Blocked",
+      "owner": "Pilot authority",
+      "evidence": "All blocked gates closed, conditions/expiry/monitor/closeout recorded",
+      "nextRoute": "No-go until complete"
+    }
+  ]
+}

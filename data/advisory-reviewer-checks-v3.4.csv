@@ -1,0 +1,13 @@
+id,check,status,reviewer,task,doneSignal
+RV-001,Confirm advisory boundary,Required,Dean Foley / Barayamal,State advisory role only; no final authority or sole approval,Boundary statement visible
+RV-002,Conflict and custody note,Required,Dean Foley / Barayamal,Declare developer/custodian role and any review assumptions,Reviewer note separates custody from authority
+RV-003,Public data leak check,Required,Dean Foley / Barayamal,"Check page, docs, CSV, JSON, screenshots, package files for real data",No real data found
+RV-004,Authority evidence question list,Required,Dean Foley / Barayamal,List missing authority evidence for the private authority group,Questions ready for meeting
+RV-005,IDS/data governance question list,Required,Dean Foley / Barayamal,List unresolved data governance and community benefit questions,Questions ready for data reviewer
+RV-006,Privacy question list,Required,Dean Foley / Barayamal,"List notice, consent, withdrawal, correction, retention, and incident questions",Questions ready for privacy reviewer
+RV-007,Official Toastmasters boundary check,Required,Dean Foley / Barayamal,Confirm official records stay outside public and private pilot tools unless approved,Boundary note ready
+RV-008,Provider fake-data boundary check,Hold,Dean Foley / Barayamal,Confirm provider scope uses fake/sample data only until contract/access approval,Provider handoff can stay public-safe
+RV-009,Support and incident escalation check,Hold,Dean Foley / Barayamal,Ask whether participant support and incident pause route is staffed,Support hold or owner identified
+RV-010,Reviewer notes redaction check,Required,Dean Foley / Barayamal,"Remove real names, contact details, access needs, incidents, or private decisions from notes",Notes safe to share
+RV-011,No-go escalation note,Required,Dean Foley / Barayamal,"Escalate any blocked trigger to authority, data, privacy, technical, safety, or official owner",Escalation route named
+RV-012,Meeting readiness recommendation,Required,Dean Foley / Barayamal,"Recommend public demo only, hold, or private authority meeting readiness",Recommendation recorded as advisory only

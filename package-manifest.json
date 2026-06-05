@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "3.3",
+  "version": "3.4",
   "date": "2026-06-05",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use Pilot Control Tower as the default review front door, then follow the sequence through Organisation Onboarding, Private Pilot Readiness, Pilot Operations Control, Private Pilot Implementation, Private Pilot Launch Control, Private Pilot Closeout Decision, Private Pilot Authority Approval, and Activation Drill & Decision Record. Any real private pilot still needs a separate approved private environment, named operators, authority quorum, IDS/data governance review, privacy impact decision, role access register, participant notice/consent, private environment activation, signoff matrix, tabletop scenarios, evidence packet, activation decision record, first-72-hour monitoring, and closeout/archive trigger.",
+  "recommendedDecision": "Use Evidence Vault & Advisory Review as the default next private-meeting preparation layer after Pilot Control Tower. Dean Foley / Barayamal can provide advisory and trusted review, but cannot replace First Nations authority, Indigenous Data Sovereignty approval, privacy approval, official Toastmasters processes, technical approval, support readiness, monitoring, closeout, or the final private pilot go/hold/no-go decision.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -202,13 +202,25 @@
     "data/control-tower-evidence-status-v3.3.csv",
     "data/control-tower-owner-actions-v3.3.csv",
     "data/control-tower-decision-routes-v3.3.csv",
-    "data/pilot-control-tower-package-v3.3.json"
+    "data/pilot-control-tower-package-v3.3.json",
+    "private-pilot-evidence-vault.html",
+    "docs/private-pilot-evidence-vault-playbook-v3.4.md",
+    "docs/dean-trusted-reviewer-brief-v3.4.md",
+    "docs/private-authority-meeting-pack-v3.4.md",
+    "docs/evidence-vault-data-room-checklist-v3.4.md",
+    "docs/public-demo-release-notes-v3.4.md",
+    "data/evidence-vault-register-v3.4.csv",
+    "data/advisory-reviewer-checks-v3.4.csv",
+    "data/authority-meeting-steps-v3.4.csv",
+    "data/private-evidence-access-rules-v3.4.csv",
+    "data/private-pilot-decision-gates-v3.4.csv",
+    "data/private-pilot-evidence-vault-package-v3.4.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v3.3.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.4.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -370,7 +382,17 @@
       "qa-v33-deployed-pilot-control-tower-ready-desktop.png",
       "qa-v33-deployed-pilot-control-tower-blocked-desktop.png",
       "qa-v33-deployed-pilot-control-tower-mobile.png",
-      "qa-v33-deployed-pilot-control-tower-package-mobile.png"
+      "qa-v33-deployed-pilot-control-tower-package-mobile.png",
+      "qa-v34-local-evidence-vault-desktop.png",
+      "qa-v34-local-evidence-vault-required-desktop.png",
+      "qa-v34-local-evidence-vault-blocked-desktop.png",
+      "qa-v34-local-evidence-vault-mobile.png",
+      "qa-v34-local-evidence-vault-package-mobile.png",
+      "qa-v34-deployed-evidence-vault-desktop.png",
+      "qa-v34-deployed-evidence-vault-required-desktop.png",
+      "qa-v34-deployed-evidence-vault-blocked-desktop.png",
+      "qa-v34-deployed-evidence-vault-mobile.png",
+      "qa-v34-deployed-evidence-vault-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -1222,6 +1244,20 @@
       "data/control-tower-owner-actions-v3.3.csv",
       "data/control-tower-decision-routes-v3.3.csv",
       "data/pilot-control-tower-package-v3.3.json"
+    ],
+    "privatePilotEvidenceVault": [
+      "private-pilot-evidence-vault.html",
+      "docs/private-pilot-evidence-vault-playbook-v3.4.md",
+      "docs/dean-trusted-reviewer-brief-v3.4.md",
+      "docs/private-authority-meeting-pack-v3.4.md",
+      "docs/evidence-vault-data-room-checklist-v3.4.md",
+      "docs/public-demo-release-notes-v3.4.md",
+      "data/evidence-vault-register-v3.4.csv",
+      "data/advisory-reviewer-checks-v3.4.csv",
+      "data/authority-meeting-steps-v3.4.csv",
+      "data/private-evidence-access-rules-v3.4.csv",
+      "data/private-pilot-decision-gates-v3.4.csv",
+      "data/private-pilot-evidence-vault-package-v3.4.json"
     ]
   },
   "safetyRules": [
@@ -1259,7 +1295,10 @@
     "Activation Drill & Decision Record is a public fake/sample template only; it must not collect or expose real names, emails, access needs, incidents, official Toastmasters records, member numbers, payments, signatures, authority records, access logs, decision records, or private pilot evidence.",
     "No real private pilot intake should proceed until activation drill, signoff matrix, tabletop scenarios, evidence packet, rehearsal tasks, first-72-hour monitoring checks, and recorded go/hold/no-go decision have passed.",
     "Pilot Control Tower is a public fake/sample template only; it must not collect or expose real names, emails, access needs, incidents, official Toastmasters records, member numbers, payments, signatures, authority records, access logs, decision records, or private pilot evidence.",
-    "No real private pilot decision should be made from any single page; use the Control Tower to review stage status, blockers, dependencies, evidence classes, owners, and decision route first."
+    "No real private pilot decision should be made from any single page; use the Control Tower to review stage status, blockers, dependencies, evidence classes, owners, and decision route first.",
+    "This public v3.4 evidence vault package is fake/sample only. It must not collect or expose real names, emails, access needs, incidents, official Toastmasters records, member numbers, payments, signatures, authority records, access logs, decision records, or private pilot evidence.",
+    "Dean Foley / Barayamal may act as advisory and trusted reviewer for this public-safe control package, but does not replace First Nations authority, privacy approval, Indigenous Data Sovereignty approval, official Toastmasters processes, or a private pilot go/no-go decision.",
+    "Do not open real intake, activate a private workspace, hand data to a provider, or scale the pilot until the evidence vault, advisory review boundary, authority meeting record, access rules, and decision gates are approved in a separate private environment."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -2129,5 +2168,100 @@
     ],
     "safetyRule": "This public v3.3 Control Tower is fake/sample only. It must not collect or expose real names, emails, access needs, incidents, official Toastmasters records, member numbers, payments, signatures, authority records, access logs, decision records, or private pilot evidence.",
     "controlRule": "Do not make a real activation, provider handoff, or scale decision from any single page. Use the Control Tower to review stage status, blockers, dependencies, evidence classes, owners, and decision route first."
+  },
+  "privatePilotEvidenceVault": {
+    "entrypoint": "private-pilot-evidence-vault.html",
+    "playbook": "docs/private-pilot-evidence-vault-playbook-v3.4.md",
+    "deanBrief": "docs/dean-trusted-reviewer-brief-v3.4.md",
+    "authorityMeetingPack": "docs/private-authority-meeting-pack-v3.4.md",
+    "dataRoomChecklist": "docs/evidence-vault-data-room-checklist-v3.4.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.4.md",
+    "dataFiles": [
+      "data/evidence-vault-register-v3.4.csv",
+      "data/advisory-reviewer-checks-v3.4.csv",
+      "data/authority-meeting-steps-v3.4.csv",
+      "data/private-evidence-access-rules-v3.4.csv",
+      "data/private-pilot-decision-gates-v3.4.csv",
+      "data/private-pilot-evidence-vault-package-v3.4.json"
+    ],
+    "advisoryTrustedReviewer": "Dean Foley / Barayamal",
+    "counts": {
+      "evidenceItems": 16,
+      "reviewerChecks": 12,
+      "authoritySteps": 14,
+      "accessRules": 12,
+      "decisionGates": 10,
+      "controlRecords": 64,
+      "blockedEvidence": 7,
+      "requiredReviewerChecks": 10,
+      "blockedAuthoritySteps": 6,
+      "blockedDecisionGates": 5,
+      "neverPublicEvidence": 5
+    },
+    "noGoTriggers": [
+      "Dean or Barayamal advisory review is treated as final First Nations authority.",
+      "Real evidence is uploaded to the public static demo, public repository, public screenshots, public CSVs, or fake-data Decidim sandbox.",
+      "Authority quorum, IDS/data governance, privacy, role access, or official Toastmasters boundary is missing.",
+      "Reviewer notes include real names, contact details, access needs, incidents, official records, payments, member numbers, signatures, or private decisions.",
+      "A provider or public reviewer receives real private evidence before contract, authority, privacy, and access approval.",
+      "The authority meeting records a go decision without conditions, expiry, no-go triggers, monitoring, support, and closeout owner."
+    ],
+    "sourceAnchors": [
+      {
+        "label": "Barayamal Toastmasters First Nations",
+        "url": "https://barayamal.com.au/toastmasters-first-nations/"
+      },
+      {
+        "label": "Toastmasters Start a Club",
+        "url": "https://www.toastmasters.org/Start-a-Club"
+      },
+      {
+        "label": "Toastmasters Club Charter Requirements Form",
+        "url": "https://content.toastmasters.org/image/upload/ATO-club-chartering-requirements-ff.pdf"
+      },
+      {
+        "label": "Toastmasters Governing Documents",
+        "url": "https://www.toastmasters.org/resources/governing-documents"
+      },
+      {
+        "label": "Maiam nayri Wingara Indigenous Data Sovereignty",
+        "url": "https://www.maiamnayriwingara.org/"
+      },
+      {
+        "label": "AIATSIS ethical research",
+        "url": "https://aiatsis.gov.au/research/ethical-research"
+      },
+      {
+        "label": "NHMRC Aboriginal and Torres Strait Islander research ethics",
+        "url": "https://www.nhmrc.gov.au/research-policy/ethics/ethical-guidelines-research-aboriginal-and-torres-strait-islander-peoples"
+      },
+      {
+        "label": "OAIC Australian Privacy Principles",
+        "url": "https://www.oaic.gov.au/privacy/australian-privacy-principles/"
+      },
+      {
+        "label": "OAIC privacy impact assessment guide",
+        "url": "https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/privacy-impact-assessments/guide-to-undertaking-privacy-impact-assessments"
+      },
+      {
+        "label": "OAIC Notifiable Data Breaches scheme",
+        "url": "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme"
+      },
+      {
+        "label": "Cyber.gov.au Essential Eight maturity model",
+        "url": "https://www.cyber.gov.au/resources-business-and-government/essential-cybersecurity/essential-eight/essential-eight-maturity-model"
+      },
+      {
+        "label": "Decidim administrators",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/admins.html"
+      },
+      {
+        "label": "Decidim permissions",
+        "url": "https://docs.decidim.org/en/develop/develop/permissions.html"
+      }
+    ],
+    "safetyRule": "This public v3.4 evidence vault package is fake/sample only. It must not collect or expose real names, emails, access needs, incidents, official Toastmasters records, member numbers, payments, signatures, authority records, access logs, decision records, or private pilot evidence.",
+    "advisoryRule": "Dean Foley / Barayamal may act as advisory and trusted reviewer for this public-safe control package, but does not replace First Nations authority, privacy approval, Indigenous Data Sovereignty approval, official Toastmasters processes, or a private pilot go/no-go decision.",
+    "approvalRule": "Do not open real intake, activate a private workspace, hand data to a provider, or scale the pilot until the evidence vault, advisory review boundary, authority meeting record, access rules, and decision gates are approved in a separate private environment."
   }
 }

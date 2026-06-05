@@ -1,0 +1,11 @@
+id,gate,status,owner,evidence,nextRoute
+DG-001,Public demo remains safe,Ready,QA reviewer,All public files pass fake/sample and redaction checks,Continue public review
+DG-002,Dean advisory review complete,Ready,Dean Foley / Barayamal,Advisory note is public-safe and clearly non-authority,Table advisory note
+DG-003,Authority quorum approved,Blocked,Pilot authority,Named First Nations authority and delegation exists,Hold until approved
+DG-004,IDS/data governance approved,Blocked,Data reviewer,"Data classes, purpose, access, retention, deletion, reporting approved",Hold until approved
+DG-005,Privacy approved,Blocked,Privacy reviewer,"PIA, notice, consent, withdrawal, correction, incident route approved",Hold until approved
+DG-006,Private environment approved,Blocked,Technical custodian,"Access register, MFA, backup, export, delete, restore, logs approved",Hold until approved
+DG-007,Official boundary approved,Hold,Toastmasters launch lead,Official Toastmasters records remain external or approved pathway exists,Hold official claims
+DG-008,Support and incident route approved,Hold,Safety reviewer,"Pause, support, breach assessment, response clocks approved",Hold if unstaffed
+DG-009,Activation drill rerun with private evidence,Hold,Pilot authority,v3.2 drill rerun with approved private evidence and signoff matrix,Hold until rerun
+DG-010,Limited private pilot go/no-go,Blocked,Pilot authority,"All blocked gates closed, conditions/expiry/monitor/closeout recorded",No-go until complete

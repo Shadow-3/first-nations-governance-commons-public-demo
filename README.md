@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v3.3
+Current package version: v3.4
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -56,6 +56,7 @@ Open `private-pilot-closeout.html` to use Private Pilot Closeout Decision for cl
 Open `private-pilot-authority.html` to use Private Pilot Authority Approval for authority gates, Indigenous Data Sovereignty controls, privacy impact checks, role access, participant notice/consent, private environment activation, and second-pilot scale criteria before any real intake opens.
 Open `private-pilot-activation-drill.html` to use Activation Drill & Decision Record for the approval meeting rehearsal, signoff matrix, incident tabletop, evidence packet, fake-data activation drill, and first-72-hour monitoring before real intake opens.
 Open `pilot-control-tower.html` to use Pilot Control Tower for the consolidated stage, dependency, no-go, evidence, owner action, and decision-route review before any real private pilot decision.
+Open `private-pilot-evidence-vault.html` to use Evidence Vault & Advisory Review for Dean Foley / Barayamal trusted reviewer input, private evidence readiness, authority meeting steps, access rules, and decision gates.
 
 The demo shows:
 
@@ -87,6 +88,18 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v3.4.md`
+- `docs/private-pilot-evidence-vault-playbook-v3.4.md`
+- `docs/dean-trusted-reviewer-brief-v3.4.md`
+- `docs/private-authority-meeting-pack-v3.4.md`
+- `docs/evidence-vault-data-room-checklist-v3.4.md`
+- `data/evidence-vault-register-v3.4.csv`
+- `data/advisory-reviewer-checks-v3.4.csv`
+- `data/authority-meeting-steps-v3.4.csv`
+- `data/private-evidence-access-rules-v3.4.csv`
+- `data/private-pilot-decision-gates-v3.4.csv`
+- `data/private-pilot-evidence-vault-package-v3.4.json`
+
 - `docs/public-demo-release-notes-v3.3.md`
 - `docs/pilot-control-tower-playbook-v3.3.md`
 - `docs/control-tower-executive-review-agenda-v3.3.md`
@@ -785,6 +798,22 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v3.4 Evidence Vault & Advisory Review Upgrade
+
+The v3.4 package adds the private evidence readiness layer needed after the Control Tower:
+
+- Interactive Evidence Vault & Advisory Review page.
+- Sixteen evidence vault items.
+- Twelve Dean Foley / Barayamal advisory reviewer checks.
+- Fourteen private authority meeting steps.
+- Twelve private evidence access rules.
+- Ten private pilot decision gates.
+- Browser-generated advisory review brief.
+- Playbook, Dean reviewer brief, authority meeting pack, data room checklist, CSV files, and machine-readable JSON package.
+
+Use this version to prepare the private authority meeting. Dean Foley / Barayamal is advisory and trusted reviewer only; real activation still requires First Nations authority, IDS/data governance, privacy, technical, safety, official Toastmasters, monitoring, and closeout approval in a separate private environment.
+
 
 ## v3.3 Pilot Control Tower Upgrade
 

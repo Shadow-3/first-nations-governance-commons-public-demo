@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v3.3  
+Version: v3.4  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -152,6 +152,22 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 142. `docs/public-demo-release-notes-v2.3.md` - v2.3 release summary.
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
+
+## v3.4 Evidence Vault & Advisory Review Additions
+
+- `private-pilot-evidence-vault.html` - public-safe advisory review and private evidence readiness page.
+- `docs/private-pilot-evidence-vault-playbook-v3.4.md`
+- `docs/dean-trusted-reviewer-brief-v3.4.md`
+- `docs/private-authority-meeting-pack-v3.4.md`
+- `docs/evidence-vault-data-room-checklist-v3.4.md`
+- `docs/public-demo-release-notes-v3.4.md`
+- `data/evidence-vault-register-v3.4.csv`
+- `data/advisory-reviewer-checks-v3.4.csv`
+- `data/authority-meeting-steps-v3.4.csv`
+- `data/private-evidence-access-rules-v3.4.csv`
+- `data/private-pilot-decision-gates-v3.4.csv`
+- `data/private-pilot-evidence-vault-package-v3.4.json`
+
 
 ## v3.3 Pilot Control Tower Additions
 
@@ -756,6 +772,7 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 - `private-pilot-authority.html` is the public Private Pilot Authority Approval page for authority, data governance, privacy, role access, participant notice, private environment activation, and scale criteria.
 - `private-pilot-activation-drill.html` is the public Activation Drill & Decision Record page for approval rehearsal, signoff, tabletop scenarios, evidence classification, fake-data drill tasks, and first-72-hour monitoring.
 - `pilot-control-tower.html` is the public Pilot Control Tower page for consolidated stage readiness, dependencies, no-go triggers, evidence status, owner actions, and decision routes.
+- `private-pilot-evidence-vault.html` is the public Evidence Vault & Advisory Review page for Dean Foley / Barayamal trusted reviewer input, private evidence readiness, access rules, authority meeting steps, and decision gates.
 - `docs-index.html` is the public reviewer hub.
 - `document.html` renders Markdown, CSV, and JSON files from a whitelisted package catalog.
 - `404.html` gives visitors a clean recovery page.

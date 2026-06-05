@@ -1,0 +1,17 @@
+id,item,status,classification,owner,proof,publicRule
+EVV-001,Authority record shell,Blocked,Never public,Pilot authority,"Quorum, delegation, decision owner, conditions, expiry, stop triggers",Private vault only; public status can say missing or approved
+EVV-002,Dean advisory reviewer note,Ready,Public safe,Dean Foley / Barayamal,"Reviewer role, assumptions, advisory findings, unresolved questions, no approval claim",Can publish if it contains no real participant or authority details
+EVV-003,IDS/data governance record,Blocked,Private restricted,Data reviewer,"Purpose, benefit, authority to control, data classes, retention, deletion, reporting",Public can show pass/hold only
+EVV-004,Privacy impact mini assessment,Blocked,Private restricted,Privacy reviewer,"Notice, consent, withdrawal, correction, incident response, retention, provider checks",Public can show pass/hold only
+EVV-005,Participant notice and consent pack,Hold,Private restricted,Privacy reviewer,"Plain-language notice, consent, withdrawal, correction, support route",Do not publish real participant versions
+EVV-006,Role access register,Blocked,Never public,Technical custodian,"Named users, roles, MFA, least privilege, revoke test, no-private-access roles",Never public because it can expose access paths
+EVV-007,Private environment proof,Blocked,Never public,Technical custodian,"Workspace, hosting, backups, exports, delete/restore, logs, admin owner",Never public; summary only
+EVV-008,Backup/delete/restore drill,Hold,Never public,Technical custodian,"Backup, export, delete, restore, audit, evidence timestamp",Public can say tested or not tested
+EVV-009,Incident and breach tabletop record,Blocked,Never public,Safety reviewer,"Pause, support, escalation, breach assessment, affected-person route",Never public if based on real scenario
+EVV-010,Official Toastmasters boundary memo,Hold,Private restricted,Toastmasters launch lead,"Forms, payments, member numbers, signatures, charter route outside pilot",Public can state official records remain external
+EVV-011,Provider access boundary,Hold,Private restricted,Build delivery lead,"Contract, fake-data handoff, no production export, access owner",Public can state provider uses fake data only
+EVV-012,Support and access-needs route,Hold,Private restricted,Access support contact,"Response owner, response clock, support escalation, access support",Do not publish individual support details
+EVV-013,Withdrawal and correction test,Blocked,Private restricted,Privacy reviewer,"Test request, response owner, correction path, deletion path",Public can show route is tested
+EVV-014,Public redaction QA proof,Ready,Public safe,QA reviewer,"Screenshots, docs, CSV, JSON, public wording, no real data checks",Can publish pass/fail summary
+EVV-015,First-72-hour monitoring schedule,Hold,Private restricted,Pilot operator,"Hour 0,2,4,8,12,24,36,48,72, week 1, authority checkpoint",Public can state monitoring exists
+EVV-016,Closeout and archive trigger,Hold,Private restricted,Data reviewer,"Review date, deletion/retention owner, access revocation, archive decision",Public can state closeout trigger exists
