@@ -403,6 +403,29 @@
         white-space: normal;
       }
     }
+  
+    @media (max-width: 760px) {
+      .topbar {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 12px;
+        min-height: 0;
+        scrollbar-width: thin;
+      }
+
+      .topbar .brand {
+        flex: 0 0 auto;
+        min-width: 180px;
+      }
+
+      .topbar .btn,
+      .topbar .label {
+        flex: 0 0 auto;
+      }
+    }
+
   </style>
 </head>
 <body>
