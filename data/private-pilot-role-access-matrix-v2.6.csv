@@ -1,0 +1,11 @@
+id,type,role,allowed_access,hard_exclusion
+RA-001,Custodian,Barayamal / Dean Foley,Can coordinate private pilot and technical handoff,Cannot replace official Toastmasters acceptance or community authority
+RA-002,Authority,Pilot approval reviewer,Can approve start pause go/no-go and closeout,Cannot approve more data than the privacy/data gate allows
+RA-003,Privacy,Privacy/data reviewer,Can review fields notices retention deletion and exports,No unrestricted operational access unless needed
+RA-004,Support,Access support lead,Can receive access-need notes privately,Cannot publish support needs or share them with organisation supporters
+RA-005,Technical,Decidim maintainer,Can configure private pilot environment permissions backups and logs,Cannot use public repo/screenshots for private records
+RA-006,Official process,Toastmasters launch team,Can manage official forms roster sponsorship/payment checks and submission,Official paperwork is not stored in Governance Commons public package
+RA-007,Organisation,First Nations organisation supporter,Can refer host mentor or review public sample content,No access to member data access needs payments or official acceptance decisions
+RA-008,Reviewer,QA/evidence reviewer,Can review fake/redacted evidence and test results,No private raw records in public QA evidence
+RA-009,Safety,Cultural safety/conduct reviewer,Can review complaints conduct concerns and moderation decisions,No public handling of sensitive concerns
+RA-010,Participant,Pilot participant,Can see own notice pathway withdrawal route and contact point,No access to other participant records

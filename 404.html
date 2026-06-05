@@ -49,6 +49,12 @@
       margin: 10px 0 20px;
     }
 
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
     a {
       min-height: 38px;
       border-radius: var(--radius);
@@ -61,13 +67,22 @@
       display: inline-flex;
       align-items: center;
     }
+
+    a.secondary {
+      background: #ffffff;
+      color: var(--teal);
+      border: 1px solid var(--teal);
+    }
   </style>
 </head>
 <body>
   <main>
     <h1>Page not found</h1>
-    <p>The public demo package may have moved that file. Start from the demo or Review Pack hub.</p>
-    <a href="index.html">Open Demo</a>
+    <p>The public demo package may have moved that file. Start from the demo, or open the private pilot controls before moving beyond sample data.</p>
+    <div class="actions">
+      <a href="index.html">Open Demo</a>
+      <a class="secondary" href="private-pilot-readiness.html">Pilot Readiness</a>
+    </div>
   </main>
 </body>
 </html>

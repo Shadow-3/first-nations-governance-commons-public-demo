@@ -1,0 +1,13 @@
+id,stream,status,test,expected_result
+TS-001,Intake routing,Ready,A demo-first participant stays out of charter-ready counts,Record is tagged demo-first and no official fields are requested
+TS-002,Intake routing,Hold,A founding-member candidate is routed to official paperwork outside the demo,Private workflow records referral only and official forms stay external
+TS-003,Data minimisation,Required,Minimum field list blocks unapproved fields,Address access needs member number and payment fields are not public demo fields
+TS-004,Access support,Hold,Access-need message reaches only the support role,No public screenshot issue CSV or JSON contains the access detail
+TS-005,Organisation support,Ready,Organisation supporter can offer mentoring without member-data access,Organisation role is supporter/referrer only
+TS-006,Officer slate,Hold,Officer interest is summarised without publishing names,Public view shows fake/aggregate readiness only
+TS-007,Payment boundary,Required,Sponsorship/payment reconciliation is kept outside Governance Commons,Public and private pilot records hold status only not card or fee data
+TS-008,Official handoff,Required,Official Toastmasters paperwork handoff is logged without storing forms,Evidence says handed off externally with no forms attached
+TS-009,Withdrawal,Hold,Participant changes from founding-member path to demo-first,Count updates and deletion/retention decision is recorded
+TS-010,Incident,Required,Private field appears in wrong place during rehearsal,Incident clock starts record is removed reviewer notified and root cause logged
+TS-011,Evidence,Ready,QA screenshots and reports use redacted/fake records,Evidence can be published without personal data
+TS-012,Closeout,Required,Pilot closes and records are exported/deleted under the retention rule,Closeout checklist identifies owner date export deletion and remaining risks

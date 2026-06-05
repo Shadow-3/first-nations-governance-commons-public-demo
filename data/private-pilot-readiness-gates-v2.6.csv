@@ -1,0 +1,15 @@
+id,theme,title,status,owner,evidence,stop_condition
+PG-001,Authority,Pilot authority named,Required,Barayamal,Written approval naming who can start pause and close the private pilot,Pilot proceeds on informal interest only
+PG-002,Privacy,Privacy notice approved,Required,Privacy reviewer,Plain-language notice covers purpose fields retention access deletion and official handoff,People submit private fields without a reviewed privacy notice
+PG-003,Data,Minimum field list locked,Required,Data steward,Only fields required for the private test are listed and justified,Nice-to-have fields are collected because they might be useful later
+PG-004,Official process,Toastmasters pathway separate,Required,Launch team,Official applications signatures member numbers fees and charter roster stay in official workflow,Governance Commons stores official Toastmasters paperwork
+PG-005,Access,Access needs private support path,Hold,Access lead,Access needs go to named support role only and are not exported publicly,Access needs appear in screenshots issue trackers or public CSV/JSON
+PG-006,Hosting,Private environment separated,Hold,Technical maintainer,Private pilot has separate auth backups logs admin list and no public indexing,Private data is placed in the static public package
+PG-007,Roles,Role/access matrix approved,Required,Pilot authority,Every role has allowed access exclusions and removal route,Organisation supporters receive member-level or admin access by default
+PG-008,Consent,Consent and withdrawal path tested,Hold,Pilot coordinator,Participant can ask what is stored change track withdraw or request deletion,Withdrawal requires manual guesswork or is not recorded
+PG-009,Incident,Incident response route ready,Required,Security/privacy reviewer,Named contact 24-hour triage containment notification and cleanup steps,Data exposure has no owner or response clock
+PG-010,Moderation,Cultural and conduct escalation path,Hold,Cultural safety reviewer,Questions complaints inappropriate content and unsafe behaviour have a named path,Sensitive issues are handled by public comments or ad hoc messages
+PG-011,Evidence,Evidence pack excludes private data,Ready,Reviewer,Screenshots and reports use redacted/fake records only,QA evidence contains private fields
+PG-012,Decidim,Private Decidim mapping approved,Hold,Technical maintainer,Components permissions registration settings exports and admins are documented,Public sample mapping is copied into private pilot without permission review
+PG-013,Closeout,Closeout and deletion rule ready,Required,Data steward,Pilot end date retention period export owner deletion owner and archived evidence rules,Pilot records remain indefinitely without approval
+PG-014,Decision,Go/no-go decision meeting scheduled,Ready,Pilot authority,Decision agenda uses gates scenarios incidents data map and open risks,Pilot advances because the demo looks polished

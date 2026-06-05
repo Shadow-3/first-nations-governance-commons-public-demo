@@ -1,0 +1,419 @@
+﻿{
+    "version":  "2.6",
+    "name":  "Private Pilot Readiness",
+    "mode":  "public_demo_private_pilot_controls_template_only",
+    "sampleInitiative":  "Toastmasters First Nations",
+    "initialDeveloperCustodian":  "Barayamal / Dean Foley",
+    "recommendedUse":  "Use after Organisation Onboarding to decide whether a First Nations organisation or initiative can move from public sample coordination into a controlled private pilot without leaking real data or confusing official membership, payment, access needs, or authority.",
+    "counts":  {
+                   "pilotSamples":  1,
+                   "readinessGates":  14,
+                   "testScenarios":  12,
+                   "roleAccessRules":  10,
+                   "dataTransferRules":  12,
+                   "requiredGates":  7,
+                   "holdGates":  5,
+                   "readyGates":  2
+               },
+    "files":  {
+                  "entrypoint":  "private-pilot-readiness.html",
+                  "playbook":  "docs/private-pilot-readiness-playbook-v2.6.md",
+                  "testScript":  "docs/toastmasters-private-pilot-test-script-v2.6.md",
+                  "releaseNotes":  "docs/public-demo-release-notes-v2.6.md",
+                  "readinessGates":  "data/private-pilot-readiness-gates-v2.6.csv",
+                  "testScenarios":  "data/private-pilot-test-scenarios-v2.6.csv",
+                  "roleAccessMatrix":  "data/private-pilot-role-access-matrix-v2.6.csv",
+                  "dataTransferMap":  "data/private-pilot-data-transfer-map-v2.6.csv"
+              },
+    "noGoTriggers":  [
+                         "public_demo_used_as_real_private_intake",
+                         "real_private_field_appears_in_public_evidence",
+                         "organisation_supporter_receives_member_data_access",
+                         "official_toastmasters_paperwork_stored_in_governance_commons_public_package",
+                         "privacy_notice_or_role_access_missing",
+                         "incident_response_owner_missing",
+                         "pilot_advances_without_go_no_go_meeting"
+                     ],
+    "sourceAnchors":  [
+                          "https://barayamal.com.au/toastmasters-first-nations/",
+                          "https://toastmasters.org/start-a-club",
+                          "https://content.toastmasters.org/image/upload/1102-club-charter-requirments-form-ff.pdf",
+                          "https://prod103.toastmasters.org/leadership-central/governing-documents",
+                          "https://docs.decidim.org/en/develop/features/participatory-spaces.html",
+                          "https://docs.decidim.org/en/develop/admin/spaces.html",
+                          "https://docs.decidim.org/en/develop/admin/components.html"
+                      ],
+    "safetyRule":  "Private pilot controls are public templates only. No real membership, address, phone, email, access-need, official application, Toastmasters member-number, payment, signature, private organisation contact, or real authority data belongs in the public demo, public repository, public screenshots, or fake-data Decidim sandbox.",
+    "readinessGates":  [
+                           {
+                               "id":  "PG-001",
+                               "theme":  "Authority",
+                               "title":  "Pilot authority named",
+                               "status":  "Required",
+                               "owner":  "Barayamal",
+                               "evidence":  "Written approval naming who can start pause and close the private pilot",
+                               "stop_condition":  "Pilot proceeds on informal interest only"
+                           },
+                           {
+                               "id":  "PG-002",
+                               "theme":  "Privacy",
+                               "title":  "Privacy notice approved",
+                               "status":  "Required",
+                               "owner":  "Privacy reviewer",
+                               "evidence":  "Plain-language notice covers purpose fields retention access deletion and official handoff",
+                               "stop_condition":  "People submit private fields without a reviewed privacy notice"
+                           },
+                           {
+                               "id":  "PG-003",
+                               "theme":  "Data",
+                               "title":  "Minimum field list locked",
+                               "status":  "Required",
+                               "owner":  "Data steward",
+                               "evidence":  "Only fields required for the private test are listed and justified",
+                               "stop_condition":  "Nice-to-have fields are collected because they might be useful later"
+                           },
+                           {
+                               "id":  "PG-004",
+                               "theme":  "Official process",
+                               "title":  "Toastmasters pathway separate",
+                               "status":  "Required",
+                               "owner":  "Launch team",
+                               "evidence":  "Official applications signatures member numbers fees and charter roster stay in official workflow",
+                               "stop_condition":  "Governance Commons stores official Toastmasters paperwork"
+                           },
+                           {
+                               "id":  "PG-005",
+                               "theme":  "Access",
+                               "title":  "Access needs private support path",
+                               "status":  "Hold",
+                               "owner":  "Access lead",
+                               "evidence":  "Access needs go to named support role only and are not exported publicly",
+                               "stop_condition":  "Access needs appear in screenshots issue trackers or public CSV/JSON"
+                           },
+                           {
+                               "id":  "PG-006",
+                               "theme":  "Hosting",
+                               "title":  "Private environment separated",
+                               "status":  "Hold",
+                               "owner":  "Technical maintainer",
+                               "evidence":  "Private pilot has separate auth backups logs admin list and no public indexing",
+                               "stop_condition":  "Private data is placed in the static public package"
+                           },
+                           {
+                               "id":  "PG-007",
+                               "theme":  "Roles",
+                               "title":  "Role/access matrix approved",
+                               "status":  "Required",
+                               "owner":  "Pilot authority",
+                               "evidence":  "Every role has allowed access exclusions and removal route",
+                               "stop_condition":  "Organisation supporters receive member-level or admin access by default"
+                           },
+                           {
+                               "id":  "PG-008",
+                               "theme":  "Consent",
+                               "title":  "Consent and withdrawal path tested",
+                               "status":  "Hold",
+                               "owner":  "Pilot coordinator",
+                               "evidence":  "Participant can ask what is stored change track withdraw or request deletion",
+                               "stop_condition":  "Withdrawal requires manual guesswork or is not recorded"
+                           },
+                           {
+                               "id":  "PG-009",
+                               "theme":  "Incident",
+                               "title":  "Incident response route ready",
+                               "status":  "Required",
+                               "owner":  "Security/privacy reviewer",
+                               "evidence":  "Named contact 24-hour triage containment notification and cleanup steps",
+                               "stop_condition":  "Data exposure has no owner or response clock"
+                           },
+                           {
+                               "id":  "PG-010",
+                               "theme":  "Moderation",
+                               "title":  "Cultural and conduct escalation path",
+                               "status":  "Hold",
+                               "owner":  "Cultural safety reviewer",
+                               "evidence":  "Questions complaints inappropriate content and unsafe behaviour have a named path",
+                               "stop_condition":  "Sensitive issues are handled by public comments or ad hoc messages"
+                           },
+                           {
+                               "id":  "PG-011",
+                               "theme":  "Evidence",
+                               "title":  "Evidence pack excludes private data",
+                               "status":  "Ready",
+                               "owner":  "Reviewer",
+                               "evidence":  "Screenshots and reports use redacted/fake records only",
+                               "stop_condition":  "QA evidence contains private fields"
+                           },
+                           {
+                               "id":  "PG-012",
+                               "theme":  "Decidim",
+                               "title":  "Private Decidim mapping approved",
+                               "status":  "Hold",
+                               "owner":  "Technical maintainer",
+                               "evidence":  "Components permissions registration settings exports and admins are documented",
+                               "stop_condition":  "Public sample mapping is copied into private pilot without permission review"
+                           },
+                           {
+                               "id":  "PG-013",
+                               "theme":  "Closeout",
+                               "title":  "Closeout and deletion rule ready",
+                               "status":  "Required",
+                               "owner":  "Data steward",
+                               "evidence":  "Pilot end date retention period export owner deletion owner and archived evidence rules",
+                               "stop_condition":  "Pilot records remain indefinitely without approval"
+                           },
+                           {
+                               "id":  "PG-014",
+                               "theme":  "Decision",
+                               "title":  "Go/no-go decision meeting scheduled",
+                               "status":  "Ready",
+                               "owner":  "Pilot authority",
+                               "evidence":  "Decision agenda uses gates scenarios incidents data map and open risks",
+                               "stop_condition":  "Pilot advances because the demo looks polished"
+                           }
+                       ],
+    "testScenarios":  [
+                          {
+                              "id":  "TS-001",
+                              "stream":  "Intake routing",
+                              "status":  "Ready",
+                              "test":  "A demo-first participant stays out of charter-ready counts",
+                              "expected_result":  "Record is tagged demo-first and no official fields are requested"
+                          },
+                          {
+                              "id":  "TS-002",
+                              "stream":  "Intake routing",
+                              "status":  "Hold",
+                              "test":  "A founding-member candidate is routed to official paperwork outside the demo",
+                              "expected_result":  "Private workflow records referral only and official forms stay external"
+                          },
+                          {
+                              "id":  "TS-003",
+                              "stream":  "Data minimisation",
+                              "status":  "Required",
+                              "test":  "Minimum field list blocks unapproved fields",
+                              "expected_result":  "Address access needs member number and payment fields are not public demo fields"
+                          },
+                          {
+                              "id":  "TS-004",
+                              "stream":  "Access support",
+                              "status":  "Hold",
+                              "test":  "Access-need message reaches only the support role",
+                              "expected_result":  "No public screenshot issue CSV or JSON contains the access detail"
+                          },
+                          {
+                              "id":  "TS-005",
+                              "stream":  "Organisation support",
+                              "status":  "Ready",
+                              "test":  "Organisation supporter can offer mentoring without member-data access",
+                              "expected_result":  "Organisation role is supporter/referrer only"
+                          },
+                          {
+                              "id":  "TS-006",
+                              "stream":  "Officer slate",
+                              "status":  "Hold",
+                              "test":  "Officer interest is summarised without publishing names",
+                              "expected_result":  "Public view shows fake/aggregate readiness only"
+                          },
+                          {
+                              "id":  "TS-007",
+                              "stream":  "Payment boundary",
+                              "status":  "Required",
+                              "test":  "Sponsorship/payment reconciliation is kept outside Governance Commons",
+                              "expected_result":  "Public and private pilot records hold status only not card or fee data"
+                          },
+                          {
+                              "id":  "TS-008",
+                              "stream":  "Official handoff",
+                              "status":  "Required",
+                              "test":  "Official Toastmasters paperwork handoff is logged without storing forms",
+                              "expected_result":  "Evidence says handed off externally with no forms attached"
+                          },
+                          {
+                              "id":  "TS-009",
+                              "stream":  "Withdrawal",
+                              "status":  "Hold",
+                              "test":  "Participant changes from founding-member path to demo-first",
+                              "expected_result":  "Count updates and deletion/retention decision is recorded"
+                          },
+                          {
+                              "id":  "TS-010",
+                              "stream":  "Incident",
+                              "status":  "Required",
+                              "test":  "Private field appears in wrong place during rehearsal",
+                              "expected_result":  "Incident clock starts record is removed reviewer notified and root cause logged"
+                          },
+                          {
+                              "id":  "TS-011",
+                              "stream":  "Evidence",
+                              "status":  "Ready",
+                              "test":  "QA screenshots and reports use redacted/fake records",
+                              "expected_result":  "Evidence can be published without personal data"
+                          },
+                          {
+                              "id":  "TS-012",
+                              "stream":  "Closeout",
+                              "status":  "Required",
+                              "test":  "Pilot closes and records are exported/deleted under the retention rule",
+                              "expected_result":  "Closeout checklist identifies owner date export deletion and remaining risks"
+                          }
+                      ],
+    "roleAccessRules":  [
+                            {
+                                "id":  "RA-001",
+                                "type":  "Custodian",
+                                "role":  "Barayamal / Dean Foley",
+                                "allowed_access":  "Can coordinate private pilot and technical handoff",
+                                "hard_exclusion":  "Cannot replace official Toastmasters acceptance or community authority"
+                            },
+                            {
+                                "id":  "RA-002",
+                                "type":  "Authority",
+                                "role":  "Pilot approval reviewer",
+                                "allowed_access":  "Can approve start pause go/no-go and closeout",
+                                "hard_exclusion":  "Cannot approve more data than the privacy/data gate allows"
+                            },
+                            {
+                                "id":  "RA-003",
+                                "type":  "Privacy",
+                                "role":  "Privacy/data reviewer",
+                                "allowed_access":  "Can review fields notices retention deletion and exports",
+                                "hard_exclusion":  "No unrestricted operational access unless needed"
+                            },
+                            {
+                                "id":  "RA-004",
+                                "type":  "Support",
+                                "role":  "Access support lead",
+                                "allowed_access":  "Can receive access-need notes privately",
+                                "hard_exclusion":  "Cannot publish support needs or share them with organisation supporters"
+                            },
+                            {
+                                "id":  "RA-005",
+                                "type":  "Technical",
+                                "role":  "Decidim maintainer",
+                                "allowed_access":  "Can configure private pilot environment permissions backups and logs",
+                                "hard_exclusion":  "Cannot use public repo/screenshots for private records"
+                            },
+                            {
+                                "id":  "RA-006",
+                                "type":  "Official process",
+                                "role":  "Toastmasters launch team",
+                                "allowed_access":  "Can manage official forms roster sponsorship/payment checks and submission",
+                                "hard_exclusion":  "Official paperwork is not stored in Governance Commons public package"
+                            },
+                            {
+                                "id":  "RA-007",
+                                "type":  "Organisation",
+                                "role":  "First Nations organisation supporter",
+                                "allowed_access":  "Can refer host mentor or review public sample content",
+                                "hard_exclusion":  "No access to member data access needs payments or official acceptance decisions"
+                            },
+                            {
+                                "id":  "RA-008",
+                                "type":  "Reviewer",
+                                "role":  "QA/evidence reviewer",
+                                "allowed_access":  "Can review fake/redacted evidence and test results",
+                                "hard_exclusion":  "No private raw records in public QA evidence"
+                            },
+                            {
+                                "id":  "RA-009",
+                                "type":  "Safety",
+                                "role":  "Cultural safety/conduct reviewer",
+                                "allowed_access":  "Can review complaints conduct concerns and moderation decisions",
+                                "hard_exclusion":  "No public handling of sensitive concerns"
+                            },
+                            {
+                                "id":  "RA-010",
+                                "type":  "Participant",
+                                "role":  "Pilot participant",
+                                "allowed_access":  "Can see own notice pathway withdrawal route and contact point",
+                                "hard_exclusion":  "No access to other participant records"
+                            }
+                        ],
+    "dataTransferRules":  [
+                              {
+                                  "id":  "DT-001",
+                                  "data_class":  "Public",
+                                  "item":  "Public pilot summary",
+                                  "transfer_rule":  "Can be published as fake/sample or approved public summary",
+                                  "stop_condition":  "Public wording implies official membership or acceptance"
+                              },
+                              {
+                                  "id":  "DT-002",
+                                  "data_class":  "Restricted",
+                                  "item":  "Track choice",
+                                  "transfer_rule":  "Private pilot may store current track with consent",
+                                  "stop_condition":  "Track is counted as charter-ready without official confirmation"
+                              },
+                              {
+                                  "id":  "DT-003",
+                                  "data_class":  "Restricted",
+                                  "item":  "Name and contact",
+                                  "transfer_rule":  "Private pilot only if privacy notice and access control are approved",
+                                  "stop_condition":  "Copied into public demo GitHub screenshots or public exports"
+                              },
+                              {
+                                  "id":  "DT-004",
+                                  "data_class":  "Restricted",
+                                  "item":  "Age confirmation",
+                                  "transfer_rule":  "Store confirmation only where necessary and avoid birthdate unless required",
+                                  "stop_condition":  "Birthdate or identity document is stored without approval"
+                              },
+                              {
+                                  "id":  "DT-005",
+                                  "data_class":  "Never public",
+                                  "item":  "Toastmasters member number",
+                                  "transfer_rule":  "Official process only or encrypted private record if explicitly approved",
+                                  "stop_condition":  "Appears in public sample data or screenshots"
+                              },
+                              {
+                                  "id":  "DT-006",
+                                  "data_class":  "Restricted",
+                                  "item":  "Access needs",
+                                  "transfer_rule":  "Named support role only minimum necessary separate from public exports",
+                                  "stop_condition":  "Access needs visible to supporters or public reviewers"
+                              },
+                              {
+                                  "id":  "DT-007",
+                                  "data_class":  "Restricted",
+                                  "item":  "Officer interest",
+                                  "transfer_rule":  "Private planning only until consent and official confirmation",
+                                  "stop_condition":  "Real names published as officer slate before election/confirmation"
+                              },
+                              {
+                                  "id":  "DT-008",
+                                  "data_class":  "Never public",
+                                  "item":  "Official applications and signatures",
+                                  "transfer_rule":  "Official Toastmasters pathway only",
+                                  "stop_condition":  "Forms are stored in public package or fake-data sandbox"
+                              },
+                              {
+                                  "id":  "DT-009",
+                                  "data_class":  "Never public",
+                                  "item":  "Payment or sponsorship reconciliation",
+                                  "transfer_rule":  "External finance/official workflow only status summary allowed if approved",
+                                  "stop_condition":  "Card fee receipt or bank details enter Governance Commons"
+                              },
+                              {
+                                  "id":  "DT-010",
+                                  "data_class":  "Restricted",
+                                  "item":  "Organisation support offer",
+                                  "transfer_rule":  "Approved role summary may be public contact details stay private",
+                                  "stop_condition":  "Support offer creates authority over members or acceptance"
+                              },
+                              {
+                                  "id":  "DT-011",
+                                  "data_class":  "Restricted",
+                                  "item":  "Incident records",
+                                  "transfer_rule":  "Private incident log with named owner and retention rule",
+                                  "stop_condition":  "Incident details are published or unmanaged"
+                              },
+                              {
+                                  "id":  "DT-012",
+                                  "data_class":  "Public",
+                                  "item":  "Redacted test results",
+                                  "transfer_rule":  "Can be published after review using fake IDs and aggregate findings",
+                                  "stop_condition":  "Test evidence reveals private fields or individual identities"
+                              }
+                          ]
+}

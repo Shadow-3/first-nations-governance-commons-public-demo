@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Private Pilot Readiness - First Nations Governance Commons</title>
+  <style>
+    :root {
+      --bg: #f7f8f6;
+      --panel: #ffffff;
+      --ink: #102421;
+      --muted: #566661;
+      --line: #d7dfdb;
+      --green: #0f8f7b;
+      --green-dark: #0b6f61;
+      --blue: #1d6fa5;
+      --gold: #f4c95d;
+      --red: #b94a48;
+      --shadow: 0 18px 45px rgba(28, 47, 42, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 8% 10%, rgba(15, 143, 123, 0.10), transparent 28rem),
+        radial-gradient(circle at 90% 22%, rgba(29, 111, 165, 0.10), transparent 25rem),
+        var(--bg);
+      color: var(--ink);
+    }
+
+    a { color: inherit; }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      min-width: 15rem;
+    }
+
+    .mark {
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .brand strong,
+    .brand span span {
+      display: block;
+      line-height: 1.2;
+    }
+
+    .brand span span { color: var(--muted); font-size: 0.82rem; }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0.55rem;
+      flex-wrap: wrap;
+    }
+
+    .btn,
+    button,
+    select {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      border-radius: 8px;
+      padding: 0.82rem 1rem;
+      font-weight: 850;
+      text-decoration: none;
+      cursor: pointer;
+      min-height: 2.8rem;
+      font-size: 0.95rem;
+    }
+
+    .btn.primary,
+    button.primary {
+      background: var(--green);
+      border-color: var(--green);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(15, 143, 123, 0.18);
+    }
+
+    .label,
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 0.5rem 0.8rem;
+      font-size: 0.78rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .label { background: #fff1bc; color: #7c5a00; }
+    .badge.ready { background: #dff7ef; color: #08745e; }
+    .badge.hold { background: #fff1bc; color: #7c5a00; }
+    .badge.blocked { background: #f8d9d6; color: #8c302d; }
+    .badge.required { background: #deedfb; color: #155b87; }
+
+    main {
+      width: min(1280px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 4.2rem 0 5rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.25rem, 6vw, 4.5rem);
+      line-height: 0.95;
+      letter-spacing: 0;
+      max-width: 12ch;
+    }
+
+    h2, h3, p { margin-top: 0; }
+    p { color: var(--muted); line-height: 1.62; }
+
+    .actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin-bottom: 2.4rem;
+    }
+
+    .metric {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+      min-height: 7rem;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 2.2rem;
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+
+    .metric span { color: var(--muted); }
+
+    section { margin-top: 2.8rem; }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: end;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-head h2 {
+      margin-bottom: 0.2rem;
+      font-size: clamp(1.55rem, 3vw, 2.1rem);
+      line-height: 1.05;
+    }
+
+    .control-layout {
+      display: grid;
+      grid-template-columns: minmax(18rem, 0.8fr) minmax(24rem, 1.4fr);
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .grid,
+    .gate-grid,
+    .scenario-grid,
+    .role-grid,
+    .data-grid {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .grid { grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); }
+    .gate-grid { grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); }
+    .scenario-grid { grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr)); }
+    .role-grid { grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
+    .data-grid { grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); }
+
+    .card,
+    .gate-card,
+    .scenario-card,
+    .role-card,
+    .data-card,
+    .selected-panel,
+    .resource {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card.is-active { border-color: var(--green); box-shadow: 0 18px 38px rgba(15, 143, 123, 0.20); }
+
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      align-items: start;
+      margin-bottom: 0.65rem;
+    }
+
+    .card h2,
+    .gate-card h3,
+    .scenario-card h3,
+    .role-card h3,
+    .data-card h3 {
+      margin: 0;
+      line-height: 1.12;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.65rem;
+      margin-top: 0.75rem;
+    }
+
+    .detail {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 0.75rem;
+      min-height: 5.2rem;
+      background: #fff;
+    }
+
+    small {
+      display: block;
+      color: var(--muted);
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      font-weight: 900;
+      margin-bottom: 0.4rem;
+    }
+
+    .brief {
+      white-space: pre-wrap;
+      line-height: 1.55;
+      background: #fffaf1;
+      border: 1px solid #eadcbf;
+      border-radius: 8px;
+      padding: 1rem;
+      max-height: 28rem;
+      overflow: auto;
+      color: #1a2724;
+    }
+
+    .filter-row {
+      display: flex;
+      gap: 0.55rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      gap: 0.75rem;
+    }
+
+    .resource {
+      text-decoration: none;
+      display: grid;
+      gap: 0.35rem;
+    }
+
+    .resource span { color: var(--muted); line-height: 1.45; }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-weight: 750;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .section-head,
+      .control-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .actions,
+      .filter-row {
+        justify-content: flex-start;
+      }
+
+      .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 640px) {
+      .topbar {
+        position: static;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .brand { min-width: 0; }
+      .nav { display: grid; grid-template-columns: 1fr; }
+      main { width: calc(100% - 2rem); padding-top: 2.2rem; }
+      h1 { font-size: 2.55rem; max-width: 9ch; }
+      .metrics,
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+      button,
+      select,
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="mark">P</span>
+      <span>
+        <strong>Private Pilot Readiness</strong>
+        <span>First Nations Governance Commons</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a class="btn" href="index.html">Public Demo</a>
+      <a class="btn" href="build-delivery-control.html">Delivery Control</a>
+      <a class="btn" href="organisation-onboarding.html">Org Onboarding</a>
+      <a class="btn primary" href="private-pilot-readiness.html">Pilot Readiness</a>
+      <a class="btn" href="document.html?file=docs%2Fprivate-pilot-readiness-playbook-v2.6.md">Playbook</a>
+      <div class="label">No real data in public demo</div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1>Private Pilot Readiness</h1>
+        <p>Decide whether the Toastmasters First Nations controlled sample can move from public coordination into a private, approval-based pilot. This page models the gates, test scripts, role access, data transfer boundaries, and stop rules without storing real member, contact, payment, access-need, or official Toastmasters records.</p>
+      </div>
+      <div class="actions">
+        <a class="btn" href="document.html?file=data%2Fprivate-pilot-package-v2.6.json">Pilot JSON</a>
+        <button class="primary" type="button" onclick="downloadBrief()">Download Brief</button>
+      </div>
+    </div>
+
+    <div class="metrics" aria-label="Pilot readiness metrics">
+      <div class="metric"><strong id="gateMetric">0</strong><span>Readiness gates</span></div>
+      <div class="metric"><strong id="scenarioMetric">0</strong><span>Test scenarios</span></div>
+      <div class="metric"><strong id="roleMetric">0</strong><span>Role/access rules</span></div>
+      <div class="metric"><strong id="dataMetric">0</strong><span>Data transfer rules</span></div>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Controlled Pilot Decision</h2>
+          <p>The sample can only move forward if every private-pilot control is explicit and evidence-backed.</p>
+        </div>
+      </div>
+      <div class="control-layout">
+        <div class="grid" id="pilotGrid"></div>
+        <aside class="selected-panel" aria-live="polite">
+          <div class="card-head">
+            <h2 id="selectedName">Pilot sample</h2>
+            <span class="badge hold" id="selectedStatus">Hold</span>
+          </div>
+          <p id="selectedSummary"></p>
+          <div class="detail-grid">
+            <div class="detail"><small>Allowed test</small><span id="selectedAllowed"></span></div>
+            <div class="detail"><small>Hard boundary</small><span id="selectedBoundary"></span></div>
+            <div class="detail"><small>Decision owner</small><span id="selectedOwner"></span></div>
+            <div class="detail"><small>No-go trigger</small><span id="selectedStop"></span></div>
+          </div>
+          <h3>Generated Pilot Brief</h3>
+          <pre class="brief" id="pilotBrief"></pre>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Readiness Gates</h2>
+          <p>These gates stop the pilot from moving into real records or official process before approvals exist.</p>
+        </div>
+        <div class="filter-row" aria-label="Gate status filter">
+          <button class="primary" type="button" data-gate-filter="All">All</button>
+          <button type="button" data-gate-filter="Required">Required</button>
+          <button type="button" data-gate-filter="Hold">Hold</button>
+          <button type="button" data-gate-filter="Ready">Ready</button>
+          <button type="button" data-gate-filter="Blocked">Blocked</button>
+        </div>
+      </div>
+      <div class="gate-grid" id="gateGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Private Test Scenarios</h2>
+          <p>The pilot team tests a private workflow without pushing real records into the public demo, GitHub, or fake-data sandbox.</p>
+        </div>
+        <select id="scenarioStream" aria-label="Filter test scenarios by stream"></select>
+      </div>
+      <div class="scenario-grid" id="scenarioGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Role And Access Matrix</h2>
+          <p>People and organisations can support the pilot without gaining authority over member data or official decisions.</p>
+        </div>
+        <select id="roleType" aria-label="Filter role and access rules"></select>
+      </div>
+      <div class="role-grid" id="roleGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Data Transfer Boundary</h2>
+          <p>Only the minimum approved records move into any private pilot environment, and nothing private is copied into the public package.</p>
+        </div>
+        <select id="dataClass" aria-label="Filter data transfer rules"></select>
+      </div>
+      <div class="data-grid" id="dataGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Pilot Resources</h2>
+          <p>All v2.6 files are public templates with fake/sample data only.</p>
+        </div>
+      </div>
+      <div class="resource-grid">
+        <a class="resource" href="document.html?file=docs%2Fprivate-pilot-readiness-playbook-v2.6.md"><strong>Private pilot readiness playbook</strong><span>Approval sequence, no-go triggers, and operating rules.</span></a>
+        <a class="resource" href="document.html?file=docs%2Ftoastmasters-private-pilot-test-script-v2.6.md"><strong>Toastmasters pilot test script</strong><span>Step-by-step private workflow test without public data leakage.</span></a>
+        <a class="resource" href="document.html?file=data%2Fprivate-pilot-readiness-gates-v2.6.csv"><strong>Readiness gates CSV</strong><span>Fourteen gates across approval, data, access, hosting, incident response, and handover.</span></a>
+        <a class="resource" href="document.html?file=data%2Fprivate-pilot-test-scenarios-v2.6.csv"><strong>Test scenarios CSV</strong><span>Twelve controlled private-pilot scenarios.</span></a>
+        <a class="resource" href="document.html?file=data%2Fprivate-pilot-role-access-matrix-v2.6.csv"><strong>Role/access matrix CSV</strong><span>Ten roles with allowed access and hard exclusions.</span></a>
+        <a class="resource" href="document.html?file=data%2Fprivate-pilot-data-transfer-map-v2.6.csv"><strong>Data transfer map CSV</strong><span>Twelve data classes with transfer rules and stop conditions.</span></a>
+        <a class="resource" href="document.html?file=data%2Fprivate-pilot-package-v2.6.json"><strong>Pilot package JSON</strong><span>Machine-readable v2.6 package summary.</span></a>
+      </div>
+    </section>
+
+    <footer>
+      Version v2.6. Initial developer/custodian: Barayamal / Dean Foley. Private-pilot controls are templates only; no real data belongs in this public demo.
+    </footer>
+  </main>
+
+  <script>
+    const pilots = [
+      {
+        id: "PILOT-001",
+        name: "Toastmasters First Nations private pilot",
+        status: "Hold",
+        summary: "A controlled private test of intake routing, official-process separation, role access, and evidence capture after the public sample is reviewed.",
+        allowed: "Run a private workflow rehearsal with approved team members and fake or explicitly authorised minimal records.",
+        boundary: "Do not use the public demo, public GitHub repo, or public screenshots for private member, payment, access-need, signature, or official records.",
+        owner: "Barayamal / Dean Foley plus named approval reviewers",
+        stop: "Stop if anyone treats the public demo as the real intake, official Toastmasters system, or source of community authority."
+      }
+    ];
+
+    const gates = [
+      { id: "PG-001", theme: "Authority", title: "Pilot authority named", status: "Required", owner: "Barayamal", evidence: "Written approval naming who can start, pause, and close the private pilot", stop: "Pilot proceeds on informal interest only" },
+      { id: "PG-002", theme: "Privacy", title: "Privacy notice approved", status: "Required", owner: "Privacy reviewer", evidence: "Plain-language notice covers purpose, fields, retention, access, deletion, and official Toastmasters handoff", stop: "People submit private fields without a reviewed privacy notice" },
+      { id: "PG-003", theme: "Data", title: "Minimum field list locked", status: "Required", owner: "Data steward", evidence: "Only fields required for the private test are listed and justified", stop: "Nice-to-have fields are collected because they might be useful later" },
+      { id: "PG-004", theme: "Official process", title: "Toastmasters pathway separate", status: "Required", owner: "Launch team", evidence: "Official applications, signatures, member numbers, fees, and charter roster stay in official workflow", stop: "Governance Commons stores official Toastmasters paperwork" },
+      { id: "PG-005", theme: "Access", title: "Access needs private support path", status: "Hold", owner: "Access lead", evidence: "Access needs go to named support role only and are not exported publicly", stop: "Access needs appear in screenshots, issue trackers, or public CSV/JSON" },
+      { id: "PG-006", theme: "Hosting", title: "Private environment separated", status: "Hold", owner: "Technical maintainer", evidence: "Private pilot has separate auth, backups, logs, admin list, and no public indexing", stop: "Private data is placed in the static public package" },
+      { id: "PG-007", theme: "Roles", title: "Role/access matrix approved", status: "Required", owner: "Pilot authority", evidence: "Every role has allowed access, exclusions, and removal route", stop: "Organisation supporters receive member-level or admin access by default" },
+      { id: "PG-008", theme: "Consent", title: "Consent and withdrawal path tested", status: "Hold", owner: "Pilot coordinator", evidence: "Participant can ask what is stored, change track, withdraw, or request deletion", stop: "Withdrawal requires manual guesswork or is not recorded" },
+      { id: "PG-009", theme: "Incident", title: "Incident response route ready", status: "Required", owner: "Security/privacy reviewer", evidence: "Named contact, 24-hour triage, containment, notification, and public-demo cleanup steps", stop: "Data exposure has no owner or response clock" },
+      { id: "PG-010", theme: "Moderation", title: "Cultural and conduct escalation path", status: "Hold", owner: "Cultural safety reviewer", evidence: "Questions, complaints, inappropriate content, and unsafe behaviour have a named path", stop: "Sensitive issues are handled by public comments or ad hoc messages" },
+      { id: "PG-011", theme: "Evidence", title: "Evidence pack excludes private data", status: "Ready", owner: "Reviewer", evidence: "Screenshots and reports use redacted/fake records only", stop: "QA evidence contains private fields" },
+      { id: "PG-012", theme: "Decidim", title: "Private Decidim mapping approved", status: "Hold", owner: "Technical maintainer", evidence: "Components, permissions, registration settings, exports, and admins are documented", stop: "Public sample mapping is copied into private pilot without permission review" },
+      { id: "PG-013", theme: "Closeout", title: "Closeout and deletion rule ready", status: "Required", owner: "Data steward", evidence: "Pilot end date, retention period, export owner, deletion owner, and archived evidence rules", stop: "Pilot records remain indefinitely without approval" },
+      { id: "PG-014", theme: "Decision", title: "Go/no-go decision meeting scheduled", status: "Ready", owner: "Pilot authority", evidence: "Decision agenda uses gates, scenarios, incidents, data map, and open risks", stop: "Pilot advances because the demo looks polished" }
+    ];
+
+    const scenarios = [
+      { id: "TS-001", stream: "Intake routing", status: "Ready", test: "A demo-first participant stays out of charter-ready counts", expected: "Record is tagged demo-first and no official fields are requested" },
+      { id: "TS-002", stream: "Intake routing", status: "Hold", test: "A founding-member candidate is routed to official paperwork outside the demo", expected: "Private workflow records referral only; official forms stay external" },
+      { id: "TS-003", stream: "Data minimisation", status: "Required", test: "Minimum field list blocks unapproved fields", expected: "Address, access needs, member number, and payment fields are not public demo fields" },
+      { id: "TS-004", stream: "Access support", status: "Hold", test: "Access-need message reaches only the support role", expected: "No public screenshot, issue, CSV, or JSON contains the access detail" },
+      { id: "TS-005", stream: "Organisation support", status: "Ready", test: "Organisation supporter can offer mentoring without member-data access", expected: "Organisation role is supporter/referrer only" },
+      { id: "TS-006", stream: "Officer slate", status: "Hold", test: "Officer interest is summarised without publishing names", expected: "Public view shows fake/aggregate readiness only" },
+      { id: "TS-007", stream: "Payment boundary", status: "Required", test: "Sponsorship/payment reconciliation is kept outside Governance Commons", expected: "Public and private pilot records hold status only, not card or fee data" },
+      { id: "TS-008", stream: "Official handoff", status: "Required", test: "Official Toastmasters paperwork handoff is logged without storing forms", expected: "Evidence says handed off externally, with no forms attached" },
+      { id: "TS-009", stream: "Withdrawal", status: "Hold", test: "Participant changes from founding-member path to demo-first", expected: "Count updates and deletion/retention decision is recorded" },
+      { id: "TS-010", stream: "Incident", status: "Required", test: "Private field appears in wrong place during rehearsal", expected: "Incident clock starts, record is removed, reviewer notified, root cause logged" },
+      { id: "TS-011", stream: "Evidence", status: "Ready", test: "QA screenshots and reports use redacted/fake records", expected: "Evidence can be published without personal data" },
+      { id: "TS-012", stream: "Closeout", status: "Required", test: "Pilot closes and records are exported/deleted under the retention rule", expected: "Closeout checklist identifies owner, date, export, deletion, and remaining risks" }
+    ];
+
+    const roles = [
+      { id: "RA-001", type: "Custodian", role: "Barayamal / Dean Foley", access: "Can coordinate private pilot and technical handoff", exclusion: "Cannot replace official Toastmasters acceptance or community authority" },
+      { id: "RA-002", type: "Authority", role: "Pilot approval reviewer", access: "Can approve start, pause, go/no-go, and closeout", exclusion: "Cannot approve more data than the privacy/data gate allows" },
+      { id: "RA-003", type: "Privacy", role: "Privacy/data reviewer", access: "Can review fields, notices, retention, deletion, and exports", exclusion: "No unrestricted operational access unless needed" },
+      { id: "RA-004", type: "Support", role: "Access support lead", access: "Can receive access-need notes privately", exclusion: "Cannot publish support needs or share them with organisation supporters" },
+      { id: "RA-005", type: "Technical", role: "Decidim maintainer", access: "Can configure private pilot environment, permissions, backups, and logs", exclusion: "Cannot use public repo/screenshots for private records" },
+      { id: "RA-006", type: "Official process", role: "Toastmasters launch team", access: "Can manage official forms, roster, sponsorship/payment checks, and submission", exclusion: "Official paperwork is not stored in Governance Commons public package" },
+      { id: "RA-007", type: "Organisation", role: "First Nations organisation supporter", access: "Can refer, host, mentor, or review public sample content", exclusion: "No access to member data, access needs, payments, or official acceptance decisions" },
+      { id: "RA-008", type: "Reviewer", role: "QA/evidence reviewer", access: "Can review fake/redacted evidence and test results", exclusion: "No private raw records in public QA evidence" },
+      { id: "RA-009", type: "Safety", role: "Cultural safety/conduct reviewer", access: "Can review complaints, conduct concerns, and moderation decisions", exclusion: "No public handling of sensitive concerns" },
+      { id: "RA-010", type: "Participant", role: "Pilot participant", access: "Can see own notice, pathway, withdrawal route, and contact point", exclusion: "No access to other participant records" }
+    ];
+
+    const dataRules = [
+      { id: "DT-001", klass: "Public", item: "Public pilot summary", transfer: "Can be published as fake/sample or approved public summary", stop: "Public wording implies official membership or acceptance" },
+      { id: "DT-002", klass: "Restricted", item: "Track choice", transfer: "Private pilot may store current track with consent", stop: "Track is counted as charter-ready without official confirmation" },
+      { id: "DT-003", klass: "Restricted", item: "Name and contact", transfer: "Private pilot only if privacy notice and access control are approved", stop: "Copied into public demo, GitHub, screenshots, or public exports" },
+      { id: "DT-004", klass: "Restricted", item: "Age confirmation", transfer: "Store confirmation only where necessary; avoid birthdate unless required", stop: "Birthdate or identity document is stored without approval" },
+      { id: "DT-005", klass: "Never public", item: "Toastmasters member number", transfer: "Official process only or encrypted private record if explicitly approved", stop: "Appears in public sample data or screenshots" },
+      { id: "DT-006", klass: "Restricted", item: "Access needs", transfer: "Named support role only, minimum necessary, separate from public exports", stop: "Access needs visible to supporters or public reviewers" },
+      { id: "DT-007", klass: "Restricted", item: "Officer interest", transfer: "Private planning only until consent and official confirmation", stop: "Real names published as officer slate before election/confirmation" },
+      { id: "DT-008", klass: "Never public", item: "Official applications and signatures", transfer: "Official Toastmasters pathway only", stop: "Forms are stored in public package or fake-data sandbox" },
+      { id: "DT-009", klass: "Never public", item: "Payment or sponsorship reconciliation", transfer: "External finance/official workflow only; status summary allowed if approved", stop: "Card, fee, receipt, or bank details enter Governance Commons" },
+      { id: "DT-010", klass: "Restricted", item: "Organisation support offer", transfer: "Approved role summary may be public; contact details stay private", stop: "Support offer creates authority over members or acceptance" },
+      { id: "DT-011", klass: "Restricted", item: "Incident records", transfer: "Private incident log with named owner and retention rule", stop: "Incident details are published or unmanaged" },
+      { id: "DT-012", klass: "Public", item: "Redacted test results", transfer: "Can be published after review using fake IDs and aggregate findings", stop: "Test evidence reveals private fields or individual identities" }
+    ];
+
+    let activePilot = pilots[0].id;
+    let gateFilter = "All";
+    let scenarioStream = "All";
+    let roleType = "All";
+    let dataClass = "All";
+
+    const statusClass = status => status.toLowerCase().replace(/[^a-z]+/g, "");
+
+    function badge(status) {
+      return `<span class="badge ${statusClass(status)}">${status}</span>`;
+    }
+
+    function init() {
+      document.getElementById("gateMetric").textContent = gates.length;
+      document.getElementById("scenarioMetric").textContent = scenarios.length;
+      document.getElementById("roleMetric").textContent = roles.length;
+      document.getElementById("dataMetric").textContent = dataRules.length;
+      populateSelect("scenarioStream", ["All", ...new Set(scenarios.map(item => item.stream))]);
+      populateSelect("roleType", ["All", ...new Set(roles.map(item => item.type))]);
+      populateSelect("dataClass", ["All", ...new Set(dataRules.map(item => item.klass))]);
+      renderPilots();
+      renderGates();
+      renderScenarios();
+      renderRoles();
+      renderData();
+      bindControls();
+    }
+
+    function populateSelect(id, options) {
+      document.getElementById(id).innerHTML = options.map(option => `<option value="${option}">${option}</option>`).join("");
+    }
+
+    function renderPilots() {
+      document.getElementById("pilotGrid").innerHTML = pilots.map(item => `
+        <article class="card ${item.id === activePilot ? "is-active" : ""}">
+          <div class="card-head">
+            <h2>${item.name}</h2>
+            ${badge(item.status)}
+          </div>
+          <p>${item.summary}</p>
+          <div class="detail-grid">
+            <div class="detail"><small>Owner</small><span>${item.owner}</span></div>
+            <div class="detail"><small>Status</small><span>${item.status}</span></div>
+          </div>
+          <button class="primary" type="button" onclick="selectPilot('${item.id}')">Use Pilot</button>
+        </article>
+      `).join("");
+      renderSelected();
+    }
+
+    function renderSelected() {
+      const item = pilots.find(pilot => pilot.id === activePilot);
+      document.getElementById("selectedName").textContent = item.name;
+      document.getElementById("selectedStatus").textContent = item.status;
+      document.getElementById("selectedStatus").className = `badge ${statusClass(item.status)}`;
+      document.getElementById("selectedSummary").textContent = item.summary;
+      document.getElementById("selectedAllowed").textContent = item.allowed;
+      document.getElementById("selectedBoundary").textContent = item.boundary;
+      document.getElementById("selectedOwner").textContent = item.owner;
+      document.getElementById("selectedStop").textContent = item.stop;
+      document.getElementById("pilotBrief").textContent = makeBrief(item);
+    }
+
+    function renderGates() {
+      const visible = gates.filter(item => gateFilter === "All" || item.status === gateFilter);
+      document.getElementById("gateGrid").innerHTML = visible.map(item => `
+        <article class="gate-card">
+          <div class="card-head">
+            <h3>${item.id}: ${item.title}</h3>
+            ${badge(item.status)}
+          </div>
+          <p>${item.evidence}</p>
+          <div class="detail-grid">
+            <div class="detail"><small>Theme</small><span>${item.theme}</span></div>
+            <div class="detail"><small>Owner</small><span>${item.owner}</span></div>
+          </div>
+          <div class="detail"><small>Stop condition</small><span>${item.stop}</span></div>
+        </article>
+      `).join("");
+    }
+
+    function renderScenarios() {
+      const visible = scenarios.filter(item => scenarioStream === "All" || item.stream === scenarioStream);
+      document.getElementById("scenarioGrid").innerHTML = visible.map(item => `
+        <article class="scenario-card">
+          <div class="card-head">
+            <h3>${item.id}: ${item.test}</h3>
+            ${badge(item.status)}
+          </div>
+          <div class="detail"><small>Stream</small><span>${item.stream}</span></div>
+          <div class="detail"><small>Expected result</small><span>${item.expected}</span></div>
+        </article>
+      `).join("");
+    }
+
+    function renderRoles() {
+      const visible = roles.filter(item => roleType === "All" || item.type === roleType);
+      document.getElementById("roleGrid").innerHTML = visible.map(item => `
+        <article class="role-card">
+          <div class="card-head">
+            <h3>${item.role}</h3>
+            <span class="badge required">${item.type}</span>
+          </div>
+          <div class="detail"><small>Allowed access</small><span>${item.access}</span></div>
+          <div class="detail"><small>Hard exclusion</small><span>${item.exclusion}</span></div>
+        </article>
+      `).join("");
+    }
+
+    function renderData() {
+      const visible = dataRules.filter(item => dataClass === "All" || item.klass === dataClass);
+      document.getElementById("dataGrid").innerHTML = visible.map(item => `
+        <article class="data-card">
+          <div class="card-head">
+            <h3>${item.item}</h3>
+            <span class="badge ${item.klass === "Never public" ? "blocked" : item.klass === "Restricted" ? "hold" : "ready"}">${item.klass}</span>
+          </div>
+          <div class="detail"><small>Transfer rule</small><span>${item.transfer}</span></div>
+          <div class="detail"><small>Stop condition</small><span>${item.stop}</span></div>
+        </article>
+      `).join("");
+    }
+
+    function bindControls() {
+      document.querySelectorAll("[data-gate-filter]").forEach(button => {
+        button.addEventListener("click", () => {
+          gateFilter = button.dataset.gateFilter;
+          document.querySelectorAll("[data-gate-filter]").forEach(item => item.classList.toggle("primary", item === button));
+          renderGates();
+          renderSelected();
+        });
+      });
+      document.getElementById("scenarioStream").addEventListener("change", event => {
+        scenarioStream = event.target.value;
+        renderScenarios();
+      });
+      document.getElementById("roleType").addEventListener("change", event => {
+        roleType = event.target.value;
+        renderRoles();
+      });
+      document.getElementById("dataClass").addEventListener("change", event => {
+        dataClass = event.target.value;
+        renderData();
+      });
+    }
+
+    function selectPilot(id) {
+      activePilot = id;
+      renderPilots();
+    }
+
+    function makeBrief(item) {
+      const gateCounts = gates.reduce((acc, gate) => {
+        acc[gate.status] = (acc[gate.status] || 0) + 1;
+        return acc;
+      }, {});
+      return [
+        "# Private Pilot Readiness Brief",
+        "",
+        `Sample: ${item.name}`,
+        `Status: ${item.status}`,
+        `Owner: ${item.owner}`,
+        "",
+        "## Allowed test",
+        item.allowed,
+        "",
+        "## Hard boundary",
+        item.boundary,
+        "",
+        "## Gate summary",
+        ...Object.entries(gateCounts).sort().map(([status, count]) => `- ${status}: ${count}`),
+        "",
+        "## Required scenarios",
+        ...scenarios.filter(scenario => scenario.status === "Required").map(scenario => `- ${scenario.id}: ${scenario.test}`),
+        "",
+        "## No-go rule",
+        item.stop,
+        "",
+        "Next action: complete required and hold gates before any real private pilot data, official Toastmasters records, payment/sponsorship reconciliation, access needs, or member information moves into a controlled environment."
+      ].join("\n");
+    }
+
+    function downloadBrief() {
+      const item = pilots.find(pilot => pilot.id === activePilot);
+      const blob = new Blob([makeBrief(item)], { type: "text/markdown" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "private-pilot-readiness-brief-v2.6.md";
+      link.click();
+      URL.revokeObjectURL(link.href);
+    }
+
+    init();
+  </script>
+</body>
+</html>

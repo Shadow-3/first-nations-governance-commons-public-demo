@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "2.5",
+  "version": "2.6",
   "date": "2026-06-05",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use Sandbox Launcher to choose the first fake-data Decidim build path, use Seed Studio and Sandbox Build Pack to prepare the fake-data Decidim build handoff, use Build Partner Desk and Build Delivery Control to manage provider selection and delivery, then use Organisation Onboarding with the Toastmasters First Nations controlled sample to test safe organisation/initiative join paths before any real member, payment, private contact, access-need, official paperwork, or real pilot data is introduced.",
+  "recommendedDecision": "Use Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, Build Delivery Control, and Organisation Onboarding first. Then use Private Pilot Readiness to check approval gates, private workflow test scenarios, role access, data-transfer rules, incident response, closeout, and go/no-go evidence before any real organisation, member, payment, access-need, official paperwork, or private pilot data is introduced.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -46,6 +46,15 @@
     "data/toastmasters-data-boundary-v2.5.csv",
     "data/organisation-initiative-component-map-v2.5.csv",
     "data/organisation-onboarding-package-v2.5.json",
+    "private-pilot-readiness.html",
+    "docs/public-demo-release-notes-v2.6.md",
+    "docs/private-pilot-readiness-playbook-v2.6.md",
+    "docs/toastmasters-private-pilot-test-script-v2.6.md",
+    "data/private-pilot-readiness-gates-v2.6.csv",
+    "data/private-pilot-test-scenarios-v2.6.csv",
+    "data/private-pilot-role-access-matrix-v2.6.csv",
+    "data/private-pilot-data-transfer-map-v2.6.csv",
+    "data/private-pilot-package-v2.6.json",
     "docs/public-demo-release-notes-v2.4.md",
     "docs/build-delivery-control-playbook-v2.4.md",
     "docs/provider-contract-gates-v2.4.md",
@@ -120,7 +129,7 @@
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v2.5.md",
+    "releaseNotes": "docs/public-demo-release-notes-v2.6.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -202,7 +211,17 @@
       "qa-v25-deployed-onboarding-gates-desktop.png",
       "qa-v25-deployed-data-boundary-desktop.png",
       "qa-v25-deployed-organisation-onboarding-mobile.png",
-      "qa-v25-deployed-onboarding-package-mobile.png"
+      "qa-v25-deployed-onboarding-package-mobile.png",
+      "qa-v26-local-private-pilot-readiness-desktop.png",
+      "qa-v26-local-private-pilot-required-desktop.png",
+      "qa-v26-local-private-pilot-data-desktop.png",
+      "qa-v26-local-private-pilot-mobile.png",
+      "qa-v26-local-private-pilot-package-mobile.png",
+      "qa-v26-deployed-private-pilot-readiness-desktop.png",
+      "qa-v26-deployed-private-pilot-required-desktop.png",
+      "qa-v26-deployed-private-pilot-data-desktop.png",
+      "qa-v26-deployed-private-pilot-mobile.png",
+      "qa-v26-deployed-private-pilot-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -380,7 +399,16 @@
       "data/toastmasters-initiative-tracks-v2.5.csv",
       "data/toastmasters-data-boundary-v2.5.csv",
       "data/organisation-initiative-component-map-v2.5.csv",
-      "data/organisation-onboarding-package-v2.5.json"
+      "data/organisation-onboarding-package-v2.5.json",
+      "private-pilot-readiness.html",
+      "docs/public-demo-release-notes-v2.6.md",
+      "docs/private-pilot-readiness-playbook-v2.6.md",
+      "docs/toastmasters-private-pilot-test-script-v2.6.md",
+      "data/private-pilot-readiness-gates-v2.6.csv",
+      "data/private-pilot-test-scenarios-v2.6.csv",
+      "data/private-pilot-role-access-matrix-v2.6.csv",
+      "data/private-pilot-data-transfer-map-v2.6.csv",
+      "data/private-pilot-package-v2.6.json"
     ],
     "actionCenter": [
       "docs/next-steps-action-plan-v1.1.md",
@@ -573,7 +601,16 @@
       "data/toastmasters-initiative-tracks-v2.5.csv",
       "data/toastmasters-data-boundary-v2.5.csv",
       "data/organisation-initiative-component-map-v2.5.csv",
-      "data/organisation-onboarding-package-v2.5.json"
+      "data/organisation-onboarding-package-v2.5.json",
+      "private-pilot-readiness.html",
+      "docs/public-demo-release-notes-v2.6.md",
+      "docs/private-pilot-readiness-playbook-v2.6.md",
+      "docs/toastmasters-private-pilot-test-script-v2.6.md",
+      "data/private-pilot-readiness-gates-v2.6.csv",
+      "data/private-pilot-test-scenarios-v2.6.csv",
+      "data/private-pilot-role-access-matrix-v2.6.csv",
+      "data/private-pilot-data-transfer-map-v2.6.csv",
+      "data/private-pilot-package-v2.6.json"
     ],
     "opsRoom": [
       "docs/sandbox-ops-runbook-v1.6.md",
@@ -687,7 +724,16 @@
       "data/toastmasters-initiative-tracks-v2.5.csv",
       "data/toastmasters-data-boundary-v2.5.csv",
       "data/organisation-initiative-component-map-v2.5.csv",
-      "data/organisation-onboarding-package-v2.5.json"
+      "data/organisation-onboarding-package-v2.5.json",
+      "private-pilot-readiness.html",
+      "docs/public-demo-release-notes-v2.6.md",
+      "docs/private-pilot-readiness-playbook-v2.6.md",
+      "docs/toastmasters-private-pilot-test-script-v2.6.md",
+      "data/private-pilot-readiness-gates-v2.6.csv",
+      "data/private-pilot-test-scenarios-v2.6.csv",
+      "data/private-pilot-role-access-matrix-v2.6.csv",
+      "data/private-pilot-data-transfer-map-v2.6.csv",
+      "data/private-pilot-package-v2.6.json"
     ],
     "seedStudio": [
       "seed-studio.html",
@@ -739,7 +785,16 @@
       "data/toastmasters-initiative-tracks-v2.5.csv",
       "data/toastmasters-data-boundary-v2.5.csv",
       "data/organisation-initiative-component-map-v2.5.csv",
-      "data/organisation-onboarding-package-v2.5.json"
+      "data/organisation-onboarding-package-v2.5.json",
+      "private-pilot-readiness.html",
+      "docs/public-demo-release-notes-v2.6.md",
+      "docs/private-pilot-readiness-playbook-v2.6.md",
+      "docs/toastmasters-private-pilot-test-script-v2.6.md",
+      "data/private-pilot-readiness-gates-v2.6.csv",
+      "data/private-pilot-test-scenarios-v2.6.csv",
+      "data/private-pilot-role-access-matrix-v2.6.csv",
+      "data/private-pilot-data-transfer-map-v2.6.csv",
+      "data/private-pilot-package-v2.6.json"
     ],
     "buildPack": [
       "sandbox-build-pack.html",
@@ -784,7 +839,16 @@
       "data/toastmasters-initiative-tracks-v2.5.csv",
       "data/toastmasters-data-boundary-v2.5.csv",
       "data/organisation-initiative-component-map-v2.5.csv",
-      "data/organisation-onboarding-package-v2.5.json"
+      "data/organisation-onboarding-package-v2.5.json",
+      "private-pilot-readiness.html",
+      "docs/public-demo-release-notes-v2.6.md",
+      "docs/private-pilot-readiness-playbook-v2.6.md",
+      "docs/toastmasters-private-pilot-test-script-v2.6.md",
+      "data/private-pilot-readiness-gates-v2.6.csv",
+      "data/private-pilot-test-scenarios-v2.6.csv",
+      "data/private-pilot-role-access-matrix-v2.6.csv",
+      "data/private-pilot-data-transfer-map-v2.6.csv",
+      "data/private-pilot-package-v2.6.json"
     ],
     "buildPartnerDesk": [
       "build-partner-desk.html",
@@ -819,7 +883,16 @@
       "data/toastmasters-initiative-tracks-v2.5.csv",
       "data/toastmasters-data-boundary-v2.5.csv",
       "data/organisation-initiative-component-map-v2.5.csv",
-      "data/organisation-onboarding-package-v2.5.json"
+      "data/organisation-onboarding-package-v2.5.json",
+      "private-pilot-readiness.html",
+      "docs/public-demo-release-notes-v2.6.md",
+      "docs/private-pilot-readiness-playbook-v2.6.md",
+      "docs/toastmasters-private-pilot-test-script-v2.6.md",
+      "data/private-pilot-readiness-gates-v2.6.csv",
+      "data/private-pilot-test-scenarios-v2.6.csv",
+      "data/private-pilot-role-access-matrix-v2.6.csv",
+      "data/private-pilot-data-transfer-map-v2.6.csv",
+      "data/private-pilot-package-v2.6.json"
     ],
     "buildDeliveryControl": [
       "build-delivery-control.html",
@@ -840,6 +913,15 @@
       "data/toastmasters-data-boundary-v2.5.csv",
       "data/organisation-initiative-component-map-v2.5.csv",
       "data/organisation-onboarding-package-v2.5.json",
+      "private-pilot-readiness.html",
+      "docs/public-demo-release-notes-v2.6.md",
+      "docs/private-pilot-readiness-playbook-v2.6.md",
+      "docs/toastmasters-private-pilot-test-script-v2.6.md",
+      "data/private-pilot-readiness-gates-v2.6.csv",
+      "data/private-pilot-test-scenarios-v2.6.csv",
+      "data/private-pilot-role-access-matrix-v2.6.csv",
+      "data/private-pilot-data-transfer-map-v2.6.csv",
+      "data/private-pilot-package-v2.6.json",
       "build-partner-desk.html",
       "docs/build-partner-rfq-pack-v2.3.md",
       "sandbox-build-pack.html",
@@ -855,7 +937,27 @@
       "data/toastmasters-initiative-tracks-v2.5.csv",
       "data/toastmasters-data-boundary-v2.5.csv",
       "data/organisation-initiative-component-map-v2.5.csv",
-      "data/organisation-onboarding-package-v2.5.json"
+      "data/organisation-onboarding-package-v2.5.json",
+      "private-pilot-readiness.html",
+      "docs/public-demo-release-notes-v2.6.md",
+      "docs/private-pilot-readiness-playbook-v2.6.md",
+      "docs/toastmasters-private-pilot-test-script-v2.6.md",
+      "data/private-pilot-readiness-gates-v2.6.csv",
+      "data/private-pilot-test-scenarios-v2.6.csv",
+      "data/private-pilot-role-access-matrix-v2.6.csv",
+      "data/private-pilot-data-transfer-map-v2.6.csv",
+      "data/private-pilot-package-v2.6.json"
+    ],
+    "privatePilotReadiness": [
+      "private-pilot-readiness.html",
+      "docs/public-demo-release-notes-v2.6.md",
+      "docs/private-pilot-readiness-playbook-v2.6.md",
+      "docs/toastmasters-private-pilot-test-script-v2.6.md",
+      "data/private-pilot-readiness-gates-v2.6.csv",
+      "data/private-pilot-test-scenarios-v2.6.csv",
+      "data/private-pilot-role-access-matrix-v2.6.csv",
+      "data/private-pilot-data-transfer-map-v2.6.csv",
+      "data/private-pilot-package-v2.6.json"
     ]
   },
   "safetyRules": [
@@ -871,7 +973,10 @@
     "No real milestone payment release or procurement decision.",
     "No real membership applications or Toastmasters member numbers.",
     "No payment, address, phone, email, access-need, signature, official club record, private organisation contact, or real authority data in the public demo.",
-    "Toastmasters First Nations is a controlled sample only; real intake, meeting links, official paperwork, sponsorship/payment reconciliation, and charter acceptance stay outside the package."
+    "Toastmasters First Nations is a controlled sample only; real intake, meeting links, official paperwork, sponsorship/payment reconciliation, and charter acceptance stay outside the package.",
+    "No real private pilot records in the public demo, public repository, public screenshots, or fake-data sandbox.",
+    "Private pilot cannot start until privacy notice, consent, role access, data-transfer map, incident response, hosting, withdrawal/deletion, official handoff, and closeout are approved.",
+    "Organisation supporters cannot receive member data, access needs, payments, official acceptance records, or unrestricted admin access by default."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -1144,5 +1249,45 @@
     ],
     "safetyRule": "No real membership, address, phone, email, access-need, official application, Toastmasters member-number, payment, signature, private organisation contact, or real authority data belongs in the public demo, public repository, public screenshots, or fake-data Decidim sandbox.",
     "controlledSampleRule": "This is not official Toastmasters membership, application, payment, meeting-link, or member-record infrastructure. It is a public fake/sample coordination test only."
+  },
+  "privatePilotReadiness": {
+    "entrypoint": "private-pilot-readiness.html",
+    "playbook": "docs/private-pilot-readiness-playbook-v2.6.md",
+    "testScript": "docs/toastmasters-private-pilot-test-script-v2.6.md",
+    "releaseNotes": "docs/public-demo-release-notes-v2.6.md",
+    "readinessGates": "data/private-pilot-readiness-gates-v2.6.csv",
+    "testScenarios": "data/private-pilot-test-scenarios-v2.6.csv",
+    "roleAccessMatrix": "data/private-pilot-role-access-matrix-v2.6.csv",
+    "dataTransferMap": "data/private-pilot-data-transfer-map-v2.6.csv",
+    "pilotPackage": "data/private-pilot-package-v2.6.json",
+    "sampleInitiative": "Toastmasters First Nations",
+    "mode": "public_demo_private_pilot_controls_template_only",
+    "readinessGateCount": 14,
+    "testScenarioCount": 12,
+    "roleAccessRuleCount": 10,
+    "dataTransferRuleCount": 12,
+    "requiredGateCount": 7,
+    "holdGateCount": 5,
+    "readyGateCount": 2,
+    "noGoTriggers": [
+      "public_demo_used_as_real_private_intake",
+      "real_private_field_appears_in_public_evidence",
+      "organisation_supporter_receives_member_data_access",
+      "official_toastmasters_paperwork_stored_in_governance_commons_public_package",
+      "privacy_notice_or_role_access_missing",
+      "incident_response_owner_missing",
+      "pilot_advances_without_go_no_go_meeting"
+    ],
+    "sourceAnchors": [
+      "https://barayamal.com.au/toastmasters-first-nations/",
+      "https://toastmasters.org/start-a-club",
+      "https://content.toastmasters.org/image/upload/1102-club-charter-requirments-form-ff.pdf",
+      "https://prod103.toastmasters.org/leadership-central/governing-documents",
+      "https://docs.decidim.org/en/develop/features/participatory-spaces.html",
+      "https://docs.decidim.org/en/develop/admin/spaces.html",
+      "https://docs.decidim.org/en/develop/admin/components.html"
+    ],
+    "safetyRule": "Private pilot controls are public templates only. No real membership, address, phone, email, access-need, official application, Toastmasters member-number, payment, signature, private organisation contact, or real authority data belongs in the public demo, public repository, public screenshots, or fake-data Decidim sandbox.",
+    "controlledPilotRule": "Private-pilot controls are templates only. Real records require a separate private environment, approved notices, role access, incident response, and closeout."
   }
 }

@@ -1,0 +1,13 @@
+id,data_class,item,transfer_rule,stop_condition
+DT-001,Public,Public pilot summary,Can be published as fake/sample or approved public summary,Public wording implies official membership or acceptance
+DT-002,Restricted,Track choice,Private pilot may store current track with consent,Track is counted as charter-ready without official confirmation
+DT-003,Restricted,Name and contact,Private pilot only if privacy notice and access control are approved,Copied into public demo GitHub screenshots or public exports
+DT-004,Restricted,Age confirmation,Store confirmation only where necessary and avoid birthdate unless required,Birthdate or identity document is stored without approval
+DT-005,Never public,Toastmasters member number,Official process only or encrypted private record if explicitly approved,Appears in public sample data or screenshots
+DT-006,Restricted,Access needs,Named support role only minimum necessary separate from public exports,Access needs visible to supporters or public reviewers
+DT-007,Restricted,Officer interest,Private planning only until consent and official confirmation,Real names published as officer slate before election/confirmation
+DT-008,Never public,Official applications and signatures,Official Toastmasters pathway only,Forms are stored in public package or fake-data sandbox
+DT-009,Never public,Payment or sponsorship reconciliation,External finance/official workflow only status summary allowed if approved,Card fee receipt or bank details enter Governance Commons
+DT-010,Restricted,Organisation support offer,Approved role summary may be public contact details stay private,Support offer creates authority over members or acceptance
+DT-011,Restricted,Incident records,Private incident log with named owner and retention rule,Incident details are published or unmanaged
+DT-012,Public,Redacted test results,Can be published after review using fake IDs and aggregate findings,Test evidence reveals private fields or individual identities

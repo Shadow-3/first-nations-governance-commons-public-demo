@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v2.5
+Current package version: v2.6
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -45,6 +45,8 @@ Open `build-delivery-control.html` to use Build Delivery Control for provider mi
 
 Open `organisation-onboarding.html` to use Organisation Onboarding with Toastmasters First Nations as a controlled sample for organisation/initiative join paths, readiness gates, data boundaries, Decidim mapping, and a downloadable onboarding brief.
 
+Open `private-pilot-readiness.html` to use Private Pilot Readiness for approval gates, private workflow test scenarios, role/access rules, data-transfer boundaries, incident response, closeout, and a downloadable go/no-go brief before any real records move.
+
 The demo shows:
 
 - A sample 2026 Community Priorities and Budget process.
@@ -85,6 +87,7 @@ The demo shows:
 - `docs/public-demo-release-notes-v1.7.md`
 - `docs/public-demo-release-notes-v2.4.md`
 - `docs/public-demo-release-notes-v2.5.md`
+- `docs/public-demo-release-notes-v2.6.md`
 - `docs/public-demo-release-notes-v2.3.md`
 - `docs/public-demo-release-notes-v2.2.md`
 - `docs/public-demo-release-notes-v2.1.md`
@@ -99,6 +102,8 @@ The demo shows:
 - `docs/provider-contract-gates-v2.4.md`
 - `docs/organisation-initiative-onboarding-playbook-v2.5.md`
 - `docs/toastmasters-first-nations-sample-test-v2.5.md`
+- `docs/private-pilot-readiness-playbook-v2.6.md`
+- `docs/toastmasters-private-pilot-test-script-v2.6.md`
 - `docs/build-partner-rfq-pack-v2.3.md`
 - `docs/provider-evaluation-guide-v2.3.md`
 - `docs/sandbox-launch-playbook-v2.0.md`
@@ -203,6 +208,11 @@ The demo shows:
 - `data/toastmasters-data-boundary-v2.5.csv`
 - `data/organisation-initiative-component-map-v2.5.csv`
 - `data/organisation-onboarding-package-v2.5.json`
+- `data/private-pilot-readiness-gates-v2.6.csv`
+- `data/private-pilot-test-scenarios-v2.6.csv`
+- `data/private-pilot-role-access-matrix-v2.6.csv`
+- `data/private-pilot-data-transfer-map-v2.6.csv`
+- `data/private-pilot-package-v2.6.json`
 - `data/sandbox-task-board.csv`
 - `data/decision-log-template.csv`
 - `PACKAGE_INDEX.md`
@@ -610,9 +620,25 @@ The v2.5 package adds an organisation and initiative onboarding workflow using T
 
 Use this version as a safe test of whether First Nations organisations or initiatives can join the Governance Commons model. The public demo must not collect real membership, address, phone, email, access-need, official application, Toastmasters member-number, payment, signature, private organisation contact, or real authority data. Real Toastmasters intake, official paperwork, payments, meeting links, member numbers, and acceptance records stay outside this package.
 
+## v2.6 Private Pilot Readiness Upgrade
+
+The v2.6 package adds a private-pilot control layer after Organisation Onboarding:
+
+- Interactive Private Pilot Readiness page.
+- Fourteen private-pilot readiness gates.
+- Twelve private workflow test scenarios.
+- Ten role/access rules.
+- Twelve data-transfer boundary rules.
+- Browser-generated private pilot readiness brief.
+- Private pilot readiness playbook and Toastmasters private pilot test script.
+- Document viewer coverage for all v2.6 private-pilot docs, CSVs, and JSON.
+- Package manifest coverage for the new private pilot evidence group.
+
+Use this version before any real private pilot data moves. The public demo and public repository remain fake/sample only. A private pilot still needs separate approval for privacy notice, consent, minimum fields, role access, private hosting, incident response, withdrawal/deletion, official Toastmasters handoff, and closeout.
+
 ## Next Build Step
 
-Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, Delivery Room, Assurance Room, Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, Build Delivery Control, and Organisation Onboarding to configure, operate, select a provider for, control delivery of, test organisation/initiative onboarding for, and safely hand over a fake-data Decidim sandbox:
+Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, Delivery Room, Assurance Room, Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, Build Delivery Control, Organisation Onboarding, and Private Pilot Readiness to configure, operate, select a provider for, control delivery of, test organisation/initiative onboarding for, check private-pilot readiness for, and safely hand over a fake-data Decidim sandbox:
 
 - One organisation.
 - One public assembly.
@@ -624,5 +650,6 @@ Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Ro
 - Accountability component.
 - Public pages/newsletters.
 - Controlled organisation/initiative onboarding sample.
+- Private-pilot readiness controls.
 
 Use the files in `docs/` and `data/` as the first mapping package.
