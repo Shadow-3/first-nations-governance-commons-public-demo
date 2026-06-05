@@ -1,0 +1,17 @@
+id,priority,status,action,owner,due
+REM-001,Critical,Next,Get private official-route signoff for Toastmasters boundary.,Official-route owner,Before real member invite
+REM-002,Critical,Next,Run support pause tabletop with fake incident scenario.,Safety reviewer,Before real intake
+REM-003,Critical,Next,Run private authority decision meeting for rehearsal closeout.,Authority chair,Before real pilot
+REM-004,High,Next,"Prove admin invite, revoke, and denied access after revocation.",Technical custodian,Before real data
+REM-005,High,Next,Remove or move sensitive business fields to approved private intake.,Program operator,Before founder intake
+REM-006,High,Next,"Draft mentor conflict, privacy, and least-privilege access rule.",Mentor coordinator,Before mentor access
+REM-007,High,Next,"Run backup, restore, export, delete, and closeout proof.",Technical custodian,Before private pilot
+REM-008,Medium,Next,Rewrite sample motion copy to state non-official status.,Club facilitator,Before member rehearsal repeat
+REM-009,Medium,Hold,Review learning survey to keep it aggregate-only.,Learning lead,Before learning survey repeat
+REM-010,Medium,Complete,Keep Dean advisory boundary in scorecard and run sheet.,Review coordinator,Done in v3.9
+REM-011,Medium,Complete,Add blocker register to public-safe package.,Pilot owner,Done in v3.9
+REM-012,Medium,Complete,Add public summary boundary so readiness is not overstated.,Comms lead,Done in v3.9
+REM-013,Low,Complete,Add score interpretation to playbook.,Pilot owner,Done in v3.9
+REM-014,Low,Next,Name private evidence folders with version labels.,Technical custodian,Before next rehearsal
+REM-015,High,Blocked,Record IDS/data governance approval privately.,Data governance reviewer,Requires private review
+REM-016,High,Blocked,Record privacy impact decision privately.,Privacy reviewer,Requires private review

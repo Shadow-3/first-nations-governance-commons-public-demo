@@ -1,0 +1,11 @@
+id,dataClass,statement,publicAction,boundary
+SUM-001,Public safe,The public demo remains fake/sample only.,Can publish,No real records.
+SUM-002,Public safe,Barayamal founder/business owner path is testable with fake records.,Can publish,Do not imply live intake.
+SUM-003,Public safe,First Nations Toastmasters member tester is not an official Toastmasters record system.,Can publish,Do not imply official membership.
+SUM-004,Public safe,Critical blockers remain before real pilot.,Can publish,No private owner names.
+SUM-005,Public safe,Next step is private fake-data sandbox rehearsal.,Can publish,No private URLs or credentials.
+SUM-006,Public safe,Dean/Barayamal advisory review is not approval authority.,Can publish,No private findings.
+SUM-007,Private restricted,Authority meeting evidence.,Do not publish,Private authority record only.
+SUM-008,Private restricted,Privacy and IDS/data governance decisions.,Do not publish,Private review room only.
+SUM-009,Never public,"Official Toastmasters records, member numbers, payments, signatures.",Never publish,External official route.
+SUM-010,Never public,"Incident, support, access logs, affected-person details.",Never publish,Private safety route only.

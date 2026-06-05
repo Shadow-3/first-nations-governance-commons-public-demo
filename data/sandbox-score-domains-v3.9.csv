@@ -1,0 +1,9 @@
+id,domain,track,score,status,evidence,nextAction
+DOM-001,Governance authority,Cross-track,2,Blocked,Private authority approval still required.,No real pilot until authority record exists privately.
+DOM-002,Fake-data safety,Cross-track,4,Pass,Public package contains sample records only.,Continue redaction scans every release.
+DOM-003,Barayamal founder path,Barayamal,3,Hold,Core flow testable; business-sensitive form wording needs private review.,Remove sensitive fields before real intake.
+DOM-004,Barayamal mentor/advisor path,Barayamal,2,Hold,Advisory boundary visible; mentor conflict route unresolved.,Hold mentor access until private conflict rules pass.
+DOM-005,FN Toastmasters member path,FN Toastmasters,3,Hold,Member welcome and role rehearsal work; official boundary needs owner signoff.,Keep official records external.
+DOM-006,Guest/member boundary,FN Toastmasters,4,Pass,Guest-only access tested with fake records.,Retest after any authorization changes.
+DOM-007,Support and incident pause,Cross-track,1,Blocked,Support route remains private and not yet rehearsed fully.,Do not open real pilot until pause path is approved.
+DOM-008,Technical evidence and revoke,Cross-track,3,Hold,Release and mobile QA pass; private admin revoke proof still needed.,Run revoke proof in private sandbox.

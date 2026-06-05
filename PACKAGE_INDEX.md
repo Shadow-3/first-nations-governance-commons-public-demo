@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v3.8  
+Version: v3.9  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -153,9 +153,29 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
 
+## v3.9 Sandbox Rehearsal Scorecard Additions
+
+- `sandbox-rehearsal-scorecard.html` - public-safe scorecard for fake-data rehearsal results, blockers, remediations, decisions, rollout tasks, and summary boundaries.
+- `docs/sandbox-rehearsal-scorecard-playbook-v3.9.md`
+- `docs/test-results-and-score-method-v3.9.md`
+- `docs/remediation-and-decision-log-v3.9.md`
+- `docs/public-summary-and-private-evidence-boundary-v3.9.md`
+- `docs/public-demo-release-notes-v3.9.md`
+- `data/sandbox-score-domains-v3.9.csv`
+- `data/sandbox-readiness-scores-v3.9.csv`
+- `data/sandbox-test-results-v3.9.csv`
+- `data/sandbox-blocker-register-v3.9.csv`
+- `data/sandbox-remediation-actions-v3.9.csv`
+- `data/sandbox-decision-options-v3.9.csv`
+- `data/sandbox-rollout-tasks-v3.9.csv`
+- `data/sandbox-public-summary-v3.9.csv`
+- `data/sandbox-rehearsal-scorecard-package-v3.9.json`
+
+
 ## v3.8 Controlled Sandbox Test Lab Additions
 
 - `controlled-sandbox-test-lab.html` - public-safe fake-data lab for accounts, scripts, observer notes, issues, gates, and evidence.
+- `sandbox-rehearsal-scorecard.html` is the public Sandbox Rehearsal Scorecard for pass/hold/blocked results, remediations, decisions, rollout tasks, and public/private summary boundaries.
 - `docs/controlled-sandbox-test-lab-playbook-v3.8.md`
 - `docs/fake-account-and-role-script-v3.8.md`
 - `docs/observer-note-and-issue-triage-guide-v3.8.md`

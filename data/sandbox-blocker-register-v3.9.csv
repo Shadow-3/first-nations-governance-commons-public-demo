@@ -1,0 +1,15 @@
+id,severity,status,blocker,evidence,requiredFix,owner
+BLK-001,Critical,Blocked,Real personal or official records in public package,"No real record detected, but control remains release-critical.",Block release if detected.,Privacy reviewer
+BLK-002,Critical,Blocked,Official Toastmasters route not privately signed off,Public boundary exists; private owner signoff missing.,Hold real member onboarding.,Official-route owner
+BLK-003,Critical,Blocked,Support pause route not privately rehearsed,Public copy exists; private tabletop pending.,Hold real intake.,Safety reviewer
+BLK-004,High,Blocked,Admin revoke not proven in private sandbox,Public demo cannot prove live access removal.,Run revoke proof.,Technical custodian
+BLK-005,High,Blocked,Authority approval evidence not recorded privately,Public package cannot act as authority record.,Schedule authority decision.,Authority chair
+BLK-006,High,Hold,Business owner sensitive field risk,Survey needs privacy/business review.,Remove or move sensitive fields.,Program operator
+BLK-007,High,Hold,Mentor conflict and privacy policy incomplete,Mentor route held.,Draft private mentor policy.,Mentor coordinator
+BLK-008,High,Hold,Backup/restore/delete proof pending,Private technical proof missing.,Run technical proof.,Technical custodian
+BLK-009,Medium,Hold,Sample motion may look official,Non-official decision copy needs strengthening.,Rewrite motion wording.,Club facilitator
+BLK-010,Medium,Hold,Learning survey could become personal evaluation,Aggregate-only rule exists.,Review survey fields.,Learning lead
+BLK-011,Medium,Managed,Observer notes need consistent file naming,Evidence naming now specified.,Apply naming convention.,Review coordinator
+BLK-012,Medium,Managed,Mobile QA must be repeated each release,v3.9 includes screenshot checks.,Keep Browser QA loop.,Frontend custodian
+BLK-013,Low,Managed,Public summary could overstate readiness,Summary wording stays fake-data-only.,Keep hold language.,Comms lead
+BLK-014,Low,Managed,Score interpretation needs plain language,Scorecard explains pass/hold/blocked.,Keep legend in playbook.,Pilot owner

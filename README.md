@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v3.8
+Current package version: v3.9
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -61,6 +61,7 @@ Open `advisory-action-docket.html` to use Advisory Action Docket for owner follo
 Open `decidim-build-blueprint.html` to use Decidim Build Blueprint for spaces, components, permissions, fake seed records, hosting controls, and build acceptance tests.
 Open `two-track-pilot-onboarding.html` to run Barayamal as the organisation onboarding test and First Nations Toastmasters as the controlled member onboarding tester.
 Open `controlled-sandbox-test-lab.html` to run fake accounts, scripts, observer notes, issue triage, gates, and evidence checks before any real private pilot.
+Open `sandbox-rehearsal-scorecard.html` to convert fake-data rehearsal results into pass, hold, blocked, remediation, rollout, and public-summary decisions.
 
 The demo shows:
 
@@ -92,6 +93,21 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v3.9.md`
+- `docs/sandbox-rehearsal-scorecard-playbook-v3.9.md`
+- `docs/test-results-and-score-method-v3.9.md`
+- `docs/remediation-and-decision-log-v3.9.md`
+- `docs/public-summary-and-private-evidence-boundary-v3.9.md`
+- `data/sandbox-score-domains-v3.9.csv`
+- `data/sandbox-readiness-scores-v3.9.csv`
+- `data/sandbox-test-results-v3.9.csv`
+- `data/sandbox-blocker-register-v3.9.csv`
+- `data/sandbox-remediation-actions-v3.9.csv`
+- `data/sandbox-decision-options-v3.9.csv`
+- `data/sandbox-rollout-tasks-v3.9.csv`
+- `data/sandbox-public-summary-v3.9.csv`
+- `data/sandbox-rehearsal-scorecard-package-v3.9.json`
+
 - `docs/public-demo-release-notes-v3.8.md`
 - `docs/controlled-sandbox-test-lab-playbook-v3.8.md`
 - `docs/fake-account-and-role-script-v3.8.md`
@@ -855,6 +871,17 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v3.9 Sandbox Rehearsal Scorecard Upgrade
+
+The v3.9 package adds a decision-ready scorecard layer:
+
+- Eight score domains, sixteen readiness score rows, and eighteen test result rows.
+- Fourteen blockers, sixteen remediation actions, ten decision options, twelve rollout tasks, and ten public-summary boundary rows.
+- A stronger public/private split so the demo can summarize learning without becoming an authority, privacy, IDS/data governance, official Toastmasters, support, or incident evidence store.
+
+Use this version to decide what passed, what remains on hold, what is blocked, and what must be fixed before any real private pilot.
+
 
 ## v3.8 Controlled Sandbox Test Lab Upgrade
 

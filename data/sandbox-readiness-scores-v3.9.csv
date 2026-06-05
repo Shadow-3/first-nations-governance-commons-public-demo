@@ -1,0 +1,17 @@
+id,track,criterion,status,score,evidence,nextAction
+SCO-001,Barayamal,Founder interest flow,Pass,4,Fake founder can submit interest and proposal.,Keep public copy clearly fake-data only.
+SCO-002,Barayamal,Business owner survey,Hold,3,Survey works but must avoid commercial sensitivity.,Review fields with privacy/business support owner.
+SCO-003,Barayamal,Yarning meeting summary,Pass,4,Minutes can publish without identities.,Retain offline/private note rule.
+SCO-004,Barayamal,Mentor role access,Hold,2,Mentor pathway is held until conflicts and privacy rules pass.,Create private mentor access policy.
+SCO-005,Barayamal,Partner observer least privilege,Pass,4,Observer can be limited to public-safe updates.,Retest export restrictions in private sandbox.
+SCO-006,Barayamal,Dean advisory boundary,Pass,4,Advisory review separated from approval.,Keep boundary in all reviewer materials.
+SCO-007,Barayamal,Founder follow-up closeout,Hold,3,Public status can close; private evidence route not proven.,Keep evidence private and version-labelled.
+SCO-008,FN Toastmasters,Member welcome path,Pass,4,Welcome path shows official boundary.,Ask official-route owner to review boundary copy privately.
+SCO-009,FN Toastmasters,Guest path,Pass,4,Guest path remains guest-only.,Retest after role changes.
+SCO-010,FN Toastmasters,Meeting role agenda,Pass,4,Agenda can use fake roles and public-safe minutes.,Keep real evaluations out.
+SCO-011,FN Toastmasters,Learning survey,Hold,3,Aggregate survey shape works.,Confirm no personal evaluation fields in private build.
+SCO-012,FN Toastmasters,Official record exclusion,Blocked,1,"Boundary written, but official owner signoff is not recorded.",No real member data until external-route owner signs off privately.
+SCO-013,Cross-track,Support pause route,Blocked,1,Support tabletop not complete.,Run private pause tabletop.
+SCO-014,Cross-track,Admin revoke,Blocked,1,Public demo cannot prove private admin revocation.,Run private admin revoke proof.
+SCO-015,Cross-track,Redaction scan,Pass,4,Public package remains fake/sample only.,Continue release scan.
+SCO-016,Cross-track,Backup/export/delete proof,Hold,2,Public plan exists; private proof pending.,Complete backup/restore/delete in private environment.

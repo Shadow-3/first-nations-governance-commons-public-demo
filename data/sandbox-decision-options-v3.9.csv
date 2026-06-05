@@ -1,0 +1,11 @@
+id,option,status,rule,implication
+DEC-001,Go,Not available,Real pilot can proceed only after blocked critical/high items close privately.,Currently blocked.
+DEC-002,Hold,Recommended,Continue fake-data rehearsal while private approvals and proofs are completed.,Best current decision.
+DEC-003,No-go,Available,"Stop real pilot if authority, privacy, IDS, support, or official-route owner declines.",Use if private approvals fail.
+DEC-004,Second rehearsal,Recommended,Repeat scripts after remediations and before real invites.,Use after REM-001 to REM-009.
+DEC-005,Archive public demo,Available,Archive as public concept if private pilot is paused long-term.,Keep fake-data package only.
+DEC-006,Barayamal-only rehearsal,Available,Continue Barayamal path while Toastmasters official route remains blocked.,Only with private boundary approval.
+DEC-007,Toastmasters-only rehearsal,Hold,Continue member tester only if official route owner reviews boundary.,Not ready yet.
+DEC-008,Provider handoff,Hold,"Give provider the scorecard and blockers, not private evidence.",After private data rules pass.
+DEC-009,Private sandbox build,Recommended,Configure a private fake-data Decidim sandbox and rerun required scripts.,Next practical build action.
+DEC-010,Public update,Available,Publish only aggregate fake-data learning and next-step caveats.,Use public summary pack.

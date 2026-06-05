@@ -1,0 +1,13 @@
+id,lane,status,task,owner
+ROL-001,Private setup,Next,Create private fake-data Decidim sandbox spaces for Barayamal and FN Toastmasters.,Technical custodian
+ROL-002,Private setup,Next,Create sample accounts from v3.8 matrix.,Technical custodian
+ROL-003,Privacy,Next,Review business owner and learning survey fields.,Privacy reviewer
+ROL-004,Governance,Next,Hold private authority review of scorecard and blockers.,Authority chair
+ROL-005,IDS/data governance,Blocked,Record Indigenous Data Sovereignty/data governance approval privately.,Data governance reviewer
+ROL-006,Official route,Blocked,Confirm official Toastmasters data remains external.,Official-route owner
+ROL-007,Safety,Next,Run support pause tabletop.,Safety reviewer
+ROL-008,Technical,Next,Run admin revoke proof.,Technical custodian
+ROL-009,Technical,Hold,Run backup/export/delete/restore proof.,Technical custodian
+ROL-010,Rehearsal,Next,Repeat required scripts and update scorecard.,Pilot owner
+ROL-011,Comms,Hold,Draft public-safe learning update.,Comms lead
+ROL-012,Decision,Hold,"Choose go, hold, no-go, archive, or second rehearsal.",Authority chair
