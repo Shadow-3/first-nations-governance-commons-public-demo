@@ -1,0 +1,917 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>Sandbox Build Pack - First Nations Governance Commons</title>
+  <meta name="description" content="Fake-data Decidim sandbox build pack for Barayamal, providers, and partner-hosted delivery teams.">
+  <style>
+    :root {
+      --bg: #f6f7f5;
+      --surface: #ffffff;
+      --surface-2: #eef3ef;
+      --text: #1d2523;
+      --muted: #61706b;
+      --line: #d9e0dc;
+      --teal: #0d675f;
+      --teal-2: #e5f1ee;
+      --ochre: #b66a25;
+      --ochre-2: #fff2e5;
+      --green: #247654;
+      --green-2: #e7f4ed;
+      --red: #aa3d36;
+      --red-2: #fae9e7;
+      --amber: #8b691d;
+      --amber-2: #fff6d9;
+      --blue: #205d9b;
+      --blue-2: #e7f0fa;
+      --radius: 6px;
+      --shadow: 0 14px 36px rgba(18, 33, 29, 0.08);
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.45;
+    }
+
+    a { color: inherit; }
+
+    button,
+    select { font: inherit; }
+
+    button { cursor: pointer; }
+
+    .topbar {
+      min-height: 72px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .brand {
+      display: flex;
+      flex: 1 1 230px;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius);
+      background: var(--teal);
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .brand strong,
+    .brand span {
+      display: block;
+    }
+
+    .brand strong {
+      font-size: 15px;
+      line-height: 1.1;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .label {
+      width: fit-content;
+      color: var(--ochre);
+      background: var(--ochre-2);
+      border: 1px solid #f1d7b9;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .btn,
+    .filter {
+      min-height: 38px;
+      border-radius: var(--radius);
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
+
+    .btn.primary,
+    .filter.is-active {
+      background: var(--teal);
+      color: #fff;
+      border-color: var(--teal);
+    }
+
+    main {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 28px 24px 44px;
+      display: grid;
+      gap: 22px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: end;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    h2,
+    h3 {
+      margin: 0;
+      letter-spacing: 0;
+    }
+
+    .intro p,
+    .metric span,
+    .path-card p,
+    .env-card span,
+    .run-card p,
+    .test-card p,
+    .resource span,
+    .summary {
+      color: var(--muted);
+    }
+
+    .intro p {
+      max-width: 940px;
+      margin: 12px 0 0;
+      font-size: 15px;
+    }
+
+    .actions,
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .metric,
+    .panel,
+    .path-card,
+    .env-card,
+    .run-card,
+    .test-card,
+    .resource {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .metric {
+      min-height: 112px;
+      padding: 16px;
+      display: grid;
+      align-content: space-between;
+      gap: 10px;
+    }
+
+    .metric strong {
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .metric span {
+      font-size: 13px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .section-head h2 {
+      font-size: 22px;
+      line-height: 1.1;
+    }
+
+    .section-head p {
+      margin: 6px 0 0;
+      color: var(--muted);
+    }
+
+    .build-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .path-grid,
+    .env-grid,
+    .run-grid,
+    .test-grid,
+    .resource-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .path-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .env-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .run-grid,
+    .test-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .resource-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .panel {
+      padding: 18px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .path-card,
+    .env-card,
+    .run-card,
+    .test-card,
+    .resource {
+      padding: 14px;
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+
+    .path-card {
+      min-height: 236px;
+      border: 2px solid var(--line);
+    }
+
+    .path-card.is-selected {
+      border-color: var(--teal);
+      background: #fbfffd;
+    }
+
+    .env-card {
+      min-height: 136px;
+    }
+
+    .run-card {
+      min-height: 188px;
+    }
+
+    .test-card {
+      min-height: 158px;
+    }
+
+    .resource {
+      min-height: 118px;
+      text-decoration: none;
+    }
+
+    .path-top,
+    .env-top,
+    .run-top,
+    .test-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .path-card h3,
+    .env-card h3,
+    .run-card h3,
+    .test-card h3 {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    .path-card p,
+    .run-card p,
+    .test-card p {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .kv-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .kv {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 10px;
+      display: grid;
+      gap: 4px;
+      background: #fbfcfb;
+    }
+
+    .kv strong {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .kv span {
+      overflow-wrap: anywhere;
+      font-size: 13px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 26px;
+      padding: 5px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .pill.ready { color: var(--green); background: var(--green-2); }
+    .pill.hold { color: var(--amber); background: var(--amber-2); }
+    .pill.blocked { color: var(--red); background: var(--red-2); }
+    .pill.info { color: var(--blue); background: var(--blue-2); }
+
+    label {
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    select {
+      min-height: 38px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text);
+      padding: 8px 10px;
+    }
+
+    .brief,
+    .commands {
+      margin: 0;
+      overflow: auto;
+      white-space: pre-wrap;
+      border-radius: var(--radius);
+      padding: 16px;
+      font-family: var(--mono);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .brief {
+      min-height: 420px;
+      max-height: 560px;
+      background: #17211f;
+      color: #edf7f2;
+    }
+
+    .commands {
+      min-height: 260px;
+      max-height: 420px;
+      background: #fffdfa;
+      color: #2d251a;
+      border: 1px solid #ead8bd;
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 12px;
+      padding-top: 6px;
+    }
+
+    @media (max-width: 1120px) {
+      .build-grid,
+      .intro {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics,
+      .path-grid,
+      .resource-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar,
+      main {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .metrics,
+      .path-grid,
+      .env-grid,
+      .run-grid,
+      .test-grid,
+      .resource-grid,
+      .kv-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .btn,
+      .filter {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">B</div>
+      <div>
+        <strong>Sandbox Build Pack</strong>
+        <span>First Nations Governance Commons</span>
+      </div>
+    </div>
+    <a class="btn" href="index.html">Public Demo</a>
+    <a class="btn" href="sandbox-launcher.html">Sandbox Launcher</a>
+    <a class="btn" href="seed-studio.html">Seed Studio</a>
+    <a class="btn primary" href="sandbox-build-pack.html">Build Pack</a>
+    <a class="btn primary" href="document.html?file=docs%2Fdecidim-sandbox-build-pack-v2.2.md">Build Pack</a>
+    <div class="label">Fake sandbox build only</div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <h1>Decidim Sandbox Build Pack</h1>
+        <p>Turn the static public demo, Sandbox Launcher, and Seed Studio into a provider/self-build handoff for a fake-data Decidim sandbox. This page records what is ready, what is blocked, the safest build path, and the evidence required before handover.</p>
+      </div>
+      <div class="actions">
+        <a class="btn" href="document.html?file=data%2Fdecidim-build-package-v2.2.json">Build JSON</a>
+        <button class="btn primary" id="downloadBrief" type="button">Download Brief</button>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Build pack metrics">
+      <article class="metric">
+        <strong id="readyMetric">0</strong>
+        <span>Ready environment checks</span>
+      </article>
+      <article class="metric">
+        <strong id="holdMetric">0</strong>
+        <span>Hold checks</span>
+      </article>
+      <article class="metric">
+        <strong id="blockedMetric">0</strong>
+        <span>Blocked checks</span>
+      </article>
+      <article class="metric">
+        <strong id="testMetric">0</strong>
+        <span>Acceptance tests</span>
+      </article>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Build Path</h2>
+          <p>Provider-assisted remains the practical path until the self-build prerequisites are installed and aligned.</p>
+        </div>
+      </div>
+      <div class="build-grid">
+        <div class="path-grid" id="pathGrid"></div>
+        <aside class="panel" aria-live="polite">
+          <div class="path-top">
+            <div>
+              <h2 id="selectedTitle"></h2>
+              <p id="selectedSummary" class="summary"></p>
+            </div>
+            <span class="pill ready" id="selectedStatus"></span>
+          </div>
+          <div class="kv-grid">
+            <div class="kv"><strong>Owner</strong><span id="selectedOwner"></span></div>
+            <div class="kv"><strong>Timeline</strong><span id="selectedTimeline"></span></div>
+            <div class="kv"><strong>Cost</strong><span id="selectedCost"></span></div>
+            <div class="kv"><strong>Proof</strong><span id="selectedProof"></span></div>
+          </div>
+          <pre class="commands" id="commandBlock"></pre>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Environment Readiness</h2>
+          <p>Current local machine status against the source-backed Decidim build needs.</p>
+        </div>
+      </div>
+      <div class="env-grid" id="environmentGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Runbook</h2>
+          <p>Track the build from host decision through fake seed content, QA, assurance, and handover.</p>
+        </div>
+        <div class="filters" aria-label="Runbook filters">
+          <button class="filter is-active" data-filter="All" type="button">All</button>
+          <button class="filter" data-filter="Environment" type="button">Environment</button>
+          <button class="filter" data-filter="Decidim app" type="button">App</button>
+          <button class="filter" data-filter="Seed and QA" type="button">Seed/QA</button>
+          <button class="filter" data-filter="Handover" type="button">Handover</button>
+        </div>
+      </div>
+      <div class="run-grid" id="runbookGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Acceptance Tests</h2>
+          <p>Minimum checks before the fake-data Decidim sandbox is shown as ready.</p>
+        </div>
+      </div>
+      <div class="test-grid" id="testGrid"></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <h2>Generated Build Brief</h2>
+          <p>Use this handoff text for Barayamal, a provider, or a partner-hosted build team.</p>
+        </div>
+      </div>
+      <pre class="brief" id="buildBrief"></pre>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Build Resources</h2>
+          <p>Open the files behind this build pack.</p>
+        </div>
+      </div>
+      <div class="resource-grid">
+        <a class="resource" href="document.html?file=docs%2Fdecidim-sandbox-build-pack-v2.2.md"><strong>Build pack playbook</strong><span>Pathway, environment, setup, runbook, evidence, and no-go rules.</span></a>
+        <a class="resource" href="document.html?file=docs%2Fprovider-self-build-handoff-v2.2.md"><strong>Provider/self-build handoff</strong><span>Information a provider or Barayamal self-build needs before starting.</span></a>
+        <a class="resource" href="document.html?file=data%2Fdecidim-build-environment-check-v2.2.csv"><strong>Environment checks</strong><span>Current machine readiness against Decidim build needs.</span></a>
+        <a class="resource" href="document.html?file=data%2Fdecidim-build-runbook-v2.2.csv"><strong>Build runbook CSV</strong><span>Step-by-step build tasks, owners, evidence, and status.</span></a>
+        <a class="resource" href="document.html?file=data%2Fdecidim-provider-handoff-v2.2.csv"><strong>Provider handoff CSV</strong><span>Inputs, outputs, and proof for external or partner-assisted build.</span></a>
+        <a class="resource" href="document.html?file=data%2Fdecidim-build-acceptance-tests-v2.2.csv"><strong>Acceptance tests</strong><span>Functional, safety, mobile, evidence, and handover tests.</span></a>
+        <a class="resource" href="document.html?file=data%2Fdecidim-build-package-v2.2.json"><strong>Build package JSON</strong><span>Machine-readable build package summary and blockers.</span></a>
+        <a class="resource" href="document.html?file=docs%2Fpublic-demo-release-notes-v2.2.md"><strong>Release notes v2.2</strong><span>What changed in the build pack upgrade.</span></a>
+      </div>
+    </section>
+
+    <footer>
+      Version v2.2. Initial developer/custodian: Barayamal / Dean Foley. Fake-data Decidim sandbox build only.
+    </footer>
+  </main>
+
+  <script>
+    const paths = [
+      {
+        id: "provider",
+        name: "Provider-assisted build",
+        status: "Recommended",
+        owner: "Decidim-capable provider with Barayamal oversight",
+        timeline: "1-3 weeks after quote and access",
+        cost: "Medium",
+        summary: "Best immediate path because this machine is missing core Decidim prerequisites.",
+        proof: "Provider quote, version pins, fake-data seed evidence, screenshots, support path, and assurance memo.",
+        commands: [
+          "# Provider handoff sequence",
+          "1. Confirm selected Decidim version and hosting path.",
+          "2. Share v2.2 Build Pack, v2.1 Seed Studio, and v2.0 Sandbox Launcher.",
+          "3. Provider prepares Decidim-capable environment.",
+          "4. Provider creates fake-data sandbox and admin accounts.",
+          "5. Seed Governance Commons Assembly and Community Priorities And Budget 2026.",
+          "6. Capture acceptance evidence and run Assurance Room."
+        ]
+      },
+      {
+        id: "self",
+        name: "Barayamal self-build",
+        status: "Blocked",
+        owner: "Barayamal / Dean Foley",
+        timeline: "2-5 weeks after prerequisites",
+        cost: "Lower cash, higher setup time",
+        summary: "Useful for learning and long-term maintainership, but blocked locally until Ruby, Bundler, PostgreSQL, image tools, and runtime alignment are resolved.",
+        proof: "Working Decidim app, version pins, local README, admin access record, seeded fake data, tests, and screenshots.",
+        commands: [
+          "# Self-build checkpoint sequence",
+          "1. Prepare a Linux/WSL2 or hosted Linux environment.",
+          "2. Install Git, PostgreSQL, compatible Ruby, Node, npm, ImageMagick, LibVips, and browser test tooling.",
+          "3. Create a new Decidim app using official Decidim docs for the selected version.",
+          "4. Configure database, secrets, mail, background jobs, and storage.",
+          "5. Seed only fake/sample content from Seed Studio.",
+          "6. Run build acceptance tests before public handover."
+        ]
+      },
+      {
+        id: "partner",
+        name: "Partner-hosted build",
+        status: "Hold",
+        owner: "Trusted partner plus Barayamal maintainer",
+        timeline: "2-4 weeks after partner agreement",
+        cost: "Medium",
+        summary: "Works if a partner can provide infrastructure and support, but role boundaries and admin control need extra sign-off.",
+        proof: "Partner role note, admin owner, backup owner, hosting owner, privacy note, support path, and assurance sign-off.",
+        commands: [
+          "# Partner-hosted checkpoint sequence",
+          "1. Confirm partner role, hosting owner, and admin access rules.",
+          "2. Keep Barayamal as initial developer/custodian in public language.",
+          "3. Use v2.2 acceptance tests and v2.1 fake seed package.",
+          "4. Confirm export, backup, support, and handover path.",
+          "5. Run Assurance Room before public handover."
+        ]
+      }
+    ];
+
+    const environment = [
+      { tool: "Git", status: "Ready", detail: "Git 2.53.0 detected. Official Decidim manual install expects Git 2.34+." },
+      { tool: "GitHub CLI", status: "Hold", detail: "Logged in as Shadow-3 with gist, read:org, repo, workflow scopes; project scope is missing." },
+      { tool: "Ruby", status: "Blocked", detail: "Ruby was not detected. Decidim v0.31 docs list Ruby 3.3.4 in the compatibility table." },
+      { tool: "Bundler", status: "Blocked", detail: "Bundler was not detected. Needed for Ruby dependency installation." },
+      { tool: "PostgreSQL client", status: "Blocked", detail: "psql was not detected. Official Decidim manual install includes PostgreSQL setup." },
+      { tool: "Node/npm", status: "Hold", detail: "Node v24.14.0 and npm 11.9.0 detected; Decidim v0.31 docs list Node 22.14.x and npm 10.9.x." },
+      { tool: "Docker", status: "Hold", detail: "Docker was not detected. Docker remains an option for Docker-capable hosting paths." },
+      { tool: "ImageMagick", status: "Blocked", detail: "ImageMagick was not detected. Official Decidim manual install lists ImageMagick." },
+      { tool: "LibVips", status: "Blocked", detail: "LibVips was not detected. Official Decidim manual install lists LibVips." },
+      { tool: "Browser test tooling", status: "Hold", detail: "Chromium/CDP QA is available in this Codex workspace, but no Decidim project test dependency is installed yet." },
+      { tool: "Decidim app", status: "Blocked", detail: "No real Decidim app is created in this package; v2.2 is a build handoff and QA pack." },
+      { tool: "Fake seed package", status: "Ready", detail: "v2.1 Seed Studio package is complete and ready to use after a real Decidim app exists." }
+    ];
+
+    const runbook = [
+      { id: "B-001", stream: "Environment", title: "Choose build path", status: "Ready", owner: "Barayamal", evidence: "Sandbox Launcher pathway decision" },
+      { id: "B-002", stream: "Environment", title: "Choose Decidim version and host", status: "Hold", owner: "Developer/provider", evidence: "Version pins and host decision note" },
+      { id: "B-003", stream: "Environment", title: "Prepare Linux or hosted runtime", status: "Blocked", owner: "Developer/provider", evidence: "Git, Ruby, Bundler, PostgreSQL, Node/npm, image tools ready" },
+      { id: "B-004", stream: "Environment", title: "Resolve GitHub project scope if needed", status: "Hold", owner: "Maintainer", evidence: "GitHub Project or fallback board decision" },
+      { id: "B-005", stream: "Decidim app", title: "Create Decidim application", status: "Blocked", owner: "Developer/provider", evidence: "App repository, version pins, boot screenshot" },
+      { id: "B-006", stream: "Decidim app", title: "Configure database and secrets", status: "Blocked", owner: "Developer/provider", evidence: "Database connection, credentials handling, environment notes" },
+      { id: "B-007", stream: "Decidim app", title: "Configure mail and background jobs", status: "Hold", owner: "Developer/provider", evidence: "SMTP note and job runner note" },
+      { id: "B-008", stream: "Decidim app", title: "Create organisation shell", status: "Hold", owner: "Decidim admin", evidence: "Public homepage and admin settings screenshots" },
+      { id: "B-009", stream: "Seed and QA", title: "Seed Governance Commons Assembly", status: "Hold", owner: "Decidim admin", evidence: "Assembly components and public language screenshots" },
+      { id: "B-010", stream: "Seed and QA", title: "Seed Community Priorities process", status: "Hold", owner: "Decidim admin", evidence: "Process phases and components screenshots" },
+      { id: "B-011", stream: "Seed and QA", title: "Seed fake records only", status: "Hold", owner: "Seed reviewer", evidence: "Seed Studio register and safety review" },
+      { id: "B-012", stream: "Seed and QA", title: "Run admin and public QA", status: "Hold", owner: "QA reviewer", evidence: "Acceptance tests, desktop/mobile screenshots, console health" },
+      { id: "B-013", stream: "Handover", title: "Create backup and support plan", status: "Hold", owner: "Developer/provider", evidence: "Backup owner, support window, escalation path" },
+      { id: "B-014", stream: "Handover", title: "Capture handover evidence pack", status: "Hold", owner: "Barayamal", evidence: "Screenshots, limitations, known blockers, admin guide" },
+      { id: "B-015", stream: "Handover", title: "Run Assurance Room", status: "Hold", owner: "Assurance team", evidence: "No-go checks clear or explicit hold decision" },
+      { id: "B-016", stream: "Handover", title: "Complete fake sandbox handover", status: "Hold", owner: "Barayamal", evidence: "Signed handover memo and public boundary statement" }
+    ];
+
+    const acceptanceTests = [
+      { id: "AT-001", area: "Boot", title: "App boots on selected host", priority: "Critical", evidence: "Public URL and admin URL screenshots" },
+      { id: "AT-002", area: "Safety", title: "No real data appears", priority: "Critical", evidence: "Fake-data boundary audit" },
+      { id: "AT-003", area: "Organisation", title: "Organisation shell configured", priority: "High", evidence: "Admin settings and homepage screenshots" },
+      { id: "AT-004", area: "Assembly", title: "Governance Commons Assembly exists", priority: "High", evidence: "Assembly public page screenshot" },
+      { id: "AT-005", area: "Process", title: "Community Priorities process exists", priority: "High", evidence: "Process phases screenshot" },
+      { id: "AT-006", area: "Components", title: "Required components configured", priority: "High", evidence: "Components list screenshot" },
+      { id: "AT-007", area: "Seed", title: "Fake records mapped and reviewed", priority: "High", evidence: "Seed register and component records screenshots" },
+      { id: "AT-008", area: "Voting", title: "Voting/supports cannot be mistaken as real", priority: "Critical", evidence: "Settings screenshot and public language check" },
+      { id: "AT-009", area: "Mobile", title: "Public path works on mobile", priority: "High", evidence: "390 px viewport screenshots" },
+      { id: "AT-010", area: "Accessibility", title: "Keyboard and contrast smoke check complete", priority: "High", evidence: "QA note and screenshots" },
+      { id: "AT-011", area: "Admin", title: "Admin account owner and backup recorded", priority: "Critical", evidence: "Access record stored outside public demo" },
+      { id: "AT-012", area: "Operations", title: "Mail/background/backup notes recorded", priority: "High", evidence: "Ops note and support path" },
+      { id: "AT-013", area: "Evidence", title: "Screenshots and version pins captured", priority: "High", evidence: "Evidence pack folder or issue links" },
+      { id: "AT-014", area: "Assurance", title: "Assurance gates complete", priority: "Critical", evidence: "Assurance Room memo" }
+    ];
+
+    let activePath = "provider";
+    let activeFilter = "All";
+
+    function tone(status) {
+      if (status === "Ready" || status === "Recommended") return "ready";
+      if (status === "Blocked" || status === "Critical") return "blocked";
+      if (status === "High") return "info";
+      return "hold";
+    }
+
+    function renderPaths() {
+      document.getElementById("pathGrid").innerHTML = paths.map(path => `
+        <article class="path-card ${path.id === activePath ? "is-selected" : ""}">
+          <div class="path-top">
+            <h3>${path.name}</h3>
+            <span class="pill ${tone(path.status)}">${path.status}</span>
+          </div>
+          <p>${path.summary}</p>
+          <div class="kv"><strong>Timeline</strong><span>${path.timeline}</span></div>
+          <div class="kv"><strong>Proof</strong><span>${path.proof}</span></div>
+          <button class="btn ${path.id === activePath ? "primary" : ""}" data-path="${path.id}" type="button">Select Path</button>
+        </article>
+      `).join("");
+      document.querySelectorAll("[data-path]").forEach(button => {
+        button.addEventListener("click", () => {
+          activePath = button.dataset.path;
+          renderAll();
+        });
+      });
+    }
+
+    function renderSelectedPath() {
+      const selected = paths.find(item => item.id === activePath);
+      document.getElementById("selectedTitle").textContent = selected.name;
+      document.getElementById("selectedSummary").textContent = selected.summary;
+      document.getElementById("selectedStatus").textContent = selected.status;
+      document.getElementById("selectedStatus").className = `pill ${tone(selected.status)}`;
+      document.getElementById("selectedOwner").textContent = selected.owner;
+      document.getElementById("selectedTimeline").textContent = selected.timeline;
+      document.getElementById("selectedCost").textContent = selected.cost;
+      document.getElementById("selectedProof").textContent = selected.proof;
+      document.getElementById("commandBlock").textContent = selected.commands.join("\n");
+    }
+
+    function renderEnvironment() {
+      document.getElementById("environmentGrid").innerHTML = environment.map(item => `
+        <article class="env-card">
+          <div class="env-top">
+            <h3>${item.tool}</h3>
+            <span class="pill ${tone(item.status)}">${item.status}</span>
+          </div>
+          <span>${item.detail}</span>
+        </article>
+      `).join("");
+    }
+
+    function renderRunbook() {
+      const selected = activeFilter === "All" ? runbook : runbook.filter(item => item.stream === activeFilter);
+      document.getElementById("runbookGrid").innerHTML = selected.map(item => {
+        const realIndex = runbook.indexOf(item);
+        return `
+          <article class="run-card">
+            <div class="run-top">
+              <div>
+                <h3>${item.id}: ${item.title}</h3>
+                <p>${item.stream} - ${item.owner}</p>
+              </div>
+              <span class="pill ${tone(item.status)}">${item.status}</span>
+            </div>
+            <p><strong>Evidence:</strong> ${item.evidence}</p>
+            <label>Status
+              <select class="run-select" data-run="${realIndex}" aria-label="Status for ${item.title}">
+                ${["Ready", "Hold", "Blocked"].map(status => `<option value="${status}" ${status === item.status ? "selected" : ""}>${status}</option>`).join("")}
+              </select>
+            </label>
+          </article>
+        `;
+      }).join("");
+      document.querySelectorAll(".run-select").forEach(select => {
+        select.addEventListener("change", event => {
+          runbook[Number(event.target.dataset.run)].status = event.target.value;
+          renderAll();
+        });
+      });
+    }
+
+    function renderTests() {
+      document.getElementById("testGrid").innerHTML = acceptanceTests.map(test => `
+        <article class="test-card">
+          <div class="test-top">
+            <h3>${test.id}: ${test.title}</h3>
+            <span class="pill ${tone(test.priority)}">${test.priority}</span>
+          </div>
+          <p>${test.area}</p>
+          <div class="kv"><strong>Evidence</strong><span>${test.evidence}</span></div>
+        </article>
+      `).join("");
+    }
+
+    function updateMetrics() {
+      document.getElementById("readyMetric").textContent = environment.filter(item => item.status === "Ready").length;
+      document.getElementById("holdMetric").textContent = environment.filter(item => item.status === "Hold").length;
+      document.getElementById("blockedMetric").textContent = environment.filter(item => item.status === "Blocked").length;
+      document.getElementById("testMetric").textContent = acceptanceTests.length;
+    }
+
+    function updateBrief() {
+      const selected = paths.find(item => item.id === activePath);
+      const lines = [
+        "# Decidim Sandbox Build Brief v2.2",
+        "",
+        "Project: First Nations Governance Commons",
+        "Mode: fake-data Decidim sandbox build only",
+        "Initial developer/custodian: Barayamal / Dean Foley",
+        "",
+        "## Selected Build Path",
+        `- Path: ${selected.name}`,
+        `- Status: ${selected.status}`,
+        `- Owner: ${selected.owner}`,
+        `- Timeline: ${selected.timeline}`,
+        `- Cost: ${selected.cost}`,
+        `- Reason: ${selected.summary}`,
+        `- Required proof: ${selected.proof}`,
+        "",
+        "## Current Environment",
+        ...environment.map(item => `- ${item.tool}: ${item.status} - ${item.detail}`),
+        "",
+        "## Build Runbook",
+        ...runbook.map(item => `- ${item.id}: ${item.title} - ${item.status} (${item.owner})`),
+        "",
+        "## Acceptance Tests",
+        ...acceptanceTests.map(test => `- ${test.id}: ${test.title} - ${test.priority}. Evidence: ${test.evidence}`),
+        "",
+        "## Non-Negotiable Boundary",
+        "No real community records, member lists, cultural material, eligibility data, voting data, youth records, personal service cases, private contact records, or real decision outcomes are allowed.",
+        "",
+        "## Recommended Next Action",
+        "Use provider-assisted build unless self-build prerequisites are installed and verified. Seed only the Governance Commons Assembly and Community Priorities And Budget 2026 first, then run Ops Room and Assurance Room before handover."
+      ];
+      document.getElementById("buildBrief").textContent = lines.join("\n");
+    }
+
+    function downloadBrief() {
+      const blob = new Blob([document.getElementById("buildBrief").textContent], { type: "text/markdown" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "decidim-sandbox-build-brief-v2.2.md";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    function renderAll() {
+      renderPaths();
+      renderSelectedPath();
+      renderEnvironment();
+      renderRunbook();
+      renderTests();
+      updateMetrics();
+      updateBrief();
+    }
+
+    document.querySelectorAll("[data-filter]").forEach(button => {
+      button.addEventListener("click", () => {
+        activeFilter = button.dataset.filter;
+        document.querySelectorAll("[data-filter]").forEach(item => item.classList.remove("is-active"));
+        button.classList.add("is-active");
+        renderRunbook();
+      });
+    });
+
+    document.getElementById("downloadBrief").addEventListener("click", downloadBrief);
+    renderAll();
+  </script>
+</body>
+</html>

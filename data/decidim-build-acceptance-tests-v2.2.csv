@@ -1,0 +1,15 @@
+test_id,area,priority,title,expected_result,evidence_required
+AT-001,Boot,Critical,App boots on selected host,Public URL and admin URL load without runtime error,Public and admin screenshots
+AT-002,Safety,Critical,No real data appears,No real records member lists cultural material votes youth records service cases or outcomes,Fake-data boundary audit
+AT-003,Organisation,High,Organisation shell configured,First Nations Governance Commons shell visible with fake-data boundary,Admin settings and homepage screenshots
+AT-004,Assembly,High,Governance Commons Assembly exists,Assembly public page exists and has reviewed public copy,Assembly public page screenshot
+AT-005,Process,High,Community Priorities process exists,Process phases are visible and named,Process phases screenshot
+AT-006,Components,High,Required components configured,Page Meetings Survey Proposals Budgets and Accountability are configured or explicitly held,Components list screenshot
+AT-007,Seed,High,Fake records mapped and reviewed,Seed Studio records are used and no unreviewed records are added,Seed register and component screenshots
+AT-008,Voting,Critical,Voting and supports cannot be mistaken as real,Settings and public language prevent real mandate interpretation,Settings screenshot and public language check
+AT-009,Mobile,High,Public path works on mobile,Public home assembly process and key component pages fit 390 px viewport,Mobile screenshots
+AT-010,Accessibility,High,Keyboard and contrast smoke check complete,Primary public paths are keyboard reachable and readable,QA note and screenshots
+AT-011,Admin,Critical,Admin account owner and backup recorded,Owner backup owner recovery and support path are documented,Private access record reference
+AT-012,Operations,High,Mail background and backup notes recorded,SMTP/background/backup decisions are documented,Ops handover note
+AT-013,Evidence,High,Screenshots and version pins captured,Version pins and evidence screenshots are stored,Build evidence pack
+AT-014,Assurance,Critical,Assurance gates complete,Assurance Room passes or records explicit hold/no-go,Assurance Room memo

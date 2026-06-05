@@ -1,0 +1,17 @@
+step_id,stream,title,status,owner,evidence,stop_condition
+B-001,Environment,Choose build path,Ready,Barayamal,Sandbox Launcher pathway decision,No path decision
+B-002,Environment,Choose Decidim version and host,Hold,Developer/provider,Version pins and host decision note,No version or host owner
+B-003,Environment,Prepare Linux or hosted runtime,Blocked,Developer/provider,Git Ruby Bundler PostgreSQL Node/npm image tools ready,Prerequisites missing
+B-004,Environment,Resolve GitHub project scope if needed,Hold,Maintainer,GitHub Project or fallback board decision,Need native Project but scope missing
+B-005,Decidim app,Create Decidim application,Blocked,Developer/provider,App repository version pins boot screenshot,No working app
+B-006,Decidim app,Configure database and secrets,Blocked,Developer/provider,Database connection credentials handling environment notes,No database or secrets plan
+B-007,Decidim app,Configure mail and background jobs,Hold,Developer/provider,SMTP note and job runner note,No mail/background decision
+B-008,Decidim app,Create organisation shell,Hold,Decidim admin,Public homepage and admin settings screenshots,No organisation shell
+B-009,Seed and QA,Seed Governance Commons Assembly,Hold,Decidim admin,Assembly components and public language screenshots,No assembly
+B-010,Seed and QA,Seed Community Priorities process,Hold,Decidim admin,Process phases and components screenshots,No process
+B-011,Seed and QA,Seed fake records only,Hold,Seed reviewer,Seed Studio register and safety review,Real or unreviewed records appear
+B-012,Seed and QA,Run admin and public QA,Hold,QA reviewer,Acceptance tests desktop/mobile screenshots console health,Failed critical acceptance test
+B-013,Handover,Create backup and support plan,Hold,Developer/provider,Backup owner support window escalation path,No backup/support owner
+B-014,Handover,Capture handover evidence pack,Hold,Barayamal,Screenshots limitations known blockers admin guide,No evidence pack
+B-015,Handover,Run Assurance Room,Hold,Assurance team,No-go checks clear or explicit hold decision,No assurance sign-off
+B-016,Handover,Complete fake sandbox handover,Hold,Barayamal,Signed handover memo and public boundary statement,Any no-go trigger remains

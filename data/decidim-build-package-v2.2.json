@@ -1,0 +1,45 @@
+{
+  "package": "Decidim Sandbox Build Pack",
+  "version": "2.2",
+  "date": "2026-06-05",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "mode": "fake_data_decidim_sandbox_build_handoff_only",
+  "recommendation": "Use provider-assisted build unless the Barayamal self-build environment is prepared first.",
+  "currentLocalStatus": {
+    "git": "ready: git 2.53.0 detected",
+    "githubCli": "hold: authenticated as Shadow-3 but project scope missing",
+    "ruby": "blocked: not detected",
+    "bundler": "blocked: not detected",
+    "postgresqlClient": "blocked: psql not detected",
+    "node": "hold: v24.14.0 detected; Decidim v0.31 docs list Node 22.14.x",
+    "npm": "hold: 11.9.0 detected; Decidim v0.31 docs list npm 10.9.x",
+    "docker": "hold: not detected",
+    "imagemagick": "blocked: not detected",
+    "libvips": "blocked: not detected",
+    "decidimApp": "blocked: not created"
+  },
+  "counts": {
+    "environmentChecks": 12,
+    "runbookSteps": 16,
+    "providerHandoffItems": 12,
+    "acceptanceTests": 14,
+    "criticalAcceptanceTests": 4
+  },
+  "files": {
+    "entrypoint": "sandbox-build-pack.html",
+    "buildPack": "docs/decidim-sandbox-build-pack-v2.2.md",
+    "handoff": "docs/provider-self-build-handoff-v2.2.md",
+    "environmentChecks": "data/decidim-build-environment-check-v2.2.csv",
+    "runbook": "data/decidim-build-runbook-v2.2.csv",
+    "providerHandoff": "data/decidim-provider-handoff-v2.2.csv",
+    "acceptanceTests": "data/decidim-build-acceptance-tests-v2.2.csv"
+  },
+  "sourceAnchors": [
+    "https://docs.decidim.org/en/develop/install/manual.html",
+    "https://docs.decidim.org/en/develop/install/index.html",
+    "https://docs.decidim.org/en/develop/develop/deploy.html",
+    "https://docs.decidim.org/en/develop/admin/spaces.html",
+    "https://docs.decidim.org/en/develop/admin/components.html"
+  ],
+  "safetyRule": "No real community records, member lists, cultural material, eligibility data, voting data, youth records, personal service cases, private contact records, or real decision outcomes are allowed."
+}

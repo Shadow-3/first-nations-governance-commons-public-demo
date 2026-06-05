@@ -1,0 +1,13 @@
+check_id,tool,status,current_state,required_or_target,evidence,next_action
+E-001,Git,Ready,Git 2.53.0 detected,Official manual install lists Git 2.34+,Local command check,No action
+E-002,GitHub CLI,Hold,Logged in as Shadow-3 without project scope,Project scope needed only for native GitHub Project board,gh auth status,Refresh scope if native Project board is required
+E-003,Ruby,Blocked,Not detected,Decidim v0.31 docs list Ruby 3.3.4,Local command check,Install compatible Ruby in Linux/WSL2 or hosted environment
+E-004,Bundler,Blocked,Not detected,Needed for Ruby dependency installation,Local command check,Install Bundler after Ruby
+E-005,PostgreSQL client,Blocked,psql not detected,Official manual install includes PostgreSQL setup,Local command check,Install PostgreSQL client/server or use hosted PostgreSQL
+E-006,Node/npm,Hold,Node v24.14.0 and npm 11.9.0 detected,Decidim v0.31 docs list Node 22.14.x and npm 10.9.x,Local command check,Align Node/npm with selected Decidim version
+E-007,Docker,Hold,Not detected,Docker optional for Docker-capable deployment path,Local command check,Install only if Docker path selected
+E-008,ImageMagick,Blocked,Not detected,Official manual install lists ImageMagick,Local command check,Install in build environment
+E-009,LibVips,Blocked,Not detected,Official manual install lists LibVips,Local command check,Install in build environment
+E-010,Browser test tooling,Hold,Chromium available for static QA but app test stack not configured,Official manual install lists Chrome browser/chromedriver for specs/tests,Local QA notes,Configure in Decidim build environment
+E-011,Decidim app,Blocked,No Decidim app created,Working app required for sandbox,Package audit,Create only after prerequisites are ready
+E-012,Fake seed package,Ready,v2.1 Seed Studio complete,Required before sandbox content setup,Package manifest,Use seed package after app exists

@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v2.1
+Current package version: v2.2
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -36,6 +36,8 @@ Open `assurance-room.html` to use the Assurance Room for evidence gates, sign-of
 Open `sandbox-launcher.html` to use the Sandbox Launcher for fake-data Decidim launch pathway comparison, current environment readiness, setup output mapping, and a downloadable launch brief.
 
 Open `seed-studio.html` to use the Seed Studio for Decidim-shaped fake spaces, component recipes, fake content records, safety holds, and a downloadable seed handoff brief.
+
+Open `sandbox-build-pack.html` to use the Decidim Sandbox Build Pack for environment checks, provider/self-build handoff, setup runbook, acceptance tests, and a downloadable build brief.
 
 The demo shows:
 
@@ -75,12 +77,15 @@ The demo shows:
 - `docs/public-demo-release-notes-v1.5.md`
 - `docs/public-demo-release-notes-v1.6.md`
 - `docs/public-demo-release-notes-v1.7.md`
+- `docs/public-demo-release-notes-v2.2.md`
 - `docs/public-demo-release-notes-v2.1.md`
 - `docs/public-demo-release-notes-v2.0.md`
 - `docs/public-demo-release-notes-v1.9.md`
 - `docs/public-demo-release-notes-v1.8.md`
 - `docs/fake-data-seed-playbook-v2.1.md`
 - `docs/decidim-seed-admin-guide-v2.1.md`
+- `docs/decidim-sandbox-build-pack-v2.2.md`
+- `docs/provider-self-build-handoff-v2.2.md`
 - `docs/sandbox-launch-playbook-v2.0.md`
 - `docs/decidim-environment-options-v2.0.md`
 - `docs/sandbox-assurance-playbook-v1.9.md`
@@ -163,6 +168,11 @@ The demo shows:
 - `data/fake-content-seed-register-v2.1.csv`
 - `data/seed-safety-review-v2.1.csv`
 - `data/fake-seed-package-v2.1.json`
+- `data/decidim-build-environment-check-v2.2.csv`
+- `data/decidim-build-runbook-v2.2.csv`
+- `data/decidim-provider-handoff-v2.2.csv`
+- `data/decidim-build-acceptance-tests-v2.2.csv`
+- `data/decidim-build-package-v2.2.json`
 - `data/sandbox-task-board.csv`
 - `data/decision-log-template.csv`
 - `PACKAGE_INDEX.md`
@@ -178,6 +188,7 @@ The demo shows:
 - `assurance-room.html`
 - `sandbox-launcher.html`
 - `seed-studio.html`
+- `sandbox-build-pack.html`
 - `document.html`
 - `CONTRIBUTING.md`
 - `CODE_OF_CONDUCT.md`
@@ -496,9 +507,28 @@ The v2.1 package adds a Seed Studio that turns the public demo and launch path i
 
 Use this version after Sandbox Launcher and before Decidim configuration. It gives Barayamal, a provider, or a partner-hosted sandbox team the concrete fake content structure to configure first.
 
+## v2.2 Decidim Sandbox Build Pack Upgrade
+
+The v2.2 package adds a build execution pack that turns the launch path and fake seed content into a practical Decidim sandbox handoff:
+
+- Interactive Sandbox Build Pack page with provider-assisted, Barayamal self-build, and partner-hosted pathways.
+- Current local build readiness checks for Git, GitHub CLI, Ruby, Bundler, PostgreSQL, Node/npm, Docker, ImageMagick, LibVips, browser tooling, Decidim app status, and fake seed package readiness.
+- 16-step Decidim build runbook with owners, evidence, status controls, and downloadable build brief.
+- 12-item provider/self-build handoff table for scope, hosting, access, data, safety, QA, operations, and handover.
+- 14 acceptance tests covering app boot, fake-data boundary, spaces, components, mobile, admin handover, operations, evidence, and real-pilot no-go controls.
+- Decidim sandbox build pack playbook.
+- Provider and self-build handoff note.
+- Build environment check CSV.
+- Build runbook CSV.
+- Provider handoff CSV.
+- Build acceptance test CSV.
+- Build package JSON.
+
+Use this version after Sandbox Launcher and Seed Studio. The current recommendation remains provider-assisted build until the local Barayamal self-build environment has Ruby, Bundler, PostgreSQL, Docker or equivalent services, image-processing libraries, browser test tooling, and a real Decidim app scaffold in place.
+
 ## Next Build Step
 
-Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, Delivery Room, Assurance Room, Sandbox Launcher, and Seed Studio to configure, operate, and safely hand over a fake-data Decidim sandbox:
+Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, Delivery Room, Assurance Room, Sandbox Launcher, Seed Studio, and Sandbox Build Pack to configure, operate, and safely hand over a fake-data Decidim sandbox:
 
 - One organisation.
 - One public assembly.

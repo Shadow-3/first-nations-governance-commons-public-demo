@@ -1,0 +1,13 @@
+handoff_id,item,owner,status,required_output,acceptance_evidence
+H-001,Build path decision,Barayamal,Ready,Provider-assisted self-build partner-hosted or hold decision,Sandbox Launcher brief
+H-002,Version and hosting target,Provider or developer,Hold,Decidim version runtime versions hosting path,Version pin note
+H-003,Admin ownership,Barayamal,Hold,Admin owner backup admin recovery path,Admin access record outside public repo
+H-004,Fake seed package,Barayamal,Ready,Seed Studio selected spaces records safety holds,Seed package JSON and seed register
+H-005,Organisation shell,Provider or developer,Hold,First Nations Governance Commons shell,Public and admin screenshots
+H-006,Assembly setup,Provider or developer,Hold,Governance Commons Assembly with required components,Assembly screenshot and settings
+H-007,Process setup,Provider or developer,Hold,Community Priorities And Budget 2026 process with phases,Process screenshot and phase settings
+H-008,Component setup,Provider or developer,Hold,Page Meetings Survey Proposals Budgets Accountability configured,Component list and settings screenshots
+H-009,Fake content setup,Provider or developer,Hold,Only approved fake records seeded,Seed review and public screenshots
+H-010,Operations setup,Provider or developer,Hold,Mail jobs backups support path known limitations,Ops handover note
+H-011,Acceptance testing,QA reviewer,Hold,All critical acceptance tests passed,Acceptance test log and screenshots
+H-012,Assurance sign-off,Assurance team,Hold,No-go triggers clear or explicit hold decision,Assurance Room memo

@@ -307,6 +307,7 @@
     <a class="btn primary" href="assurance-room.html">Assurance Room</a>
     <a class="btn primary" href="sandbox-launcher.html">Sandbox Launcher</a>
     <a class="btn primary" href="seed-studio.html">Seed Studio</a>
+    <a class="btn primary" href="sandbox-build-pack.html">Build Pack</a>
     <a class="btn" href="index.html">Open Demo</a>
     <div class="label">Public demo - fake data only</div>
   </header>
@@ -360,6 +361,10 @@
       <a href="#seed">
         <strong>Seed Team</strong>
         <span>Prepare Decidim-shaped fake spaces, components, content records, and safety holds.</span>
+      </a>
+      <a href="#buildpack">
+        <strong>Build Pack</strong>
+        <span>Use environment checks, runbook, provider handoff, and acceptance tests.</span>
       </a>
       <a href="#governance">
         <strong>Governance/Data</strong>
@@ -447,6 +452,13 @@
         </div>
         <div class="doc-row">
           <div>
+            <strong>Sandbox Build Pack</strong>
+            <span>Build path, environment readiness, Decidim setup runbook, provider handoff, acceptance tests, and generated build brief.</span>
+          </div>
+          <a class="btn primary" href="sandbox-build-pack.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
             <strong>Public demo prototype</strong>
             <span>Sample Decidim-style participatory process.</span>
           </div>
@@ -476,9 +488,9 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v2.1 Seed Studio upgrade.</span>
+            <span>What changed in the v2.2 Decidim Sandbox Build Pack upgrade.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v2.1.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v2.2.md">Open</a>
         </div>
       </div>
     </section>
@@ -574,6 +586,7 @@
         <div class="doc-row"><div><strong>Decidim output map</strong><span>CSV map of required sandbox configuration outputs and acceptance evidence.</span></div><a class="btn" href="data/decidim-sandbox-output-map-v2.0.csv">Open</a></div>
         <div class="doc-row"><div><strong>Launch readiness snapshot</strong><span>JSON environment status, blockers, counts, source anchors, and safety rule.</span></div><a class="btn" href="data/sandbox-launch-readiness-v2.0.json">Open</a></div>
         <div class="doc-row"><div><strong>Seed Studio</strong><span>Prepare fake Decidim seed spaces and content after choosing the launch path.</span></div><a class="btn primary" href="seed-studio.html">Open</a></div>
+        <div class="doc-row"><div><strong>Sandbox Build Pack</strong><span>Use the v2.2 environment checks, build runbook, provider handoff, and acceptance tests.</span></div><a class="btn primary" href="sandbox-build-pack.html">Open</a></div>
       </div>
     </section>
 
@@ -593,6 +606,27 @@
         <div class="doc-row"><div><strong>Seed safety review</strong><span>Eight hold rules for real records, cultural material, voting data, youth data, service cases, authority language, admin access, and real-pilot switch.</span></div><a class="btn" href="data/seed-safety-review-v2.1.csv">Open</a></div>
         <div class="doc-row"><div><strong>Fake seed package JSON</strong><span>Machine-readable seed package summary, counts, files, source anchors, and safety rule.</span></div><a class="btn" href="data/fake-seed-package-v2.1.json">Open</a></div>
         <div class="doc-row"><div><strong>Release notes v2.1</strong><span>What changed in the Seed Studio upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v2.1.md">Open</a></div>
+        <div class="doc-row"><div><strong>Sandbox Build Pack</strong><span>Move from fake seed content to a provider/self-build Decidim build handoff.</span></div><a class="btn primary" href="sandbox-build-pack.html">Open</a></div>
+      </div>
+    </section>
+
+    <section id="buildpack">
+      <div class="section-head">
+        <div>
+          <h2>Build Pack</h2>
+          <p>Use these files to prepare the actual fake-data Decidim sandbox build, provider quote, self-build setup, acceptance tests, and handover.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Sandbox Build Pack</strong><span>Interactive build path, environment checks, runbook, acceptance tests, and generated build brief.</span></div><a class="btn primary" href="sandbox-build-pack.html">Open</a></div>
+        <div class="doc-row"><div><strong>Build pack playbook</strong><span>Pathway, source-backed environment needs, setup sequence, no-go triggers, and source anchors.</span></div><a class="btn" href="docs/decidim-sandbox-build-pack-v2.2.md">Open</a></div>
+        <div class="doc-row"><div><strong>Provider/self-build handoff</strong><span>Required inputs, outputs, questions, and acceptance evidence for provider or self-build work.</span></div><a class="btn" href="docs/provider-self-build-handoff-v2.2.md">Open</a></div>
+        <div class="doc-row"><div><strong>Environment checks</strong><span>Current local readiness against Decidim build needs.</span></div><a class="btn" href="data/decidim-build-environment-check-v2.2.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Build runbook</strong><span>Sixteen build tasks from path decision through handover.</span></div><a class="btn" href="data/decidim-build-runbook-v2.2.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Provider handoff</strong><span>Twelve handoff items with owners, required outputs, and acceptance evidence.</span></div><a class="btn" href="data/decidim-provider-handoff-v2.2.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Build acceptance tests</strong><span>Fourteen acceptance tests across boot, safety, spaces, components, mobile, admin, operations, evidence, and assurance.</span></div><a class="btn" href="data/decidim-build-acceptance-tests-v2.2.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Build package JSON</strong><span>Machine-readable v2.2 build package summary, blockers, counts, files, sources, and safety rule.</span></div><a class="btn" href="data/decidim-build-package-v2.2.json">Open</a></div>
+        <div class="doc-row"><div><strong>Release notes v2.2</strong><span>What changed in the Build Pack upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v2.2.md">Open</a></div>
       </div>
     </section>
 
@@ -710,7 +744,7 @@
     </section>
 
     <footer>
-      Version v2.1. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v2.2. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
   <script>
