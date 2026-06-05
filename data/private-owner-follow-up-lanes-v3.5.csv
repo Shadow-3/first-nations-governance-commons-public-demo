@@ -1,0 +1,13 @@
+id,lane,status,ownerType,responsibility,limit
+OL-001,Dean advisory reviewer,Ready,Dean Foley / Barayamal,"Advisory note, boundary, conflict/custody declaration, public data leak check",Cannot approve or receive unrestricted private vault access
+OL-002,Pilot authority,Blocked,Approved First Nations authority group,"Authority quorum, delegation, conditions, expiry, go/hold/no-go decision",Cannot be replaced by developer or advisory reviewer
+OL-003,Data reviewer,Blocked,IDS/data governance reviewer,"Data purpose, benefit, classes, access, retention, deletion, reporting, closeout",Private evidence only
+OL-004,Privacy reviewer,Blocked,Privacy reviewer,"PIA, notice, consent, withdrawal, correction, provider checks, incident route",Private evidence only
+OL-005,Technical custodian,Blocked,Private environment custodian,"Workspace, MFA, backups, export/delete/restore, access logs, revoke test",Never-public technical proof
+OL-006,Safety reviewer,Hold,Safety and support reviewer,"Incident pause, support route, breach assessment, affected-person route",Real incident facts never public
+OL-007,Toastmasters launch lead,Hold,Official route owner,"Official forms, payments, member numbers, signatures, charter pathway",Official records stay external
+OL-008,Build delivery lead,Hold,Provider/builder owner,"Fake-data handoff, provider access boundary, contract gates, no production export",Provider sees fake/sample only
+OL-009,Pilot operator,Hold,Operations owner,"First-72-hour monitoring, check-ins, support clock, pause trigger",No real intake until approved
+OL-010,Access support contact,Hold,Support owner,Access support route and response commitments,Access-needs details never public
+OL-011,Meeting chair,Required,Private authority meeting chair,"Agenda, motions, evidence gaps, decision record, conditions, public summary",Chair does not replace authority
+OL-012,Public communications,Ready,Public comms,"Redacted public status, release notes, public-safe summaries",No private evidence or authority claims

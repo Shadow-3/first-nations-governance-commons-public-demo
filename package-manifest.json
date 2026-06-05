@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "3.4",
+  "version": "3.5",
   "date": "2026-06-05",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use Evidence Vault & Advisory Review as the default next private-meeting preparation layer after Pilot Control Tower. Dean Foley / Barayamal can provide advisory and trusted review, but cannot replace First Nations authority, Indigenous Data Sovereignty approval, privacy approval, official Toastmasters processes, technical approval, support readiness, monitoring, closeout, or the final private pilot go/hold/no-go decision.",
+  "recommendedDecision": "Use Advisory Action Docket as the default next private-meeting preparation layer after Evidence Vault & Advisory Review. Dean Foley / Barayamal can raise findings, recommendations, and escalations as advisory trusted reviewer, but cannot replace First Nations authority, Indigenous Data Sovereignty approval, privacy approval, official Toastmasters processes, technical approval, support readiness, monitoring, closeout, or the final private pilot go/hold/no-go decision.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -214,13 +214,25 @@
     "data/authority-meeting-steps-v3.4.csv",
     "data/private-evidence-access-rules-v3.4.csv",
     "data/private-pilot-decision-gates-v3.4.csv",
-    "data/private-pilot-evidence-vault-package-v3.4.json"
+    "data/private-pilot-evidence-vault-package-v3.4.json",
+    "advisory-action-docket.html",
+    "docs/advisory-action-docket-playbook-v3.5.md",
+    "docs/dean-advisory-findings-template-v3.5.md",
+    "docs/private-owner-follow-up-pack-v3.5.md",
+    "docs/authority-motion-register-template-v3.5.md",
+    "docs/public-demo-release-notes-v3.5.md",
+    "data/advisory-action-register-v3.5.csv",
+    "data/private-owner-follow-up-lanes-v3.5.csv",
+    "data/authority-motion-register-v3.5.csv",
+    "data/escalation-and-stop-rules-v3.5.csv",
+    "data/private-meeting-readiness-checks-v3.5.csv",
+    "data/advisory-action-docket-package-v3.5.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v3.4.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.5.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -392,7 +404,17 @@
       "qa-v34-deployed-evidence-vault-required-desktop.png",
       "qa-v34-deployed-evidence-vault-blocked-desktop.png",
       "qa-v34-deployed-evidence-vault-mobile.png",
-      "qa-v34-deployed-evidence-vault-package-mobile.png"
+      "qa-v34-deployed-evidence-vault-package-mobile.png",
+      "qa-v35-local-advisory-action-docket-desktop.png",
+      "qa-v35-local-advisory-action-docket-blocked-desktop.png",
+      "qa-v35-local-advisory-action-docket-motions-desktop.png",
+      "qa-v35-local-advisory-action-docket-mobile.png",
+      "qa-v35-local-advisory-action-docket-package-mobile.png",
+      "qa-v35-deployed-advisory-action-docket-desktop.png",
+      "qa-v35-deployed-advisory-action-docket-blocked-desktop.png",
+      "qa-v35-deployed-advisory-action-docket-motions-desktop.png",
+      "qa-v35-deployed-advisory-action-docket-mobile.png",
+      "qa-v35-deployed-advisory-action-docket-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -1258,6 +1280,20 @@
       "data/private-evidence-access-rules-v3.4.csv",
       "data/private-pilot-decision-gates-v3.4.csv",
       "data/private-pilot-evidence-vault-package-v3.4.json"
+    ],
+    "advisoryActionDocket": [
+      "advisory-action-docket.html",
+      "docs/advisory-action-docket-playbook-v3.5.md",
+      "docs/dean-advisory-findings-template-v3.5.md",
+      "docs/private-owner-follow-up-pack-v3.5.md",
+      "docs/authority-motion-register-template-v3.5.md",
+      "docs/public-demo-release-notes-v3.5.md",
+      "data/advisory-action-register-v3.5.csv",
+      "data/private-owner-follow-up-lanes-v3.5.csv",
+      "data/authority-motion-register-v3.5.csv",
+      "data/escalation-and-stop-rules-v3.5.csv",
+      "data/private-meeting-readiness-checks-v3.5.csv",
+      "data/advisory-action-docket-package-v3.5.json"
     ]
   },
   "safetyRules": [
@@ -1298,7 +1334,11 @@
     "No real private pilot decision should be made from any single page; use the Control Tower to review stage status, blockers, dependencies, evidence classes, owners, and decision route first.",
     "This public v3.4 evidence vault package is fake/sample only. It must not collect or expose real names, emails, access needs, incidents, official Toastmasters records, member numbers, payments, signatures, authority records, access logs, decision records, or private pilot evidence.",
     "Dean Foley / Barayamal may act as advisory and trusted reviewer for this public-safe control package, but does not replace First Nations authority, privacy approval, Indigenous Data Sovereignty approval, official Toastmasters processes, or a private pilot go/no-go decision.",
-    "Do not open real intake, activate a private workspace, hand data to a provider, or scale the pilot until the evidence vault, advisory review boundary, authority meeting record, access rules, and decision gates are approved in a separate private environment."
+    "Do not open real intake, activate a private workspace, hand data to a provider, or scale the pilot until the evidence vault, advisory review boundary, authority meeting record, access rules, and decision gates are approved in a separate private environment.",
+    "This public v3.5 action docket is fake/sample only. It must not contain real participant names, emails, access needs, incident details, official Toastmasters records, member numbers, payments, signatures, authority records, access logs, private decisions, or private pilot evidence.",
+    "Dean Foley / Barayamal may act as advisory and trusted reviewer by raising findings, questions, recommendations, and escalations, but cannot approve the pilot, override First Nations authority, replace privacy or Indigenous Data Sovereignty review, approve official Toastmasters records, or receive unrestricted private evidence.",
+    "Every advisory finding must become a public-safe action item with an owner type, evidence needed, acceptance proof, escalation route, and authority decision motion before any real private pilot action proceeds.",
+    "Do not open real intake, activate a private workspace, share private evidence, hand data to a provider, or scale the pilot until the advisory action docket is closed or deliberately carried as private meeting conditions by the approved First Nations authority group."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -2263,5 +2303,98 @@
     "safetyRule": "This public v3.4 evidence vault package is fake/sample only. It must not collect or expose real names, emails, access needs, incidents, official Toastmasters records, member numbers, payments, signatures, authority records, access logs, decision records, or private pilot evidence.",
     "advisoryRule": "Dean Foley / Barayamal may act as advisory and trusted reviewer for this public-safe control package, but does not replace First Nations authority, privacy approval, Indigenous Data Sovereignty approval, official Toastmasters processes, or a private pilot go/no-go decision.",
     "approvalRule": "Do not open real intake, activate a private workspace, hand data to a provider, or scale the pilot until the evidence vault, advisory review boundary, authority meeting record, access rules, and decision gates are approved in a separate private environment."
+  },
+  "advisoryActionDocket": {
+    "entrypoint": "advisory-action-docket.html",
+    "playbook": "docs/advisory-action-docket-playbook-v3.5.md",
+    "findingsTemplate": "docs/dean-advisory-findings-template-v3.5.md",
+    "ownerPack": "docs/private-owner-follow-up-pack-v3.5.md",
+    "motionRegister": "docs/authority-motion-register-template-v3.5.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.5.md",
+    "dataFiles": [
+      "data/advisory-action-register-v3.5.csv",
+      "data/private-owner-follow-up-lanes-v3.5.csv",
+      "data/authority-motion-register-v3.5.csv",
+      "data/escalation-and-stop-rules-v3.5.csv",
+      "data/private-meeting-readiness-checks-v3.5.csv",
+      "data/advisory-action-docket-package-v3.5.json"
+    ],
+    "advisoryTrustedReviewer": "Dean Foley / Barayamal",
+    "counts": {
+      "actionItems": 18,
+      "ownerLanes": 12,
+      "decisionMotions": 10,
+      "escalationRules": 12,
+      "readinessChecks": 14,
+      "docketRecords": 66,
+      "blockedActions": 6,
+      "holdActions": 6,
+      "requiredActions": 3,
+      "blockedMotions": 5,
+      "stopRules": 9,
+      "blockedReadinessChecks": 5
+    },
+    "noGoTriggers": [
+      "Dean or Barayamal advisory review is treated as final approval.",
+      "A blocked action item is left without an owner, evidence request, escalation route, or meeting motion.",
+      "Real evidence, names, access needs, incidents, official Toastmasters records, payments, member numbers, signatures, access logs, or private decisions appear in public files.",
+      "Authority quorum, Indigenous Data Sovereignty, privacy, private environment, support, incident, or official Toastmasters boundary decisions are missing.",
+      "Provider, public reviewer, or advisory reviewer receives unrestricted private evidence before access approval.",
+      "The meeting records go without closing blocked motions or explicitly carrying conditions, expiry, monitoring, support, stop triggers, and closeout owner."
+    ],
+    "sourceAnchors": [
+      {
+        "label": "Barayamal Toastmasters First Nations",
+        "url": "https://barayamal.com.au/toastmasters-first-nations/"
+      },
+      {
+        "label": "Toastmasters Start a Club",
+        "url": "https://www.toastmasters.org/Start-a-Club"
+      },
+      {
+        "label": "Toastmasters Club Charter Requirements Form",
+        "url": "https://content.toastmasters.org/image/upload/ATO-club-chartering-requirements-ff.pdf"
+      },
+      {
+        "label": "Toastmasters Governing Documents",
+        "url": "https://www.toastmasters.org/resources/governing-documents"
+      },
+      {
+        "label": "Maiam nayri Wingara Indigenous Data Sovereignty",
+        "url": "https://www.maiamnayriwingara.org/"
+      },
+      {
+        "label": "AIATSIS ethical research",
+        "url": "https://aiatsis.gov.au/research/ethical-research"
+      },
+      {
+        "label": "NHMRC Aboriginal and Torres Strait Islander research ethics",
+        "url": "https://www.nhmrc.gov.au/research-policy/ethics/ethical-guidelines-research-aboriginal-and-torres-strait-islander-peoples"
+      },
+      {
+        "label": "OAIC Australian Privacy Principles",
+        "url": "https://www.oaic.gov.au/privacy/australian-privacy-principles/"
+      },
+      {
+        "label": "OAIC privacy impact assessment guide",
+        "url": "https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/privacy-impact-assessments/guide-to-undertaking-privacy-impact-assessments"
+      },
+      {
+        "label": "OAIC Notifiable Data Breaches scheme",
+        "url": "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme"
+      },
+      {
+        "label": "Cyber.gov.au Essential Eight maturity model",
+        "url": "https://www.cyber.gov.au/resources-business-and-government/essential-cybersecurity/essential-eight/essential-eight-maturity-model"
+      },
+      {
+        "label": "Decidim permissions",
+        "url": "https://docs.decidim.org/en/develop/develop/permissions.html"
+      }
+    ],
+    "safetyRule": "This public v3.5 action docket is fake/sample only. It must not contain real participant names, emails, access needs, incident details, official Toastmasters records, member numbers, payments, signatures, authority records, access logs, private decisions, or private pilot evidence.",
+    "advisoryRule": "Dean Foley / Barayamal may act as advisory and trusted reviewer by raising findings, questions, recommendations, and escalations, but cannot approve the pilot, override First Nations authority, replace privacy or Indigenous Data Sovereignty review, approve official Toastmasters records, or receive unrestricted private evidence.",
+    "docketRule": "Every advisory finding must become a public-safe action item with an owner type, evidence needed, acceptance proof, escalation route, and authority decision motion before any real private pilot action proceeds.",
+    "approvalRule": "Do not open real intake, activate a private workspace, share private evidence, hand data to a provider, or scale the pilot until the advisory action docket is closed or deliberately carried as private meeting conditions by the approved First Nations authority group."
   }
 }

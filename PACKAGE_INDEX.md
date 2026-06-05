@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v3.4  
+Version: v3.5  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -153,9 +153,26 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
 
+## v3.5 Advisory Action Docket Additions
+
+- `advisory-action-docket.html` - public-safe owner follow-up and authority motion page.
+- `docs/advisory-action-docket-playbook-v3.5.md`
+- `docs/dean-advisory-findings-template-v3.5.md`
+- `docs/private-owner-follow-up-pack-v3.5.md`
+- `docs/authority-motion-register-template-v3.5.md`
+- `docs/public-demo-release-notes-v3.5.md`
+- `data/advisory-action-register-v3.5.csv`
+- `data/private-owner-follow-up-lanes-v3.5.csv`
+- `data/authority-motion-register-v3.5.csv`
+- `data/escalation-and-stop-rules-v3.5.csv`
+- `data/private-meeting-readiness-checks-v3.5.csv`
+- `data/advisory-action-docket-package-v3.5.json`
+
+
 ## v3.4 Evidence Vault & Advisory Review Additions
 
 - `private-pilot-evidence-vault.html` - public-safe advisory review and private evidence readiness page.
+- `advisory-action-docket.html` is the public Advisory Action Docket page for owner follow-up, authority motions, escalation rules, and private meeting readiness.
 - `docs/private-pilot-evidence-vault-playbook-v3.4.md`
 - `docs/dean-trusted-reviewer-brief-v3.4.md`
 - `docs/private-authority-meeting-pack-v3.4.md`

@@ -620,6 +620,7 @@
     <a class="btn" href="private-pilot-activation-drill.html">Activation Drill</a>
     <a class="btn" href="pilot-control-tower.html">Control Tower</a>
 <a class="btn" href="private-pilot-evidence-vault.html">Evidence Vault</a>
+<a class="btn" href="advisory-action-docket.html">Action Docket</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -670,6 +671,10 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Advisory action docket playbook", path: "docs/advisory-action-docket-playbook-v3.5.md", type: "markdown", description: "v3.5 owner follow-up and authority motion playbook." },
+      { category: "Start Here", title: "Dean advisory findings template", path: "docs/dean-advisory-findings-template-v3.5.md", type: "markdown", description: "Public-safe advisory findings without approval claims." },
+      { category: "Start Here", title: "Private owner follow-up pack", path: "docs/private-owner-follow-up-pack-v3.5.md", type: "markdown", description: "Owner asks, evidence requests, and escalation route." },
+      { category: "Start Here", title: "Authority motion register template", path: "docs/authority-motion-register-template-v3.5.md", type: "markdown", description: "Meeting motions, conditions, expiry, and stop triggers." },
       { category: "Start Here", title: "Evidence vault playbook", path: "docs/private-pilot-evidence-vault-playbook-v3.4.md", type: "markdown", description: "v3.4 private evidence readiness and advisory review playbook." },
       { category: "Start Here", title: "Dean trusted reviewer brief", path: "docs/dean-trusted-reviewer-brief-v3.4.md", type: "markdown", description: "Dean Foley / Barayamal advisory role, boundaries, and reviewer checklist." },
       { category: "Start Here", title: "Private authority meeting pack", path: "docs/private-authority-meeting-pack-v3.4.md", type: "markdown", description: "Private authority agenda, decision gates, and record fields." },
@@ -714,6 +719,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v3.5", path: "docs/public-demo-release-notes-v3.5.md", type: "markdown", description: "Advisory Action Docket upgrade summary." },
       { category: "Release Notes", title: "Release notes v3.4", path: "docs/public-demo-release-notes-v3.4.md", type: "markdown", description: "Evidence Vault & Advisory Review upgrade summary." },
       { category: "Release Notes", title: "Release notes v3.3", path: "docs/public-demo-release-notes-v3.3.md", type: "markdown", description: "Pilot Control Tower upgrade summary." },
       { category: "Release Notes", title: "Release notes v3.2", path: "docs/public-demo-release-notes-v3.2.md", type: "markdown", description: "Activation Drill & Decision Record upgrade summary." },
@@ -932,6 +938,16 @@
       { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
       { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
       { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Advisory Action Docket", title: "Action docket playbook v3.5", path: "docs/advisory-action-docket-playbook-v3.5.md", type: "markdown", description: "How to run owner follow-up after advisory review." },
+      { category: "Advisory Action Docket", title: "Dean advisory findings template v3.5", path: "docs/dean-advisory-findings-template-v3.5.md", type: "markdown", description: "Public-safe advisory findings without approval claims." },
+      { category: "Advisory Action Docket", title: "Private owner follow-up pack v3.5", path: "docs/private-owner-follow-up-pack-v3.5.md", type: "markdown", description: "Owner asks, evidence requests, and escalation route." },
+      { category: "Advisory Action Docket", title: "Authority motion register template v3.5", path: "docs/authority-motion-register-template-v3.5.md", type: "markdown", description: "Meeting motions, conditions, expiry, and stop triggers." },
+      { category: "Advisory Action Docket", title: "Advisory action register v3.5", path: "data/advisory-action-register-v3.5.csv", type: "csv", description: "Eighteen action items from advisory review." },
+      { category: "Advisory Action Docket", title: "Private owner follow-up lanes v3.5", path: "data/private-owner-follow-up-lanes-v3.5.csv", type: "csv", description: "Twelve owner lanes for private follow-up." },
+      { category: "Advisory Action Docket", title: "Authority motion register v3.5", path: "data/authority-motion-register-v3.5.csv", type: "csv", description: "Ten authority motions for private meeting decisions." },
+      { category: "Advisory Action Docket", title: "Escalation and stop rules v3.5", path: "data/escalation-and-stop-rules-v3.5.csv", type: "csv", description: "Twelve escalation and stop rules." },
+      { category: "Advisory Action Docket", title: "Private meeting readiness checks v3.5", path: "data/private-meeting-readiness-checks-v3.5.csv", type: "csv", description: "Fourteen meeting-readiness checks." },
+      { category: "Advisory Action Docket", title: "Advisory action docket package v3.5", path: "data/advisory-action-docket-package-v3.5.json", type: "json", description: "Machine-readable v3.5 action docket package." },
       { category: "Evidence Vault & Advisory Review", title: "Evidence vault playbook v3.4", path: "docs/private-pilot-evidence-vault-playbook-v3.4.md", type: "markdown", description: "How to run the public-safe evidence readiness review." },
       { category: "Evidence Vault & Advisory Review", title: "Dean trusted reviewer brief v3.4", path: "docs/dean-trusted-reviewer-brief-v3.4.md", type: "markdown", description: "Advisory role, boundaries, and reviewer checklist." },
       { category: "Evidence Vault & Advisory Review", title: "Private authority meeting pack v3.4", path: "docs/private-authority-meeting-pack-v3.4.md", type: "markdown", description: "Agenda, evidence gaps, decision gates, and go/hold/no-go record." },

@@ -1,0 +1,11 @@
+id,motion,status,decisionOwner,evidence,output
+MOT-001,Accept public package as fake/sample safe,Ready,Meeting chair,Public redaction QA proof,Public status can continue
+MOT-002,Table Dean advisory note as advisory only,Ready,Meeting chair,Dean boundary note,Advisory findings accepted as input
+MOT-003,Accept Dean conflict/custody declaration,Required,Pilot authority,Conflict/custody note,Advisory role accepted or varied
+MOT-004,Approve authority quorum and delegation,Blocked,Pilot authority,Private authority record,Go/hold/no-go authority exists
+MOT-005,Approve IDS/data governance controls,Blocked,Data reviewer,Private IDS/data governance record,Data classes and obligations approved
+MOT-006,Approve privacy controls,Blocked,Privacy reviewer,Private privacy decision record,"Notice, consent, withdrawal, correction, incident route approved"
+MOT-007,Approve private environment and access,Blocked,Technical custodian,Environment proof and revoke test,Private workspace can be activated
+MOT-008,Confirm official Toastmasters boundary,Hold,Toastmasters launch lead,Official boundary memo,Official records remain external or approved pathway exists
+MOT-009,"Accept conditions, expiry, monitoring, and closeout",Required,Pilot authority,Decision record shell,Conditions can be carried into private activation
+MOT-010,Record limited private pilot go/hold/no-go,Blocked,Pilot authority,All blocked motions closed or carried as approved conditions,Final decision recorded privately

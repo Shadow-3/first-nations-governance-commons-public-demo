@@ -1,0 +1,15 @@
+id,check,status,owner,proof
+RC-001,Dean note is public-safe and advisory-only,Ready,Dean Foley / Barayamal,Boundary note
+RC-002,Conflict/custody declaration ready,Required,Dean Foley / Barayamal,Declaration
+RC-003,Action items have owners,Required,Meeting chair,Action register
+RC-004,Authority quorum evidence exists privately,Blocked,Pilot authority,Authority record
+RC-005,IDS/data governance decision ready,Blocked,Data reviewer,Data decision
+RC-006,Privacy decision ready,Blocked,Privacy reviewer,Privacy decision
+RC-007,Private environment evidence ready,Blocked,Technical custodian,Environment proof
+RC-008,Access revoke test ready,Blocked,Technical custodian,Access proof
+RC-009,Official boundary memo ready,Hold,Toastmasters launch lead,Boundary memo
+RC-010,Support and incident route staffed,Hold,Safety reviewer,Support route
+RC-011,Provider fake-data lane confirmed,Hold,Build delivery lead,Provider boundary
+RC-012,Monitoring schedule ready,Hold,Pilot operator,Monitoring schedule
+RC-013,Decision motions drafted,Required,Meeting chair,Motion register
+RC-014,Public status summary redacted,Ready,Public comms,Public summary

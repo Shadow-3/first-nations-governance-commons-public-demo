@@ -1,0 +1,13 @@
+id,trigger,severity,owner,response
+ER-001,Advisory becomes approval,Stop,Meeting chair,Restate Dean advisory-only boundary and refer to pilot authority
+ER-002,Private evidence requested publicly,Stop,Technical custodian,Move request to approved private vault or reject
+ER-003,Authority owner missing,Stop,Pilot authority,No-go real activation until authority quorum exists
+ER-004,IDS/data governance missing,Stop,Data reviewer,Hold data collection and provider handoff
+ER-005,Privacy decision missing,Stop,Privacy reviewer,"Hold intake, support records, exports, and public summaries"
+ER-006,Official Toastmasters records mixed into pilot,Stop,Toastmasters launch lead,Remove official records and use external official pathway
+ER-007,Provider requests production export,Stop,Build delivery lead,"Deny export until contract, authority, privacy, and access pass"
+ER-008,Access-needs details appear publicly,Stop,Safety reviewer,Remove details and review support/privacy route
+ER-009,Incident details appear publicly,Stop,Safety reviewer,"Pause, assess breach, support affected people, and redact"
+ER-010,Blocked action has no owner,Escalate,Meeting chair,Assign owner type before the meeting proceeds
+ER-011,Condition lacks expiry,Escalate,Pilot authority,"Add expiry, review date, and stop trigger"
+ER-012,Public summary implies endorsement,Escalate,Public comms,Rewrite as public-safe status only

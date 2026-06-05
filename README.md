@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v3.4
+Current package version: v3.5
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -57,6 +57,7 @@ Open `private-pilot-authority.html` to use Private Pilot Authority Approval for 
 Open `private-pilot-activation-drill.html` to use Activation Drill & Decision Record for the approval meeting rehearsal, signoff matrix, incident tabletop, evidence packet, fake-data activation drill, and first-72-hour monitoring before real intake opens.
 Open `pilot-control-tower.html` to use Pilot Control Tower for the consolidated stage, dependency, no-go, evidence, owner action, and decision-route review before any real private pilot decision.
 Open `private-pilot-evidence-vault.html` to use Evidence Vault & Advisory Review for Dean Foley / Barayamal trusted reviewer input, private evidence readiness, authority meeting steps, access rules, and decision gates.
+Open `advisory-action-docket.html` to use Advisory Action Docket for owner follow-up, authority motions, escalation rules, and private meeting readiness after Dean advisory review.
 
 The demo shows:
 
@@ -88,6 +89,18 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v3.5.md`
+- `docs/advisory-action-docket-playbook-v3.5.md`
+- `docs/dean-advisory-findings-template-v3.5.md`
+- `docs/private-owner-follow-up-pack-v3.5.md`
+- `docs/authority-motion-register-template-v3.5.md`
+- `data/advisory-action-register-v3.5.csv`
+- `data/private-owner-follow-up-lanes-v3.5.csv`
+- `data/authority-motion-register-v3.5.csv`
+- `data/escalation-and-stop-rules-v3.5.csv`
+- `data/private-meeting-readiness-checks-v3.5.csv`
+- `data/advisory-action-docket-package-v3.5.json`
+
 - `docs/public-demo-release-notes-v3.4.md`
 - `docs/private-pilot-evidence-vault-playbook-v3.4.md`
 - `docs/dean-trusted-reviewer-brief-v3.4.md`
@@ -798,6 +811,22 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v3.5 Advisory Action Docket Upgrade
+
+The v3.5 package adds the owner follow-up and private meeting motion layer needed after Evidence Vault & Advisory Review:
+
+- Interactive Advisory Action Docket page.
+- Eighteen advisory action items.
+- Twelve private owner follow-up lanes.
+- Ten authority decision motions.
+- Twelve escalation and stop rules.
+- Fourteen private meeting readiness checks.
+- Browser-generated meeting docket brief.
+- Playbook, Dean findings template, owner follow-up pack, authority motion register, CSV files, and machine-readable JSON package.
+
+Use this version to convert Dean advisory findings and evidence blockers into owner follow-up and authority meeting motions. Dean Foley / Barayamal remains advisory and trusted reviewer only; real activation still requires First Nations authority, IDS/data governance, privacy, technical, safety, official Toastmasters, monitoring, and closeout approval in a separate private environment.
+
 
 ## v3.4 Evidence Vault & Advisory Review Upgrade
 
