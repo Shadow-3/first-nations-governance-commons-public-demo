@@ -351,6 +351,7 @@
 <a class="btn" href="private-rehearsal-closeout.html">Closeout</a>
 <a class="btn" href="pilot-agreement-onboarding.html">Agreement</a>
 <a class="btn" href="private-intake-consent-triage.html">Intake</a>
+<a class="btn" href="private-approval-pilot-gate.html">Gate</a>
     <a class="btn" href="index.html">Open Demo</a>
     <div class="label">Public demo - fake data only</div>
   </header>
@@ -488,6 +489,10 @@
       <a href="#intake">
         <strong>Intake</strong>
         <span>Private intake, consent, support, access, approvals, comms, risks, and decisions.</span>
+      </a>
+      <a href="#gate">
+        <strong>Gate</strong>
+        <span>Private approval owners, motions, gates, risks, tickets, sandbox checks, and decisions.</span>
       </a>
       <a href="#governance">
         <strong>Governance/Data</strong>
@@ -722,6 +727,13 @@
         </div>
         <div class="doc-row">
           <div>
+            <strong>Private Approval & Pilot Gate Room</strong>
+            <span>Run the private fake-data approval meeting and pilot gate decision layer.</span>
+          </div>
+          <a class="btn primary" href="private-approval-pilot-gate.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
             <strong>Public demo prototype</strong>
             <span>Sample Decidim-style participatory process.</span>
           </div>
@@ -751,9 +763,9 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v4.2 Private Intake & Consent Triage upgrade.</span>
+            <span>What changed in the v4.3 Private Approval & Pilot Gate Room upgrade.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v4.2.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v4.3.md">Open</a>
         </div>
       </div>
     </section>
@@ -1139,6 +1151,33 @@
         <div class="doc-row"><div><strong>Evidence Vault & Advisory Review</strong><span>Dean advisory review, private evidence vault, access rules, authority meeting steps, and decision gates.</span></div><a class="btn primary" href="private-pilot-evidence-vault.html">Open</a></div>
       </div>
     </section>
+    <section id="gate">
+      <div class="section-head">
+        <div>
+          <h2>Private Approval & Pilot Gate Room</h2>
+          <p>Use these files to close or hold private approval decisions before any real intake.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Private Approval &amp; Pilot Gate Room</strong><span>Interactive approval owners, motions, gates, risks, tickets, sandbox checks, boundaries, actions, and comms.</span></div><a class="btn primary" href="private-approval-pilot-gate.html">Open</a></div>
+        <div class="doc-row"><div><strong>Approval gate playbook v4.3</strong><span>Run the private fake-data approval meeting.</span></div><a class="btn" href="docs/private-approval-pilot-gate-playbook-v4.3.md">Open</a></div>
+        <div class="doc-row"><div><strong>Approval owner matrix v4.3</strong><span>Who approves, advises, or must not approve.</span></div><a class="btn" href="docs/private-approval-owner-matrix-v4.3.md">Open</a></div>
+        <div class="doc-row"><div><strong>Decision meeting and motion pack v4.3</strong><span>Private motions, options, and decision boundaries.</span></div><a class="btn" href="docs/decision-meeting-and-motion-pack-v4.3.md">Open</a></div>
+        <div class="doc-row"><div><strong>Pilot gate and risk runbook v4.3</strong><span>Close gates, risks, tickets, and sandbox checks.</span></div><a class="btn" href="docs/pilot-gate-and-risk-acceptance-runbook-v4.3.md">Open</a></div>
+        <div class="doc-row"><div><strong>Approval owners CSV</strong><span>Twelve approval owners.</span></div><a class="btn" href="data/private-approval-owners-v4.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Decision motions CSV</strong><span>Twelve private decision motions.</span></div><a class="btn" href="data/private-decision-motions-v4.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Pilot gates CSV</strong><span>Sixteen pilot gates.</span></div><a class="btn" href="data/private-pilot-gates-v4.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Risk acceptance CSV</strong><span>Fourteen risk acceptance rows.</span></div><a class="btn" href="data/risk-acceptance-register-v4.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Ticket closeout CSV</strong><span>Fourteen blocked-ticket closeout rows.</span></div><a class="btn" href="data/blocked-ticket-closeout-v4.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Pilot options CSV</strong><span>Ten pilot scenario options.</span></div><a class="btn" href="data/pilot-scenario-options-v4.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Sandbox checks CSV</strong><span>Fourteen sandbox readiness checks.</span></div><a class="btn" href="data/sandbox-readiness-checks-v4.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Decision boundaries CSV</strong><span>Twelve public/private boundaries.</span></div><a class="btn" href="data/public-private-decision-boundaries-v4.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Action log CSV</strong><span>Sixteen approval action items.</span></div><a class="btn" href="data/private-approval-action-log-v4.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Approval comms CSV</strong><span>Twelve communications templates.</span></div><a class="btn" href="data/private-approval-comms-v4.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Gate package JSON</strong><span>Machine-readable v4.3 approval package.</span></div><a class="btn" href="data/private-approval-pilot-gate-package-v4.3.json">Open</a></div>
+        <div class="doc-row"><div><strong>Release notes v4.3</strong><span>What changed in the approval gate upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v4.3.md">Open</a></div>
+      </div>
+    </section>
     <section id="intake">
       <div class="section-head">
         <div>
@@ -1471,7 +1510,7 @@
     </section>
 
     <footer>
-      Version v4.2. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v4.3. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
   <script>

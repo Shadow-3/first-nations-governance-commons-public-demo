@@ -628,6 +628,7 @@
 <a class="btn" href="private-rehearsal-closeout.html">Closeout</a>
 <a class="btn" href="pilot-agreement-onboarding.html">Agreement</a>
 <a class="btn" href="private-intake-consent-triage.html">Intake</a>
+<a class="btn" href="private-approval-pilot-gate.html">Gate</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -678,6 +679,10 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Private approval gate playbook", path: "docs/private-approval-pilot-gate-playbook-v4.3.md", type: "markdown", description: "Run the private fake-data approval meeting." },
+      { category: "Start Here", title: "Private approval owner matrix", path: "docs/private-approval-owner-matrix-v4.3.md", type: "markdown", description: "Who can approve, advise, or must not approve." },
+      { category: "Start Here", title: "Decision meeting and motion pack", path: "docs/decision-meeting-and-motion-pack-v4.3.md", type: "markdown", description: "Private meeting motions and options." },
+      { category: "Start Here", title: "Pilot gate and risk runbook", path: "docs/pilot-gate-and-risk-acceptance-runbook-v4.3.md", type: "markdown", description: "Close gates, risks, tickets, and sandbox checks." },
       { category: "Start Here", title: "Private intake consent triage playbook", path: "docs/private-intake-consent-triage-playbook-v4.2.md", type: "markdown", description: "Run the private fake-data intake workflow." },
       { category: "Start Here", title: "Private intake form and field map", path: "docs/private-intake-form-and-field-map-v4.2.md", type: "markdown", description: "Minimum fields and never-public field boundaries." },
       { category: "Start Here", title: "Consent support and withdrawal protocol", path: "docs/consent-support-and-withdrawal-protocol-v4.2.md", type: "markdown", description: "Consent, support, complaint, incident, and withdrawal routes." },
@@ -754,6 +759,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v4.3", path: "docs/public-demo-release-notes-v4.3.md", type: "markdown", description: "Private Approval & Pilot Gate Room upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.2", path: "docs/public-demo-release-notes-v4.2.md", type: "markdown", description: "Private Intake & Consent Triage upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.1", path: "docs/public-demo-release-notes-v4.1.md", type: "markdown", description: "Pilot Agreement & Organisation Onboarding upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.0", path: "docs/public-demo-release-notes-v4.0.md", type: "markdown", description: "Private Rehearsal Closeout Board upgrade summary." },
@@ -980,6 +986,21 @@
       { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
       { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
       { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Private Approval & Pilot Gate Room", title: "Approval gate playbook v4.3", path: "docs/private-approval-pilot-gate-playbook-v4.3.md", type: "markdown", description: "Run the private fake-data approval meeting." },
+      { category: "Private Approval & Pilot Gate Room", title: "Private approval owner matrix v4.3", path: "docs/private-approval-owner-matrix-v4.3.md", type: "markdown", description: "Who can approve, advise, or must not approve." },
+      { category: "Private Approval & Pilot Gate Room", title: "Decision meeting and motion pack v4.3", path: "docs/decision-meeting-and-motion-pack-v4.3.md", type: "markdown", description: "Private meeting motions and options." },
+      { category: "Private Approval & Pilot Gate Room", title: "Pilot gate and risk runbook v4.3", path: "docs/pilot-gate-and-risk-acceptance-runbook-v4.3.md", type: "markdown", description: "Close gates, risks, tickets, and sandbox checks." },
+      { category: "Private Approval & Pilot Gate Room", title: "Approval owners v4.3", path: "data/private-approval-owners-v4.3.csv", type: "csv", description: "Twelve approval owners." },
+      { category: "Private Approval & Pilot Gate Room", title: "Decision motions v4.3", path: "data/private-decision-motions-v4.3.csv", type: "csv", description: "Twelve private decision motions." },
+      { category: "Private Approval & Pilot Gate Room", title: "Pilot gates v4.3", path: "data/private-pilot-gates-v4.3.csv", type: "csv", description: "Sixteen pilot gates." },
+      { category: "Private Approval & Pilot Gate Room", title: "Risk acceptance v4.3", path: "data/risk-acceptance-register-v4.3.csv", type: "csv", description: "Fourteen risk acceptance rows." },
+      { category: "Private Approval & Pilot Gate Room", title: "Ticket closeout v4.3", path: "data/blocked-ticket-closeout-v4.3.csv", type: "csv", description: "Fourteen blocked-ticket closeout rows." },
+      { category: "Private Approval & Pilot Gate Room", title: "Pilot options v4.3", path: "data/pilot-scenario-options-v4.3.csv", type: "csv", description: "Ten pilot scenario options." },
+      { category: "Private Approval & Pilot Gate Room", title: "Sandbox checks v4.3", path: "data/sandbox-readiness-checks-v4.3.csv", type: "csv", description: "Fourteen sandbox readiness checks." },
+      { category: "Private Approval & Pilot Gate Room", title: "Decision boundaries v4.3", path: "data/public-private-decision-boundaries-v4.3.csv", type: "csv", description: "Twelve public/private boundaries." },
+      { category: "Private Approval & Pilot Gate Room", title: "Approval action log v4.3", path: "data/private-approval-action-log-v4.3.csv", type: "csv", description: "Sixteen action items." },
+      { category: "Private Approval & Pilot Gate Room", title: "Approval comms v4.3", path: "data/private-approval-comms-v4.3.csv", type: "csv", description: "Twelve communications templates." },
+      { category: "Private Approval & Pilot Gate Room", title: "Gate package v4.3", path: "data/private-approval-pilot-gate-package-v4.3.json", type: "json", description: "Machine-readable v4.3 approval package." },
       { category: "Private Intake & Consent Triage", title: "Intake triage playbook v4.2", path: "docs/private-intake-consent-triage-playbook-v4.2.md", type: "markdown", description: "Run the private fake-data intake workflow." },
       { category: "Private Intake & Consent Triage", title: "Private intake form and field map v4.2", path: "docs/private-intake-form-and-field-map-v4.2.md", type: "markdown", description: "Minimum fields and never-public field boundaries." },
       { category: "Private Intake & Consent Triage", title: "Consent support and withdrawal protocol v4.2", path: "docs/consent-support-and-withdrawal-protocol-v4.2.md", type: "markdown", description: "Consent, support, complaint, incident, and withdrawal routes." },

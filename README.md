@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v4.2
+Current package version: v4.3
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -65,6 +65,7 @@ Open `sandbox-rehearsal-scorecard.html` to convert fake-data rehearsal results i
 Open `private-rehearsal-closeout.html` to execute and close the private fake-data rehearsal with gates, approvals, public updates, and launch decisions.
 Open `pilot-agreement-onboarding.html` to prepare safe joining terms, role commitments, notices, data schedules, support protocols, training, launch communications, and decision conditions.
 Open `private-intake-consent-triage.html` to rehearse private intake fields, consent checks, support routes, access provisioning, approval tickets, communications, risk controls, and decisions.
+Open `private-approval-pilot-gate.html` to close or hold private approval owners, motions, gates, risks, tickets, sandbox checks, boundaries, actions, and comms before any real intake.
 
 The demo shows:
 
@@ -96,6 +97,23 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v4.3.md`
+- `docs/private-approval-pilot-gate-playbook-v4.3.md`
+- `docs/private-approval-owner-matrix-v4.3.md`
+- `docs/decision-meeting-and-motion-pack-v4.3.md`
+- `docs/pilot-gate-and-risk-acceptance-runbook-v4.3.md`
+- `data/private-approval-owners-v4.3.csv`
+- `data/private-decision-motions-v4.3.csv`
+- `data/private-pilot-gates-v4.3.csv`
+- `data/risk-acceptance-register-v4.3.csv`
+- `data/blocked-ticket-closeout-v4.3.csv`
+- `data/pilot-scenario-options-v4.3.csv`
+- `data/sandbox-readiness-checks-v4.3.csv`
+- `data/public-private-decision-boundaries-v4.3.csv`
+- `data/private-approval-action-log-v4.3.csv`
+- `data/private-approval-comms-v4.3.csv`
+- `data/private-approval-pilot-gate-package-v4.3.json`
+
 - `docs/public-demo-release-notes-v4.2.md`
 - `docs/private-intake-consent-triage-playbook-v4.2.md`
 - `docs/private-intake-form-and-field-map-v4.2.md`
@@ -922,6 +940,17 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v4.3 Private Approval & Pilot Gate Room Upgrade
+
+The v4.3 package adds the private decision layer needed after intake triage:
+
+- Twelve approval owners, twelve decision motions, sixteen pilot gates, and fourteen risk acceptance rows.
+- Fourteen blocked-ticket closeout rows, ten pilot options, fourteen sandbox checks, twelve public/private boundaries, sixteen action items, and twelve comms templates.
+- A stronger hold rule: real participant intake and live Decidim access remain closed until private authority, privacy, IDS/data governance, official Toastmasters, support, access, retention, incident, technical, and closeout gates pass.
+
+Use this version to run a controlled fake-data private approval meeting before any real participant intake.
+
 
 ## v4.2 Private Intake & Consent Triage Upgrade
 

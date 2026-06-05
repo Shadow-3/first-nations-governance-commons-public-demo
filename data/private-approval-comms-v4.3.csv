@@ -1,0 +1,13 @@
+id,template,status,audience,safeMessage,mustNotSay,owner
+"COM-001","Public v4.3 release update","Ready","Public visitors","The demo now includes a private approval and pilot gate room with fake/sample data only.","Real intake is open.","Comms lead"
+"COM-002","Private approval meeting invite","Hold","Approval owners","Requests owner review of motions, gates, and fake-data evidence.","Include public links to private evidence.","Pilot owner"
+"COM-003","Authority owner request","Hold","Authority chair","Asks for private pathway decision and local legitimacy review.","Publish authority notes.","Pilot owner"
+"COM-004","Privacy/IDS reviewer request","Hold","Privacy and IDS reviewers","Asks for field, retention, access, export, delete, and evidence-boundary review.","Attach public private records.","Pilot owner"
+"COM-005","Official Toastmasters boundary request","Hold","Official-route owner","Asks whether guest-only or member pathway language is acceptable.","Ask for member numbers.","Pilot owner"
+"COM-006","Support owner request","Hold","Support owner","Asks for pause, withdrawal, complaint, incident, and correction route confirmation.","Collect support details publicly.","Pilot owner"
+"COM-007","Dean advisory request","Ready","Dean trusted reviewer","Requests advisory comments on developer/reviewer boundary and sample evidence quality.","Ask Dean to approve owner domains.","Pilot owner"
+"COM-008","Barayamal sample rehearsal notice","Hold","Barayamal sample testers","Explains fake-data Barayamal-only gate rehearsal and private boundaries.","Ask for real business records.","Barayamal program operator"
+"COM-009","Toastmasters guest-only hold notice","Hold","FN Toastmasters sample testers","Explains member route is blocked and guest-only rehearsal is under review.","Imply official membership.","Official-route owner"
+"COM-010","No-go/hold outcome notice","Available","Private owners","Summarises hold/no-go decision at safe level.","Publish reasons with private evidence.","Authority chair"
+"COM-011","Second rehearsal notice","Available","Reviewers","Requests corrected fake-data evidence and another approval meeting.","Invite real participants.","Pilot owner"
+"COM-012","Limited private pilot notice","Not available","Approved participants","Only usable after all blocked gates pass privately.","Send now.","Authority chair"

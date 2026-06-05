@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v4.2  
+Version: v4.3  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -153,9 +153,31 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
 
+## v4.3 Private Approval & Pilot Gate Room Additions
+
+- `private-approval-pilot-gate.html` - public-safe gate room for approval owners, decision motions, pilot gates, risk acceptance, blocked-ticket closeout, pilot options, sandbox checks, public/private boundaries, action log, and approval communications.
+- `docs/private-approval-pilot-gate-playbook-v4.3.md`
+- `docs/private-approval-owner-matrix-v4.3.md`
+- `docs/decision-meeting-and-motion-pack-v4.3.md`
+- `docs/pilot-gate-and-risk-acceptance-runbook-v4.3.md`
+- `docs/public-demo-release-notes-v4.3.md`
+- `data/private-approval-owners-v4.3.csv`
+- `data/private-decision-motions-v4.3.csv`
+- `data/private-pilot-gates-v4.3.csv`
+- `data/risk-acceptance-register-v4.3.csv`
+- `data/blocked-ticket-closeout-v4.3.csv`
+- `data/pilot-scenario-options-v4.3.csv`
+- `data/sandbox-readiness-checks-v4.3.csv`
+- `data/public-private-decision-boundaries-v4.3.csv`
+- `data/private-approval-action-log-v4.3.csv`
+- `data/private-approval-comms-v4.3.csv`
+- `data/private-approval-pilot-gate-package-v4.3.json`
+
+
 ## v4.2 Private Intake & Consent Triage Additions
 
 - `private-intake-consent-triage.html` - public-safe pack for private intake journey, fields, consent checks, triage cases, support routes, access provisioning, approval tickets, communications, risk controls, and decisions.
+- `private-approval-pilot-gate.html` is the public-safe Private Approval & Pilot Gate Room for fake-data owner decisions, motions, gates, risks, tickets, sandbox checks, boundaries, actions, and comms.
 - `docs/private-intake-consent-triage-playbook-v4.2.md`
 - `docs/private-intake-form-and-field-map-v4.2.md`
 - `docs/consent-support-and-withdrawal-protocol-v4.2.md`

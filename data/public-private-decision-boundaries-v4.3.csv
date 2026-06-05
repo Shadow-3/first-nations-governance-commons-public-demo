@@ -1,0 +1,13 @@
+id,boundary,visibility,status,allowedPublic,neverPublic,owner
+"BND-001","Authority decision","Private","Blocked","Status only.","Minutes, names, motions detail, cultural protocol evidence.","Authority chair"
+"BND-002","Privacy decision","Private","Blocked","Status and general control category.","PIA notes, field evidence, complaints.","Privacy reviewer"
+"BND-003","IDS/data decision","Private","Blocked","Status and general governance category.","Control evidence, data maps, export/delete evidence.","IDS/data reviewer"
+"BND-004","Official Toastmasters route","Private","Blocked","Boundary status.","Member numbers, payments, official records.","Official-route owner"
+"BND-005","Support/safety route","Private","Blocked","Support route exists or blocked.","Support needs, complaint, incident detail.","Support owner"
+"BND-006","Barayamal sample track","Public summary","Hold","Fake-data scenario name and aggregate status.","Founder names, business-sensitive details.","Barayamal program operator"
+"BND-007","Dean advisory review","Public summary","Ready","Advisory boundary and public-safe comments.","Private evidence or approval claims.","Pilot owner"
+"BND-008","Technical proof","Private","Hold","Pass/hold status.","URLs, credentials, logs, backups, exports.","Technical/admin custodian"
+"BND-009","Risk acceptance","Public summary","Hold","Risk categories and decision posture.","Private owner evidence.","Pilot owner"
+"BND-010","Decision meeting","Private","Hold","Meeting happened and result posture.","Attendees, minutes, private evidence.","Authority chair"
+"BND-011","Public release notes","Public","Ready","Fake/sample upgrade summary and hold decision.","Any real participant record.","Comms lead"
+"BND-012","Closeout archive","Public summary","Hold","Archive/no-go/hold status.","Private archive contents.","Closeout archivist"

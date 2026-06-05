@@ -1,0 +1,11 @@
+id,option,status,whenToUse,minimumGates,result
+"OPT-001","Hold real intake","Recommended","Any critical gate is blocked.","None beyond public-safe status.","Current decision."
+"OPT-002","Run private fake-data approval meeting","Recommended","Owners need to review v4.2 intake holds together.","Owner matrix and agenda ready.","Best next action."
+"OPT-003","Run Barayamal-only fake-data gate rehearsal","Available","Barayamal field minimisation passes before other tracks.","Barayamal, privacy, support, technical fake-data gates.","Track-specific rehearsal only."
+"OPT-004","Run First Nations Toastmasters guest-only rehearsal","Hold","Official route accepts guest-only wording.","Guest/member boundary, support, privacy.","No member route."
+"OPT-005","Run full two-track fake-data rehearsal","Hold","All fake-data gates pass except real-intake gates.","Authority, privacy, IDS, support, official boundary, technical fake-data proof.","Fake-data only."
+"OPT-006","Provider-assisted sandbox setup","Available","Self-build environment remains blocked.","Provider access boundary and contract controls.","Private provider route."
+"OPT-007","Public update only","Available","Private approvals remain unresolved.","Comms gate.","Share learning safely."
+"OPT-008","Archive or no-go","Available","Authority or safety owner declines.","Closeout archive/no-go ticket.","Stop real intake."
+"OPT-009","Limited private pilot with conditions","Not available","All blocked gates pass privately.","All owner approvals and technical/support proof.","Not current."
+"OPT-010","Open public intake form","Not available","Not appropriate for this model.","Would require separate approved public collection design.","Do not do this now."

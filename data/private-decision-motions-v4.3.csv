@@ -1,0 +1,13 @@
+id,motion,status,movedBy,requires,decisionEffect,publicSummary
+"MOT-001","Keep real participant intake closed","Recommended","Authority chair","Any blocked gate remains unresolved.","Real intake remains closed.","Public demo remains fake/sample only."
+"MOT-002","Approve controlled fake-data approval meeting","Ready","Pilot owner","Owner list and agenda accepted.","Run v4.3 decision meeting with fake/sample records.","Can publish meeting purpose only."
+"MOT-003","Approve Barayamal-only fake-data gate rehearsal","Hold","Barayamal program operator","Authority/privacy/data/support owners accept Barayamal sample route.","Run Barayamal fake-data scenario only.","No real founder/business details."
+"MOT-004","Hold First Nations Toastmasters member route","Recommended","Official-route owner","Official route unresolved.","Member route remains blocked.","No member numbers or official records."
+"MOT-005","Approve Toastmasters guest-only rehearsal","Hold","Official-route owner","Guest/member wording and support route accepted.","Run guest-only fake-data scenario.","No implied membership."
+"MOT-006","Accept Dean trusted reviewer comments","Ready","Pilot owner","Advisory boundary is visible.","Use advisory comments as non-approval evidence.","Dean is advisory, not final authority."
+"MOT-007","Approve support pause rule","Blocked","Support owner","Support, complaint, incident, withdrawal, and correction routes pass.","Participant support route becomes available.","No support details public."
+"MOT-008","Approve technical sandbox proof","Hold","Technical/admin custodian","Access/revoke/backup/restore/export/delete pass.","Sandbox can run fake-data rehearsal.","No credentials or logs public."
+"MOT-009","Accept privacy and IDS conditions","Blocked","Privacy and IDS reviewers","Field schedule, retention, export, delete, access, and evidence boundaries pass.","Private data controls pass.","Only aggregate status public."
+"MOT-010","Run second approval meeting","Available","Authority chair","Any approval owner needs more evidence.","Repeat with corrected fake-data evidence.","Can publish hold status."
+"MOT-011","No-go real intake","Available","Authority chair","Any critical gate is declined.","Stop real intake planning.","Publish public-safe no-go status only."
+"MOT-012","Limited private pilot with conditions","Not available","Authority chair","All blocked gates pass and owners sign privately.","Small private pilot can be considered.","Not current."

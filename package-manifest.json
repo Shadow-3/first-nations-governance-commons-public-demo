@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "4.2",
-  "date": "2026-06-05",
+  "version": "4.3",
+  "date": "2026-06-06",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use Private Intake & Consent Triage as the default next fake-data intake layer: rehearse private intake fields, consent checks, support and withdrawal routes, access provisioning, approval tickets, communications, risk controls, and decision options, while keeping real participant intake on hold until private authority, privacy, Indigenous Data Sovereignty/data governance, official Toastmasters boundary, support, access, retention, incident response, and closeout approvals pass.",
+  "recommendedDecision": "Use Private Approval & Pilot Gate Room as the default next fake-data decision layer: run a private approval meeting, close or hold owner decisions, motions, gates, risk acceptances, tickets, sandbox checks, and public/private boundaries, while keeping real participant intake and live Decidim access on hold until private authority, privacy, Indigenous Data Sovereignty/data governance, official Toastmasters boundary, support, access, retention, incident response, technical operations, and closeout approvals pass.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -330,13 +330,30 @@
     "data/comms-notification-templates-v4.2.csv",
     "data/intake-risk-controls-v4.2.csv",
     "data/intake-decision-options-v4.2.csv",
-    "data/private-intake-consent-triage-package-v4.2.json"
+    "data/private-intake-consent-triage-package-v4.2.json",
+    "private-approval-pilot-gate.html",
+    "docs/private-approval-pilot-gate-playbook-v4.3.md",
+    "docs/private-approval-owner-matrix-v4.3.md",
+    "docs/decision-meeting-and-motion-pack-v4.3.md",
+    "docs/pilot-gate-and-risk-acceptance-runbook-v4.3.md",
+    "docs/public-demo-release-notes-v4.3.md",
+    "data/private-approval-owners-v4.3.csv",
+    "data/private-decision-motions-v4.3.csv",
+    "data/private-pilot-gates-v4.3.csv",
+    "data/risk-acceptance-register-v4.3.csv",
+    "data/blocked-ticket-closeout-v4.3.csv",
+    "data/pilot-scenario-options-v4.3.csv",
+    "data/sandbox-readiness-checks-v4.3.csv",
+    "data/public-private-decision-boundaries-v4.3.csv",
+    "data/private-approval-action-log-v4.3.csv",
+    "data/private-approval-comms-v4.3.csv",
+    "data/private-approval-pilot-gate-package-v4.3.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v4.2.md",
+    "releaseNotes": "docs/public-demo-release-notes-v4.3.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -588,7 +605,17 @@
       "qa-v42-deployed-private-intake-consent-triage-barayamal-desktop.png",
       "qa-v42-deployed-private-intake-consent-triage-data-desktop.png",
       "qa-v42-deployed-private-intake-consent-triage-mobile.png",
-      "qa-v42-deployed-private-intake-consent-triage-package-mobile.png"
+      "qa-v42-deployed-private-intake-consent-triage-package-mobile.png",
+      "qa-v43-local-private-approval-pilot-gate-desktop.png",
+      "qa-v43-local-private-approval-pilot-gate-barayamal-desktop.png",
+      "qa-v43-local-private-approval-pilot-gate-risk-desktop.png",
+      "qa-v43-local-private-approval-pilot-gate-mobile.png",
+      "qa-v43-local-private-approval-pilot-gate-package-mobile.png",
+      "qa-v43-deployed-private-approval-pilot-gate-desktop.png",
+      "qa-v43-deployed-private-approval-pilot-gate-barayamal-desktop.png",
+      "qa-v43-deployed-private-approval-pilot-gate-risk-desktop.png",
+      "qa-v43-deployed-private-approval-pilot-gate-mobile.png",
+      "qa-v43-deployed-private-approval-pilot-gate-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -1586,6 +1613,25 @@
       "data/intake-risk-controls-v4.2.csv",
       "data/intake-decision-options-v4.2.csv",
       "data/private-intake-consent-triage-package-v4.2.json"
+    ],
+    "privateApprovalPilotGate": [
+      "private-approval-pilot-gate.html",
+      "docs/private-approval-pilot-gate-playbook-v4.3.md",
+      "docs/private-approval-owner-matrix-v4.3.md",
+      "docs/decision-meeting-and-motion-pack-v4.3.md",
+      "docs/pilot-gate-and-risk-acceptance-runbook-v4.3.md",
+      "docs/public-demo-release-notes-v4.3.md",
+      "data/private-approval-owners-v4.3.csv",
+      "data/private-decision-motions-v4.3.csv",
+      "data/private-pilot-gates-v4.3.csv",
+      "data/risk-acceptance-register-v4.3.csv",
+      "data/blocked-ticket-closeout-v4.3.csv",
+      "data/pilot-scenario-options-v4.3.csv",
+      "data/sandbox-readiness-checks-v4.3.csv",
+      "data/public-private-decision-boundaries-v4.3.csv",
+      "data/private-approval-action-log-v4.3.csv",
+      "data/private-approval-comms-v4.3.csv",
+      "data/private-approval-pilot-gate-package-v4.3.json"
     ]
   },
   "safetyRules": [
@@ -1658,7 +1704,11 @@
     "This v4.2 package remains public fake/sample data only. Do not collect or publish real names, emails, phone numbers, business-sensitive details, member numbers, payments, signatures, authority minutes, consent evidence, access logs, support records, incident details, cultural material, official Toastmasters records, private URLs, or private pilot evidence.",
     "Dean Foley / Barayamal may support intake design, trusted review, and developer triage, but cannot approve participant consent, First Nations authority, Indigenous Data Sovereignty/data governance, privacy, official Toastmasters, support, payment, access, or real pilot decisions for other owners.",
     "Use the Private Intake & Consent Triage Pack after the v4.1 agreement pack. It turns public-safe joining templates into a private fake-data intake workflow with field minimisation, consent checks, support and withdrawal routes, access provisioning, approval tickets, communications, risk controls, and launch decisions.",
-    "Real private intake can open only after the blocked consent, authority, privacy, IDS/data governance, official-route, support, access, retention, and incident controls pass in private. Until then, use this pack as an intake rehearsal and reviewer checklist only."
+    "Real private intake can open only after the blocked consent, authority, privacy, IDS/data governance, official-route, support, access, retention, and incident controls pass in private. Until then, use this pack as an intake rehearsal and reviewer checklist only.",
+    "This v4.3 package remains public fake/sample data only. Do not publish real names, emails, phone numbers, member numbers, business-sensitive material, payments, signatures, authority minutes, consent evidence, support records, incident details, access logs, official Toastmasters records, cultural material, private URLs, or private pilot evidence.",
+    "Dean Foley / Barayamal may act as initial developer, custodian, and trusted reviewer for public-safe and approved fake-data evidence, but cannot approve First Nations authority, privacy, Indigenous Data Sovereignty/data governance, official Toastmasters, support, payment, consent, access, or pilot launch decisions owned by others.",
+    "Use the v4.3 Private Approval & Pilot Gate Room after the v4.2 intake triage pack. It converts private intake holds into owner decisions, motions, gate status, risk acceptance, closeout actions, sandbox readiness checks, and public-safe updates.",
+    "Recommended decision remains Hold. Run a controlled fake-data private approval meeting first; real participant intake or live Decidim access can open only if authority, privacy, IDS/data governance, official-route, support, access, retention, incident, technical, and closeout gates pass privately."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -3292,5 +3342,93 @@
     "advisoryRule": "Dean Foley / Barayamal may support intake design, trusted review, and developer triage, but cannot approve participant consent, First Nations authority, Indigenous Data Sovereignty/data governance, privacy, official Toastmasters, support, payment, access, or real pilot decisions for other owners.",
     "safetyRule": "This v4.2 package remains public fake/sample data only. Do not collect or publish real names, emails, phone numbers, business-sensitive details, member numbers, payments, signatures, authority minutes, consent evidence, access logs, support records, incident details, cultural material, official Toastmasters records, private URLs, or private pilot evidence.",
     "launchRule": "Real private intake can open only after the blocked consent, authority, privacy, IDS/data governance, official-route, support, access, retention, and incident controls pass in private. Until then, use this pack as an intake rehearsal and reviewer checklist only."
+  },
+  "privateApprovalPilotGate": {
+    "entrypoint": "private-approval-pilot-gate.html",
+    "playbook": "docs/private-approval-pilot-gate-playbook-v4.3.md",
+    "ownerMatrix": "docs/private-approval-owner-matrix-v4.3.md",
+    "motionPack": "docs/decision-meeting-and-motion-pack-v4.3.md",
+    "gateRunbook": "docs/pilot-gate-and-risk-acceptance-runbook-v4.3.md",
+    "releaseNotes": "docs/public-demo-release-notes-v4.3.md",
+    "dataFiles": [
+      "data/private-approval-owners-v4.3.csv",
+      "data/private-decision-motions-v4.3.csv",
+      "data/private-pilot-gates-v4.3.csv",
+      "data/risk-acceptance-register-v4.3.csv",
+      "data/blocked-ticket-closeout-v4.3.csv",
+      "data/pilot-scenario-options-v4.3.csv",
+      "data/sandbox-readiness-checks-v4.3.csv",
+      "data/public-private-decision-boundaries-v4.3.csv",
+      "data/private-approval-action-log-v4.3.csv",
+      "data/private-approval-comms-v4.3.csv",
+      "data/private-approval-pilot-gate-package-v4.3.json"
+    ],
+    "primaryOrganisationTest": "Barayamal",
+    "controlledMemberTester": "First Nations Toastmasters",
+    "counts": {
+      "approvalOwners": 12,
+      "decisionMotions": 12,
+      "pilotGates": 16,
+      "riskAcceptances": 14,
+      "ticketCloseout": 14,
+      "pilotOptions": 10,
+      "sandboxChecks": 14,
+      "decisionBoundaries": 12,
+      "actionItems": 16,
+      "commsTemplates": 12,
+      "approvalRecords": 132,
+      "blockedGates": 7,
+      "holdGates": 6,
+      "readyGates": 3,
+      "barayamalGates": 1,
+      "toastmastersGates": 1,
+      "crossTrackGates": 14,
+      "criticalRisks": 6,
+      "blockedTickets": 6,
+      "recommendedMotions": 2,
+      "readyComms": 2
+    },
+    "sourceAnchors": [
+      {
+        "label": "Decidim spaces",
+        "url": "https://docs.decidim.org/en/develop/admin/spaces.html"
+      },
+      {
+        "label": "Decidim authorizations",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+      },
+      {
+        "label": "Decidim permissions",
+        "url": "https://docs.decidim.org/en/develop/develop/permissions.html"
+      },
+      {
+        "label": "Decidim deployment docs",
+        "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+      },
+      {
+        "label": "Barayamal Toastmasters First Nations",
+        "url": "https://barayamal.com.au/toastmasters-first-nations/"
+      },
+      {
+        "label": "Toastmasters governing documents",
+        "url": "https://www.toastmasters.org/resources/governing-documents"
+      },
+      {
+        "label": "OAIC Privacy Impact Assessments",
+        "url": "https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/privacy-impact-assessments/guide-to-undertaking-privacy-impact-assessments"
+      },
+      {
+        "label": "OAIC Notifiable Data Breaches",
+        "url": "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme"
+      },
+      {
+        "label": "AIATSIS ethical research",
+        "url": "https://aiatsis.gov.au/research/ethical-research"
+      }
+    ],
+    "operatingRule": "Use the v4.3 Private Approval & Pilot Gate Room after the v4.2 intake triage pack. It converts private intake holds into owner decisions, motions, gate status, risk acceptance, closeout actions, sandbox readiness checks, and public-safe updates.",
+    "advisoryRule": "Dean Foley / Barayamal may act as initial developer, custodian, and trusted reviewer for public-safe and approved fake-data evidence, but cannot approve First Nations authority, privacy, Indigenous Data Sovereignty/data governance, official Toastmasters, support, payment, consent, access, or pilot launch decisions owned by others.",
+    "safetyRule": "This v4.3 package remains public fake/sample data only. Do not publish real names, emails, phone numbers, member numbers, business-sensitive material, payments, signatures, authority minutes, consent evidence, support records, incident details, access logs, official Toastmasters records, cultural material, private URLs, or private pilot evidence.",
+    "decisionRule": "Recommended decision remains Hold. Run a controlled fake-data private approval meeting first; real participant intake or live Decidim access can open only if authority, privacy, IDS/data governance, official-route, support, access, retention, incident, technical, and closeout gates pass privately."
   }
 }
