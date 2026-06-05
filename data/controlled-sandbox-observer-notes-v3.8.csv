@@ -1,0 +1,13 @@
+id,track,noteClass,publicSafeNote,privateBoundary,prompt
+OBS-001,Barayamal,Usability,Founder could find support topic proposal without instruction.,Do not name real founder or business.,What language reduced confusion?
+OBS-002,Barayamal,Trust,Business owner understood this was fake/sample only.,Do not record real business details.,Was the fake-data warning early enough?
+OBS-003,Barayamal,Access,Mentor role did not expose private founder notes.,Do not record mentor conflict details.,Did the role block feel understandable?
+OBS-004,Barayamal,Advisory,Dean advisory finding stayed separate from approval.,Do not treat advisory review as authority.,Was the advisory boundary visible?
+OBS-005,FN Toastmasters,Welcome,Member welcome path explained meeting roles and official boundary.,Do not record official membership data.,Was the official-route boundary clear?
+OBS-006,FN Toastmasters,Guest,Guest path did not imply official membership.,Do not record real attendance or access needs.,Could a guest tell what they could and could not do?
+OBS-007,FN Toastmasters,Learning,Learning survey felt aggregate rather than personal evaluation.,Do not capture private speech feedback.,Which wording kept feedback safe?
+OBS-008,FN Toastmasters,Meeting,Role agenda was easy to follow on mobile.,Do not publish real meeting participants.,Did roles wrap cleanly on small screens?
+OBS-009,Cross-track,Safety,Pause route could be found without exposing incident details.,Do not record incident specifics.,Could a tester find help quickly?
+OBS-010,Cross-track,Data,Redaction scan found no private terms.,Do not paste private evidence into notes.,What file type needs more checking?
+OBS-011,Cross-track,Admin,Revoked account lost access in the retest.,Do not store real access logs in public.,Was revoke proof sufficient?
+OBS-012,Cross-track,Decision,Go/hold/no-go gate used evidence rather than vibes.,Do not record private authority names.,Which gate needs clearer evidence?

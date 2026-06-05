@@ -1,0 +1,13 @@
+id,severity,status,trigger,fix,owner
+ISS-001,Critical,Blocked,Real personal or official record appears in public demo.,"Stop test, remove record, rotate access if needed, document private incident route.",Privacy reviewer
+ISS-002,Critical,Blocked,"Official Toastmasters member number, payment, signature, or charter evidence appears.",Stop test and move official route outside Decidim.,Official-route owner
+ISS-003,High,Blocked,Dean advisory finding is treated as launch approval.,"Rewrite copy, gate approval to private authority process.",Authority chair
+ISS-004,High,Blocked,Partner observer can access private participant or export data.,"Revoke observer, fix permission group, retest.",Technical custodian
+ISS-005,High,Blocked,Guest can perform member-only action.,Fix role/authorization and retest guest path.,Club facilitator
+ISS-006,High,Hold,Founder/business owner form asks for sensitive commercial details.,Remove fields or move to approved private intake.,Program operator
+ISS-007,Medium,Hold,Fake-data warning appears after form action.,Move warning before action and retest.,Comms lead
+ISS-008,Medium,Hold,Mobile page has horizontal overflow or clipped controls.,Fix layout and retest 390px viewport.,Frontend custodian
+ISS-009,Medium,Hold,Observer note asks for private identity or support details.,Replace prompt with public-safe wording.,Review coordinator
+ISS-010,Medium,Managed,Acceptance script has unclear owner.,Assign owner before live rehearsal.,Pilot owner
+ISS-011,Low,Managed,Test evidence filename inconsistent.,Rename artifact and update evidence pack.,Technical custodian
+ISS-012,Low,Managed,Public update copy implies live intake.,Change to fake-data demo language.,Comms lead

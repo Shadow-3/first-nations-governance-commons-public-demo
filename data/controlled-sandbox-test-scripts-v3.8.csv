@@ -1,0 +1,19 @@
+id,track,script,status,steps,expected,owner
+SCR-001,Barayamal,Founder interest to proposal,Required,"Fake founder submits interest, opens support topic proposal, receives admin answer.",Proposal and accountability item use sample data only.,Barayamal admin
+SCR-002,Barayamal,Business owner survey route,Required,"Sample business owner submits stage, sector, support-priority survey.","No ABN, revenue, client, tax, contract, or legal fields exist.",Program operator
+SCR-003,Barayamal,Founder yarning meeting,Required,Fake participant RSVPs and facilitator publishes public-safe minutes.,Minutes omit attendee identity and private support detail.,Meeting facilitator
+SCR-004,Barayamal,Mentor access hold,Hold,Mentor tries to access private founder notes before approval.,Access denied or component disabled.,Mentor coordinator
+SCR-005,Barayamal,Partner observer least privilege,Required,Partner observer opens public updates and attempts private export.,Observer cannot see private exports or participant records.,Partner liaison
+SCR-006,Barayamal,Dean advisory finding,Required,Dean sample reviewer logs a public build finding.,Finding cannot approve pilot or override authority.,Review coordinator
+SCR-007,Barayamal,Founder follow-up closeout,Configure,"Fake action is assigned, updated, and closed.",Closeout evidence remains public-safe status only.,Support lead
+SCR-008,FN Toastmasters,Member welcome path,Required,Sample member opens welcome path and official boundary page.,Boundary states official records remain outside Decidim.,Club facilitator
+SCR-009,FN Toastmasters,Guest path stays guest-only,Required,Guest views meeting info and attempts member-only action.,Guest cannot access member-only actions or official route.,Club facilitator
+SCR-010,FN Toastmasters,Meeting role agenda,Required,"Facilitator creates agenda with speaker, evaluator, timer, chair roles.",Agenda has fake names and public-safe minutes only.,Meeting chair
+SCR-011,FN Toastmasters,Learning survey aggregate,Required,Sample member submits confidence survey.,Only aggregate sample result is visible publicly.,Learning lead
+SCR-012,FN Toastmasters,Official records exclusion,Required,"Tester searches for member number, payment, signature, charter evidence.","No official records exist in Decidim pages, CSV, JSON, or screenshots.",Official-route owner
+SCR-013,FN Toastmasters,Sample motion rehearsal,Hold,Sample member creates a club idea or motion.,Copy says it is not an official Toastmasters decision.,Club facilitator
+SCR-014,Cross-track,Support pause tabletop,Blocked,Safety reviewer triggers fake pause and support route.,Public page shows pause state without affected-person detail.,Safety reviewer
+SCR-015,Cross-track,Admin invite and revoke,Required,"Temporary admin is invited, used, revoked, and re-tested.",Revoked account cannot access admin area.,Technical custodian
+SCR-016,Cross-track,Redaction scan,Required,"Scan pages, docs, CSV, JSON, and screenshots for private-data terms.",No real records or official Toastmasters data are present.,Privacy reviewer
+SCR-017,Cross-track,Backup export delete proof,Hold,"Technical custodian proves backup, export, deletion, and restore in private environment.",Only version labels and pass/fail summary become public.,Technical custodian
+SCR-018,Cross-track,Go hold no-go closeout,Required,"Review all issues and evidence, then choose fake go/hold/no-go outcome.",Real launch remains blocked until private approvals pass.,Authority chair

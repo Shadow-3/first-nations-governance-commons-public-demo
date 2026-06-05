@@ -1,0 +1,11 @@
+id,gate,state,evidence,goRule,holdRule
+GAT-001,Fake data only gate,Required,"All seeds, screenshots, CSV, JSON, docs use fake/sample data.",No real record present.,Any real record blocks release.
+GAT-002,Barayamal lane pass,Required,Required Barayamal scripts pass or have approved hold.,Founder/business owner path is testable.,Private or commercial details requested.
+GAT-003,FN Toastmasters lane pass,Required,Required member/guest scripts pass.,Official boundary is visible and enforced.,Official records appear in Decidim.
+GAT-004,Role and revocation gate,Required,"Fake admin, reviewer, observer, guest, and member roles tested.",Revoked role loses access.,Any role keeps excess access.
+GAT-005,Observer-note gate,Configure,Observer prompts are public-safe and useful.,Notes produce improvement signal.,Prompts collect private identity or support details.
+GAT-006,Issue triage gate,Required,Critical/high issues closed or formally held in private authority process.,No unowned blocker remains.,Unowned critical/high issue remains.
+GAT-007,Support and pause gate,Blocked,Fake support pause tabletop completed in private route.,Pause route found without public incident details.,Incident details appear in public.
+GAT-008,Backup/export/delete gate,Hold,"Private proof exists for backup, export, delete, restore, and closeout.",Public only shows pass/fail version.,No restore or deletion proof.
+GAT-009,Private approval gate,Blocked,"First Nations authority, privacy, IDS/data governance, support, official-route approvals recorded privately.",Approval references exist outside public package.,Public demo used as approval record.
+GAT-010,Launch decision gate,Blocked,"Authority chooses go, hold, no-go, archive, or second fake-data iteration.",Decision references evidence pack.,No authority decision.

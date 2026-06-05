@@ -623,6 +623,7 @@
 <a class="btn" href="advisory-action-docket.html">Action Docket</a>
 <a class="btn" href="decidim-build-blueprint.html">Decidim Blueprint</a>
 <a class="btn" href="two-track-pilot-onboarding.html">Two-Track Pilot</a>
+<a class="btn" href="controlled-sandbox-test-lab.html">Test Lab</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -673,6 +674,10 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Controlled sandbox test lab playbook", path: "docs/controlled-sandbox-test-lab-playbook-v3.8.md", type: "markdown", description: "Fake accounts, scripts, observer notes, issue triage, gates, and evidence handling." },
+      { category: "Start Here", title: "Fake account and role script", path: "docs/fake-account-and-role-script-v3.8.md", type: "markdown", description: "Sample accounts, access rules, scripts, and revoke rules." },
+      { category: "Start Here", title: "Observer note and issue triage guide", path: "docs/observer-note-and-issue-triage-guide-v3.8.md", type: "markdown", description: "Public-safe observer prompts and issue triage." },
+      { category: "Start Here", title: "Go hold no-go decision gates", path: "docs/go-hold-no-go-decision-gates-v3.8.md", type: "markdown", description: "Evidence-led pilot closeout gates." },
       { category: "Start Here", title: "Two-track pilot onboarding playbook", path: "docs/two-track-pilot-onboarding-playbook-v3.7.md", type: "markdown", description: "Barayamal organisation onboarding plus First Nations Toastmasters member tester." },
       { category: "Start Here", title: "Barayamal founder onboarding test plan", path: "docs/barayamal-founder-onboarding-test-plan-v3.7.md", type: "markdown", description: "Primary organisation onboarding test for Indigenous founders and business owners." },
       { category: "Start Here", title: "First Nations Toastmasters member onboarding test plan", path: "docs/fn-toastmasters-member-onboarding-test-plan-v3.7.md", type: "markdown", description: "Controlled member, guest, meeting role, and learning feedback tester." },
@@ -729,6 +734,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v3.8", path: "docs/public-demo-release-notes-v3.8.md", type: "markdown", description: "Controlled Sandbox Test Lab upgrade summary." },
       { category: "Release Notes", title: "Release notes v3.7", path: "docs/public-demo-release-notes-v3.7.md", type: "markdown", description: "Two-Track Pilot Onboarding upgrade summary." },
       { category: "Release Notes", title: "Release notes v3.6", path: "docs/public-demo-release-notes-v3.6.md", type: "markdown", description: "Decidim Build Blueprint upgrade summary." },
       { category: "Release Notes", title: "Release notes v3.5", path: "docs/public-demo-release-notes-v3.5.md", type: "markdown", description: "Advisory Action Docket upgrade summary." },
@@ -950,6 +956,18 @@
       { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
       { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
       { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Controlled Sandbox Test Lab", title: "Controlled sandbox playbook v3.8", path: "docs/controlled-sandbox-test-lab-playbook-v3.8.md", type: "markdown", description: "Run the full fake-data lab across both tracks." },
+      { category: "Controlled Sandbox Test Lab", title: "Fake account and role script v3.8", path: "docs/fake-account-and-role-script-v3.8.md", type: "markdown", description: "Sample accounts, roles, actions, and revoke rules." },
+      { category: "Controlled Sandbox Test Lab", title: "Observer and issue guide v3.8", path: "docs/observer-note-and-issue-triage-guide-v3.8.md", type: "markdown", description: "Observer notes and issue triage rules." },
+      { category: "Controlled Sandbox Test Lab", title: "Go hold no-go gates v3.8", path: "docs/go-hold-no-go-decision-gates-v3.8.md", type: "markdown", description: "Evidence-led decision gates." },
+      { category: "Controlled Sandbox Test Lab", title: "Test lanes v3.8", path: "data/controlled-sandbox-test-lanes-v3.8.csv", type: "csv", description: "Four controlled test lanes." },
+      { category: "Controlled Sandbox Test Lab", title: "Fake accounts v3.8", path: "data/controlled-sandbox-fake-accounts-v3.8.csv", type: "csv", description: "Sixteen fake account records." },
+      { category: "Controlled Sandbox Test Lab", title: "Test scripts v3.8", path: "data/controlled-sandbox-test-scripts-v3.8.csv", type: "csv", description: "Eighteen fake-data scripts." },
+      { category: "Controlled Sandbox Test Lab", title: "Observer notes v3.8", path: "data/controlled-sandbox-observer-notes-v3.8.csv", type: "csv", description: "Twelve observer prompt records." },
+      { category: "Controlled Sandbox Test Lab", title: "Issue triage v3.8", path: "data/controlled-sandbox-issue-triage-v3.8.csv", type: "csv", description: "Twelve issue and stop-rule records." },
+      { category: "Controlled Sandbox Test Lab", title: "Decision gates v3.8", path: "data/controlled-sandbox-decision-gates-v3.8.csv", type: "csv", description: "Ten go/hold/no-go gates." },
+      { category: "Controlled Sandbox Test Lab", title: "Evidence pack v3.8", path: "data/controlled-sandbox-evidence-pack-v3.8.csv", type: "csv", description: "Fourteen evidence handling records." },
+      { category: "Controlled Sandbox Test Lab", title: "Lab package v3.8", path: "data/controlled-sandbox-test-lab-package-v3.8.json", type: "json", description: "Machine-readable v3.8 sandbox test package." },
       { category: "Two-Track Pilot Onboarding", title: "Two-track playbook v3.7", path: "docs/two-track-pilot-onboarding-playbook-v3.7.md", type: "markdown", description: "Run Barayamal and FN Toastmasters as separate fake-data onboarding tracks." },
       { category: "Two-Track Pilot Onboarding", title: "Barayamal founder onboarding test plan v3.7", path: "docs/barayamal-founder-onboarding-test-plan-v3.7.md", type: "markdown", description: "Indigenous founder and business owner onboarding rehearsal." },
       { category: "Two-Track Pilot Onboarding", title: "FN Toastmasters member onboarding test plan v3.7", path: "docs/fn-toastmasters-member-onboarding-test-plan-v3.7.md", type: "markdown", description: "Member, guest, meeting role, and learning feedback tester." },

@@ -1,0 +1,15 @@
+id,dataClass,artifact,location,acceptance
+EVP-001,Public safe,Desktop screenshot - test lab default,QA screenshot folder,Shows page identity and metrics with fake data.
+EVP-002,Public safe,Mobile screenshot - test lab,QA screenshot folder,Proves 390px no-overflow check.
+EVP-003,Public safe,Barayamal script filter screenshot,QA screenshot folder,Shows separate organisation lane.
+EVP-004,Public safe,Issue filter screenshot,QA screenshot folder,Shows critical/high blockers are visible.
+EVP-005,Public safe,Package JSON viewer screenshot,QA screenshot folder,Shows structured package loads.
+EVP-006,Public safe,HTTP manifest scan,Deployment report,All entrypoints return HTTP 200.
+EVP-007,Public safe,Release validation output,Deployment report,"No missing entrypoints, catalog paths, or local links."
+EVP-008,Private restricted,Role revoke proof,Private evidence vault,Revoked fake admin cannot access admin area.
+EVP-009,Private restricted,Support pause tabletop notes,Private safety route,Incident details remain private.
+EVP-010,Private restricted,Backup/export/delete proof,Private technical evidence,Restore and deletion proof exists.
+EVP-011,Never public,Authority quorum evidence,Private authority meeting,Never stored in public repo.
+EVP-012,Never public,IDS/data governance decision evidence,Private data governance room,Never stored in public repo.
+EVP-013,Never public,Official Toastmasters records,External official route,Never stored in Decidim public sandbox.
+EVP-014,Never public,Affected-person support or incident details,Private support route,Never published or exported publicly.

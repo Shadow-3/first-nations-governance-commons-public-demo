@@ -1,0 +1,5 @@
+id,lane,role,status,scope,owner,boundary
+LAN-001,Barayamal founder and business owner lane,Primary,Ready,"Founder/business owner onboarding, support topics, yarning meeting, proposal, accountability follow-up.",Barayamal sandbox admin,"No real founder, contact, business, revenue, hardship, legal, tax, client, or contract data."
+LAN-002,Barayamal reviewer and advisor lane,Support,Configure,"Mentor, advisory, partner observer, and Dean trusted reviewer rehearsal.",Review coordinator,"No unrestricted exports, no approval authority, no private reviewer evidence in public records."
+LAN-003,First Nations Toastmasters member lane,Controlled tester,Ready,"Member welcome, guest path, meeting roles, learning survey, sample motions.",Club facilitator,"No official Toastmasters forms, member numbers, payments, signatures, charter evidence, or private evaluations."
+LAN-004,Cross-track operations and safety lane,Control,Configure,"Support pause, incident tabletop, admin revoke, redaction, backup/export/delete, closeout.",Technical custodian,"No support, incident, access, consent, authority, access-log, deletion, or closeout evidence in public files."

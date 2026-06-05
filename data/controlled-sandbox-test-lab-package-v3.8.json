@@ -1,0 +1,819 @@
+{
+  "packageName": "Controlled Sandbox Test Lab v3.8",
+  "version": "3.8",
+  "date": "2026-06-05",
+  "primaryOrganisationTest": "Barayamal",
+  "controlledMemberTester": "First Nations Toastmasters",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "advisoryTrustedReviewer": "Dean Foley / Barayamal",
+  "mode": "public_demo_fake_sample_controlled_sandbox_test_lab_only",
+  "reviewFinding": "v3.7 separated Barayamal and First Nations Toastmasters onboarding, but the project still needed an operational fake-data test lab with accounts, scripts, observer notes, issue triage, gates, and evidence handling before any real private pilot.",
+  "operatingRule": "Use the Controlled Sandbox Test Lab only after v3.7 two-track onboarding is understood. Barayamal and First Nations Toastmasters must run as separate fake-data test tracks with separate fake accounts, observer notes, issue queues, evidence folders, go/hold/no-go gates, and closeout decisions.",
+  "advisoryRule": "Dean Foley / Barayamal may act as initial developer, custodian, advisory reviewer, and trusted reviewer for the fake-data lab, but cannot approve First Nations authority, privacy, Indigenous Data Sovereignty, official Toastmasters records, real participant access, or private pilot launch.",
+  "decisionRule": "A real private pilot remains blocked until every required fake-data script passes, critical and high issues are closed or accepted by the private authority process, evidence is redacted, admin revocation is proven, official Toastmasters records remain external, and private authority/privacy/IDS/data governance approvals are recorded outside this public package.",
+  "safetyRule": "This v3.8 lab is public fake/sample data only. Do not create, import, screenshot, export, publish, or test with real founder, business owner, mentor, member, guest, payment, signature, official Toastmasters, authority, consent, support, incident, access, or private pilot records.",
+  "counts": {
+    "lanes": 4,
+    "fakeAccounts": 16,
+    "scripts": 18,
+    "observerNotes": 12,
+    "issues": 12,
+    "gates": 10,
+    "evidence": 14,
+    "labRecords": 86,
+    "barayamalScripts": 7,
+    "toastmastersScripts": 6,
+    "crossTrackScripts": 5,
+    "requiredScripts": 13,
+    "blockedIssues": 5,
+    "neverPublicEvidence": 4
+  },
+  "sourceAnchors": [
+    {
+      "label": "Decidim spaces",
+      "url": "https://docs.decidim.org/en/develop/admin/spaces.html"
+    },
+    {
+      "label": "Decidim components",
+      "url": "https://docs.decidim.org/en/develop/admin/components.html"
+    },
+    {
+      "label": "Decidim authorizations",
+      "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+    },
+    {
+      "label": "Decidim administrators",
+      "url": "https://docs.decidim.org/en/develop/admin/participants/admins.html"
+    },
+    {
+      "label": "Decidim production checklist",
+      "url": "https://docs.decidim.org/en/develop/install/checklist.html"
+    },
+    {
+      "label": "Barayamal Toastmasters First Nations",
+      "url": "https://barayamal.com.au/toastmasters-first-nations/"
+    },
+    {
+      "label": "Toastmasters Start a Club",
+      "url": "https://www.toastmasters.org/Start-a-Club"
+    }
+  ],
+  "files": {
+    "entrypoint": "controlled-sandbox-test-lab.html",
+    "playbook": "docs/controlled-sandbox-test-lab-playbook-v3.8.md",
+    "accountScript": "docs/fake-account-and-role-script-v3.8.md",
+    "observerGuide": "docs/observer-note-and-issue-triage-guide-v3.8.md",
+    "gateGuide": "docs/go-hold-no-go-decision-gates-v3.8.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.8.md",
+    "lanesCsv": "data/controlled-sandbox-test-lanes-v3.8.csv",
+    "accountsCsv": "data/controlled-sandbox-fake-accounts-v3.8.csv",
+    "scriptsCsv": "data/controlled-sandbox-test-scripts-v3.8.csv",
+    "notesCsv": "data/controlled-sandbox-observer-notes-v3.8.csv",
+    "issuesCsv": "data/controlled-sandbox-issue-triage-v3.8.csv",
+    "gatesCsv": "data/controlled-sandbox-decision-gates-v3.8.csv",
+    "evidenceCsv": "data/controlled-sandbox-evidence-pack-v3.8.csv",
+    "packageJson": "data/controlled-sandbox-test-lab-package-v3.8.json"
+  },
+  "lanes": [
+    {
+      "id": "LAN-001",
+      "lane": "Barayamal founder and business owner lane",
+      "role": "Primary",
+      "status": "Ready",
+      "scope": "Founder/business owner onboarding, support topics, yarning meeting, proposal, accountability follow-up.",
+      "owner": "Barayamal sandbox admin",
+      "boundary": "No real founder, contact, business, revenue, hardship, legal, tax, client, or contract data."
+    },
+    {
+      "id": "LAN-002",
+      "lane": "Barayamal reviewer and advisor lane",
+      "role": "Support",
+      "status": "Configure",
+      "scope": "Mentor, advisory, partner observer, and Dean trusted reviewer rehearsal.",
+      "owner": "Review coordinator",
+      "boundary": "No unrestricted exports, no approval authority, no private reviewer evidence in public records."
+    },
+    {
+      "id": "LAN-003",
+      "lane": "First Nations Toastmasters member lane",
+      "role": "Controlled tester",
+      "status": "Ready",
+      "scope": "Member welcome, guest path, meeting roles, learning survey, sample motions.",
+      "owner": "Club facilitator",
+      "boundary": "No official Toastmasters forms, member numbers, payments, signatures, charter evidence, or private evaluations."
+    },
+    {
+      "id": "LAN-004",
+      "lane": "Cross-track operations and safety lane",
+      "role": "Control",
+      "status": "Configure",
+      "scope": "Support pause, incident tabletop, admin revoke, redaction, backup/export/delete, closeout.",
+      "owner": "Technical custodian",
+      "boundary": "No support, incident, access, consent, authority, access-log, deletion, or closeout evidence in public files."
+    }
+  ],
+  "fakeAccounts": [
+    {
+      "id": "ACC-001",
+      "track": "Barayamal",
+      "account": "Ari Founder Sample",
+      "role": "Founder participant",
+      "access": "Verified participant",
+      "script": "Submit fake interest, proposal, meeting RSVP, support topic.",
+      "mustNotAccess": "Must not see mentor notes, partner exports, or private review.",
+      "revokeRule": "Revoke before real pilot."
+    },
+    {
+      "id": "ACC-002",
+      "track": "Barayamal",
+      "account": "Mika Business Owner Sample",
+      "role": "Business owner participant",
+      "access": "Verified participant",
+      "script": "Submit sample business-stage survey and accountability comment.",
+      "mustNotAccess": "Must not enter ABN, income, client, contract, tax, or legal data.",
+      "revokeRule": "Revoke before real pilot."
+    },
+    {
+      "id": "ACC-003",
+      "track": "Barayamal",
+      "account": "Noah Program Sample",
+      "role": "Program participant",
+      "access": "Verified participant",
+      "script": "Join fake cohort, view public-safe updates, submit fake support preference.",
+      "mustNotAccess": "Must not upload eligibility or identity evidence.",
+      "revokeRule": "Revoke before real pilot."
+    },
+    {
+      "id": "ACC-004",
+      "track": "Barayamal",
+      "account": "Kai Mentor Sample",
+      "role": "Mentor",
+      "access": "Restricted reviewer",
+      "script": "View public-safe needs list and fake meeting availability.",
+      "mustNotAccess": "Must not see private founder records or conflicts.",
+      "revokeRule": "Disable until mentor policy approved."
+    },
+    {
+      "id": "ACC-005",
+      "track": "Barayamal",
+      "account": "Lani Partner Sample",
+      "role": "Partner observer",
+      "access": "Observer",
+      "script": "View public accountability and public-safe updates only.",
+      "mustNotAccess": "Must not export, comment on private records, or see participant identities.",
+      "revokeRule": "Keep observer-only."
+    },
+    {
+      "id": "ACC-006",
+      "track": "Barayamal",
+      "account": "Dean Advisory Sample",
+      "role": "Trusted reviewer",
+      "access": "Advisory reviewer",
+      "script": "Review public package, raise build findings, test boundary copy.",
+      "mustNotAccess": "Must not approve authority, privacy, IDS, official records, or real access.",
+      "revokeRule": "Time-box review access."
+    },
+    {
+      "id": "ACC-007",
+      "track": "Barayamal",
+      "account": "Barayamal Admin Sample",
+      "role": "Sandbox admin",
+      "access": "Local admin",
+      "script": "Configure spaces, components, fake accounts, and test data.",
+      "mustNotAccess": "Must not upload real records or grant approval authority.",
+      "revokeRule": "Revoke or convert before real pilot."
+    },
+    {
+      "id": "ACC-008",
+      "track": "Barayamal",
+      "account": "Privacy Reviewer Sample",
+      "role": "Privacy/IDS reviewer",
+      "access": "Restricted reviewer",
+      "script": "Check notice, consent, data boundary, redaction, export hold.",
+      "mustNotAccess": "Must not publish private decisions.",
+      "revokeRule": "Private approval route only."
+    },
+    {
+      "id": "ACC-009",
+      "track": "FN Toastmasters",
+      "account": "Tala Member Sample",
+      "role": "Sample member",
+      "access": "Verified participant",
+      "script": "View welcome path, choose meeting role, submit aggregate learning survey.",
+      "mustNotAccess": "Must not enter official member number or payment.",
+      "revokeRule": "Revoke before real pilot."
+    },
+    {
+      "id": "ACC-010",
+      "track": "FN Toastmasters",
+      "account": "Jin Guest Sample",
+      "role": "Guest participant",
+      "access": "Guest",
+      "script": "View public-safe meeting page and sample guest norms.",
+      "mustNotAccess": "Must not see private attendance or evaluations.",
+      "revokeRule": "Guest-only access."
+    },
+    {
+      "id": "ACC-011",
+      "track": "FN Toastmasters",
+      "account": "Rae Speaker Sample",
+      "role": "Meeting role holder",
+      "access": "Verified participant",
+      "script": "Take speaker role in fake agenda.",
+      "mustNotAccess": "Must not store private speech feedback.",
+      "revokeRule": "Revoke before real pilot."
+    },
+    {
+      "id": "ACC-012",
+      "track": "FN Toastmasters",
+      "account": "Mara Evaluator Sample",
+      "role": "Evaluator role",
+      "access": "Verified participant",
+      "script": "Submit public-safe sample feedback summary.",
+      "mustNotAccess": "Must not write personal evaluation history.",
+      "revokeRule": "Revoke before real pilot."
+    },
+    {
+      "id": "ACC-013",
+      "track": "FN Toastmasters",
+      "account": "Club Facilitator Sample",
+      "role": "Club facilitator",
+      "access": "Local admin",
+      "script": "Create meeting, sample role list, public-safe minutes.",
+      "mustNotAccess": "Must not create official Toastmasters records.",
+      "revokeRule": "Private official boundary required."
+    },
+    {
+      "id": "ACC-014",
+      "track": "FN Toastmasters",
+      "account": "Official Route Sample",
+      "role": "Official-route owner",
+      "access": "External owner",
+      "script": "Check external boundary copy and official handoff references.",
+      "mustNotAccess": "Must not store forms, payments, signatures, or charter evidence in Decidim.",
+      "revokeRule": "External system only."
+    },
+    {
+      "id": "ACC-015",
+      "track": "Cross-track",
+      "account": "Support Pause Sample",
+      "role": "Safety reviewer",
+      "access": "Restricted reviewer",
+      "script": "Trigger fake pause, incident route, consent-withdrawal tabletop.",
+      "mustNotAccess": "Must not publish affected-person details.",
+      "revokeRule": "Private safety route only."
+    },
+    {
+      "id": "ACC-016",
+      "track": "Cross-track",
+      "account": "Technical Custodian Sample",
+      "role": "Technical custodian",
+      "access": "System admin",
+      "script": "Run backup/export/delete, admin revoke, audit, and release validation.",
+      "mustNotAccess": "Must not keep admin access after test window.",
+      "revokeRule": "Revocation proof required."
+    }
+  ],
+  "testScripts": [
+    {
+      "id": "SCR-001",
+      "track": "Barayamal",
+      "script": "Founder interest to proposal",
+      "status": "Required",
+      "steps": "Fake founder submits interest, opens support topic proposal, receives admin answer.",
+      "expected": "Proposal and accountability item use sample data only.",
+      "owner": "Barayamal admin"
+    },
+    {
+      "id": "SCR-002",
+      "track": "Barayamal",
+      "script": "Business owner survey route",
+      "status": "Required",
+      "steps": "Sample business owner submits stage, sector, support-priority survey.",
+      "expected": "No ABN, revenue, client, tax, contract, or legal fields exist.",
+      "owner": "Program operator"
+    },
+    {
+      "id": "SCR-003",
+      "track": "Barayamal",
+      "script": "Founder yarning meeting",
+      "status": "Required",
+      "steps": "Fake participant RSVPs and facilitator publishes public-safe minutes.",
+      "expected": "Minutes omit attendee identity and private support detail.",
+      "owner": "Meeting facilitator"
+    },
+    {
+      "id": "SCR-004",
+      "track": "Barayamal",
+      "script": "Mentor access hold",
+      "status": "Hold",
+      "steps": "Mentor tries to access private founder notes before approval.",
+      "expected": "Access denied or component disabled.",
+      "owner": "Mentor coordinator"
+    },
+    {
+      "id": "SCR-005",
+      "track": "Barayamal",
+      "script": "Partner observer least privilege",
+      "status": "Required",
+      "steps": "Partner observer opens public updates and attempts private export.",
+      "expected": "Observer cannot see private exports or participant records.",
+      "owner": "Partner liaison"
+    },
+    {
+      "id": "SCR-006",
+      "track": "Barayamal",
+      "script": "Dean advisory finding",
+      "status": "Required",
+      "steps": "Dean sample reviewer logs a public build finding.",
+      "expected": "Finding cannot approve pilot or override authority.",
+      "owner": "Review coordinator"
+    },
+    {
+      "id": "SCR-007",
+      "track": "Barayamal",
+      "script": "Founder follow-up closeout",
+      "status": "Configure",
+      "steps": "Fake action is assigned, updated, and closed.",
+      "expected": "Closeout evidence remains public-safe status only.",
+      "owner": "Support lead"
+    },
+    {
+      "id": "SCR-008",
+      "track": "FN Toastmasters",
+      "script": "Member welcome path",
+      "status": "Required",
+      "steps": "Sample member opens welcome path and official boundary page.",
+      "expected": "Boundary states official records remain outside Decidim.",
+      "owner": "Club facilitator"
+    },
+    {
+      "id": "SCR-009",
+      "track": "FN Toastmasters",
+      "script": "Guest path stays guest-only",
+      "status": "Required",
+      "steps": "Guest views meeting info and attempts member-only action.",
+      "expected": "Guest cannot access member-only actions or official route.",
+      "owner": "Club facilitator"
+    },
+    {
+      "id": "SCR-010",
+      "track": "FN Toastmasters",
+      "script": "Meeting role agenda",
+      "status": "Required",
+      "steps": "Facilitator creates agenda with speaker, evaluator, timer, chair roles.",
+      "expected": "Agenda has fake names and public-safe minutes only.",
+      "owner": "Meeting chair"
+    },
+    {
+      "id": "SCR-011",
+      "track": "FN Toastmasters",
+      "script": "Learning survey aggregate",
+      "status": "Required",
+      "steps": "Sample member submits confidence survey.",
+      "expected": "Only aggregate sample result is visible publicly.",
+      "owner": "Learning lead"
+    },
+    {
+      "id": "SCR-012",
+      "track": "FN Toastmasters",
+      "script": "Official records exclusion",
+      "status": "Required",
+      "steps": "Tester searches for member number, payment, signature, charter evidence.",
+      "expected": "No official records exist in Decidim pages, CSV, JSON, or screenshots.",
+      "owner": "Official-route owner"
+    },
+    {
+      "id": "SCR-013",
+      "track": "FN Toastmasters",
+      "script": "Sample motion rehearsal",
+      "status": "Hold",
+      "steps": "Sample member creates a club idea or motion.",
+      "expected": "Copy says it is not an official Toastmasters decision.",
+      "owner": "Club facilitator"
+    },
+    {
+      "id": "SCR-014",
+      "track": "Cross-track",
+      "script": "Support pause tabletop",
+      "status": "Blocked",
+      "steps": "Safety reviewer triggers fake pause and support route.",
+      "expected": "Public page shows pause state without affected-person detail.",
+      "owner": "Safety reviewer"
+    },
+    {
+      "id": "SCR-015",
+      "track": "Cross-track",
+      "script": "Admin invite and revoke",
+      "status": "Required",
+      "steps": "Temporary admin is invited, used, revoked, and re-tested.",
+      "expected": "Revoked account cannot access admin area.",
+      "owner": "Technical custodian"
+    },
+    {
+      "id": "SCR-016",
+      "track": "Cross-track",
+      "script": "Redaction scan",
+      "status": "Required",
+      "steps": "Scan pages, docs, CSV, JSON, and screenshots for private-data terms.",
+      "expected": "No real records or official Toastmasters data are present.",
+      "owner": "Privacy reviewer"
+    },
+    {
+      "id": "SCR-017",
+      "track": "Cross-track",
+      "script": "Backup export delete proof",
+      "status": "Hold",
+      "steps": "Technical custodian proves backup, export, deletion, and restore in private environment.",
+      "expected": "Only version labels and pass/fail summary become public.",
+      "owner": "Technical custodian"
+    },
+    {
+      "id": "SCR-018",
+      "track": "Cross-track",
+      "script": "Go hold no-go closeout",
+      "status": "Required",
+      "steps": "Review all issues and evidence, then choose fake go/hold/no-go outcome.",
+      "expected": "Real launch remains blocked until private approvals pass.",
+      "owner": "Authority chair"
+    }
+  ],
+  "observerNotes": [
+    {
+      "id": "OBS-001",
+      "track": "Barayamal",
+      "noteClass": "Usability",
+      "publicSafeNote": "Founder could find support topic proposal without instruction.",
+      "privateBoundary": "Do not name real founder or business.",
+      "prompt": "What language reduced confusion?"
+    },
+    {
+      "id": "OBS-002",
+      "track": "Barayamal",
+      "noteClass": "Trust",
+      "publicSafeNote": "Business owner understood this was fake/sample only.",
+      "privateBoundary": "Do not record real business details.",
+      "prompt": "Was the fake-data warning early enough?"
+    },
+    {
+      "id": "OBS-003",
+      "track": "Barayamal",
+      "noteClass": "Access",
+      "publicSafeNote": "Mentor role did not expose private founder notes.",
+      "privateBoundary": "Do not record mentor conflict details.",
+      "prompt": "Did the role block feel understandable?"
+    },
+    {
+      "id": "OBS-004",
+      "track": "Barayamal",
+      "noteClass": "Advisory",
+      "publicSafeNote": "Dean advisory finding stayed separate from approval.",
+      "privateBoundary": "Do not treat advisory review as authority.",
+      "prompt": "Was the advisory boundary visible?"
+    },
+    {
+      "id": "OBS-005",
+      "track": "FN Toastmasters",
+      "noteClass": "Welcome",
+      "publicSafeNote": "Member welcome path explained meeting roles and official boundary.",
+      "privateBoundary": "Do not record official membership data.",
+      "prompt": "Was the official-route boundary clear?"
+    },
+    {
+      "id": "OBS-006",
+      "track": "FN Toastmasters",
+      "noteClass": "Guest",
+      "publicSafeNote": "Guest path did not imply official membership.",
+      "privateBoundary": "Do not record real attendance or access needs.",
+      "prompt": "Could a guest tell what they could and could not do?"
+    },
+    {
+      "id": "OBS-007",
+      "track": "FN Toastmasters",
+      "noteClass": "Learning",
+      "publicSafeNote": "Learning survey felt aggregate rather than personal evaluation.",
+      "privateBoundary": "Do not capture private speech feedback.",
+      "prompt": "Which wording kept feedback safe?"
+    },
+    {
+      "id": "OBS-008",
+      "track": "FN Toastmasters",
+      "noteClass": "Meeting",
+      "publicSafeNote": "Role agenda was easy to follow on mobile.",
+      "privateBoundary": "Do not publish real meeting participants.",
+      "prompt": "Did roles wrap cleanly on small screens?"
+    },
+    {
+      "id": "OBS-009",
+      "track": "Cross-track",
+      "noteClass": "Safety",
+      "publicSafeNote": "Pause route could be found without exposing incident details.",
+      "privateBoundary": "Do not record incident specifics.",
+      "prompt": "Could a tester find help quickly?"
+    },
+    {
+      "id": "OBS-010",
+      "track": "Cross-track",
+      "noteClass": "Data",
+      "publicSafeNote": "Redaction scan found no private terms.",
+      "privateBoundary": "Do not paste private evidence into notes.",
+      "prompt": "What file type needs more checking?"
+    },
+    {
+      "id": "OBS-011",
+      "track": "Cross-track",
+      "noteClass": "Admin",
+      "publicSafeNote": "Revoked account lost access in the retest.",
+      "privateBoundary": "Do not store real access logs in public.",
+      "prompt": "Was revoke proof sufficient?"
+    },
+    {
+      "id": "OBS-012",
+      "track": "Cross-track",
+      "noteClass": "Decision",
+      "publicSafeNote": "Go/hold/no-go gate used evidence rather than vibes.",
+      "privateBoundary": "Do not record private authority names.",
+      "prompt": "Which gate needs clearer evidence?"
+    }
+  ],
+  "issues": [
+    {
+      "id": "ISS-001",
+      "severity": "Critical",
+      "status": "Blocked",
+      "trigger": "Real personal or official record appears in public demo.",
+      "fix": "Stop test, remove record, rotate access if needed, document private incident route.",
+      "owner": "Privacy reviewer"
+    },
+    {
+      "id": "ISS-002",
+      "severity": "Critical",
+      "status": "Blocked",
+      "trigger": "Official Toastmasters member number, payment, signature, or charter evidence appears.",
+      "fix": "Stop test and move official route outside Decidim.",
+      "owner": "Official-route owner"
+    },
+    {
+      "id": "ISS-003",
+      "severity": "High",
+      "status": "Blocked",
+      "trigger": "Dean advisory finding is treated as launch approval.",
+      "fix": "Rewrite copy, gate approval to private authority process.",
+      "owner": "Authority chair"
+    },
+    {
+      "id": "ISS-004",
+      "severity": "High",
+      "status": "Blocked",
+      "trigger": "Partner observer can access private participant or export data.",
+      "fix": "Revoke observer, fix permission group, retest.",
+      "owner": "Technical custodian"
+    },
+    {
+      "id": "ISS-005",
+      "severity": "High",
+      "status": "Blocked",
+      "trigger": "Guest can perform member-only action.",
+      "fix": "Fix role/authorization and retest guest path.",
+      "owner": "Club facilitator"
+    },
+    {
+      "id": "ISS-006",
+      "severity": "High",
+      "status": "Hold",
+      "trigger": "Founder/business owner form asks for sensitive commercial details.",
+      "fix": "Remove fields or move to approved private intake.",
+      "owner": "Program operator"
+    },
+    {
+      "id": "ISS-007",
+      "severity": "Medium",
+      "status": "Hold",
+      "trigger": "Fake-data warning appears after form action.",
+      "fix": "Move warning before action and retest.",
+      "owner": "Comms lead"
+    },
+    {
+      "id": "ISS-008",
+      "severity": "Medium",
+      "status": "Hold",
+      "trigger": "Mobile page has horizontal overflow or clipped controls.",
+      "fix": "Fix layout and retest 390px viewport.",
+      "owner": "Frontend custodian"
+    },
+    {
+      "id": "ISS-009",
+      "severity": "Medium",
+      "status": "Hold",
+      "trigger": "Observer note asks for private identity or support details.",
+      "fix": "Replace prompt with public-safe wording.",
+      "owner": "Review coordinator"
+    },
+    {
+      "id": "ISS-010",
+      "severity": "Medium",
+      "status": "Managed",
+      "trigger": "Acceptance script has unclear owner.",
+      "fix": "Assign owner before live rehearsal.",
+      "owner": "Pilot owner"
+    },
+    {
+      "id": "ISS-011",
+      "severity": "Low",
+      "status": "Managed",
+      "trigger": "Test evidence filename inconsistent.",
+      "fix": "Rename artifact and update evidence pack.",
+      "owner": "Technical custodian"
+    },
+    {
+      "id": "ISS-012",
+      "severity": "Low",
+      "status": "Managed",
+      "trigger": "Public update copy implies live intake.",
+      "fix": "Change to fake-data demo language.",
+      "owner": "Comms lead"
+    }
+  ],
+  "decisionGates": [
+    {
+      "id": "GAT-001",
+      "gate": "Fake data only gate",
+      "state": "Required",
+      "evidence": "All seeds, screenshots, CSV, JSON, docs use fake/sample data.",
+      "goRule": "No real record present.",
+      "holdRule": "Any real record blocks release."
+    },
+    {
+      "id": "GAT-002",
+      "gate": "Barayamal lane pass",
+      "state": "Required",
+      "evidence": "Required Barayamal scripts pass or have approved hold.",
+      "goRule": "Founder/business owner path is testable.",
+      "holdRule": "Private or commercial details requested."
+    },
+    {
+      "id": "GAT-003",
+      "gate": "FN Toastmasters lane pass",
+      "state": "Required",
+      "evidence": "Required member/guest scripts pass.",
+      "goRule": "Official boundary is visible and enforced.",
+      "holdRule": "Official records appear in Decidim."
+    },
+    {
+      "id": "GAT-004",
+      "gate": "Role and revocation gate",
+      "state": "Required",
+      "evidence": "Fake admin, reviewer, observer, guest, and member roles tested.",
+      "goRule": "Revoked role loses access.",
+      "holdRule": "Any role keeps excess access."
+    },
+    {
+      "id": "GAT-005",
+      "gate": "Observer-note gate",
+      "state": "Configure",
+      "evidence": "Observer prompts are public-safe and useful.",
+      "goRule": "Notes produce improvement signal.",
+      "holdRule": "Prompts collect private identity or support details."
+    },
+    {
+      "id": "GAT-006",
+      "gate": "Issue triage gate",
+      "state": "Required",
+      "evidence": "Critical/high issues closed or formally held in private authority process.",
+      "goRule": "No unowned blocker remains.",
+      "holdRule": "Unowned critical/high issue remains."
+    },
+    {
+      "id": "GAT-007",
+      "gate": "Support and pause gate",
+      "state": "Blocked",
+      "evidence": "Fake support pause tabletop completed in private route.",
+      "goRule": "Pause route found without public incident details.",
+      "holdRule": "Incident details appear in public."
+    },
+    {
+      "id": "GAT-008",
+      "gate": "Backup/export/delete gate",
+      "state": "Hold",
+      "evidence": "Private proof exists for backup, export, delete, restore, and closeout.",
+      "goRule": "Public only shows pass/fail version.",
+      "holdRule": "No restore or deletion proof."
+    },
+    {
+      "id": "GAT-009",
+      "gate": "Private approval gate",
+      "state": "Blocked",
+      "evidence": "First Nations authority, privacy, IDS/data governance, support, official-route approvals recorded privately.",
+      "goRule": "Approval references exist outside public package.",
+      "holdRule": "Public demo used as approval record."
+    },
+    {
+      "id": "GAT-010",
+      "gate": "Launch decision gate",
+      "state": "Blocked",
+      "evidence": "Authority chooses go, hold, no-go, archive, or second fake-data iteration.",
+      "goRule": "Decision references evidence pack.",
+      "holdRule": "No authority decision."
+    }
+  ],
+  "evidencePack": [
+    {
+      "id": "EVP-001",
+      "dataClass": "Public safe",
+      "artifact": "Desktop screenshot - test lab default",
+      "location": "QA screenshot folder",
+      "acceptance": "Shows page identity and metrics with fake data."
+    },
+    {
+      "id": "EVP-002",
+      "dataClass": "Public safe",
+      "artifact": "Mobile screenshot - test lab",
+      "location": "QA screenshot folder",
+      "acceptance": "Proves 390px no-overflow check."
+    },
+    {
+      "id": "EVP-003",
+      "dataClass": "Public safe",
+      "artifact": "Barayamal script filter screenshot",
+      "location": "QA screenshot folder",
+      "acceptance": "Shows separate organisation lane."
+    },
+    {
+      "id": "EVP-004",
+      "dataClass": "Public safe",
+      "artifact": "Issue filter screenshot",
+      "location": "QA screenshot folder",
+      "acceptance": "Shows critical/high blockers are visible."
+    },
+    {
+      "id": "EVP-005",
+      "dataClass": "Public safe",
+      "artifact": "Package JSON viewer screenshot",
+      "location": "QA screenshot folder",
+      "acceptance": "Shows structured package loads."
+    },
+    {
+      "id": "EVP-006",
+      "dataClass": "Public safe",
+      "artifact": "HTTP manifest scan",
+      "location": "Deployment report",
+      "acceptance": "All entrypoints return HTTP 200."
+    },
+    {
+      "id": "EVP-007",
+      "dataClass": "Public safe",
+      "artifact": "Release validation output",
+      "location": "Deployment report",
+      "acceptance": "No missing entrypoints, catalog paths, or local links."
+    },
+    {
+      "id": "EVP-008",
+      "dataClass": "Private restricted",
+      "artifact": "Role revoke proof",
+      "location": "Private evidence vault",
+      "acceptance": "Revoked fake admin cannot access admin area."
+    },
+    {
+      "id": "EVP-009",
+      "dataClass": "Private restricted",
+      "artifact": "Support pause tabletop notes",
+      "location": "Private safety route",
+      "acceptance": "Incident details remain private."
+    },
+    {
+      "id": "EVP-010",
+      "dataClass": "Private restricted",
+      "artifact": "Backup/export/delete proof",
+      "location": "Private technical evidence",
+      "acceptance": "Restore and deletion proof exists."
+    },
+    {
+      "id": "EVP-011",
+      "dataClass": "Never public",
+      "artifact": "Authority quorum evidence",
+      "location": "Private authority meeting",
+      "acceptance": "Never stored in public repo."
+    },
+    {
+      "id": "EVP-012",
+      "dataClass": "Never public",
+      "artifact": "IDS/data governance decision evidence",
+      "location": "Private data governance room",
+      "acceptance": "Never stored in public repo."
+    },
+    {
+      "id": "EVP-013",
+      "dataClass": "Never public",
+      "artifact": "Official Toastmasters records",
+      "location": "External official route",
+      "acceptance": "Never stored in Decidim public sandbox."
+    },
+    {
+      "id": "EVP-014",
+      "dataClass": "Never public",
+      "artifact": "Affected-person support or incident details",
+      "location": "Private support route",
+      "acceptance": "Never published or exported publicly."
+    }
+  ]
+}

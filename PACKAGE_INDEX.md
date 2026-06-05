@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v3.7  
+Version: v3.8  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -153,9 +153,28 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
 
+## v3.8 Controlled Sandbox Test Lab Additions
+
+- `controlled-sandbox-test-lab.html` - public-safe fake-data lab for accounts, scripts, observer notes, issues, gates, and evidence.
+- `docs/controlled-sandbox-test-lab-playbook-v3.8.md`
+- `docs/fake-account-and-role-script-v3.8.md`
+- `docs/observer-note-and-issue-triage-guide-v3.8.md`
+- `docs/go-hold-no-go-decision-gates-v3.8.md`
+- `docs/public-demo-release-notes-v3.8.md`
+- `data/controlled-sandbox-test-lanes-v3.8.csv`
+- `data/controlled-sandbox-fake-accounts-v3.8.csv`
+- `data/controlled-sandbox-test-scripts-v3.8.csv`
+- `data/controlled-sandbox-observer-notes-v3.8.csv`
+- `data/controlled-sandbox-issue-triage-v3.8.csv`
+- `data/controlled-sandbox-decision-gates-v3.8.csv`
+- `data/controlled-sandbox-evidence-pack-v3.8.csv`
+- `data/controlled-sandbox-test-lab-package-v3.8.json`
+
+
 ## v3.7 Two-Track Pilot Onboarding Additions
 
 - `two-track-pilot-onboarding.html` - public-safe Barayamal organisation onboarding plus First Nations Toastmasters member tester.
+- `controlled-sandbox-test-lab.html` is the public Controlled Sandbox Test Lab for fake accounts, role scripts, observer notes, issues, decision gates, and evidence rules.
 - `docs/two-track-pilot-onboarding-playbook-v3.7.md`
 - `docs/barayamal-founder-onboarding-test-plan-v3.7.md`
 - `docs/fn-toastmasters-member-onboarding-test-plan-v3.7.md`

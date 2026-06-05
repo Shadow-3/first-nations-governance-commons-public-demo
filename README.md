@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v3.7
+Current package version: v3.8
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -60,6 +60,7 @@ Open `private-pilot-evidence-vault.html` to use Evidence Vault & Advisory Review
 Open `advisory-action-docket.html` to use Advisory Action Docket for owner follow-up, authority motions, escalation rules, and private meeting readiness after Dean advisory review.
 Open `decidim-build-blueprint.html` to use Decidim Build Blueprint for spaces, components, permissions, fake seed records, hosting controls, and build acceptance tests.
 Open `two-track-pilot-onboarding.html` to run Barayamal as the organisation onboarding test and First Nations Toastmasters as the controlled member onboarding tester.
+Open `controlled-sandbox-test-lab.html` to run fake accounts, scripts, observer notes, issue triage, gates, and evidence checks before any real private pilot.
 
 The demo shows:
 
@@ -91,6 +92,20 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v3.8.md`
+- `docs/controlled-sandbox-test-lab-playbook-v3.8.md`
+- `docs/fake-account-and-role-script-v3.8.md`
+- `docs/observer-note-and-issue-triage-guide-v3.8.md`
+- `docs/go-hold-no-go-decision-gates-v3.8.md`
+- `data/controlled-sandbox-test-lanes-v3.8.csv`
+- `data/controlled-sandbox-fake-accounts-v3.8.csv`
+- `data/controlled-sandbox-test-scripts-v3.8.csv`
+- `data/controlled-sandbox-observer-notes-v3.8.csv`
+- `data/controlled-sandbox-issue-triage-v3.8.csv`
+- `data/controlled-sandbox-decision-gates-v3.8.csv`
+- `data/controlled-sandbox-evidence-pack-v3.8.csv`
+- `data/controlled-sandbox-test-lab-package-v3.8.json`
+
 - `docs/public-demo-release-notes-v3.7.md`
 - `docs/two-track-pilot-onboarding-playbook-v3.7.md`
 - `docs/barayamal-founder-onboarding-test-plan-v3.7.md`
@@ -840,6 +855,17 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v3.8 Controlled Sandbox Test Lab Upgrade
+
+The v3.8 package adds a measurable fake-data rehearsal layer:
+
+- Four separated test lanes for Barayamal, Barayamal reviewers/advisors, First Nations Toastmasters, and cross-track operations.
+- Sixteen fake accounts with role scripts, must-not-access rules, and revoke rules.
+- Eighteen test scripts, twelve observer prompts, twelve issue triage records, ten decision gates, and fourteen evidence records.
+
+Use this version to test the private pilot process without real data. Real invites still require private authority, privacy, Indigenous Data Sovereignty/data governance, official Toastmasters boundary, support, admin revoke, backup/restore, monitoring, incident response, and closeout approval.
+
 
 ## v3.7 Two-Track Pilot Onboarding Upgrade
 

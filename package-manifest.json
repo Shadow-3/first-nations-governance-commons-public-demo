@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "3.7",
+  "version": "3.8",
   "date": "2026-06-05",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use Two-Track Pilot Onboarding as the default next fake-data layer: Barayamal is the primary First Nations organisation onboarding test, and First Nations Toastmasters is the smaller controlled member onboarding tester. Do not invite real founders, business owners, mentors, members, guests, partners, or officials until private authority, privacy, Indigenous Data Sovereignty/data governance, official Toastmasters boundary, support, access, monitoring, backup/restore, and closeout approvals pass.",
+  "recommendedDecision": "Use Controlled Sandbox Test Lab as the default next fake-data rehearsal: run Barayamal and First Nations Toastmasters with separate sample accounts, test scripts, observer notes, issue triage, decision gates, and evidence handling before any real private pilot. Do not invite real participants until private authority, privacy, Indigenous Data Sovereignty/data governance, official Toastmasters boundary, support, access, backup/restore, monitoring, incident response, and closeout approvals pass.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -253,13 +253,27 @@
     "data/two-track-component-map-v3.7.csv",
     "data/two-track-acceptance-tests-v3.7.csv",
     "data/two-track-risk-register-v3.7.csv",
-    "data/two-track-pilot-onboarding-package-v3.7.json"
+    "data/two-track-pilot-onboarding-package-v3.7.json",
+    "controlled-sandbox-test-lab.html",
+    "docs/controlled-sandbox-test-lab-playbook-v3.8.md",
+    "docs/fake-account-and-role-script-v3.8.md",
+    "docs/observer-note-and-issue-triage-guide-v3.8.md",
+    "docs/go-hold-no-go-decision-gates-v3.8.md",
+    "docs/public-demo-release-notes-v3.8.md",
+    "data/controlled-sandbox-test-lanes-v3.8.csv",
+    "data/controlled-sandbox-fake-accounts-v3.8.csv",
+    "data/controlled-sandbox-test-scripts-v3.8.csv",
+    "data/controlled-sandbox-observer-notes-v3.8.csv",
+    "data/controlled-sandbox-issue-triage-v3.8.csv",
+    "data/controlled-sandbox-decision-gates-v3.8.csv",
+    "data/controlled-sandbox-evidence-pack-v3.8.csv",
+    "data/controlled-sandbox-test-lab-package-v3.8.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v3.7.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.8.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -461,7 +475,17 @@
       "qa-v37-deployed-two-track-pilot-onboarding-barayamal-desktop.png",
       "qa-v37-deployed-two-track-pilot-onboarding-boundaries-desktop.png",
       "qa-v37-deployed-two-track-pilot-onboarding-mobile.png",
-      "qa-v37-deployed-two-track-pilot-onboarding-package-mobile.png"
+      "qa-v37-deployed-two-track-pilot-onboarding-package-mobile.png",
+      "qa-v38-local-controlled-sandbox-test-lab-desktop.png",
+      "qa-v38-local-controlled-sandbox-test-lab-barayamal-desktop.png",
+      "qa-v38-local-controlled-sandbox-test-lab-issues-desktop.png",
+      "qa-v38-local-controlled-sandbox-test-lab-mobile.png",
+      "qa-v38-local-controlled-sandbox-test-lab-package-mobile.png",
+      "qa-v38-deployed-controlled-sandbox-test-lab-desktop.png",
+      "qa-v38-deployed-controlled-sandbox-test-lab-barayamal-desktop.png",
+      "qa-v38-deployed-controlled-sandbox-test-lab-issues-desktop.png",
+      "qa-v38-deployed-controlled-sandbox-test-lab-mobile.png",
+      "qa-v38-deployed-controlled-sandbox-test-lab-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -1372,6 +1396,22 @@
       "data/two-track-acceptance-tests-v3.7.csv",
       "data/two-track-risk-register-v3.7.csv",
       "data/two-track-pilot-onboarding-package-v3.7.json"
+    ],
+    "controlledSandboxTestLab": [
+      "controlled-sandbox-test-lab.html",
+      "docs/controlled-sandbox-test-lab-playbook-v3.8.md",
+      "docs/fake-account-and-role-script-v3.8.md",
+      "docs/observer-note-and-issue-triage-guide-v3.8.md",
+      "docs/go-hold-no-go-decision-gates-v3.8.md",
+      "docs/public-demo-release-notes-v3.8.md",
+      "data/controlled-sandbox-test-lanes-v3.8.csv",
+      "data/controlled-sandbox-fake-accounts-v3.8.csv",
+      "data/controlled-sandbox-test-scripts-v3.8.csv",
+      "data/controlled-sandbox-observer-notes-v3.8.csv",
+      "data/controlled-sandbox-issue-triage-v3.8.csv",
+      "data/controlled-sandbox-decision-gates-v3.8.csv",
+      "data/controlled-sandbox-evidence-pack-v3.8.csv",
+      "data/controlled-sandbox-test-lab-package-v3.8.json"
     ]
   },
   "safetyRules": [
@@ -1424,7 +1464,11 @@
     "This v3.7 two-track onboarding package is public fake/sample data only. Do not collect, upload, seed, screenshot, export, or publish real founder, business owner, mentor, member, guest, official Toastmasters, payment, access, incident, authority, consent, signature, or private support records.",
     "Dean Foley / Barayamal can act as initial developer, custodian, and advisory trusted reviewer for the fake-data onboarding model, but cannot approve First Nations authority, privacy, Indigenous Data Sovereignty, official Toastmasters records, participant eligibility, or private member/founder data access.",
     "Barayamal is the primary First Nations organisation onboarding test for Indigenous founders, business owners, mentors, and program participants. First Nations Toastmasters is a smaller controlled member onboarding tester. Keep the tracks separate, fake-data-only, and gated until private authority, privacy, IDS/data governance, support, official-route, and environment approvals pass.",
-    "Do not invite real founders, business owners, Toastmasters members, mentors, guests, or partners into Decidim until a private environment, participant notice, consent route, eligibility path, support route, official Toastmasters boundary, admin revoke test, backup/restore proof, and First Nations authority decision are approved."
+    "Do not invite real founders, business owners, Toastmasters members, mentors, guests, or partners into Decidim until a private environment, participant notice, consent route, eligibility path, support route, official Toastmasters boundary, admin revoke test, backup/restore proof, and First Nations authority decision are approved.",
+    "This v3.8 lab is public fake/sample data only. Do not create, import, screenshot, export, publish, or test with real founder, business owner, mentor, member, guest, payment, signature, official Toastmasters, authority, consent, support, incident, access, or private pilot records.",
+    "Dean Foley / Barayamal may act as initial developer, custodian, advisory reviewer, and trusted reviewer for the fake-data lab, but cannot approve First Nations authority, privacy, Indigenous Data Sovereignty, official Toastmasters records, real participant access, or private pilot launch.",
+    "Use the Controlled Sandbox Test Lab only after v3.7 two-track onboarding is understood. Barayamal and First Nations Toastmasters must run as separate fake-data test tracks with separate fake accounts, observer notes, issue queues, evidence folders, go/hold/no-go gates, and closeout decisions.",
+    "A real private pilot remains blocked until every required fake-data script passes, critical and high issues are closed or accepted by the private authority process, evidence is redacted, admin revocation is proven, official Toastmasters records remain external, and private authority/privacy/IDS/data governance approvals are recorded outside this public package."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -2655,5 +2699,75 @@
     "advisoryRule": "Dean Foley / Barayamal can act as initial developer, custodian, and advisory trusted reviewer for the fake-data onboarding model, but cannot approve First Nations authority, privacy, Indigenous Data Sovereignty, official Toastmasters records, participant eligibility, or private member/founder data access.",
     "approvalRule": "Do not invite real founders, business owners, Toastmasters members, mentors, guests, or partners into Decidim until a private environment, participant notice, consent route, eligibility path, support route, official Toastmasters boundary, admin revoke test, backup/restore proof, and First Nations authority decision are approved.",
     "safetyRule": "This v3.7 two-track onboarding package is public fake/sample data only. Do not collect, upload, seed, screenshot, export, or publish real founder, business owner, mentor, member, guest, official Toastmasters, payment, access, incident, authority, consent, signature, or private support records."
+  },
+  "controlledSandboxTestLab": {
+    "entrypoint": "controlled-sandbox-test-lab.html",
+    "playbook": "docs/controlled-sandbox-test-lab-playbook-v3.8.md",
+    "accountScript": "docs/fake-account-and-role-script-v3.8.md",
+    "observerGuide": "docs/observer-note-and-issue-triage-guide-v3.8.md",
+    "gateGuide": "docs/go-hold-no-go-decision-gates-v3.8.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.8.md",
+    "dataFiles": [
+      "data/controlled-sandbox-test-lanes-v3.8.csv",
+      "data/controlled-sandbox-fake-accounts-v3.8.csv",
+      "data/controlled-sandbox-test-scripts-v3.8.csv",
+      "data/controlled-sandbox-observer-notes-v3.8.csv",
+      "data/controlled-sandbox-issue-triage-v3.8.csv",
+      "data/controlled-sandbox-decision-gates-v3.8.csv",
+      "data/controlled-sandbox-evidence-pack-v3.8.csv",
+      "data/controlled-sandbox-test-lab-package-v3.8.json"
+    ],
+    "primaryOrganisationTest": "Barayamal",
+    "controlledMemberTester": "First Nations Toastmasters",
+    "counts": {
+      "lanes": 4,
+      "fakeAccounts": 16,
+      "scripts": 18,
+      "observerNotes": 12,
+      "issues": 12,
+      "gates": 10,
+      "evidence": 14,
+      "labRecords": 86,
+      "barayamalScripts": 7,
+      "toastmastersScripts": 6,
+      "crossTrackScripts": 5,
+      "requiredScripts": 13,
+      "blockedIssues": 5,
+      "neverPublicEvidence": 4
+    },
+    "sourceAnchors": [
+      {
+        "label": "Decidim spaces",
+        "url": "https://docs.decidim.org/en/develop/admin/spaces.html"
+      },
+      {
+        "label": "Decidim components",
+        "url": "https://docs.decidim.org/en/develop/admin/components.html"
+      },
+      {
+        "label": "Decidim authorizations",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+      },
+      {
+        "label": "Decidim administrators",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/admins.html"
+      },
+      {
+        "label": "Decidim production checklist",
+        "url": "https://docs.decidim.org/en/develop/install/checklist.html"
+      },
+      {
+        "label": "Barayamal Toastmasters First Nations",
+        "url": "https://barayamal.com.au/toastmasters-first-nations/"
+      },
+      {
+        "label": "Toastmasters Start a Club",
+        "url": "https://www.toastmasters.org/Start-a-Club"
+      }
+    ],
+    "operatingRule": "Use the Controlled Sandbox Test Lab only after v3.7 two-track onboarding is understood. Barayamal and First Nations Toastmasters must run as separate fake-data test tracks with separate fake accounts, observer notes, issue queues, evidence folders, go/hold/no-go gates, and closeout decisions.",
+    "advisoryRule": "Dean Foley / Barayamal may act as initial developer, custodian, advisory reviewer, and trusted reviewer for the fake-data lab, but cannot approve First Nations authority, privacy, Indigenous Data Sovereignty, official Toastmasters records, real participant access, or private pilot launch.",
+    "decisionRule": "A real private pilot remains blocked until every required fake-data script passes, critical and high issues are closed or accepted by the private authority process, evidence is redacted, admin revocation is proven, official Toastmasters records remain external, and private authority/privacy/IDS/data governance approvals are recorded outside this public package.",
+    "safetyRule": "This v3.8 lab is public fake/sample data only. Do not create, import, screenshot, export, publish, or test with real founder, business owner, mentor, member, guest, payment, signature, official Toastmasters, authority, consent, support, incident, access, or private pilot records."
   }
 }
