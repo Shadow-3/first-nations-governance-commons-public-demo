@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "3.5",
+  "version": "3.6",
   "date": "2026-06-05",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use Advisory Action Docket as the default next private-meeting preparation layer after Evidence Vault & Advisory Review. Dean Foley / Barayamal can raise findings, recommendations, and escalations as advisory trusted reviewer, but cannot replace First Nations authority, Indigenous Data Sovereignty approval, privacy approval, official Toastmasters processes, technical approval, support readiness, monitoring, closeout, or the final private pilot go/hold/no-go decision.",
+  "recommendedDecision": "Use Decidim Build Blueprint as the default next fake-data build layer after Advisory Action Docket. Barayamal / Dean Foley can act as initial developer/custodian and advisory trusted reviewer, but cannot replace First Nations authority, Indigenous Data Sovereignty approval, privacy approval, official Toastmasters processes, technical approval, support readiness, monitoring, closeout, or the final private pilot go/hold/no-go decision.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -226,13 +226,26 @@
     "data/authority-motion-register-v3.5.csv",
     "data/escalation-and-stop-rules-v3.5.csv",
     "data/private-meeting-readiness-checks-v3.5.csv",
-    "data/advisory-action-docket-package-v3.5.json"
+    "data/advisory-action-docket-package-v3.5.json",
+    "decidim-build-blueprint.html",
+    "docs/decidim-build-blueprint-playbook-v3.6.md",
+    "docs/decidim-configuration-map-v3.6.md",
+    "docs/decidim-permission-and-authorisation-matrix-v3.6.md",
+    "docs/decidim-hosting-and-ops-brief-v3.6.md",
+    "docs/public-demo-release-notes-v3.6.md",
+    "data/decidim-space-configuration-v3.6.csv",
+    "data/decidim-component-backlog-v3.6.csv",
+    "data/decidim-permission-rules-v3.6.csv",
+    "data/decidim-seed-records-v3.6.csv",
+    "data/decidim-environment-controls-v3.6.csv",
+    "data/decidim-build-acceptance-tests-v3.6.csv",
+    "data/decidim-build-blueprint-package-v3.6.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v3.5.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.6.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -414,7 +427,17 @@
       "qa-v35-deployed-advisory-action-docket-blocked-desktop.png",
       "qa-v35-deployed-advisory-action-docket-motions-desktop.png",
       "qa-v35-deployed-advisory-action-docket-mobile.png",
-      "qa-v35-deployed-advisory-action-docket-package-mobile.png"
+      "qa-v35-deployed-advisory-action-docket-package-mobile.png",
+      "qa-v36-local-decidim-build-blueprint-desktop.png",
+      "qa-v36-local-decidim-build-blueprint-configure-desktop.png",
+      "qa-v36-local-decidim-build-blueprint-permissions-desktop.png",
+      "qa-v36-local-decidim-build-blueprint-mobile.png",
+      "qa-v36-local-decidim-build-blueprint-package-mobile.png",
+      "qa-v36-deployed-decidim-build-blueprint-desktop.png",
+      "qa-v36-deployed-decidim-build-blueprint-configure-desktop.png",
+      "qa-v36-deployed-decidim-build-blueprint-permissions-desktop.png",
+      "qa-v36-deployed-decidim-build-blueprint-mobile.png",
+      "qa-v36-deployed-decidim-build-blueprint-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -1294,6 +1317,21 @@
       "data/escalation-and-stop-rules-v3.5.csv",
       "data/private-meeting-readiness-checks-v3.5.csv",
       "data/advisory-action-docket-package-v3.5.json"
+    ],
+    "decidimBuildBlueprint": [
+      "decidim-build-blueprint.html",
+      "docs/decidim-build-blueprint-playbook-v3.6.md",
+      "docs/decidim-configuration-map-v3.6.md",
+      "docs/decidim-permission-and-authorisation-matrix-v3.6.md",
+      "docs/decidim-hosting-and-ops-brief-v3.6.md",
+      "docs/public-demo-release-notes-v3.6.md",
+      "data/decidim-space-configuration-v3.6.csv",
+      "data/decidim-component-backlog-v3.6.csv",
+      "data/decidim-permission-rules-v3.6.csv",
+      "data/decidim-seed-records-v3.6.csv",
+      "data/decidim-environment-controls-v3.6.csv",
+      "data/decidim-build-acceptance-tests-v3.6.csv",
+      "data/decidim-build-blueprint-package-v3.6.json"
     ]
   },
   "safetyRules": [
@@ -1338,7 +1376,11 @@
     "This public v3.5 action docket is fake/sample only. It must not contain real participant names, emails, access needs, incident details, official Toastmasters records, member numbers, payments, signatures, authority records, access logs, private decisions, or private pilot evidence.",
     "Dean Foley / Barayamal may act as advisory and trusted reviewer by raising findings, questions, recommendations, and escalations, but cannot approve the pilot, override First Nations authority, replace privacy or Indigenous Data Sovereignty review, approve official Toastmasters records, or receive unrestricted private evidence.",
     "Every advisory finding must become a public-safe action item with an owner type, evidence needed, acceptance proof, escalation route, and authority decision motion before any real private pilot action proceeds.",
-    "Do not open real intake, activate a private workspace, share private evidence, hand data to a provider, or scale the pilot until the advisory action docket is closed or deliberately carried as private meeting conditions by the approved First Nations authority group."
+    "Do not open real intake, activate a private workspace, share private evidence, hand data to a provider, or scale the pilot until the advisory action docket is closed or deliberately carried as private meeting conditions by the approved First Nations authority group.",
+    "This v3.6 blueprint is public fake/sample configuration only. It must not include real participants, member numbers, contact details, access needs, official Toastmasters records, private authority records, signatures, payments, incident details, or private pilot evidence.",
+    "Dean Foley / Barayamal can review this blueprint as initial developer and trusted advisor, but cannot approve First Nations authority, privacy, Indigenous Data Sovereignty, official Toastmasters records, or private participant data access.",
+    "Use native Decidim spaces, components, authorizations, admin roles, scheduled tasks, and production checklist controls before custom code. Custom modules are later-stage only after the fake-data blueprint passes acceptance.",
+    "Do not build a real private Decidim pilot from this public blueprint until authority, IDS/data governance, privacy, official Toastmasters boundary, private environment, access, support, monitoring, and closeout decisions are approved privately."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -2396,5 +2438,100 @@
     "advisoryRule": "Dean Foley / Barayamal may act as advisory and trusted reviewer by raising findings, questions, recommendations, and escalations, but cannot approve the pilot, override First Nations authority, replace privacy or Indigenous Data Sovereignty review, approve official Toastmasters records, or receive unrestricted private evidence.",
     "docketRule": "Every advisory finding must become a public-safe action item with an owner type, evidence needed, acceptance proof, escalation route, and authority decision motion before any real private pilot action proceeds.",
     "approvalRule": "Do not open real intake, activate a private workspace, share private evidence, hand data to a provider, or scale the pilot until the advisory action docket is closed or deliberately carried as private meeting conditions by the approved First Nations authority group."
+  },
+  "decidimBuildBlueprint": {
+    "entrypoint": "decidim-build-blueprint.html",
+    "playbook": "docs/decidim-build-blueprint-playbook-v3.6.md",
+    "configurationMap": "docs/decidim-configuration-map-v3.6.md",
+    "permissionMatrix": "docs/decidim-permission-and-authorisation-matrix-v3.6.md",
+    "hostingBrief": "docs/decidim-hosting-and-ops-brief-v3.6.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.6.md",
+    "dataFiles": [
+      "data/decidim-space-configuration-v3.6.csv",
+      "data/decidim-component-backlog-v3.6.csv",
+      "data/decidim-permission-rules-v3.6.csv",
+      "data/decidim-seed-records-v3.6.csv",
+      "data/decidim-environment-controls-v3.6.csv",
+      "data/decidim-build-acceptance-tests-v3.6.csv",
+      "data/decidim-build-blueprint-package-v3.6.json"
+    ],
+    "advisoryTrustedReviewer": "Dean Foley / Barayamal",
+    "counts": {
+      "spaces": 12,
+      "components": 18,
+      "permissionRules": 16,
+      "seedRecords": 22,
+      "environmentControls": 14,
+      "acceptanceTests": 16,
+      "blueprintRecords": 98,
+      "configureComponents": 9,
+      "blockedComponents": 2,
+      "restrictedPermissions": 13,
+      "blockedEnvironmentControls": 5,
+      "blockedAcceptanceTests": 5,
+      "neverPublicSeeds": 5
+    },
+    "noGoTriggers": [
+      "A builder treats the public blueprint as authority to open real intake.",
+      "Real participant, member, official Toastmasters, access, payment, incident, or authority data appears in the public Decidim sandbox, repository, screenshots, CSVs, or JSON.",
+      "A custom Decidim module is proposed before native spaces, components, authorizations, and permissions are tested.",
+      "Dean or Barayamal is given unrestricted private records because of the advisory/developer role.",
+      "The private pilot build starts without a target Decidim version, environment owner, backup/restore proof, SMTP/job setup, admin revoke test, and redaction QA.",
+      "Official Toastmasters records, forms, payments, member numbers, or charter acceptance are mixed into the public governance commons demo."
+    ],
+    "sourceAnchors": [
+      {
+        "label": "Decidim getting started",
+        "url": "https://docs.decidim.org/en/develop/install/index.html"
+      },
+      {
+        "label": "Decidim manual installation",
+        "url": "https://docs.decidim.org/en/develop/install/manual.html"
+      },
+      {
+        "label": "Decidim deployment",
+        "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+      },
+      {
+        "label": "Decidim spaces",
+        "url": "https://docs.decidim.org/en/develop/admin/spaces.html"
+      },
+      {
+        "label": "Decidim participatory spaces",
+        "url": "https://docs.decidim.org/en/develop/features/participatory-spaces.html"
+      },
+      {
+        "label": "Decidim components",
+        "url": "https://docs.decidim.org/en/develop/admin/components.html"
+      },
+      {
+        "label": "Decidim proposals",
+        "url": "https://docs.decidim.org/en/develop/admin/components/proposals.html"
+      },
+      {
+        "label": "Decidim authorizations",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+      },
+      {
+        "label": "Decidim administrators",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/admins.html"
+      },
+      {
+        "label": "Decidim production checklist",
+        "url": "https://docs.decidim.org/en/develop/install/checklist.html"
+      },
+      {
+        "label": "Barayamal Toastmasters First Nations",
+        "url": "https://barayamal.com.au/toastmasters-first-nations/"
+      },
+      {
+        "label": "Toastmasters Start a Club",
+        "url": "https://www.toastmasters.org/Start-a-Club"
+      }
+    ],
+    "safetyRule": "This v3.6 blueprint is public fake/sample configuration only. It must not include real participants, member numbers, contact details, access needs, official Toastmasters records, private authority records, signatures, payments, incident details, or private pilot evidence.",
+    "advisoryRule": "Dean Foley / Barayamal can review this blueprint as initial developer and trusted advisor, but cannot approve First Nations authority, privacy, Indigenous Data Sovereignty, official Toastmasters records, or private participant data access.",
+    "buildRule": "Use native Decidim spaces, components, authorizations, admin roles, scheduled tasks, and production checklist controls before custom code. Custom modules are later-stage only after the fake-data blueprint passes acceptance.",
+    "approvalRule": "Do not build a real private Decidim pilot from this public blueprint until authority, IDS/data governance, privacy, official Toastmasters boundary, private environment, access, support, monitoring, and closeout decisions are approved privately."
   }
 }

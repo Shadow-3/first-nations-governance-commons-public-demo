@@ -1,0 +1,15 @@
+id,control,status,owner,proof
+DBE-001,Target Decidim version selected,Blocked,Developer plus authority,"Choose supported version and document Ruby, Node, database, and upgrade path before build."
+DBE-002,Generated Rails/Decidim app,Configure,Developer,Use Decidim app generation flow rather than cloning core source for a normal installation.
+DBE-003,PostgreSQL configured,Configure,Developer,"Create database role and separate development, staging, and production databases."
+DBE-004,Node/npm and asset build checked,Configure,Developer,Confirm frontend assets build and precompile in the chosen environment.
+DBE-005,Image and file processing,Configure,Developer,Confirm ImageMagick/LibVips and ActiveStorage decisions before attachments.
+DBE-006,SMTP and notification sender,Blocked,Privacy reviewer,"Do not send real notifications until sender identity, notice, and unsubscribe are approved."
+DBE-007,Background jobs and scheduled tasks,Configure,Developer,"Configure mail digest, reminders, open-data export, inactive participant cleanup, and other required tasks."
+DBE-008,System admin bootstrap,Configure,Developer,"Create system admin, create organisation, then invite organisation admin through controlled route."
+DBE-009,Admin MFA and revoke test,Blocked,Technical custodian,"Test least privilege, admin revocation, participant manager route, and audit evidence privately."
+DBE-010,"Backup, export, delete, restore",Blocked,Technical custodian,Run backup and restore evidence privately before real pilot data exists.
+DBE-011,Staging/prod separation,Blocked,Technical custodian,"Keep public fake demo, private staging, and production data isolated."
+DBE-012,Monitoring and security updates,Configure,Technical custodian,"Name uptime, errors, dependency updates, security patches, and incident contact."
+DBE-013,Maps and geocoding policy,Hold,Privacy reviewer,Disable precise location features unless privacy and data reviewers approve.
+DBE-014,Open data export redaction,Hold,Data reviewer,Hold open data exports until redaction and IDS/privacy review pass.

@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v3.5
+Current package version: v3.6
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -58,6 +58,7 @@ Open `private-pilot-activation-drill.html` to use Activation Drill & Decision Re
 Open `pilot-control-tower.html` to use Pilot Control Tower for the consolidated stage, dependency, no-go, evidence, owner action, and decision-route review before any real private pilot decision.
 Open `private-pilot-evidence-vault.html` to use Evidence Vault & Advisory Review for Dean Foley / Barayamal trusted reviewer input, private evidence readiness, authority meeting steps, access rules, and decision gates.
 Open `advisory-action-docket.html` to use Advisory Action Docket for owner follow-up, authority motions, escalation rules, and private meeting readiness after Dean advisory review.
+Open `decidim-build-blueprint.html` to use Decidim Build Blueprint for spaces, components, permissions, fake seed records, hosting controls, and build acceptance tests.
 
 The demo shows:
 
@@ -89,6 +90,19 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v3.6.md`
+- `docs/decidim-build-blueprint-playbook-v3.6.md`
+- `docs/decidim-configuration-map-v3.6.md`
+- `docs/decidim-permission-and-authorisation-matrix-v3.6.md`
+- `docs/decidim-hosting-and-ops-brief-v3.6.md`
+- `data/decidim-space-configuration-v3.6.csv`
+- `data/decidim-component-backlog-v3.6.csv`
+- `data/decidim-permission-rules-v3.6.csv`
+- `data/decidim-seed-records-v3.6.csv`
+- `data/decidim-environment-controls-v3.6.csv`
+- `data/decidim-build-acceptance-tests-v3.6.csv`
+- `data/decidim-build-blueprint-package-v3.6.json`
+
 - `docs/public-demo-release-notes-v3.5.md`
 - `docs/advisory-action-docket-playbook-v3.5.md`
 - `docs/dean-advisory-findings-template-v3.5.md`
@@ -811,6 +825,22 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v3.6 Decidim Build Blueprint Upgrade
+
+The v3.6 package adds the implementation-ready Decidim configuration layer needed after the Advisory Action Docket:
+
+- Interactive Decidim Build Blueprint page.
+- Twelve Decidim space and organisation configuration rows.
+- Eighteen component backlog rows.
+- Sixteen permission and authorisation rules.
+- Twenty-two fake seed record definitions.
+- Fourteen hosting and environment controls.
+- Sixteen build acceptance tests.
+- Playbook, configuration map, permission matrix, hosting brief, CSV files, and machine-readable JSON package.
+
+Use this version to prepare a fake-data Decidim configuration sprint. Barayamal / Dean Foley remains initial developer/custodian and advisory trusted reviewer only; real activation still requires First Nations authority, IDS/data governance, privacy, technical, safety, official Toastmasters, monitoring, and closeout approval in a separate private environment.
+
 
 ## v3.5 Advisory Action Docket Upgrade
 

@@ -1,0 +1,843 @@
+{
+  "packageName": "Decidim Build Blueprint v3.6",
+  "version": "3.6",
+  "date": "2026-06-05",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "advisoryTrustedReviewer": "Dean Foley / Barayamal",
+  "mode": "public_demo_fake_sample_decidim_configuration_blueprint_only",
+  "reviewFinding": "v3.5 created accountable advisory actions, but it still did not provide a builder-ready Decidim configuration map for spaces, components, authorizations, fake seeds, environment controls, and acceptance tests.",
+  "buildRule": "Use native Decidim spaces, components, authorizations, admin roles, scheduled tasks, and production checklist controls before custom code. Custom modules are later-stage only after the fake-data blueprint passes acceptance.",
+  "advisoryRule": "Dean Foley / Barayamal can review this blueprint as initial developer and trusted advisor, but cannot approve First Nations authority, privacy, Indigenous Data Sovereignty, official Toastmasters records, or private participant data access.",
+  "approvalRule": "Do not build a real private Decidim pilot from this public blueprint until authority, IDS/data governance, privacy, official Toastmasters boundary, private environment, access, support, monitoring, and closeout decisions are approved privately.",
+  "safetyRule": "This v3.6 blueprint is public fake/sample configuration only. It must not include real participants, member numbers, contact details, access needs, official Toastmasters records, private authority records, signatures, payments, incident details, or private pilot evidence.",
+  "noGoTriggers": [
+    "A builder treats the public blueprint as authority to open real intake.",
+    "Real participant, member, official Toastmasters, access, payment, incident, or authority data appears in the public Decidim sandbox, repository, screenshots, CSVs, or JSON.",
+    "A custom Decidim module is proposed before native spaces, components, authorizations, and permissions are tested.",
+    "Dean or Barayamal is given unrestricted private records because of the advisory/developer role.",
+    "The private pilot build starts without a target Decidim version, environment owner, backup/restore proof, SMTP/job setup, admin revoke test, and redaction QA.",
+    "Official Toastmasters records, forms, payments, member numbers, or charter acceptance are mixed into the public governance commons demo."
+  ],
+  "counts": {
+    "spaces": 12,
+    "components": 18,
+    "permissionRules": 16,
+    "seedRecords": 22,
+    "environmentControls": 14,
+    "acceptanceTests": 16,
+    "blueprintRecords": 98,
+    "configureComponents": 9,
+    "blockedComponents": 2,
+    "restrictedPermissions": 13,
+    "blockedEnvironmentControls": 5,
+    "blockedAcceptanceTests": 5,
+    "neverPublicSeeds": 5
+  },
+  "sourceAnchors": [
+    {
+      "label": "Decidim getting started",
+      "url": "https://docs.decidim.org/en/develop/install/index.html"
+    },
+    {
+      "label": "Decidim manual installation",
+      "url": "https://docs.decidim.org/en/develop/install/manual.html"
+    },
+    {
+      "label": "Decidim deployment",
+      "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+    },
+    {
+      "label": "Decidim spaces",
+      "url": "https://docs.decidim.org/en/develop/admin/spaces.html"
+    },
+    {
+      "label": "Decidim participatory spaces",
+      "url": "https://docs.decidim.org/en/develop/features/participatory-spaces.html"
+    },
+    {
+      "label": "Decidim components",
+      "url": "https://docs.decidim.org/en/develop/admin/components.html"
+    },
+    {
+      "label": "Decidim proposals",
+      "url": "https://docs.decidim.org/en/develop/admin/components/proposals.html"
+    },
+    {
+      "label": "Decidim authorizations",
+      "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+    },
+    {
+      "label": "Decidim administrators",
+      "url": "https://docs.decidim.org/en/develop/admin/participants/admins.html"
+    },
+    {
+      "label": "Decidim production checklist",
+      "url": "https://docs.decidim.org/en/develop/install/checklist.html"
+    },
+    {
+      "label": "Barayamal Toastmasters First Nations",
+      "url": "https://barayamal.com.au/toastmasters-first-nations/"
+    },
+    {
+      "label": "Toastmasters Start a Club",
+      "url": "https://www.toastmasters.org/Start-a-Club"
+    }
+  ],
+  "files": {
+    "entrypoint": "decidim-build-blueprint.html",
+    "playbook": "docs/decidim-build-blueprint-playbook-v3.6.md",
+    "configurationMap": "docs/decidim-configuration-map-v3.6.md",
+    "permissionMatrix": "docs/decidim-permission-and-authorisation-matrix-v3.6.md",
+    "hostingBrief": "docs/decidim-hosting-and-ops-brief-v3.6.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.6.md",
+    "spacesCsv": "data/decidim-space-configuration-v3.6.csv",
+    "componentsCsv": "data/decidim-component-backlog-v3.6.csv",
+    "permissionsCsv": "data/decidim-permission-rules-v3.6.csv",
+    "seedCsv": "data/decidim-seed-records-v3.6.csv",
+    "environmentCsv": "data/decidim-environment-controls-v3.6.csv",
+    "acceptanceCsv": "data/decidim-build-acceptance-tests-v3.6.csv",
+    "packageJson": "data/decidim-build-blueprint-package-v3.6.json"
+  },
+  "spaces": [
+    {
+      "id": "DBS-001",
+      "name": "System organisation shell",
+      "spaceType": "Organisation",
+      "status": "Configure",
+      "decidimArea": "System panel",
+      "purpose": "Create one fake First Nations Governance Commons organisation with public demo hostname only.",
+      "owner": "System admin"
+    },
+    {
+      "id": "DBS-002",
+      "name": "Commons public assembly",
+      "spaceType": "Assembly",
+      "status": "Ready",
+      "decidimArea": "Assemblies",
+      "purpose": "Reusable public templates, release notes, contributor rules, and non-sensitive process models.",
+      "owner": "Public comms"
+    },
+    {
+      "id": "DBS-003",
+      "name": "Community Governance Hub",
+      "spaceType": "Assembly",
+      "status": "Configure",
+      "decidimArea": "Assemblies",
+      "purpose": "Main First Nations organisation hub with meetings, proposals, rules, accountability, and updates.",
+      "owner": "Local admin"
+    },
+    {
+      "id": "DBS-004",
+      "name": "First Nations Toastmasters controlled sample",
+      "spaceType": "Participatory process",
+      "status": "Configure",
+      "decidimArea": "Processes",
+      "purpose": "Fake/sample pilot process for speeches, roles, meeting feedback, motions, and learning outcomes.",
+      "owner": "Pilot operator"
+    },
+    {
+      "id": "DBS-005",
+      "name": "Authority approval process",
+      "spaceType": "Participatory process",
+      "status": "Blocked",
+      "decidimArea": "Processes",
+      "purpose": "Private-only approval flow for quorum, conditions, go/hold/no-go, expiry, and stop rules.",
+      "owner": "Pilot authority"
+    },
+    {
+      "id": "DBS-006",
+      "name": "IDS and privacy review process",
+      "spaceType": "Participatory process",
+      "status": "Blocked",
+      "decidimArea": "Processes",
+      "purpose": "Private-only review of data purpose, access, retention, deletion, notice, consent, and incident route.",
+      "owner": "Data and privacy reviewers"
+    },
+    {
+      "id": "DBS-007",
+      "name": "Provider handoff room",
+      "spaceType": "Assembly",
+      "status": "Hold",
+      "decidimArea": "Assemblies",
+      "purpose": "Fake-data provider scope, contract gates, delivery evidence, and source-code handover.",
+      "owner": "Build delivery lead"
+    },
+    {
+      "id": "DBS-008",
+      "name": "Partner accountability tracker",
+      "spaceType": "Participatory process",
+      "status": "Configure",
+      "decidimArea": "Processes",
+      "purpose": "Partner commitments, responses, due dates, public-safe progress, and unresolved issues.",
+      "owner": "Partner liaison"
+    },
+    {
+      "id": "DBS-009",
+      "name": "Participatory budget rehearsal",
+      "spaceType": "Participatory process",
+      "status": "Hold",
+      "decidimArea": "Budgets",
+      "purpose": "Fake priority budget votes and allocations after proposal and meeting flows are stable.",
+      "owner": "Local admin"
+    },
+    {
+      "id": "DBS-010",
+      "name": "Yarning circle meeting calendar",
+      "spaceType": "Assembly",
+      "status": "Ready",
+      "decidimArea": "Meetings",
+      "purpose": "Public-safe meeting schedule, agenda, minutes template, and offline-import route.",
+      "owner": "Facilitator"
+    },
+    {
+      "id": "DBS-011",
+      "name": "Support and access route",
+      "spaceType": "Participatory process",
+      "status": "Blocked",
+      "decidimArea": "Processes",
+      "purpose": "Private support route for access needs, incidents, pause triggers, and affected-person support.",
+      "owner": "Safety reviewer"
+    },
+    {
+      "id": "DBS-012",
+      "name": "Public accountability updates",
+      "spaceType": "Assembly",
+      "status": "Ready",
+      "decidimArea": "Accountability",
+      "purpose": "Public-safe what changed updates, accepted actions, delivery status, and archive summaries.",
+      "owner": "Public comms"
+    }
+  ],
+  "components": [
+    {
+      "id": "DBC-001",
+      "component": "Process rules page",
+      "decidimFeature": "Page",
+      "status": "Ready",
+      "targetSpace": "Community Governance Hub",
+      "configuration": "Plain-language process scope, who can participate, decision method, privacy boundary, and public-data rule.",
+      "acceptance": "Page renders with fake text only."
+    },
+    {
+      "id": "DBC-002",
+      "component": "Community priorities proposals",
+      "decidimFeature": "Proposals",
+      "status": "Configure",
+      "targetSpace": "Community Governance Hub",
+      "configuration": "Collect fake priorities and allow admin answers, states, tags, and meeting-origin links.",
+      "acceptance": "Create, moderate, answer, and export fake proposals."
+    },
+    {
+      "id": "DBC-003",
+      "component": "Yarning circle meetings",
+      "decidimFeature": "Meetings",
+      "status": "Configure",
+      "targetSpace": "Yarning circle meeting calendar",
+      "configuration": "Publish fake agendas, registrations if needed, minutes, attachments boundary, and proposal links.",
+      "acceptance": "Meeting minutes publish without private attendee records."
+    },
+    {
+      "id": "DBC-004",
+      "component": "Learning survey",
+      "decidimFeature": "Survey",
+      "status": "Configure",
+      "targetSpace": "First Nations Toastmasters controlled sample",
+      "configuration": "Fake feedback questions for confidence, facilitation, access, safety, and process clarity.",
+      "acceptance": "Survey works with sample responses only."
+    },
+    {
+      "id": "DBC-005",
+      "component": "Public updates blog",
+      "decidimFeature": "Blog",
+      "status": "Ready",
+      "targetSpace": "Commons public assembly",
+      "configuration": "Release notes, learning summaries, public-safe status updates, and no-authority caveats.",
+      "acceptance": "Post displays public-safe status only."
+    },
+    {
+      "id": "DBC-006",
+      "component": "Action accountability tracker",
+      "decidimFeature": "Accountability",
+      "status": "Configure",
+      "targetSpace": "Public accountability updates",
+      "configuration": "Accepted priorities become trackable actions with owner type, status, due date, and public evidence.",
+      "acceptance": "Accepted fake proposal links to accountability item."
+    },
+    {
+      "id": "DBC-007",
+      "component": "Budget rehearsal",
+      "decidimFeature": "Budgets",
+      "status": "Hold",
+      "targetSpace": "Participatory budget rehearsal",
+      "configuration": "Fake budget projects and vote allocation after authority and proposal settings pass.",
+      "acceptance": "Budget flow held until process rules approved."
+    },
+    {
+      "id": "DBC-008",
+      "component": "Authorizations and verification",
+      "decidimFeature": "Authorizations",
+      "status": "Blocked",
+      "targetSpace": "Authority approval process",
+      "configuration": "Choose public-safe fake verification and private eligibility route without uploading real ID documents.",
+      "acceptance": "No real identity documents collected in public demo."
+    },
+    {
+      "id": "DBC-009",
+      "component": "Component permission gates",
+      "decidimFeature": "Permissions",
+      "status": "Configure",
+      "targetSpace": "All pilot spaces",
+      "configuration": "Require selected authorizations for create, endorse, vote, comment, and admin actions.",
+      "acceptance": "Unauthorized fake user cannot perform restricted action."
+    },
+    {
+      "id": "DBC-010",
+      "component": "Admin invite and revoke",
+      "decidimFeature": "Administrators",
+      "status": "Configure",
+      "targetSpace": "System organisation shell",
+      "configuration": "Invite sample admins, participant manager, and revoke access after test.",
+      "acceptance": "Revoked user loses admin panel access."
+    },
+    {
+      "id": "DBC-011",
+      "component": "Offline import pathway",
+      "decidimFeature": "Proposals plus Meetings",
+      "status": "Configure",
+      "targetSpace": "Yarning circle meeting calendar",
+      "configuration": "Convert offline yarning circle outcomes into fake proposals and minutes without personal details.",
+      "acceptance": "Offline note creates public-safe proposal summary."
+    },
+    {
+      "id": "DBC-012",
+      "component": "Moderation and terms",
+      "decidimFeature": "Moderation",
+      "status": "Configure",
+      "targetSpace": "Community Governance Hub",
+      "configuration": "Terms, report route, moderation reasons, cultural safety notes, and abuse response.",
+      "acceptance": "Reported fake content can be hidden and logged."
+    },
+    {
+      "id": "DBC-013",
+      "component": "Official Toastmasters boundary page",
+      "decidimFeature": "Page",
+      "status": "Ready",
+      "targetSpace": "First Nations Toastmasters controlled sample",
+      "configuration": "State official forms, payments, member numbers, and charter acceptance stay outside the demo unless separately approved.",
+      "acceptance": "Boundary page is visible before sample process links."
+    },
+    {
+      "id": "DBC-014",
+      "component": "Private authority motions",
+      "decidimFeature": "Proposals",
+      "status": "Blocked",
+      "targetSpace": "Authority approval process",
+      "configuration": "Use private process only for quorum and motions; public page shows status but no decision evidence.",
+      "acceptance": "Blocked until private environment exists."
+    },
+    {
+      "id": "DBC-015",
+      "component": "Partner response board",
+      "decidimFeature": "Debates",
+      "status": "Hold",
+      "targetSpace": "Partner accountability tracker",
+      "configuration": "Allow structured fake partner responses and unresolved issue notes after moderation rules pass.",
+      "acceptance": "Partner cannot control process or access private data."
+    },
+    {
+      "id": "DBC-016",
+      "component": "Participant newsletter",
+      "decidimFeature": "Newsletter",
+      "status": "Hold",
+      "targetSpace": "Commons public assembly",
+      "configuration": "Send only public-safe updates after privacy notice, consent, unsubscribe, and sender identity pass.",
+      "acceptance": "Held until SMTP and notice are approved."
+    },
+    {
+      "id": "DBC-017",
+      "component": "Map fields off by default",
+      "decidimFeature": "Maps",
+      "status": "Configure",
+      "targetSpace": "Meetings and proposals",
+      "configuration": "Disable or minimise location precision unless private approval permits location fields.",
+      "acceptance": "No precise private addresses in public content."
+    },
+    {
+      "id": "DBC-018",
+      "component": "Open data and exports",
+      "decidimFeature": "Open data",
+      "status": "Hold",
+      "targetSpace": "System organisation shell",
+      "configuration": "Use scheduled exports only after redaction, privacy, and data-governance review.",
+      "acceptance": "Public export excludes private and official records."
+    }
+  ],
+  "permissionRules": [
+    {
+      "id": "DBP-001",
+      "role": "Public visitor",
+      "status": "Allow",
+      "allowed": "View public-safe pages, proposals, meetings, updates, release notes, and fake sample data.",
+      "limit": "Cannot create, vote, see private evidence, or infer authority approval."
+    },
+    {
+      "id": "DBP-002",
+      "role": "Registered participant",
+      "status": "Restricted",
+      "allowed": "Comment or propose only where the process allows it and public terms are accepted.",
+      "limit": "No real pilot participation until private approval."
+    },
+    {
+      "id": "DBP-003",
+      "role": "Verified participant",
+      "status": "Restricted",
+      "allowed": "Can support, vote, or submit in restricted components after approved fake/private authorization.",
+      "limit": "No public ID document upload."
+    },
+    {
+      "id": "DBP-004",
+      "role": "Local admin",
+      "status": "Restricted",
+      "allowed": "Manage assigned spaces, components, proposals, meetings, pages, and accountability items.",
+      "limit": "Cannot approve authority, privacy, IDS, or official records alone."
+    },
+    {
+      "id": "DBP-005",
+      "role": "First Nations authority chair",
+      "status": "Restricted",
+      "allowed": "Chairs private motions, conditions, expiry, go/hold/no-go, and stop-rule decisions.",
+      "limit": "Private authority evidence never public."
+    },
+    {
+      "id": "DBP-006",
+      "role": "Elder or cultural authority",
+      "status": "Restricted",
+      "allowed": "Advises on process legitimacy, cultural safety, and meeting protocol where invited.",
+      "limit": "Cultural material never public by default."
+    },
+    {
+      "id": "DBP-007",
+      "role": "Facilitator",
+      "status": "Restricted",
+      "allowed": "Creates meeting summaries and offline import records using approved public-safe templates.",
+      "limit": "No private attendance or access-needs details in public notes."
+    },
+    {
+      "id": "DBP-008",
+      "role": "Dean advisory reviewer",
+      "status": "Advisory",
+      "allowed": "Reviews public package, asks questions, raises findings, and checks build feasibility.",
+      "limit": "Cannot approve pilot or receive unrestricted private evidence."
+    },
+    {
+      "id": "DBP-009",
+      "role": "Barayamal developer admin",
+      "status": "Restricted",
+      "allowed": "Builds, configures, tests, and documents fake-data environment as initial developer/custodian.",
+      "limit": "Developer custody is not First Nations authority."
+    },
+    {
+      "id": "DBP-010",
+      "role": "Provider fake-data reviewer",
+      "status": "Restricted",
+      "allowed": "Reviews public build pack, fake seed data, and acceptance tests for quoting or delivery.",
+      "limit": "No production export or private data."
+    },
+    {
+      "id": "DBP-011",
+      "role": "Toastmasters official-route owner",
+      "status": "Restricted",
+      "allowed": "Keeps official forms, member numbers, payments, signatures, and charter pathway outside demo.",
+      "limit": "Official records not stored in Decidim unless separately approved."
+    },
+    {
+      "id": "DBP-012",
+      "role": "Data reviewer",
+      "status": "Restricted",
+      "allowed": "Approves data classes, access, retention, deletion, reporting, export, and return route.",
+      "limit": "Private evidence only."
+    },
+    {
+      "id": "DBP-013",
+      "role": "Privacy reviewer",
+      "status": "Restricted",
+      "allowed": "Approves notice, consent, withdrawal, correction, minimisation, and incident response.",
+      "limit": "No real intake until privacy decision passes."
+    },
+    {
+      "id": "DBP-014",
+      "role": "Safety reviewer",
+      "status": "Restricted",
+      "allowed": "Approves pause trigger, support route, incident handling, and affected-person support.",
+      "limit": "Incident details never public."
+    },
+    {
+      "id": "DBP-015",
+      "role": "Participant manager",
+      "status": "Restricted",
+      "allowed": "Handles impersonation/support workflows if enabled for admin assistance.",
+      "limit": "Use only after privacy and access approval."
+    },
+    {
+      "id": "DBP-016",
+      "role": "Unapproved external partner",
+      "status": "Blocked",
+      "allowed": "May read public package only.",
+      "limit": "No admin, evidence, exports, messages, or participant access."
+    }
+  ],
+  "seedRecords": [
+    {
+      "id": "DBR-001",
+      "record": "Sample organisation profile",
+      "target": "Organisation",
+      "dataClass": "Public safe",
+      "sample": "First Nations Governance Commons fake organisation profile."
+    },
+    {
+      "id": "DBR-002",
+      "record": "Community hub landing copy",
+      "target": "Page",
+      "dataClass": "Public safe",
+      "sample": "Plain-language description of the sample hub and no-real-data rule."
+    },
+    {
+      "id": "DBR-003",
+      "record": "Toastmasters sample process intro",
+      "target": "Page",
+      "dataClass": "Public safe",
+      "sample": "Fake process intro for confidence, speaking, leadership, and meeting roles."
+    },
+    {
+      "id": "DBR-004",
+      "record": "Proposal: youth speaking circle",
+      "target": "Proposals",
+      "dataClass": "Public safe",
+      "sample": "Sample proposal for a youth speaking circle with admin answer."
+    },
+    {
+      "id": "DBR-005",
+      "record": "Proposal: elder welcome protocol",
+      "target": "Proposals",
+      "dataClass": "Public safe",
+      "sample": "Sample proposal describing meeting opening protocol without cultural restricted details."
+    },
+    {
+      "id": "DBR-006",
+      "record": "Proposal: hybrid meeting support",
+      "target": "Proposals",
+      "dataClass": "Public safe",
+      "sample": "Sample proposal for online/offline meeting access support."
+    },
+    {
+      "id": "DBR-007",
+      "record": "Meeting: sample yarning agenda",
+      "target": "Meetings",
+      "dataClass": "Public safe",
+      "sample": "Fake agenda, roles, and minutes summary."
+    },
+    {
+      "id": "DBR-008",
+      "record": "Meeting: speech practice session",
+      "target": "Meetings",
+      "dataClass": "Public safe",
+      "sample": "Fake meeting record with no attendees or evaluations."
+    },
+    {
+      "id": "DBR-009",
+      "record": "Survey: confidence check",
+      "target": "Survey",
+      "dataClass": "Public safe",
+      "sample": "Fake survey questions and aggregate-only output."
+    },
+    {
+      "id": "DBR-010",
+      "record": "Survey: access route check",
+      "target": "Survey",
+      "dataClass": "Private restricted",
+      "sample": "Private-only support signal; no public access-needs details."
+    },
+    {
+      "id": "DBR-011",
+      "record": "Budget: sample learning fund",
+      "target": "Budgets",
+      "dataClass": "Public safe",
+      "sample": "Fake budget project options for rehearsal only."
+    },
+    {
+      "id": "DBR-012",
+      "record": "Accountability: publish meeting outcomes",
+      "target": "Accountability",
+      "dataClass": "Public safe",
+      "sample": "Accepted action with owner type and public-safe status."
+    },
+    {
+      "id": "DBR-013",
+      "record": "Accountability: close support route",
+      "target": "Accountability",
+      "dataClass": "Private restricted",
+      "sample": "Private status only; public shows owner type and hold."
+    },
+    {
+      "id": "DBR-014",
+      "record": "Authority motion placeholder",
+      "target": "Proposals",
+      "dataClass": "Never public",
+      "sample": "Private motion shell only; public package records no decision evidence."
+    },
+    {
+      "id": "DBR-015",
+      "record": "IDS decision placeholder",
+      "target": "Page",
+      "dataClass": "Never public",
+      "sample": "Private-only data-governance record placeholder."
+    },
+    {
+      "id": "DBR-016",
+      "record": "Privacy decision placeholder",
+      "target": "Page",
+      "dataClass": "Never public",
+      "sample": "Private-only privacy record placeholder."
+    },
+    {
+      "id": "DBR-017",
+      "record": "Official Toastmasters boundary memo",
+      "target": "Page",
+      "dataClass": "Public safe",
+      "sample": "Boundary note for forms, member numbers, payments, signatures, and charter acceptance."
+    },
+    {
+      "id": "DBR-018",
+      "record": "Provider handoff sample",
+      "target": "Page",
+      "dataClass": "Public safe",
+      "sample": "Fake-data scope, no production export, and quote assumptions."
+    },
+    {
+      "id": "DBR-019",
+      "record": "Admin revoke test record",
+      "target": "Audit",
+      "dataClass": "Never public",
+      "sample": "Private admin access test result; public package shows pass/fail only."
+    },
+    {
+      "id": "DBR-020",
+      "record": "Backup restore test record",
+      "target": "Ops",
+      "dataClass": "Never public",
+      "sample": "Private restore evidence; public summary only."
+    },
+    {
+      "id": "DBR-021",
+      "record": "Public release note",
+      "target": "Blog",
+      "dataClass": "Public safe",
+      "sample": "Public-safe release note after redaction review."
+    },
+    {
+      "id": "DBR-022",
+      "record": "Closeout archive note",
+      "target": "Accountability",
+      "dataClass": "Private restricted",
+      "sample": "Private archive/deletion decision; public summary after approval."
+    }
+  ],
+  "environmentControls": [
+    {
+      "id": "DBE-001",
+      "control": "Target Decidim version selected",
+      "status": "Blocked",
+      "owner": "Developer plus authority",
+      "proof": "Choose supported version and document Ruby, Node, database, and upgrade path before build."
+    },
+    {
+      "id": "DBE-002",
+      "control": "Generated Rails/Decidim app",
+      "status": "Configure",
+      "owner": "Developer",
+      "proof": "Use Decidim app generation flow rather than cloning core source for a normal installation."
+    },
+    {
+      "id": "DBE-003",
+      "control": "PostgreSQL configured",
+      "status": "Configure",
+      "owner": "Developer",
+      "proof": "Create database role and separate development, staging, and production databases."
+    },
+    {
+      "id": "DBE-004",
+      "control": "Node/npm and asset build checked",
+      "status": "Configure",
+      "owner": "Developer",
+      "proof": "Confirm frontend assets build and precompile in the chosen environment."
+    },
+    {
+      "id": "DBE-005",
+      "control": "Image and file processing",
+      "status": "Configure",
+      "owner": "Developer",
+      "proof": "Confirm ImageMagick/LibVips and ActiveStorage decisions before attachments."
+    },
+    {
+      "id": "DBE-006",
+      "control": "SMTP and notification sender",
+      "status": "Blocked",
+      "owner": "Privacy reviewer",
+      "proof": "Do not send real notifications until sender identity, notice, and unsubscribe are approved."
+    },
+    {
+      "id": "DBE-007",
+      "control": "Background jobs and scheduled tasks",
+      "status": "Configure",
+      "owner": "Developer",
+      "proof": "Configure mail digest, reminders, open-data export, inactive participant cleanup, and other required tasks."
+    },
+    {
+      "id": "DBE-008",
+      "control": "System admin bootstrap",
+      "status": "Configure",
+      "owner": "Developer",
+      "proof": "Create system admin, create organisation, then invite organisation admin through controlled route."
+    },
+    {
+      "id": "DBE-009",
+      "control": "Admin MFA and revoke test",
+      "status": "Blocked",
+      "owner": "Technical custodian",
+      "proof": "Test least privilege, admin revocation, participant manager route, and audit evidence privately."
+    },
+    {
+      "id": "DBE-010",
+      "control": "Backup, export, delete, restore",
+      "status": "Blocked",
+      "owner": "Technical custodian",
+      "proof": "Run backup and restore evidence privately before real pilot data exists."
+    },
+    {
+      "id": "DBE-011",
+      "control": "Staging/prod separation",
+      "status": "Blocked",
+      "owner": "Technical custodian",
+      "proof": "Keep public fake demo, private staging, and production data isolated."
+    },
+    {
+      "id": "DBE-012",
+      "control": "Monitoring and security updates",
+      "status": "Configure",
+      "owner": "Technical custodian",
+      "proof": "Name uptime, errors, dependency updates, security patches, and incident contact."
+    },
+    {
+      "id": "DBE-013",
+      "control": "Maps and geocoding policy",
+      "status": "Hold",
+      "owner": "Privacy reviewer",
+      "proof": "Disable precise location features unless privacy and data reviewers approve."
+    },
+    {
+      "id": "DBE-014",
+      "control": "Open data export redaction",
+      "status": "Hold",
+      "owner": "Data reviewer",
+      "proof": "Hold open data exports until redaction and IDS/privacy review pass."
+    }
+  ],
+  "acceptanceTests": [
+    {
+      "id": "DBT-001",
+      "test": "Home page and organisation render",
+      "status": "Ready",
+      "expected": "Visitor can open fake organisation without framework errors."
+    },
+    {
+      "id": "DBT-002",
+      "test": "Create and answer fake proposal",
+      "status": "Required",
+      "expected": "Admin creates sample proposal, changes state, and publishes public-safe answer."
+    },
+    {
+      "id": "DBT-003",
+      "test": "Meeting agenda and minutes",
+      "status": "Required",
+      "expected": "Admin publishes fake agenda and minutes without attendee details."
+    },
+    {
+      "id": "DBT-004",
+      "test": "Offline import",
+      "status": "Required",
+      "expected": "Facilitator imports public-safe offline outcome into proposal or meeting summary."
+    },
+    {
+      "id": "DBT-005",
+      "test": "Authorization gate",
+      "status": "Blocked",
+      "expected": "Unverified fake user cannot perform restricted support/vote action."
+    },
+    {
+      "id": "DBT-006",
+      "test": "Admin invite and revoke",
+      "status": "Blocked",
+      "expected": "Sample admin loses access after revoke test."
+    },
+    {
+      "id": "DBT-007",
+      "test": "Dean advisory account boundary",
+      "status": "Blocked",
+      "expected": "Dean reviewer can see public package only, not private vault or admin panels."
+    },
+    {
+      "id": "DBT-008",
+      "test": "Provider fake-data boundary",
+      "status": "Required",
+      "expected": "Provider reviewer can access fake build pack but not private records or exports."
+    },
+    {
+      "id": "DBT-009",
+      "test": "Toastmasters official boundary",
+      "status": "Required",
+      "expected": "Official forms, payments, member numbers, signatures, and charter acceptance stay outside demo."
+    },
+    {
+      "id": "DBT-010",
+      "test": "Budget rehearsal held",
+      "status": "Hold",
+      "expected": "Budget component remains held until proposal and authority rules pass."
+    },
+    {
+      "id": "DBT-011",
+      "test": "Accountability item from proposal",
+      "status": "Required",
+      "expected": "Accepted fake proposal creates or links to accountability item."
+    },
+    {
+      "id": "DBT-012",
+      "test": "Mobile low-bandwidth check",
+      "status": "Required",
+      "expected": "Core flow renders on 390 px viewport and avoids oversized media."
+    },
+    {
+      "id": "DBT-013",
+      "test": "Backup and restore proof",
+      "status": "Blocked",
+      "expected": "Private restore evidence is recorded before real data collection."
+    },
+    {
+      "id": "DBT-014",
+      "test": "Public redaction scan",
+      "status": "Ready",
+      "expected": "Repository, CSVs, JSON, screenshots, and release notes contain fake/sample data only."
+    },
+    {
+      "id": "DBT-015",
+      "test": "Privacy incident stop rule",
+      "status": "Blocked",
+      "expected": "Fake incident tabletop pauses process, routes support, and blocks public details."
+    },
+    {
+      "id": "DBT-016",
+      "test": "Authority decision not public",
+      "status": "Required",
+      "expected": "Public package shows status only; private decision evidence stays outside demo."
+    }
+  ]
+}

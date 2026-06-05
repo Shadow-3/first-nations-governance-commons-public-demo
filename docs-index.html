@@ -344,6 +344,7 @@
     <a class="btn" href="pilot-control-tower.html">Control Tower</a>
 <a class="btn" href="private-pilot-evidence-vault.html">Evidence Vault</a>
 <a class="btn" href="advisory-action-docket.html">Action Docket</a>
+<a class="btn" href="decidim-build-blueprint.html">Decidim Blueprint</a>
     <a class="btn" href="index.html">Open Demo</a>
     <div class="label">Public demo - fake data only</div>
   </header>
@@ -453,6 +454,10 @@
       <a href="#actiondocket">
         <strong>Action Docket</strong>
         <span>Convert advisory findings into owner actions, authority motions, and readiness checks.</span>
+      </a>
+      <a href="#decidimblueprint">
+        <strong>Decidim Blueprint</strong>
+        <span>Spaces, components, permissions, seed records, hosting controls, and acceptance tests.</span>
       </a>
       <a href="#governance">
         <strong>Governance/Data</strong>
@@ -638,6 +643,13 @@
         </div>
         <div class="doc-row">
           <div>
+            <strong>Decidim Build Blueprint</strong>
+            <span>Implementation-ready Decidim configuration map for the next fake-data build sprint.</span>
+          </div>
+          <a class="btn primary" href="decidim-build-blueprint.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
             <strong>Public demo prototype</strong>
             <span>Sample Decidim-style participatory process.</span>
           </div>
@@ -667,9 +679,9 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v3.5 Advisory Action Docket upgrade.</span>
+            <span>What changed in the v3.6 Decidim Build Blueprint upgrade.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v3.5.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v3.6.md">Open</a>
         </div>
       </div>
     </section>
@@ -1055,6 +1067,29 @@
         <div class="doc-row"><div><strong>Evidence Vault & Advisory Review</strong><span>Dean advisory review, private evidence vault, access rules, authority meeting steps, and decision gates.</span></div><a class="btn primary" href="private-pilot-evidence-vault.html">Open</a></div>
       </div>
     </section>
+    <section id="decidimblueprint">
+      <div class="section-head">
+        <div>
+          <h2>Decidim Build Blueprint</h2>
+          <p>Use these files to run a fake-data Decidim configuration sprint before any real private pilot build.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Decidim Build Blueprint</strong><span>Interactive spaces, components, permissions, seed records, environment controls, and tests.</span></div><a class="btn primary" href="decidim-build-blueprint.html">Open</a></div>
+        <div class="doc-row"><div><strong>Build blueprint playbook v3.6</strong><span>How to turn the governance model into a Decidim configuration sprint.</span></div><a class="btn" href="docs/decidim-build-blueprint-playbook-v3.6.md">Open</a></div>
+        <div class="doc-row"><div><strong>Configuration map v3.6</strong><span>Spaces, components, fake seed records, and first sprint sequence.</span></div><a class="btn" href="docs/decidim-configuration-map-v3.6.md">Open</a></div>
+        <div class="doc-row"><div><strong>Permission and authorisation matrix v3.6</strong><span>Who can view, create, moderate, advise, approve, or access private records.</span></div><a class="btn" href="docs/decidim-permission-and-authorisation-matrix-v3.6.md">Open</a></div>
+        <div class="doc-row"><div><strong>Hosting and ops brief v3.6</strong><span>Rails app, PostgreSQL, assets, SMTP, jobs, backups, monitoring, and release gates.</span></div><a class="btn" href="docs/decidim-hosting-and-ops-brief-v3.6.md">Open</a></div>
+        <div class="doc-row"><div><strong>Space configuration CSV</strong><span>Twelve Decidim space and organisation configuration rows.</span></div><a class="btn" href="data/decidim-space-configuration-v3.6.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Component backlog CSV</strong><span>Eighteen component configuration rows.</span></div><a class="btn" href="data/decidim-component-backlog-v3.6.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Permission rules CSV</strong><span>Sixteen role and access rules.</span></div><a class="btn" href="data/decidim-permission-rules-v3.6.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Seed records CSV</strong><span>Twenty-two fake seed record definitions.</span></div><a class="btn" href="data/decidim-seed-records-v3.6.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Environment controls CSV</strong><span>Fourteen hosting and operational controls.</span></div><a class="btn" href="data/decidim-environment-controls-v3.6.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Acceptance tests CSV</strong><span>Sixteen build acceptance tests.</span></div><a class="btn" href="data/decidim-build-acceptance-tests-v3.6.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Blueprint package JSON</strong><span>Machine-readable v3.6 build blueprint package.</span></div><a class="btn" href="data/decidim-build-blueprint-package-v3.6.json">Open</a></div>
+        <div class="doc-row"><div><strong>Release notes v3.6</strong><span>What changed in the Decidim Build Blueprint upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v3.6.md">Open</a></div>
+      </div>
+    </section>
     <section id="actiondocket">
       <div class="section-head">
         <div>
@@ -1213,7 +1248,7 @@
     </section>
 
     <footer>
-      Version v3.5. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v3.6. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
   <script>

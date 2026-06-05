@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v3.5  
+Version: v3.6  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -153,9 +153,27 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
 
+## v3.6 Decidim Build Blueprint Additions
+
+- `decidim-build-blueprint.html` - public-safe Decidim spaces, components, permissions, seed records, environment controls, and acceptance tests.
+- `docs/decidim-build-blueprint-playbook-v3.6.md`
+- `docs/decidim-configuration-map-v3.6.md`
+- `docs/decidim-permission-and-authorisation-matrix-v3.6.md`
+- `docs/decidim-hosting-and-ops-brief-v3.6.md`
+- `docs/public-demo-release-notes-v3.6.md`
+- `data/decidim-space-configuration-v3.6.csv`
+- `data/decidim-component-backlog-v3.6.csv`
+- `data/decidim-permission-rules-v3.6.csv`
+- `data/decidim-seed-records-v3.6.csv`
+- `data/decidim-environment-controls-v3.6.csv`
+- `data/decidim-build-acceptance-tests-v3.6.csv`
+- `data/decidim-build-blueprint-package-v3.6.json`
+
+
 ## v3.5 Advisory Action Docket Additions
 
 - `advisory-action-docket.html` - public-safe owner follow-up and authority motion page.
+- `decidim-build-blueprint.html` is the public Decidim Build Blueprint page for spaces, components, permissions, fake seed records, environment controls, and build acceptance tests.
 - `docs/advisory-action-docket-playbook-v3.5.md`
 - `docs/dean-advisory-findings-template-v3.5.md`
 - `docs/private-owner-follow-up-pack-v3.5.md`

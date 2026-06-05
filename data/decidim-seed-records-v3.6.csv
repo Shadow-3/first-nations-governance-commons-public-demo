@@ -1,0 +1,23 @@
+id,record,target,dataClass,sample
+DBR-001,Sample organisation profile,Organisation,Public safe,First Nations Governance Commons fake organisation profile.
+DBR-002,Community hub landing copy,Page,Public safe,Plain-language description of the sample hub and no-real-data rule.
+DBR-003,Toastmasters sample process intro,Page,Public safe,"Fake process intro for confidence, speaking, leadership, and meeting roles."
+DBR-004,Proposal: youth speaking circle,Proposals,Public safe,Sample proposal for a youth speaking circle with admin answer.
+DBR-005,Proposal: elder welcome protocol,Proposals,Public safe,Sample proposal describing meeting opening protocol without cultural restricted details.
+DBR-006,Proposal: hybrid meeting support,Proposals,Public safe,Sample proposal for online/offline meeting access support.
+DBR-007,Meeting: sample yarning agenda,Meetings,Public safe,"Fake agenda, roles, and minutes summary."
+DBR-008,Meeting: speech practice session,Meetings,Public safe,Fake meeting record with no attendees or evaluations.
+DBR-009,Survey: confidence check,Survey,Public safe,Fake survey questions and aggregate-only output.
+DBR-010,Survey: access route check,Survey,Private restricted,Private-only support signal; no public access-needs details.
+DBR-011,Budget: sample learning fund,Budgets,Public safe,Fake budget project options for rehearsal only.
+DBR-012,Accountability: publish meeting outcomes,Accountability,Public safe,Accepted action with owner type and public-safe status.
+DBR-013,Accountability: close support route,Accountability,Private restricted,Private status only; public shows owner type and hold.
+DBR-014,Authority motion placeholder,Proposals,Never public,Private motion shell only; public package records no decision evidence.
+DBR-015,IDS decision placeholder,Page,Never public,Private-only data-governance record placeholder.
+DBR-016,Privacy decision placeholder,Page,Never public,Private-only privacy record placeholder.
+DBR-017,Official Toastmasters boundary memo,Page,Public safe,"Boundary note for forms, member numbers, payments, signatures, and charter acceptance."
+DBR-018,Provider handoff sample,Page,Public safe,"Fake-data scope, no production export, and quote assumptions."
+DBR-019,Admin revoke test record,Audit,Never public,Private admin access test result; public package shows pass/fail only.
+DBR-020,Backup restore test record,Ops,Never public,Private restore evidence; public summary only.
+DBR-021,Public release note,Blog,Public safe,Public-safe release note after redaction review.
+DBR-022,Closeout archive note,Accountability,Private restricted,Private archive/deletion decision; public summary after approval.

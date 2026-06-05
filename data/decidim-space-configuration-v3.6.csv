@@ -1,0 +1,13 @@
+id,name,spaceType,status,decidimArea,purpose,owner
+DBS-001,System organisation shell,Organisation,Configure,System panel,Create one fake First Nations Governance Commons organisation with public demo hostname only.,System admin
+DBS-002,Commons public assembly,Assembly,Ready,Assemblies,"Reusable public templates, release notes, contributor rules, and non-sensitive process models.",Public comms
+DBS-003,Community Governance Hub,Assembly,Configure,Assemblies,"Main First Nations organisation hub with meetings, proposals, rules, accountability, and updates.",Local admin
+DBS-004,First Nations Toastmasters controlled sample,Participatory process,Configure,Processes,"Fake/sample pilot process for speeches, roles, meeting feedback, motions, and learning outcomes.",Pilot operator
+DBS-005,Authority approval process,Participatory process,Blocked,Processes,"Private-only approval flow for quorum, conditions, go/hold/no-go, expiry, and stop rules.",Pilot authority
+DBS-006,IDS and privacy review process,Participatory process,Blocked,Processes,"Private-only review of data purpose, access, retention, deletion, notice, consent, and incident route.",Data and privacy reviewers
+DBS-007,Provider handoff room,Assembly,Hold,Assemblies,"Fake-data provider scope, contract gates, delivery evidence, and source-code handover.",Build delivery lead
+DBS-008,Partner accountability tracker,Participatory process,Configure,Processes,"Partner commitments, responses, due dates, public-safe progress, and unresolved issues.",Partner liaison
+DBS-009,Participatory budget rehearsal,Participatory process,Hold,Budgets,Fake priority budget votes and allocations after proposal and meeting flows are stable.,Local admin
+DBS-010,Yarning circle meeting calendar,Assembly,Ready,Meetings,"Public-safe meeting schedule, agenda, minutes template, and offline-import route.",Facilitator
+DBS-011,Support and access route,Participatory process,Blocked,Processes,"Private support route for access needs, incidents, pause triggers, and affected-person support.",Safety reviewer
+DBS-012,Public accountability updates,Assembly,Ready,Accountability,"Public-safe what changed updates, accepted actions, delivery status, and archive summaries.",Public comms

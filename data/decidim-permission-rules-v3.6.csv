@@ -1,0 +1,17 @@
+id,role,status,allowed,limit
+DBP-001,Public visitor,Allow,"View public-safe pages, proposals, meetings, updates, release notes, and fake sample data.","Cannot create, vote, see private evidence, or infer authority approval."
+DBP-002,Registered participant,Restricted,Comment or propose only where the process allows it and public terms are accepted.,No real pilot participation until private approval.
+DBP-003,Verified participant,Restricted,"Can support, vote, or submit in restricted components after approved fake/private authorization.",No public ID document upload.
+DBP-004,Local admin,Restricted,"Manage assigned spaces, components, proposals, meetings, pages, and accountability items.","Cannot approve authority, privacy, IDS, or official records alone."
+DBP-005,First Nations authority chair,Restricted,"Chairs private motions, conditions, expiry, go/hold/no-go, and stop-rule decisions.",Private authority evidence never public.
+DBP-006,Elder or cultural authority,Restricted,"Advises on process legitimacy, cultural safety, and meeting protocol where invited.",Cultural material never public by default.
+DBP-007,Facilitator,Restricted,Creates meeting summaries and offline import records using approved public-safe templates.,No private attendance or access-needs details in public notes.
+DBP-008,Dean advisory reviewer,Advisory,"Reviews public package, asks questions, raises findings, and checks build feasibility.",Cannot approve pilot or receive unrestricted private evidence.
+DBP-009,Barayamal developer admin,Restricted,"Builds, configures, tests, and documents fake-data environment as initial developer/custodian.",Developer custody is not First Nations authority.
+DBP-010,Provider fake-data reviewer,Restricted,"Reviews public build pack, fake seed data, and acceptance tests for quoting or delivery.",No production export or private data.
+DBP-011,Toastmasters official-route owner,Restricted,"Keeps official forms, member numbers, payments, signatures, and charter pathway outside demo.",Official records not stored in Decidim unless separately approved.
+DBP-012,Data reviewer,Restricted,"Approves data classes, access, retention, deletion, reporting, export, and return route.",Private evidence only.
+DBP-013,Privacy reviewer,Restricted,"Approves notice, consent, withdrawal, correction, minimisation, and incident response.",No real intake until privacy decision passes.
+DBP-014,Safety reviewer,Restricted,"Approves pause trigger, support route, incident handling, and affected-person support.",Incident details never public.
+DBP-015,Participant manager,Restricted,Handles impersonation/support workflows if enabled for admin assistance.,Use only after privacy and access approval.
+DBP-016,Unapproved external partner,Blocked,May read public package only.,"No admin, evidence, exports, messages, or participant access."
