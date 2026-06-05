@@ -1,0 +1,13 @@
+id,artifact,audience,channel,status,purpose,excludedData,approval
+CP-001,Public information page,Public reviewers,Public demo,Required,Explain fake/sample boundary and private pilot pathway,"Real names, contacts, meeting links, official status claims",Pilot authority and privacy reviewer
+CP-002,EOI receipt,Interested participants,Private email or form response,Required,"Confirm receipt, notice, withdrawal route, and expected next step",Public CCs or visible invite lists,Pilot coordinator
+CP-003,Demo invite,Demo-first contacts,Private invite,Required,"Share meeting link, conduct rule, access support, and pause route",Public meeting link or attendance list,Pilot coordinator and moderator
+CP-004,Consent and withdrawal notice,All real contacts,Private intake route,Required,"State what is collected, why, who can access it, and how to withdraw",Legal overclaim or hidden collection,Privacy reviewer
+CP-005,Access support message,People requesting support,Private support route,Ready,Offer support without exposing needs to public reviewers or supporters,Access details in public summaries,Access support contact
+CP-006,Founder next-step message,Founder candidates,Private email,Ready,Explain founder confirmation and official handoff boundary,Official forms in Governance Commons public files,Toastmasters launch lead
+CP-007,Supporter next-step message,Supporters and mentors,Private email,Ready,Separate support from member-data access and charter authority,"Member lists, access needs, payment details",Pilot authority
+CP-008,Official handoff note,Official process owner,Official Toastmasters route,Hold,Move official paperwork outside the public package,"Public copy of signatures, member numbers, payment records",Toastmasters launch lead
+CP-009,Weekly internal update,Pilot team,Private workspace,Ready,"Review gates, incidents, withdrawals, founder count, and operator load",Unminimised private notes or unnecessary detail,Pilot authority
+CP-010,Incident pause message,Affected private pilot group,Private channel,Hold,"Pause safely, name next update time, and protect details",Incident details in public package,Safety reviewer
+CP-011,Public progress summary,Public reviewers,Public demo or update,Hold,"Share only aggregate progress, no-go status, and learning","Identities, contacts, access needs, incident details, official records",QA reviewer and pilot authority
+CP-012,Closeout thank-you and decision note,Pilot contacts and reviewers,Private plus redacted public summary,Required,"Close the loop, explain decision, and record deletion/retention rule",Raw private records or official paperwork,Pilot authority and data reviewer

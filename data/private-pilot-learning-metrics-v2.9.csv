@@ -1,0 +1,11 @@
+id,metric,cadence,owner,source,publicRule,noGoThreshold,status
+LM-001,Founder candidates,Weekly,Toastmasters launch lead,Private intake state board,Aggregate number only,Any founder counted without confirmation route,Required
+LM-002,Demo-first attendance,Weekly,Pilot coordinator,Private attendance status,Aggregate attendance only,Attendance list appears publicly,Required
+LM-003,Founder conversion,Closeout,Pilot authority,Founder candidate and confirmed states,Percentage only when sample size is safe,Supporters included in founder denominator,Ready
+LM-004,Access support response time,Weekly,Access support contact,Private support queue,Median or service statement only,Unanswered support request after agreed clock,Required
+LM-005,Withdrawal response time,Weekly,Privacy reviewer,Withdrawal request log,Aggregate count and response compliance only,No deletion/correction result recorded,Required
+LM-006,Official handoff completion,Weekly,Toastmasters launch lead,Official handoff register,Status summary only,Official documents stored in public package,Required
+LM-007,Incident count and closure,Weekly,Safety reviewer,Private incident closeout log,"No details, only closed/open count if safe",Open high-risk incident without pause decision,Required
+LM-008,Public evidence breaches,Every release,QA reviewer,Redaction checklist,Zero-breach statement only,One real private field in public evidence,Required
+LM-009,Operator load,Weekly,Barayamal / Dean Foley,Private work log,Capacity risk only,One-person dependency blocks response clocks,Ready
+LM-010,Decision readiness,Closeout,Pilot authority,Launch gates and learning brief,"Proceed, hold, or no-go summary",Decision lacks evidence or deletion/retention result,Required

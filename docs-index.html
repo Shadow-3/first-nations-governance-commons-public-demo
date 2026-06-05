@@ -314,6 +314,7 @@
     <a class="btn" href="private-pilot-readiness.html">Pilot Readiness</a>
     <a class="btn" href="private-pilot-ops.html">Pilot Ops</a>
     <a class="btn" href="private-pilot-implementation.html">Pilot Build</a>
+    <a class="btn" href="private-pilot-launch.html">Pilot Launch</a>
     <a class="btn" href="index.html">Open Demo</a>
     <div class="label">Public demo - fake data only</div>
   </header>
@@ -395,6 +396,10 @@
       <a href="#pilotimplementation">
         <strong>Pilot Build</strong>
         <span>Prepare private environment, minimum data schema, access register, dry run, and go/no-go decision.</span>
+      </a>
+      <a href="#pilotlaunch">
+        <strong>Pilot Launch</strong>
+        <span>Open the controlled private pilot, run first-30-day learning, and decide proceed, hold, or no-go.</span>
       </a>
       <a href="#governance">
         <strong>Governance/Data</strong>
@@ -531,6 +536,13 @@
         </div>
         <div class="doc-row">
           <div>
+            <strong>Private Pilot Launch Control</strong>
+            <span>Launch gates, intake state board, communications pack, learning metrics, and closeout decision brief.</span>
+          </div>
+          <a class="btn primary" href="private-pilot-launch.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
             <strong>Public demo prototype</strong>
             <span>Sample Decidim-style participatory process.</span>
           </div>
@@ -560,9 +572,9 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v2.8 Private Pilot Implementation upgrade.</span>
+            <span>What changed in the v2.9 Private Pilot Launch Control upgrade.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v2.8.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v2.9.md">Open</a>
         </div>
       </div>
     </section>
@@ -827,7 +839,29 @@
         <div class="doc-row"><div><strong>Environment controls CSV</strong><span>Twelve private environment controls for workspace, hosting, access, security, backup, audit, forms, meeting links, incidents, evidence, retention, and handover.</span></div><a class="btn" href="data/private-pilot-environment-controls-v2.8.csv">Open</a></div>
         <div class="doc-row"><div><strong>Access register CSV</strong><span>Ten role templates for admin, editor, reviewer, support, status-only, and no-private-access roles.</span></div><a class="btn" href="data/private-pilot-access-register-template-v2.8.csv">Open</a></div>
         <div class="doc-row"><div><strong>Implementation package JSON</strong><span>Machine-readable v2.8 package summary, counts, files, no-go triggers, source anchors, safety rule, and implementation rule.</span></div><a class="btn" href="data/private-pilot-implementation-package-v2.8.json">Open</a></div>
+        <div class="doc-row"><div><strong>Private Pilot Launch Control</strong><span>Move from private environment approval into controlled launch gates, intake, communications, learning, and closeout decision.</span></div><a class="btn primary" href="private-pilot-launch.html">Open</a></div>
         <div class="doc-row"><div><strong>Release notes v2.8</strong><span>What changed in the Private Pilot Implementation upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v2.8.md">Open</a></div>
+      </div>
+    </section>
+
+    <section id="pilotlaunch">
+      <div class="section-head">
+        <div>
+          <h2>Private Pilot Launch Control</h2>
+          <p>Use these files after v2.8 implementation approval to open a controlled private pilot, run the first 30 days, and make an evidence-backed proceed, hold, or no-go decision.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Private Pilot Launch Control</strong><span>Interactive launch gates, intake states, communications, learning metrics, and generated launch brief.</span></div><a class="btn primary" href="private-pilot-launch.html">Open</a></div>
+        <div class="doc-row"><div><strong>Private pilot launch playbook v2.9</strong><span>30-day controlled launch sequence, gates, evidence, and stop rules.</span></div><a class="btn" href="docs/private-pilot-launch-playbook-v2.9.md">Open</a></div>
+        <div class="doc-row"><div><strong>Toastmasters private pilot launch plan v2.9</strong><span>Controlled First Nations Toastmasters launch plan and official boundary.</span></div><a class="btn" href="docs/toastmasters-private-pilot-launch-plan-v2.9.md">Open</a></div>
+        <div class="doc-row"><div><strong>Learning and decision brief v2.9</strong><span>Weekly learning inputs and closeout decision rule.</span></div><a class="btn" href="docs/private-pilot-learning-and-decision-brief-v2.9.md">Open</a></div>
+        <div class="doc-row"><div><strong>Launch gates CSV</strong><span>Eighteen gates across authority, environment, privacy, consent, access, official boundary, meeting, incident, communications, decision, and closeout.</span></div><a class="btn" href="data/private-pilot-launch-gates-v2.9.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Intake state board CSV</strong><span>Fourteen private participant states with public evidence rules and stop conditions.</span></div><a class="btn" href="data/private-pilot-intake-state-board-v2.9.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Communications pack CSV</strong><span>Twelve approved communication artifacts for public information, consent, demo, support, incident, handoff, and closeout.</span></div><a class="btn" href="data/private-pilot-comms-pack-v2.9.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Learning metrics CSV</strong><span>Ten weekly or closeout measures for founder readiness, support, withdrawal, official handoff, incidents, public evidence, operator load, and decision readiness.</span></div><a class="btn" href="data/private-pilot-learning-metrics-v2.9.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Launch package JSON</strong><span>Machine-readable v2.9 package summary, counts, files, no-go triggers, source anchors, launch gates, intake states, communications, and learning metrics.</span></div><a class="btn" href="data/private-pilot-launch-package-v2.9.json">Open</a></div>
+        <div class="doc-row"><div><strong>Release notes v2.9</strong><span>What changed in the Private Pilot Launch Control upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v2.9.md">Open</a></div>
       </div>
     </section>
 
@@ -945,7 +979,7 @@
     </section>
 
     <footer>
-      Version v2.8. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v2.9. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
   <script>

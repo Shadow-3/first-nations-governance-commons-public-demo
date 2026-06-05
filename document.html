@@ -591,6 +591,7 @@
     <a class="btn" href="private-pilot-readiness.html">Pilot Readiness</a>
     <a class="btn" href="private-pilot-ops.html">Pilot Ops</a>
     <a class="btn" href="private-pilot-implementation.html">Pilot Build</a>
+    <a class="btn" href="private-pilot-launch.html">Pilot Launch</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -641,6 +642,9 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Private pilot launch playbook", path: "docs/private-pilot-launch-playbook-v2.9.md", type: "markdown", description: "v2.9 controlled launch gates, intake states, communications, learning, and closeout decision." },
+      { category: "Start Here", title: "Toastmasters private pilot launch plan", path: "docs/toastmasters-private-pilot-launch-plan-v2.9.md", type: "markdown", description: "Controlled First Nations Toastmasters launch plan and official handoff boundary." },
+      { category: "Start Here", title: "Private pilot learning and decision brief", path: "docs/private-pilot-learning-and-decision-brief-v2.9.md", type: "markdown", description: "Weekly learning inputs and proceed, hold, or no-go decision rule." },
       { category: "Start Here", title: "Private pilot implementation playbook", path: "docs/private-pilot-implementation-playbook-v2.8.md", type: "markdown", description: "v2.8 private environment, minimum data schema, access register, dry run, and go/no-go preparation." },
       { category: "Start Here", title: "Toastmasters private pilot implementation plan", path: "docs/toastmasters-private-pilot-implementation-plan-v2.8.md", type: "markdown", description: "Controlled First Nations Toastmasters private pilot preparation path." },
       { category: "Start Here", title: "Private pilot operations runbook", path: "docs/private-pilot-operations-runbook-v2.7.md", type: "markdown", description: "v2.7 pilot operations controls for run-day checks, participant states, incidents, handoff, and closeout." },
@@ -663,6 +667,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v2.9", path: "docs/public-demo-release-notes-v2.9.md", type: "markdown", description: "Private Pilot Launch Control upgrade summary." },
       { category: "Release Notes", title: "Release notes v2.8", path: "docs/public-demo-release-notes-v2.8.md", type: "markdown", description: "Private Pilot Implementation upgrade summary." },
       { category: "Release Notes", title: "Release notes v2.7", path: "docs/public-demo-release-notes-v2.7.md", type: "markdown", description: "Pilot Operations Control upgrade summary." },
       { category: "Release Notes", title: "Release notes v2.6", path: "docs/public-demo-release-notes-v2.6.md", type: "markdown", description: "Private Pilot Readiness upgrade summary." },
@@ -824,6 +829,15 @@
       { category: "Private Pilot Implementation", title: "Private pilot environment controls v2.8", path: "data/private-pilot-environment-controls-v2.8.csv", type: "csv", description: "Private workspace, hosting, access, security, backup, audit, forms, meeting, incident, evidence, retention, and handover controls." },
       { category: "Private Pilot Implementation", title: "Private pilot access register template v2.8", path: "data/private-pilot-access-register-template-v2.8.csv", type: "csv", description: "Role templates for admin, editor, reviewer, support, status-only, and no-private-access users." },
       { category: "Private Pilot Implementation", title: "Private pilot implementation package v2.8", path: "data/private-pilot-implementation-package-v2.8.json", type: "json", description: "Machine-readable v2.8 package summary, counts, files, no-go triggers, sources, safety rule, and implementation rule." },
+
+      { category: "Private Pilot Launch Control", title: "Private pilot launch playbook v2.9", path: "docs/private-pilot-launch-playbook-v2.9.md", type: "markdown", description: "30-day controlled launch sequence, gates, evidence, and stop rules." },
+      { category: "Private Pilot Launch Control", title: "Toastmasters private pilot launch plan v2.9", path: "docs/toastmasters-private-pilot-launch-plan-v2.9.md", type: "markdown", description: "Controlled First Nations Toastmasters launch plan and official boundary." },
+      { category: "Private Pilot Launch Control", title: "Private pilot learning and decision brief v2.9", path: "docs/private-pilot-learning-and-decision-brief-v2.9.md", type: "markdown", description: "Weekly learning inputs and closeout decision rule." },
+      { category: "Private Pilot Launch Control", title: "Private pilot launch gates v2.9", path: "data/private-pilot-launch-gates-v2.9.csv", type: "csv", description: "Eighteen launch controls." },
+      { category: "Private Pilot Launch Control", title: "Private pilot intake state board v2.9", path: "data/private-pilot-intake-state-board-v2.9.csv", type: "csv", description: "Fourteen private participant states and public evidence rules." },
+      { category: "Private Pilot Launch Control", title: "Private pilot communications pack v2.9", path: "data/private-pilot-comms-pack-v2.9.csv", type: "csv", description: "Twelve controlled communication artifacts." },
+      { category: "Private Pilot Launch Control", title: "Private pilot learning metrics v2.9", path: "data/private-pilot-learning-metrics-v2.9.csv", type: "csv", description: "Ten weekly or closeout learning metrics." },
+      { category: "Private Pilot Launch Control", title: "Private pilot launch package v2.9", path: "data/private-pilot-launch-package-v2.9.json", type: "json", description: "Machine-readable v2.9 launch package summary, counts, no-go triggers, source anchors, gates, states, comms, and metrics." },
 
       { category: "Decision Pack", title: "Scope options and budget model", path: "docs/scope-options-and-budget-model-v0.7.md", type: "markdown", description: "MVP, pilot, and fuller build options." },
       { category: "Decision Pack", title: "RACI and decision rights", path: "docs/raci-and-decision-rights-v0.7.md", type: "markdown", description: "Ownership, consultation, and approval responsibilities." },

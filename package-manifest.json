@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "2.8",
+  "version": "2.9",
   "date": "2026-06-05",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, Build Delivery Control, Organisation Onboarding, Private Pilot Readiness, Pilot Operations Control, and Private Pilot Implementation in sequence. Pilot Build is only a public fake/sample implementation template; any real private pilot needs a separate approved private environment, named operators, role access, privacy notice, consent and withdrawal, incident response, official handoff, retention, deletion, and closeout evidence.",
+  "recommendedDecision": "Use Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, Build Delivery Control, Organisation Onboarding, Private Pilot Readiness, Pilot Operations Control, Private Pilot Implementation, and Private Pilot Launch Control in sequence. Pilot Launch is only a public fake/sample launch template; any real private pilot needs a separate approved private environment, named operators, role access, privacy notice, consent and withdrawal, incident response, official handoff, retention, deletion, closeout evidence, and weekly learning review.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -142,13 +142,23 @@
     "data/private-pilot-minimum-data-schema-v2.8.csv",
     "data/private-pilot-environment-controls-v2.8.csv",
     "data/private-pilot-access-register-template-v2.8.csv",
-    "data/private-pilot-implementation-package-v2.8.json"
+    "data/private-pilot-implementation-package-v2.8.json",
+    "private-pilot-launch.html",
+    "docs/private-pilot-launch-playbook-v2.9.md",
+    "docs/toastmasters-private-pilot-launch-plan-v2.9.md",
+    "docs/private-pilot-learning-and-decision-brief-v2.9.md",
+    "docs/public-demo-release-notes-v2.9.md",
+    "data/private-pilot-launch-gates-v2.9.csv",
+    "data/private-pilot-intake-state-board-v2.9.csv",
+    "data/private-pilot-comms-pack-v2.9.csv",
+    "data/private-pilot-learning-metrics-v2.9.csv",
+    "data/private-pilot-launch-package-v2.9.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v2.8.md",
+    "releaseNotes": "docs/public-demo-release-notes-v2.9.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -260,7 +270,17 @@
       "qa-v28-deployed-private-pilot-implementation-required-desktop.png",
       "qa-v28-deployed-private-pilot-implementation-data-desktop.png",
       "qa-v28-deployed-private-pilot-implementation-mobile.png",
-      "qa-v28-deployed-private-pilot-implementation-package-mobile.png"
+      "qa-v28-deployed-private-pilot-implementation-package-mobile.png",
+      "qa-v29-local-private-pilot-launch-desktop.png",
+      "qa-v29-local-private-pilot-launch-required-desktop.png",
+      "qa-v29-local-private-pilot-launch-intake-desktop.png",
+      "qa-v29-local-private-pilot-launch-mobile.png",
+      "qa-v29-local-private-pilot-launch-package-mobile.png",
+      "qa-v29-deployed-private-pilot-launch-desktop.png",
+      "qa-v29-deployed-private-pilot-launch-required-desktop.png",
+      "qa-v29-deployed-private-pilot-launch-intake-desktop.png",
+      "qa-v29-deployed-private-pilot-launch-mobile.png",
+      "qa-v29-deployed-private-pilot-launch-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -451,7 +471,9 @@
       "private-pilot-ops.html",
       "docs/private-pilot-operations-runbook-v2.7.md",
       "docs/toastmasters-private-pilot-ops-script-v2.7.md",
-      "data/private-pilot-ops-package-v2.7.json"
+      "data/private-pilot-ops-package-v2.7.json",
+      "private-pilot-launch.html",
+      "docs/public-demo-release-notes-v2.9.md"
     ],
     "actionCenter": [
       "docs/next-steps-action-plan-v1.1.md",
@@ -1036,6 +1058,18 @@
       "data/private-pilot-environment-controls-v2.8.csv",
       "data/private-pilot-access-register-template-v2.8.csv",
       "data/private-pilot-implementation-package-v2.8.json"
+    ],
+    "privatePilotLaunch": [
+      "private-pilot-launch.html",
+      "docs/private-pilot-launch-playbook-v2.9.md",
+      "docs/toastmasters-private-pilot-launch-plan-v2.9.md",
+      "docs/private-pilot-learning-and-decision-brief-v2.9.md",
+      "docs/public-demo-release-notes-v2.9.md",
+      "data/private-pilot-launch-gates-v2.9.csv",
+      "data/private-pilot-intake-state-board-v2.9.csv",
+      "data/private-pilot-comms-pack-v2.9.csv",
+      "data/private-pilot-learning-metrics-v2.9.csv",
+      "data/private-pilot-launch-package-v2.9.json"
     ]
   },
   "safetyRules": [
@@ -1060,7 +1094,10 @@
     "No real meeting links, incident details, official Toastmasters forms, member numbers, payment records, access needs, or private participant states belong in public evidence.",
     "Private Pilot Implementation is a public fake/sample template only; it must not collect or expose real private pilot records.",
     "Real intake requires a separate approved private environment with named operators, minimum fields, role access, privacy notice, consent and withdrawal, incident response, official handoff, retention, deletion, and closeout evidence.",
-    "Never store real member numbers, official applications, signatures, payment/card details, meeting links, access needs, incident details, or authority records in the public demo."
+    "Never store real member numbers, official applications, signatures, payment/card details, meeting links, access needs, incident details, or authority records in the public demo.",
+    "Private Pilot Launch Control is a public fake/sample template only; it must not collect or expose real private pilot records.",
+    "Real controlled intake cannot open until v2.8 implementation and v2.9 launch gates are approved in a separate private environment.",
+    "No real launch meeting links, official Toastmasters records, access needs, incident details, payment details, member numbers, authority records, or private decision records belong in public evidence."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -1491,5 +1528,81 @@
     ],
     "safetyRule": "This public package is fake/sample only. Real First Nations Toastmasters pilot records require a separate approved private environment with named operators, privacy controls, official handoff boundaries, incident response, retention, deletion, and closeout evidence.",
     "implementationRule": "Do not open real intake until required implementation actions, required environment controls, never-public field rules, and access register are approved."
+  },
+  "privatePilotLaunch": {
+    "entrypoint": "private-pilot-launch.html",
+    "playbook": "docs/private-pilot-launch-playbook-v2.9.md",
+    "toastmastersPlan": "docs/toastmasters-private-pilot-launch-plan-v2.9.md",
+    "learningDecisionBrief": "docs/private-pilot-learning-and-decision-brief-v2.9.md",
+    "releaseNotes": "docs/public-demo-release-notes-v2.9.md",
+    "dataFiles": [
+      "data/private-pilot-launch-gates-v2.9.csv",
+      "data/private-pilot-intake-state-board-v2.9.csv",
+      "data/private-pilot-comms-pack-v2.9.csv",
+      "data/private-pilot-learning-metrics-v2.9.csv",
+      "data/private-pilot-launch-package-v2.9.json"
+    ],
+    "counts": {
+      "launchGates": 18,
+      "intakeStates": 14,
+      "communicationArtifacts": 12,
+      "learningMetrics": 10,
+      "requiredLaunchGates": 10,
+      "holdLaunchGates": 3,
+      "readyLaunchGates": 4,
+      "completeLaunchGates": 1,
+      "officialHandoffStates": 3,
+      "requiredCommunications": 5,
+      "requiredLearningMetrics": 8
+    },
+    "noGoTriggers": [
+      "Any real private field, meeting link, official form, member number, payment detail, access need, incident detail, or authority record appears in the public demo, public repository, public screenshots, public CSVs, or fake-data Decidim sandbox.",
+      "Controlled intake opens before privacy notice, consent, withdrawal, access register, private environment smoke test, official handoff boundary, and go/no-go decision are approved.",
+      "Supporters, mentors, sponsors, demo-first attendees, or unsure contacts are counted as charter-ready founders without confirmation.",
+      "Public wording implies an official Toastmasters club, official membership, charter acceptance, or guaranteed pathway before the official process confirms it.",
+      "Incident, access support, withdrawal, deletion, or correction requests have no owner or response clock.",
+      "Weekly learning review or closeout decision is skipped, leaving no evidence for proceed, hold, or no-go."
+    ],
+    "sourceAnchors": [
+      {
+        "label": "Barayamal Toastmasters First Nations",
+        "url": "https://barayamal.com.au/toastmasters-first-nations/"
+      },
+      {
+        "label": "Toastmasters Start a Club",
+        "url": "https://www.toastmasters.org/Start-a-Club"
+      },
+      {
+        "label": "Toastmasters Club Charter Requirements Form",
+        "url": "https://content.toastmasters.org/image/upload/ATO-club-chartering-requirements-ff.pdf"
+      },
+      {
+        "label": "Toastmasters Governing Documents",
+        "url": "https://www.toastmasters.org/resources/governing-documents"
+      },
+      {
+        "label": "Decidim install overview",
+        "url": "https://docs.decidim.org/en/develop/install/index.html"
+      },
+      {
+        "label": "Decidim deployment docs",
+        "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+      },
+      {
+        "label": "OAIC Australian Privacy Principles",
+        "url": "https://www.oaic.gov.au/privacy/australian-privacy-principles"
+      },
+      {
+        "label": "Maiam nayri Wingara Indigenous Data Sovereignty",
+        "url": "https://www.maiamnayriwingara.org/"
+      },
+      {
+        "label": "AIATSIS ethical research",
+        "url": "https://aiatsis.gov.au/research/ethical-research"
+      }
+    ],
+    "safetyRule": "This public v2.9 launch package is fake/sample only. It must not collect or expose real private pilot records, meeting links, official Toastmasters records, access needs, incidents, payment details, member numbers, or authority records.",
+    "launchRule": "Do not open controlled real intake until v2.8 implementation gates pass, v2.9 launch gates are approved, and the private environment is the only system of record.",
+    "nextDecision": "Proceed, hold, or no-go after first 30 days based on gates, public evidence boundary, official handoff boundary, support, withdrawal, incident, deletion, retention, and learning evidence."
   }
 }

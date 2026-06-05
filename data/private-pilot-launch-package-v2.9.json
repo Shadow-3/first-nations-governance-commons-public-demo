@@ -1,0 +1,629 @@
+{
+  "packageName": "Private Pilot Launch Control v2.9",
+  "version": "2.9",
+  "date": "2026-06-05",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "mode": "public_demo_private_pilot_launch_template_only",
+  "sampleInitiative": "Toastmasters First Nations",
+  "launchRule": "Do not open controlled real intake until v2.8 implementation gates pass, v2.9 launch gates are approved, and the private environment is the only system of record.",
+  "publicSafetyRule": "This public v2.9 launch package is fake/sample only. It must not collect or expose real private pilot records, meeting links, official Toastmasters records, access needs, incidents, payment details, member numbers, or authority records.",
+  "files": {
+    "entrypoint": "private-pilot-launch.html",
+    "playbook": "docs/private-pilot-launch-playbook-v2.9.md",
+    "toastmastersPlan": "docs/toastmasters-private-pilot-launch-plan-v2.9.md",
+    "learningDecisionBrief": "docs/private-pilot-learning-and-decision-brief-v2.9.md",
+    "releaseNotes": "docs/public-demo-release-notes-v2.9.md",
+    "launchGates": "data/private-pilot-launch-gates-v2.9.csv",
+    "intakeStateBoard": "data/private-pilot-intake-state-board-v2.9.csv",
+    "commsPack": "data/private-pilot-comms-pack-v2.9.csv",
+    "learningMetrics": "data/private-pilot-learning-metrics-v2.9.csv",
+    "launchPackage": "data/private-pilot-launch-package-v2.9.json"
+  },
+  "counts": {
+    "launchGates": 18,
+    "intakeStates": 14,
+    "communicationArtifacts": 12,
+    "learningMetrics": 10,
+    "requiredLaunchGates": 10,
+    "holdLaunchGates": 3,
+    "readyLaunchGates": 4,
+    "completeLaunchGates": 1,
+    "officialHandoffStates": 3,
+    "requiredCommunications": 5,
+    "requiredLearningMetrics": 8
+  },
+  "noGoTriggers": [
+    "Any real private field, meeting link, official form, member number, payment detail, access need, incident detail, or authority record appears in the public demo, public repository, public screenshots, public CSVs, or fake-data Decidim sandbox.",
+    "Controlled intake opens before privacy notice, consent, withdrawal, access register, private environment smoke test, official handoff boundary, and go/no-go decision are approved.",
+    "Supporters, mentors, sponsors, demo-first attendees, or unsure contacts are counted as charter-ready founders without confirmation.",
+    "Public wording implies an official Toastmasters club, official membership, charter acceptance, or guaranteed pathway before the official process confirms it.",
+    "Incident, access support, withdrawal, deletion, or correction requests have no owner or response clock.",
+    "Weekly learning review or closeout decision is skipped, leaving no evidence for proceed, hold, or no-go."
+  ],
+  "sourceAnchors": [
+    {
+      "label": "Barayamal Toastmasters First Nations",
+      "url": "https://barayamal.com.au/toastmasters-first-nations/"
+    },
+    {
+      "label": "Toastmasters Start a Club",
+      "url": "https://www.toastmasters.org/Start-a-Club"
+    },
+    {
+      "label": "Toastmasters Club Charter Requirements Form",
+      "url": "https://content.toastmasters.org/image/upload/ATO-club-chartering-requirements-ff.pdf"
+    },
+    {
+      "label": "Toastmasters Governing Documents",
+      "url": "https://www.toastmasters.org/resources/governing-documents"
+    },
+    {
+      "label": "Decidim install overview",
+      "url": "https://docs.decidim.org/en/develop/install/index.html"
+    },
+    {
+      "label": "Decidim deployment docs",
+      "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+    },
+    {
+      "label": "OAIC Australian Privacy Principles",
+      "url": "https://www.oaic.gov.au/privacy/australian-privacy-principles"
+    },
+    {
+      "label": "Maiam nayri Wingara Indigenous Data Sovereignty",
+      "url": "https://www.maiamnayriwingara.org/"
+    },
+    {
+      "label": "AIATSIS ethical research",
+      "url": "https://aiatsis.gov.au/research/ethical-research"
+    }
+  ],
+  "launchGates": [
+    {
+      "id": "LG-001",
+      "phase": "Authority",
+      "gate": "Authority to open controlled intake confirmed",
+      "status": "Required",
+      "owner": "Barayamal / Dean Foley",
+      "evidence": "Private launch authority note with approver, scope, and pause owner",
+      "publicEvidence": "Redacted launch authority gate only",
+      "noGo": "Launch opens without named accountable authority"
+    },
+    {
+      "id": "LG-002",
+      "phase": "Environment",
+      "gate": "Private environment smoke test passed",
+      "status": "Required",
+      "owner": "Technical custodian",
+      "evidence": "Private form, record view, export, backup, and recovery smoke test",
+      "publicEvidence": "Environment smoke test complete summary",
+      "noGo": "Real intake starts in GitHub Pages or public repository"
+    },
+    {
+      "id": "LG-003",
+      "phase": "Privacy",
+      "gate": "Privacy notice live before collection",
+      "status": "Required",
+      "owner": "Privacy reviewer",
+      "evidence": "Approved notice text and version date in private intake route",
+      "publicEvidence": "Notice version only",
+      "noGo": "Any real contact details collected before notice is visible"
+    },
+    {
+      "id": "LG-004",
+      "phase": "Evidence",
+      "gate": "Public evidence boundary confirmed",
+      "status": "Complete",
+      "owner": "QA reviewer",
+      "evidence": "Screenshot and public-report redaction checklist signed for fake/sample outputs",
+      "publicEvidence": "Fake/sample public evidence only",
+      "noGo": "Real names, contacts, meeting links, access needs, or incidents appear in public evidence"
+    },
+    {
+      "id": "LG-005",
+      "phase": "Consent",
+      "gate": "Consent and withdrawal route live",
+      "status": "Required",
+      "owner": "Pilot coordinator",
+      "evidence": "Consent text, withdrawal owner, response clock, and deletion path",
+      "publicEvidence": "Consent and withdrawal route exists",
+      "noGo": "Participant cannot withdraw or ask what is stored"
+    },
+    {
+      "id": "LG-006",
+      "phase": "Data",
+      "gate": "Minimum schema in private form only",
+      "status": "Required",
+      "owner": "Data reviewer",
+      "evidence": "Private intake form matches v2.8 minimum data schema",
+      "publicEvidence": "Schema template reference only",
+      "noGo": "Open text fields collect sensitive details before review"
+    },
+    {
+      "id": "LG-007",
+      "phase": "Access",
+      "gate": "Access register reviewed and time-limited",
+      "status": "Required",
+      "owner": "Pilot approval reviewer",
+      "evidence": "Named access register with role, reason, approver, and review date",
+      "publicEvidence": "Access model summary",
+      "noGo": "Shared admin account or unreviewed private access"
+    },
+    {
+      "id": "LG-008",
+      "phase": "Official boundary",
+      "gate": "Official Toastmasters boundary accepted",
+      "status": "Required",
+      "owner": "Toastmasters launch lead",
+      "evidence": "Official paperwork, membership, payment, and charter acceptance path separated",
+      "publicEvidence": "External official handoff boundary",
+      "noGo": "Official forms, signatures, member numbers, or payment details enter public package"
+    },
+    {
+      "id": "LG-009",
+      "phase": "Meeting",
+      "gate": "Meeting link private route ready",
+      "status": "Required",
+      "owner": "Pilot coordinator",
+      "evidence": "Private invite channel and access support instructions",
+      "publicEvidence": "Meeting coordination ready summary",
+      "noGo": "Meeting link appears in public page, public CSV, or screenshot"
+    },
+    {
+      "id": "LG-010",
+      "phase": "Demo",
+      "gate": "First demo agenda approved",
+      "status": "Ready",
+      "owner": "Pilot coordinator",
+      "evidence": "30-minute demo run sheet with moderator and support owner",
+      "publicEvidence": "Demo agenda template only",
+      "noGo": "Demo runs without moderator, support route, or pause wording"
+    },
+    {
+      "id": "LG-011",
+      "phase": "Founder readiness",
+      "gate": "Founder threshold model approved",
+      "status": "Ready",
+      "owner": "Toastmasters launch lead",
+      "evidence": "Founder candidate, supporter, sponsor, and demo-first routes defined",
+      "publicEvidence": "Aggregate pathway summary",
+      "noGo": "Supporters or demo-first attendees are counted as charter-ready founders"
+    },
+    {
+      "id": "LG-012",
+      "phase": "Support",
+      "gate": "Access support contact ready",
+      "status": "Ready",
+      "owner": "Access support contact",
+      "evidence": "Private support contact, follow-up rule, and escalation route",
+      "publicEvidence": "Support offered summary only",
+      "noGo": "Access needs copied to public evidence or supporter reports"
+    },
+    {
+      "id": "LG-013",
+      "phase": "Incident",
+      "gate": "Incident pause process rehearsed",
+      "status": "Hold",
+      "owner": "Safety reviewer",
+      "evidence": "Fake-data incident drill with owner, pause wording, closure evidence",
+      "publicEvidence": "Incident route rehearsed summary",
+      "noGo": "Incident handled only through informal chat with no record"
+    },
+    {
+      "id": "LG-014",
+      "phase": "Learning",
+      "gate": "Weekly review calendar scheduled",
+      "status": "Ready",
+      "owner": "Pilot authority",
+      "evidence": "Four weekly review holds and closeout review booked",
+      "publicEvidence": "Review cadence summary",
+      "noGo": "Pilot runs without weekly learning and safety review"
+    },
+    {
+      "id": "LG-015",
+      "phase": "Communications",
+      "gate": "Launch communications approved",
+      "status": "Hold",
+      "owner": "Pilot coordinator",
+      "evidence": "Public info, EOI receipt, demo invite, consent, and closeout messages approved",
+      "publicEvidence": "Template names and statuses only",
+      "noGo": "Unapproved public wording implies official club status or guaranteed membership"
+    },
+    {
+      "id": "LG-016",
+      "phase": "Dry run",
+      "gate": "Dry-run defects closed",
+      "status": "Hold",
+      "owner": "Pilot operations team",
+      "evidence": "Fake-data dry-run defect list closed or accepted with owner",
+      "publicEvidence": "Dry-run completion summary",
+      "noGo": "Real intake opens while high-risk defects remain open"
+    },
+    {
+      "id": "LG-017",
+      "phase": "Decision",
+      "gate": "Go/no-go decision recorded",
+      "status": "Required",
+      "owner": "Pilot authority",
+      "evidence": "Private decision record with proceed, hold, or no-go result",
+      "publicEvidence": "Decision status only",
+      "noGo": "Launch proceeds on informal chat approval"
+    },
+    {
+      "id": "LG-018",
+      "phase": "Closeout",
+      "gate": "Closeout review date scheduled",
+      "status": "Required",
+      "owner": "Data reviewer",
+      "evidence": "Retention, deletion, learning brief, and handoff closeout date",
+      "publicEvidence": "Closeout date and aggregate learning rule",
+      "noGo": "Pilot starts without end-of-pilot deletion and learning decision"
+    }
+  ],
+  "intakeStates": [
+    {
+      "id": "IS-001",
+      "state": "Public expression of interest",
+      "lane": "Public entry",
+      "owner": "Pilot coordinator",
+      "allowedData": "Name, email, timezone, track interest in private workspace only",
+      "publicRule": "Aggregate count only",
+      "nextAction": "Send receipt and consent/withdrawal notice",
+      "stopCondition": "Public form stores real contact details"
+    },
+    {
+      "id": "IS-002",
+      "state": "Demo invite sent",
+      "lane": "Demo",
+      "owner": "Pilot coordinator",
+      "allowedData": "Private invite status and meeting preference",
+      "publicRule": "No meeting link or invite list public",
+      "nextAction": "Send private meeting route and access support note",
+      "stopCondition": "Meeting link appears in public evidence"
+    },
+    {
+      "id": "IS-003",
+      "state": "Demo attended",
+      "lane": "Demo",
+      "owner": "Moderator",
+      "allowedData": "Attendance status only, no detailed transcript",
+      "publicRule": "Aggregate attendance only",
+      "nextAction": "Offer founder, supporter, or pause path",
+      "stopCondition": "Attendance list shared with supporters"
+    },
+    {
+      "id": "IS-004",
+      "state": "Founder candidate",
+      "lane": "Founder",
+      "owner": "Toastmasters launch lead",
+      "allowedData": "Founder readiness status and 18+ confirmation yes/no",
+      "publicRule": "Aggregate candidate count only",
+      "nextAction": "Confirm eligibility route and official process boundary",
+      "stopCondition": "Founder counted before confirmation"
+    },
+    {
+      "id": "IS-005",
+      "state": "Founder confirmed",
+      "lane": "Founder",
+      "owner": "Toastmasters launch lead",
+      "allowedData": "Private founder status and official handoff readiness",
+      "publicRule": "Aggregate founder count only",
+      "nextAction": "Prepare official handoff outside public package",
+      "stopCondition": "Official paperwork stored in Governance Commons public files"
+    },
+    {
+      "id": "IS-006",
+      "state": "Supporter or mentor",
+      "lane": "Supporter",
+      "owner": "Pilot coordinator",
+      "allowedData": "Supporter role, availability, and public-safe preference",
+      "publicRule": "Supporter count only",
+      "nextAction": "Assign status-only updates unless private access is approved",
+      "stopCondition": "Supporter receives member data by default"
+    },
+    {
+      "id": "IS-007",
+      "state": "Sponsor enquiry",
+      "lane": "Supporter",
+      "owner": "Pilot authority",
+      "allowedData": "Sponsor organisation, contact, proposed support in private workspace",
+      "publicRule": "Public summary only after permission",
+      "nextAction": "Separate sponsorship discussion from membership records",
+      "stopCondition": "Payment or sponsorship details enter public demo"
+    },
+    {
+      "id": "IS-008",
+      "state": "Access support requested",
+      "lane": "Access support",
+      "owner": "Access support contact",
+      "allowedData": "Minimum support request and preferred contact route",
+      "publicRule": "Support offered only, no needs detail",
+      "nextAction": "Respond privately and minimise retained detail",
+      "stopCondition": "Access needs copied to public notes or supporter updates"
+    },
+    {
+      "id": "IS-009",
+      "state": "Withdrawal requested",
+      "lane": "Withdrawal",
+      "owner": "Privacy reviewer",
+      "allowedData": "Withdrawal request, response time, deletion/correction result",
+      "publicRule": "Aggregate withdrawal count only",
+      "nextAction": "Confirm deletion or correction privately",
+      "stopCondition": "No owner or response clock for withdrawal"
+    },
+    {
+      "id": "IS-010",
+      "state": "Official handoff pending",
+      "lane": "Official handoff",
+      "owner": "Toastmasters launch lead",
+      "allowedData": "Checklist status without official forms in public package",
+      "publicRule": "Handoff pending summary only",
+      "nextAction": "Confirm official route and required documents outside package",
+      "stopCondition": "Official forms or signatures uploaded to public repository"
+    },
+    {
+      "id": "IS-011",
+      "state": "Official handoff submitted",
+      "lane": "Official handoff",
+      "owner": "Toastmasters launch lead",
+      "allowedData": "Submission status, date, and owner in private system",
+      "publicRule": "Submitted status only if appropriate",
+      "nextAction": "Track official response outside public evidence",
+      "stopCondition": "Member numbers or official acceptance records exposed"
+    },
+    {
+      "id": "IS-012",
+      "state": "Official accepted summary",
+      "lane": "Official handoff",
+      "owner": "Pilot authority",
+      "allowedData": "Private acceptance reference and next obligation",
+      "publicRule": "Public wording checked before any announcement",
+      "nextAction": "Move to closeout and official next steps",
+      "stopCondition": "Public page implies acceptance before official confirmation"
+    },
+    {
+      "id": "IS-013",
+      "state": "Inactive or no response",
+      "lane": "Dormant",
+      "owner": "Pilot coordinator",
+      "allowedData": "Last-contact status and deletion/retention clock",
+      "publicRule": "No individual status public",
+      "nextAction": "Close or delete according to retention rule",
+      "stopCondition": "Dormant records kept without review date"
+    },
+    {
+      "id": "IS-014",
+      "state": "Aggregate-only public summary",
+      "lane": "Public summary",
+      "owner": "QA reviewer",
+      "allowedData": "Counts, lessons, no-go flags, and next decision only",
+      "publicRule": "No real identities or private details",
+      "nextAction": "Publish only after redaction QA",
+      "stopCondition": "Public summary can identify a person or private circumstance"
+    }
+  ],
+  "communications": [
+    {
+      "id": "CP-001",
+      "artifact": "Public information page",
+      "audience": "Public reviewers",
+      "channel": "Public demo",
+      "status": "Required",
+      "purpose": "Explain fake/sample boundary and private pilot pathway",
+      "excludedData": "Real names, contacts, meeting links, official status claims",
+      "approval": "Pilot authority and privacy reviewer"
+    },
+    {
+      "id": "CP-002",
+      "artifact": "EOI receipt",
+      "audience": "Interested participants",
+      "channel": "Private email or form response",
+      "status": "Required",
+      "purpose": "Confirm receipt, notice, withdrawal route, and expected next step",
+      "excludedData": "Public CCs or visible invite lists",
+      "approval": "Pilot coordinator"
+    },
+    {
+      "id": "CP-003",
+      "artifact": "Demo invite",
+      "audience": "Demo-first contacts",
+      "channel": "Private invite",
+      "status": "Required",
+      "purpose": "Share meeting link, conduct rule, access support, and pause route",
+      "excludedData": "Public meeting link or attendance list",
+      "approval": "Pilot coordinator and moderator"
+    },
+    {
+      "id": "CP-004",
+      "artifact": "Consent and withdrawal notice",
+      "audience": "All real contacts",
+      "channel": "Private intake route",
+      "status": "Required",
+      "purpose": "State what is collected, why, who can access it, and how to withdraw",
+      "excludedData": "Legal overclaim or hidden collection",
+      "approval": "Privacy reviewer"
+    },
+    {
+      "id": "CP-005",
+      "artifact": "Access support message",
+      "audience": "People requesting support",
+      "channel": "Private support route",
+      "status": "Ready",
+      "purpose": "Offer support without exposing needs to public reviewers or supporters",
+      "excludedData": "Access details in public summaries",
+      "approval": "Access support contact"
+    },
+    {
+      "id": "CP-006",
+      "artifact": "Founder next-step message",
+      "audience": "Founder candidates",
+      "channel": "Private email",
+      "status": "Ready",
+      "purpose": "Explain founder confirmation and official handoff boundary",
+      "excludedData": "Official forms in Governance Commons public files",
+      "approval": "Toastmasters launch lead"
+    },
+    {
+      "id": "CP-007",
+      "artifact": "Supporter next-step message",
+      "audience": "Supporters and mentors",
+      "channel": "Private email",
+      "status": "Ready",
+      "purpose": "Separate support from member-data access and charter authority",
+      "excludedData": "Member lists, access needs, payment details",
+      "approval": "Pilot authority"
+    },
+    {
+      "id": "CP-008",
+      "artifact": "Official handoff note",
+      "audience": "Official process owner",
+      "channel": "Official Toastmasters route",
+      "status": "Hold",
+      "purpose": "Move official paperwork outside the public package",
+      "excludedData": "Public copy of signatures, member numbers, payment records",
+      "approval": "Toastmasters launch lead"
+    },
+    {
+      "id": "CP-009",
+      "artifact": "Weekly internal update",
+      "audience": "Pilot team",
+      "channel": "Private workspace",
+      "status": "Ready",
+      "purpose": "Review gates, incidents, withdrawals, founder count, and operator load",
+      "excludedData": "Unminimised private notes or unnecessary detail",
+      "approval": "Pilot authority"
+    },
+    {
+      "id": "CP-010",
+      "artifact": "Incident pause message",
+      "audience": "Affected private pilot group",
+      "channel": "Private channel",
+      "status": "Hold",
+      "purpose": "Pause safely, name next update time, and protect details",
+      "excludedData": "Incident details in public package",
+      "approval": "Safety reviewer"
+    },
+    {
+      "id": "CP-011",
+      "artifact": "Public progress summary",
+      "audience": "Public reviewers",
+      "channel": "Public demo or update",
+      "status": "Hold",
+      "purpose": "Share only aggregate progress, no-go status, and learning",
+      "excludedData": "Identities, contacts, access needs, incident details, official records",
+      "approval": "QA reviewer and pilot authority"
+    },
+    {
+      "id": "CP-012",
+      "artifact": "Closeout thank-you and decision note",
+      "audience": "Pilot contacts and reviewers",
+      "channel": "Private plus redacted public summary",
+      "status": "Required",
+      "purpose": "Close the loop, explain decision, and record deletion/retention rule",
+      "excludedData": "Raw private records or official paperwork",
+      "approval": "Pilot authority and data reviewer"
+    }
+  ],
+  "learningMetrics": [
+    {
+      "id": "LM-001",
+      "metric": "Founder candidates",
+      "cadence": "Weekly",
+      "owner": "Toastmasters launch lead",
+      "source": "Private intake state board",
+      "publicRule": "Aggregate number only",
+      "noGoThreshold": "Any founder counted without confirmation route",
+      "status": "Required"
+    },
+    {
+      "id": "LM-002",
+      "metric": "Demo-first attendance",
+      "cadence": "Weekly",
+      "owner": "Pilot coordinator",
+      "source": "Private attendance status",
+      "publicRule": "Aggregate attendance only",
+      "noGoThreshold": "Attendance list appears publicly",
+      "status": "Required"
+    },
+    {
+      "id": "LM-003",
+      "metric": "Founder conversion",
+      "cadence": "Closeout",
+      "owner": "Pilot authority",
+      "source": "Founder candidate and confirmed states",
+      "publicRule": "Percentage only when sample size is safe",
+      "noGoThreshold": "Supporters included in founder denominator",
+      "status": "Ready"
+    },
+    {
+      "id": "LM-004",
+      "metric": "Access support response time",
+      "cadence": "Weekly",
+      "owner": "Access support contact",
+      "source": "Private support queue",
+      "publicRule": "Median or service statement only",
+      "noGoThreshold": "Unanswered support request after agreed clock",
+      "status": "Required"
+    },
+    {
+      "id": "LM-005",
+      "metric": "Withdrawal response time",
+      "cadence": "Weekly",
+      "owner": "Privacy reviewer",
+      "source": "Withdrawal request log",
+      "publicRule": "Aggregate count and response compliance only",
+      "noGoThreshold": "No deletion/correction result recorded",
+      "status": "Required"
+    },
+    {
+      "id": "LM-006",
+      "metric": "Official handoff completion",
+      "cadence": "Weekly",
+      "owner": "Toastmasters launch lead",
+      "source": "Official handoff register",
+      "publicRule": "Status summary only",
+      "noGoThreshold": "Official documents stored in public package",
+      "status": "Required"
+    },
+    {
+      "id": "LM-007",
+      "metric": "Incident count and closure",
+      "cadence": "Weekly",
+      "owner": "Safety reviewer",
+      "source": "Private incident closeout log",
+      "publicRule": "No details, only closed/open count if safe",
+      "noGoThreshold": "Open high-risk incident without pause decision",
+      "status": "Required"
+    },
+    {
+      "id": "LM-008",
+      "metric": "Public evidence breaches",
+      "cadence": "Every release",
+      "owner": "QA reviewer",
+      "source": "Redaction checklist",
+      "publicRule": "Zero-breach statement only",
+      "noGoThreshold": "One real private field in public evidence",
+      "status": "Required"
+    },
+    {
+      "id": "LM-009",
+      "metric": "Operator load",
+      "cadence": "Weekly",
+      "owner": "Barayamal / Dean Foley",
+      "source": "Private work log",
+      "publicRule": "Capacity risk only",
+      "noGoThreshold": "One-person dependency blocks response clocks",
+      "status": "Ready"
+    },
+    {
+      "id": "LM-010",
+      "metric": "Decision readiness",
+      "cadence": "Closeout",
+      "owner": "Pilot authority",
+      "source": "Launch gates and learning brief",
+      "publicRule": "Proceed, hold, or no-go summary",
+      "noGoThreshold": "Decision lacks evidence or deletion/retention result",
+      "status": "Required"
+    }
+  ]
+}
