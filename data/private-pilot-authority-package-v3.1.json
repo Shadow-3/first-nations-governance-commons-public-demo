@@ -1,0 +1,1018 @@
+{
+  "packageName": "Private Pilot Authority Approval v3.1",
+  "version": "3.1",
+  "date": "2026-06-05",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "mode": "public_demo_authority_data_governance_template_only",
+  "sampleInitiative": "Toastmasters First Nations",
+  "approvalRule": "Do not activate any real private pilot, private Decidim workspace, EOI intake, provider handoff, or second pilot until authority, Indigenous Data Sovereignty, privacy impact, role access, participant notice, private environment, and scale criteria are approved.",
+  "publicSafetyRule": "This public v3.1 authority package is fake/sample only. It must not collect or expose real names, emails, access needs, incidents, official Toastmasters records, member numbers, payments, signatures, authority records, or private pilot evidence.",
+  "files": {
+    "entrypoint": "private-pilot-authority.html",
+    "authorityPack": "docs/private-pilot-authority-and-data-governance-pack-v3.1.md",
+    "toastmastersApprovalPlan": "docs/toastmasters-private-pilot-authority-approval-plan-v3.1.md",
+    "privacyAssessment": "docs/private-pilot-privacy-impact-mini-assessment-v3.1.md",
+    "participantNotice": "docs/private-pilot-participant-notice-and-consent-draft-v3.1.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.1.md",
+    "authorityGates": "data/private-pilot-authority-gates-v3.1.csv",
+    "dataGovernanceControls": "data/indigenous-data-governance-controls-v3.1.csv",
+    "privacyImpactChecks": "data/privacy-impact-checks-v3.1.csv",
+    "roleAccessRegister": "data/private-pilot-role-access-register-v3.1.csv",
+    "participantNoticeClauses": "data/participant-notice-consent-clauses-v3.1.csv",
+    "activationPlan": "data/private-environment-activation-plan-v3.1.csv",
+    "scaleCriteria": "data/second-pilot-scale-criteria-v3.1.csv",
+    "authorityPackage": "data/private-pilot-authority-package-v3.1.json"
+  },
+  "dataFiles": [
+    "data/private-pilot-authority-gates-v3.1.csv",
+    "data/indigenous-data-governance-controls-v3.1.csv",
+    "data/privacy-impact-checks-v3.1.csv",
+    "data/private-pilot-role-access-register-v3.1.csv",
+    "data/participant-notice-consent-clauses-v3.1.csv",
+    "data/private-environment-activation-plan-v3.1.csv",
+    "data/second-pilot-scale-criteria-v3.1.csv",
+    "data/private-pilot-authority-package-v3.1.json"
+  ],
+  "counts": {
+    "authorityGates": 18,
+    "dataGovernanceControls": 16,
+    "privacyImpactChecks": 14,
+    "roleAccessRows": 12,
+    "participantNoticeClauses": 12,
+    "activationTasks": 10,
+    "scaleCriteria": 10,
+    "activationRecords": 44,
+    "requiredAuthorityGates": 12,
+    "idsRequiredControls": 9,
+    "requiredPrivacyChecks": 10,
+    "noPrivateAccessRoles": 3,
+    "requiredNoticeClauses": 9,
+    "requiredActivationTasks": 6,
+    "requiredScaleCriteria": 7
+  },
+  "noGoTriggers": [
+    "Real intake opens before authority and data governance approval are recorded.",
+    "Developer custody or repository maintainership is treated as community authority.",
+    "Private pilot records enter GitHub Pages, public CSVs, public screenshots, public repo issues, or the fake Decidim sandbox.",
+    "Official Toastmasters records, member numbers, signatures, payments, or charter forms are stored in the public package.",
+    "Consent, withdrawal, correction, retention, deletion, or incident response is missing or untested.",
+    "A provider or public reviewer receives real participant data before contract, authority, and privacy approval.",
+    "Scale or second pilot proceeds without closeout, redaction QA, and authority record."
+  ],
+  "sourceAnchors": [
+    {
+      "label": "Barayamal Toastmasters First Nations",
+      "url": "https://barayamal.com.au/toastmasters-first-nations/"
+    },
+    {
+      "label": "Toastmasters Start a Club",
+      "url": "https://www.toastmasters.org/Start-a-Club"
+    },
+    {
+      "label": "Toastmasters Club Charter Requirements Form",
+      "url": "https://content.toastmasters.org/image/upload/ATO-club-chartering-requirements-ff.pdf"
+    },
+    {
+      "label": "Toastmasters Governing Documents",
+      "url": "https://www.toastmasters.org/resources/governing-documents"
+    },
+    {
+      "label": "Maiam nayri Wingara Indigenous Data Sovereignty",
+      "url": "https://www.maiamnayriwingara.org/"
+    },
+    {
+      "label": "AIATSIS ethical research",
+      "url": "https://aiatsis.gov.au/research/ethical-research"
+    },
+    {
+      "label": "NHMRC Aboriginal and Torres Strait Islander research ethics",
+      "url": "https://www.nhmrc.gov.au/research-policy/ethics/ethical-guidelines-research-aboriginal-and-torres-strait-islander-peoples"
+    },
+    {
+      "label": "OAIC Australian Privacy Principles",
+      "url": "https://www.oaic.gov.au/privacy/australian-privacy-principles/"
+    },
+    {
+      "label": "OAIC Guide to undertaking privacy impact assessments",
+      "url": "https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/privacy-impact-assessments/guide-to-undertaking-privacy-impact-assessments"
+    },
+    {
+      "label": "Decidim administrators",
+      "url": "https://docs.decidim.org/en/develop/admin/participants/admins.html"
+    },
+    {
+      "label": "Decidim permissions",
+      "url": "https://docs.decidim.org/en/develop/develop/permissions.html"
+    }
+  ],
+  "authorityGates": [
+    {
+      "id": "AA-001",
+      "lane": "Authority",
+      "gate": "Pilot authority owner named",
+      "status": "Required",
+      "owner": "Pilot authority",
+      "evidence": "Named person or body can approve, hold, or stop real pilot activation",
+      "publicRule": "Authority status only",
+      "noGo": "Real intake opens without accountable authority"
+    },
+    {
+      "id": "AA-002",
+      "lane": "Authority",
+      "gate": "Community authority pathway documented",
+      "status": "Required",
+      "owner": "Governance reviewer",
+      "evidence": "Decision rights, consultation scope, and escalation route",
+      "publicRule": "Authority pathway summary only",
+      "noGo": "Developer or repository maintainer becomes default authority"
+    },
+    {
+      "id": "AA-003",
+      "lane": "Scope",
+      "gate": "Real pilot scope locked",
+      "status": "Required",
+      "owner": "Pilot authority",
+      "evidence": "Purpose, participant group, exclusions, duration, and decision owner",
+      "publicRule": "Scope summary only",
+      "noGo": "Pilot collects data beyond approved purpose"
+    },
+    {
+      "id": "AA-004",
+      "lane": "Custody",
+      "gate": "Developer custody boundary recorded",
+      "status": "Required",
+      "owner": "Barayamal / Dean Foley",
+      "evidence": "What initial developer can maintain vs what community authority decides",
+      "publicRule": "Boundary only",
+      "noGo": "Code custody is confused with First Nations authority"
+    },
+    {
+      "id": "AA-005",
+      "lane": "Official boundary",
+      "gate": "Toastmasters official pathway separated",
+      "status": "Required",
+      "owner": "Toastmasters launch lead",
+      "evidence": "Official forms, payments, signatures, member numbers, and charter records stay outside public package",
+      "publicRule": "External official status only",
+      "noGo": "Official Toastmasters records enter public demo or public repository"
+    },
+    {
+      "id": "AA-006",
+      "lane": "Data governance",
+      "gate": "Indigenous Data Sovereignty reviewer named",
+      "status": "Required",
+      "owner": "Data reviewer",
+      "evidence": "Reviewer can approve data classes, storage, reporting, and deletion",
+      "publicRule": "Reviewer role only",
+      "noGo": "Pilot starts without IDS review owner"
+    },
+    {
+      "id": "AA-007",
+      "lane": "Privacy",
+      "gate": "Privacy reviewer named",
+      "status": "Required",
+      "owner": "Privacy reviewer",
+      "evidence": "Reviewer can approve notice, consent, correction, withdrawal, retention, and PIA",
+      "publicRule": "Reviewer role only",
+      "noGo": "Privacy decisions are made ad hoc"
+    },
+    {
+      "id": "AA-008",
+      "lane": "Safety",
+      "gate": "Cultural safety and incident reviewer named",
+      "status": "Required",
+      "owner": "Safety reviewer",
+      "evidence": "Pause, escalation, participant support, and incident pathway",
+      "publicRule": "Role summary only",
+      "noGo": "Incident or safety concern lacks authority to pause"
+    },
+    {
+      "id": "AA-009",
+      "lane": "Consent",
+      "gate": "Consent and withdrawal authority confirmed",
+      "status": "Required",
+      "owner": "Privacy reviewer",
+      "evidence": "Who approves consent text and withdrawal/correction handling",
+      "publicRule": "Template status only",
+      "noGo": "Old or unclear consent is reused"
+    },
+    {
+      "id": "AA-010",
+      "lane": "Reporting",
+      "gate": "Public reporting approver named",
+      "status": "Required",
+      "owner": "QA reviewer",
+      "evidence": "Who approves public-safe aggregate updates and redaction QA",
+      "publicRule": "Approval status only",
+      "noGo": "Public report can identify private circumstances"
+    },
+    {
+      "id": "AA-011",
+      "lane": "Environment",
+      "gate": "Private environment approver identified",
+      "status": "Hold",
+      "owner": "Technical custodian",
+      "evidence": "Hosting, backups, access logs, admin roles, and support route decision",
+      "publicRule": "Hosting status only",
+      "noGo": "Static public demo becomes system of record"
+    },
+    {
+      "id": "AA-012",
+      "lane": "Support",
+      "gate": "Participant support owner identified",
+      "status": "Hold",
+      "owner": "Access support contact",
+      "evidence": "Access support, plain-language help, and response clocks",
+      "publicRule": "Support model only",
+      "noGo": "Participants cannot get help or withdraw safely"
+    },
+    {
+      "id": "AA-013",
+      "lane": "Advice",
+      "gate": "Legal/privacy advice route confirmed",
+      "status": "Hold",
+      "owner": "Pilot authority",
+      "evidence": "When to seek formal legal, privacy, or organisational advice",
+      "publicRule": "Advice route only",
+      "noGo": "High-risk decision proceeds without advice route"
+    },
+    {
+      "id": "AA-014",
+      "lane": "Funding",
+      "gate": "Funding or provider owner noted",
+      "status": "Ready",
+      "owner": "Build delivery lead",
+      "evidence": "Who can request quote, approve budget, and hold provider boundary",
+      "publicRule": "Owner only",
+      "noGo": "Provider is asked to handle real data before approval"
+    },
+    {
+      "id": "AA-015",
+      "lane": "Continuity",
+      "gate": "Admin continuity plan drafted",
+      "status": "Ready",
+      "owner": "Technical custodian",
+      "evidence": "Backup admin and operator handover path",
+      "publicRule": "Capacity risk only",
+      "noGo": "Only one person can operate or close the pilot"
+    },
+    {
+      "id": "AA-016",
+      "lane": "Scale",
+      "gate": "Second-pilot authority route set",
+      "status": "Required",
+      "owner": "Pilot authority",
+      "evidence": "Who decides repeat, scale, archive, no-go, or second pilot",
+      "publicRule": "Decision route only",
+      "noGo": "Second pilot opens from momentum, not authority"
+    },
+    {
+      "id": "AA-017",
+      "lane": "Archive",
+      "gate": "Archive and deletion authority drafted",
+      "status": "Ready",
+      "owner": "Data reviewer",
+      "evidence": "Who can delete, retain, archive, or transfer records after pilot",
+      "publicRule": "Retention class only",
+      "noGo": "Records linger without review date"
+    },
+    {
+      "id": "AA-018",
+      "lane": "Decision",
+      "gate": "Final go/hold/no-go approval record required",
+      "status": "Required",
+      "owner": "Pilot authority",
+      "evidence": "Signed or recorded approval before real intake opens",
+      "publicRule": "Redacted decision status only",
+      "noGo": "Pilot activates without recorded decision"
+    }
+  ],
+  "dataGovernanceControls": [
+    {
+      "id": "DG-001",
+      "principle": "Collective benefit",
+      "control": "Benefit statement recorded",
+      "status": "IDS Required",
+      "owner": "Data reviewer",
+      "evidence": "Why the pilot benefits First Nations participants and who can check that benefit",
+      "publicRule": "Benefit summary only",
+      "noGo": "Data collection serves platform learning more than community benefit"
+    },
+    {
+      "id": "DG-002",
+      "principle": "Authority to control",
+      "control": "Authority over data use recorded",
+      "status": "IDS Required",
+      "owner": "Pilot authority",
+      "evidence": "Who can approve use, reuse, reporting, transfer, and deletion",
+      "publicRule": "Authority model only",
+      "noGo": "Data is reused because it is technically available"
+    },
+    {
+      "id": "DG-003",
+      "principle": "Responsibility",
+      "control": "Data steward duties assigned",
+      "status": "IDS Required",
+      "owner": "Data reviewer",
+      "evidence": "Named duties for minimisation, access, quality, retention, and correction",
+      "publicRule": "Steward role only",
+      "noGo": "No one owns data quality or care duties"
+    },
+    {
+      "id": "DG-004",
+      "principle": "Ethics",
+      "control": "Cultural safety review embedded",
+      "status": "IDS Required",
+      "owner": "Safety reviewer",
+      "evidence": "Participant dignity, cultural safety, and harm-prevention review before activation",
+      "publicRule": "Safety status only",
+      "noGo": "Pilot treats data as neutral admin material"
+    },
+    {
+      "id": "DG-005",
+      "principle": "Purpose",
+      "control": "Minimum purpose statement approved",
+      "status": "IDS Required",
+      "owner": "Privacy reviewer",
+      "evidence": "Every field has purpose, owner, retention, and deletion path",
+      "publicRule": "Field categories only",
+      "noGo": "Fields are added because they are easy to collect"
+    },
+    {
+      "id": "DG-006",
+      "principle": "Classification",
+      "control": "Never-public classes locked",
+      "status": "IDS Required",
+      "owner": "Data reviewer",
+      "evidence": "Member numbers, payments, official records, access needs, incidents, private contacts, authority records",
+      "publicRule": "Class labels only",
+      "noGo": "Never-public records appear in public evidence"
+    },
+    {
+      "id": "DG-007",
+      "principle": "Storage",
+      "control": "Private storage location approved",
+      "status": "IDS Required",
+      "owner": "Technical custodian",
+      "evidence": "Workspace, hosting region, backup, admin access, and export path",
+      "publicRule": "Storage type only",
+      "noGo": "Records stored in public repo, GitHub Pages, or screenshots"
+    },
+    {
+      "id": "DG-008",
+      "principle": "Access",
+      "control": "Need-to-know access model approved",
+      "status": "IDS Required",
+      "owner": "Technical custodian",
+      "evidence": "Role register with named access, expiry, and review date",
+      "publicRule": "Access model only",
+      "noGo": "Supporters or public reviewers get private access"
+    },
+    {
+      "id": "DG-009",
+      "principle": "Deletion",
+      "control": "Deletion and retention rule approved",
+      "status": "IDS Required",
+      "owner": "Data reviewer",
+      "evidence": "Delete, retain, archive, handoff, review date, and evidence rule",
+      "publicRule": "Rule summary only",
+      "noGo": "Records remain after pilot without reason"
+    },
+    {
+      "id": "DG-010",
+      "principle": "Correction",
+      "control": "Correction and withdrawal route tested",
+      "status": "Governance Hold",
+      "owner": "Privacy reviewer",
+      "evidence": "Participant can request correction or withdrawal through private route",
+      "publicRule": "Route status only",
+      "noGo": "Withdrawal cannot be actioned before launch"
+    },
+    {
+      "id": "DG-011",
+      "principle": "Reporting",
+      "control": "Aggregate reporting threshold set",
+      "status": "Governance Hold",
+      "owner": "QA reviewer",
+      "evidence": "Small sample, identity inference, and public wording review",
+      "publicRule": "Threshold summary only",
+      "noGo": "Learning note identifies participants by context"
+    },
+    {
+      "id": "DG-012",
+      "principle": "Transfer",
+      "control": "Transfer and handoff rules drafted",
+      "status": "Governance Hold",
+      "owner": "Pilot authority",
+      "evidence": "When data can move to official route, provider, archive, or second pilot",
+      "publicRule": "Transfer status only",
+      "noGo": "Transfer occurs without fresh authority"
+    },
+    {
+      "id": "DG-013",
+      "principle": "Provenance",
+      "control": "Source and consent version register ready",
+      "status": "Governance Hold",
+      "owner": "Privacy reviewer",
+      "evidence": "Notice version, consent version, source, date, and owner",
+      "publicRule": "Version labels only",
+      "noGo": "Team cannot prove what notice applied"
+    },
+    {
+      "id": "DG-014",
+      "principle": "Audit",
+      "control": "Audit evidence path ready",
+      "status": "Ready",
+      "owner": "Technical custodian",
+      "evidence": "Access logs, deletion evidence, approval records, and redaction QA",
+      "publicRule": "Audit status only",
+      "noGo": "No proof exists after an incident or complaint"
+    },
+    {
+      "id": "DG-015",
+      "principle": "Decidim",
+      "control": "Decidim component data map reviewed",
+      "status": "Ready",
+      "owner": "Build lead",
+      "evidence": "Which Decidim spaces/components may hold which private records",
+      "publicRule": "Component categories only",
+      "noGo": "Decidim setup exceeds data approval"
+    },
+    {
+      "id": "DG-016",
+      "principle": "Closeout",
+      "control": "Closeout data governance review scheduled",
+      "status": "Ready",
+      "owner": "Data reviewer",
+      "evidence": "Review date, owner, evidence package, and deletion/retention action",
+      "publicRule": "Review date only",
+      "noGo": "Pilot ends without data governance closeout"
+    }
+  ],
+  "privacyImpactChecks": [
+    {
+      "id": "PIA-001",
+      "topic": "APP purpose",
+      "check": "Collection purpose defined",
+      "status": "Required",
+      "owner": "Privacy reviewer",
+      "evidence": "Plain purpose for each data class",
+      "publicRule": "Purpose summary only",
+      "noGo": "Purpose is vague or changes after collection"
+    },
+    {
+      "id": "PIA-002",
+      "topic": "APP notice",
+      "check": "Participant notice drafted",
+      "status": "Required",
+      "owner": "Privacy reviewer",
+      "evidence": "What is collected, why, where stored, who sees it, how to withdraw",
+      "publicRule": "Notice version only",
+      "noGo": "People submit info without clear notice"
+    },
+    {
+      "id": "PIA-003",
+      "topic": "Consent",
+      "check": "Consent wording approved",
+      "status": "Required",
+      "owner": "Pilot authority",
+      "evidence": "Consent is voluntary, specific, informed, and separate from official Toastmasters process",
+      "publicRule": "Template status only",
+      "noGo": "Consent implies official membership or charter approval"
+    },
+    {
+      "id": "PIA-004",
+      "topic": "Minimisation",
+      "check": "Minimum fields approved",
+      "status": "Required",
+      "owner": "Data reviewer",
+      "evidence": "Fields are limited to pilot operation and support",
+      "publicRule": "Field categories only",
+      "noGo": "Nice-to-have fields enter real pilot"
+    },
+    {
+      "id": "PIA-005",
+      "topic": "Sensitive data",
+      "check": "Sensitive classes excluded or justified",
+      "status": "Required",
+      "owner": "Privacy reviewer",
+      "evidence": "Access needs, incidents, private contacts, cultural material, payment, member records",
+      "publicRule": "Class labels only",
+      "noGo": "Sensitive records are collected without justification"
+    },
+    {
+      "id": "PIA-006",
+      "topic": "Access",
+      "check": "Role access tested",
+      "status": "Required",
+      "owner": "Technical custodian",
+      "evidence": "Named admins, reviewers, support, no-private-access roles",
+      "publicRule": "Access model only",
+      "noGo": "Unapproved people can view private records"
+    },
+    {
+      "id": "PIA-007",
+      "topic": "Security",
+      "check": "Private workspace security checked",
+      "status": "Required",
+      "owner": "Technical custodian",
+      "evidence": "MFA, password sharing ban, exports, backups, device risk",
+      "publicRule": "Security status only",
+      "noGo": "Records exported or shared uncontrolled"
+    },
+    {
+      "id": "PIA-008",
+      "topic": "Retention",
+      "check": "Retention schedule approved",
+      "status": "Required",
+      "owner": "Data reviewer",
+      "evidence": "Delete, retain, transfer, archive, and review dates",
+      "publicRule": "Schedule summary only",
+      "noGo": "Records retained by default"
+    },
+    {
+      "id": "PIA-009",
+      "topic": "Withdrawal",
+      "check": "Withdrawal/correction tested",
+      "status": "Required",
+      "owner": "Privacy reviewer",
+      "evidence": "Request route, owner, response clock, and proof",
+      "publicRule": "Aggregate compliance only",
+      "noGo": "No way to correct or withdraw before launch"
+    },
+    {
+      "id": "PIA-010",
+      "topic": "Incident",
+      "check": "Privacy incident response ready",
+      "status": "Required",
+      "owner": "Safety reviewer",
+      "evidence": "Pause rule, notification route, containment, evidence",
+      "publicRule": "Incident status only",
+      "noGo": "Exposure has no pause or escalation route"
+    },
+    {
+      "id": "PIA-011",
+      "topic": "Provider",
+      "check": "Provider/private tool assessment drafted",
+      "status": "Hold",
+      "owner": "Build delivery lead",
+      "evidence": "What external service sees and what contract/control is needed",
+      "publicRule": "Provider category only",
+      "noGo": "Provider receives real data during quote or setup"
+    },
+    {
+      "id": "PIA-012",
+      "topic": "Cross-border",
+      "check": "Hosting jurisdiction checked",
+      "status": "Hold",
+      "owner": "Technical custodian",
+      "evidence": "Where records, backups, logs, and subprocessors are located",
+      "publicRule": "Jurisdiction status only",
+      "noGo": "Data leaves approved environment unexpectedly"
+    },
+    {
+      "id": "PIA-013",
+      "topic": "Public summary",
+      "check": "Redaction QA test ready",
+      "status": "Ready",
+      "owner": "QA reviewer",
+      "evidence": "Public wording checked for identity inference and private context",
+      "publicRule": "QA pass/fail only",
+      "noGo": "Aggregate report identifies someone indirectly"
+    },
+    {
+      "id": "PIA-014",
+      "topic": "Decision",
+      "check": "PIA go/hold/no-go record required",
+      "status": "Ready",
+      "owner": "Pilot authority",
+      "evidence": "Recorded decision before real pilot activation",
+      "publicRule": "Decision status only",
+      "noGo": "Pilot activates without privacy sign-off"
+    }
+  ],
+  "roleAccessRegister": [
+    {
+      "id": "RA-001",
+      "role": "Pilot authority",
+      "accessScope": "Private reviewer",
+      "allowed": "Approve, hold, stop, and close pilot",
+      "evidence": "Private decision record only",
+      "publicRule": "Decision status only",
+      "limit": "No shared login; expiry after closeout"
+    },
+    {
+      "id": "RA-002",
+      "role": "Technical custodian",
+      "accessScope": "Private admin",
+      "allowed": "Configure private workspace, access, backup, exports",
+      "evidence": "Access register and logs",
+      "publicRule": "Access model only",
+      "limit": "No access to official Toastmasters payment/member systems"
+    },
+    {
+      "id": "RA-003",
+      "role": "Privacy reviewer",
+      "accessScope": "Private reviewer",
+      "allowed": "Review notice, consent, withdrawal, correction, PIA",
+      "evidence": "Privacy working file",
+      "publicRule": "Template status only",
+      "limit": "No public screenshots of private rows"
+    },
+    {
+      "id": "RA-004",
+      "role": "Data reviewer",
+      "accessScope": "Private reviewer",
+      "allowed": "Approve fields, classification, retention, deletion",
+      "evidence": "Data register",
+      "publicRule": "Class summary only",
+      "limit": "No unrelated data access"
+    },
+    {
+      "id": "RA-005",
+      "role": "Safety reviewer",
+      "accessScope": "Private reviewer",
+      "allowed": "Handle pause, incident, support, cultural safety route",
+      "evidence": "Private incident route",
+      "publicRule": "No incident detail public",
+      "limit": "Access only when incident/support event needs review"
+    },
+    {
+      "id": "RA-006",
+      "role": "Toastmasters launch lead",
+      "accessScope": "External official",
+      "allowed": "Manage official Toastmasters pathway outside public package",
+      "evidence": "Official route outside demo",
+      "publicRule": "External status only",
+      "limit": "No official records stored in Governance Commons public files"
+    },
+    {
+      "id": "RA-007",
+      "role": "Access support contact",
+      "accessScope": "Private reviewer",
+      "allowed": "Support accessibility and participant help requests",
+      "evidence": "Private support route",
+      "publicRule": "Support offered summary only",
+      "limit": "Access limited to assigned support requests"
+    },
+    {
+      "id": "RA-008",
+      "role": "QA reviewer",
+      "accessScope": "No private access",
+      "allowed": "Check public pages, redaction, screenshots, release integrity",
+      "evidence": "Public-safe package only",
+      "publicRule": "QA status only",
+      "limit": "Cannot view raw private records"
+    },
+    {
+      "id": "RA-009",
+      "role": "Build provider",
+      "accessScope": "No private access",
+      "allowed": "Quote or build against fake/sample data only",
+      "evidence": "Fake scope package",
+      "publicRule": "Provider pathway only",
+      "limit": "No real data before contract and authority approval"
+    },
+    {
+      "id": "RA-010",
+      "role": "Community advisor",
+      "accessScope": "No private access",
+      "allowed": "Review governance model and public-safe summaries",
+      "evidence": "Public package only",
+      "publicRule": "Advisor feedback only",
+      "limit": "No private participant data"
+    },
+    {
+      "id": "RA-011",
+      "role": "Backup admin",
+      "accessScope": "Private admin",
+      "allowed": "Emergency continuity if custodian unavailable",
+      "evidence": "Access grant record",
+      "publicRule": "Backup role only",
+      "limit": "Dormant unless activated by authority"
+    },
+    {
+      "id": "RA-012",
+      "role": "Decidim admin",
+      "accessScope": "Private admin",
+      "allowed": "Operate approved private Decidim workspace if chosen",
+      "evidence": "Decidim admin log",
+      "publicRule": "Admin role summary only",
+      "limit": "No admin access without named approval"
+    }
+  ],
+  "participantNoticeClauses": [
+    {
+      "id": "NC-001",
+      "topic": "Purpose",
+      "clause": "Why we are collecting information",
+      "status": "Required",
+      "evidence": "Plain-language purpose for controlled First Nations Toastmasters pilot",
+      "publicRule": "Purpose statement only",
+      "noGo": "Purpose missing or misleading"
+    },
+    {
+      "id": "NC-002",
+      "topic": "Voluntary",
+      "clause": "Participation is voluntary",
+      "status": "Required",
+      "evidence": "No one has to join the pilot to access public demo material",
+      "publicRule": "Clause status only",
+      "noGo": "Pilot feels compulsory"
+    },
+    {
+      "id": "NC-003",
+      "topic": "Not official membership",
+      "clause": "Official Toastmasters membership is separate",
+      "status": "Required",
+      "evidence": "Official forms, payments, charter, and member records stay outside this package",
+      "publicRule": "External boundary only",
+      "noGo": "Notice implies official membership"
+    },
+    {
+      "id": "NC-004",
+      "topic": "What collected",
+      "clause": "Minimum fields listed",
+      "status": "Required",
+      "evidence": "Name/contact/status/support route only if approved privately",
+      "publicRule": "Field categories only",
+      "noGo": "Unlisted data is collected"
+    },
+    {
+      "id": "NC-005",
+      "topic": "Sensitive exclusions",
+      "clause": "Never-public exclusions named",
+      "status": "Required",
+      "evidence": "No payment, member number, official form, signature, incident detail, access need, or authority record in public demo",
+      "publicRule": "Exclusion summary only",
+      "noGo": "Excluded data enters public package"
+    },
+    {
+      "id": "NC-006",
+      "topic": "Who sees it",
+      "clause": "Role access explained",
+      "status": "Required",
+      "evidence": "Named operators/reviewers only, no public reviewers or providers",
+      "publicRule": "Role categories only",
+      "noGo": "Access not clear"
+    },
+    {
+      "id": "NC-007",
+      "topic": "Where stored",
+      "clause": "Private storage explained",
+      "status": "Required",
+      "evidence": "Approved private workspace only, not GitHub Pages or public CSVs",
+      "publicRule": "Storage class only",
+      "noGo": "Storage location missing"
+    },
+    {
+      "id": "NC-008",
+      "topic": "Withdrawal/correction",
+      "clause": "How to withdraw or correct",
+      "status": "Required",
+      "evidence": "Private contact route, response clock, and evidence rule",
+      "publicRule": "Aggregate only",
+      "noGo": "No withdrawal route"
+    },
+    {
+      "id": "NC-009",
+      "topic": "Retention/deletion",
+      "clause": "How long records are kept",
+      "status": "Required",
+      "evidence": "Delete, retain, archive, or transfer rule and review date",
+      "publicRule": "Retention summary only",
+      "noGo": "Open-ended retention"
+    },
+    {
+      "id": "NC-010",
+      "topic": "Incident pause",
+      "clause": "What happens if something goes wrong",
+      "status": "Ready",
+      "evidence": "Pause, contain, contact, review, and no-go path",
+      "publicRule": "Pause rule only",
+      "noGo": "No incident route"
+    },
+    {
+      "id": "NC-011",
+      "topic": "Public reporting",
+      "clause": "Public learning is aggregate/redacted",
+      "status": "Ready",
+      "evidence": "No names, private context, access needs, incidents, or official records",
+      "publicRule": "Public-safe summary only",
+      "noGo": "Report can identify participant"
+    },
+    {
+      "id": "NC-012",
+      "topic": "Closeout decision",
+      "clause": "How pilot result is decided",
+      "status": "Ready",
+      "evidence": "Proceed, hold, no-go, archive, or second pilot by authority record",
+      "publicRule": "Decision status only",
+      "noGo": "Decision process hidden"
+    }
+  ],
+  "activationPlan": [
+    {
+      "id": "ACT-001",
+      "lane": "Environment",
+      "task": "Choose private workspace",
+      "status": "Required",
+      "owner": "Technical custodian",
+      "evidence": "Workspace decision record",
+      "publicRule": "Public status only",
+      "noGo": "GitHub Pages used for real records"
+    },
+    {
+      "id": "ACT-002",
+      "lane": "Access",
+      "task": "Create named access register",
+      "status": "Required",
+      "owner": "Technical custodian",
+      "evidence": "Role, owner, access, expiry, review date",
+      "publicRule": "Access model only",
+      "noGo": "Shared login or unnamed access"
+    },
+    {
+      "id": "ACT-003",
+      "lane": "Forms",
+      "task": "Build private EOI/intake form",
+      "status": "Required",
+      "owner": "Pilot coordinator",
+      "evidence": "Minimum fields, notice, consent, withdrawal route",
+      "publicRule": "Form status only",
+      "noGo": "Public form collects private records"
+    },
+    {
+      "id": "ACT-004",
+      "lane": "Decidim",
+      "task": "Map Decidim components to approved data classes",
+      "status": "Required",
+      "owner": "Build lead",
+      "evidence": "Space/component/data class map",
+      "publicRule": "Component summary only",
+      "noGo": "Component collects unapproved fields"
+    },
+    {
+      "id": "ACT-005",
+      "lane": "Security",
+      "task": "Run backup/export/delete drill",
+      "status": "Required",
+      "owner": "Technical custodian",
+      "evidence": "Drill screenshot or log stored privately",
+      "publicRule": "Drill status only",
+      "noGo": "Team cannot delete or export safely"
+    },
+    {
+      "id": "ACT-006",
+      "lane": "Comms",
+      "task": "Approve participant notice and consent",
+      "status": "Required",
+      "owner": "Privacy reviewer",
+      "evidence": "Notice version and approval record",
+      "publicRule": "Version only",
+      "noGo": "Real intake opens on draft notice"
+    },
+    {
+      "id": "ACT-007",
+      "lane": "Support",
+      "task": "Set support response clocks",
+      "status": "Hold",
+      "owner": "Access support contact",
+      "evidence": "Response owner and escalation route",
+      "publicRule": "Support model only",
+      "noGo": "Support backlog has no owner"
+    },
+    {
+      "id": "ACT-008",
+      "lane": "Official",
+      "task": "Confirm official Toastmasters route",
+      "status": "Hold",
+      "owner": "Toastmasters launch lead",
+      "evidence": "External handoff note",
+      "publicRule": "External status only",
+      "noGo": "Official records enter private pilot tool accidentally"
+    },
+    {
+      "id": "ACT-009",
+      "lane": "Dry run",
+      "task": "Run end-to-end dry run with fake data",
+      "status": "Ready",
+      "owner": "QA reviewer",
+      "evidence": "Dry-run evidence across intake, access, withdrawal, delete, closeout",
+      "publicRule": "Pass/fail only",
+      "noGo": "Real pilot starts without rehearsal"
+    },
+    {
+      "id": "ACT-010",
+      "lane": "Approval",
+      "task": "Record go/hold/no-go decision",
+      "status": "Ready",
+      "owner": "Pilot authority",
+      "evidence": "Decision record and no-go review",
+      "publicRule": "Decision status only",
+      "noGo": "Activation happens from momentum"
+    }
+  ],
+  "scaleCriteria": [
+    {
+      "id": "SC-001",
+      "lane": "Authority",
+      "criterion": "Community authority pathway approved",
+      "status": "Required",
+      "owner": "Pilot authority",
+      "evidence": "Decision rights and consultation record",
+      "publicRule": "Authority status only",
+      "noGo": "Scale by developer decision"
+    },
+    {
+      "id": "SC-002",
+      "lane": "Data",
+      "criterion": "IDS/data governance review passed",
+      "status": "Required",
+      "owner": "Data reviewer",
+      "evidence": "Data controls passed or named hold list",
+      "publicRule": "Pass/fail only",
+      "noGo": "Scale without data governance"
+    },
+    {
+      "id": "SC-003",
+      "lane": "Privacy",
+      "criterion": "PIA holds closed",
+      "status": "Required",
+      "owner": "Privacy reviewer",
+      "evidence": "Privacy risks accepted, fixed, or no-go",
+      "publicRule": "Decision status only",
+      "noGo": "Scale with unresolved privacy risk"
+    },
+    {
+      "id": "SC-004",
+      "lane": "Safety",
+      "criterion": "Incident and support load acceptable",
+      "status": "Required",
+      "owner": "Safety reviewer",
+      "evidence": "Incident/support closeout and capacity review",
+      "publicRule": "Aggregate only",
+      "noGo": "Scale while support or incident route fails"
+    },
+    {
+      "id": "SC-005",
+      "lane": "Evidence",
+      "criterion": "Public summary redaction QA passed",
+      "status": "Required",
+      "owner": "QA reviewer",
+      "evidence": "Aggregate-safe learning note",
+      "publicRule": "QA status only",
+      "noGo": "Public learning identifies someone"
+    },
+    {
+      "id": "SC-006",
+      "lane": "Environment",
+      "criterion": "Private hosting can sustain next stage",
+      "status": "Required",
+      "owner": "Technical custodian",
+      "evidence": "Access, backup, logging, deletion, admin continuity",
+      "publicRule": "Hosting status only",
+      "noGo": "Static demo or unstable private tool becomes system of record"
+    },
+    {
+      "id": "SC-007",
+      "lane": "Official boundary",
+      "criterion": "Toastmasters official process still separated",
+      "status": "Required",
+      "owner": "Toastmasters launch lead",
+      "evidence": "Official handoff or separation note",
+      "publicRule": "External status only",
+      "noGo": "Official membership data enters public/demo path"
+    },
+    {
+      "id": "SC-008",
+      "lane": "Funding",
+      "criterion": "Funding/provider route is realistic",
+      "status": "Hold",
+      "owner": "Build delivery lead",
+      "evidence": "Budget, quote, or self-build capacity note",
+      "publicRule": "Funding status only",
+      "noGo": "Scale commitment lacks capacity"
+    },
+    {
+      "id": "SC-009",
+      "lane": "Learning",
+      "criterion": "Participant learning supports next stage",
+      "status": "Ready",
+      "owner": "Pilot authority",
+      "evidence": "Founder readiness, support, conversion, withdrawals, operator load",
+      "publicRule": "Aggregate learning only",
+      "noGo": "Scale ignores pilot evidence"
+    },
+    {
+      "id": "SC-010",
+      "lane": "Closeout",
+      "criterion": "Archive/deletion proof complete",
+      "status": "Ready",
+      "owner": "Data reviewer",
+      "evidence": "Retention/deletion evidence and review date",
+      "publicRule": "Closeout status only",
+      "noGo": "Previous pilot remains open while next starts"
+    }
+  ]
+}

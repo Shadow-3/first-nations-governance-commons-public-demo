@@ -1,0 +1,13 @@
+id,role,accessScope,allowed,evidence,publicRule,limit
+RA-001,Pilot authority,Private reviewer,"Approve, hold, stop, and close pilot",Private decision record only,Decision status only,No shared login; expiry after closeout
+RA-002,Technical custodian,Private admin,"Configure private workspace, access, backup, exports",Access register and logs,Access model only,No access to official Toastmasters payment/member systems
+RA-003,Privacy reviewer,Private reviewer,"Review notice, consent, withdrawal, correction, PIA",Privacy working file,Template status only,No public screenshots of private rows
+RA-004,Data reviewer,Private reviewer,"Approve fields, classification, retention, deletion",Data register,Class summary only,No unrelated data access
+RA-005,Safety reviewer,Private reviewer,"Handle pause, incident, support, cultural safety route",Private incident route,No incident detail public,Access only when incident/support event needs review
+RA-006,Toastmasters launch lead,External official,Manage official Toastmasters pathway outside public package,Official route outside demo,External status only,No official records stored in Governance Commons public files
+RA-007,Access support contact,Private reviewer,Support accessibility and participant help requests,Private support route,Support offered summary only,Access limited to assigned support requests
+RA-008,QA reviewer,No private access,"Check public pages, redaction, screenshots, release integrity",Public-safe package only,QA status only,Cannot view raw private records
+RA-009,Build provider,No private access,Quote or build against fake/sample data only,Fake scope package,Provider pathway only,No real data before contract and authority approval
+RA-010,Community advisor,No private access,Review governance model and public-safe summaries,Public package only,Advisor feedback only,No private participant data
+RA-011,Backup admin,Private admin,Emergency continuity if custodian unavailable,Access grant record,Backup role only,Dormant unless activated by authority
+RA-012,Decidim admin,Private admin,Operate approved private Decidim workspace if chosen,Decidim admin log,Admin role summary only,No admin access without named approval

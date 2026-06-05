@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v3.0
+Current package version: v3.1
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -53,6 +53,7 @@ Open `private-pilot-implementation.html` to use Private Pilot Implementation for
 
 Open `private-pilot-launch.html` to use Private Pilot Launch Control for controlled launch gates, intake states, communications, learning metrics, and a closeout decision before any wider rollout.
 Open `private-pilot-closeout.html` to use Private Pilot Closeout Decision for closeout checks, scale decision options, evidence ledger, deletion/retention proof, and transition backlog before any repeat, archive, handoff, or wider rollout.
+Open `private-pilot-authority.html` to use Private Pilot Authority Approval for authority gates, Indigenous Data Sovereignty controls, privacy impact checks, role access, participant notice/consent, private environment activation, and second-pilot scale criteria before any real intake opens.
 
 The demo shows:
 
@@ -84,6 +85,20 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v3.1.md`
+- `docs/private-pilot-authority-and-data-governance-pack-v3.1.md`
+- `docs/toastmasters-private-pilot-authority-approval-plan-v3.1.md`
+- `docs/private-pilot-privacy-impact-mini-assessment-v3.1.md`
+- `docs/private-pilot-participant-notice-and-consent-draft-v3.1.md`
+- `data/private-pilot-authority-gates-v3.1.csv`
+- `data/indigenous-data-governance-controls-v3.1.csv`
+- `data/privacy-impact-checks-v3.1.csv`
+- `data/private-pilot-role-access-register-v3.1.csv`
+- `data/participant-notice-consent-clauses-v3.1.csv`
+- `data/private-environment-activation-plan-v3.1.csv`
+- `data/second-pilot-scale-criteria-v3.1.csv`
+- `data/private-pilot-authority-package-v3.1.json`
+
 - `docs/public-demo-release-notes-v3.0.md`
 - `docs/private-pilot-closeout-and-scale-playbook-v3.0.md`
 - `docs/toastmasters-private-pilot-closeout-plan-v3.0.md`
@@ -743,9 +758,28 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
 
+## v3.1 Private Pilot Authority Approval Upgrade
+
+The v3.1 package adds the approval layer needed before any real private pilot intake opens:
+
+- Interactive Private Pilot Authority Approval page.
+- Eighteen authority gates.
+- Sixteen Indigenous Data Sovereignty and data governance controls.
+- Fourteen privacy impact checks.
+- Twelve role/access register rows.
+- Twelve participant notice and consent clauses.
+- Ten private environment activation tasks.
+- Ten second-pilot scale criteria.
+- Browser-generated authority approval brief.
+- Authority/data governance pack, Toastmasters authority approval plan, privacy impact mini assessment, and participant notice/consent draft.
+- Document viewer coverage for all v3.1 authority docs, CSVs, and JSON.
+- Package manifest coverage for the new private pilot authority evidence group.
+
+Use this version after v3.0 closeout. Private Pilot Authority Approval still uses public fake/sample templates only. Real activation requires approved authority, Indigenous Data Sovereignty review, privacy impact decision, named access, participant notice and consent, private environment controls, official Toastmasters boundary, deletion/retention rules, and accountable go/hold/no-go approval.
+
 ## Next Build Step
 
-Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, Delivery Room, Assurance Room, Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, Build Delivery Control, Organisation Onboarding, Private Pilot Readiness, Pilot Operations Control, and Private Pilot Implementation, Private Pilot Launch Control, and Private Pilot Closeout Decision to configure, operate, select a provider for, control delivery of, test organisation/initiative onboarding for, check private-pilot readiness for, rehearse private-pilot run-day operations for, prepare the separate private pilot environment for, launch and learn from a controlled pilot for, close or scale-decision the pilot for, and safely hand over a fake-data Decidim sandbox:
+Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, Delivery Room, Assurance Room, Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, Build Delivery Control, Organisation Onboarding, Private Pilot Readiness, Pilot Operations Control, and Private Pilot Implementation, Private Pilot Launch Control, Private Pilot Closeout Decision, and Private Pilot Authority Approval to configure, operate, select a provider for, control delivery of, test organisation/initiative onboarding for, check private-pilot readiness for, rehearse private-pilot run-day operations for, prepare the separate private pilot environment for, launch and learn from a controlled pilot for, close or scale-decision the pilot for, approve or hold real private pilot activation for, and safely hand over a fake-data Decidim sandbox:
 
 - One organisation.
 - One public assembly.
@@ -762,5 +796,6 @@ Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Ro
 - Private-pilot implementation controls.
 - Private-pilot launch controls.
 - Private-pilot closeout and scale-decision controls.
+- Private-pilot authority, data governance, privacy, access, notice, activation, and scale controls.
 
 Use the files in `docs/` and `data/` as the first mapping package.

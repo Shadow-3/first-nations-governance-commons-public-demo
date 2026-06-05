@@ -1,0 +1,11 @@
+id,lane,task,status,owner,evidence,publicRule,noGo
+ACT-001,Environment,Choose private workspace,Required,Technical custodian,Workspace decision record,Public status only,GitHub Pages used for real records
+ACT-002,Access,Create named access register,Required,Technical custodian,"Role, owner, access, expiry, review date",Access model only,Shared login or unnamed access
+ACT-003,Forms,Build private EOI/intake form,Required,Pilot coordinator,"Minimum fields, notice, consent, withdrawal route",Form status only,Public form collects private records
+ACT-004,Decidim,Map Decidim components to approved data classes,Required,Build lead,Space/component/data class map,Component summary only,Component collects unapproved fields
+ACT-005,Security,Run backup/export/delete drill,Required,Technical custodian,Drill screenshot or log stored privately,Drill status only,Team cannot delete or export safely
+ACT-006,Comms,Approve participant notice and consent,Required,Privacy reviewer,Notice version and approval record,Version only,Real intake opens on draft notice
+ACT-007,Support,Set support response clocks,Hold,Access support contact,Response owner and escalation route,Support model only,Support backlog has no owner
+ACT-008,Official,Confirm official Toastmasters route,Hold,Toastmasters launch lead,External handoff note,External status only,Official records enter private pilot tool accidentally
+ACT-009,Dry run,Run end-to-end dry run with fake data,Ready,QA reviewer,"Dry-run evidence across intake, access, withdrawal, delete, closeout",Pass/fail only,Real pilot starts without rehearsal
+ACT-010,Approval,Record go/hold/no-go decision,Ready,Pilot authority,Decision record and no-go review,Decision status only,Activation happens from momentum

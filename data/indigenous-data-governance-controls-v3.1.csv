@@ -1,0 +1,17 @@
+id,principle,control,status,owner,evidence,publicRule,noGo
+DG-001,Collective benefit,Benefit statement recorded,IDS Required,Data reviewer,Why the pilot benefits First Nations participants and who can check that benefit,Benefit summary only,Data collection serves platform learning more than community benefit
+DG-002,Authority to control,Authority over data use recorded,IDS Required,Pilot authority,"Who can approve use, reuse, reporting, transfer, and deletion",Authority model only,Data is reused because it is technically available
+DG-003,Responsibility,Data steward duties assigned,IDS Required,Data reviewer,"Named duties for minimisation, access, quality, retention, and correction",Steward role only,No one owns data quality or care duties
+DG-004,Ethics,Cultural safety review embedded,IDS Required,Safety reviewer,"Participant dignity, cultural safety, and harm-prevention review before activation",Safety status only,Pilot treats data as neutral admin material
+DG-005,Purpose,Minimum purpose statement approved,IDS Required,Privacy reviewer,"Every field has purpose, owner, retention, and deletion path",Field categories only,Fields are added because they are easy to collect
+DG-006,Classification,Never-public classes locked,IDS Required,Data reviewer,"Member numbers, payments, official records, access needs, incidents, private contacts, authority records",Class labels only,Never-public records appear in public evidence
+DG-007,Storage,Private storage location approved,IDS Required,Technical custodian,"Workspace, hosting region, backup, admin access, and export path",Storage type only,"Records stored in public repo, GitHub Pages, or screenshots"
+DG-008,Access,Need-to-know access model approved,IDS Required,Technical custodian,"Role register with named access, expiry, and review date",Access model only,Supporters or public reviewers get private access
+DG-009,Deletion,Deletion and retention rule approved,IDS Required,Data reviewer,"Delete, retain, archive, handoff, review date, and evidence rule",Rule summary only,Records remain after pilot without reason
+DG-010,Correction,Correction and withdrawal route tested,Governance Hold,Privacy reviewer,Participant can request correction or withdrawal through private route,Route status only,Withdrawal cannot be actioned before launch
+DG-011,Reporting,Aggregate reporting threshold set,Governance Hold,QA reviewer,"Small sample, identity inference, and public wording review",Threshold summary only,Learning note identifies participants by context
+DG-012,Transfer,Transfer and handoff rules drafted,Governance Hold,Pilot authority,"When data can move to official route, provider, archive, or second pilot",Transfer status only,Transfer occurs without fresh authority
+DG-013,Provenance,Source and consent version register ready,Governance Hold,Privacy reviewer,"Notice version, consent version, source, date, and owner",Version labels only,Team cannot prove what notice applied
+DG-014,Audit,Audit evidence path ready,Ready,Technical custodian,"Access logs, deletion evidence, approval records, and redaction QA",Audit status only,No proof exists after an incident or complaint
+DG-015,Decidim,Decidim component data map reviewed,Ready,Build lead,Which Decidim spaces/components may hold which private records,Component categories only,Decidim setup exceeds data approval
+DG-016,Closeout,Closeout data governance review scheduled,Ready,Data reviewer,"Review date, owner, evidence package, and deletion/retention action",Review date only,Pilot ends without data governance closeout

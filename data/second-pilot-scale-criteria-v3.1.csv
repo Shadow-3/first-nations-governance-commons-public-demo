@@ -1,0 +1,11 @@
+id,lane,criterion,status,owner,evidence,publicRule,noGo
+SC-001,Authority,Community authority pathway approved,Required,Pilot authority,Decision rights and consultation record,Authority status only,Scale by developer decision
+SC-002,Data,IDS/data governance review passed,Required,Data reviewer,Data controls passed or named hold list,Pass/fail only,Scale without data governance
+SC-003,Privacy,PIA holds closed,Required,Privacy reviewer,"Privacy risks accepted, fixed, or no-go",Decision status only,Scale with unresolved privacy risk
+SC-004,Safety,Incident and support load acceptable,Required,Safety reviewer,Incident/support closeout and capacity review,Aggregate only,Scale while support or incident route fails
+SC-005,Evidence,Public summary redaction QA passed,Required,QA reviewer,Aggregate-safe learning note,QA status only,Public learning identifies someone
+SC-006,Environment,Private hosting can sustain next stage,Required,Technical custodian,"Access, backup, logging, deletion, admin continuity",Hosting status only,Static demo or unstable private tool becomes system of record
+SC-007,Official boundary,Toastmasters official process still separated,Required,Toastmasters launch lead,Official handoff or separation note,External status only,Official membership data enters public/demo path
+SC-008,Funding,Funding/provider route is realistic,Hold,Build delivery lead,"Budget, quote, or self-build capacity note",Funding status only,Scale commitment lacks capacity
+SC-009,Learning,Participant learning supports next stage,Ready,Pilot authority,"Founder readiness, support, conversion, withdrawals, operator load",Aggregate learning only,Scale ignores pilot evidence
+SC-010,Closeout,Archive/deletion proof complete,Ready,Data reviewer,Retention/deletion evidence and review date,Closeout status only,Previous pilot remains open while next starts

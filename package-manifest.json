@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "3.0",
+  "version": "3.1",
   "date": "2026-06-05",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, Build Delivery Control, Organisation Onboarding, Private Pilot Readiness, Pilot Operations Control, Private Pilot Implementation, and Private Pilot Launch Control, and Private Pilot Closeout Decision in sequence. Pilot Launch is only a public fake/sample launch template; any real private pilot needs a separate approved private environment, named operators, role access, privacy notice, consent and withdrawal, incident response, official handoff, retention, deletion, closeout evidence, and weekly learning review, closeout decision record, deletion/retention proof, access revocation or renewal, public summary redaction QA, and transition backlog.",
+  "recommendedDecision": "Use Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, Build Delivery Control, Organisation Onboarding, Private Pilot Readiness, Pilot Operations Control, Private Pilot Implementation, and Private Pilot Launch Control, and Private Pilot Closeout Decision, and Private Pilot Authority Approval in sequence. Pilot Launch is only a public fake/sample launch template; any real private pilot needs a separate approved private environment, named operators, role access, privacy notice, consent and withdrawal, incident response, official handoff, retention, deletion, closeout evidence, and weekly learning review, closeout decision record, deletion/retention proof, access revocation or renewal, public summary redaction QA, and transition backlog, authority approval, Indigenous Data Sovereignty review, privacy impact decision, role access register, participant notice/consent, private environment activation, and scale criteria.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -162,13 +162,27 @@
     "data/private-pilot-scale-decision-options-v3.0.csv",
     "data/private-pilot-evidence-ledger-v3.0.csv",
     "data/private-pilot-transition-backlog-v3.0.csv",
-    "data/private-pilot-closeout-package-v3.0.json"
+    "data/private-pilot-closeout-package-v3.0.json",
+    "private-pilot-authority.html",
+    "docs/private-pilot-authority-and-data-governance-pack-v3.1.md",
+    "docs/toastmasters-private-pilot-authority-approval-plan-v3.1.md",
+    "docs/private-pilot-privacy-impact-mini-assessment-v3.1.md",
+    "docs/private-pilot-participant-notice-and-consent-draft-v3.1.md",
+    "docs/public-demo-release-notes-v3.1.md",
+    "data/private-pilot-authority-gates-v3.1.csv",
+    "data/indigenous-data-governance-controls-v3.1.csv",
+    "data/privacy-impact-checks-v3.1.csv",
+    "data/private-pilot-role-access-register-v3.1.csv",
+    "data/participant-notice-consent-clauses-v3.1.csv",
+    "data/private-environment-activation-plan-v3.1.csv",
+    "data/second-pilot-scale-criteria-v3.1.csv",
+    "data/private-pilot-authority-package-v3.1.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v3.0.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.1.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -300,7 +314,17 @@
       "qa-v30-deployed-private-pilot-closeout-required-desktop.png",
       "qa-v30-deployed-private-pilot-closeout-evidence-desktop.png",
       "qa-v30-deployed-private-pilot-closeout-mobile.png",
-      "qa-v30-deployed-private-pilot-closeout-package-mobile.png"
+      "qa-v30-deployed-private-pilot-closeout-package-mobile.png",
+      "qa-v31-local-private-pilot-authority-desktop.png",
+      "qa-v31-local-private-pilot-authority-required-desktop.png",
+      "qa-v31-local-private-pilot-authority-ids-desktop.png",
+      "qa-v31-local-private-pilot-authority-mobile.png",
+      "qa-v31-local-private-pilot-authority-package-mobile.png",
+      "qa-v31-deployed-private-pilot-authority-desktop.png",
+      "qa-v31-deployed-private-pilot-authority-required-desktop.png",
+      "qa-v31-deployed-private-pilot-authority-ids-desktop.png",
+      "qa-v31-deployed-private-pilot-authority-mobile.png",
+      "qa-v31-deployed-private-pilot-authority-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -495,7 +519,9 @@
       "private-pilot-launch.html",
       "docs/public-demo-release-notes-v2.9.md",
       "private-pilot-closeout.html",
-      "docs/public-demo-release-notes-v3.0.md"
+      "docs/public-demo-release-notes-v3.0.md",
+      "private-pilot-authority.html",
+      "docs/public-demo-release-notes-v3.1.md"
     ],
     "actionCenter": [
       "docs/next-steps-action-plan-v1.1.md",
@@ -1104,6 +1130,22 @@
       "data/private-pilot-evidence-ledger-v3.0.csv",
       "data/private-pilot-transition-backlog-v3.0.csv",
       "data/private-pilot-closeout-package-v3.0.json"
+    ],
+    "privatePilotAuthority": [
+      "private-pilot-authority.html",
+      "docs/private-pilot-authority-and-data-governance-pack-v3.1.md",
+      "docs/toastmasters-private-pilot-authority-approval-plan-v3.1.md",
+      "docs/private-pilot-privacy-impact-mini-assessment-v3.1.md",
+      "docs/private-pilot-participant-notice-and-consent-draft-v3.1.md",
+      "docs/public-demo-release-notes-v3.1.md",
+      "data/private-pilot-authority-gates-v3.1.csv",
+      "data/indigenous-data-governance-controls-v3.1.csv",
+      "data/privacy-impact-checks-v3.1.csv",
+      "data/private-pilot-role-access-register-v3.1.csv",
+      "data/participant-notice-consent-clauses-v3.1.csv",
+      "data/private-environment-activation-plan-v3.1.csv",
+      "data/second-pilot-scale-criteria-v3.1.csv",
+      "data/private-pilot-authority-package-v3.1.json"
     ]
   },
   "safetyRules": [
@@ -1134,7 +1176,10 @@
     "No real launch meeting links, official Toastmasters records, access needs, incident details, payment details, member numbers, authority records, or private decision records belong in public evidence.",
     "Private Pilot Closeout Decision is a public fake/sample template only; it must not collect or expose real closeout records, evidence, incident details, access needs, official Toastmasters records, payment details, member numbers, or authority records.",
     "No repeat, scale, archive, handoff, or second controlled pilot should proceed until closeout checks, evidence classification, deletion/retention proof, access review, public summary redaction QA, and a decision record are complete.",
-    "Public learning from the pilot must be aggregate, redacted, and approved; never-public evidence remains only in the approved private environment."
+    "Public learning from the pilot must be aggregate, redacted, and approved; never-public evidence remains only in the approved private environment.",
+    "Private Pilot Authority Approval is a public fake/sample template only; it must not collect or expose real names, emails, access needs, incidents, official Toastmasters records, member numbers, payments, signatures, authority records, or private pilot evidence.",
+    "No real private pilot intake, private Decidim workspace, provider handoff, or second-pilot scale path should proceed until authority, Indigenous Data Sovereignty, privacy impact, role access, notice/consent, private environment activation, and scale criteria are approved.",
+    "Developer custody and repository maintainership do not equal First Nations community authority."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -1709,5 +1754,97 @@
     ],
     "safetyRule": "This public v3.0 closeout package is fake/sample only. It must not collect or expose real closeout records, private pilot evidence, incident details, access needs, official Toastmasters records, payment details, member numbers, or authority records.",
     "closeoutRule": "Do not repeat, scale, archive, or hand off the pilot until closeout checks, evidence ledger, deletion/retention proof, official boundary, and proceed/hold/no-go decision are recorded."
+  },
+  "privatePilotAuthority": {
+    "entrypoint": "private-pilot-authority.html",
+    "authorityPack": "docs/private-pilot-authority-and-data-governance-pack-v3.1.md",
+    "toastmastersApprovalPlan": "docs/toastmasters-private-pilot-authority-approval-plan-v3.1.md",
+    "privacyAssessment": "docs/private-pilot-privacy-impact-mini-assessment-v3.1.md",
+    "participantNotice": "docs/private-pilot-participant-notice-and-consent-draft-v3.1.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.1.md",
+    "dataFiles": [
+      "data/private-pilot-authority-gates-v3.1.csv",
+      "data/indigenous-data-governance-controls-v3.1.csv",
+      "data/privacy-impact-checks-v3.1.csv",
+      "data/private-pilot-role-access-register-v3.1.csv",
+      "data/participant-notice-consent-clauses-v3.1.csv",
+      "data/private-environment-activation-plan-v3.1.csv",
+      "data/second-pilot-scale-criteria-v3.1.csv",
+      "data/private-pilot-authority-package-v3.1.json"
+    ],
+    "counts": {
+      "authorityGates": 18,
+      "dataGovernanceControls": 16,
+      "privacyImpactChecks": 14,
+      "roleAccessRows": 12,
+      "participantNoticeClauses": 12,
+      "activationTasks": 10,
+      "scaleCriteria": 10,
+      "activationRecords": 44,
+      "requiredAuthorityGates": 12,
+      "idsRequiredControls": 9,
+      "requiredPrivacyChecks": 10,
+      "noPrivateAccessRoles": 3,
+      "requiredNoticeClauses": 9,
+      "requiredActivationTasks": 6,
+      "requiredScaleCriteria": 7
+    },
+    "noGoTriggers": [
+      "Real intake opens before authority and data governance approval are recorded.",
+      "Developer custody or repository maintainership is treated as community authority.",
+      "Private pilot records enter GitHub Pages, public CSVs, public screenshots, public repo issues, or the fake Decidim sandbox.",
+      "Official Toastmasters records, member numbers, signatures, payments, or charter forms are stored in the public package.",
+      "Consent, withdrawal, correction, retention, deletion, or incident response is missing or untested.",
+      "A provider or public reviewer receives real participant data before contract, authority, and privacy approval.",
+      "Scale or second pilot proceeds without closeout, redaction QA, and authority record."
+    ],
+    "sourceAnchors": [
+      {
+        "label": "Barayamal Toastmasters First Nations",
+        "url": "https://barayamal.com.au/toastmasters-first-nations/"
+      },
+      {
+        "label": "Toastmasters Start a Club",
+        "url": "https://www.toastmasters.org/Start-a-Club"
+      },
+      {
+        "label": "Toastmasters Club Charter Requirements Form",
+        "url": "https://content.toastmasters.org/image/upload/ATO-club-chartering-requirements-ff.pdf"
+      },
+      {
+        "label": "Toastmasters Governing Documents",
+        "url": "https://www.toastmasters.org/resources/governing-documents"
+      },
+      {
+        "label": "Maiam nayri Wingara Indigenous Data Sovereignty",
+        "url": "https://www.maiamnayriwingara.org/"
+      },
+      {
+        "label": "AIATSIS ethical research",
+        "url": "https://aiatsis.gov.au/research/ethical-research"
+      },
+      {
+        "label": "NHMRC Aboriginal and Torres Strait Islander research ethics",
+        "url": "https://www.nhmrc.gov.au/research-policy/ethics/ethical-guidelines-research-aboriginal-and-torres-strait-islander-peoples"
+      },
+      {
+        "label": "OAIC Australian Privacy Principles",
+        "url": "https://www.oaic.gov.au/privacy/australian-privacy-principles/"
+      },
+      {
+        "label": "OAIC Guide to undertaking privacy impact assessments",
+        "url": "https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/privacy-impact-assessments/guide-to-undertaking-privacy-impact-assessments"
+      },
+      {
+        "label": "Decidim administrators",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/admins.html"
+      },
+      {
+        "label": "Decidim permissions",
+        "url": "https://docs.decidim.org/en/develop/develop/permissions.html"
+      }
+    ],
+    "safetyRule": "This public v3.1 authority package is fake/sample only. It must not collect or expose real names, emails, access needs, incidents, official Toastmasters records, member numbers, payments, signatures, authority records, or private pilot evidence.",
+    "approvalRule": "Do not activate any real private pilot, private Decidim workspace, EOI intake, provider handoff, or second pilot until authority, Indigenous Data Sovereignty, privacy impact, role access, participant notice, private environment, and scale criteria are approved."
   }
 }

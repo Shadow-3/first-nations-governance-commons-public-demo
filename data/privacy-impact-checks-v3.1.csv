@@ -1,0 +1,15 @@
+id,topic,check,status,owner,evidence,publicRule,noGo
+PIA-001,APP purpose,Collection purpose defined,Required,Privacy reviewer,Plain purpose for each data class,Purpose summary only,Purpose is vague or changes after collection
+PIA-002,APP notice,Participant notice drafted,Required,Privacy reviewer,"What is collected, why, where stored, who sees it, how to withdraw",Notice version only,People submit info without clear notice
+PIA-003,Consent,Consent wording approved,Required,Pilot authority,"Consent is voluntary, specific, informed, and separate from official Toastmasters process",Template status only,Consent implies official membership or charter approval
+PIA-004,Minimisation,Minimum fields approved,Required,Data reviewer,Fields are limited to pilot operation and support,Field categories only,Nice-to-have fields enter real pilot
+PIA-005,Sensitive data,Sensitive classes excluded or justified,Required,Privacy reviewer,"Access needs, incidents, private contacts, cultural material, payment, member records",Class labels only,Sensitive records are collected without justification
+PIA-006,Access,Role access tested,Required,Technical custodian,"Named admins, reviewers, support, no-private-access roles",Access model only,Unapproved people can view private records
+PIA-007,Security,Private workspace security checked,Required,Technical custodian,"MFA, password sharing ban, exports, backups, device risk",Security status only,Records exported or shared uncontrolled
+PIA-008,Retention,Retention schedule approved,Required,Data reviewer,"Delete, retain, transfer, archive, and review dates",Schedule summary only,Records retained by default
+PIA-009,Withdrawal,Withdrawal/correction tested,Required,Privacy reviewer,"Request route, owner, response clock, and proof",Aggregate compliance only,No way to correct or withdraw before launch
+PIA-010,Incident,Privacy incident response ready,Required,Safety reviewer,"Pause rule, notification route, containment, evidence",Incident status only,Exposure has no pause or escalation route
+PIA-011,Provider,Provider/private tool assessment drafted,Hold,Build delivery lead,What external service sees and what contract/control is needed,Provider category only,Provider receives real data during quote or setup
+PIA-012,Cross-border,Hosting jurisdiction checked,Hold,Technical custodian,"Where records, backups, logs, and subprocessors are located",Jurisdiction status only,Data leaves approved environment unexpectedly
+PIA-013,Public summary,Redaction QA test ready,Ready,QA reviewer,Public wording checked for identity inference and private context,QA pass/fail only,Aggregate report identifies someone indirectly
+PIA-014,Decision,PIA go/hold/no-go record required,Ready,Pilot authority,Recorded decision before real pilot activation,Decision status only,Pilot activates without privacy sign-off

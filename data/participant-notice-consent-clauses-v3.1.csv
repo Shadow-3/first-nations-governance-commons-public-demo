@@ -1,0 +1,13 @@
+id,topic,clause,status,evidence,publicRule,noGo
+NC-001,Purpose,Why we are collecting information,Required,Plain-language purpose for controlled First Nations Toastmasters pilot,Purpose statement only,Purpose missing or misleading
+NC-002,Voluntary,Participation is voluntary,Required,No one has to join the pilot to access public demo material,Clause status only,Pilot feels compulsory
+NC-003,Not official membership,Official Toastmasters membership is separate,Required,"Official forms, payments, charter, and member records stay outside this package",External boundary only,Notice implies official membership
+NC-004,What collected,Minimum fields listed,Required,Name/contact/status/support route only if approved privately,Field categories only,Unlisted data is collected
+NC-005,Sensitive exclusions,Never-public exclusions named,Required,"No payment, member number, official form, signature, incident detail, access need, or authority record in public demo",Exclusion summary only,Excluded data enters public package
+NC-006,Who sees it,Role access explained,Required,"Named operators/reviewers only, no public reviewers or providers",Role categories only,Access not clear
+NC-007,Where stored,Private storage explained,Required,"Approved private workspace only, not GitHub Pages or public CSVs",Storage class only,Storage location missing
+NC-008,Withdrawal/correction,How to withdraw or correct,Required,"Private contact route, response clock, and evidence rule",Aggregate only,No withdrawal route
+NC-009,Retention/deletion,How long records are kept,Required,"Delete, retain, archive, or transfer rule and review date",Retention summary only,Open-ended retention
+NC-010,Incident pause,What happens if something goes wrong,Ready,"Pause, contain, contact, review, and no-go path",Pause rule only,No incident route
+NC-011,Public reporting,Public learning is aggregate/redacted,Ready,"No names, private context, access needs, incidents, or official records",Public-safe summary only,Report can identify participant
+NC-012,Closeout decision,How pilot result is decided,Ready,"Proceed, hold, no-go, archive, or second pilot by authority record",Decision status only,Decision process hidden
