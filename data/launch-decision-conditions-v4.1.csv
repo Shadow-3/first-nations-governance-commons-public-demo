@@ -1,0 +1,13 @@
+id,decision,status,condition,result
+DEC-001,Open real pilot,Not available,All blocked approvals pass and high holds are accepted privately.,Not current.
+DEC-002,Hold,Recommended,"Authority, privacy, IDS, official route, support, and technical proofs are not all complete.",Current decision.
+DEC-003,Second fake-data rehearsal,Recommended,Any gate remains blocked after agreement review.,Likely next.
+DEC-004,Barayamal-only private pilot,Hold,Barayamal pathway passes but Toastmasters boundary remains blocked.,Possible with private authority approval.
+DEC-005,Toastmasters-only controlled tester,Hold,Official boundary passes but Barayamal business field review remains held.,Possible only after official-route acceptance.
+DEC-006,Archive public demo,Available,Private approval route pauses or declines.,Keep public package as concept.
+DEC-007,Provider-assisted build,Available,Self-build environment remains blocked.,Use with private contract controls.
+DEC-008,Self-build Decidim app,Hold,Ruby/Postgres/ImageMagick/Vips/Decidim scaffold are ready.,Not ready in static package.
+DEC-009,Public update only,Available,Only public-safe learning is approved.,No real intake.
+DEC-010,No-go,Available,"Authority, privacy, IDS, official-route, or safety owner declines.",Stop real pilot.
+DEC-011,Wait for support route,Recommended,Support and incident route not passed.,Protect participants.
+DEC-012,Wait for official route,Recommended,Official Toastmasters boundary not accepted.,Protect member path.

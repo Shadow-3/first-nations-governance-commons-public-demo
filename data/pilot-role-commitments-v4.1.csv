@@ -1,0 +1,15 @@
+id,role,lane,status,commitment,canDo,cannotDo
+ROL-001,Organisation lead,Barayamal,Hold,Keeps founder/business-owner participation within approved private pathway.,Coordinate fake-data rehearsal and private pilot readiness.,Approve First Nations authority alone.
+ROL-002,Founder participant,Barayamal,Hold,Receives plain-language notice and withdrawal route.,Use private approved forms and meetings.,Enter sensitive data in public demo.
+ROL-003,Business owner participant,Barayamal,Hold,Uses only approved fields after privacy review.,Submit private pilot feedback if approved.,Share confidential commercial records publicly.
+ROL-004,Mentor,Barayamal,Hold,Acts under conflict and privacy rules.,View approved material and give advice.,Access private evidence by default.
+ROL-005,Partner observer,Barayamal,Ready,Observer-only and public-safe.,View public updates.,Export private records.
+ROL-006,Dean trusted reviewer,Cross-track,Ready,Advisory only; no approval substitution.,Review evidence boundaries and developer custody.,Approve authority/privacy/IDS/official route.
+ROL-007,Member tester,FN Toastmasters,Blocked,Only joins after official boundary acceptance.,Use sample meeting and learning flows.,Store member number or official records.
+ROL-008,Guest tester,FN Toastmasters,Hold,Guest-only route stays clear.,View public meeting/welcome material.,Be treated as official member.
+ROL-009,Club facilitator,FN Toastmasters,Hold,Keeps sample activity non-official.,Moderate sample pages and meetings.,Make official Toastmasters decisions in Decidim.
+ROL-010,Authority chair,Cross-track,Blocked,Owns private go/hold/no-go decision.,"Approve, hold, archive, or request repeat rehearsal.",Publish private minutes.
+ROL-011,Privacy reviewer,Cross-track,Blocked,"Approves notices, consent, fields, support, and complaint route.",Hold launch if privacy risks remain.,Publish privacy evidence with identities.
+ROL-012,IDS/data governance reviewer,Cross-track,Blocked,"Controls data classes, access, retention, export, deletion.",Approve private data handling.,Put data governance evidence in public repo.
+ROL-013,Technical custodian,Cross-track,Hold,"Proves access, revoke, backup, restore, export, and delete.",Operate private sandbox under controls.,Share credentials or logs publicly.
+ROL-014,Comms lead,Cross-track,Ready,Publishes only approved public-safe language.,Share public learning update.,Overstate readiness or publish private evidence.

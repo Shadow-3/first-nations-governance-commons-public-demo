@@ -1,0 +1,15 @@
+id,dataItem,dataClass,status,source,decidimTreatment,retentionRule,publicRule
+DAT-001,Public demo sample records,Public safe,Ready,Static package,Rendered only as fake/sample data.,Keep for public archive.,Can publish.
+DAT-002,Participant name and contact,Private restricted,Blocked,Private intake only,Minimum profile if approved.,Delete on withdrawal/closeout rule.,Do not publish.
+DAT-003,Founder/business details,Private restricted,Hold,Private form only,Optional fields after privacy review.,Retain only approved minimum.,Do not publish.
+DAT-004,Member number,Never public,Blocked,Official Toastmasters route,Not stored in Decidim.,External official rules.,Never publish.
+DAT-005,Payments or signatures,Never public,Blocked,External official route,Not stored in Decidim.,External rules.,Never publish.
+DAT-006,Meeting attendance,Private restricted,Hold,Private meeting record,Aggregate only if approved.,Closeout retention rule.,No names publicly.
+DAT-007,Learning survey aggregate,Public safe,Hold,Private survey summary,Aggregate values only.,Archive approved aggregate.,Can publish aggregate.
+DAT-008,Learning survey raw response,Never public,Blocked,Private survey storage,Not published.,Delete/retain by approval.,Never publish.
+DAT-009,Support request,Private restricted,Hold,Private support route,Not entered in public demo.,Private support retention.,Do not publish.
+DAT-010,Incident detail,Never public,Blocked,Private incident route,Not entered in public demo.,Private incident retention.,Never publish.
+DAT-011,Access logs,Never public,Hold,Private technical environment,Used for access proof only.,Private security retention.,Never publish.
+DAT-012,Authority decision record,Private restricted,Blocked,Private authority folder,Reference status only.,Private record retention.,Publish only public-safe status.
+DAT-013,Provider handoff notes,Private restricted,Hold,Private provider folder,Need-to-know only.,Contract retention.,Do not publish.
+DAT-014,Public launch update,Public safe,Ready,Public comms file,Approved public-safe wording.,Keep as public record.,Can publish.

@@ -1,0 +1,13 @@
+id,clause,dataClass,status,plainLanguage,privateRecord,participantChoice
+NOT-001,What this pilot is,Public safe,Ready,This is a controlled private pilot only after approvals pass.,Public notice.,Participants can ask questions before joining.
+NOT-002,What this pilot is not,Public safe,Ready,It is not an official Toastmasters record system or public consultation.,Public notice.,Participants can decline.
+NOT-003,Who can approve participation,Private restricted,Blocked,Only approved private authority owners can approve real participation.,Private authority record.,Participants can request authority contact privately.
+NOT-004,Data collected,Private restricted,Blocked,Only approved minimum data is collected privately.,Private data schedule.,Participants can ask what is collected.
+NOT-005,Data not collected,Public safe,Ready,"Public demo does not collect real names, emails, member numbers, payments, or signatures.",Public notice.,Participants should not enter real data publicly.
+NOT-006,Consent and withdrawal,Private restricted,Blocked,"Consent, withdrawal, and support route are handled privately.",Private consent record.,Participants can withdraw.
+NOT-007,Support and pause,Private restricted,Hold,Support and pause routes are available before real intake.,Private support protocol.,Participants can pause participation.
+NOT-008,Official records,Public safe,Hold,Official Toastmasters records remain external.,Official-route wording.,Participants use official channel for official records.
+NOT-009,Access and roles,Private restricted,Hold,Access is role-based and revocable.,Private access register.,Participants can ask who can see data.
+NOT-010,Retention and deletion,Private restricted,Blocked,Retention and deletion follow private data governance approval.,Private retention rule.,Participants can ask for deletion path.
+NOT-011,Public updates,Public safe,Ready,Public updates are aggregate and fake/sample safe.,Public comms approval.,Participants can request correction.
+NOT-012,Complaints and incidents,Private restricted,Hold,"Complaints, incidents, and affected-person details stay private.",Private support protocol.,Participants can use private complaint route.

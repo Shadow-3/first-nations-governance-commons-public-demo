@@ -1,0 +1,13 @@
+id,audience,step,status,outcome,resource
+TRN-001,Organisation lead,Pilot overview and limits,Ready,Understands public demo vs private pilot.,Playbook and public update.
+TRN-002,Founder/business participant,Plain-language notice,Hold,"Understands consent, withdrawal, support, and data limits.",Participant notice pack.
+TRN-003,Mentor/advisor,Advisory boundary,Hold,Understands advice does not approve launch.,Role commitment sheet.
+TRN-004,Partner observer,Observer-only access,Ready,Understands no private evidence access.,Observer quick guide.
+TRN-005,Member tester,Official route boundary,Blocked,Understands Decidim is not official record system.,Official-route notice.
+TRN-006,Guest tester,Guest/member separation,Hold,Understands guest status.,Guest welcome note.
+TRN-007,Club facilitator,Non-official sample activity,Hold,Avoids official motions/records in Decidim.,Facilitator run sheet.
+TRN-008,Authority chair,Closeout decision options,Blocked,"Can choose hold, second rehearsal, no-go, archive, or pilot-ready conditions.",Decision conditions.
+TRN-009,Privacy reviewer,Field and notice review,Blocked,Can approve or hold data collection.,Notice and data schedule.
+TRN-010,IDS/data governance reviewer,Data control review,Blocked,Can approve data classes and retention.,Data schedule.
+TRN-011,Technical custodian,"Access, revoke, backup, restore, delete",Hold,Can prove technical controls privately.,Technical proof checklist.
+TRN-012,Comms lead,Public-safe update writing,Ready,Can publish only approved statements.,Launch communications pack.

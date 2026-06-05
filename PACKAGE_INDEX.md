@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v4.0  
+Version: v4.1  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -153,9 +153,30 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
 
+## v4.1 Pilot Agreement & Organisation Onboarding Additions
+
+- `pilot-agreement-onboarding.html` - public-safe pack for joining pathways, agreement sections, role commitments, notices, data schedules, support protocols, training, launch communications, and decision conditions.
+- `docs/pilot-agreement-onboarding-playbook-v4.1.md`
+- `docs/first-nations-organisation-join-pathway-v4.1.md`
+- `docs/participant-notice-and-role-commitment-pack-v4.1.md`
+- `docs/launch-communications-and-training-pack-v4.1.md`
+- `docs/public-demo-release-notes-v4.1.md`
+- `data/pilot-agreement-sections-v4.1.csv`
+- `data/organisation-join-pathways-v4.1.csv`
+- `data/pilot-role-commitments-v4.1.csv`
+- `data/participant-notice-clauses-v4.1.csv`
+- `data/pilot-data-schedule-v4.1.csv`
+- `data/pilot-support-protocols-v4.1.csv`
+- `data/onboarding-training-steps-v4.1.csv`
+- `data/launch-communications-v4.1.csv`
+- `data/launch-decision-conditions-v4.1.csv`
+- `data/pilot-agreement-onboarding-package-v4.1.json`
+
+
 ## v4.0 Private Rehearsal Closeout Board Additions
 
 - `private-rehearsal-closeout.html` - public-safe board for private fake-data rehearsal runs, closeout gates, evidence checks, approvals, public updates, launch decisions, and owner tasks.
+- `pilot-agreement-onboarding.html` is the public-safe Pilot Agreement & Organisation Onboarding Pack for joining pathways, role commitments, notices, data schedules, support protocols, training, launch communications, and decision conditions.
 - `docs/private-rehearsal-closeout-playbook-v4.0.md`
 - `docs/rehearsal-run-sheet-v4.0.md`
 - `docs/private-approval-and-evidence-checklist-v4.0.md`

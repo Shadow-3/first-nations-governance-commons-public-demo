@@ -1,0 +1,11 @@
+id,section,status,owner,purpose,mustInclude,boundary
+AGR-001,Purpose and scope,Ready,Pilot owner,Describe the fake-data-to-private-pilot pathway.,Clear public-safe scope and no real consultation claim.,No private authority evidence.
+AGR-002,First Nations authority,Blocked,Authority chair,Name who can approve real participation privately.,Private authority decision reference.,Do not publish authority minutes.
+AGR-003,Indigenous Data Sovereignty,Blocked,Data governance reviewer,"Set control, access, retention, export, and deletion terms.",Private IDS/data governance approval.,No public data governance evidence.
+AGR-004,Privacy and consent,Blocked,Privacy reviewer,"Approve notice, consent, withdrawal, support, and complaint routes.",Private privacy decision.,No public consent evidence.
+AGR-005,Official Toastmasters boundary,Blocked,Official-route owner,"Keep official membership, education, payments, and club records external.",External official route statement.,No member numbers or official records.
+AGR-006,Barayamal organisation path,Hold,Barayamal program operator,"Define founder, business owner, mentor, partner, and advisor pathways.",Approved private onboarding roles.,No sensitive business details.
+AGR-007,Participant support and pause,Hold,Safety reviewer,"Set support, escalation, pause, and incident response routes.",Private support protocol.,No incident/support notes.
+AGR-008,Technical custody and access,Hold,Technical custodian,"Set admin roles, least privilege, revoke, backup, restore, export, and delete.",Private access proof.,No credentials or logs.
+AGR-009,Public communications,Ready,Comms lead,State what can be shared publicly.,Approved public-safe wording.,No overstated readiness.
+AGR-010,"Exit, archive, and closeout",Hold,Authority chair,"Define no-go, archive, repeat rehearsal, or pilot-ready decision.",Private closeout decision.,No private evidence in public pack.

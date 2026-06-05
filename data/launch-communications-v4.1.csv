@@ -1,0 +1,11 @@
+id,audience,status,message,channel,avoid
+COM-001,Public,Ready,The public demo remains fake/sample only.,Website/update post,Do not imply real consultation.
+COM-002,First Nations organisations,Ready,Organisations can review the public pack and ask about private joining pathways.,Email or page,Do not invite real intake publicly.
+COM-003,Barayamal founders/business owners,Hold,A private pilot pathway may open only after approvals.,Private invite draft,No public intake form.
+COM-004,First Nations Toastmasters testers,Hold,Member testing is controlled and not official record keeping.,Private invite draft,No official membership claim.
+COM-005,Advisors/reviewers,Ready,Dean/Barayamal advisory review is advisory only.,Review pack,Do not imply approval authority.
+COM-006,Authority owners,Blocked,Private authority decision is required before real launch.,Private agenda,No public minutes.
+COM-007,Privacy/IDS reviewers,Blocked,Private privacy and data governance approvals are required.,Private agenda,No private evidence public.
+COM-008,Support/safety reviewers,Hold,Support and pause route must be ready before real intake.,Private checklist,No support details public.
+COM-009,Technical/provider team,Hold,Private sandbox access and revoke proof must pass.,Private run sheet,No credentials or logs.
+COM-010,Public after closeout,Ready,Current decision remains hold unless private owners approve otherwise.,Public update,Do not overstate readiness.

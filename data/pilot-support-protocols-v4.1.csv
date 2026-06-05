@@ -1,0 +1,13 @@
+id,protocol,status,owner,trigger,action,privateBoundary
+SUP-001,Pre-join questions,Ready,Pilot owner,Person asks what the pilot is.,Answer with public-safe brief and private contact route.,No personal data in public.
+SUP-002,Consent concern,Blocked,Privacy reviewer,Person is unsure about consent.,Use private consent discussion.,No public consent evidence.
+SUP-003,Withdrawal request,Hold,Privacy reviewer,Person wants to stop.,Pause access and follow deletion/retention rule.,No public status naming.
+SUP-004,Support need,Hold,Safety reviewer,Person needs support or accommodation.,Use private support route.,No support details publicly.
+SUP-005,Incident or harm concern,Blocked,Safety reviewer,Incident or affected-person concern appears.,"Pause, escalate, and record privately.",Never public.
+SUP-006,Official Toastmasters query,Hold,Official-route owner,Question concerns official membership or records.,Redirect to official route.,Do not answer as official authority.
+SUP-007,Data access question,Blocked,Data governance reviewer,Person asks who can see data.,Answer from approved data schedule.,No private evidence.
+SUP-008,Technical access problem,Hold,Technical custodian,User cannot access approved private sandbox.,Resolve privately and log in private system.,No logs publicly.
+SUP-009,Role confusion,Ready,Review coordinator,Person confuses advisory with approval.,Use role commitment language.,No approval substitution.
+SUP-010,Public correction request,Ready,Comms lead,Public update needs correction.,Correct public-safe statement.,No private evidence.
+SUP-011,Complaint route,Hold,Safety reviewer,Person wants to complain.,Use private complaint path.,No public complaint details.
+SUP-012,Closeout question,Ready,Authority chair,Person asks what happens next.,Answer with hold/second rehearsal/no-go/pilot-ready options.,No private minutes.

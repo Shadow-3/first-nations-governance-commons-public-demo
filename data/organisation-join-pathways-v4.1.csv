@@ -1,0 +1,13 @@
+id,track,pathway,status,who,requiredBefore,decidimUse,boundary
+JON-001,Barayamal,Founder private pilot participant,Hold,Indigenous founder using fake-data rehearsal first.,"Authority, privacy, IDS, support, and field review.","Assembly proposal, survey, meeting, accountability.",No real names or business-sensitive details in public.
+JON-002,Barayamal,Business owner learning path,Hold,Business owner testing support and governance requests.,Privacy/business field review.,"Survey, proposals, accountability.",No private commercial records.
+JON-003,Barayamal,Mentor or advisor path,Hold,Mentor giving advice without approval authority.,"Conflict, privacy, and least-privilege rules.","Comments, meetings, pages.",No private participant records.
+JON-004,Barayamal,Partner observer path,Ready,Partner seeing public-safe progress only.,Observer-only access proof.,"Pages, blog, accountability.",No private exports.
+JON-005,Barayamal,Dean trusted reviewer path,Ready,Dean reviews as advisory/trusted reviewer only.,Advisory boundary accepted.,Private review note outside public pack.,No approval substitution.
+JON-006,FN Toastmasters,Member tester path,Blocked,Controlled member tester after official-route review.,Official Toastmasters boundary acceptance.,"Meetings, surveys, pages.",No member numbers or official records.
+JON-007,FN Toastmasters,Guest tester path,Hold,Guest testing meeting discovery and welcome path.,Guest/member boundary proof.,"Meetings, pages.",No implied membership.
+JON-008,FN Toastmasters,Meeting role volunteer,Hold,Fake role holder testing agenda and minutes.,No evaluation or education record collection.,"Meetings, accountability.",No real evaluations.
+JON-009,FN Toastmasters,Club facilitator path,Hold,Facilitator maintaining non-official sample activity.,Official-route wording review.,"Meetings, pages, moderation.",No official club decisions.
+JON-010,Cross-track,Authority reviewer path,Blocked,Private owner deciding go/hold/no-go.,Private authority meeting.,Decision summary only.,No public authority minutes.
+JON-011,Cross-track,Privacy and data reviewer path,Blocked,"Reviewer approving data, privacy, retention, and deletion.",Private privacy and IDS review.,No Decidim participant account needed.,No public evidence.
+JON-012,Cross-track,Provider or technical support path,Hold,Provider supporting private sandbox setup only under controls.,Provider handoff boundary and access proof.,Admin and logs in private environment only.,No credentials or logs.

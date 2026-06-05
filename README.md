@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v4.0
+Current package version: v4.1
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -63,6 +63,7 @@ Open `two-track-pilot-onboarding.html` to run Barayamal as the organisation onbo
 Open `controlled-sandbox-test-lab.html` to run fake accounts, scripts, observer notes, issue triage, gates, and evidence checks before any real private pilot.
 Open `sandbox-rehearsal-scorecard.html` to convert fake-data rehearsal results into pass, hold, blocked, remediation, rollout, and public-summary decisions.
 Open `private-rehearsal-closeout.html` to execute and close the private fake-data rehearsal with gates, approvals, public updates, and launch decisions.
+Open `pilot-agreement-onboarding.html` to prepare safe joining terms, role commitments, notices, data schedules, support protocols, training, launch communications, and decision conditions.
 
 The demo shows:
 
@@ -94,6 +95,22 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v4.1.md`
+- `docs/pilot-agreement-onboarding-playbook-v4.1.md`
+- `docs/first-nations-organisation-join-pathway-v4.1.md`
+- `docs/participant-notice-and-role-commitment-pack-v4.1.md`
+- `docs/launch-communications-and-training-pack-v4.1.md`
+- `data/pilot-agreement-sections-v4.1.csv`
+- `data/organisation-join-pathways-v4.1.csv`
+- `data/pilot-role-commitments-v4.1.csv`
+- `data/participant-notice-clauses-v4.1.csv`
+- `data/pilot-data-schedule-v4.1.csv`
+- `data/pilot-support-protocols-v4.1.csv`
+- `data/onboarding-training-steps-v4.1.csv`
+- `data/launch-communications-v4.1.csv`
+- `data/launch-decision-conditions-v4.1.csv`
+- `data/pilot-agreement-onboarding-package-v4.1.json`
+
 - `docs/public-demo-release-notes-v4.0.md`
 - `docs/private-rehearsal-closeout-playbook-v4.0.md`
 - `docs/rehearsal-run-sheet-v4.0.md`
@@ -887,6 +904,17 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v4.1 Pilot Agreement & Organisation Onboarding Upgrade
+
+The v4.1 package adds the joining and agreement layer needed after private closeout:
+
+- Ten agreement sections, twelve join pathways, fourteen role commitments, twelve notice clauses, and fourteen data schedule rows.
+- Twelve support protocols, twelve training steps, ten launch communication rows, and twelve decision conditions.
+- A stronger rule that First Nations organisations can review the public pathway, but real joining remains private and approval-gated.
+
+Use this version to prepare safe joining terms after private closeout, while keeping real participant launch blocked until private approvals pass.
+
 
 ## v4.0 Private Rehearsal Closeout Board Upgrade
 
