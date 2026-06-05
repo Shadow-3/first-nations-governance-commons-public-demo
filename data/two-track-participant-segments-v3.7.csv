@@ -1,0 +1,13 @@
+id,track,segment,status,canDo,mustNotCollect,accessRoute
+SEG-001,Barayamal,Indigenous founder,Private restricted,Submit fake interest and proposal records.,"Real name, email, phone, business finances, hardship details.",Private notice and consent before real intake.
+SEG-002,Barayamal,Indigenous business owner,Private restricted,Use sample business-stage survey and support topics.,"ABN, revenue, customer data, contracts, tax, legal matters.",Private business-support intake only.
+SEG-003,Barayamal,Program participant,Private restricted,Join fake program cohort and meeting flow.,"Eligibility documents, identity evidence, contact details.",Private participant register.
+SEG-004,Barayamal,Mentor or advisor,Restricted,Review public-safe needs and sample meeting availability.,"Credentials, conflicts, background checks, contact details.",Approved mentor register.
+SEG-005,Barayamal,Partner or funder observer,Hold,Read public-safe accountability updates.,"Private records, exports, participant identities.",Observer-only permission group.
+SEG-006,Barayamal,Barayamal admin,Restricted,Configure fake-data spaces and run acceptance tests.,"Authority, privacy, IDS, or official Toastmasters approval power.",Least-privilege admin role.
+SEG-007,FN Toastmasters,Sample member,Private restricted,"Use fake meeting roles, learning goals, and feedback.","Official membership number, payments, evaluations, signatures.",Private member route if approved.
+SEG-008,FN Toastmasters,Guest participant,Restricted,View public-safe meeting and sample learning pages.,"Real attendance, access needs, personal evaluation data.",Guest-only role.
+SEG-009,FN Toastmasters,Meeting role holder,Restricted,Use fake agenda roles and public-safe minutes.,Private speech feedback or personal progress history.,Meeting facilitator approval.
+SEG-010,FN Toastmasters,Official-route owner,Restricted,Keep official Toastmasters path outside Decidim.,"Forms, member numbers, payments, charter signatures.",External official system.
+SEG-011,Both,Dean advisory reviewer,Advisory,Review public package and raise build findings.,"Private records, approval authority, unrestricted exports.",Public package plus approved extracts only.
+SEG-012,Both,Data/privacy/safety reviewer,Restricted,"Approve private data, support, consent, and incident routes.",Public disclosure of private decisions.,Private review room.

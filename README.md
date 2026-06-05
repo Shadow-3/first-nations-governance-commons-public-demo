@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v3.6
+Current package version: v3.7
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -59,6 +59,7 @@ Open `pilot-control-tower.html` to use Pilot Control Tower for the consolidated 
 Open `private-pilot-evidence-vault.html` to use Evidence Vault & Advisory Review for Dean Foley / Barayamal trusted reviewer input, private evidence readiness, authority meeting steps, access rules, and decision gates.
 Open `advisory-action-docket.html` to use Advisory Action Docket for owner follow-up, authority motions, escalation rules, and private meeting readiness after Dean advisory review.
 Open `decidim-build-blueprint.html` to use Decidim Build Blueprint for spaces, components, permissions, fake seed records, hosting controls, and build acceptance tests.
+Open `two-track-pilot-onboarding.html` to run Barayamal as the organisation onboarding test and First Nations Toastmasters as the controlled member onboarding tester.
 
 The demo shows:
 
@@ -90,6 +91,20 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v3.7.md`
+- `docs/two-track-pilot-onboarding-playbook-v3.7.md`
+- `docs/barayamal-founder-onboarding-test-plan-v3.7.md`
+- `docs/fn-toastmasters-member-onboarding-test-plan-v3.7.md`
+- `docs/two-track-data-boundary-and-consent-brief-v3.7.md`
+- `data/two-track-pilot-tracks-v3.7.csv`
+- `data/two-track-onboarding-stages-v3.7.csv`
+- `data/two-track-participant-segments-v3.7.csv`
+- `data/two-track-data-boundaries-v3.7.csv`
+- `data/two-track-component-map-v3.7.csv`
+- `data/two-track-acceptance-tests-v3.7.csv`
+- `data/two-track-risk-register-v3.7.csv`
+- `data/two-track-pilot-onboarding-package-v3.7.json`
+
 - `docs/public-demo-release-notes-v3.6.md`
 - `docs/decidim-build-blueprint-playbook-v3.6.md`
 - `docs/decidim-configuration-map-v3.6.md`
@@ -825,6 +840,17 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v3.7 Two-Track Pilot Onboarding Upgrade
+
+The v3.7 package adds the controlled onboarding model:
+
+- Barayamal as the primary First Nations organisation onboarding test for Indigenous founders, business owners, mentors, program participants, and approved observers.
+- First Nations Toastmasters as the smaller controlled member onboarding tester for sample members, guests, meeting roles, and learning feedback.
+- Fourteen onboarding stages, twelve participant segments, fourteen data boundary records, sixteen Decidim component map rows, sixteen acceptance tests, and twelve risk/no-go records.
+
+Use this version for fake-data onboarding tests only. Real invites still require private authority, privacy, Indigenous Data Sovereignty/data governance, official Toastmasters boundary, support, admin revoke, backup/restore, monitoring, and closeout approval.
+
 
 ## v3.6 Decidim Build Blueprint Upgrade
 

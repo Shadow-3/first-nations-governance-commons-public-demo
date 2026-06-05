@@ -622,6 +622,7 @@
 <a class="btn" href="private-pilot-evidence-vault.html">Evidence Vault</a>
 <a class="btn" href="advisory-action-docket.html">Action Docket</a>
 <a class="btn" href="decidim-build-blueprint.html">Decidim Blueprint</a>
+<a class="btn" href="two-track-pilot-onboarding.html">Two-Track Pilot</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -672,6 +673,10 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Two-track pilot onboarding playbook", path: "docs/two-track-pilot-onboarding-playbook-v3.7.md", type: "markdown", description: "Barayamal organisation onboarding plus First Nations Toastmasters member tester." },
+      { category: "Start Here", title: "Barayamal founder onboarding test plan", path: "docs/barayamal-founder-onboarding-test-plan-v3.7.md", type: "markdown", description: "Primary organisation onboarding test for Indigenous founders and business owners." },
+      { category: "Start Here", title: "First Nations Toastmasters member onboarding test plan", path: "docs/fn-toastmasters-member-onboarding-test-plan-v3.7.md", type: "markdown", description: "Controlled member, guest, meeting role, and learning feedback tester." },
+      { category: "Start Here", title: "Two-track data boundary and consent brief", path: "docs/two-track-data-boundary-and-consent-brief-v3.7.md", type: "markdown", description: "Public-safe, private-restricted, never-public, consent, and official-route controls." },
       { category: "Start Here", title: "Decidim build blueprint playbook", path: "docs/decidim-build-blueprint-playbook-v3.6.md", type: "markdown", description: "v3.6 implementation-ready Decidim configuration sprint playbook." },
       { category: "Start Here", title: "Decidim configuration map", path: "docs/decidim-configuration-map-v3.6.md", type: "markdown", description: "Spaces, components, fake seed records, and first sprint sequence." },
       { category: "Start Here", title: "Decidim permission and authorisation matrix", path: "docs/decidim-permission-and-authorisation-matrix-v3.6.md", type: "markdown", description: "Role, access, authorisation, advisory, developer, and authority boundaries." },
@@ -724,6 +729,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v3.7", path: "docs/public-demo-release-notes-v3.7.md", type: "markdown", description: "Two-Track Pilot Onboarding upgrade summary." },
       { category: "Release Notes", title: "Release notes v3.6", path: "docs/public-demo-release-notes-v3.6.md", type: "markdown", description: "Decidim Build Blueprint upgrade summary." },
       { category: "Release Notes", title: "Release notes v3.5", path: "docs/public-demo-release-notes-v3.5.md", type: "markdown", description: "Advisory Action Docket upgrade summary." },
       { category: "Release Notes", title: "Release notes v3.4", path: "docs/public-demo-release-notes-v3.4.md", type: "markdown", description: "Evidence Vault & Advisory Review upgrade summary." },
@@ -944,6 +950,18 @@
       { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
       { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
       { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Two-Track Pilot Onboarding", title: "Two-track playbook v3.7", path: "docs/two-track-pilot-onboarding-playbook-v3.7.md", type: "markdown", description: "Run Barayamal and FN Toastmasters as separate fake-data onboarding tracks." },
+      { category: "Two-Track Pilot Onboarding", title: "Barayamal founder onboarding test plan v3.7", path: "docs/barayamal-founder-onboarding-test-plan-v3.7.md", type: "markdown", description: "Indigenous founder and business owner onboarding rehearsal." },
+      { category: "Two-Track Pilot Onboarding", title: "FN Toastmasters member onboarding test plan v3.7", path: "docs/fn-toastmasters-member-onboarding-test-plan-v3.7.md", type: "markdown", description: "Member, guest, meeting role, and learning feedback tester." },
+      { category: "Two-Track Pilot Onboarding", title: "Boundary and consent brief v3.7", path: "docs/two-track-data-boundary-and-consent-brief-v3.7.md", type: "markdown", description: "Public-safe, private-restricted, never-public, consent, and official-route controls." },
+      { category: "Two-Track Pilot Onboarding", title: "Pilot tracks v3.7", path: "data/two-track-pilot-tracks-v3.7.csv", type: "csv", description: "Two pilot track definitions." },
+      { category: "Two-Track Pilot Onboarding", title: "Onboarding stages v3.7", path: "data/two-track-onboarding-stages-v3.7.csv", type: "csv", description: "Fourteen stage records." },
+      { category: "Two-Track Pilot Onboarding", title: "Participant segments v3.7", path: "data/two-track-participant-segments-v3.7.csv", type: "csv", description: "Twelve segment records." },
+      { category: "Two-Track Pilot Onboarding", title: "Data boundaries v3.7", path: "data/two-track-data-boundaries-v3.7.csv", type: "csv", description: "Fourteen data boundary records." },
+      { category: "Two-Track Pilot Onboarding", title: "Component map v3.7", path: "data/two-track-component-map-v3.7.csv", type: "csv", description: "Sixteen Decidim component map rows." },
+      { category: "Two-Track Pilot Onboarding", title: "Acceptance tests v3.7", path: "data/two-track-acceptance-tests-v3.7.csv", type: "csv", description: "Sixteen fake-data acceptance tests." },
+      { category: "Two-Track Pilot Onboarding", title: "Risk register v3.7", path: "data/two-track-risk-register-v3.7.csv", type: "csv", description: "Twelve risk and no-go rows." },
+      { category: "Two-Track Pilot Onboarding", title: "Two-track package v3.7", path: "data/two-track-pilot-onboarding-package-v3.7.json", type: "json", description: "Machine-readable v3.7 onboarding package." },
       { category: "Decidim Build Blueprint", title: "Build blueprint playbook v3.6", path: "docs/decidim-build-blueprint-playbook-v3.6.md", type: "markdown", description: "How to turn the governance model into a Decidim configuration sprint." },
       { category: "Decidim Build Blueprint", title: "Configuration map v3.6", path: "docs/decidim-configuration-map-v3.6.md", type: "markdown", description: "Spaces, components, fake seed records, and first sprint sequence." },
       { category: "Decidim Build Blueprint", title: "Permission and authorisation matrix v3.6", path: "docs/decidim-permission-and-authorisation-matrix-v3.6.md", type: "markdown", description: "Role and access rules for public, private, advisory, developer, provider, and authority roles." },

@@ -1,0 +1,845 @@
+{
+  "packageName": "Two-Track Pilot Onboarding v3.7",
+  "version": "3.7",
+  "date": "2026-06-05",
+  "primaryOrganisationTest": "Barayamal",
+  "controlledMemberTester": "First Nations Toastmasters",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "advisoryTrustedReviewer": "Dean Foley / Barayamal",
+  "mode": "public_demo_fake_sample_two_track_onboarding_only",
+  "reviewFinding": "v3.6 made Decidim build configuration clear, but the next decision needed a concrete two-track onboarding model: Barayamal as the First Nations organisation test and First Nations Toastmasters as a smaller member onboarding tester.",
+  "operatingRule": "Barayamal is the primary First Nations organisation onboarding test for Indigenous founders, business owners, mentors, and program participants. First Nations Toastmasters is a smaller controlled member onboarding tester. Keep the tracks separate, fake-data-only, and gated until private authority, privacy, IDS/data governance, support, official-route, and environment approvals pass.",
+  "advisoryRule": "Dean Foley / Barayamal can act as initial developer, custodian, and advisory trusted reviewer for the fake-data onboarding model, but cannot approve First Nations authority, privacy, Indigenous Data Sovereignty, official Toastmasters records, participant eligibility, or private member/founder data access.",
+  "approvalRule": "Do not invite real founders, business owners, Toastmasters members, mentors, guests, or partners into Decidim until a private environment, participant notice, consent route, eligibility path, support route, official Toastmasters boundary, admin revoke test, backup/restore proof, and First Nations authority decision are approved.",
+  "safetyRule": "This v3.7 two-track onboarding package is public fake/sample data only. Do not collect, upload, seed, screenshot, export, or publish real founder, business owner, mentor, member, guest, official Toastmasters, payment, access, incident, authority, consent, signature, or private support records.",
+  "counts": {
+    "tracks": 2,
+    "stages": 14,
+    "segments": 12,
+    "dataBoundaries": 14,
+    "components": 16,
+    "acceptanceTests": 16,
+    "risks": 12,
+    "pilotRecords": 86,
+    "barayamalStages": 6,
+    "toastmastersStages": 5,
+    "neverPublicBoundaries": 4,
+    "configureComponents": 9,
+    "blockedRisks": 7,
+    "requiredTests": 9
+  },
+  "sourceAnchors": [
+    {
+      "label": "Decidim getting started",
+      "url": "https://docs.decidim.org/en/develop/install/index.html"
+    },
+    {
+      "label": "Decidim spaces",
+      "url": "https://docs.decidim.org/en/develop/admin/spaces.html"
+    },
+    {
+      "label": "Decidim participatory spaces",
+      "url": "https://docs.decidim.org/en/develop/features/participatory-spaces.html"
+    },
+    {
+      "label": "Decidim components",
+      "url": "https://docs.decidim.org/en/develop/admin/components.html"
+    },
+    {
+      "label": "Decidim authorizations",
+      "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+    },
+    {
+      "label": "Decidim administrators",
+      "url": "https://docs.decidim.org/en/develop/admin/participants/admins.html"
+    },
+    {
+      "label": "Decidim production checklist",
+      "url": "https://docs.decidim.org/en/develop/install/checklist.html"
+    },
+    {
+      "label": "Barayamal Toastmasters First Nations",
+      "url": "https://barayamal.com.au/toastmasters-first-nations/"
+    },
+    {
+      "label": "Toastmasters Start a Club",
+      "url": "https://www.toastmasters.org/Start-a-Club"
+    }
+  ],
+  "files": {
+    "entrypoint": "two-track-pilot-onboarding.html",
+    "playbook": "docs/two-track-pilot-onboarding-playbook-v3.7.md",
+    "barayamalPlan": "docs/barayamal-founder-onboarding-test-plan-v3.7.md",
+    "toastmastersPlan": "docs/fn-toastmasters-member-onboarding-test-plan-v3.7.md",
+    "boundaryBrief": "docs/two-track-data-boundary-and-consent-brief-v3.7.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.7.md",
+    "tracksCsv": "data/two-track-pilot-tracks-v3.7.csv",
+    "stagesCsv": "data/two-track-onboarding-stages-v3.7.csv",
+    "segmentsCsv": "data/two-track-participant-segments-v3.7.csv",
+    "boundariesCsv": "data/two-track-data-boundaries-v3.7.csv",
+    "componentsCsv": "data/two-track-component-map-v3.7.csv",
+    "testsCsv": "data/two-track-acceptance-tests-v3.7.csv",
+    "risksCsv": "data/two-track-risk-register-v3.7.csv",
+    "packageJson": "data/two-track-pilot-onboarding-package-v3.7.json"
+  },
+  "tracks": [
+    {
+      "id": "TRK-001",
+      "track": "Barayamal First Nations organisation onboarding",
+      "role": "Primary",
+      "status": "Configure",
+      "audience": "Indigenous founders, business owners, mentors, program participants, and approved partners.",
+      "purpose": "Test whether Decidim can support a First Nations-led organisation onboarding and governance hub.",
+      "decidimShape": "Organisation shell plus Community Governance Hub assembly",
+      "boundary": "No real founder/business/member records in public demo."
+    },
+    {
+      "id": "TRK-002",
+      "track": "First Nations Toastmasters member onboarding",
+      "role": "Controlled tester",
+      "status": "Configure",
+      "audience": "Sample members, guests, meeting role holders, speakers, and facilitators.",
+      "purpose": "Test a small member-based initiative with meeting participation, learning goals, and feedback loops.",
+      "decidimShape": "Participatory process inside the Barayamal-controlled commons",
+      "boundary": "No official Toastmasters records, member numbers, payments, signatures, or charter evidence in Decidim."
+    }
+  ],
+  "stages": [
+    {
+      "id": "ONB-001",
+      "track": "Both",
+      "stage": "Public explanation and fake-data rule",
+      "status": "Ready",
+      "decidimFeature": "Page",
+      "owner": "Public comms",
+      "publicAction": "Show what the sandbox is and is not.",
+      "privateBoundary": "No real data, official records, or private eligibility evidence."
+    },
+    {
+      "id": "ONB-002",
+      "track": "Barayamal",
+      "stage": "Founder and business owner interest path",
+      "status": "Configure",
+      "decidimFeature": "Survey plus Proposals",
+      "owner": "Barayamal admin",
+      "publicAction": "Collect fake interest categories and support needs.",
+      "privateBoundary": "Real founder details stay out until private notice and consent pass."
+    },
+    {
+      "id": "ONB-003",
+      "track": "Barayamal",
+      "stage": "Indigenous business owner profile rehearsal",
+      "status": "Configure",
+      "decidimFeature": "Survey",
+      "owner": "Program operator",
+      "publicAction": "Test business stage, sector, support priority, and referral category using sample records.",
+      "privateBoundary": "No ABN, income, client, contact, or sensitive commercial records in public demo."
+    },
+    {
+      "id": "ONB-004",
+      "track": "Barayamal",
+      "stage": "Mentor and advisor pathway",
+      "status": "Configure",
+      "decidimFeature": "Authorizations plus Meetings",
+      "owner": "Mentor coordinator",
+      "publicAction": "Test fake mentor role matching and meeting availability.",
+      "privateBoundary": "Real mentor credentials and conflicts stay private."
+    },
+    {
+      "id": "ONB-005",
+      "track": "Barayamal",
+      "stage": "Program proposal and support request",
+      "status": "Configure",
+      "decidimFeature": "Proposals",
+      "owner": "Program operator",
+      "publicAction": "Let sample founders propose support topics and vote-like priorities.",
+      "privateBoundary": "No real funding, legal, debt, or hardship details."
+    },
+    {
+      "id": "ONB-006",
+      "track": "Barayamal",
+      "stage": "Partner and funder observer route",
+      "status": "Hold",
+      "decidimFeature": "Permissions",
+      "owner": "Partner liaison",
+      "publicAction": "Allow approved observers to read public-safe progress only.",
+      "privateBoundary": "No partner access to private participant records or exports."
+    },
+    {
+      "id": "ONB-007",
+      "track": "Barayamal",
+      "stage": "Founder accountability follow-up",
+      "status": "Configure",
+      "decidimFeature": "Accountability",
+      "owner": "Support lead",
+      "publicAction": "Track fake follow-up actions by owner type and due date.",
+      "privateBoundary": "Public status only; private support evidence remains private."
+    },
+    {
+      "id": "ONB-008",
+      "track": "FN Toastmasters",
+      "stage": "Member welcome and fake account path",
+      "status": "Configure",
+      "decidimFeature": "Page plus Authorizations",
+      "owner": "Club facilitator",
+      "publicAction": "Test joining steps, meeting norms, and fake member account roles.",
+      "privateBoundary": "Official Toastmasters membership remains outside Decidim."
+    },
+    {
+      "id": "ONB-009",
+      "track": "FN Toastmasters",
+      "stage": "Meeting role onboarding",
+      "status": "Ready",
+      "decidimFeature": "Meetings",
+      "owner": "Meeting chair",
+      "publicAction": "Test speaker, evaluator, timer, chair, and guest roles with fake records.",
+      "privateBoundary": "No private evaluations, attendance, or access needs in public minutes."
+    },
+    {
+      "id": "ONB-010",
+      "track": "FN Toastmasters",
+      "stage": "Speaking confidence learning survey",
+      "status": "Configure",
+      "decidimFeature": "Survey",
+      "owner": "Learning lead",
+      "publicAction": "Collect fake aggregate learning feedback.",
+      "privateBoundary": "No personal evaluation history or health/access information."
+    },
+    {
+      "id": "ONB-011",
+      "track": "FN Toastmasters",
+      "stage": "Member proposal and club motion rehearsal",
+      "status": "Hold",
+      "decidimFeature": "Proposals",
+      "owner": "Club facilitator",
+      "publicAction": "Test sample motions and learning ideas without official club decisions.",
+      "privateBoundary": "Official Toastmasters approvals and charter decisions stay outside Decidim."
+    },
+    {
+      "id": "ONB-012",
+      "track": "FN Toastmasters",
+      "stage": "Guest-to-member boundary",
+      "status": "Blocked",
+      "decidimFeature": "Permissions",
+      "owner": "Official-route owner",
+      "publicAction": "Separate guest participation from official member onboarding.",
+      "privateBoundary": "No official member number, payment, signature, or charter acceptance in public demo."
+    },
+    {
+      "id": "ONB-013",
+      "track": "Both",
+      "stage": "Support, incident, and pause route",
+      "status": "Blocked",
+      "decidimFeature": "Private process",
+      "owner": "Safety reviewer",
+      "publicAction": "Test fake pause and support routing before real intake.",
+      "privateBoundary": "Incident details and affected-person records are never public."
+    },
+    {
+      "id": "ONB-014",
+      "track": "Both",
+      "stage": "Pilot closeout and delete/export proof",
+      "status": "Blocked",
+      "decidimFeature": "Ops plus Accountability",
+      "owner": "Technical custodian",
+      "publicAction": "Prove deletion, export, archive, and restore workflow privately.",
+      "privateBoundary": "No real data until backup/restore and closeout proof exists."
+    }
+  ],
+  "participantSegments": [
+    {
+      "id": "SEG-001",
+      "track": "Barayamal",
+      "segment": "Indigenous founder",
+      "status": "Private restricted",
+      "canDo": "Submit fake interest and proposal records.",
+      "mustNotCollect": "Real name, email, phone, business finances, hardship details.",
+      "accessRoute": "Private notice and consent before real intake."
+    },
+    {
+      "id": "SEG-002",
+      "track": "Barayamal",
+      "segment": "Indigenous business owner",
+      "status": "Private restricted",
+      "canDo": "Use sample business-stage survey and support topics.",
+      "mustNotCollect": "ABN, revenue, customer data, contracts, tax, legal matters.",
+      "accessRoute": "Private business-support intake only."
+    },
+    {
+      "id": "SEG-003",
+      "track": "Barayamal",
+      "segment": "Program participant",
+      "status": "Private restricted",
+      "canDo": "Join fake program cohort and meeting flow.",
+      "mustNotCollect": "Eligibility documents, identity evidence, contact details.",
+      "accessRoute": "Private participant register."
+    },
+    {
+      "id": "SEG-004",
+      "track": "Barayamal",
+      "segment": "Mentor or advisor",
+      "status": "Restricted",
+      "canDo": "Review public-safe needs and sample meeting availability.",
+      "mustNotCollect": "Credentials, conflicts, background checks, contact details.",
+      "accessRoute": "Approved mentor register."
+    },
+    {
+      "id": "SEG-005",
+      "track": "Barayamal",
+      "segment": "Partner or funder observer",
+      "status": "Hold",
+      "canDo": "Read public-safe accountability updates.",
+      "mustNotCollect": "Private records, exports, participant identities.",
+      "accessRoute": "Observer-only permission group."
+    },
+    {
+      "id": "SEG-006",
+      "track": "Barayamal",
+      "segment": "Barayamal admin",
+      "status": "Restricted",
+      "canDo": "Configure fake-data spaces and run acceptance tests.",
+      "mustNotCollect": "Authority, privacy, IDS, or official Toastmasters approval power.",
+      "accessRoute": "Least-privilege admin role."
+    },
+    {
+      "id": "SEG-007",
+      "track": "FN Toastmasters",
+      "segment": "Sample member",
+      "status": "Private restricted",
+      "canDo": "Use fake meeting roles, learning goals, and feedback.",
+      "mustNotCollect": "Official membership number, payments, evaluations, signatures.",
+      "accessRoute": "Private member route if approved."
+    },
+    {
+      "id": "SEG-008",
+      "track": "FN Toastmasters",
+      "segment": "Guest participant",
+      "status": "Restricted",
+      "canDo": "View public-safe meeting and sample learning pages.",
+      "mustNotCollect": "Real attendance, access needs, personal evaluation data.",
+      "accessRoute": "Guest-only role."
+    },
+    {
+      "id": "SEG-009",
+      "track": "FN Toastmasters",
+      "segment": "Meeting role holder",
+      "status": "Restricted",
+      "canDo": "Use fake agenda roles and public-safe minutes.",
+      "mustNotCollect": "Private speech feedback or personal progress history.",
+      "accessRoute": "Meeting facilitator approval."
+    },
+    {
+      "id": "SEG-010",
+      "track": "FN Toastmasters",
+      "segment": "Official-route owner",
+      "status": "Restricted",
+      "canDo": "Keep official Toastmasters path outside Decidim.",
+      "mustNotCollect": "Forms, member numbers, payments, charter signatures.",
+      "accessRoute": "External official system."
+    },
+    {
+      "id": "SEG-011",
+      "track": "Both",
+      "segment": "Dean advisory reviewer",
+      "status": "Advisory",
+      "canDo": "Review public package and raise build findings.",
+      "mustNotCollect": "Private records, approval authority, unrestricted exports.",
+      "accessRoute": "Public package plus approved extracts only."
+    },
+    {
+      "id": "SEG-012",
+      "track": "Both",
+      "segment": "Data/privacy/safety reviewer",
+      "status": "Restricted",
+      "canDo": "Approve private data, support, consent, and incident routes.",
+      "mustNotCollect": "Public disclosure of private decisions.",
+      "accessRoute": "Private review room."
+    }
+  ],
+  "dataBoundaries": [
+    {
+      "id": "DTB-001",
+      "track": "Both",
+      "dataClass": "Public safe",
+      "status": "Ready",
+      "allowedPublic": "Generic sandbox explanation and sample process rules.",
+      "privateRoute": "None.",
+      "neverPublic": "No real participant details."
+    },
+    {
+      "id": "DTB-002",
+      "track": "Barayamal",
+      "dataClass": "Public safe",
+      "status": "Ready",
+      "allowedPublic": "Sample founder support topic and public accountability status.",
+      "privateRoute": "Private founder identity and business records.",
+      "neverPublic": "No real client, revenue, contract, tax, or legal data."
+    },
+    {
+      "id": "DTB-003",
+      "track": "FN Toastmasters",
+      "dataClass": "Public safe",
+      "status": "Ready",
+      "allowedPublic": "Sample meeting agenda, role list, and aggregate learning summary.",
+      "privateRoute": "Official Toastmasters member records.",
+      "neverPublic": "No real attendance or evaluations."
+    },
+    {
+      "id": "DTB-004",
+      "track": "Both",
+      "dataClass": "Public safe",
+      "status": "Ready",
+      "allowedPublic": "Release notes, fake seed records, and redacted screenshots.",
+      "privateRoute": "Private pilot evidence.",
+      "neverPublic": "No hidden real data in CSV, JSON, or images."
+    },
+    {
+      "id": "DTB-005",
+      "track": "Barayamal",
+      "dataClass": "Private restricted",
+      "status": "Blocked",
+      "allowedPublic": "Founder eligibility and support plan.",
+      "privateRoute": "Private intake only after consent.",
+      "neverPublic": "Never in public demo."
+    },
+    {
+      "id": "DTB-006",
+      "track": "Barayamal",
+      "dataClass": "Private restricted",
+      "status": "Blocked",
+      "allowedPublic": "Business owner support record.",
+      "privateRoute": "Private business-support route only.",
+      "neverPublic": "Never in public screenshots."
+    },
+    {
+      "id": "DTB-007",
+      "track": "Barayamal",
+      "dataClass": "Private restricted",
+      "status": "Hold",
+      "allowedPublic": "Mentor matching notes.",
+      "privateRoute": "Approved private register only.",
+      "neverPublic": "No public conflicts or contact details."
+    },
+    {
+      "id": "DTB-008",
+      "track": "FN Toastmasters",
+      "dataClass": "Private restricted",
+      "status": "Blocked",
+      "allowedPublic": "Member onboarding and participation record.",
+      "privateRoute": "Private member route only if approved.",
+      "neverPublic": "No official records in Decidim."
+    },
+    {
+      "id": "DTB-009",
+      "track": "FN Toastmasters",
+      "dataClass": "Private restricted",
+      "status": "Hold",
+      "allowedPublic": "Speech goals and confidence feedback.",
+      "privateRoute": "Aggregate-only public reporting.",
+      "neverPublic": "No personal evaluation history."
+    },
+    {
+      "id": "DTB-010",
+      "track": "Both",
+      "dataClass": "Private restricted",
+      "status": "Blocked",
+      "allowedPublic": "Access needs and incident support route.",
+      "privateRoute": "Private safety route only.",
+      "neverPublic": "No affected-person detail public."
+    },
+    {
+      "id": "DTB-011",
+      "track": "Both",
+      "dataClass": "Never public",
+      "status": "Blocked",
+      "allowedPublic": "Authority quorum evidence.",
+      "privateRoute": "Private authority meeting only.",
+      "neverPublic": "Do not seed, export, screenshot, or publish."
+    },
+    {
+      "id": "DTB-012",
+      "track": "Both",
+      "dataClass": "Never public",
+      "status": "Blocked",
+      "allowedPublic": "IDS/data governance decision evidence.",
+      "privateRoute": "Private data-review room only.",
+      "neverPublic": "Do not expose in public package."
+    },
+    {
+      "id": "DTB-013",
+      "track": "FN Toastmasters",
+      "dataClass": "Never public",
+      "status": "Blocked",
+      "allowedPublic": "Official Toastmasters member number, payment, signature, charter evidence.",
+      "privateRoute": "External official route.",
+      "neverPublic": "Do not store in Decidim public sandbox."
+    },
+    {
+      "id": "DTB-014",
+      "track": "Both",
+      "dataClass": "Never public",
+      "status": "Blocked",
+      "allowedPublic": "Incident details, support records, access logs, deletion evidence.",
+      "privateRoute": "Private evidence vault only.",
+      "neverPublic": "Do not publish or include in provider pack."
+    }
+  ],
+  "componentMap": [
+    {
+      "id": "CMP-001",
+      "track": "Both",
+      "component": "Sandbox rules page",
+      "decidimFeature": "Page",
+      "status": "Ready",
+      "configuration": "What this is and is not.",
+      "acceptance": "Public page visible before onboarding actions."
+    },
+    {
+      "id": "CMP-002",
+      "track": "Barayamal",
+      "component": "Founder interest survey",
+      "decidimFeature": "Survey",
+      "status": "Configure",
+      "configuration": "Fake founder/business owner needs survey.",
+      "acceptance": "Survey submits sample records only."
+    },
+    {
+      "id": "CMP-003",
+      "track": "Barayamal",
+      "component": "Support topic proposals",
+      "decidimFeature": "Proposals",
+      "status": "Configure",
+      "configuration": "Sample support priorities and admin answers.",
+      "acceptance": "Admin can answer and close fake proposals."
+    },
+    {
+      "id": "CMP-004",
+      "track": "Barayamal",
+      "component": "Founder yarning meetings",
+      "decidimFeature": "Meetings",
+      "status": "Configure",
+      "configuration": "Sample agenda, public-safe minutes, and offline import.",
+      "acceptance": "Minutes publish without private attendees."
+    },
+    {
+      "id": "CMP-005",
+      "track": "Barayamal",
+      "component": "Support accountability tracker",
+      "decidimFeature": "Accountability",
+      "status": "Configure",
+      "configuration": "Accepted fake priorities become actions.",
+      "acceptance": "Action can link to accepted proposal."
+    },
+    {
+      "id": "CMP-006",
+      "track": "Barayamal",
+      "component": "Mentor pathway permissions",
+      "decidimFeature": "Authorizations",
+      "status": "Hold",
+      "configuration": "Approved mentor/reviewer route.",
+      "acceptance": "Held until privacy and conflict rules pass."
+    },
+    {
+      "id": "CMP-007",
+      "track": "Barayamal",
+      "component": "Partner observer role",
+      "decidimFeature": "Permissions",
+      "status": "Hold",
+      "configuration": "Public-safe observer access only.",
+      "acceptance": "Observer cannot export private data."
+    },
+    {
+      "id": "CMP-008",
+      "track": "FN Toastmasters",
+      "component": "Member welcome page",
+      "decidimFeature": "Page",
+      "status": "Ready",
+      "configuration": "Member and guest path with official boundary.",
+      "acceptance": "Boundary visible before forms or meeting links."
+    },
+    {
+      "id": "CMP-009",
+      "track": "FN Toastmasters",
+      "component": "Meeting role calendar",
+      "decidimFeature": "Meetings",
+      "status": "Configure",
+      "configuration": "Sample roles, agenda, and public-safe minutes.",
+      "acceptance": "No private evaluations or real attendance."
+    },
+    {
+      "id": "CMP-010",
+      "track": "FN Toastmasters",
+      "component": "Learning confidence survey",
+      "decidimFeature": "Survey",
+      "status": "Configure",
+      "configuration": "Fake aggregate learning survey.",
+      "acceptance": "No personal evaluation history."
+    },
+    {
+      "id": "CMP-011",
+      "track": "FN Toastmasters",
+      "component": "Member proposal rehearsal",
+      "decidimFeature": "Proposals",
+      "status": "Configure",
+      "configuration": "Sample club ideas and motions without official status.",
+      "acceptance": "Official decisions stay outside Decidim."
+    },
+    {
+      "id": "CMP-012",
+      "track": "FN Toastmasters",
+      "component": "Official boundary page",
+      "decidimFeature": "Page",
+      "status": "Ready",
+      "configuration": "Forms, payments, member numbers, signatures, charter acceptance outside Decidim.",
+      "acceptance": "Boundary page renders."
+    },
+    {
+      "id": "CMP-013",
+      "track": "Both",
+      "component": "Support and pause route",
+      "decidimFeature": "Private process",
+      "status": "Blocked",
+      "configuration": "Incident, access, consent withdrawal, and pause workflow.",
+      "acceptance": "Blocked until private support route approved."
+    },
+    {
+      "id": "CMP-014",
+      "track": "Both",
+      "component": "Admin invite and revoke",
+      "decidimFeature": "Administrators",
+      "status": "Configure",
+      "configuration": "Least-privilege admin and reviewer accounts.",
+      "acceptance": "Revoked fake account loses access."
+    },
+    {
+      "id": "CMP-015",
+      "track": "Both",
+      "component": "Redaction and export control",
+      "decidimFeature": "Open data",
+      "status": "Blocked",
+      "configuration": "Hold exports until redaction and IDS/privacy approval.",
+      "acceptance": "No real data in public export."
+    },
+    {
+      "id": "CMP-016",
+      "track": "Both",
+      "component": "Public learning updates",
+      "decidimFeature": "Blog",
+      "status": "Configure",
+      "configuration": "Aggregate-only public updates.",
+      "acceptance": "Update contains no private records."
+    }
+  ],
+  "acceptanceTests": [
+    {
+      "id": "TST-001",
+      "track": "Both",
+      "test": "Open public sandbox",
+      "status": "Ready",
+      "expected": "Visitor can open two-track page without framework overlay."
+    },
+    {
+      "id": "TST-002",
+      "track": "Barayamal",
+      "test": "Submit fake founder interest",
+      "status": "Required",
+      "expected": "Sample founder/business owner interest record can be created and exported as fake data."
+    },
+    {
+      "id": "TST-003",
+      "track": "Barayamal",
+      "test": "Answer support topic proposal",
+      "status": "Required",
+      "expected": "Admin answers a fake proposal and links an accountability action."
+    },
+    {
+      "id": "TST-004",
+      "track": "Barayamal",
+      "test": "Publish founder yarning summary",
+      "status": "Required",
+      "expected": "Meeting minutes publish without attendee or private support details."
+    },
+    {
+      "id": "TST-005",
+      "track": "Barayamal",
+      "test": "Partner observer cannot access private records",
+      "status": "Blocked",
+      "expected": "Observer role sees public updates only."
+    },
+    {
+      "id": "TST-006",
+      "track": "Barayamal",
+      "test": "Mentor role held until approval",
+      "status": "Hold",
+      "expected": "Mentor matching remains disabled until conflict/privacy rules pass."
+    },
+    {
+      "id": "TST-007",
+      "track": "FN Toastmasters",
+      "test": "Open member welcome path",
+      "status": "Ready",
+      "expected": "Member welcome page displays official Toastmasters boundary."
+    },
+    {
+      "id": "TST-008",
+      "track": "FN Toastmasters",
+      "test": "Create fake meeting role agenda",
+      "status": "Required",
+      "expected": "Sample roles publish without private evaluations or real attendance."
+    },
+    {
+      "id": "TST-009",
+      "track": "FN Toastmasters",
+      "test": "Submit aggregate learning survey",
+      "status": "Required",
+      "expected": "Survey creates sample aggregate results only."
+    },
+    {
+      "id": "TST-010",
+      "track": "FN Toastmasters",
+      "test": "Official records excluded",
+      "status": "Required",
+      "expected": "Member numbers, payments, signatures, and charter evidence do not appear in Decidim."
+    },
+    {
+      "id": "TST-011",
+      "track": "Both",
+      "test": "Dean advisory boundary",
+      "status": "Required",
+      "expected": "Dean reviewer can inspect public package but cannot approve real onboarding."
+    },
+    {
+      "id": "TST-012",
+      "track": "Both",
+      "test": "Admin revoke test",
+      "status": "Blocked",
+      "expected": "Revoked fake admin loses access before real data."
+    },
+    {
+      "id": "TST-013",
+      "track": "Both",
+      "test": "Private support route tabletop",
+      "status": "Blocked",
+      "expected": "Fake incident pauses process and keeps affected-person details private."
+    },
+    {
+      "id": "TST-014",
+      "track": "Both",
+      "test": "Mobile onboarding check",
+      "status": "Required",
+      "expected": "Core two-track page renders at 390px without horizontal overflow."
+    },
+    {
+      "id": "TST-015",
+      "track": "Both",
+      "test": "Redaction scan",
+      "status": "Required",
+      "expected": "Repository, CSV, JSON, screenshots, and docs contain fake/sample data only."
+    },
+    {
+      "id": "TST-016",
+      "track": "Both",
+      "test": "Backup/export/delete proof",
+      "status": "Hold",
+      "expected": "Private environment proof is held until staging/prod separation exists."
+    }
+  ],
+  "risks": [
+    {
+      "id": "RSK-001",
+      "risk": "Tracks get mixed into one real pilot",
+      "status": "Blocked",
+      "trigger": "Barayamal and FN Toastmasters collect real records in same public sandbox.",
+      "control": "Keep two separate fake-data tracks and block real intake.",
+      "owner": "Pilot owner"
+    },
+    {
+      "id": "RSK-002",
+      "risk": "Official Toastmasters records enter Decidim",
+      "status": "Blocked",
+      "trigger": "Member numbers, payments, signatures, or charter evidence appear.",
+      "control": "External official-route owner and never-public rule.",
+      "owner": "Official-route owner"
+    },
+    {
+      "id": "RSK-003",
+      "risk": "Founder/business owner private records leak",
+      "status": "Blocked",
+      "trigger": "Real support, business, revenue, contact, or hardship data appears public.",
+      "control": "Private notice, consent, and no-real-data gate.",
+      "owner": "Privacy reviewer"
+    },
+    {
+      "id": "RSK-004",
+      "risk": "Dean advisory role becomes approval role",
+      "status": "Blocked",
+      "trigger": "Reviewer advice treated as authority decision.",
+      "control": "Advisory boundary in page, JSON, docs, and acceptance test.",
+      "owner": "Authority chair"
+    },
+    {
+      "id": "RSK-005",
+      "risk": "Partner observer gets private access",
+      "status": "Blocked",
+      "trigger": "Partner can view exports or participant records.",
+      "control": "Observer-only permissions and export hold.",
+      "owner": "Technical custodian"
+    },
+    {
+      "id": "RSK-006",
+      "risk": "Member feedback becomes personal evaluation record",
+      "status": "Hold",
+      "trigger": "Toastmasters learning survey stores personal evaluation history.",
+      "control": "Aggregate-only survey and private review.",
+      "owner": "Learning lead"
+    },
+    {
+      "id": "RSK-007",
+      "risk": "Support incident details become public",
+      "status": "Blocked",
+      "trigger": "Access or incident support details appear in minutes or proposals.",
+      "control": "Private support process and stop rule.",
+      "owner": "Safety reviewer"
+    },
+    {
+      "id": "RSK-008",
+      "risk": "Admin access not revoked",
+      "status": "Blocked",
+      "trigger": "Developer/provider/advisor access persists after test.",
+      "control": "Admin revoke acceptance test before real data.",
+      "owner": "Technical custodian"
+    },
+    {
+      "id": "RSK-009",
+      "risk": "Custom code starts before native Decidim test",
+      "status": "Hold",
+      "trigger": "Provider builds bespoke modules before native components pass.",
+      "control": "Use v3.6 build rule and v3.7 acceptance gates.",
+      "owner": "Build lead"
+    },
+    {
+      "id": "RSK-010",
+      "risk": "Public screenshots contain private records",
+      "status": "Managed",
+      "trigger": "QA captures real records accidentally.",
+      "control": "Fake-data screenshots only and redaction scan.",
+      "owner": "Comms lead"
+    },
+    {
+      "id": "RSK-011",
+      "risk": "Founders expect real service from fake sandbox",
+      "status": "Managed",
+      "trigger": "Demo language implies live intake.",
+      "control": "Clear public explanation and no-real-intake copy.",
+      "owner": "Barayamal admin"
+    },
+    {
+      "id": "RSK-012",
+      "risk": "Guest/member boundary unclear",
+      "status": "Hold",
+      "trigger": "Toastmasters guests treated as official members.",
+      "control": "Guest-only role and official-route page.",
+      "owner": "Club facilitator"
+    }
+  ]
+}

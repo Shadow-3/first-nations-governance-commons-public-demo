@@ -1,0 +1,17 @@
+id,track,component,decidimFeature,status,configuration,acceptance
+CMP-001,Both,Sandbox rules page,Page,Ready,What this is and is not.,Public page visible before onboarding actions.
+CMP-002,Barayamal,Founder interest survey,Survey,Configure,Fake founder/business owner needs survey.,Survey submits sample records only.
+CMP-003,Barayamal,Support topic proposals,Proposals,Configure,Sample support priorities and admin answers.,Admin can answer and close fake proposals.
+CMP-004,Barayamal,Founder yarning meetings,Meetings,Configure,"Sample agenda, public-safe minutes, and offline import.",Minutes publish without private attendees.
+CMP-005,Barayamal,Support accountability tracker,Accountability,Configure,Accepted fake priorities become actions.,Action can link to accepted proposal.
+CMP-006,Barayamal,Mentor pathway permissions,Authorizations,Hold,Approved mentor/reviewer route.,Held until privacy and conflict rules pass.
+CMP-007,Barayamal,Partner observer role,Permissions,Hold,Public-safe observer access only.,Observer cannot export private data.
+CMP-008,FN Toastmasters,Member welcome page,Page,Ready,Member and guest path with official boundary.,Boundary visible before forms or meeting links.
+CMP-009,FN Toastmasters,Meeting role calendar,Meetings,Configure,"Sample roles, agenda, and public-safe minutes.",No private evaluations or real attendance.
+CMP-010,FN Toastmasters,Learning confidence survey,Survey,Configure,Fake aggregate learning survey.,No personal evaluation history.
+CMP-011,FN Toastmasters,Member proposal rehearsal,Proposals,Configure,Sample club ideas and motions without official status.,Official decisions stay outside Decidim.
+CMP-012,FN Toastmasters,Official boundary page,Page,Ready,"Forms, payments, member numbers, signatures, charter acceptance outside Decidim.",Boundary page renders.
+CMP-013,Both,Support and pause route,Private process,Blocked,"Incident, access, consent withdrawal, and pause workflow.",Blocked until private support route approved.
+CMP-014,Both,Admin invite and revoke,Administrators,Configure,Least-privilege admin and reviewer accounts.,Revoked fake account loses access.
+CMP-015,Both,Redaction and export control,Open data,Blocked,Hold exports until redaction and IDS/privacy approval.,No real data in public export.
+CMP-016,Both,Public learning updates,Blog,Configure,Aggregate-only public updates.,Update contains no private records.

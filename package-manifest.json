@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "3.6",
+  "version": "3.7",
   "date": "2026-06-05",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use Decidim Build Blueprint as the default next fake-data build layer after Advisory Action Docket. Barayamal / Dean Foley can act as initial developer/custodian and advisory trusted reviewer, but cannot replace First Nations authority, Indigenous Data Sovereignty approval, privacy approval, official Toastmasters processes, technical approval, support readiness, monitoring, closeout, or the final private pilot go/hold/no-go decision.",
+  "recommendedDecision": "Use Two-Track Pilot Onboarding as the default next fake-data layer: Barayamal is the primary First Nations organisation onboarding test, and First Nations Toastmasters is the smaller controlled member onboarding tester. Do not invite real founders, business owners, mentors, members, guests, partners, or officials until private authority, privacy, Indigenous Data Sovereignty/data governance, official Toastmasters boundary, support, access, monitoring, backup/restore, and closeout approvals pass.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -239,13 +239,27 @@
     "data/decidim-seed-records-v3.6.csv",
     "data/decidim-environment-controls-v3.6.csv",
     "data/decidim-build-acceptance-tests-v3.6.csv",
-    "data/decidim-build-blueprint-package-v3.6.json"
+    "data/decidim-build-blueprint-package-v3.6.json",
+    "two-track-pilot-onboarding.html",
+    "docs/two-track-pilot-onboarding-playbook-v3.7.md",
+    "docs/barayamal-founder-onboarding-test-plan-v3.7.md",
+    "docs/fn-toastmasters-member-onboarding-test-plan-v3.7.md",
+    "docs/two-track-data-boundary-and-consent-brief-v3.7.md",
+    "docs/public-demo-release-notes-v3.7.md",
+    "data/two-track-pilot-tracks-v3.7.csv",
+    "data/two-track-onboarding-stages-v3.7.csv",
+    "data/two-track-participant-segments-v3.7.csv",
+    "data/two-track-data-boundaries-v3.7.csv",
+    "data/two-track-component-map-v3.7.csv",
+    "data/two-track-acceptance-tests-v3.7.csv",
+    "data/two-track-risk-register-v3.7.csv",
+    "data/two-track-pilot-onboarding-package-v3.7.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v3.6.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.7.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -437,7 +451,17 @@
       "qa-v36-deployed-decidim-build-blueprint-configure-desktop.png",
       "qa-v36-deployed-decidim-build-blueprint-permissions-desktop.png",
       "qa-v36-deployed-decidim-build-blueprint-mobile.png",
-      "qa-v36-deployed-decidim-build-blueprint-package-mobile.png"
+      "qa-v36-deployed-decidim-build-blueprint-package-mobile.png",
+      "qa-v37-local-two-track-pilot-onboarding-desktop.png",
+      "qa-v37-local-two-track-pilot-onboarding-barayamal-desktop.png",
+      "qa-v37-local-two-track-pilot-onboarding-boundaries-desktop.png",
+      "qa-v37-local-two-track-pilot-onboarding-mobile.png",
+      "qa-v37-local-two-track-pilot-onboarding-package-mobile.png",
+      "qa-v37-deployed-two-track-pilot-onboarding-desktop.png",
+      "qa-v37-deployed-two-track-pilot-onboarding-barayamal-desktop.png",
+      "qa-v37-deployed-two-track-pilot-onboarding-boundaries-desktop.png",
+      "qa-v37-deployed-two-track-pilot-onboarding-mobile.png",
+      "qa-v37-deployed-two-track-pilot-onboarding-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -1332,6 +1356,22 @@
       "data/decidim-environment-controls-v3.6.csv",
       "data/decidim-build-acceptance-tests-v3.6.csv",
       "data/decidim-build-blueprint-package-v3.6.json"
+    ],
+    "twoTrackPilotOnboarding": [
+      "two-track-pilot-onboarding.html",
+      "docs/two-track-pilot-onboarding-playbook-v3.7.md",
+      "docs/barayamal-founder-onboarding-test-plan-v3.7.md",
+      "docs/fn-toastmasters-member-onboarding-test-plan-v3.7.md",
+      "docs/two-track-data-boundary-and-consent-brief-v3.7.md",
+      "docs/public-demo-release-notes-v3.7.md",
+      "data/two-track-pilot-tracks-v3.7.csv",
+      "data/two-track-onboarding-stages-v3.7.csv",
+      "data/two-track-participant-segments-v3.7.csv",
+      "data/two-track-data-boundaries-v3.7.csv",
+      "data/two-track-component-map-v3.7.csv",
+      "data/two-track-acceptance-tests-v3.7.csv",
+      "data/two-track-risk-register-v3.7.csv",
+      "data/two-track-pilot-onboarding-package-v3.7.json"
     ]
   },
   "safetyRules": [
@@ -1380,7 +1420,11 @@
     "This v3.6 blueprint is public fake/sample configuration only. It must not include real participants, member numbers, contact details, access needs, official Toastmasters records, private authority records, signatures, payments, incident details, or private pilot evidence.",
     "Dean Foley / Barayamal can review this blueprint as initial developer and trusted advisor, but cannot approve First Nations authority, privacy, Indigenous Data Sovereignty, official Toastmasters records, or private participant data access.",
     "Use native Decidim spaces, components, authorizations, admin roles, scheduled tasks, and production checklist controls before custom code. Custom modules are later-stage only after the fake-data blueprint passes acceptance.",
-    "Do not build a real private Decidim pilot from this public blueprint until authority, IDS/data governance, privacy, official Toastmasters boundary, private environment, access, support, monitoring, and closeout decisions are approved privately."
+    "Do not build a real private Decidim pilot from this public blueprint until authority, IDS/data governance, privacy, official Toastmasters boundary, private environment, access, support, monitoring, and closeout decisions are approved privately.",
+    "This v3.7 two-track onboarding package is public fake/sample data only. Do not collect, upload, seed, screenshot, export, or publish real founder, business owner, mentor, member, guest, official Toastmasters, payment, access, incident, authority, consent, signature, or private support records.",
+    "Dean Foley / Barayamal can act as initial developer, custodian, and advisory trusted reviewer for the fake-data onboarding model, but cannot approve First Nations authority, privacy, Indigenous Data Sovereignty, official Toastmasters records, participant eligibility, or private member/founder data access.",
+    "Barayamal is the primary First Nations organisation onboarding test for Indigenous founders, business owners, mentors, and program participants. First Nations Toastmasters is a smaller controlled member onboarding tester. Keep the tracks separate, fake-data-only, and gated until private authority, privacy, IDS/data governance, support, official-route, and environment approvals pass.",
+    "Do not invite real founders, business owners, Toastmasters members, mentors, guests, or partners into Decidim until a private environment, participant notice, consent route, eligibility path, support route, official Toastmasters boundary, admin revoke test, backup/restore proof, and First Nations authority decision are approved."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -2533,5 +2577,83 @@
     "advisoryRule": "Dean Foley / Barayamal can review this blueprint as initial developer and trusted advisor, but cannot approve First Nations authority, privacy, Indigenous Data Sovereignty, official Toastmasters records, or private participant data access.",
     "buildRule": "Use native Decidim spaces, components, authorizations, admin roles, scheduled tasks, and production checklist controls before custom code. Custom modules are later-stage only after the fake-data blueprint passes acceptance.",
     "approvalRule": "Do not build a real private Decidim pilot from this public blueprint until authority, IDS/data governance, privacy, official Toastmasters boundary, private environment, access, support, monitoring, and closeout decisions are approved privately."
+  },
+  "twoTrackPilotOnboarding": {
+    "entrypoint": "two-track-pilot-onboarding.html",
+    "playbook": "docs/two-track-pilot-onboarding-playbook-v3.7.md",
+    "barayamalPlan": "docs/barayamal-founder-onboarding-test-plan-v3.7.md",
+    "toastmastersPlan": "docs/fn-toastmasters-member-onboarding-test-plan-v3.7.md",
+    "boundaryBrief": "docs/two-track-data-boundary-and-consent-brief-v3.7.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.7.md",
+    "dataFiles": [
+      "data/two-track-pilot-tracks-v3.7.csv",
+      "data/two-track-onboarding-stages-v3.7.csv",
+      "data/two-track-participant-segments-v3.7.csv",
+      "data/two-track-data-boundaries-v3.7.csv",
+      "data/two-track-component-map-v3.7.csv",
+      "data/two-track-acceptance-tests-v3.7.csv",
+      "data/two-track-risk-register-v3.7.csv",
+      "data/two-track-pilot-onboarding-package-v3.7.json"
+    ],
+    "primaryOrganisationTest": "Barayamal",
+    "controlledMemberTester": "First Nations Toastmasters",
+    "counts": {
+      "tracks": 2,
+      "stages": 14,
+      "segments": 12,
+      "dataBoundaries": 14,
+      "components": 16,
+      "acceptanceTests": 16,
+      "risks": 12,
+      "pilotRecords": 86,
+      "barayamalStages": 6,
+      "toastmastersStages": 5,
+      "neverPublicBoundaries": 4,
+      "configureComponents": 9,
+      "blockedRisks": 7,
+      "requiredTests": 9
+    },
+    "sourceAnchors": [
+      {
+        "label": "Decidim getting started",
+        "url": "https://docs.decidim.org/en/develop/install/index.html"
+      },
+      {
+        "label": "Decidim spaces",
+        "url": "https://docs.decidim.org/en/develop/admin/spaces.html"
+      },
+      {
+        "label": "Decidim participatory spaces",
+        "url": "https://docs.decidim.org/en/develop/features/participatory-spaces.html"
+      },
+      {
+        "label": "Decidim components",
+        "url": "https://docs.decidim.org/en/develop/admin/components.html"
+      },
+      {
+        "label": "Decidim authorizations",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+      },
+      {
+        "label": "Decidim administrators",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/admins.html"
+      },
+      {
+        "label": "Decidim production checklist",
+        "url": "https://docs.decidim.org/en/develop/install/checklist.html"
+      },
+      {
+        "label": "Barayamal Toastmasters First Nations",
+        "url": "https://barayamal.com.au/toastmasters-first-nations/"
+      },
+      {
+        "label": "Toastmasters Start a Club",
+        "url": "https://www.toastmasters.org/Start-a-Club"
+      }
+    ],
+    "operatingRule": "Barayamal is the primary First Nations organisation onboarding test for Indigenous founders, business owners, mentors, and program participants. First Nations Toastmasters is a smaller controlled member onboarding tester. Keep the tracks separate, fake-data-only, and gated until private authority, privacy, IDS/data governance, support, official-route, and environment approvals pass.",
+    "advisoryRule": "Dean Foley / Barayamal can act as initial developer, custodian, and advisory trusted reviewer for the fake-data onboarding model, but cannot approve First Nations authority, privacy, Indigenous Data Sovereignty, official Toastmasters records, participant eligibility, or private member/founder data access.",
+    "approvalRule": "Do not invite real founders, business owners, Toastmasters members, mentors, guests, or partners into Decidim until a private environment, participant notice, consent route, eligibility path, support route, official Toastmasters boundary, admin revoke test, backup/restore proof, and First Nations authority decision are approved.",
+    "safetyRule": "This v3.7 two-track onboarding package is public fake/sample data only. Do not collect, upload, seed, screenshot, export, or publish real founder, business owner, mentor, member, guest, official Toastmasters, payment, access, incident, authority, consent, signature, or private support records."
   }
 }

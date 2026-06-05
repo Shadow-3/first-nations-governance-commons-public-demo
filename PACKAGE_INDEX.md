@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v3.6  
+Version: v3.7  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -153,9 +153,28 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
 
+## v3.7 Two-Track Pilot Onboarding Additions
+
+- `two-track-pilot-onboarding.html` - public-safe Barayamal organisation onboarding plus First Nations Toastmasters member tester.
+- `docs/two-track-pilot-onboarding-playbook-v3.7.md`
+- `docs/barayamal-founder-onboarding-test-plan-v3.7.md`
+- `docs/fn-toastmasters-member-onboarding-test-plan-v3.7.md`
+- `docs/two-track-data-boundary-and-consent-brief-v3.7.md`
+- `docs/public-demo-release-notes-v3.7.md`
+- `data/two-track-pilot-tracks-v3.7.csv`
+- `data/two-track-onboarding-stages-v3.7.csv`
+- `data/two-track-participant-segments-v3.7.csv`
+- `data/two-track-data-boundaries-v3.7.csv`
+- `data/two-track-component-map-v3.7.csv`
+- `data/two-track-acceptance-tests-v3.7.csv`
+- `data/two-track-risk-register-v3.7.csv`
+- `data/two-track-pilot-onboarding-package-v3.7.json`
+
+
 ## v3.6 Decidim Build Blueprint Additions
 
 - `decidim-build-blueprint.html` - public-safe Decidim spaces, components, permissions, seed records, environment controls, and acceptance tests.
+- `two-track-pilot-onboarding.html` is the public Two-Track Pilot Onboarding page for Barayamal organisation onboarding and the First Nations Toastmasters member tester.
 - `docs/decidim-build-blueprint-playbook-v3.6.md`
 - `docs/decidim-configuration-map-v3.6.md`
 - `docs/decidim-permission-and-authorisation-matrix-v3.6.md`

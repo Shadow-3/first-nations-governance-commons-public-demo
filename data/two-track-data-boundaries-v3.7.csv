@@ -1,0 +1,15 @@
+id,track,dataClass,status,allowedPublic,privateRoute,neverPublic
+DTB-001,Both,Public safe,Ready,Generic sandbox explanation and sample process rules.,None.,No real participant details.
+DTB-002,Barayamal,Public safe,Ready,Sample founder support topic and public accountability status.,Private founder identity and business records.,"No real client, revenue, contract, tax, or legal data."
+DTB-003,FN Toastmasters,Public safe,Ready,"Sample meeting agenda, role list, and aggregate learning summary.",Official Toastmasters member records.,No real attendance or evaluations.
+DTB-004,Both,Public safe,Ready,"Release notes, fake seed records, and redacted screenshots.",Private pilot evidence.,"No hidden real data in CSV, JSON, or images."
+DTB-005,Barayamal,Private restricted,Blocked,Founder eligibility and support plan.,Private intake only after consent.,Never in public demo.
+DTB-006,Barayamal,Private restricted,Blocked,Business owner support record.,Private business-support route only.,Never in public screenshots.
+DTB-007,Barayamal,Private restricted,Hold,Mentor matching notes.,Approved private register only.,No public conflicts or contact details.
+DTB-008,FN Toastmasters,Private restricted,Blocked,Member onboarding and participation record.,Private member route only if approved.,No official records in Decidim.
+DTB-009,FN Toastmasters,Private restricted,Hold,Speech goals and confidence feedback.,Aggregate-only public reporting.,No personal evaluation history.
+DTB-010,Both,Private restricted,Blocked,Access needs and incident support route.,Private safety route only.,No affected-person detail public.
+DTB-011,Both,Never public,Blocked,Authority quorum evidence.,Private authority meeting only.,"Do not seed, export, screenshot, or publish."
+DTB-012,Both,Never public,Blocked,IDS/data governance decision evidence.,Private data-review room only.,Do not expose in public package.
+DTB-013,FN Toastmasters,Never public,Blocked,"Official Toastmasters member number, payment, signature, charter evidence.",External official route.,Do not store in Decidim public sandbox.
+DTB-014,Both,Never public,Blocked,"Incident details, support records, access logs, deletion evidence.",Private evidence vault only.,Do not publish or include in provider pack.

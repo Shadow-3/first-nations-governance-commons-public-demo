@@ -1,0 +1,13 @@
+id,risk,status,trigger,control,owner
+RSK-001,Tracks get mixed into one real pilot,Blocked,Barayamal and FN Toastmasters collect real records in same public sandbox.,Keep two separate fake-data tracks and block real intake.,Pilot owner
+RSK-002,Official Toastmasters records enter Decidim,Blocked,"Member numbers, payments, signatures, or charter evidence appear.",External official-route owner and never-public rule.,Official-route owner
+RSK-003,Founder/business owner private records leak,Blocked,"Real support, business, revenue, contact, or hardship data appears public.","Private notice, consent, and no-real-data gate.",Privacy reviewer
+RSK-004,Dean advisory role becomes approval role,Blocked,Reviewer advice treated as authority decision.,"Advisory boundary in page, JSON, docs, and acceptance test.",Authority chair
+RSK-005,Partner observer gets private access,Blocked,Partner can view exports or participant records.,Observer-only permissions and export hold.,Technical custodian
+RSK-006,Member feedback becomes personal evaluation record,Hold,Toastmasters learning survey stores personal evaluation history.,Aggregate-only survey and private review.,Learning lead
+RSK-007,Support incident details become public,Blocked,Access or incident support details appear in minutes or proposals.,Private support process and stop rule.,Safety reviewer
+RSK-008,Admin access not revoked,Blocked,Developer/provider/advisor access persists after test.,Admin revoke acceptance test before real data.,Technical custodian
+RSK-009,Custom code starts before native Decidim test,Hold,Provider builds bespoke modules before native components pass.,Use v3.6 build rule and v3.7 acceptance gates.,Build lead
+RSK-010,Public screenshots contain private records,Managed,QA captures real records accidentally.,Fake-data screenshots only and redaction scan.,Comms lead
+RSK-011,Founders expect real service from fake sandbox,Managed,Demo language implies live intake.,Clear public explanation and no-real-intake copy.,Barayamal admin
+RSK-012,Guest/member boundary unclear,Hold,Toastmasters guests treated as official members.,Guest-only role and official-route page.,Club facilitator

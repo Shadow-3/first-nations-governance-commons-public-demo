@@ -1,0 +1,17 @@
+id,track,test,status,expected
+TST-001,Both,Open public sandbox,Ready,Visitor can open two-track page without framework overlay.
+TST-002,Barayamal,Submit fake founder interest,Required,Sample founder/business owner interest record can be created and exported as fake data.
+TST-003,Barayamal,Answer support topic proposal,Required,Admin answers a fake proposal and links an accountability action.
+TST-004,Barayamal,Publish founder yarning summary,Required,Meeting minutes publish without attendee or private support details.
+TST-005,Barayamal,Partner observer cannot access private records,Blocked,Observer role sees public updates only.
+TST-006,Barayamal,Mentor role held until approval,Hold,Mentor matching remains disabled until conflict/privacy rules pass.
+TST-007,FN Toastmasters,Open member welcome path,Ready,Member welcome page displays official Toastmasters boundary.
+TST-008,FN Toastmasters,Create fake meeting role agenda,Required,Sample roles publish without private evaluations or real attendance.
+TST-009,FN Toastmasters,Submit aggregate learning survey,Required,Survey creates sample aggregate results only.
+TST-010,FN Toastmasters,Official records excluded,Required,"Member numbers, payments, signatures, and charter evidence do not appear in Decidim."
+TST-011,Both,Dean advisory boundary,Required,Dean reviewer can inspect public package but cannot approve real onboarding.
+TST-012,Both,Admin revoke test,Blocked,Revoked fake admin loses access before real data.
+TST-013,Both,Private support route tabletop,Blocked,Fake incident pauses process and keeps affected-person details private.
+TST-014,Both,Mobile onboarding check,Required,Core two-track page renders at 390px without horizontal overflow.
+TST-015,Both,Redaction scan,Required,"Repository, CSV, JSON, screenshots, and docs contain fake/sample data only."
+TST-016,Both,Backup/export/delete proof,Hold,Private environment proof is held until staging/prod separation exists.
