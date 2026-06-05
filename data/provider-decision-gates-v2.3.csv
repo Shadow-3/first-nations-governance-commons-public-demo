@@ -1,0 +1,11 @@
+gate_id,title,status,owner,evidence,stop_condition
+G-001,Fake-data boundary accepted,Required,Barayamal,Provider confirms no real records required,Provider requests real data
+G-002,Decidim version and host named,Open,Provider,Version and hosting note,No named version or host
+G-003,Admin ownership clear,Open,Barayamal,Primary and backup admin recorded privately,Admin control unclear
+G-004,AGPL source-code path clear,Open,Provider,Repository or source publication note,Provider refuses source obligations
+G-005,Backups and support owner clear,Open,Provider,Backup and support plan,No backup or support owner
+G-006,Acceptance evidence agreed,Open,QA reviewer,v2.2 tests accepted,Provider will not provide evidence
+G-007,Real pilot claims blocked,Required,Assurance reviewer,Public boundary text,Provider implies real consultation authority
+G-008,Privacy data sovereignty assumptions written,Open,Governance reviewer,Assumptions note,Assumptions missing
+G-009,Training and handover included,Open,Provider,Training agenda and handover pack,No admin handover
+G-010,Quote has fixed scope and exclusions,Open,Barayamal,Signed scope or quote review,Unbounded scope or unclear exclusions

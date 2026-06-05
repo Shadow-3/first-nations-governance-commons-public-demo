@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v2.2
+Current package version: v2.3
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -38,6 +38,8 @@ Open `sandbox-launcher.html` to use the Sandbox Launcher for fake-data Decidim l
 Open `seed-studio.html` to use the Seed Studio for Decidim-shaped fake spaces, component recipes, fake content records, safety holds, and a downloadable seed handoff brief.
 
 Open `sandbox-build-pack.html` to use the Decidim Sandbox Build Pack for environment checks, provider/self-build handoff, setup runbook, acceptance tests, and a downloadable build brief.
+
+Open `build-partner-desk.html` to use the Build Partner Desk for provider shortlist, RFQ question bank, evaluation scorecard, decision gates, and a downloadable partner brief.
 
 The demo shows:
 
@@ -77,6 +79,7 @@ The demo shows:
 - `docs/public-demo-release-notes-v1.5.md`
 - `docs/public-demo-release-notes-v1.6.md`
 - `docs/public-demo-release-notes-v1.7.md`
+- `docs/public-demo-release-notes-v2.3.md`
 - `docs/public-demo-release-notes-v2.2.md`
 - `docs/public-demo-release-notes-v2.1.md`
 - `docs/public-demo-release-notes-v2.0.md`
@@ -86,6 +89,8 @@ The demo shows:
 - `docs/decidim-seed-admin-guide-v2.1.md`
 - `docs/decidim-sandbox-build-pack-v2.2.md`
 - `docs/provider-self-build-handoff-v2.2.md`
+- `docs/build-partner-rfq-pack-v2.3.md`
+- `docs/provider-evaluation-guide-v2.3.md`
 - `docs/sandbox-launch-playbook-v2.0.md`
 - `docs/decidim-environment-options-v2.0.md`
 - `docs/sandbox-assurance-playbook-v1.9.md`
@@ -173,6 +178,11 @@ The demo shows:
 - `data/decidim-provider-handoff-v2.2.csv`
 - `data/decidim-build-acceptance-tests-v2.2.csv`
 - `data/decidim-build-package-v2.2.json`
+- `data/build-partner-shortlist-v2.3.csv`
+- `data/provider-evaluation-scorecard-v2.3.csv`
+- `data/provider-rfq-question-bank-v2.3.csv`
+- `data/provider-decision-gates-v2.3.csv`
+- `data/build-partner-package-v2.3.json`
 - `data/sandbox-task-board.csv`
 - `data/decision-log-template.csv`
 - `PACKAGE_INDEX.md`
@@ -189,6 +199,7 @@ The demo shows:
 - `sandbox-launcher.html`
 - `seed-studio.html`
 - `sandbox-build-pack.html`
+- `build-partner-desk.html`
 - `document.html`
 - `CONTRIBUTING.md`
 - `CODE_OF_CONDUCT.md`
@@ -526,9 +537,29 @@ The v2.2 package adds a build execution pack that turns the launch path and fake
 
 Use this version after Sandbox Launcher and Seed Studio. The current recommendation remains provider-assisted build until the local Barayamal self-build environment has Ruby, Bundler, PostgreSQL, Docker or equivalent services, image-processing libraries, browser test tooling, and a real Decidim app scaffold in place.
 
+## v2.3 Build Partner Desk Upgrade
+
+The v2.3 package adds a partner-selection workflow that turns the provider-assisted recommendation into an actionable RFQ and quote-review process:
+
+- Interactive Build Partner Desk page.
+- Six fake provider archetypes with recommended, hold, and no-go statuses.
+- Ten weighted provider evaluation criteria.
+- Eighteen RFQ questions across technical, governance/data, hosting/ops, handover, and commercial themes.
+- Ten decision gates for quote-to-build approval.
+- Browser-generated partner brief.
+- Build partner RFQ pack.
+- Provider evaluation guide.
+- Build partner shortlist CSV.
+- Provider evaluation scorecard CSV.
+- Provider RFQ question bank CSV.
+- Provider decision gates CSV.
+- Build partner package JSON.
+
+Use this version after Sandbox Build Pack. Send the v2.3 RFQ pack to two or three Decidim-capable providers, score responses, and do not proceed unless the fake-data boundary, Decidim version, hosting, admin ownership, AGPL/source-code path, backups, support, handover, acceptance evidence, and scope exclusions are clear.
+
 ## Next Build Step
 
-Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, Delivery Room, Assurance Room, Sandbox Launcher, Seed Studio, and Sandbox Build Pack to configure, operate, and safely hand over a fake-data Decidim sandbox:
+Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, Delivery Room, Assurance Room, Sandbox Launcher, Seed Studio, Sandbox Build Pack, and Build Partner Desk to configure, operate, select a provider for, and safely hand over a fake-data Decidim sandbox:
 
 - One organisation.
 - One public assembly.

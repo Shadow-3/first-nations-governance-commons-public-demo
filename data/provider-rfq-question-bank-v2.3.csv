@@ -1,0 +1,19 @@
+question_id,theme,question,expected_evidence
+Q-001,Technical,Which Decidim version will you use and why,Version pin and compatibility note
+Q-002,Technical,How will you create and configure the Decidim app,App setup plan and repository path
+Q-003,Technical,Who owns Ruby PostgreSQL Node npm ImageMagick LibVips and test tooling,Named technical owner
+Q-004,Technical,How will the fake seed package become spaces components and records,Seed method and screenshots
+Q-005,Governance/data,How will you keep real community data out of the sandbox,Fake-data boundary procedure
+Q-006,Governance/data,How will Barayamal authority and community authority boundaries be shown,Public language and governance note
+Q-007,Governance/data,What privacy and data sovereignty assumptions are you making,Assumptions and exclusions list
+Q-008,Governance/data,What content or participation data is explicitly out of scope,No-go data list
+Q-009,Hosting/ops,Where will the fake-data sandbox be hosted,Host region domain SSL and access plan
+Q-010,Hosting/ops,How will mail jobs storage backups and logs work,Operations note
+Q-011,Hosting/ops,How will staging or preproduction be separated from any real environment later,Environment separation plan
+Q-012,Hosting/ops,Who responds if the sandbox fails or leaks unsafe content,Incident and support owner
+Q-013,Handover,What admin training will Barayamal receive,Training plan and admin guide
+Q-014,Handover,What screenshots and acceptance evidence will be delivered,Evidence checklist
+Q-015,Handover,What source code and deployment notes will be handed over,Repository and deployment README
+Q-016,Handover,What happens after the first 30 days,Support and continuity plan
+Q-017,Commercial,What is fixed price optional excluded and assumed,Quote assumptions
+Q-018,Commercial,What would trigger a stop rescope or no-go,Commercial stop conditions

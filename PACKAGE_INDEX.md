@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v2.2  
+Version: v2.3  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -20,49 +20,58 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 10. `sandbox-launcher.html` - Sandbox Launcher for build pathway, environment readiness, and launch brief.
 11. `seed-studio.html` - Seed Studio for fake Decidim spaces, components, records, safety holds, and handoff brief.
 12. `sandbox-build-pack.html` - Sandbox Build Pack for environment checks, provider/self-build handoff, Decidim runbook, acceptance tests, and build brief.
-13. `docs-index.html` - reviewer-facing Review Pack hub.
-14. `document.html` - rendered document and data viewer.
-15. `README.md` - overview and review instructions.
-16. `docs/decidim-sandbox-build-pack-v2.2.md` - v2.2 build execution playbook.
-17. `docs/provider-self-build-handoff-v2.2.md` - v2.2 provider and self-build handoff.
-18. `data/decidim-build-environment-check-v2.2.csv` - v2.2 environment readiness checks.
-19. `data/decidim-build-runbook-v2.2.csv` - v2.2 build runbook.
-20. `data/decidim-provider-handoff-v2.2.csv` - v2.2 provider handoff table.
-21. `data/decidim-build-acceptance-tests-v2.2.csv` - v2.2 build acceptance tests.
-22. `data/decidim-build-package-v2.2.json` - v2.2 build package snapshot.
-23. `docs/fake-data-seed-playbook-v2.1.md` - v2.1 seed playbook.
-24. `docs/decidim-seed-admin-guide-v2.1.md` - v2.1 Decidim seed admin guide.
-25. `data/decidim-space-component-seed-v2.1.csv` - v2.1 space/component seed map.
-26. `data/fake-content-seed-register-v2.1.csv` - v2.1 fake content register.
-27. `data/seed-safety-review-v2.1.csv` - v2.1 seed safety review.
-28. `data/fake-seed-package-v2.1.json` - v2.1 seed package snapshot.
-29. `docs/sandbox-launch-playbook-v2.0.md` - v2.0 launch playbook.
-30. `docs/decidim-environment-options-v2.0.md` - v2.0 environment options.
-31. `data/sandbox-launch-checklist-v2.0.csv` - v2.0 launch checklist.
-32. `data/sandbox-pathway-comparison-v2.0.csv` - v2.0 pathway comparison.
-33. `data/decidim-sandbox-output-map-v2.0.csv` - v2.0 setup output map.
-34. `data/sandbox-launch-readiness-v2.0.json` - v2.0 launch readiness snapshot.
-35. `docs/sandbox-assurance-playbook-v1.9.md` - v1.9 assurance playbook.
-36. `docs/fake-data-boundary-audit-v1.9.md` - v1.9 fake-data boundary audit.
-37. `data/sandbox-assurance-checklist-v1.9.csv` - v1.9 assurance checklist.
-38. `data/go-live-decision-gates-v1.9.csv` - v1.9 decision gates.
-39. `data/assurance-readiness-snapshot-v1.9.json` - v1.9 readiness snapshot.
-40. `docs/sprint-execution-playbook-v1.8.md` - v1.8 execution playbook.
-41. `data/sprint-execution-tracker-v1.8.csv` - v1.8 execution tracker.
-42. `docs/sandbox-ops-runbook-v1.6.md` - v1.6 ops runbook.
-43. `data/sandbox-ops-checklist-v1.6.csv` - 18 run-day ops checks.
-44. `docs/sandbox-sprint-kickoff-v1.5.md` - v1.5 sprint kickoff.
-45. `data/sandbox-sprint-issues-v1.5.csv` - first 12 sprint issues.
-46. `docs/open-source-contributor-model-v1.4.md` - v1.4 contributor model.
-47. `docs/decidim-sandbox-blueprint-v1.3.md` - v1.3 Decidim sandbox blueprint.
-48. `data/decidim-admin-config-map-v1.6.csv` - v1.6 Decidim admin config map.
-49. `data/decidim-component-map-v1.3.csv` - demo-to-Decidim component map.
-50. `data/sandbox-qa-scenarios-v1.6.csv` - v1.6 QA scenarios.
-51. `docs/github-sprint-launch-report-v1.7.md` - live GitHub sprint setup report.
-52. `data/github-sprint-live-issue-map-v1.7.csv` - live issue URL map.
-53. `data/github-sprint-label-map-v1.7.csv` - label and status map.
-54. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
-55. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
+13. `build-partner-desk.html` - Build Partner Desk for provider shortlist, RFQ questions, scorecard, decision gates, and partner brief.
+14. `docs-index.html` - reviewer-facing Review Pack hub.
+15. `document.html` - rendered document and data viewer.
+16. `README.md` - overview and review instructions.
+17. `docs/build-partner-rfq-pack-v2.3.md` - v2.3 RFQ pack.
+18. `docs/provider-evaluation-guide-v2.3.md` - v2.3 provider evaluation guide.
+19. `data/build-partner-shortlist-v2.3.csv` - v2.3 fake provider archetype shortlist.
+20. `data/provider-evaluation-scorecard-v2.3.csv` - v2.3 weighted provider scorecard.
+21. `data/provider-rfq-question-bank-v2.3.csv` - v2.3 RFQ question bank.
+22. `data/provider-decision-gates-v2.3.csv` - v2.3 quote-to-build decision gates.
+23. `data/build-partner-package-v2.3.json` - v2.3 partner package snapshot.
+24. `docs/decidim-sandbox-build-pack-v2.2.md` - v2.2 build execution playbook.
+25. `docs/provider-self-build-handoff-v2.2.md` - v2.2 provider and self-build handoff.
+26. `data/decidim-build-environment-check-v2.2.csv` - v2.2 environment readiness checks.
+27. `data/decidim-build-runbook-v2.2.csv` - v2.2 build runbook.
+28. `data/decidim-provider-handoff-v2.2.csv` - v2.2 provider handoff table.
+29. `data/decidim-build-acceptance-tests-v2.2.csv` - v2.2 build acceptance tests.
+30. `data/decidim-build-package-v2.2.json` - v2.2 build package snapshot.
+31. `docs/fake-data-seed-playbook-v2.1.md` - v2.1 seed playbook.
+32. `docs/decidim-seed-admin-guide-v2.1.md` - v2.1 Decidim seed admin guide.
+33. `data/decidim-space-component-seed-v2.1.csv` - v2.1 space/component seed map.
+34. `data/fake-content-seed-register-v2.1.csv` - v2.1 fake content register.
+35. `data/seed-safety-review-v2.1.csv` - v2.1 seed safety review.
+36. `data/fake-seed-package-v2.1.json` - v2.1 seed package snapshot.
+37. `docs/sandbox-launch-playbook-v2.0.md` - v2.0 launch playbook.
+38. `docs/decidim-environment-options-v2.0.md` - v2.0 environment options.
+39. `data/sandbox-launch-checklist-v2.0.csv` - v2.0 launch checklist.
+40. `data/sandbox-pathway-comparison-v2.0.csv` - v2.0 pathway comparison.
+41. `data/decidim-sandbox-output-map-v2.0.csv` - v2.0 setup output map.
+42. `data/sandbox-launch-readiness-v2.0.json` - v2.0 launch readiness snapshot.
+43. `docs/sandbox-assurance-playbook-v1.9.md` - v1.9 assurance playbook.
+44. `docs/fake-data-boundary-audit-v1.9.md` - v1.9 fake-data boundary audit.
+45. `data/sandbox-assurance-checklist-v1.9.csv` - v1.9 assurance checklist.
+46. `data/go-live-decision-gates-v1.9.csv` - v1.9 decision gates.
+47. `data/assurance-readiness-snapshot-v1.9.json` - v1.9 readiness snapshot.
+48. `docs/sprint-execution-playbook-v1.8.md` - v1.8 execution playbook.
+49. `data/sprint-execution-tracker-v1.8.csv` - v1.8 execution tracker.
+50. `docs/sandbox-ops-runbook-v1.6.md` - v1.6 ops runbook.
+51. `data/sandbox-ops-checklist-v1.6.csv` - 18 run-day ops checks.
+52. `docs/sandbox-sprint-kickoff-v1.5.md` - v1.5 sprint kickoff.
+53. `data/sandbox-sprint-issues-v1.5.csv` - first 12 sprint issues.
+54. `docs/open-source-contributor-model-v1.4.md` - v1.4 contributor model.
+55. `docs/decidim-sandbox-blueprint-v1.3.md` - v1.3 Decidim sandbox blueprint.
+56. `data/decidim-admin-config-map-v1.6.csv` - v1.6 Decidim admin config map.
+57. `data/decidim-component-map-v1.3.csv` - demo-to-Decidim component map.
+58. `data/sandbox-qa-scenarios-v1.6.csv` - v1.6 QA scenarios.
+59. `docs/github-sprint-launch-report-v1.7.md` - live GitHub sprint setup report.
+60. `data/github-sprint-live-issue-map-v1.7.csv` - live issue URL map.
+61. `data/github-sprint-label-map-v1.7.csv` - label and status map.
+62. `docs/public-demo-release-notes-v2.3.md` - v2.3 release summary.
+63. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
+64. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
 
 ## Recommended Reading Order
 
@@ -79,13 +88,14 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 9. `sandbox-launcher.html`
 10. `seed-studio.html`
 11. `sandbox-build-pack.html`
-12. `docs/advisor-review-kickoff-pack-v1.1.md`
-13. `docs-index.html#advisors`
-14. `docs/advisor-review-guide.md`
-15. `docs/30-minute-demo-agenda.md`
-16. `docs/advisor-feedback-form.md`
-17. `docs/go-no-go-scorecard.md`
-18. `docs/advisor-synthesis-template-v0.7.md`
+12. `build-partner-desk.html`
+13. `docs/advisor-review-kickoff-pack-v1.1.md`
+14. `docs-index.html#advisors`
+15. `docs/advisor-review-guide.md`
+16. `docs/30-minute-demo-agenda.md`
+17. `docs/advisor-feedback-form.md`
+18. `docs/go-no-go-scorecard.md`
+19. `docs/advisor-synthesis-template-v0.7.md`
 
 ### For Funders And Partners
 
@@ -100,12 +110,15 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 9. `sandbox-launcher.html`
 10. `seed-studio.html`
 11. `sandbox-build-pack.html`
-12. `docs-index.html#funders`
-13. `docs/funder-and-partner-brief.md`
-14. `docs/scope-options-and-budget-model-v0.7.md`
-15. `docs/risk-register-v0.7.md`
-16. `docs/raci-and-decision-rights-v0.7.md`
-17. `docs/statement-of-work-decidim-sandbox-v0.8.md`
+12. `build-partner-desk.html`
+13. `docs/build-partner-rfq-pack-v2.3.md`
+14. `docs/provider-evaluation-guide-v2.3.md`
+15. `docs-index.html#funders`
+16. `docs/funder-and-partner-brief.md`
+17. `docs/scope-options-and-budget-model-v0.7.md`
+18. `docs/risk-register-v0.7.md`
+19. `docs/raci-and-decision-rights-v0.7.md`
+20. `docs/statement-of-work-decidim-sandbox-v0.8.md`
 
 ### For Builders
 
@@ -118,47 +131,53 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 7. `sandbox-launcher.html`
 8. `seed-studio.html`
 9. `sandbox-build-pack.html`
-10. `docs/decidim-sandbox-build-pack-v2.2.md`
-11. `docs/provider-self-build-handoff-v2.2.md`
-12. `data/decidim-build-environment-check-v2.2.csv`
-13. `data/decidim-build-runbook-v2.2.csv`
-14. `data/decidim-provider-handoff-v2.2.csv`
-15. `data/decidim-build-acceptance-tests-v2.2.csv`
-16. `data/decidim-build-package-v2.2.json`
-17. `docs/sandbox-launch-playbook-v2.0.md`
-18. `docs/decidim-environment-options-v2.0.md`
-19. `data/sandbox-launch-checklist-v2.0.csv`
-20. `data/sandbox-pathway-comparison-v2.0.csv`
-21. `data/decidim-sandbox-output-map-v2.0.csv`
-22. `docs/fake-data-seed-playbook-v2.1.md`
-23. `docs/decidim-seed-admin-guide-v2.1.md`
-24. `data/decidim-space-component-seed-v2.1.csv`
-25. `data/fake-content-seed-register-v2.1.csv`
-26. `data/seed-safety-review-v2.1.csv`
-27. `data/fake-seed-package-v2.1.json`
-28. `docs/sandbox-ops-runbook-v1.6.md`
-29. `data/sandbox-ops-checklist-v1.6.csv`
-30. `docs/decidim-admin-configuration-checklist-v1.6.md`
-31. `data/decidim-admin-config-map-v1.6.csv`
-32. `docs/sandbox-qa-scenario-pack-v1.6.md`
-33. `data/sandbox-qa-scenarios-v1.6.csv`
-34. `docs/sandbox-sprint-kickoff-v1.5.md`
-35. `data/sandbox-sprint-issues-v1.5.csv`
-36. `docs/decidim-sandbox-blueprint-v1.3.md`
-37. `data/decidim-component-map-v1.3.csv`
-38. `data/sandbox-acceptance-matrix-v1.3.csv`
-39. `data/sandbox-import-manifest-v1.3.json`
-40. `docs/implementation-sprint-plan-v1.3.md`
-41. `docs/admin-handover-training-plan-v1.3.md`
-42. `docs/sandbox-provider-rfq-v1.1.md`
-43. `docs/provider-evaluation-scorecard-v1.1.md`
-44. `docs-index.html#builders`
-45. `docs/decidim-sandbox-kickoff-runbook.md`
-46. `docs/statement-of-work-decidim-sandbox-v0.8.md`
-47. `docs/technical-requirements-v0.8.md`
-48. `docs/acceptance-test-plan-v0.8.md`
-49. `docs/decidim-import-dataset-map.md`
-50. `data/sandbox-task-board.csv`
+10. `build-partner-desk.html`
+11. `docs/build-partner-rfq-pack-v2.3.md`
+12. `docs/provider-evaluation-guide-v2.3.md`
+13. `data/provider-evaluation-scorecard-v2.3.csv`
+14. `data/provider-rfq-question-bank-v2.3.csv`
+15. `data/provider-decision-gates-v2.3.csv`
+16. `docs/decidim-sandbox-build-pack-v2.2.md`
+17. `docs/provider-self-build-handoff-v2.2.md`
+18. `data/decidim-build-environment-check-v2.2.csv`
+19. `data/decidim-build-runbook-v2.2.csv`
+20. `data/decidim-provider-handoff-v2.2.csv`
+21. `data/decidim-build-acceptance-tests-v2.2.csv`
+22. `data/decidim-build-package-v2.2.json`
+23. `docs/sandbox-launch-playbook-v2.0.md`
+24. `docs/decidim-environment-options-v2.0.md`
+25. `data/sandbox-launch-checklist-v2.0.csv`
+26. `data/sandbox-pathway-comparison-v2.0.csv`
+27. `data/decidim-sandbox-output-map-v2.0.csv`
+28. `docs/fake-data-seed-playbook-v2.1.md`
+29. `docs/decidim-seed-admin-guide-v2.1.md`
+30. `data/decidim-space-component-seed-v2.1.csv`
+31. `data/fake-content-seed-register-v2.1.csv`
+32. `data/seed-safety-review-v2.1.csv`
+33. `data/fake-seed-package-v2.1.json`
+34. `docs/sandbox-ops-runbook-v1.6.md`
+35. `data/sandbox-ops-checklist-v1.6.csv`
+36. `docs/decidim-admin-configuration-checklist-v1.6.md`
+37. `data/decidim-admin-config-map-v1.6.csv`
+38. `docs/sandbox-qa-scenario-pack-v1.6.md`
+39. `data/sandbox-qa-scenarios-v1.6.csv`
+40. `docs/sandbox-sprint-kickoff-v1.5.md`
+41. `data/sandbox-sprint-issues-v1.5.csv`
+42. `docs/decidim-sandbox-blueprint-v1.3.md`
+43. `data/decidim-component-map-v1.3.csv`
+44. `data/sandbox-acceptance-matrix-v1.3.csv`
+45. `data/sandbox-import-manifest-v1.3.json`
+46. `docs/implementation-sprint-plan-v1.3.md`
+47. `docs/admin-handover-training-plan-v1.3.md`
+48. `docs/sandbox-provider-rfq-v1.1.md`
+49. `docs/provider-evaluation-scorecard-v1.1.md`
+50. `docs-index.html#builders`
+51. `docs/decidim-sandbox-kickoff-runbook.md`
+52. `docs/statement-of-work-decidim-sandbox-v0.8.md`
+53. `docs/technical-requirements-v0.8.md`
+54. `docs/acceptance-test-plan-v0.8.md`
+55. `docs/decidim-import-dataset-map.md`
+56. `data/sandbox-task-board.csv`
 
 ### For Contributors And Maintainers
 
@@ -246,14 +265,18 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 7. `data/sandbox-launch-readiness-v2.0.json`
 8. `seed-studio.html`
 9. `sandbox-build-pack.html`
-10. `docs/fake-data-seed-playbook-v2.1.md`
-11. `data/fake-seed-package-v2.1.json`
-12. `docs/decidim-sandbox-build-pack-v2.2.md`
-13. `data/decidim-build-runbook-v2.2.csv`
-14. `data/decidim-build-acceptance-tests-v2.2.csv`
-15. `assurance-room.html`
-16. `delivery-room.html`
-17. `ops-room.html`
+10. `build-partner-desk.html`
+11. `docs/fake-data-seed-playbook-v2.1.md`
+12. `data/fake-seed-package-v2.1.json`
+13. `docs/decidim-sandbox-build-pack-v2.2.md`
+14. `data/decidim-build-runbook-v2.2.csv`
+15. `data/decidim-build-acceptance-tests-v2.2.csv`
+16. `docs/build-partner-rfq-pack-v2.3.md`
+17. `data/provider-rfq-question-bank-v2.3.csv`
+18. `data/provider-decision-gates-v2.3.csv`
+19. `assurance-room.html`
+20. `delivery-room.html`
+21. `ops-room.html`
 
 ### For Seed Team
 
@@ -265,11 +288,13 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 6. `data/seed-safety-review-v2.1.csv`
 7. `data/fake-seed-package-v2.1.json`
 8. `sandbox-build-pack.html`
-9. `data/decidim-build-runbook-v2.2.csv`
-10. `data/decidim-build-acceptance-tests-v2.2.csv`
-11. `sandbox-launcher.html`
-12. `ops-room.html`
-13. `assurance-room.html`
+9. `build-partner-desk.html`
+10. `data/decidim-build-runbook-v2.2.csv`
+11. `data/decidim-build-acceptance-tests-v2.2.csv`
+12. `data/provider-rfq-question-bank-v2.3.csv`
+13. `sandbox-launcher.html`
+14. `ops-room.html`
+15. `assurance-room.html`
 
 ### For Build Team
 
@@ -281,11 +306,30 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 6. `data/decidim-provider-handoff-v2.2.csv`
 7. `data/decidim-build-acceptance-tests-v2.2.csv`
 8. `data/decidim-build-package-v2.2.json`
-9. `seed-studio.html`
-10. `data/fake-seed-package-v2.1.json`
-11. `sandbox-launcher.html`
-12. `ops-room.html`
-13. `assurance-room.html`
+9. `build-partner-desk.html`
+10. `docs/build-partner-rfq-pack-v2.3.md`
+11. `data/provider-evaluation-scorecard-v2.3.csv`
+12. `data/provider-decision-gates-v2.3.csv`
+13. `seed-studio.html`
+14. `data/fake-seed-package-v2.1.json`
+15. `sandbox-launcher.html`
+16. `ops-room.html`
+17. `assurance-room.html`
+
+### For Partner Selection Team
+
+1. `build-partner-desk.html`
+2. `docs/build-partner-rfq-pack-v2.3.md`
+3. `docs/provider-evaluation-guide-v2.3.md`
+4. `data/build-partner-shortlist-v2.3.csv`
+5. `data/provider-evaluation-scorecard-v2.3.csv`
+6. `data/provider-rfq-question-bank-v2.3.csv`
+7. `data/provider-decision-gates-v2.3.csv`
+8. `data/build-partner-package-v2.3.json`
+9. `sandbox-build-pack.html`
+10. `docs/decidim-sandbox-build-pack-v2.2.md`
+11. `data/decidim-build-acceptance-tests-v2.2.csv`
+12. `assurance-room.html`
 
 ### For Governance/Data Review
 
@@ -346,6 +390,11 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 - `data/decidim-provider-handoff-v2.2.csv`
 - `data/decidim-build-acceptance-tests-v2.2.csv`
 - `data/decidim-build-package-v2.2.json`
+- `data/build-partner-shortlist-v2.3.csv`
+- `data/provider-evaluation-scorecard-v2.3.csv`
+- `data/provider-rfq-question-bank-v2.3.csv`
+- `data/provider-decision-gates-v2.3.csv`
+- `data/build-partner-package-v2.3.json`
 - `data/sandbox-task-board.csv`
 - `data/decision-log-template.csv`
 
@@ -362,6 +411,7 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 - `sandbox-launcher.html` is the public Sandbox Launcher for choosing the fake-data Decidim build path, checking environment readiness, mapping setup outputs, and generating a launch brief.
 - `seed-studio.html` is the public Seed Studio for preparing fake Decidim spaces, component recipes, content records, safety holds, and seed handoff brief.
 - `sandbox-build-pack.html` is the public Sandbox Build Pack for environment checks, provider/self-build handoff, Decidim setup runbook, acceptance tests, and build brief.
+- `build-partner-desk.html` is the public Build Partner Desk for provider shortlist, RFQ pack, evaluation scorecard, decision gates, and partner brief.
 - `docs/github-sprint-launch-report-v1.7.md` records the live GitHub issues, milestone, labels, and Projects blocker.
 - `docs-index.html` is the public reviewer hub.
 - `document.html` renders Markdown, CSV, and JSON files from a whitelisted package catalog.

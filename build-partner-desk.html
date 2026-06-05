@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:,">
+  <title>Build Partner Desk - First Nations Governance Commons</title>
+  <style>
+    :root {
+      --ink: #10201f;
+      --muted: #536663;
+      --line: #d8e0dd;
+      --bg: #f7f9f7;
+      --panel: #ffffff;
+      --teal: #0d766b;
+      --teal-dark: #075f56;
+      --green: #e3f5ec;
+      --green-text: #087349;
+      --amber: #fff4d8;
+      --amber-text: #8a5b00;
+      --red: #ffe6e3;
+      --red-text: #a92b20;
+      --blue: #e8f1ff;
+      --blue-text: #1f5f9f;
+      --shadow: 0 18px 45px rgba(17, 32, 31, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.45;
+    }
+
+    a { color: inherit; }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 24px;
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-right: auto;
+      min-width: 250px;
+    }
+
+    .mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      background: var(--teal);
+      color: #fff;
+      font-weight: 800;
+      border-radius: 7px;
+    }
+
+    .brand strong,
+    .brand span {
+      display: block;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 38px;
+      padding: 9px 14px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--panel);
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 14px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn.primary {
+      background: var(--teal);
+      border-color: var(--teal);
+      color: #fff;
+    }
+
+    .btn:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
+    .btn.primary:hover {
+      background: var(--teal-dark);
+      color: #fff;
+    }
+
+    .label,
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 12px;
+      font-weight: 900;
+      background: var(--amber);
+      color: var(--amber-text);
+    }
+
+    main {
+      width: min(1280px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 34px 0 60px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.15;
+    }
+
+    p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    section {
+      margin-top: 28px;
+    }
+
+    .actions,
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .metrics,
+    .partner-grid,
+    .score-grid,
+    .question-grid,
+    .gate-grid,
+    .resource-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .metrics {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .metric,
+    .panel,
+    .partner-card,
+    .score-card,
+    .question-card,
+    .gate-card,
+    .resource {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      box-shadow: var(--shadow);
+    }
+
+    .metric {
+      min-height: 108px;
+      padding: 20px;
+      display: grid;
+      align-content: space-between;
+    }
+
+    .metric strong {
+      font-size: 32px;
+    }
+
+    .metric span,
+    .score-card span,
+    .question-card span,
+    .gate-card span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 18px;
+      margin-bottom: 14px;
+    }
+
+    .desk-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(380px, 0.95fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .partner-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .partner-card,
+    .score-card,
+    .question-card,
+    .gate-card,
+    .resource {
+      padding: 16px;
+    }
+
+    .partner-card {
+      display: grid;
+      gap: 12px;
+    }
+
+    .partner-card.is-selected {
+      border-color: var(--teal);
+      box-shadow: 0 0 0 2px rgba(13, 118, 107, 0.12), var(--shadow);
+    }
+
+    .card-top,
+    .gate-top,
+    .test-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .pill.ready { background: var(--green); color: var(--green-text); }
+    .pill.hold { background: var(--amber); color: var(--amber-text); }
+    .pill.blocked { background: var(--red); color: var(--red-text); }
+    .pill.info { background: var(--blue); color: var(--blue-text); }
+
+    .kv-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .kv {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 10px;
+      min-height: 76px;
+      display: grid;
+      gap: 5px;
+      align-content: start;
+    }
+
+    .kv strong,
+    label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .score-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .question-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .gate-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .resource-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .resource {
+      display: grid;
+      gap: 6px;
+      text-decoration: none;
+      min-height: 112px;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+      font-weight: 750;
+      margin-top: 8px;
+    }
+
+    .brief,
+    .commands {
+      width: 100%;
+      overflow: auto;
+      white-space: pre-wrap;
+      background: #fffaf2;
+      border: 1px solid #edd7b7;
+      border-radius: 7px;
+      padding: 16px;
+      font-size: 13px;
+      line-height: 1.55;
+      min-height: 220px;
+    }
+
+    .brief {
+      max-height: 520px;
+    }
+
+    .filter.is-active {
+      background: var(--teal);
+      border-color: var(--teal);
+      color: #fff;
+    }
+
+    footer {
+      margin-top: 44px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 980px) {
+      .intro,
+      .desk-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics,
+      .partner-grid,
+      .score-grid,
+      .question-grid,
+      .gate-grid,
+      .resource-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .topbar {
+        position: static;
+        padding: 16px;
+      }
+
+      .brand {
+        min-width: 100%;
+      }
+
+      .topbar .btn,
+      .actions .btn,
+      .filters .btn {
+        width: 100%;
+      }
+
+      main {
+        width: calc(100% - 32px);
+        padding-top: 28px;
+      }
+
+      .metrics,
+      .partner-grid,
+      .score-grid,
+      .question-grid,
+      .gate-grid,
+      .resource-grid,
+      .kv-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">B</div>
+      <div>
+        <strong>Build Partner Desk</strong>
+        <span>First Nations Governance Commons</span>
+      </div>
+    </div>
+    <a class="btn" href="index.html">Public Demo</a>
+    <a class="btn" href="sandbox-launcher.html">Sandbox Launcher</a>
+    <a class="btn" href="seed-studio.html">Seed Studio</a>
+    <a class="btn" href="sandbox-build-pack.html">Build Pack</a>
+    <a class="btn primary" href="build-partner-desk.html">Partner Desk</a>
+    <a class="btn" href="document.html?file=docs%2Fbuild-partner-rfq-pack-v2.3.md">RFQ Pack</a>
+    <div class="label">Fake procurement data only</div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <h1>Build Partner Desk</h1>
+        <p>Turn the v2.2 provider-assisted recommendation into an actionable partner outreach, RFQ, scoring, and no-go gate workflow. This page uses fake/sample provider archetypes only and keeps real procurement, real community authority, and real data outside the public demo.</p>
+      </div>
+      <div class="actions">
+        <a class="btn" href="document.html?file=data%2Fbuild-partner-package-v2.3.json">Partner JSON</a>
+        <button class="btn primary" id="downloadBrief" type="button">Download Brief</button>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Build partner metrics">
+      <article class="metric"><strong id="candidateMetric">0</strong><span>Partner archetypes</span></article>
+      <article class="metric"><strong id="criteriaMetric">0</strong><span>Evaluation criteria</span></article>
+      <article class="metric"><strong id="questionMetric">0</strong><span>RFQ questions</span></article>
+      <article class="metric"><strong id="gateMetric">0</strong><span>Decision gates</span></article>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Partner Shortlist</h2>
+          <p>Select the best-fit archetype and generate a handoff-ready outreach brief.</p>
+        </div>
+        <div class="filters" aria-label="Partner filters">
+          <button class="btn filter is-active" data-filter="All" type="button">All</button>
+          <button class="btn filter" data-filter="Recommended" type="button">Recommended</button>
+          <button class="btn filter" data-filter="Hold" type="button">Hold</button>
+          <button class="btn filter" data-filter="No-go" type="button">No-go</button>
+        </div>
+      </div>
+      <div class="desk-grid">
+        <div class="partner-grid" id="partnerGrid"></div>
+        <aside class="panel" aria-live="polite">
+          <div class="card-top">
+            <div>
+              <h2 id="selectedName"></h2>
+              <p id="selectedSummary"></p>
+            </div>
+            <span class="pill ready" id="selectedStatus"></span>
+          </div>
+          <div class="kv-grid" style="margin-top: 16px;">
+            <div class="kv"><strong>Best use</strong><span id="selectedUse"></span></div>
+            <div class="kv"><strong>Risk</strong><span id="selectedRisk"></span></div>
+            <div class="kv"><strong>Proof</strong><span id="selectedProof"></span></div>
+            <div class="kv"><strong>Score</strong><span id="selectedScore"></span></div>
+          </div>
+          <pre class="commands" id="selectedSequence"></pre>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Evaluation Scorecard</h2>
+          <p>Weights and no-go checks for comparing real provider responses later.</p>
+        </div>
+      </div>
+      <div class="score-grid" id="scoreGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>RFQ Question Bank</h2>
+          <p>Questions to send before any quote is treated as viable.</p>
+        </div>
+        <div class="filters" aria-label="Question filters">
+          <button class="btn question-filter is-active" data-question="All" type="button">All</button>
+          <button class="btn question-filter" data-question="Technical" type="button">Technical</button>
+          <button class="btn question-filter" data-question="Governance/data" type="button">Gov/Data</button>
+          <button class="btn question-filter" data-question="Hosting/ops" type="button">Hosting</button>
+          <button class="btn question-filter" data-question="Handover" type="button">Handover</button>
+        </div>
+      </div>
+      <div class="question-grid" id="questionGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Decision Gates</h2>
+          <p>These gates decide whether the provider path can move from quote to build.</p>
+        </div>
+      </div>
+      <div class="gate-grid" id="gateGrid"></div>
+    </section>
+
+    <section class="panel" style="padding: 18px;">
+      <div class="section-head">
+        <div>
+          <h2>Generated Partner Brief</h2>
+          <p>Use this text for outreach, quote review, or the next GitHub issue.</p>
+        </div>
+      </div>
+      <pre class="brief" id="partnerBrief"></pre>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Partner Desk Resources</h2>
+          <p>Open the files behind the v2.3 provider selection workflow.</p>
+        </div>
+      </div>
+      <div class="resource-grid">
+        <a class="resource" href="document.html?file=docs%2Fbuild-partner-rfq-pack-v2.3.md"><strong>RFQ pack</strong><span>Provider outreach brief, required outputs, response format, and source anchors.</span></a>
+        <a class="resource" href="document.html?file=docs%2Fprovider-evaluation-guide-v2.3.md"><strong>Evaluation guide</strong><span>How to score responses, apply no-go triggers, and choose a safe path.</span></a>
+        <a class="resource" href="document.html?file=data%2Fbuild-partner-shortlist-v2.3.csv"><strong>Shortlist CSV</strong><span>Six fake provider archetypes with fit, risk, status, and required proof.</span></a>
+        <a class="resource" href="document.html?file=data%2Fprovider-evaluation-scorecard-v2.3.csv"><strong>Scorecard CSV</strong><span>Ten weighted criteria with evidence and no-go triggers.</span></a>
+        <a class="resource" href="document.html?file=data%2Fprovider-rfq-question-bank-v2.3.csv"><strong>RFQ questions</strong><span>Eighteen questions across technical, governance, hosting, handover, and commercial themes.</span></a>
+        <a class="resource" href="document.html?file=data%2Fprovider-decision-gates-v2.3.csv"><strong>Decision gates</strong><span>Ten gates for quote-to-build approval.</span></a>
+        <a class="resource" href="document.html?file=data%2Fbuild-partner-package-v2.3.json"><strong>Partner package JSON</strong><span>Machine-readable counts, files, blockers, and safety rule.</span></a>
+        <a class="resource" href="document.html?file=docs%2Fpublic-demo-release-notes-v2.3.md"><strong>Release notes v2.3</strong><span>What changed in the Partner Desk upgrade.</span></a>
+      </div>
+    </section>
+
+    <footer>
+      Version v2.3. Initial developer/custodian: Barayamal / Dean Foley. Fake/sample partner selection workflow only.
+    </footer>
+  </main>
+
+  <script>
+    const partners = [
+      {
+        id: "P-001",
+        name: "Decidim specialist provider",
+        status: "Recommended",
+        fit: "Best fit",
+        score: 88,
+        use: "First fake-data sandbox build where Decidim-specific setup, version pins, and admin handover matter most.",
+        risk: "Higher cash cost, but lower delivery risk.",
+        proof: "Live Decidim examples, version plan, hosting plan, admin handover plan, acceptance evidence, and AGPL/source-code note.",
+        summary: "Strongest near-term path for a safe fake-data Decidim sandbox.",
+        sequence: [
+          "1. Send v2.3 RFQ pack and v2.2 Build Pack.",
+          "2. Ask for Decidim version, host, timeline, support, and handover evidence.",
+          "3. Score response against all 10 criteria.",
+          "4. Do not proceed unless no-go gates are clear."
+        ]
+      },
+      {
+        id: "P-002",
+        name: "Ruby on Rails civic tech studio",
+        status: "Recommended",
+        fit: "Good fit",
+        score: 78,
+        use: "Useful if the team has strong Rails, PostgreSQL, hosting, accessibility, and support skills.",
+        risk: "May underestimate Decidim configuration, admin workflows, or AGPL obligations.",
+        proof: "Rails/Ruby production references, Decidim learning plan, deployment plan, QA approach, and handover evidence.",
+        summary: "Good candidate if Decidim-specific experience is proven or quickly staffed.",
+        sequence: [
+          "1. Ask for Decidim-specific capability, not only Rails capability.",
+          "2. Require a first-week prototype and version pin.",
+          "3. Require admin handover and support plan.",
+          "4. Hold if Decidim setup is vague."
+        ]
+      },
+      {
+        id: "P-003",
+        name: "Partner-hosted civic organisation",
+        status: "Hold",
+        fit: "Conditional",
+        score: 70,
+        use: "Useful where a trusted partner can host and support the fake-data sandbox under clear Barayamal oversight.",
+        risk: "Control, admin access, backups, data authority, and handover can become unclear.",
+        proof: "Partner role note, admin ownership, backup owner, support owner, export path, and assurance sign-off.",
+        summary: "Possible, but governance and control boundaries need extra proof.",
+        sequence: [
+          "1. Confirm Barayamal remains initial developer/custodian.",
+          "2. Confirm admin owner, backup owner, and export rights.",
+          "3. Record support and incident process.",
+          "4. Run Assurance Room before public handover."
+        ]
+      },
+      {
+        id: "P-004",
+        name: "Cloud DevOps plus Rails contractor",
+        status: "Hold",
+        fit: "Technical support",
+        score: 64,
+        use: "Useful for infrastructure setup if a Decidim/Rails lead separately owns application configuration.",
+        risk: "May solve hosting while leaving Decidim admin setup, participation design, and handover weak.",
+        proof: "Infrastructure diagram, backup plan, monitoring note, access plan, and named Decidim app owner.",
+        summary: "Useful as a supporting role, not as sole delivery owner.",
+        sequence: [
+          "1. Separate infrastructure tasks from Decidim configuration tasks.",
+          "2. Require named Decidim application owner.",
+          "3. Require backup, monitoring, and SSL notes.",
+          "4. Pair with Decidim-capable builder."
+        ]
+      },
+      {
+        id: "P-005",
+        name: "Barayamal self-build coach",
+        status: "Hold",
+        fit: "Capability build",
+        score: 66,
+        use: "Useful if the priority is helping Barayamal learn and own the long-term self-build path.",
+        risk: "Slower first sandbox and still blocked until the runtime prerequisites are installed.",
+        proof: "Pairing plan, environment setup plan, docs, handover, and fallback provider path.",
+        summary: "Good learning path, but not the fastest safe sandbox path.",
+        sequence: [
+          "1. Use only if self-build capability is the goal.",
+          "2. Resolve Ruby, PostgreSQL, image tools, Node/npm, and browser test tooling.",
+          "3. Document every setup command.",
+          "4. Keep provider-assisted fallback open."
+        ]
+      },
+      {
+        id: "P-006",
+        name: "Static-only web contractor",
+        status: "No-go",
+        fit: "Poor fit",
+        score: 35,
+        use: "Not suitable for building a real Decidim sandbox.",
+        risk: "Could produce another static mockup instead of a Decidim app with admin, database, components, jobs, and handover.",
+        proof: "Would need Decidim capability before reconsideration.",
+        summary: "Do not use for the Decidim sandbox build.",
+        sequence: [
+          "1. Use static-only work only for public demo polish.",
+          "2. Do not accept as Decidim sandbox delivery.",
+          "3. Ask for Decidim app proof before any reconsideration."
+        ]
+      }
+    ];
+
+    const criteria = [
+      { id: "C-001", name: "Decidim-specific capability", weight: 18, proof: "Version plan, Decidim examples, admin setup evidence", noGo: "Cannot show Decidim app knowledge" },
+      { id: "C-002", name: "Ruby/Rails/PostgreSQL production skill", weight: 12, proof: "Production references and support path", noGo: "No Rails or PostgreSQL owner" },
+      { id: "C-003", name: "Hosting and deployment plan", weight: 10, proof: "Domain, SSL, SMTP, jobs, storage, backups", noGo: "No backup or access plan" },
+      { id: "C-004", name: "Fake-data boundary and privacy", weight: 12, proof: "No real records, privacy note, sample-only QA", noGo: "Requests real community data for demo" },
+      { id: "C-005", name: "First Nations governance fit", weight: 12, proof: "Decision rights and authority boundaries respected", noGo: "Claims community authority without approval" },
+      { id: "C-006", name: "Admin handover and training", weight: 10, proof: "Training plan, admin guide, backup admin", noGo: "No handover evidence" },
+      { id: "C-007", name: "Acceptance testing", weight: 9, proof: "Desktop/mobile/admin screenshots and test results", noGo: "No QA evidence" },
+      { id: "C-008", name: "Open-source/AGPL compliance", weight: 7, proof: "Source-code publication path", noGo: "Refuses AGPL obligations" },
+      { id: "C-009", name: "Cost and timeline clarity", weight: 5, proof: "Fixed scope, milestones, assumptions", noGo: "Unbounded quote" },
+      { id: "C-010", name: "Support continuity", weight: 5, proof: "Support window, escalation, incident owner", noGo: "No support owner" }
+    ];
+
+    const questions = [
+      { id: "Q-001", theme: "Technical", text: "Which Decidim version will you use and why?", evidence: "Version pin and compatibility note" },
+      { id: "Q-002", theme: "Technical", text: "How will you create and configure the Decidim app?", evidence: "App setup plan and repository path" },
+      { id: "Q-003", theme: "Technical", text: "Who owns Ruby, PostgreSQL, Node/npm, ImageMagick, LibVips, and test tooling?", evidence: "Named technical owner" },
+      { id: "Q-004", theme: "Technical", text: "How will the fake seed package become spaces, components, and records?", evidence: "Seed method and screenshots" },
+      { id: "Q-005", theme: "Governance/data", text: "How will you keep real community data out of the sandbox?", evidence: "Fake-data boundary procedure" },
+      { id: "Q-006", theme: "Governance/data", text: "How will Barayamal authority and community authority boundaries be shown?", evidence: "Public language and governance note" },
+      { id: "Q-007", theme: "Governance/data", text: "What privacy and data sovereignty assumptions are you making?", evidence: "Assumptions and exclusions list" },
+      { id: "Q-008", theme: "Governance/data", text: "What content or participation data is explicitly out of scope?", evidence: "No-go data list" },
+      { id: "Q-009", theme: "Hosting/ops", text: "Where will the fake-data sandbox be hosted?", evidence: "Host, region, domain, SSL, and access plan" },
+      { id: "Q-010", theme: "Hosting/ops", text: "How will mail, jobs, storage, backups, and logs work?", evidence: "Operations note" },
+      { id: "Q-011", theme: "Hosting/ops", text: "How will staging/preproduction be separated from any real environment later?", evidence: "Environment separation plan" },
+      { id: "Q-012", theme: "Hosting/ops", text: "Who responds if the sandbox fails or leaks unsafe content?", evidence: "Incident and support owner" },
+      { id: "Q-013", theme: "Handover", text: "What admin training will Barayamal receive?", evidence: "Training plan and admin guide" },
+      { id: "Q-014", theme: "Handover", text: "What screenshots and acceptance evidence will be delivered?", evidence: "Evidence checklist" },
+      { id: "Q-015", theme: "Handover", text: "What source code and deployment notes will be handed over?", evidence: "Repository and deployment README" },
+      { id: "Q-016", theme: "Handover", text: "What happens after the first 30 days?", evidence: "Support and continuity plan" },
+      { id: "Q-017", theme: "Commercial", text: "What is fixed price, optional, excluded, and assumed?", evidence: "Quote assumptions" },
+      { id: "Q-018", theme: "Commercial", text: "What would trigger a stop, rescope, or no-go?", evidence: "Commercial stop conditions" }
+    ];
+
+    const gates = [
+      { id: "G-001", title: "Fake-data boundary accepted", status: "Required", owner: "Barayamal", evidence: "Provider confirms no real records required" },
+      { id: "G-002", title: "Decidim version and host named", status: "Open", owner: "Provider", evidence: "Version and hosting note" },
+      { id: "G-003", title: "Admin ownership clear", status: "Open", owner: "Barayamal", evidence: "Primary and backup admin recorded privately" },
+      { id: "G-004", title: "AGPL/source-code path clear", status: "Open", owner: "Provider", evidence: "Repository or source publication note" },
+      { id: "G-005", title: "Backups and support owner clear", status: "Open", owner: "Provider", evidence: "Backup and support plan" },
+      { id: "G-006", title: "Acceptance evidence agreed", status: "Open", owner: "QA reviewer", evidence: "v2.2 tests accepted" },
+      { id: "G-007", title: "Real pilot claims blocked", status: "Required", owner: "Assurance reviewer", evidence: "Public boundary text" },
+      { id: "G-008", title: "Privacy/data sovereignty assumptions written", status: "Open", owner: "Governance reviewer", evidence: "Assumptions note" },
+      { id: "G-009", title: "Training and handover included", status: "Open", owner: "Provider", evidence: "Training agenda and handover pack" },
+      { id: "G-010", title: "Quote has fixed scope and exclusions", status: "Open", owner: "Barayamal", evidence: "Signed scope or quote review" }
+    ];
+
+    let activePartner = "P-001";
+    let activeFilter = "All";
+    let activeQuestion = "All";
+
+    function tone(status) {
+      if (status === "Recommended" || status === "Required" || status === "Clear") return "ready";
+      if (status === "No-go" || status === "Blocked") return "blocked";
+      if (status === "Open") return "info";
+      return "hold";
+    }
+
+    function renderPartners() {
+      const selected = activeFilter === "All" ? partners : partners.filter(item => item.status === activeFilter);
+      document.getElementById("partnerGrid").innerHTML = selected.map(partner => `
+        <article class="partner-card ${partner.id === activePartner ? "is-selected" : ""}">
+          <div class="card-top">
+            <h3>${partner.name}</h3>
+            <span class="pill ${tone(partner.status)}">${partner.status}</span>
+          </div>
+          <p>${partner.summary}</p>
+          <div class="kv"><strong>Fit</strong><span>${partner.fit}</span></div>
+          <div class="kv"><strong>Proof</strong><span>${partner.proof}</span></div>
+          <button class="btn ${partner.id === activePartner ? "primary" : ""}" data-partner="${partner.id}" type="button">Select Partner</button>
+        </article>
+      `).join("");
+      document.querySelectorAll("[data-partner]").forEach(button => {
+        button.addEventListener("click", () => {
+          activePartner = button.dataset.partner;
+          renderAll();
+        });
+      });
+    }
+
+    function renderSelectedPartner() {
+      const partner = partners.find(item => item.id === activePartner);
+      document.getElementById("selectedName").textContent = partner.name;
+      document.getElementById("selectedSummary").textContent = partner.summary;
+      document.getElementById("selectedStatus").textContent = partner.status;
+      document.getElementById("selectedStatus").className = `pill ${tone(partner.status)}`;
+      document.getElementById("selectedUse").textContent = partner.use;
+      document.getElementById("selectedRisk").textContent = partner.risk;
+      document.getElementById("selectedProof").textContent = partner.proof;
+      document.getElementById("selectedScore").textContent = `${partner.score} / 100`;
+      document.getElementById("selectedSequence").textContent = partner.sequence.join("\n");
+    }
+
+    function renderCriteria() {
+      document.getElementById("scoreGrid").innerHTML = criteria.map(item => `
+        <article class="score-card">
+          <div class="card-top">
+            <h3>${item.id}: ${item.name}</h3>
+            <span class="pill info">${item.weight}%</span>
+          </div>
+          <p>${item.proof}</p>
+          <span>No-go: ${item.noGo}</span>
+        </article>
+      `).join("");
+    }
+
+    function renderQuestions() {
+      const selected = activeQuestion === "All" ? questions : questions.filter(item => item.theme === activeQuestion);
+      document.getElementById("questionGrid").innerHTML = selected.map(item => `
+        <article class="question-card">
+          <div class="card-top">
+            <h3>${item.id}</h3>
+            <span class="pill hold">${item.theme}</span>
+          </div>
+          <p>${item.text}</p>
+          <span>Evidence: ${item.evidence}</span>
+        </article>
+      `).join("");
+    }
+
+    function renderGates() {
+      document.getElementById("gateGrid").innerHTML = gates.map((gate, index) => `
+        <article class="gate-card">
+          <div class="gate-top">
+            <div>
+              <h3>${gate.id}: ${gate.title}</h3>
+              <p>${gate.owner}</p>
+            </div>
+            <span class="pill ${tone(gate.status)}">${gate.status}</span>
+          </div>
+          <p><strong>Evidence:</strong> ${gate.evidence}</p>
+          <label>Status
+            <select data-gate="${index}" aria-label="Status for ${gate.title}">
+              ${["Required", "Open", "Clear", "Hold", "Blocked"].map(status => `<option value="${status}" ${status === gate.status ? "selected" : ""}>${status}</option>`).join("")}
+            </select>
+          </label>
+        </article>
+      `).join("");
+      document.querySelectorAll("[data-gate]").forEach(select => {
+        select.addEventListener("change", event => {
+          gates[Number(event.target.dataset.gate)].status = event.target.value;
+          renderAll();
+        });
+      });
+    }
+
+    function updateMetrics() {
+      document.getElementById("candidateMetric").textContent = partners.length;
+      document.getElementById("criteriaMetric").textContent = criteria.length;
+      document.getElementById("questionMetric").textContent = questions.length;
+      document.getElementById("gateMetric").textContent = gates.length;
+    }
+
+    function updateBrief() {
+      const partner = partners.find(item => item.id === activePartner);
+      const gateSummary = gates.reduce((acc, gate) => {
+        acc[gate.status] = (acc[gate.status] || 0) + 1;
+        return acc;
+      }, {});
+      const lines = [
+        "# Build Partner Brief v2.3",
+        "",
+        "Project: First Nations Governance Commons",
+        "Mode: fake-data Decidim sandbox provider selection only",
+        "Initial developer/custodian: Barayamal / Dean Foley",
+        "",
+        "## Selected Partner Archetype",
+        `- Partner type: ${partner.name}`,
+        `- Status: ${partner.status}`,
+        `- Score: ${partner.score} / 100`,
+        `- Best use: ${partner.use}`,
+        `- Risk: ${partner.risk}`,
+        `- Required proof: ${partner.proof}`,
+        "",
+        "## Outreach Sequence",
+        ...partner.sequence.map(item => `- ${item}`),
+        "",
+        "## Decision Gate Status",
+        ...Object.keys(gateSummary).sort().map(status => `- ${status}: ${gateSummary[status]}`),
+        ...gates.map(gate => `- ${gate.id}: ${gate.title} - ${gate.status}. Evidence: ${gate.evidence}`),
+        "",
+        "## RFQ Must Include",
+        "- Decidim version, host, SSL, SMTP, jobs, storage, backups, and support owner.",
+        "- Fake-data boundary and no real community records.",
+        "- Admin handover, training, acceptance screenshots, source-code/AGPL path, and support period.",
+        "- Fixed scope, assumptions, exclusions, timeline, and stop conditions.",
+        "",
+        "## Recommended Next Action",
+        "Send the v2.3 RFQ pack to two or three Decidim-capable providers. Do not accept a quote until all required and no-go gates are clear or explicitly held with a written reason."
+      ];
+      document.getElementById("partnerBrief").textContent = lines.join("\n");
+    }
+
+    function downloadBrief() {
+      const blob = new Blob([document.getElementById("partnerBrief").textContent], { type: "text/markdown" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "build-partner-brief-v2.3.md";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    function renderAll() {
+      renderPartners();
+      renderSelectedPartner();
+      renderCriteria();
+      renderQuestions();
+      renderGates();
+      updateMetrics();
+      updateBrief();
+    }
+
+    document.querySelectorAll("[data-filter]").forEach(button => {
+      button.addEventListener("click", () => {
+        activeFilter = button.dataset.filter;
+        document.querySelectorAll("[data-filter]").forEach(item => item.classList.remove("is-active"));
+        button.classList.add("is-active");
+        renderPartners();
+      });
+    });
+
+    document.querySelectorAll("[data-question]").forEach(button => {
+      button.addEventListener("click", () => {
+        activeQuestion = button.dataset.question;
+        document.querySelectorAll("[data-question]").forEach(item => item.classList.remove("is-active"));
+        button.classList.add("is-active");
+        renderQuestions();
+      });
+    });
+
+    document.getElementById("downloadBrief").addEventListener("click", downloadBrief);
+    renderAll();
+  </script>
+</body>
+</html>

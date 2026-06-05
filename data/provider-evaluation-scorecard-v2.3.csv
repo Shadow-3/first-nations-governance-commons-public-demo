@@ -1,0 +1,11 @@
+criterion_id,criterion,weight_percent,required_evidence,no_go_trigger
+C-001,Decidim-specific capability,18,Version plan; Decidim examples; admin setup evidence,Cannot show Decidim app knowledge
+C-002,Ruby Rails PostgreSQL production skill,12,Production references and support path,No Rails or PostgreSQL owner
+C-003,Hosting and deployment plan,10,Domain; SSL; SMTP; jobs; storage; backups,No backup or access plan
+C-004,Fake-data boundary and privacy,12,No real records; privacy note; sample-only QA,Requests real community data for demo
+C-005,First Nations governance fit,12,Decision rights and authority boundaries respected,Claims community authority without approval
+C-006,Admin handover and training,10,Training plan; admin guide; backup admin,No handover evidence
+C-007,Acceptance testing,9,Desktop mobile admin screenshots and test results,No QA evidence
+C-008,Open-source AGPL compliance,7,Source-code publication path,Refuses AGPL obligations
+C-009,Cost and timeline clarity,5,Fixed scope milestones assumptions,Unbounded quote
+C-010,Support continuity,5,Support window escalation incident owner,No support owner

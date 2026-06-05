@@ -308,6 +308,7 @@
     <a class="btn primary" href="sandbox-launcher.html">Sandbox Launcher</a>
     <a class="btn primary" href="seed-studio.html">Seed Studio</a>
     <a class="btn primary" href="sandbox-build-pack.html">Build Pack</a>
+    <a class="btn primary" href="build-partner-desk.html">Partner Desk</a>
     <a class="btn" href="index.html">Open Demo</a>
     <div class="label">Public demo - fake data only</div>
   </header>
@@ -365,6 +366,10 @@
       <a href="#buildpack">
         <strong>Build Pack</strong>
         <span>Use environment checks, runbook, provider handoff, and acceptance tests.</span>
+      </a>
+      <a href="#partnerdesk">
+        <strong>Partner Desk</strong>
+        <span>Send the RFQ pack, compare providers, score responses, and apply no-go gates.</span>
       </a>
       <a href="#governance">
         <strong>Governance/Data</strong>
@@ -459,6 +464,13 @@
         </div>
         <div class="doc-row">
           <div>
+            <strong>Build Partner Desk</strong>
+            <span>Provider shortlist, RFQ pack, weighted scorecard, no-go gates, and generated partner brief.</span>
+          </div>
+          <a class="btn primary" href="build-partner-desk.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
             <strong>Public demo prototype</strong>
             <span>Sample Decidim-style participatory process.</span>
           </div>
@@ -488,9 +500,9 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v2.2 Decidim Sandbox Build Pack upgrade.</span>
+            <span>What changed in the v2.3 Build Partner Desk upgrade.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v2.2.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v2.3.md">Open</a>
         </div>
       </div>
     </section>
@@ -627,6 +639,27 @@
         <div class="doc-row"><div><strong>Build acceptance tests</strong><span>Fourteen acceptance tests across boot, safety, spaces, components, mobile, admin, operations, evidence, and assurance.</span></div><a class="btn" href="data/decidim-build-acceptance-tests-v2.2.csv">Open</a></div>
         <div class="doc-row"><div><strong>Build package JSON</strong><span>Machine-readable v2.2 build package summary, blockers, counts, files, sources, and safety rule.</span></div><a class="btn" href="data/decidim-build-package-v2.2.json">Open</a></div>
         <div class="doc-row"><div><strong>Release notes v2.2</strong><span>What changed in the Build Pack upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v2.2.md">Open</a></div>
+        <div class="doc-row"><div><strong>Build Partner Desk</strong><span>Move from build handoff to provider outreach, RFQ scoring, no-go gates, and quote review.</span></div><a class="btn primary" href="build-partner-desk.html">Open</a></div>
+      </div>
+    </section>
+
+    <section id="partnerdesk">
+      <div class="section-head">
+        <div>
+          <h2>Partner Desk</h2>
+          <p>Use these files to send a provider RFQ, compare responses, score quotes, and decide whether the provider-assisted path can move to build.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Build Partner Desk</strong><span>Interactive provider shortlist, scorecard, RFQ question bank, decision gates, and generated partner brief.</span></div><a class="btn primary" href="build-partner-desk.html">Open</a></div>
+        <div class="doc-row"><div><strong>RFQ pack</strong><span>Provider outreach brief, required quote format, no-go triggers, and source anchors.</span></div><a class="btn" href="docs/build-partner-rfq-pack-v2.3.md">Open</a></div>
+        <div class="doc-row"><div><strong>Evaluation guide</strong><span>How to score provider responses, read weak signals, and apply the decision rule.</span></div><a class="btn" href="docs/provider-evaluation-guide-v2.3.md">Open</a></div>
+        <div class="doc-row"><div><strong>Shortlist CSV</strong><span>Six fake provider archetypes with fit, score, risk, proof, and next action.</span></div><a class="btn" href="data/build-partner-shortlist-v2.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Scorecard CSV</strong><span>Ten weighted criteria with required evidence and no-go triggers.</span></div><a class="btn" href="data/provider-evaluation-scorecard-v2.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>RFQ question bank</strong><span>Eighteen provider questions across technical, governance/data, hosting, handover, and commercial themes.</span></div><a class="btn" href="data/provider-rfq-question-bank-v2.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Decision gates CSV</strong><span>Ten quote-to-build gates with owner, evidence, and stop condition.</span></div><a class="btn" href="data/provider-decision-gates-v2.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Partner package JSON</strong><span>Machine-readable v2.3 partner package summary, counts, files, sources, and safety rule.</span></div><a class="btn" href="data/build-partner-package-v2.3.json">Open</a></div>
+        <div class="doc-row"><div><strong>Release notes v2.3</strong><span>What changed in the Partner Desk upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v2.3.md">Open</a></div>
       </div>
     </section>
 
@@ -744,7 +777,7 @@
     </section>
 
     <footer>
-      Version v2.2. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v2.3. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
   <script>

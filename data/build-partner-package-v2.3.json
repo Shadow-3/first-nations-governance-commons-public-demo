@@ -1,0 +1,35 @@
+{
+  "package": "Build Partner Desk",
+  "version": "2.3",
+  "date": "2026-06-05",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "mode": "fake_data_decidim_sandbox_provider_selection_only",
+  "recommendation": "Send the v2.3 RFQ pack to two or three Decidim-capable providers and score responses before any build spend.",
+  "counts": {
+    "partnerArchetypes": 6,
+    "recommendedArchetypes": 2,
+    "holdArchetypes": 3,
+    "noGoArchetypes": 1,
+    "evaluationCriteria": 10,
+    "rfqQuestions": 18,
+    "decisionGates": 10,
+    "requiredDecisionGates": 2
+  },
+  "files": {
+    "entrypoint": "build-partner-desk.html",
+    "rfqPack": "docs/build-partner-rfq-pack-v2.3.md",
+    "evaluationGuide": "docs/provider-evaluation-guide-v2.3.md",
+    "shortlist": "data/build-partner-shortlist-v2.3.csv",
+    "scorecard": "data/provider-evaluation-scorecard-v2.3.csv",
+    "questionBank": "data/provider-rfq-question-bank-v2.3.csv",
+    "decisionGates": "data/provider-decision-gates-v2.3.csv"
+  },
+  "sourceAnchors": [
+    "https://docs.decidim.org/en/develop/install/manual.html",
+    "https://docs.decidim.org/en/develop/install/checklist.html",
+    "https://docs.decidim.org/en/develop/develop/deploy.html",
+    "https://docs.decidim.org/en/develop/admin/first_steps.html",
+    "https://github.com/decidim/decidim"
+  ],
+  "safetyRule": "No real provider endorsements, real procurement decisions, community records, member lists, cultural material, eligibility data, voting data, youth records, personal service cases, private contact records, or real decision outcomes are included."
+}
