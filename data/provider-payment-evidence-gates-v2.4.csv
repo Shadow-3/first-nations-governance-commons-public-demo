@@ -1,0 +1,11 @@
+id,gate,status,owner,evidence,release_rule,stop_condition
+G-001,Fake-data clause accepted,Required,Barayamal,"Contract states no real records, member lists, cultural material, eligibility data, voting data, youth records, or service cases",No payment before clear,Provider requests real data
+G-002,Source-code and AGPL path clear,Open,Provider,"Provider explains source access, repository ownership, AGPL obligations, and handover rights",Hold mobilisation if unclear,Provider refuses source or AGPL clarity
+G-003,Decidim version named,Open,Provider,"Version pin, install path, host plan, and known dependency notes",No setup tranche until named,Version or host path is missing
+G-004,Repository controlled,Open,Barayamal,"Barayamal or approved custodian has admin access and backup owner is named",Hold setup tranche if provider-only,Provider controls the only repository/admin access
+G-005,Environment boots,Hold,Provider,"Decidim boot evidence, admin login evidence, environment variables, and first deploy notes",Release setup tranche only after clear,Environment cannot boot
+G-006,Fake seed approved,Hold,Joint,Seed package mapped to spaces/components and safety holds cleared,Hold configuration tranche until clear,Fake seed requests real community data
+G-007,Critical acceptance tests pass,Hold,Joint,"Boot, admin, spaces, components, mobile, safety, exports, and backup tests logged",Hold final tranche until clear,Critical tests fail without remediation plan
+G-008,Admin handover complete,Hold,Provider,"Training notes, admin checklist, support runbook, and access transfer evidence",Hold final tranche until clear,Handover or admin access is missing
+G-009,Real-pilot approvals separate,Required,Community Authority,"Decision note states real pilot requires separate authority, privacy, data, cultural safety, hosting, and support approvals",No real-data work under fake sandbox contract,Fake sandbox is treated as real authority
+G-010,No static mockup substitution,Required,Barayamal,"Provider confirms final deliverable is a Decidim sandbox or documented Decidim build artifact, not only static HTML",Stop if substituted,Static prototype is substituted for Decidim

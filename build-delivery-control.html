@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>Build Delivery Control - First Nations Governance Commons</title>
+  <style>
+    :root {
+      --bg: #f6f7f5;
+      --panel: #ffffff;
+      --ink: #10211f;
+      --muted: #546865;
+      --line: #ccd8d5;
+      --teal: #0f7f70;
+      --teal-dark: #0a5d53;
+      --mint: #dff3ea;
+      --gold: #f5c451;
+      --amber: #fff3cf;
+      --red: #b94033;
+      --red-soft: #f8dfda;
+      --blue: #245f9d;
+      --blue-soft: #e2edf8;
+      --shadow: 0 18px 45px rgba(13, 42, 36, 0.12);
+      --radius: 8px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        linear-gradient(140deg, rgba(15, 127, 112, 0.08), transparent 28rem),
+        linear-gradient(320deg, rgba(36, 95, 157, 0.08), transparent 32rem),
+        var(--bg);
+      color: var(--ink);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 16px 24px;
+      background: rgba(255, 255, 255, 0.88);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 260px;
+    }
+
+    .mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: var(--teal);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+    }
+
+    .brand strong,
+    .brand span {
+      display: block;
+      line-height: 1.2;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn,
+    button,
+    select {
+      min-height: 40px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+      font-weight: 800;
+      padding: 0 16px;
+    }
+
+    button,
+    select {
+      cursor: pointer;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .btn.primary,
+    button.primary {
+      background: var(--teal);
+      border-color: var(--teal);
+      color: #fff;
+    }
+
+    .btn:hover,
+    button:hover,
+    select:hover {
+      border-color: var(--teal);
+    }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      border-radius: 999px;
+      background: var(--amber);
+      color: #7b5200;
+      padding: 0 14px;
+      font-weight: 900;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    main {
+      width: min(1280px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 64px 0 44px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(34px, 6vw, 64px);
+      line-height: 0.96;
+      letter-spacing: 0;
+    }
+
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .hero p {
+      max-width: 920px;
+      font-size: 17px;
+      margin-bottom: 0;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 26px 0 34px;
+    }
+
+    .metric {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 34px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    section {
+      margin-top: 36px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .section-head h2 {
+      font-size: 26px;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .section-head p {
+      margin-bottom: 0;
+    }
+
+    .segmented,
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .segmented button {
+      min-width: 86px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .milestone-card,
+    .deliverable-card,
+    .gate-card,
+    .raci-card,
+    .resource {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: 0 8px 28px rgba(13, 42, 36, 0.08);
+    }
+
+    .milestone-card {
+      display: grid;
+      gap: 12px;
+    }
+
+    .milestone-card.active {
+      border-color: var(--teal);
+      box-shadow: 0 0 0 1px var(--teal), var(--shadow);
+    }
+
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .card-head h3 {
+      margin-bottom: 0;
+      font-size: 20px;
+      line-height: 1.1;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      border-radius: 999px;
+      padding: 0 12px;
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .badge.ready {
+      background: var(--mint);
+      color: #08735f;
+    }
+
+    .badge.hold {
+      background: var(--amber);
+      color: #815600;
+    }
+
+    .badge.blocked {
+      background: var(--red-soft);
+      color: var(--red);
+    }
+
+    .badge.open {
+      background: var(--blue-soft);
+      color: var(--blue);
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .detail {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .detail small {
+      display: block;
+      color: var(--muted);
+      text-transform: uppercase;
+      font-weight: 900;
+      margin-bottom: 6px;
+      font-size: 11px;
+    }
+
+    .detail span {
+      display: block;
+      line-height: 1.45;
+    }
+
+    .control-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .selected-panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 96px;
+    }
+
+    .selected-panel h2 {
+      margin-bottom: 10px;
+    }
+
+    .brief {
+      background: #fffaf1;
+      border: 1px solid #e9ca8b;
+      border-radius: var(--radius);
+      padding: 14px;
+      white-space: pre-wrap;
+      overflow-x: auto;
+      font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    }
+
+    .deliverable-grid,
+    .gate-grid,
+    .raci-grid,
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .deliverable-card h3,
+    .gate-card h3,
+    .raci-card h3 {
+      margin-bottom: 8px;
+      font-size: 18px;
+      line-height: 1.15;
+    }
+
+    .gate-card {
+      display: grid;
+      gap: 12px;
+    }
+
+    .gate-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .resource {
+      display: grid;
+      gap: 6px;
+    }
+
+    .resource strong {
+      color: var(--teal-dark);
+    }
+
+    .resource span {
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    footer {
+      margin-top: 44px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+
+    @media (max-width: 980px) {
+      .topbar,
+      .hero,
+      .section-head,
+      .control-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar,
+      .hero,
+      .section-head {
+        align-items: stretch;
+      }
+
+      .nav,
+      .actions {
+        justify-content: stretch;
+      }
+
+      .nav .btn,
+      .actions .btn,
+      .actions button,
+      .segmented button,
+      .toolbar select {
+        flex: 1 1 160px;
+      }
+
+      .brand {
+        min-width: 0;
+      }
+
+      .grid,
+      .metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .selected-panel {
+        position: static;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .topbar {
+        position: static;
+        padding: 16px;
+      }
+
+      main {
+        width: calc(100% - 32px);
+        padding-top: 56px;
+      }
+
+      .nav {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .metrics,
+      .grid,
+      .detail-grid,
+      .deliverable-grid,
+      .gate-grid,
+      .raci-grid,
+      .resource-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gate-row {
+        grid-template-columns: 1fr;
+      }
+
+      .btn,
+      button,
+      select {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="mark">B</span>
+      <span>
+        <strong>Build Delivery Control</strong>
+        <span>First Nations Governance Commons</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a class="btn" href="index.html">Public Demo</a>
+      <a class="btn" href="sandbox-launcher.html">Sandbox Launcher</a>
+      <a class="btn" href="seed-studio.html">Seed Studio</a>
+      <a class="btn" href="sandbox-build-pack.html">Build Pack</a>
+      <a class="btn" href="build-partner-desk.html">Partner Desk</a>
+      <a class="btn primary" href="build-delivery-control.html">Delivery Control</a>
+      <a class="btn" href="document.html?file=docs%2Fbuild-delivery-control-playbook-v2.4.md">Contract Pack</a>
+      <div class="label">Fake contract data only</div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1>Build Delivery Control</h1>
+        <p>Turn a shortlisted provider into a controlled fake-data Decidim delivery: milestones, evidence, payment gates, RACI, no-go triggers, and a handoff-ready delivery brief. This page uses sample contract data only and does not approve real spend, real authority, or real community records.</p>
+      </div>
+      <div class="actions">
+        <a class="btn" href="document.html?file=data%2Fbuild-delivery-package-v2.4.json">Delivery JSON</a>
+        <button class="primary" type="button" onclick="downloadBrief()">Download Brief</button>
+      </div>
+    </div>
+
+    <div class="metrics" aria-label="Delivery metrics">
+      <div class="metric"><strong id="milestoneMetric">0</strong><span>Milestones</span></div>
+      <div class="metric"><strong id="deliverableMetric">0</strong><span>Deliverables</span></div>
+      <div class="metric"><strong id="gateMetric">0</strong><span>Evidence gates</span></div>
+      <div class="metric"><strong id="roleMetric">0</strong><span>RACI roles</span></div>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Milestone Control</h2>
+          <p>Select a delivery milestone and see its entry conditions, exit evidence, payment rule, and no-go condition.</p>
+        </div>
+        <div class="segmented" aria-label="Milestone status filters">
+          <button class="primary" type="button" data-status-filter="All">All</button>
+          <button type="button" data-status-filter="Ready">Ready</button>
+          <button type="button" data-status-filter="Hold">Hold</button>
+          <button type="button" data-status-filter="Blocked">Blocked</button>
+        </div>
+      </div>
+
+      <div class="control-layout">
+        <div class="grid" id="milestoneGrid"></div>
+        <aside class="selected-panel" aria-live="polite">
+          <div class="card-head">
+            <h2 id="selectedMilestoneName">Milestone</h2>
+            <span class="badge open" id="selectedMilestoneStatus">Open</span>
+          </div>
+          <p id="selectedMilestoneSummary"></p>
+          <div class="detail-grid">
+            <div class="detail"><small>Entry condition</small><span id="selectedEntry"></span></div>
+            <div class="detail"><small>Exit evidence</small><span id="selectedExit"></span></div>
+            <div class="detail"><small>Payment rule</small><span id="selectedPayment"></span></div>
+            <div class="detail"><small>No-go rule</small><span id="selectedNoGo"></span></div>
+          </div>
+          <h3>Generated Delivery Brief</h3>
+          <pre class="brief" id="deliveryBrief"></pre>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Deliverable Map</h2>
+          <p>Filter sample deliverables by milestone and owner before sharing the build scope.</p>
+        </div>
+        <div class="toolbar">
+          <select id="milestoneSelect" aria-label="Filter deliverables by milestone"></select>
+          <select id="ownerSelect" aria-label="Filter deliverables by owner"></select>
+        </div>
+      </div>
+      <div class="deliverable-grid" id="deliverableGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Payment And Evidence Gates</h2>
+          <p>Keep sample payment release tied to proof, not promises. Any blocked no-go gate keeps the fake-data build on hold.</p>
+        </div>
+      </div>
+      <div class="gate-grid" id="gateGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>RACI Snapshot</h2>
+          <p>Clarify who is responsible, accountable, consulted, and informed before provider work starts.</p>
+        </div>
+      </div>
+      <div class="raci-grid" id="raciGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Delivery Control Resources</h2>
+          <p>Open the files behind the v2.4 contract-to-sandbox workflow.</p>
+        </div>
+      </div>
+      <div class="resource-grid">
+        <a class="resource" href="document.html?file=docs%2Fbuild-delivery-control-playbook-v2.4.md"><strong>Delivery control playbook</strong><span>Milestone rules, evidence sequence, no-go triggers, and source anchors.</span></a>
+        <a class="resource" href="document.html?file=docs%2Fprovider-contract-gates-v2.4.md"><strong>Provider contract gates</strong><span>How to use the evidence and payment gates before build spend is released.</span></a>
+        <a class="resource" href="document.html?file=data%2Fbuild-delivery-milestones-v2.4.csv"><strong>Milestones CSV</strong><span>Five sample milestones with status, evidence, and release rules.</span></a>
+        <a class="resource" href="document.html?file=data%2Fbuild-delivery-deliverables-v2.4.csv"><strong>Deliverables CSV</strong><span>Twelve sample deliverables mapped to milestone, owner, and proof.</span></a>
+        <a class="resource" href="document.html?file=data%2Fprovider-payment-evidence-gates-v2.4.csv"><strong>Payment gates CSV</strong><span>Ten proof-based gate controls and stop conditions.</span></a>
+        <a class="resource" href="document.html?file=data%2Fbuild-delivery-raci-v2.4.csv"><strong>RACI CSV</strong><span>Eight role rows for Barayamal, provider, advisors, and community authority.</span></a>
+        <a class="resource" href="document.html?file=data%2Fbuild-delivery-package-v2.4.json"><strong>Delivery JSON</strong><span>Machine-readable v2.4 delivery package.</span></a>
+        <a class="resource" href="document.html?file=docs%2Fpublic-demo-release-notes-v2.4.md"><strong>Release notes v2.4</strong><span>What changed in the Delivery Control upgrade.</span></a>
+      </div>
+    </section>
+
+    <footer>
+      Version v2.4. Initial developer/custodian: Barayamal / Dean Foley. Fake/sample delivery and contract-control workflow only.
+    </footer>
+  </main>
+
+  <script>
+    const milestones = [
+      {
+        id: "M-001",
+        name: "Contract and safety lock",
+        stage: "Pre-build",
+        status: "Ready",
+        owner: "Barayamal",
+        summary: "Freeze fake-data boundary, scope exclusions, source-code rule, and decision authority before provider work starts.",
+        entry: "Provider selected through v2.3 scorecard and no-go gates clear.",
+        exit: "Signed sample SOW, fake-data rule, AGPL/source-code note, and approval matrix.",
+        payment: "No mobilisation release until fake-data and source-code clauses are accepted.",
+        noGo: "Provider asks for real community records, hidden source ownership, or authority language."
+      },
+      {
+        id: "M-002",
+        name: "Environment and repository setup",
+        stage: "Build setup",
+        status: "Hold",
+        owner: "Provider",
+        summary: "Create the real Decidim app scaffold, repository, environment notes, and deploy pathway using fake data only.",
+        entry: "Contract lock complete and technical owner named.",
+        exit: "Repository path, Decidim version, host plan, environment variables, backup plan, and first boot evidence.",
+        payment: "Release setup tranche only after repository and environment evidence are reviewed.",
+        noGo: "Static mockup is presented as a Decidim sandbox or Decidim version is not named."
+      },
+      {
+        id: "M-003",
+        name: "Fake Decidim configuration",
+        stage: "Configuration",
+        status: "Hold",
+        owner: "Joint",
+        summary: "Configure organisation settings, spaces, components, sample content, moderation, admin roles, and public text.",
+        entry: "Environment boots and fake seed package is approved.",
+        exit: "Configured assembly, process, proposals, meetings, survey, budgets, accountability, and admin handover notes.",
+        payment: "Release configuration tranche only after screenshots, exports, and admin walkthrough are complete.",
+        noGo: "Real member lists, voting eligibility, cultural material, or personal service cases are requested."
+      },
+      {
+        id: "M-004",
+        name: "Acceptance and handover",
+        stage: "QA",
+        status: "Ready",
+        owner: "Joint",
+        summary: "Run acceptance tests, mobile/accessibility checks, safety review, admin training, and support runbook.",
+        entry: "Configured fake-data Decidim sandbox is ready for review.",
+        exit: "Acceptance evidence, issue log, training record, backup/delete drill, support route, and handover pack.",
+        payment: "Hold final tranche until critical acceptance tests and admin handover are complete.",
+        noGo: "Critical acceptance, safety, or admin access evidence is missing."
+      },
+      {
+        id: "M-005",
+        name: "Pilot transition decision",
+        stage: "Decision",
+        status: "Blocked",
+        owner: "Community Authority",
+        summary: "Decide whether to remain a fake-data sandbox, improve the build, or start a separate real-pilot approval process.",
+        entry: "Acceptance and handover evidence reviewed.",
+        exit: "Go/hold/no-go decision memo with community authority, privacy, data sovereignty, hosting, and support conditions.",
+        payment: "No real-pilot spend or data entry until separate approvals exist.",
+        noGo: "Sandbox outputs are used as real community authority or real records are imported without approvals."
+      }
+    ];
+
+    const deliverables = [
+      { id: "D-001", milestone: "M-001", title: "Sample SOW lock", owner: "Barayamal", proof: "SOW lists fake-data scope, exclusions, owners, source-code rule, and acceptance tests." },
+      { id: "D-002", milestone: "M-001", title: "Safety and data boundary clause", owner: "Barayamal", proof: "Provider confirms no real records, member lists, cultural material, or voting data." },
+      { id: "D-003", milestone: "M-002", title: "Decidim app scaffold", owner: "Provider", proof: "Repository, version pin, setup notes, and boot screenshot." },
+      { id: "D-004", milestone: "M-002", title: "Hosting and backup plan", owner: "Provider", proof: "Host choice, backup schedule, restore path, environment notes, and admin access path." },
+      { id: "D-005", milestone: "M-003", title: "Organisation settings", owner: "Provider", proof: "Languages, time zone, admin roles, appearance, and public terms configured with fake text." },
+      { id: "D-006", milestone: "M-003", title: "Spaces and components", owner: "Provider", proof: "Assembly and process configured with proposals, meetings, survey, budgets, accountability, and page component." },
+      { id: "D-007", milestone: "M-003", title: "Fake content seed", owner: "Joint", proof: "Fake seed register imported or manually configured with safety review sign-off." },
+      { id: "D-008", milestone: "M-004", title: "Acceptance test evidence", owner: "Joint", proof: "Critical tests passed or blockers logged with owner and target date." },
+      { id: "D-009", milestone: "M-004", title: "Mobile and accessibility check", owner: "Provider", proof: "Phone viewport, keyboard path, readable text, and contrast notes." },
+      { id: "D-010", milestone: "M-004", title: "Admin handover session", owner: "Provider", proof: "Training agenda, attendee list, recording or notes, and admin checklist." },
+      { id: "D-011", milestone: "M-004", title: "Ops and support runbook", owner: "Provider", proof: "Backup/delete drill, support contact, issue triage, and incident path." },
+      { id: "D-012", milestone: "M-005", title: "Pilot transition decision memo", owner: "Community Authority", proof: "Decision states remain fake, improve, or begin separate real-pilot approvals." }
+    ];
+
+    const gates = [
+      { id: "G-001", title: "Fake-data clause accepted", status: "Required", owner: "Barayamal", evidence: "Contract states no real records, member lists, cultural material, eligibility data, voting data, youth records, or service cases.", release: "No payment before clear." },
+      { id: "G-002", title: "Source-code and AGPL path clear", status: "Open", owner: "Provider", evidence: "Provider explains source access, repository ownership, AGPL obligations, and handover rights.", release: "Hold mobilisation if unclear." },
+      { id: "G-003", title: "Decidim version named", status: "Open", owner: "Provider", evidence: "Version pin, install path, host plan, and known dependency notes.", release: "No setup tranche until named." },
+      { id: "G-004", title: "Repository controlled", status: "Open", owner: "Barayamal", evidence: "Barayamal or approved custodian has admin access and backup owner is named.", release: "Hold setup tranche if provider-only." },
+      { id: "G-005", title: "Environment boots", status: "Hold", owner: "Provider", evidence: "Decidim boot evidence, admin login evidence, environment variables, and first deploy notes.", release: "Release setup tranche only after clear." },
+      { id: "G-006", title: "Fake seed approved", status: "Hold", owner: "Joint", evidence: "Seed package mapped to spaces/components and safety holds cleared.", release: "Hold configuration tranche until clear." },
+      { id: "G-007", title: "Critical acceptance tests pass", status: "Hold", owner: "Joint", evidence: "Boot, admin, spaces, components, mobile, safety, exports, and backup tests logged.", release: "Hold final tranche until clear." },
+      { id: "G-008", title: "Admin handover complete", status: "Hold", owner: "Provider", evidence: "Training notes, admin checklist, support runbook, and access transfer evidence.", release: "Hold final tranche until clear." },
+      { id: "G-009", title: "Real-pilot approvals separate", status: "Required", owner: "Community Authority", evidence: "Decision note states real pilot requires separate authority, privacy, data, cultural safety, hosting, and support approvals.", release: "No real-data work under fake sandbox contract." },
+      { id: "G-010", title: "No static mockup substitution", status: "Required", owner: "Barayamal", evidence: "Provider confirms final deliverable is a Decidim sandbox or documented Decidim build artifact, not only static HTML.", release: "Stop if substituted." }
+    ];
+
+    const raci = [
+      { role: "Barayamal / Dean Foley", responsible: "Custodian, scope owner, repository access", accountable: "Fake-data boundary and provider acceptance", consulted: "Community advisors, technical reviewer", informed: "Reviewers and funders" },
+      { role: "Provider lead", responsible: "Decidim setup, configuration, evidence, handover", accountable: "Technical delivery quality", consulted: "Barayamal, technical reviewer", informed: "Launch and assurance team" },
+      { role: "Community authority group", responsible: "Real-pilot authority decisions only", accountable: "Community legitimacy", consulted: "Before real data or real decisions", informed: "During fake-data demo review" },
+      { role: "Data sovereignty reviewer", responsible: "Data boundary and retention review", accountable: "No real sensitive data in sandbox", consulted: "At contract lock and pilot decision", informed: "During evidence review" },
+      { role: "Privacy/security reviewer", responsible: "Privacy, access, backups, incident path", accountable: "Security baseline advice", consulted: "Before hosting and support sign-off", informed: "During acceptance" },
+      { role: "Admin trainer", responsible: "Admin walkthrough and support materials", accountable: "Handover readiness", consulted: "Provider and Barayamal", informed: "Sandbox administrators" },
+      { role: "Accessibility reviewer", responsible: "Mobile, keyboard, readability, contrast notes", accountable: "Accessibility evidence", consulted: "During acceptance", informed: "Provider and launch team" },
+      { role: "Funder/partner observer", responsible: "No delivery authority unless approved", accountable: "Funding conditions only", consulted: "For quote and milestone evidence", informed: "After decision gates" }
+    ];
+
+    let activeStatus = "All";
+    let activeMilestone = "M-001";
+    let activeDeliverableMilestone = "All";
+    let activeOwner = "All";
+
+    function tone(status) {
+      if (status === "Ready" || status === "Clear" || status === "Required") return "ready";
+      if (status === "Hold") return "hold";
+      if (status === "Blocked" || status === "No-go") return "blocked";
+      return "open";
+    }
+
+    function renderMilestones() {
+      const selected = activeStatus === "All" ? milestones : milestones.filter(item => item.status === activeStatus);
+      document.getElementById("milestoneGrid").innerHTML = selected.map(item => `
+        <article class="milestone-card ${item.id === activeMilestone ? "active" : ""}">
+          <div class="card-head">
+            <h3>${item.name}</h3>
+            <span class="badge ${tone(item.status)}">${item.status}</span>
+          </div>
+          <p>${item.summary}</p>
+          <div class="detail"><small>Stage</small><span>${item.stage}</span></div>
+          <div class="detail"><small>Owner</small><span>${item.owner}</span></div>
+          <button class="${item.id === activeMilestone ? "primary" : ""}" type="button" onclick="selectMilestone('${item.id}')">Select Milestone</button>
+        </article>
+      `).join("");
+    }
+
+    function renderSelectedMilestone() {
+      const item = milestones.find(milestone => milestone.id === activeMilestone);
+      document.getElementById("selectedMilestoneName").textContent = item.name;
+      document.getElementById("selectedMilestoneStatus").textContent = item.status;
+      document.getElementById("selectedMilestoneStatus").className = `badge ${tone(item.status)}`;
+      document.getElementById("selectedMilestoneSummary").textContent = item.summary;
+      document.getElementById("selectedEntry").textContent = item.entry;
+      document.getElementById("selectedExit").textContent = item.exit;
+      document.getElementById("selectedPayment").textContent = item.payment;
+      document.getElementById("selectedNoGo").textContent = item.noGo;
+    }
+
+    function renderDeliverableFilters() {
+      const milestoneOptions = ["All", ...milestones.map(item => item.id)];
+      const ownerOptions = ["All", ...Array.from(new Set(deliverables.map(item => item.owner)))];
+      document.getElementById("milestoneSelect").innerHTML = milestoneOptions.map(value => {
+        const label = value === "All" ? "All milestones" : `${value} - ${milestones.find(item => item.id === value).name}`;
+        return `<option value="${value}" ${value === activeDeliverableMilestone ? "selected" : ""}>${label}</option>`;
+      }).join("");
+      document.getElementById("ownerSelect").innerHTML = ownerOptions.map(value => `<option value="${value}" ${value === activeOwner ? "selected" : ""}>${value === "All" ? "All owners" : value}</option>`).join("");
+    }
+
+    function renderDeliverables() {
+      const selected = deliverables.filter(item => {
+        const milestoneMatch = activeDeliverableMilestone === "All" || item.milestone === activeDeliverableMilestone;
+        const ownerMatch = activeOwner === "All" || item.owner === activeOwner;
+        return milestoneMatch && ownerMatch;
+      });
+      document.getElementById("deliverableGrid").innerHTML = selected.map(item => `
+        <article class="deliverable-card">
+          <div class="card-head">
+            <h3>${item.id}: ${item.title}</h3>
+            <span class="badge open">${item.milestone}</span>
+          </div>
+          <div class="detail-grid">
+            <div class="detail"><small>Owner</small><span>${item.owner}</span></div>
+            <div class="detail"><small>Proof</small><span>${item.proof}</span></div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function renderGates() {
+      document.getElementById("gateGrid").innerHTML = gates.map((gate, index) => `
+        <article class="gate-card">
+          <div class="gate-row">
+            <div>
+              <h3>${gate.id}: ${gate.title}</h3>
+              <p>${gate.evidence}</p>
+            </div>
+            <span class="badge ${tone(gate.status)}">${gate.status}</span>
+          </div>
+          <div class="detail-grid">
+            <div class="detail"><small>Owner</small><span>${gate.owner}</span></div>
+            <div class="detail"><small>Release rule</small><span>${gate.release}</span></div>
+          </div>
+          <select aria-label="Set ${gate.id} status" onchange="updateGateStatus(${index}, this.value)">
+            ${["Required", "Open", "Hold", "Clear", "Blocked", "No-go"].map(value => `<option value="${value}" ${value === gate.status ? "selected" : ""}>${value}</option>`).join("")}
+          </select>
+        </article>
+      `).join("");
+    }
+
+    function renderRaci() {
+      document.getElementById("raciGrid").innerHTML = raci.map(item => `
+        <article class="raci-card">
+          <h3>${item.role}</h3>
+          <div class="detail-grid">
+            <div class="detail"><small>Responsible</small><span>${item.responsible}</span></div>
+            <div class="detail"><small>Accountable</small><span>${item.accountable}</span></div>
+            <div class="detail"><small>Consulted</small><span>${item.consulted}</span></div>
+            <div class="detail"><small>Informed</small><span>${item.informed}</span></div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function updateMetrics() {
+      document.getElementById("milestoneMetric").textContent = milestones.length;
+      document.getElementById("deliverableMetric").textContent = deliverables.length;
+      document.getElementById("gateMetric").textContent = gates.length;
+      document.getElementById("roleMetric").textContent = raci.length;
+    }
+
+    function updateBrief() {
+      const milestone = milestones.find(item => item.id === activeMilestone);
+      const gateSummary = gates.reduce((acc, gate) => {
+        acc[gate.status] = (acc[gate.status] || 0) + 1;
+        return acc;
+      }, {});
+      const blocked = gates.filter(gate => gate.status === "Blocked" || gate.status === "No-go");
+      const holds = gates.filter(gate => gate.status === "Hold" || gate.status === "Open");
+      const decision = blocked.length > 0 ? "No-go for payment or build release" : holds.length > 0 ? "Hold until evidence clears" : "Ready for next sample milestone review";
+      const milestoneDeliverables = deliverables.filter(item => item.milestone === milestone.id);
+
+      document.getElementById("deliveryBrief").textContent = [
+        "# Build Delivery Control Brief",
+        "",
+        "Demo only. Fake/sample contract and delivery data. No real community records, authority, or spend approval.",
+        "",
+        `## Selected milestone: ${milestone.id} - ${milestone.name}`,
+        `- Status: ${milestone.status}`,
+        `- Owner: ${milestone.owner}`,
+        `- Entry condition: ${milestone.entry}`,
+        `- Exit evidence: ${milestone.exit}`,
+        `- Payment rule: ${milestone.payment}`,
+        `- No-go rule: ${milestone.noGo}`,
+        "",
+        "## Deliverables in this milestone",
+        ...milestoneDeliverables.map(item => `- ${item.id}: ${item.title} (${item.owner}) - ${item.proof}`),
+        "",
+        "## Gate summary",
+        ...Object.keys(gateSummary).sort().map(key => `- ${key}: ${gateSummary[key]}`),
+        "",
+        `## Recommendation: ${decision}`,
+        "",
+        "Next action: keep provider work inside the fake-data sandbox contract until evidence gates are clear. Real pilot work needs separate approvals."
+      ].join("\n");
+    }
+
+    function selectMilestone(id) {
+      activeMilestone = id;
+      renderAll();
+    }
+
+    function updateGateStatus(index, status) {
+      gates[index].status = status;
+      renderGates();
+      updateBrief();
+    }
+
+    function downloadBrief() {
+      const blob = new Blob([document.getElementById("deliveryBrief").textContent], { type: "text/markdown" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "build-delivery-control-brief-v2.4.md";
+      link.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function bindControls() {
+      document.querySelectorAll("[data-status-filter]").forEach(button => {
+        button.addEventListener("click", () => {
+          activeStatus = button.dataset.statusFilter;
+          document.querySelectorAll("[data-status-filter]").forEach(item => item.classList.toggle("primary", item.dataset.statusFilter === activeStatus));
+          renderMilestones();
+        });
+      });
+
+      document.getElementById("milestoneSelect").addEventListener("change", event => {
+        activeDeliverableMilestone = event.target.value;
+        renderDeliverables();
+      });
+
+      document.getElementById("ownerSelect").addEventListener("change", event => {
+        activeOwner = event.target.value;
+        renderDeliverables();
+      });
+    }
+
+    function renderAll() {
+      renderMilestones();
+      renderSelectedMilestone();
+      renderDeliverableFilters();
+      renderDeliverables();
+      renderGates();
+      renderRaci();
+      updateMetrics();
+      updateBrief();
+    }
+
+    renderAll();
+    bindControls();
+  </script>
+</body>
+</html>

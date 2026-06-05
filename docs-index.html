@@ -309,6 +309,7 @@
     <a class="btn primary" href="seed-studio.html">Seed Studio</a>
     <a class="btn primary" href="sandbox-build-pack.html">Build Pack</a>
     <a class="btn primary" href="build-partner-desk.html">Partner Desk</a>
+    <a class="btn" href="build-delivery-control.html">Delivery Control</a>
     <a class="btn" href="index.html">Open Demo</a>
     <div class="label">Public demo - fake data only</div>
   </header>
@@ -370,6 +371,10 @@
       <a href="#partnerdesk">
         <strong>Partner Desk</strong>
         <span>Send the RFQ pack, compare providers, score responses, and apply no-go gates.</span>
+      </a>
+      <a href="#deliverycontrol">
+        <strong>Delivery Control</strong>
+        <span>Control provider milestones, evidence, payment gates, RACI, and handover.</span>
       </a>
       <a href="#governance">
         <strong>Governance/Data</strong>
@@ -471,6 +476,13 @@
         </div>
         <div class="doc-row">
           <div>
+            <strong>Build Delivery Control</strong>
+            <span>Milestones, deliverables, evidence gates, payment rules, RACI, and generated delivery brief.</span>
+          </div>
+          <a class="btn primary" href="build-delivery-control.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
             <strong>Public demo prototype</strong>
             <span>Sample Decidim-style participatory process.</span>
           </div>
@@ -500,9 +512,9 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v2.3 Build Partner Desk upgrade.</span>
+            <span>What changed in the v2.4 Build Delivery Control upgrade.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v2.3.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v2.4.md">Open</a>
         </div>
       </div>
     </section>
@@ -640,6 +652,7 @@
         <div class="doc-row"><div><strong>Build package JSON</strong><span>Machine-readable v2.2 build package summary, blockers, counts, files, sources, and safety rule.</span></div><a class="btn" href="data/decidim-build-package-v2.2.json">Open</a></div>
         <div class="doc-row"><div><strong>Release notes v2.2</strong><span>What changed in the Build Pack upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v2.2.md">Open</a></div>
         <div class="doc-row"><div><strong>Build Partner Desk</strong><span>Move from build handoff to provider outreach, RFQ scoring, no-go gates, and quote review.</span></div><a class="btn primary" href="build-partner-desk.html">Open</a></div>
+        <div class="doc-row"><div><strong>Build Delivery Control</strong><span>Move from provider selection to milestone, evidence, payment, RACI, and handover control.</span></div><a class="btn primary" href="build-delivery-control.html">Open</a></div>
       </div>
     </section>
 
@@ -660,6 +673,27 @@
         <div class="doc-row"><div><strong>Decision gates CSV</strong><span>Ten quote-to-build gates with owner, evidence, and stop condition.</span></div><a class="btn" href="data/provider-decision-gates-v2.3.csv">Open</a></div>
         <div class="doc-row"><div><strong>Partner package JSON</strong><span>Machine-readable v2.3 partner package summary, counts, files, sources, and safety rule.</span></div><a class="btn" href="data/build-partner-package-v2.3.json">Open</a></div>
         <div class="doc-row"><div><strong>Release notes v2.3</strong><span>What changed in the Partner Desk upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v2.3.md">Open</a></div>
+        <div class="doc-row"><div><strong>Build Delivery Control</strong><span>Move selected provider work into milestone, evidence, payment, and RACI controls.</span></div><a class="btn primary" href="build-delivery-control.html">Open</a></div>
+      </div>
+    </section>
+
+    <section id="deliverycontrol">
+      <div class="section-head">
+        <div>
+          <h2>Delivery Control</h2>
+          <p>Use these files after provider selection to manage the fake-data Decidim build by milestone, evidence, payment gate, RACI, and handover rule.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Build Delivery Control</strong><span>Interactive milestone control, deliverable map, payment gates, RACI, and generated delivery brief.</span></div><a class="btn primary" href="build-delivery-control.html">Open</a></div>
+        <div class="doc-row"><div><strong>Delivery control playbook</strong><span>Contract-to-sandbox sequence, milestone rules, no-go triggers, and source anchors.</span></div><a class="btn" href="docs/build-delivery-control-playbook-v2.4.md">Open</a></div>
+        <div class="doc-row"><div><strong>Provider contract gates</strong><span>How to tie payment release and delivery movement to evidence.</span></div><a class="btn" href="docs/provider-contract-gates-v2.4.md">Open</a></div>
+        <div class="doc-row"><div><strong>Milestones CSV</strong><span>Five sample delivery milestones with owners, evidence, payment rule, and no-go rule.</span></div><a class="btn" href="data/build-delivery-milestones-v2.4.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Deliverables CSV</strong><span>Twelve sample deliverables mapped to milestone, owner, and proof.</span></div><a class="btn" href="data/build-delivery-deliverables-v2.4.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Payment gates CSV</strong><span>Ten provider evidence gates with release rules and stop conditions.</span></div><a class="btn" href="data/provider-payment-evidence-gates-v2.4.csv">Open</a></div>
+        <div class="doc-row"><div><strong>RACI CSV</strong><span>Eight role rows for responsibility, accountability, consultation, and information flow.</span></div><a class="btn" href="data/build-delivery-raci-v2.4.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Delivery package JSON</strong><span>Machine-readable v2.4 delivery package summary, counts, files, sources, and safety rule.</span></div><a class="btn" href="data/build-delivery-package-v2.4.json">Open</a></div>
+        <div class="doc-row"><div><strong>Release notes v2.4</strong><span>What changed in the Delivery Control upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v2.4.md">Open</a></div>
       </div>
     </section>
 
@@ -777,7 +811,7 @@
     </section>
 
     <footer>
-      Version v2.3. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v2.4. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
   <script>

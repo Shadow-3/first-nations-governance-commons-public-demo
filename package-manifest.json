@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "2.3",
+  "version": "2.4",
   "date": "2026-06-05",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use Sandbox Launcher to choose the first fake-data Decidim build path, use Seed Studio and Sandbox Build Pack to prepare the fake-data Decidim build handoff, then use Build Partner Desk to send the v2.3 RFQ pack to two or three Decidim-capable providers and score responses before any build spend. Current build recommendation remains provider-assisted sandbox until the self-build prerequisites are ready. Keep all data fake/sample only.",
+  "recommendedDecision": "Use Sandbox Launcher to choose the first fake-data Decidim build path, use Seed Studio and Sandbox Build Pack to prepare the fake-data Decidim build handoff, use Build Partner Desk to send the RFQ pack to two or three Decidim-capable providers, then use Build Delivery Control to lock milestones, evidence gates, payment rules, RACI, handover, and no-go conditions before any build spend. Keep all data fake/sample only.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -36,6 +36,15 @@
     "seed-studio.html",
     "sandbox-build-pack.html",
     "build-partner-desk.html",
+    "build-delivery-control.html",
+    "docs/public-demo-release-notes-v2.4.md",
+    "docs/build-delivery-control-playbook-v2.4.md",
+    "docs/provider-contract-gates-v2.4.md",
+    "data/build-delivery-milestones-v2.4.csv",
+    "data/build-delivery-deliverables-v2.4.csv",
+    "data/provider-payment-evidence-gates-v2.4.csv",
+    "data/build-delivery-raci-v2.4.csv",
+    "data/build-delivery-package-v2.4.json",
     "docs/public-demo-release-notes-v2.3.md",
     "docs/build-partner-rfq-pack-v2.3.md",
     "docs/provider-evaluation-guide-v2.3.md",
@@ -102,7 +111,7 @@
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v2.3.md",
+    "releaseNotes": "docs/public-demo-release-notes-v2.4.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -160,7 +169,19 @@
       "qa-v23-deployed-provider-gates-desktop.png",
       "qa-v23-deployed-provider-question-bank-desktop.png",
       "qa-v23-deployed-build-partner-desk-mobile.png",
-      "qa-v23-deployed-build-partner-package-mobile.png"
+      "qa-v23-deployed-build-partner-package-mobile.png",
+      "qa-v24-local-build-delivery-control-desktop.png",
+      "qa-v24-local-build-delivery-control-hold-desktop.png",
+      "qa-v24-local-delivery-gates-desktop.png",
+      "qa-v24-local-delivery-deliverables-desktop.png",
+      "qa-v24-local-build-delivery-control-mobile.png",
+      "qa-v24-local-build-delivery-package-mobile.png",
+      "qa-v24-deployed-build-delivery-control-desktop.png",
+      "qa-v24-deployed-build-delivery-control-hold-desktop.png",
+      "qa-v24-deployed-delivery-gates-desktop.png",
+      "qa-v24-deployed-delivery-deliverables-desktop.png",
+      "qa-v24-deployed-build-delivery-control-mobile.png",
+      "qa-v24-deployed-build-delivery-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -320,7 +341,16 @@
       "data/decidim-space-component-seed-v2.1.csv",
       "data/fake-content-seed-register-v2.1.csv",
       "data/seed-safety-review-v2.1.csv",
-      "data/fake-seed-package-v2.1.json"
+      "data/fake-seed-package-v2.1.json",
+      "build-delivery-control.html",
+      "docs/public-demo-release-notes-v2.4.md",
+      "docs/build-delivery-control-playbook-v2.4.md",
+      "docs/provider-contract-gates-v2.4.md",
+      "data/build-delivery-milestones-v2.4.csv",
+      "data/build-delivery-deliverables-v2.4.csv",
+      "data/provider-payment-evidence-gates-v2.4.csv",
+      "data/build-delivery-raci-v2.4.csv",
+      "data/build-delivery-package-v2.4.json"
     ],
     "actionCenter": [
       "docs/next-steps-action-plan-v1.1.md",
@@ -495,7 +525,16 @@
       "data/provider-evaluation-scorecard-v2.3.csv",
       "data/provider-rfq-question-bank-v2.3.csv",
       "data/provider-decision-gates-v2.3.csv",
-      "data/build-partner-package-v2.3.json"
+      "data/build-partner-package-v2.3.json",
+      "build-delivery-control.html",
+      "docs/public-demo-release-notes-v2.4.md",
+      "docs/build-delivery-control-playbook-v2.4.md",
+      "docs/provider-contract-gates-v2.4.md",
+      "data/build-delivery-milestones-v2.4.csv",
+      "data/build-delivery-deliverables-v2.4.csv",
+      "data/provider-payment-evidence-gates-v2.4.csv",
+      "data/build-delivery-raci-v2.4.csv",
+      "data/build-delivery-package-v2.4.json"
     ],
     "opsRoom": [
       "docs/sandbox-ops-runbook-v1.6.md",
@@ -591,7 +630,16 @@
       "data/provider-evaluation-scorecard-v2.3.csv",
       "data/provider-rfq-question-bank-v2.3.csv",
       "data/provider-decision-gates-v2.3.csv",
-      "data/build-partner-package-v2.3.json"
+      "data/build-partner-package-v2.3.json",
+      "build-delivery-control.html",
+      "docs/public-demo-release-notes-v2.4.md",
+      "docs/build-delivery-control-playbook-v2.4.md",
+      "docs/provider-contract-gates-v2.4.md",
+      "data/build-delivery-milestones-v2.4.csv",
+      "data/build-delivery-deliverables-v2.4.csv",
+      "data/provider-payment-evidence-gates-v2.4.csv",
+      "data/build-delivery-raci-v2.4.csv",
+      "data/build-delivery-package-v2.4.json"
     ],
     "seedStudio": [
       "seed-studio.html",
@@ -625,7 +673,16 @@
       "assurance-room.html",
       "docs/sandbox-launch-playbook-v2.0.md",
       "docs/sandbox-ops-runbook-v1.6.md",
-      "docs/sandbox-assurance-playbook-v1.9.md"
+      "docs/sandbox-assurance-playbook-v1.9.md",
+      "build-delivery-control.html",
+      "docs/public-demo-release-notes-v2.4.md",
+      "docs/build-delivery-control-playbook-v2.4.md",
+      "docs/provider-contract-gates-v2.4.md",
+      "data/build-delivery-milestones-v2.4.csv",
+      "data/build-delivery-deliverables-v2.4.csv",
+      "data/provider-payment-evidence-gates-v2.4.csv",
+      "data/build-delivery-raci-v2.4.csv",
+      "data/build-delivery-package-v2.4.json"
     ],
     "buildPack": [
       "sandbox-build-pack.html",
@@ -652,7 +709,16 @@
       "assurance-room.html",
       "docs/sandbox-launch-playbook-v2.0.md",
       "docs/fake-data-seed-playbook-v2.1.md",
-      "data/fake-seed-package-v2.1.json"
+      "data/fake-seed-package-v2.1.json",
+      "build-delivery-control.html",
+      "docs/public-demo-release-notes-v2.4.md",
+      "docs/build-delivery-control-playbook-v2.4.md",
+      "docs/provider-contract-gates-v2.4.md",
+      "data/build-delivery-milestones-v2.4.csv",
+      "data/build-delivery-deliverables-v2.4.csv",
+      "data/provider-payment-evidence-gates-v2.4.csv",
+      "data/build-delivery-raci-v2.4.csv",
+      "data/build-delivery-package-v2.4.json"
     ],
     "buildPartnerDesk": [
       "build-partner-desk.html",
@@ -669,6 +735,31 @@
       "data/decidim-build-acceptance-tests-v2.2.csv",
       "seed-studio.html",
       "sandbox-launcher.html",
+      "assurance-room.html",
+      "build-delivery-control.html",
+      "docs/public-demo-release-notes-v2.4.md",
+      "docs/build-delivery-control-playbook-v2.4.md",
+      "docs/provider-contract-gates-v2.4.md",
+      "data/build-delivery-milestones-v2.4.csv",
+      "data/build-delivery-deliverables-v2.4.csv",
+      "data/provider-payment-evidence-gates-v2.4.csv",
+      "data/build-delivery-raci-v2.4.csv",
+      "data/build-delivery-package-v2.4.json"
+    ],
+    "buildDeliveryControl": [
+      "build-delivery-control.html",
+      "docs/public-demo-release-notes-v2.4.md",
+      "docs/build-delivery-control-playbook-v2.4.md",
+      "docs/provider-contract-gates-v2.4.md",
+      "data/build-delivery-milestones-v2.4.csv",
+      "data/build-delivery-deliverables-v2.4.csv",
+      "data/provider-payment-evidence-gates-v2.4.csv",
+      "data/build-delivery-raci-v2.4.csv",
+      "data/build-delivery-package-v2.4.json",
+      "build-partner-desk.html",
+      "docs/build-partner-rfq-pack-v2.3.md",
+      "sandbox-build-pack.html",
+      "data/decidim-build-acceptance-tests-v2.2.csv",
       "assurance-room.html"
     ]
   },
@@ -680,7 +771,9 @@
     "No real voting or eligibility data.",
     "Real pilot requires separate governance, data, privacy, cultural safety, and hosting approvals.",
     "No youth records or guardian/school/program records.",
-    "No personal service cases or complaints."
+    "No personal service cases or complaints.",
+    "No real provider contract or spend approval.",
+    "No real milestone payment release or procurement decision."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -857,7 +950,7 @@
     "rfqQuestionCount": 18,
     "decisionGateCount": 10,
     "requiredDecisionGateCount": 2,
-    "defaultRecommendation": "send_rfq_to_two_or_three_decidim_capable_providers_then_score_responses",
+    "defaultRecommendation": "send_rfq_to_two_or_three_decidim_capable_providers_then_score_responses_and_move_clear_responses_into_build_delivery_control",
     "noGoTriggers": [
       "provider_requests_real_community_data",
       "provider_cannot_explain_decidim_setup_hosting_admin_and_handover",
@@ -872,6 +965,40 @@
       "https://docs.decidim.org/en/develop/admin/first_steps.html",
       "https://github.com/decidim/decidim"
     ],
-    "safetyRule": "No real provider endorsements, real procurement decisions, community records, member lists, cultural material, eligibility data, voting data, youth records, personal service cases, private contact records, or real decision outcomes are included."
+    "safetyRule": "No real provider endorsements, real procurement decisions, community records, member lists, cultural material, eligibility data, voting data, youth records, personal service cases, private contact records, or real decision outcomes are included.",
+    "nextControl": "build-delivery-control.html"
+  },
+  "buildDeliveryControl": {
+    "entrypoint": "build-delivery-control.html",
+    "playbook": "docs/build-delivery-control-playbook-v2.4.md",
+    "contractGates": "docs/provider-contract-gates-v2.4.md",
+    "milestones": "data/build-delivery-milestones-v2.4.csv",
+    "deliverables": "data/build-delivery-deliverables-v2.4.csv",
+    "evidenceGates": "data/provider-payment-evidence-gates-v2.4.csv",
+    "raci": "data/build-delivery-raci-v2.4.csv",
+    "deliveryPackage": "data/build-delivery-package-v2.4.json",
+    "milestoneCount": 5,
+    "deliverableCount": 12,
+    "evidenceGateCount": 10,
+    "raciRoleCount": 8,
+    "requiredGateCount": 3,
+    "holdGateCount": 4,
+    "defaultRecommendation": "lock_milestones_evidence_payment_rules_raci_and_handover_before_provider_build_spend",
+    "noGoTriggers": [
+      "provider_requests_real_community_data",
+      "provider_refuses_source_code_or_agpl_clarity",
+      "provider_substitutes_static_mockup_for_decidim",
+      "provider_controls_only_repository_or_admin_access",
+      "critical_acceptance_evidence_missing",
+      "fake_sandbox_treated_as_real_community_authority"
+    ],
+    "sourceAnchors": [
+      "https://docs.decidim.org/en/develop/install/checklist.html",
+      "https://docs.decidim.org/en/develop/install/manual.html",
+      "https://docs.decidim.org/en/develop/develop/deploy.html",
+      "https://docs.decidim.org/en/develop/admin/first_steps.html",
+      "https://github.com/decidim/decidim"
+    ],
+    "safetyRule": "No real provider contract, procurement decision, spend approval, community records, member lists, cultural material, eligibility data, voting data, youth records, personal service cases, private contact records, or real decision outcomes are included."
   }
 }

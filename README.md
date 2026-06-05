@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v2.3
+Current package version: v2.4
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -40,6 +40,8 @@ Open `seed-studio.html` to use the Seed Studio for Decidim-shaped fake spaces, c
 Open `sandbox-build-pack.html` to use the Decidim Sandbox Build Pack for environment checks, provider/self-build handoff, setup runbook, acceptance tests, and a downloadable build brief.
 
 Open `build-partner-desk.html` to use the Build Partner Desk for provider shortlist, RFQ question bank, evaluation scorecard, decision gates, and a downloadable partner brief.
+
+Open `build-delivery-control.html` to use Build Delivery Control for provider milestones, deliverables, evidence gates, payment rules, RACI, and a downloadable delivery brief.
 
 The demo shows:
 
@@ -79,6 +81,7 @@ The demo shows:
 - `docs/public-demo-release-notes-v1.5.md`
 - `docs/public-demo-release-notes-v1.6.md`
 - `docs/public-demo-release-notes-v1.7.md`
+- `docs/public-demo-release-notes-v2.4.md`
 - `docs/public-demo-release-notes-v2.3.md`
 - `docs/public-demo-release-notes-v2.2.md`
 - `docs/public-demo-release-notes-v2.1.md`
@@ -89,6 +92,8 @@ The demo shows:
 - `docs/decidim-seed-admin-guide-v2.1.md`
 - `docs/decidim-sandbox-build-pack-v2.2.md`
 - `docs/provider-self-build-handoff-v2.2.md`
+- `docs/build-delivery-control-playbook-v2.4.md`
+- `docs/provider-contract-gates-v2.4.md`
 - `docs/build-partner-rfq-pack-v2.3.md`
 - `docs/provider-evaluation-guide-v2.3.md`
 - `docs/sandbox-launch-playbook-v2.0.md`
@@ -183,6 +188,11 @@ The demo shows:
 - `data/provider-rfq-question-bank-v2.3.csv`
 - `data/provider-decision-gates-v2.3.csv`
 - `data/build-partner-package-v2.3.json`
+- `data/build-delivery-milestones-v2.4.csv`
+- `data/build-delivery-deliverables-v2.4.csv`
+- `data/provider-payment-evidence-gates-v2.4.csv`
+- `data/build-delivery-raci-v2.4.csv`
+- `data/build-delivery-package-v2.4.json`
 - `data/sandbox-task-board.csv`
 - `data/decision-log-template.csv`
 - `PACKAGE_INDEX.md`
@@ -557,9 +567,25 @@ The v2.3 package adds a partner-selection workflow that turns the provider-assis
 
 Use this version after Sandbox Build Pack. Send the v2.3 RFQ pack to two or three Decidim-capable providers, score responses, and do not proceed unless the fake-data boundary, Decidim version, hosting, admin ownership, AGPL/source-code path, backups, support, handover, acceptance evidence, and scope exclusions are clear.
 
+## v2.4 Build Delivery Control Upgrade
+
+The v2.4 package adds a delivery-control workflow after provider selection:
+
+- Interactive Build Delivery Control page.
+- Five sample provider delivery milestones.
+- Twelve sample deliverables mapped to milestone, owner, and proof.
+- Ten payment and evidence gates.
+- Eight RACI role rows.
+- Browser-generated delivery brief.
+- Delivery control playbook and provider contract gates guide.
+- Document viewer coverage for all v2.4 delivery-control docs, CSVs, and JSON.
+- Package manifest coverage for the new delivery control evidence group.
+
+Use this version after Build Partner Desk. Before any provider work proceeds, lock fake-data scope, source-code/repository control, Decidim version, hosting path, acceptance evidence, admin handover, support, and the separate real-pilot approval boundary.
+
 ## Next Build Step
 
-Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, Delivery Room, Assurance Room, Sandbox Launcher, Seed Studio, Sandbox Build Pack, and Build Partner Desk to configure, operate, select a provider for, and safely hand over a fake-data Decidim sandbox:
+Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, Delivery Room, Assurance Room, Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, and Build Delivery Control to configure, operate, select a provider for, control delivery of, and safely hand over a fake-data Decidim sandbox:
 
 - One organisation.
 - One public assembly.

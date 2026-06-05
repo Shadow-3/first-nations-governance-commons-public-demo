@@ -1,0 +1,9 @@
+role,responsible,accountable,consulted,informed
+Barayamal / Dean Foley,"Custodian, scope owner, repository access",Fake-data boundary and provider acceptance,"Community advisors, technical reviewer",Reviewers and funders
+Provider lead,"Decidim setup, configuration, evidence, handover",Technical delivery quality,"Barayamal, technical reviewer",Launch and assurance team
+Community authority group,Real-pilot authority decisions only,Community legitimacy,Before real data or real decisions,During fake-data demo review
+Data sovereignty reviewer,Data boundary and retention review,No real sensitive data in sandbox,At contract lock and pilot decision,During evidence review
+Privacy/security reviewer,"Privacy, access, backups, incident path",Security baseline advice,Before hosting and support sign-off,During acceptance
+Admin trainer,Admin walkthrough and support materials,Handover readiness,Provider and Barayamal,Sandbox administrators
+Accessibility reviewer,"Mobile, keyboard, readability, contrast notes",Accessibility evidence,During acceptance,Provider and launch team
+Funder/partner observer,No delivery authority unless approved,Funding conditions only,For quote and milestone evidence,After decision gates

@@ -1,0 +1,13 @@
+id,milestone,title,owner,proof
+D-001,M-001,Sample SOW lock,Barayamal,"SOW lists fake-data scope, exclusions, owners, source-code rule, and acceptance tests"
+D-002,M-001,Safety and data boundary clause,Barayamal,"Provider confirms no real records, member lists, cultural material, or voting data"
+D-003,M-002,Decidim app scaffold,Provider,"Repository, version pin, setup notes, and boot screenshot"
+D-004,M-002,Hosting and backup plan,Provider,"Host choice, backup schedule, restore path, environment notes, and admin access path"
+D-005,M-003,Organisation settings,Provider,"Languages, time zone, admin roles, appearance, and public terms configured with fake text"
+D-006,M-003,Spaces and components,Provider,"Assembly and process configured with proposals, meetings, survey, budgets, accountability, and page component"
+D-007,M-003,Fake content seed,Joint,Fake seed register imported or manually configured with safety review sign-off
+D-008,M-004,Acceptance test evidence,Joint,Critical tests passed or blockers logged with owner and target date
+D-009,M-004,Mobile and accessibility check,Provider,"Phone viewport, keyboard path, readable text, and contrast notes"
+D-010,M-004,Admin handover session,Provider,"Training agenda, attendee list, recording or notes, and admin checklist"
+D-011,M-004,Ops and support runbook,Provider,"Backup/delete drill, support contact, issue triage, and incident path"
+D-012,M-005,Pilot transition decision memo,Community Authority,"Decision states remain fake, improve, or begin separate real-pilot approvals"

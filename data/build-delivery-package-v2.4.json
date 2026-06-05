@@ -1,0 +1,41 @@
+{
+  "version": "2.4",
+  "name": "Build Delivery Control",
+  "mode": "public_demo_fake_contract_and_delivery_data_only",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "recommendedUse": "Use after Build Partner Desk to control milestones, evidence gates, payment release rules, RACI roles, no-go triggers, and handover before any real pilot approval.",
+  "counts": {
+    "milestones": 5,
+    "deliverables": 12,
+    "evidenceGates": 10,
+    "raciRoles": 8,
+    "requiredGates": 3,
+    "holdGates": 4
+  },
+  "files": {
+    "entrypoint": "build-delivery-control.html",
+    "playbook": "docs/build-delivery-control-playbook-v2.4.md",
+    "contractGates": "docs/provider-contract-gates-v2.4.md",
+    "releaseNotes": "docs/public-demo-release-notes-v2.4.md",
+    "milestones": "data/build-delivery-milestones-v2.4.csv",
+    "deliverables": "data/build-delivery-deliverables-v2.4.csv",
+    "evidenceGates": "data/provider-payment-evidence-gates-v2.4.csv",
+    "raci": "data/build-delivery-raci-v2.4.csv"
+  },
+  "noGoTriggers": [
+    "provider_requests_real_community_data",
+    "provider_refuses_source_code_or_agpl_clarity",
+    "provider_substitutes_static_mockup_for_decidim",
+    "provider_controls_only_repository_or_admin_access",
+    "critical_acceptance_evidence_missing",
+    "fake_sandbox_treated_as_real_community_authority"
+  ],
+  "sourceAnchors": [
+    "https://docs.decidim.org/en/develop/install/checklist.html",
+    "https://docs.decidim.org/en/develop/install/manual.html",
+    "https://docs.decidim.org/en/develop/develop/deploy.html",
+    "https://docs.decidim.org/en/develop/admin/first_steps.html",
+    "https://github.com/decidim/decidim"
+  ],
+  "safetyRule": "No real provider contract, procurement decision, spend approval, community records, member lists, cultural material, eligibility data, voting data, youth records, personal service cases, private contact records, or real decision outcomes are included."
+}
