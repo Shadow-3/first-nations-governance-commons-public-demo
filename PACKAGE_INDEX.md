@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v3.2  
+Version: v3.3  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -152,6 +152,23 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 142. `docs/public-demo-release-notes-v2.3.md` - v2.3 release summary.
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
+
+## v3.3 Pilot Control Tower Additions
+
+- `pilot-control-tower.html` - consolidated executive stage, dependency, no-go, evidence, owner action, and decision-route view.
+- `docs/pilot-control-tower-playbook-v3.3.md`
+- `docs/control-tower-executive-review-agenda-v3.3.md`
+- `docs/consolidated-no-go-register-v3.3.md`
+- `docs/control-tower-decision-brief-template-v3.3.md`
+- `docs/public-demo-release-notes-v3.3.md`
+- `data/control-tower-stage-readiness-v3.3.csv`
+- `data/control-tower-dependency-map-v3.3.csv`
+- `data/consolidated-no-go-register-v3.3.csv`
+- `data/control-tower-evidence-status-v3.3.csv`
+- `data/control-tower-owner-actions-v3.3.csv`
+- `data/control-tower-decision-routes-v3.3.csv`
+- `data/pilot-control-tower-package-v3.3.json`
+
 
 ## v3.2 Activation Drill & Decision Record Additions
 
@@ -738,6 +755,7 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 - `private-pilot-closeout.html` is the public Private Pilot Closeout Decision page for closeout checks, scale decisions, evidence classification, deletion/retention proof, and transition backlog.
 - `private-pilot-authority.html` is the public Private Pilot Authority Approval page for authority, data governance, privacy, role access, participant notice, private environment activation, and scale criteria.
 - `private-pilot-activation-drill.html` is the public Activation Drill & Decision Record page for approval rehearsal, signoff, tabletop scenarios, evidence classification, fake-data drill tasks, and first-72-hour monitoring.
+- `pilot-control-tower.html` is the public Pilot Control Tower page for consolidated stage readiness, dependencies, no-go triggers, evidence status, owner actions, and decision routes.
 - `docs-index.html` is the public reviewer hub.
 - `document.html` renders Markdown, CSV, and JSON files from a whitelisted package catalog.
 - `404.html` gives visitors a clean recovery page.

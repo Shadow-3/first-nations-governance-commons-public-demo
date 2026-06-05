@@ -1,0 +1,19 @@
+id,risk,status,owner,trigger,response,rule
+NG-001,Public data leak,Blocked,QA reviewer,"Any real name, email, phone, address, access need, incident detail, payment, member number, signature, authority record, or official Toastmasters record in public files","Stop release, remove file, audit, and record private incident",public_demo_fake_sample_data_only
+NG-002,Authority missing,Blocked,Pilot authority,No named First Nations authority or quorum for activation decision,Hold activation until authority pathway is approved,developer_custody_not_authority
+NG-003,IDS review missing,Blocked,Data reviewer,"Data classes, purpose, access, retention, deletion, or reporting not approved",Hold or no-go until IDS/data governance pass exists,indigenous_data_governance_required
+NG-004,Privacy signoff missing,Blocked,Privacy reviewer,"Notice, consent, withdrawal, correction, PIA, retention, or incident response is incomplete",Hold intake until privacy decision is recorded,privacy_impact_required
+NG-005,Private environment unapproved,Blocked,Technical custodian,"No approved workspace, access register, MFA, backup, export, delete, restore, or logs",Hold activation until environment drill passes,static_demo_not_system_of_record
+NG-006,Access too broad,Blocked,Technical custodian,"No-private-access roles, provider, supporter, or public reviewer can see private records","Revoke access, audit, and rerun role test",need_to_know_access_only
+NG-007,Official Toastmasters boundary broken,Blocked,Toastmasters launch lead,"Forms, member numbers, signatures, payments, or charter records enter public/pilot package",Move to official route and pause pilot,official_records_external
+NG-008,Incident pause path missing,Blocked,Safety reviewer,"No owner can pause intake, support participant, or run breach/cultural safety escalation",Hold activation until tabletop passes,incident_pause_required
+NG-009,Withdrawal/correction fails,Blocked,Privacy reviewer,Participant cannot withdraw or correct private record,Hold intake until route is tested,withdrawal_correction_required
+NG-010,Provider receives real data too early,Blocked,Build delivery lead,"Provider gets real export before authority, contract, privacy, and access pass",Deny export and use fake/sample package only,provider_fake_data_only
+NG-011,Public learning identifies someone,Hold,QA reviewer,"Small sample or contextual wording can identify a founder, participant, support need, or incident",Rewrite as aggregate or hold public update,redaction_threshold_required
+NG-012,Backup/delete/restore untested,Hold,Technical custodian,"Team cannot prove recovery, export, deletion, or retention pathway",Run drill before activation,technical_recovery_required
+NG-013,Support route unstaffed,Hold,Access support contact,"No response owner or response clock for support, withdrawal, correction, or access needs",Staff support route or hold,participant_support_required
+NG-014,Closeout trigger missing,Hold,Data reviewer,"Pilot has no review date, retention/deletion rule, or closeout owner",Add closeout trigger before activation,closeout_required
+NG-015,Scale starts without closeout,Blocked,Pilot authority,"Second pilot, provider handoff, or broader rollout starts before closeout and authority record",No-go scale path until closeout and authority pass,scale_requires_closeout
+NG-016,Decision record incomplete,Blocked,Pilot authority,"Go/hold/no-go record lacks conditions, expiry, owner, no-go triggers, or monitoring schedule",Hold activation until decision record is complete,decision_record_required
+NG-017,First-72-hour monitor absent,Blocked,Pilot operator,No hour 0-72 checks or authority checkpoint after activation,Hold activation or pause at hour 0,early_monitor_required
+NG-018,Control tower not reviewed,Hold,Pilot authority,"No single review of stage status, dependencies, blockers, owners, and evidence before decision",Run v3.3 control tower review first,single_control_view_required

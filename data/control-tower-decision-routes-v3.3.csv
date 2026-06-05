@@ -1,0 +1,9 @@
+id,route,status,when,nextAction,noGo
+ROUTE-001,Use public demo only,Ready,Public review can continue with fake/sample data only,Share public links and collect non-sensitive feedback,Real data enters public demo
+ROUTE-002,Hold for authority approval,Hold,"Authority, IDS, privacy, or official boundary not approved",Use v3.1 authority page and private approval record,Developer or provider decides alone
+ROUTE-003,Hold for activation drill,Hold,Authority model exists but signoff/tabletop/evidence/monitoring not rehearsed,Use v3.2 activation drill and private decision record,Activation opens without drill
+ROUTE-004,Prepare private environment,Hold,Technical proof is missing or stale,Run private workspace/access/backup/delete/restore drill,Static site becomes system of record
+ROUTE-005,Provider quote with fake data,Ready,Provider help needed but no real data access approved,Send v3.3 public package and fake/sample scope only,Provider gets production export
+ROUTE-006,No-go real activation,Blocked,Any blocked no-go trigger is present,"Stop real intake, fix blocker, rerun control tower review",Proceed despite blocked no-go
+ROUTE-007,Conditional activation,Hold,All blocked items closed but support/provider/advice/closeout conditions remain,"Record conditions, expiry, owners, and 72-hour monitor",Conditions have no owner or expiry
+ROUTE-008,Approve limited private pilot,Ready,"All required private evidence, signoffs, drill tasks, and monitoring checks pass",Open limited private intake with 72-hour authority checkpoint,Activation expands beyond approved scope

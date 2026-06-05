@@ -1,0 +1,844 @@
+{
+  "packageName": "Pilot Control Tower v3.3",
+  "version": "3.3",
+  "date": "2026-06-05",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "mode": "public_demo_control_tower_template_only",
+  "sampleInitiative": "Toastmasters First Nations",
+  "controlRule": "Do not make a real activation, provider handoff, or scale decision from any single page. Use the Control Tower to review stage status, blockers, dependencies, evidence classes, owners, and decision route first.",
+  "safetyRule": "This public v3.3 Control Tower is fake/sample only. It must not collect or expose real names, emails, access needs, incidents, official Toastmasters records, member numbers, payments, signatures, authority records, access logs, decision records, or private pilot evidence.",
+  "noGoTriggers": [
+    "NG-001: Any real name, email, phone, address, access need, incident detail, payment, member number, signature, authority record, or official Toastmasters record in public files",
+    "NG-002: No named First Nations authority or quorum for activation decision",
+    "NG-003: Data classes, purpose, access, retention, deletion, or reporting not approved",
+    "NG-004: Notice, consent, withdrawal, correction, PIA, retention, or incident response is incomplete",
+    "NG-005: No approved workspace, access register, MFA, backup, export, delete, restore, or logs",
+    "NG-006: No-private-access roles, provider, supporter, or public reviewer can see private records",
+    "NG-007: Forms, member numbers, signatures, payments, or charter records enter public/pilot package",
+    "NG-008: No owner can pause intake, support participant, or run breach/cultural safety escalation",
+    "NG-009: Participant cannot withdraw or correct private record",
+    "NG-010: Provider gets real export before authority, contract, privacy, and access pass",
+    "NG-015: Second pilot, provider handoff, or broader rollout starts before closeout and authority record",
+    "NG-016: Go/hold/no-go record lacks conditions, expiry, owner, no-go triggers, or monitoring schedule",
+    "NG-017: No hour 0-72 checks or authority checkpoint after activation"
+  ],
+  "sourceAnchors": [
+    {
+      "label": "Barayamal Toastmasters First Nations",
+      "url": "https://barayamal.com.au/toastmasters-first-nations/"
+    },
+    {
+      "label": "Toastmasters Start a Club",
+      "url": "https://www.toastmasters.org/Start-a-Club"
+    },
+    {
+      "label": "Toastmasters Club Charter Requirements Form",
+      "url": "https://content.toastmasters.org/image/upload/ATO-club-chartering-requirements-ff.pdf"
+    },
+    {
+      "label": "Toastmasters Governing Documents",
+      "url": "https://www.toastmasters.org/resources/governing-documents"
+    },
+    {
+      "label": "Maiam nayri Wingara Indigenous Data Sovereignty",
+      "url": "https://www.maiamnayriwingara.org/"
+    },
+    {
+      "label": "AIATSIS ethical research",
+      "url": "https://aiatsis.gov.au/research/ethical-research"
+    },
+    {
+      "label": "NHMRC Aboriginal and Torres Strait Islander research ethics",
+      "url": "https://www.nhmrc.gov.au/research-policy/ethics/ethical-guidelines-research-aboriginal-and-torres-strait-islander-peoples"
+    },
+    {
+      "label": "OAIC Australian Privacy Principles",
+      "url": "https://www.oaic.gov.au/privacy/australian-privacy-principles/"
+    },
+    {
+      "label": "OAIC privacy impact assessment guide",
+      "url": "https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/privacy-impact-assessments/guide-to-undertaking-privacy-impact-assessments"
+    },
+    {
+      "label": "OAIC Notifiable Data Breaches scheme",
+      "url": "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme"
+    },
+    {
+      "label": "Cyber.gov.au Essential Eight maturity model",
+      "url": "https://www.cyber.gov.au/resources-business-and-government/essential-cybersecurity/essential-eight/essential-eight-maturity-model"
+    },
+    {
+      "label": "Decidim administrators",
+      "url": "https://docs.decidim.org/en/develop/admin/participants/admins.html"
+    },
+    {
+      "label": "Decidim permissions",
+      "url": "https://docs.decidim.org/en/develop/develop/permissions.html"
+    }
+  ],
+  "counts": {
+    "stageReadiness": 12,
+    "dependencies": 16,
+    "consolidatedNoGo": 18,
+    "evidenceDomains": 14,
+    "ownerActions": 12,
+    "decisionRoutes": 8,
+    "controlRecords": 80,
+    "readyStages": 7,
+    "holdStages": 4,
+    "blockedStages": 1,
+    "blockedNoGo": 13,
+    "requiredOwnerActions": 9
+  },
+  "files": {
+    "entrypoint": "pilot-control-tower.html",
+    "playbook": "docs/pilot-control-tower-playbook-v3.3.md",
+    "executiveAgenda": "docs/control-tower-executive-review-agenda-v3.3.md",
+    "blockerRegister": "docs/consolidated-no-go-register-v3.3.md",
+    "decisionBrief": "docs/control-tower-decision-brief-template-v3.3.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.3.md",
+    "stageReadiness": "data/control-tower-stage-readiness-v3.3.csv",
+    "dependencyMap": "data/control-tower-dependency-map-v3.3.csv",
+    "consolidatedNoGo": "data/consolidated-no-go-register-v3.3.csv",
+    "evidenceStatus": "data/control-tower-evidence-status-v3.3.csv",
+    "ownerActions": "data/control-tower-owner-actions-v3.3.csv",
+    "decisionRoutes": "data/control-tower-decision-routes-v3.3.csv",
+    "packageJson": "data/pilot-control-tower-package-v3.3.json"
+  },
+  "stageReadiness": [
+    {
+      "id": "ST-001",
+      "stage": "Public demo foundation",
+      "status": "Ready",
+      "owner": "Demo steward",
+      "evidence": "index.html, docs-index.html, document.html, package manifest, release validation",
+      "decisionRule": "Use as public front door only",
+      "readySignal": "Current package version is v3.3 and live entrypoints pass",
+      "noGo": "Public demo contains private data"
+    },
+    {
+      "id": "ST-002",
+      "stage": "Organisation onboarding",
+      "status": "Ready",
+      "owner": "Organisation onboarding lead",
+      "evidence": "organisation-onboarding.html and v2.5 package",
+      "decisionRule": "First Nations organisations can be modelled safely with fake/sample data",
+      "readySignal": "Join/support tracks and data boundary are public-safe",
+      "noGo": "Organisation support role implies private authority"
+    },
+    {
+      "id": "ST-003",
+      "stage": "Private pilot readiness",
+      "status": "Ready",
+      "owner": "Pilot readiness lead",
+      "evidence": "private-pilot-readiness.html and v2.6 package",
+      "decisionRule": "Real records stay out until readiness gates pass privately",
+      "readySignal": "Readiness, role access, and data-transfer controls are mapped",
+      "noGo": "Real workflow starts from public sample"
+    },
+    {
+      "id": "ST-004",
+      "stage": "Pilot operations rehearsal",
+      "status": "Ready",
+      "owner": "Pilot operator",
+      "evidence": "private-pilot-ops.html and v2.7 package",
+      "decisionRule": "Run-day controls, participant states, incidents, and official handoff are rehearsed",
+      "readySignal": "Operations route is documented",
+      "noGo": "Daily pause/support path is missing"
+    },
+    {
+      "id": "ST-005",
+      "stage": "Private implementation preparation",
+      "status": "Ready",
+      "owner": "Technical custodian",
+      "evidence": "private-pilot-implementation.html and v2.8 package",
+      "decisionRule": "Private environment, schema, access, dry run, and decision record are prepared",
+      "readySignal": "Implementation data classes are locked",
+      "noGo": "Public static demo becomes system of record"
+    },
+    {
+      "id": "ST-006",
+      "stage": "Controlled launch design",
+      "status": "Ready",
+      "owner": "Launch lead",
+      "evidence": "private-pilot-launch.html and v2.9 package",
+      "decisionRule": "Launch gates, intake states, communications, and learning metrics are defined",
+      "readySignal": "Launch learning and closeout trigger exist",
+      "noGo": "Intake opens without learning/closeout design"
+    },
+    {
+      "id": "ST-007",
+      "stage": "Pilot closeout decision",
+      "status": "Ready",
+      "owner": "Pilot authority",
+      "evidence": "private-pilot-closeout.html and v3.0 package",
+      "decisionRule": "Closeout, deletion/retention, access review, evidence ledger, and scale decision are available",
+      "readySignal": "Closeout rules can govern any repeat or scale path",
+      "noGo": "Pilot repeats or scales without closeout"
+    },
+    {
+      "id": "ST-008",
+      "stage": "Authority approval",
+      "status": "Hold",
+      "owner": "Pilot authority",
+      "evidence": "private-pilot-authority.html and v3.1 package",
+      "decisionRule": "Authority, IDS, privacy, role access, notice, environment, and scale criteria must pass privately",
+      "readySignal": "Public model is ready; real signoff remains private",
+      "noGo": "Developer custody substitutes for First Nations authority"
+    },
+    {
+      "id": "ST-009",
+      "stage": "Activation drill",
+      "status": "Hold",
+      "owner": "Pilot authority",
+      "evidence": "private-pilot-activation-drill.html and v3.2 package",
+      "decisionRule": "Approval meeting, signoff, tabletop, evidence, rehearsal, and monitoring must be run with fake data",
+      "readySignal": "Public rehearsal package is ready; private decision not recorded",
+      "noGo": "Activation starts without drill or monitoring"
+    },
+    {
+      "id": "ST-010",
+      "stage": "Provider/build handoff",
+      "status": "Hold",
+      "owner": "Build delivery lead",
+      "evidence": "Build Partner Desk, Build Delivery Control, fake package only",
+      "decisionRule": "Any provider sees fake/sample data until contract, authority, and privacy pass",
+      "readySignal": "Provider scope and fake handoff path are defined",
+      "noGo": "Provider receives production export too early"
+    },
+    {
+      "id": "ST-011",
+      "stage": "Official Toastmasters pathway",
+      "status": "Hold",
+      "owner": "Toastmasters launch lead",
+      "evidence": "Official forms, payments, signatures, member numbers, charter route outside demo",
+      "decisionRule": "Official records remain external to Governance Commons public package",
+      "readySignal": "External boundary is documented",
+      "noGo": "Member number, payment, or charter record enters public/pilot files"
+    },
+    {
+      "id": "ST-012",
+      "stage": "Real activation decision",
+      "status": "Blocked",
+      "owner": "Pilot authority",
+      "evidence": "Private authority record, signoff matrix, evidence packet, monitoring schedule",
+      "decisionRule": "Only after private signoff, drill, no-go testing, and 72-hour monitor plan",
+      "readySignal": "Public demo says hold until private evidence exists",
+      "noGo": "Real activation occurs from public page alone"
+    }
+  ],
+  "dependencyMap": [
+    {
+      "id": "DEP-001",
+      "from": "Organisation onboarding",
+      "to": "Private pilot readiness",
+      "status": "Ready",
+      "dependency": "Onboarding data boundary must be accepted before private pilot scope",
+      "evidence": "organisation-onboarding-package-v2.5.json",
+      "noGo": "Private pilot scope starts before organisation boundary is understood"
+    },
+    {
+      "id": "DEP-002",
+      "from": "Private pilot readiness",
+      "to": "Pilot operations rehearsal",
+      "status": "Ready",
+      "dependency": "Readiness gates must exist before run-day operations are rehearsed",
+      "evidence": "private-pilot-package-v2.6.json",
+      "noGo": "Ops rehearsal assumes unapproved private fields"
+    },
+    {
+      "id": "DEP-003",
+      "from": "Pilot operations rehearsal",
+      "to": "Private implementation preparation",
+      "status": "Ready",
+      "dependency": "Run-day support, incident, handoff, and deletion paths inform implementation controls",
+      "evidence": "private-pilot-ops-package-v2.7.json",
+      "noGo": "Implementation omits run-day incident or support controls"
+    },
+    {
+      "id": "DEP-004",
+      "from": "Private implementation preparation",
+      "to": "Controlled launch design",
+      "status": "Ready",
+      "dependency": "Private environment, schema, access, and dry run must shape launch gates",
+      "evidence": "private-pilot-implementation-package-v2.8.json",
+      "noGo": "Launch opens before environment and access are approved"
+    },
+    {
+      "id": "DEP-005",
+      "from": "Controlled launch design",
+      "to": "Pilot closeout decision",
+      "status": "Ready",
+      "dependency": "Launch metrics and first-30-day review must feed closeout decision",
+      "evidence": "private-pilot-launch-package-v2.9.json",
+      "noGo": "Launch has no closeout trigger"
+    },
+    {
+      "id": "DEP-006",
+      "from": "Pilot closeout decision",
+      "to": "Authority approval",
+      "status": "Ready",
+      "dependency": "Any repeat, scale, or second pilot must use closeout evidence and authority route",
+      "evidence": "private-pilot-closeout-package-v3.0.json",
+      "noGo": "Second pilot starts from momentum"
+    },
+    {
+      "id": "DEP-007",
+      "from": "Authority approval",
+      "to": "Activation drill",
+      "status": "Hold",
+      "dependency": "Authority, IDS, privacy, access, notice, and environment approval must be rehearsed",
+      "evidence": "private-pilot-authority-package-v3.1.json",
+      "noGo": "Drill runs without authority owners"
+    },
+    {
+      "id": "DEP-008",
+      "from": "Activation drill",
+      "to": "Real activation decision",
+      "status": "Hold",
+      "dependency": "Signoff, tabletop, evidence packet, rehearsal tasks, and monitoring must pass",
+      "evidence": "private-pilot-activation-drill-package-v3.2.json",
+      "noGo": "Activation opens without rehearsal"
+    },
+    {
+      "id": "DEP-009",
+      "from": "Official Toastmasters pathway",
+      "to": "All private pilot stages",
+      "status": "Hold",
+      "dependency": "Official records stay outside public and unapproved private pilot tools",
+      "evidence": "Toastmasters source anchors and handoff rules",
+      "noGo": "Official records enter public files"
+    },
+    {
+      "id": "DEP-010",
+      "from": "Provider/build handoff",
+      "to": "Private implementation preparation",
+      "status": "Hold",
+      "dependency": "Provider receives fake/sample package until authority, contract, and privacy path pass",
+      "evidence": "build partner and delivery packages",
+      "noGo": "Provider gets real participant data"
+    },
+    {
+      "id": "DEP-011",
+      "from": "Public QA",
+      "to": "Every public release",
+      "status": "Ready",
+      "dependency": "Each release excludes screenshots, server files, and private data; all manifest entrypoints return 200",
+      "evidence": "release validation and QA screenshots",
+      "noGo": "Public package leaks excluded artifacts"
+    },
+    {
+      "id": "DEP-012",
+      "from": "Incident/breach response",
+      "to": "Activation and monitoring",
+      "status": "Hold",
+      "dependency": "Incident pause, breach assessment, notification route, and support owner must be rehearsed",
+      "evidence": "v3.2 tabletop and monitor checks",
+      "noGo": "Incident route is improvised"
+    },
+    {
+      "id": "DEP-013",
+      "from": "Indigenous Data Sovereignty",
+      "to": "Authority and reporting",
+      "status": "Hold",
+      "dependency": "Data classes, authority, benefit, reporting, retention, and deletion must be approved",
+      "evidence": "v3.1 data governance controls",
+      "noGo": "Data is reused because it is available"
+    },
+    {
+      "id": "DEP-014",
+      "from": "Privacy and consent",
+      "to": "Intake, support, retention",
+      "status": "Hold",
+      "dependency": "Notice, consent, withdrawal, correction, access, retention, and deletion must be approved",
+      "evidence": "v3.1 PIA and participant notice",
+      "noGo": "People submit info without clear notice"
+    },
+    {
+      "id": "DEP-015",
+      "from": "First-72-hour monitor",
+      "to": "Real activation decision",
+      "status": "Blocked",
+      "dependency": "Activation cannot continue without early checks and authority checkpoint",
+      "evidence": "v3.2 monitor checks",
+      "noGo": "Activation has no early review"
+    },
+    {
+      "id": "DEP-016",
+      "from": "Control tower review",
+      "to": "Next meeting",
+      "status": "Ready",
+      "dependency": "This v3.3 view becomes the single review route for blockers and next decisions",
+      "evidence": "control tower package v3.3",
+      "noGo": "Reviewers cannot see blocker chain"
+    }
+  ],
+  "consolidatedNoGo": [
+    {
+      "id": "NG-001",
+      "risk": "Public data leak",
+      "status": "Blocked",
+      "owner": "QA reviewer",
+      "trigger": "Any real name, email, phone, address, access need, incident detail, payment, member number, signature, authority record, or official Toastmasters record in public files",
+      "response": "Stop release, remove file, audit, and record private incident",
+      "rule": "public_demo_fake_sample_data_only"
+    },
+    {
+      "id": "NG-002",
+      "risk": "Authority missing",
+      "status": "Blocked",
+      "owner": "Pilot authority",
+      "trigger": "No named First Nations authority or quorum for activation decision",
+      "response": "Hold activation until authority pathway is approved",
+      "rule": "developer_custody_not_authority"
+    },
+    {
+      "id": "NG-003",
+      "risk": "IDS review missing",
+      "status": "Blocked",
+      "owner": "Data reviewer",
+      "trigger": "Data classes, purpose, access, retention, deletion, or reporting not approved",
+      "response": "Hold or no-go until IDS/data governance pass exists",
+      "rule": "indigenous_data_governance_required"
+    },
+    {
+      "id": "NG-004",
+      "risk": "Privacy signoff missing",
+      "status": "Blocked",
+      "owner": "Privacy reviewer",
+      "trigger": "Notice, consent, withdrawal, correction, PIA, retention, or incident response is incomplete",
+      "response": "Hold intake until privacy decision is recorded",
+      "rule": "privacy_impact_required"
+    },
+    {
+      "id": "NG-005",
+      "risk": "Private environment unapproved",
+      "status": "Blocked",
+      "owner": "Technical custodian",
+      "trigger": "No approved workspace, access register, MFA, backup, export, delete, restore, or logs",
+      "response": "Hold activation until environment drill passes",
+      "rule": "static_demo_not_system_of_record"
+    },
+    {
+      "id": "NG-006",
+      "risk": "Access too broad",
+      "status": "Blocked",
+      "owner": "Technical custodian",
+      "trigger": "No-private-access roles, provider, supporter, or public reviewer can see private records",
+      "response": "Revoke access, audit, and rerun role test",
+      "rule": "need_to_know_access_only"
+    },
+    {
+      "id": "NG-007",
+      "risk": "Official Toastmasters boundary broken",
+      "status": "Blocked",
+      "owner": "Toastmasters launch lead",
+      "trigger": "Forms, member numbers, signatures, payments, or charter records enter public/pilot package",
+      "response": "Move to official route and pause pilot",
+      "rule": "official_records_external"
+    },
+    {
+      "id": "NG-008",
+      "risk": "Incident pause path missing",
+      "status": "Blocked",
+      "owner": "Safety reviewer",
+      "trigger": "No owner can pause intake, support participant, or run breach/cultural safety escalation",
+      "response": "Hold activation until tabletop passes",
+      "rule": "incident_pause_required"
+    },
+    {
+      "id": "NG-009",
+      "risk": "Withdrawal/correction fails",
+      "status": "Blocked",
+      "owner": "Privacy reviewer",
+      "trigger": "Participant cannot withdraw or correct private record",
+      "response": "Hold intake until route is tested",
+      "rule": "withdrawal_correction_required"
+    },
+    {
+      "id": "NG-010",
+      "risk": "Provider receives real data too early",
+      "status": "Blocked",
+      "owner": "Build delivery lead",
+      "trigger": "Provider gets real export before authority, contract, privacy, and access pass",
+      "response": "Deny export and use fake/sample package only",
+      "rule": "provider_fake_data_only"
+    },
+    {
+      "id": "NG-011",
+      "risk": "Public learning identifies someone",
+      "status": "Hold",
+      "owner": "QA reviewer",
+      "trigger": "Small sample or contextual wording can identify a founder, participant, support need, or incident",
+      "response": "Rewrite as aggregate or hold public update",
+      "rule": "redaction_threshold_required"
+    },
+    {
+      "id": "NG-012",
+      "risk": "Backup/delete/restore untested",
+      "status": "Hold",
+      "owner": "Technical custodian",
+      "trigger": "Team cannot prove recovery, export, deletion, or retention pathway",
+      "response": "Run drill before activation",
+      "rule": "technical_recovery_required"
+    },
+    {
+      "id": "NG-013",
+      "risk": "Support route unstaffed",
+      "status": "Hold",
+      "owner": "Access support contact",
+      "trigger": "No response owner or response clock for support, withdrawal, correction, or access needs",
+      "response": "Staff support route or hold",
+      "rule": "participant_support_required"
+    },
+    {
+      "id": "NG-014",
+      "risk": "Closeout trigger missing",
+      "status": "Hold",
+      "owner": "Data reviewer",
+      "trigger": "Pilot has no review date, retention/deletion rule, or closeout owner",
+      "response": "Add closeout trigger before activation",
+      "rule": "closeout_required"
+    },
+    {
+      "id": "NG-015",
+      "risk": "Scale starts without closeout",
+      "status": "Blocked",
+      "owner": "Pilot authority",
+      "trigger": "Second pilot, provider handoff, or broader rollout starts before closeout and authority record",
+      "response": "No-go scale path until closeout and authority pass",
+      "rule": "scale_requires_closeout"
+    },
+    {
+      "id": "NG-016",
+      "risk": "Decision record incomplete",
+      "status": "Blocked",
+      "owner": "Pilot authority",
+      "trigger": "Go/hold/no-go record lacks conditions, expiry, owner, no-go triggers, or monitoring schedule",
+      "response": "Hold activation until decision record is complete",
+      "rule": "decision_record_required"
+    },
+    {
+      "id": "NG-017",
+      "risk": "First-72-hour monitor absent",
+      "status": "Blocked",
+      "owner": "Pilot operator",
+      "trigger": "No hour 0-72 checks or authority checkpoint after activation",
+      "response": "Hold activation or pause at hour 0",
+      "rule": "early_monitor_required"
+    },
+    {
+      "id": "NG-018",
+      "risk": "Control tower not reviewed",
+      "status": "Hold",
+      "owner": "Pilot authority",
+      "trigger": "No single review of stage status, dependencies, blockers, owners, and evidence before decision",
+      "response": "Run v3.3 control tower review first",
+      "rule": "single_control_view_required"
+    }
+  ],
+  "evidenceStatus": [
+    {
+      "id": "EV-001",
+      "domain": "Public package QA",
+      "status": "Ready",
+      "classification": "Public safe",
+      "owner": "QA reviewer",
+      "evidence": "Release validation, HTTP scan, screenshots, no console errors",
+      "publicRule": "Can publish public demo status"
+    },
+    {
+      "id": "EV-002",
+      "domain": "Manifest and document catalog",
+      "status": "Ready",
+      "classification": "Public safe",
+      "owner": "Demo steward",
+      "evidence": "Version, entrypoints, catalog paths, local links, release notes",
+      "publicRule": "Can support reviewer navigation"
+    },
+    {
+      "id": "EV-003",
+      "domain": "Organisation boundary evidence",
+      "status": "Ready",
+      "classification": "Public safe",
+      "owner": "Organisation onboarding lead",
+      "evidence": "v2.5 onboarding tracks and data boundary",
+      "publicRule": "Can discuss join/support models"
+    },
+    {
+      "id": "EV-004",
+      "domain": "Private readiness evidence",
+      "status": "Hold",
+      "classification": "Private restricted",
+      "owner": "Pilot readiness lead",
+      "evidence": "Real readiness gate evidence belongs privately",
+      "publicRule": "Do not claim real readiness publicly"
+    },
+    {
+      "id": "EV-005",
+      "domain": "Operations rehearsal evidence",
+      "status": "Hold",
+      "classification": "Private restricted",
+      "owner": "Pilot operator",
+      "evidence": "Run-day and incident rehearsal evidence belongs privately",
+      "publicRule": "Do not publish participant states"
+    },
+    {
+      "id": "EV-006",
+      "domain": "Implementation environment proof",
+      "status": "Blocked",
+      "classification": "Never public",
+      "owner": "Technical custodian",
+      "evidence": "Access logs, backups, restore drill, admin roles, hosting decision",
+      "publicRule": "Cannot activate without private proof"
+    },
+    {
+      "id": "EV-007",
+      "domain": "Authority decision record",
+      "status": "Blocked",
+      "classification": "Never public",
+      "owner": "Pilot authority",
+      "evidence": "Quorum, delegation, decision, conditions, expiry, stop triggers",
+      "publicRule": "Cannot substitute public status for authority"
+    },
+    {
+      "id": "EV-008",
+      "domain": "IDS/data governance record",
+      "status": "Blocked",
+      "classification": "Private restricted",
+      "owner": "Data reviewer",
+      "evidence": "Data classes, purpose, benefit, retention, deletion, reporting",
+      "publicRule": "Cannot collect real data without approval"
+    },
+    {
+      "id": "EV-009",
+      "domain": "Privacy/PIA record",
+      "status": "Blocked",
+      "classification": "Private restricted",
+      "owner": "Privacy reviewer",
+      "evidence": "Notice, consent, withdrawal, correction, incident response, retention",
+      "publicRule": "Cannot open real intake without approval"
+    },
+    {
+      "id": "EV-010",
+      "domain": "Official Toastmasters evidence",
+      "status": "Blocked",
+      "classification": "Never public",
+      "owner": "Toastmasters launch lead",
+      "evidence": "Official forms, payments, member numbers, signatures, charter records",
+      "publicRule": "Must remain external"
+    },
+    {
+      "id": "EV-011",
+      "domain": "Incident and breach evidence",
+      "status": "Blocked",
+      "classification": "Never public",
+      "owner": "Safety reviewer",
+      "evidence": "Incident facts, access logs, affected people, assessment, escalation",
+      "publicRule": "Public only gets status"
+    },
+    {
+      "id": "EV-012",
+      "domain": "Provider boundary evidence",
+      "status": "Hold",
+      "classification": "Private restricted",
+      "owner": "Build delivery lead",
+      "evidence": "Contract, access limits, fake handoff, no production export",
+      "publicRule": "No real export before approval"
+    },
+    {
+      "id": "EV-013",
+      "domain": "Monitoring evidence",
+      "status": "Blocked",
+      "classification": "Private restricted",
+      "owner": "Pilot operator",
+      "evidence": "Hour 0-72 check results and authority checkpoint",
+      "publicRule": "Cannot continue activation without monitor"
+    },
+    {
+      "id": "EV-014",
+      "domain": "Closeout/archive evidence",
+      "status": "Hold",
+      "classification": "Private restricted",
+      "owner": "Data reviewer",
+      "evidence": "Deletion, retention, archive, revocation, closeout review",
+      "publicRule": "Required before repeat or scale"
+    }
+  ],
+  "ownerActions": [
+    {
+      "id": "OA-001",
+      "owner": "Pilot authority",
+      "action": "Run Control Tower review",
+      "status": "Required",
+      "due": "Before any activation decision",
+      "detail": "Confirm stage statuses, blockers, dependencies, signoff, and no-go triggers",
+      "doneSignal": "Decision record complete"
+    },
+    {
+      "id": "OA-002",
+      "owner": "Governance reviewer",
+      "action": "Confirm authority pathway",
+      "status": "Required",
+      "due": "Before activation drill",
+      "detail": "Confirm First Nations authority, quorum, delegation, and escalation",
+      "doneSignal": "Authority path approved"
+    },
+    {
+      "id": "OA-003",
+      "owner": "Data reviewer",
+      "action": "Close IDS/data governance holds",
+      "status": "Required",
+      "due": "Before intake",
+      "detail": "Approve data classes, access, retention, deletion, reporting, and benefit",
+      "doneSignal": "Data governance pass"
+    },
+    {
+      "id": "OA-004",
+      "owner": "Privacy reviewer",
+      "action": "Close PIA and notice holds",
+      "status": "Required",
+      "due": "Before intake",
+      "detail": "Approve notice, consent, withdrawal, correction, retention, and incident route",
+      "doneSignal": "Privacy signoff"
+    },
+    {
+      "id": "OA-005",
+      "owner": "Technical custodian",
+      "action": "Prove private environment",
+      "status": "Required",
+      "due": "Before activation drill",
+      "detail": "Run access, MFA, backup, export, delete, restore, log, and revoke checks",
+      "doneSignal": "Environment proof private"
+    },
+    {
+      "id": "OA-006",
+      "owner": "Safety reviewer",
+      "action": "Run incident/breach tabletop",
+      "status": "Required",
+      "due": "Before activation decision",
+      "detail": "Confirm pause, support, escalation, breach assessment, and cultural safety pathway",
+      "doneSignal": "Tabletop passed"
+    },
+    {
+      "id": "OA-007",
+      "owner": "Toastmasters launch lead",
+      "action": "Confirm official boundary",
+      "status": "Required",
+      "due": "Before intake",
+      "detail": "Keep membership, chartering, signatures, payments, and member numbers external",
+      "doneSignal": "Boundary pass"
+    },
+    {
+      "id": "OA-008",
+      "owner": "QA reviewer",
+      "action": "Run public redaction QA",
+      "status": "Required",
+      "due": "Each release and public update",
+      "detail": "Check screenshots, CSV, JSON, docs, and public wording",
+      "doneSignal": "Public-safe pass"
+    },
+    {
+      "id": "OA-009",
+      "owner": "Access support contact",
+      "action": "Staff support route",
+      "status": "Hold",
+      "due": "Before real participant contact",
+      "detail": "Set response clocks for support, withdrawal, correction, and access needs",
+      "doneSignal": "Support path ready"
+    },
+    {
+      "id": "OA-010",
+      "owner": "Build delivery lead",
+      "action": "Keep provider in fake-data lane",
+      "status": "Hold",
+      "due": "Before provider handoff",
+      "detail": "Use fake/sample package until contract, authority, privacy, and access pass",
+      "doneSignal": "Provider boundary pass"
+    },
+    {
+      "id": "OA-011",
+      "owner": "Pilot operator",
+      "action": "Schedule first-72-hour monitor",
+      "status": "Required",
+      "due": "Before activation",
+      "detail": "Schedule hour 0,2,4,8,12,24,36,48,72 and week 1 checks",
+      "doneSignal": "Monitor schedule ready"
+    },
+    {
+      "id": "OA-012",
+      "owner": "Data reviewer",
+      "action": "Set closeout/archive trigger",
+      "status": "Hold",
+      "due": "Before activation",
+      "detail": "Set review date, delete/retain/archive owner, and evidence rule",
+      "doneSignal": "Closeout trigger ready"
+    }
+  ],
+  "decisionRoutes": [
+    {
+      "id": "ROUTE-001",
+      "route": "Use public demo only",
+      "status": "Ready",
+      "when": "Public review can continue with fake/sample data only",
+      "nextAction": "Share public links and collect non-sensitive feedback",
+      "noGo": "Real data enters public demo"
+    },
+    {
+      "id": "ROUTE-002",
+      "route": "Hold for authority approval",
+      "status": "Hold",
+      "when": "Authority, IDS, privacy, or official boundary not approved",
+      "nextAction": "Use v3.1 authority page and private approval record",
+      "noGo": "Developer or provider decides alone"
+    },
+    {
+      "id": "ROUTE-003",
+      "route": "Hold for activation drill",
+      "status": "Hold",
+      "when": "Authority model exists but signoff/tabletop/evidence/monitoring not rehearsed",
+      "nextAction": "Use v3.2 activation drill and private decision record",
+      "noGo": "Activation opens without drill"
+    },
+    {
+      "id": "ROUTE-004",
+      "route": "Prepare private environment",
+      "status": "Hold",
+      "when": "Technical proof is missing or stale",
+      "nextAction": "Run private workspace/access/backup/delete/restore drill",
+      "noGo": "Static site becomes system of record"
+    },
+    {
+      "id": "ROUTE-005",
+      "route": "Provider quote with fake data",
+      "status": "Ready",
+      "when": "Provider help needed but no real data access approved",
+      "nextAction": "Send v3.3 public package and fake/sample scope only",
+      "noGo": "Provider gets production export"
+    },
+    {
+      "id": "ROUTE-006",
+      "route": "No-go real activation",
+      "status": "Blocked",
+      "when": "Any blocked no-go trigger is present",
+      "nextAction": "Stop real intake, fix blocker, rerun control tower review",
+      "noGo": "Proceed despite blocked no-go"
+    },
+    {
+      "id": "ROUTE-007",
+      "route": "Conditional activation",
+      "status": "Hold",
+      "when": "All blocked items closed but support/provider/advice/closeout conditions remain",
+      "nextAction": "Record conditions, expiry, owners, and 72-hour monitor",
+      "noGo": "Conditions have no owner or expiry"
+    },
+    {
+      "id": "ROUTE-008",
+      "route": "Approve limited private pilot",
+      "status": "Ready",
+      "when": "All required private evidence, signoffs, drill tasks, and monitoring checks pass",
+      "nextAction": "Open limited private intake with 72-hour authority checkpoint",
+      "noGo": "Activation expands beyond approved scope"
+    }
+  ]
+}

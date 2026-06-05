@@ -318,6 +318,7 @@
     <a class="btn" href="private-pilot-closeout.html">Pilot Closeout</a>
     <a class="btn" href="private-pilot-authority.html">Authority Approval</a>
     <a class="btn" href="private-pilot-activation-drill.html">Activation Drill</a>
+    <a class="btn" href="pilot-control-tower.html">Control Tower</a>
     <a class="btn" href="index.html">Open Demo</a>
     <div class="label">Public demo - fake data only</div>
   </header>
@@ -415,6 +416,10 @@
       <a href="#activationdrill">
         <strong>Activation Drill</strong>
         <span>Rehearse signoff, tabletop scenarios, evidence packet, decision record, and first-72-hour monitoring.</span>
+      </a>
+      <a href="#controltower">
+        <strong>Control Tower</strong>
+        <span>Review stage readiness, blockers, evidence, owners, and decision routes in one place.</span>
       </a>
       <a href="#governance">
         <strong>Governance/Data</strong>
@@ -579,6 +584,13 @@
         </div>
         <div class="doc-row">
           <div>
+            <strong>Pilot Control Tower</strong>
+            <span>Stage readiness, dependencies, consolidated no-go triggers, evidence status, owner actions, and decision routes.</span>
+          </div>
+          <a class="btn primary" href="pilot-control-tower.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
             <strong>Public demo prototype</strong>
             <span>Sample Decidim-style participatory process.</span>
           </div>
@@ -608,9 +620,9 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v3.2 Activation Drill & Decision Record upgrade.</span>
+            <span>What changed in the v3.3 Pilot Control Tower upgrade.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v3.2.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v3.3.md">Open</a>
         </div>
       </div>
     </section>
@@ -969,6 +981,30 @@
         <div class="doc-row"><div><strong>Monitoring checks CSV</strong><span>Ten first-72-hour monitoring checks.</span></div><a class="btn" href="data/activation-monitoring-checks-v3.2.csv">Open</a></div>
         <div class="doc-row"><div><strong>Activation drill package JSON</strong><span>Machine-readable v3.2 activation drill package summary, counts, no-go triggers, source anchors, and control arrays.</span></div><a class="btn" href="data/private-pilot-activation-drill-package-v3.2.json">Open</a></div>
         <div class="doc-row"><div><strong>Release notes v3.2</strong><span>What changed in the Activation Drill & Decision Record upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v3.2.md">Open</a></div>
+        <div class="doc-row"><div><strong>Pilot Control Tower</strong><span>Consolidate stage readiness, dependencies, blockers, evidence, owners, and decision routes.</span></div><a class="btn primary" href="pilot-control-tower.html">Open</a></div>
+      </div>
+    </section>
+    <section id="controltower">
+      <div class="section-head">
+        <div>
+          <h2>Pilot Control Tower</h2>
+          <p>Use these files as the single public-safe executive review layer before any real private pilot decision.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Pilot Control Tower</strong><span>Interactive stage readiness, dependency, no-go, evidence, owner action, and route view.</span></div><a class="btn primary" href="pilot-control-tower.html">Open</a></div>
+        <div class="doc-row"><div><strong>Control Tower playbook v3.3</strong><span>How to run the consolidated review.</span></div><a class="btn" href="docs/pilot-control-tower-playbook-v3.3.md">Open</a></div>
+        <div class="doc-row"><div><strong>Executive review agenda v3.3</strong><span>Meeting path for status, blockers, owners, and decisions.</span></div><a class="btn" href="docs/control-tower-executive-review-agenda-v3.3.md">Open</a></div>
+        <div class="doc-row"><div><strong>Consolidated no-go register v3.3</strong><span>Blocker rules and response paths.</span></div><a class="btn" href="docs/consolidated-no-go-register-v3.3.md">Open</a></div>
+        <div class="doc-row"><div><strong>Decision brief template v3.3</strong><span>Public-safe proceed, hold, or no-go summary.</span></div><a class="btn" href="docs/control-tower-decision-brief-template-v3.3.md">Open</a></div>
+        <div class="doc-row"><div><strong>Stage readiness CSV</strong><span>Twelve pathway stage status rows.</span></div><a class="btn" href="data/control-tower-stage-readiness-v3.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Dependency map CSV</strong><span>Sixteen dependency rows.</span></div><a class="btn" href="data/control-tower-dependency-map-v3.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Consolidated no-go CSV</strong><span>Eighteen consolidated no-go triggers.</span></div><a class="btn" href="data/consolidated-no-go-register-v3.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Evidence status CSV</strong><span>Fourteen evidence domains.</span></div><a class="btn" href="data/control-tower-evidence-status-v3.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Owner actions CSV</strong><span>Twelve owner action rows.</span></div><a class="btn" href="data/control-tower-owner-actions-v3.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Decision routes CSV</strong><span>Eight decision route options.</span></div><a class="btn" href="data/control-tower-decision-routes-v3.3.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Control Tower package JSON</strong><span>Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays.</span></div><a class="btn" href="data/pilot-control-tower-package-v3.3.json">Open</a></div>
+        <div class="doc-row"><div><strong>Release notes v3.3</strong><span>What changed in the Pilot Control Tower upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v3.3.md">Open</a></div>
       </div>
     </section>
     <section id="contributors">
@@ -1085,7 +1121,7 @@
     </section>
 
     <footer>
-      Version v3.2. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v3.3. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
   <script>

@@ -1,0 +1,15 @@
+id,domain,status,classification,owner,evidence,publicRule
+EV-001,Public package QA,Ready,Public safe,QA reviewer,"Release validation, HTTP scan, screenshots, no console errors",Can publish public demo status
+EV-002,Manifest and document catalog,Ready,Public safe,Demo steward,"Version, entrypoints, catalog paths, local links, release notes",Can support reviewer navigation
+EV-003,Organisation boundary evidence,Ready,Public safe,Organisation onboarding lead,v2.5 onboarding tracks and data boundary,Can discuss join/support models
+EV-004,Private readiness evidence,Hold,Private restricted,Pilot readiness lead,Real readiness gate evidence belongs privately,Do not claim real readiness publicly
+EV-005,Operations rehearsal evidence,Hold,Private restricted,Pilot operator,Run-day and incident rehearsal evidence belongs privately,Do not publish participant states
+EV-006,Implementation environment proof,Blocked,Never public,Technical custodian,"Access logs, backups, restore drill, admin roles, hosting decision",Cannot activate without private proof
+EV-007,Authority decision record,Blocked,Never public,Pilot authority,"Quorum, delegation, decision, conditions, expiry, stop triggers",Cannot substitute public status for authority
+EV-008,IDS/data governance record,Blocked,Private restricted,Data reviewer,"Data classes, purpose, benefit, retention, deletion, reporting",Cannot collect real data without approval
+EV-009,Privacy/PIA record,Blocked,Private restricted,Privacy reviewer,"Notice, consent, withdrawal, correction, incident response, retention",Cannot open real intake without approval
+EV-010,Official Toastmasters evidence,Blocked,Never public,Toastmasters launch lead,"Official forms, payments, member numbers, signatures, charter records",Must remain external
+EV-011,Incident and breach evidence,Blocked,Never public,Safety reviewer,"Incident facts, access logs, affected people, assessment, escalation",Public only gets status
+EV-012,Provider boundary evidence,Hold,Private restricted,Build delivery lead,"Contract, access limits, fake handoff, no production export",No real export before approval
+EV-013,Monitoring evidence,Blocked,Private restricted,Pilot operator,Hour 0-72 check results and authority checkpoint,Cannot continue activation without monitor
+EV-014,Closeout/archive evidence,Hold,Private restricted,Data reviewer,"Deletion, retention, archive, revocation, closeout review",Required before repeat or scale

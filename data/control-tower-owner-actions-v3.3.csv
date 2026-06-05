@@ -1,0 +1,13 @@
+id,owner,action,status,due,detail,doneSignal
+OA-001,Pilot authority,Run Control Tower review,Required,Before any activation decision,"Confirm stage statuses, blockers, dependencies, signoff, and no-go triggers",Decision record complete
+OA-002,Governance reviewer,Confirm authority pathway,Required,Before activation drill,"Confirm First Nations authority, quorum, delegation, and escalation",Authority path approved
+OA-003,Data reviewer,Close IDS/data governance holds,Required,Before intake,"Approve data classes, access, retention, deletion, reporting, and benefit",Data governance pass
+OA-004,Privacy reviewer,Close PIA and notice holds,Required,Before intake,"Approve notice, consent, withdrawal, correction, retention, and incident route",Privacy signoff
+OA-005,Technical custodian,Prove private environment,Required,Before activation drill,"Run access, MFA, backup, export, delete, restore, log, and revoke checks",Environment proof private
+OA-006,Safety reviewer,Run incident/breach tabletop,Required,Before activation decision,"Confirm pause, support, escalation, breach assessment, and cultural safety pathway",Tabletop passed
+OA-007,Toastmasters launch lead,Confirm official boundary,Required,Before intake,"Keep membership, chartering, signatures, payments, and member numbers external",Boundary pass
+OA-008,QA reviewer,Run public redaction QA,Required,Each release and public update,"Check screenshots, CSV, JSON, docs, and public wording",Public-safe pass
+OA-009,Access support contact,Staff support route,Hold,Before real participant contact,"Set response clocks for support, withdrawal, correction, and access needs",Support path ready
+OA-010,Build delivery lead,Keep provider in fake-data lane,Hold,Before provider handoff,"Use fake/sample package until contract, authority, privacy, and access pass",Provider boundary pass
+OA-011,Pilot operator,Schedule first-72-hour monitor,Required,Before activation,"Schedule hour 0,2,4,8,12,24,36,48,72 and week 1 checks",Monitor schedule ready
+OA-012,Data reviewer,Set closeout/archive trigger,Hold,Before activation,"Set review date, delete/retain/archive owner, and evidence rule",Closeout trigger ready

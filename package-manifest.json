@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "3.2",
+  "version": "3.3",
   "date": "2026-06-05",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, Build Delivery Control, Organisation Onboarding, Private Pilot Readiness, Pilot Operations Control, Private Pilot Implementation, Private Pilot Launch Control, Private Pilot Closeout Decision, Private Pilot Authority Approval, and Activation Drill & Decision Record in sequence. Pilot Launch and Activation Drill are public fake/sample templates only; any real private pilot needs a separate approved private environment, named operators, role access, privacy notice, consent and withdrawal, incident response, official handoff, retention, deletion, closeout evidence, authority approval, Indigenous Data Sovereignty review, privacy impact decision, role access register, participant notice/consent, private environment activation, signoff matrix, tabletop scenarios, evidence packet, activation decision record, and first-72-hour monitoring.",
+  "recommendedDecision": "Use Pilot Control Tower as the default review front door, then follow the sequence through Organisation Onboarding, Private Pilot Readiness, Pilot Operations Control, Private Pilot Implementation, Private Pilot Launch Control, Private Pilot Closeout Decision, Private Pilot Authority Approval, and Activation Drill & Decision Record. Any real private pilot still needs a separate approved private environment, named operators, authority quorum, IDS/data governance review, privacy impact decision, role access register, participant notice/consent, private environment activation, signoff matrix, tabletop scenarios, evidence packet, activation decision record, first-72-hour monitoring, and closeout/archive trigger.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -189,13 +189,26 @@
     "data/activation-evidence-packet-v3.2.csv",
     "data/activation-rehearsal-tasks-v3.2.csv",
     "data/activation-monitoring-checks-v3.2.csv",
-    "data/private-pilot-activation-drill-package-v3.2.json"
+    "data/private-pilot-activation-drill-package-v3.2.json",
+    "pilot-control-tower.html",
+    "docs/pilot-control-tower-playbook-v3.3.md",
+    "docs/control-tower-executive-review-agenda-v3.3.md",
+    "docs/consolidated-no-go-register-v3.3.md",
+    "docs/control-tower-decision-brief-template-v3.3.md",
+    "docs/public-demo-release-notes-v3.3.md",
+    "data/control-tower-stage-readiness-v3.3.csv",
+    "data/control-tower-dependency-map-v3.3.csv",
+    "data/consolidated-no-go-register-v3.3.csv",
+    "data/control-tower-evidence-status-v3.3.csv",
+    "data/control-tower-owner-actions-v3.3.csv",
+    "data/control-tower-decision-routes-v3.3.csv",
+    "data/pilot-control-tower-package-v3.3.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v3.2.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.3.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -347,7 +360,17 @@
       "qa-v32-deployed-private-pilot-activation-drill-required-desktop.png",
       "qa-v32-deployed-private-pilot-activation-drill-nogo-desktop.png",
       "qa-v32-deployed-private-pilot-activation-drill-mobile.png",
-      "qa-v32-deployed-private-pilot-activation-drill-package-mobile.png"
+      "qa-v32-deployed-private-pilot-activation-drill-package-mobile.png",
+      "qa-v33-local-pilot-control-tower-desktop.png",
+      "qa-v33-local-pilot-control-tower-ready-desktop.png",
+      "qa-v33-local-pilot-control-tower-blocked-desktop.png",
+      "qa-v33-local-pilot-control-tower-mobile.png",
+      "qa-v33-local-pilot-control-tower-package-mobile.png",
+      "qa-v33-deployed-pilot-control-tower-desktop.png",
+      "qa-v33-deployed-pilot-control-tower-ready-desktop.png",
+      "qa-v33-deployed-pilot-control-tower-blocked-desktop.png",
+      "qa-v33-deployed-pilot-control-tower-mobile.png",
+      "qa-v33-deployed-pilot-control-tower-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -1184,6 +1207,21 @@
       "data/activation-rehearsal-tasks-v3.2.csv",
       "data/activation-monitoring-checks-v3.2.csv",
       "data/private-pilot-activation-drill-package-v3.2.json"
+    ],
+    "pilotControlTower": [
+      "pilot-control-tower.html",
+      "docs/pilot-control-tower-playbook-v3.3.md",
+      "docs/control-tower-executive-review-agenda-v3.3.md",
+      "docs/consolidated-no-go-register-v3.3.md",
+      "docs/control-tower-decision-brief-template-v3.3.md",
+      "docs/public-demo-release-notes-v3.3.md",
+      "data/control-tower-stage-readiness-v3.3.csv",
+      "data/control-tower-dependency-map-v3.3.csv",
+      "data/consolidated-no-go-register-v3.3.csv",
+      "data/control-tower-evidence-status-v3.3.csv",
+      "data/control-tower-owner-actions-v3.3.csv",
+      "data/control-tower-decision-routes-v3.3.csv",
+      "data/pilot-control-tower-package-v3.3.json"
     ]
   },
   "safetyRules": [
@@ -1219,7 +1257,9 @@
     "No real private pilot intake, private Decidim workspace, provider handoff, or second-pilot scale path should proceed until authority, Indigenous Data Sovereignty, privacy impact, role access, notice/consent, private environment activation, and scale criteria are approved.",
     "Developer custody and repository maintainership do not equal First Nations community authority.",
     "Activation Drill & Decision Record is a public fake/sample template only; it must not collect or expose real names, emails, access needs, incidents, official Toastmasters records, member numbers, payments, signatures, authority records, access logs, decision records, or private pilot evidence.",
-    "No real private pilot intake should proceed until activation drill, signoff matrix, tabletop scenarios, evidence packet, rehearsal tasks, first-72-hour monitoring checks, and recorded go/hold/no-go decision have passed."
+    "No real private pilot intake should proceed until activation drill, signoff matrix, tabletop scenarios, evidence packet, rehearsal tasks, first-72-hour monitoring checks, and recorded go/hold/no-go decision have passed.",
+    "Pilot Control Tower is a public fake/sample template only; it must not collect or expose real names, emails, access needs, incidents, official Toastmasters records, member numbers, payments, signatures, authority records, access logs, decision records, or private pilot evidence.",
+    "No real private pilot decision should be made from any single page; use the Control Tower to review stage status, blockers, dependencies, evidence classes, owners, and decision route first."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -1987,5 +2027,107 @@
     ],
     "safetyRule": "This public v3.2 activation drill package is fake/sample only. It must not collect or expose real names, emails, access needs, incidents, official Toastmasters records, member numbers, payments, signatures, authority records, access logs, decision records, or private pilot evidence.",
     "activationRule": "Do not open real private pilot intake until the activation drill, signoff matrix, tabletop scenarios, evidence packet, rehearsal tasks, first-72-hour monitoring checks, and recorded go/hold/no-go decision have passed."
+  },
+  "pilotControlTower": {
+    "entrypoint": "pilot-control-tower.html",
+    "playbook": "docs/pilot-control-tower-playbook-v3.3.md",
+    "executiveAgenda": "docs/control-tower-executive-review-agenda-v3.3.md",
+    "blockerRegister": "docs/consolidated-no-go-register-v3.3.md",
+    "decisionBrief": "docs/control-tower-decision-brief-template-v3.3.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.3.md",
+    "dataFiles": [
+      "data/control-tower-stage-readiness-v3.3.csv",
+      "data/control-tower-dependency-map-v3.3.csv",
+      "data/consolidated-no-go-register-v3.3.csv",
+      "data/control-tower-evidence-status-v3.3.csv",
+      "data/control-tower-owner-actions-v3.3.csv",
+      "data/control-tower-decision-routes-v3.3.csv",
+      "data/pilot-control-tower-package-v3.3.json"
+    ],
+    "counts": {
+      "stageReadiness": 12,
+      "dependencies": 16,
+      "consolidatedNoGo": 18,
+      "evidenceDomains": 14,
+      "ownerActions": 12,
+      "decisionRoutes": 8,
+      "controlRecords": 80,
+      "readyStages": 7,
+      "holdStages": 4,
+      "blockedStages": 1,
+      "blockedNoGo": 13,
+      "requiredOwnerActions": 9
+    },
+    "noGoTriggers": [
+      "NG-001: Any real name, email, phone, address, access need, incident detail, payment, member number, signature, authority record, or official Toastmasters record in public files",
+      "NG-002: No named First Nations authority or quorum for activation decision",
+      "NG-003: Data classes, purpose, access, retention, deletion, or reporting not approved",
+      "NG-004: Notice, consent, withdrawal, correction, PIA, retention, or incident response is incomplete",
+      "NG-005: No approved workspace, access register, MFA, backup, export, delete, restore, or logs",
+      "NG-006: No-private-access roles, provider, supporter, or public reviewer can see private records",
+      "NG-007: Forms, member numbers, signatures, payments, or charter records enter public/pilot package",
+      "NG-008: No owner can pause intake, support participant, or run breach/cultural safety escalation",
+      "NG-009: Participant cannot withdraw or correct private record",
+      "NG-010: Provider gets real export before authority, contract, privacy, and access pass",
+      "NG-015: Second pilot, provider handoff, or broader rollout starts before closeout and authority record",
+      "NG-016: Go/hold/no-go record lacks conditions, expiry, owner, no-go triggers, or monitoring schedule",
+      "NG-017: No hour 0-72 checks or authority checkpoint after activation"
+    ],
+    "sourceAnchors": [
+      {
+        "label": "Barayamal Toastmasters First Nations",
+        "url": "https://barayamal.com.au/toastmasters-first-nations/"
+      },
+      {
+        "label": "Toastmasters Start a Club",
+        "url": "https://www.toastmasters.org/Start-a-Club"
+      },
+      {
+        "label": "Toastmasters Club Charter Requirements Form",
+        "url": "https://content.toastmasters.org/image/upload/ATO-club-chartering-requirements-ff.pdf"
+      },
+      {
+        "label": "Toastmasters Governing Documents",
+        "url": "https://www.toastmasters.org/resources/governing-documents"
+      },
+      {
+        "label": "Maiam nayri Wingara Indigenous Data Sovereignty",
+        "url": "https://www.maiamnayriwingara.org/"
+      },
+      {
+        "label": "AIATSIS ethical research",
+        "url": "https://aiatsis.gov.au/research/ethical-research"
+      },
+      {
+        "label": "NHMRC Aboriginal and Torres Strait Islander research ethics",
+        "url": "https://www.nhmrc.gov.au/research-policy/ethics/ethical-guidelines-research-aboriginal-and-torres-strait-islander-peoples"
+      },
+      {
+        "label": "OAIC Australian Privacy Principles",
+        "url": "https://www.oaic.gov.au/privacy/australian-privacy-principles/"
+      },
+      {
+        "label": "OAIC privacy impact assessment guide",
+        "url": "https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/privacy-impact-assessments/guide-to-undertaking-privacy-impact-assessments"
+      },
+      {
+        "label": "OAIC Notifiable Data Breaches scheme",
+        "url": "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme"
+      },
+      {
+        "label": "Cyber.gov.au Essential Eight maturity model",
+        "url": "https://www.cyber.gov.au/resources-business-and-government/essential-cybersecurity/essential-eight/essential-eight-maturity-model"
+      },
+      {
+        "label": "Decidim administrators",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/admins.html"
+      },
+      {
+        "label": "Decidim permissions",
+        "url": "https://docs.decidim.org/en/develop/develop/permissions.html"
+      }
+    ],
+    "safetyRule": "This public v3.3 Control Tower is fake/sample only. It must not collect or expose real names, emails, access needs, incidents, official Toastmasters records, member numbers, payments, signatures, authority records, access logs, decision records, or private pilot evidence.",
+    "controlRule": "Do not make a real activation, provider handoff, or scale decision from any single page. Use the Control Tower to review stage status, blockers, dependencies, evidence classes, owners, and decision route first."
   }
 }

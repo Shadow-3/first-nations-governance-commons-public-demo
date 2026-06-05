@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v3.2
+Current package version: v3.3
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -55,6 +55,7 @@ Open `private-pilot-launch.html` to use Private Pilot Launch Control for control
 Open `private-pilot-closeout.html` to use Private Pilot Closeout Decision for closeout checks, scale decision options, evidence ledger, deletion/retention proof, and transition backlog before any repeat, archive, handoff, or wider rollout.
 Open `private-pilot-authority.html` to use Private Pilot Authority Approval for authority gates, Indigenous Data Sovereignty controls, privacy impact checks, role access, participant notice/consent, private environment activation, and second-pilot scale criteria before any real intake opens.
 Open `private-pilot-activation-drill.html` to use Activation Drill & Decision Record for the approval meeting rehearsal, signoff matrix, incident tabletop, evidence packet, fake-data activation drill, and first-72-hour monitoring before real intake opens.
+Open `pilot-control-tower.html` to use Pilot Control Tower for the consolidated stage, dependency, no-go, evidence, owner action, and decision-route review before any real private pilot decision.
 
 The demo shows:
 
@@ -86,6 +87,19 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v3.3.md`
+- `docs/pilot-control-tower-playbook-v3.3.md`
+- `docs/control-tower-executive-review-agenda-v3.3.md`
+- `docs/consolidated-no-go-register-v3.3.md`
+- `docs/control-tower-decision-brief-template-v3.3.md`
+- `data/control-tower-stage-readiness-v3.3.csv`
+- `data/control-tower-dependency-map-v3.3.csv`
+- `data/consolidated-no-go-register-v3.3.csv`
+- `data/control-tower-evidence-status-v3.3.csv`
+- `data/control-tower-owner-actions-v3.3.csv`
+- `data/control-tower-decision-routes-v3.3.csv`
+- `data/pilot-control-tower-package-v3.3.json`
+
 - `docs/public-demo-release-notes-v3.2.md`
 - `docs/private-pilot-activation-drill-playbook-v3.2.md`
 - `docs/toastmasters-private-pilot-activation-drill-plan-v3.2.md`
@@ -771,6 +785,23 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v3.3 Pilot Control Tower Upgrade
+
+The v3.3 package adds the single executive control view needed after the activation drill:
+
+- Interactive Pilot Control Tower page.
+- Twelve stage readiness rows.
+- Sixteen dependency rows.
+- Eighteen consolidated no-go triggers.
+- Fourteen evidence status domains.
+- Twelve owner action rows.
+- Eight decision route options.
+- Browser-generated Control Tower brief.
+- Playbook, executive review agenda, consolidated no-go register, decision brief template, CSV files, and machine-readable JSON package.
+
+Use this version as the default review front door after v3.2 activation drill. The Control Tower still uses public fake/sample templates only. Real activation requires a separate approved private environment, authority quorum, IDS/data governance pass, privacy impact signoff, role access test, support route, incident pause path, official Toastmasters boundary, redaction QA, first-72-hour monitoring, and private decision evidence.
+
 
 ## v3.2 Activation Drill & Decision Record Upgrade
 

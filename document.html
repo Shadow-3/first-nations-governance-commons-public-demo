@@ -595,6 +595,7 @@
     <a class="btn" href="private-pilot-closeout.html">Pilot Closeout</a>
     <a class="btn" href="private-pilot-authority.html">Authority Approval</a>
     <a class="btn" href="private-pilot-activation-drill.html">Activation Drill</a>
+    <a class="btn" href="pilot-control-tower.html">Control Tower</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -645,6 +646,10 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Pilot Control Tower playbook", path: "docs/pilot-control-tower-playbook-v3.3.md", type: "markdown", description: "v3.3 consolidated stage, dependency, blocker, evidence, owner, and route review." },
+      { category: "Start Here", title: "Control Tower executive review agenda", path: "docs/control-tower-executive-review-agenda-v3.3.md", type: "markdown", description: "Meeting path for public-safe executive review." },
+      { category: "Start Here", title: "Consolidated no-go register", path: "docs/consolidated-no-go-register-v3.3.md", type: "markdown", description: "Blocker rules and response paths." },
+      { category: "Start Here", title: "Control Tower decision brief template", path: "docs/control-tower-decision-brief-template-v3.3.md", type: "markdown", description: "Public-safe proceed, hold, or no-go summary template." },
       { category: "Start Here", title: "Activation drill playbook", path: "docs/private-pilot-activation-drill-playbook-v3.2.md", type: "markdown", description: "v3.2 approval meeting, signoff, tabletop, evidence, and monitoring playbook." },
       { category: "Start Here", title: "Toastmasters activation drill plan", path: "docs/toastmasters-private-pilot-activation-drill-plan-v3.2.md", type: "markdown", description: "Controlled First Nations Toastmasters activation drill plan and official boundary." },
       { category: "Start Here", title: "Activation decision record template", path: "docs/activation-decision-record-template-v3.2.md", type: "markdown", description: "Go, hold, no-go, expiry, conditions, and public-safe status template." },
@@ -681,6 +686,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v3.3", path: "docs/public-demo-release-notes-v3.3.md", type: "markdown", description: "Pilot Control Tower upgrade summary." },
       { category: "Release Notes", title: "Release notes v3.2", path: "docs/public-demo-release-notes-v3.2.md", type: "markdown", description: "Activation Drill & Decision Record upgrade summary." },
       { category: "Release Notes", title: "Release notes v3.1", path: "docs/public-demo-release-notes-v3.1.md", type: "markdown", description: "Private Pilot Authority Approval upgrade summary." },
       { category: "Release Notes", title: "Release notes v3.0", path: "docs/public-demo-release-notes-v3.0.md", type: "markdown", description: "Private Pilot Closeout Decision upgrade summary." },
@@ -886,6 +892,17 @@
       { category: "Activation Drill & Decision Record", title: "Rehearsal tasks v3.2", path: "data/activation-rehearsal-tasks-v3.2.csv", type: "csv", description: "Twelve fake-data rehearsal tasks." },
       { category: "Activation Drill & Decision Record", title: "Monitoring checks v3.2", path: "data/activation-monitoring-checks-v3.2.csv", type: "csv", description: "Ten first-72-hour monitoring checks." },
       { category: "Activation Drill & Decision Record", title: "Activation drill package v3.2", path: "data/private-pilot-activation-drill-package-v3.2.json", type: "json", description: "Machine-readable v3.2 activation drill package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Pilot Control Tower", title: "Control Tower playbook v3.3", path: "docs/pilot-control-tower-playbook-v3.3.md", type: "markdown", description: "How to run the consolidated review." },
+      { category: "Pilot Control Tower", title: "Executive review agenda v3.3", path: "docs/control-tower-executive-review-agenda-v3.3.md", type: "markdown", description: "Meeting path for status, blockers, owners, and decisions." },
+      { category: "Pilot Control Tower", title: "Consolidated no-go register v3.3", path: "docs/consolidated-no-go-register-v3.3.md", type: "markdown", description: "Blocker rules and response paths." },
+      { category: "Pilot Control Tower", title: "Decision brief template v3.3", path: "docs/control-tower-decision-brief-template-v3.3.md", type: "markdown", description: "Public-safe proceed, hold, or no-go summary template." },
+      { category: "Pilot Control Tower", title: "Stage readiness v3.3", path: "data/control-tower-stage-readiness-v3.3.csv", type: "csv", description: "Twelve pathway stage status rows." },
+      { category: "Pilot Control Tower", title: "Dependency map v3.3", path: "data/control-tower-dependency-map-v3.3.csv", type: "csv", description: "Sixteen dependency rows." },
+      { category: "Pilot Control Tower", title: "Consolidated no-go register v3.3", path: "data/consolidated-no-go-register-v3.3.csv", type: "csv", description: "Eighteen consolidated no-go triggers." },
+      { category: "Pilot Control Tower", title: "Evidence status v3.3", path: "data/control-tower-evidence-status-v3.3.csv", type: "csv", description: "Fourteen evidence domains." },
+      { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
+      { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
+      { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
 
       { category: "Decision Pack", title: "Scope options and budget model", path: "docs/scope-options-and-budget-model-v0.7.md", type: "markdown", description: "MVP, pilot, and fuller build options." },
       { category: "Decision Pack", title: "RACI and decision rights", path: "docs/raci-and-decision-rights-v0.7.md", type: "markdown", description: "Ownership, consultation, and approval responsibilities." },
