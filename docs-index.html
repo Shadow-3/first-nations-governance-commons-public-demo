@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -312,6 +312,7 @@
     <a class="btn" href="build-delivery-control.html">Delivery Control</a>
     <a class="btn" href="organisation-onboarding.html">Org Onboarding</a>
     <a class="btn" href="private-pilot-readiness.html">Pilot Readiness</a>
+    <a class="btn" href="private-pilot-ops.html">Pilot Ops</a>
     <a class="btn" href="index.html">Open Demo</a>
     <div class="label">Public demo - fake data only</div>
   </header>
@@ -385,6 +386,10 @@
       <a href="#pilotreadiness">
         <strong>Pilot Readiness</strong>
         <span>Check private-pilot gates, test scenarios, role access, data transfer, and closeout.</span>
+      </a>
+      <a href="#pilotops">
+        <strong>Pilot Ops</strong>
+        <span>Run daily controls, participant states, incidents, official handoff, and closeout evidence.</span>
       </a>
       <a href="#governance">
         <strong>Governance/Data</strong>
@@ -507,6 +512,13 @@
         </div>
         <div class="doc-row">
           <div>
+            <strong>Pilot Operations Control</strong>
+            <span>Run-day operations checks, participant state rules, incident closeout, official handoff, and generated ops brief.</span>
+          </div>
+          <a class="btn primary" href="private-pilot-ops.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
             <strong>Public demo prototype</strong>
             <span>Sample Decidim-style participatory process.</span>
           </div>
@@ -536,9 +548,9 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v2.6 Private Pilot Readiness upgrade.</span>
+            <span>What changed in the v2.7 Pilot Operations Control upgrade.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v2.6.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v2.7.md">Open</a>
         </div>
       </div>
     </section>
@@ -760,6 +772,27 @@
         <div class="doc-row"><div><strong>Data transfer map CSV</strong><span>Twelve data classes with transfer rules and stop conditions.</span></div><a class="btn" href="data/private-pilot-data-transfer-map-v2.6.csv">Open</a></div>
         <div class="doc-row"><div><strong>Private pilot package JSON</strong><span>Machine-readable v2.6 package summary, counts, files, no-go triggers, sources, and safety rule.</span></div><a class="btn" href="data/private-pilot-package-v2.6.json">Open</a></div>
         <div class="doc-row"><div><strong>Release notes v2.6</strong><span>What changed in the Private Pilot Readiness upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v2.6.md">Open</a></div>
+        <div class="doc-row"><div><strong>Pilot Operations Control</strong><span>Move from readiness approval into run-day checks, participant states, incident closeout, official handoff, and deletion evidence.</span></div><a class="btn primary" href="private-pilot-ops.html">Open</a></div>
+      </div>
+    </section>
+
+    <section id="pilotops">
+      <div class="section-head">
+        <div>
+          <h2>Pilot Operations Control</h2>
+          <p>Use these files after v2.6 readiness approval and before any real private pilot operation.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Pilot Operations Control</strong><span>Interactive run-day checks, participant state rules, incident closeout, official handoff, and generated operations brief.</span></div><a class="btn primary" href="private-pilot-ops.html">Open</a></div>
+        <div class="doc-row"><div><strong>Private pilot operations runbook v2.7</strong><span>Daily start, intake, support, evidence, incident, decision, and closeout sequence.</span></div><a class="btn" href="docs/private-pilot-operations-runbook-v2.7.md">Open</a></div>
+        <div class="doc-row"><div><strong>Toastmasters private pilot ops script v2.7</strong><span>Controlled operations rehearsal for the First Nations Toastmasters sample.</span></div><a class="btn" href="docs/toastmasters-private-pilot-ops-script-v2.7.md">Open</a></div>
+        <div class="doc-row"><div><strong>Operations checklist CSV</strong><span>Sixteen run-day controls across authority, intake, consent, access, official handoff, payment, incident, evidence, and closeout.</span></div><a class="btn" href="data/private-pilot-operations-checklist-v2.7.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Participant state map CSV</strong><span>Twelve participant-state rules for public interest, demo-first, founder candidate, supporter, access request, withdrawal, incident, and aggregate summary.</span></div><a class="btn" href="data/private-pilot-participant-state-map-v2.7.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Incident closeout CSV</strong><span>Ten rehearsal rows for exposure, role access, meeting links, official forms, access needs, payment details, withdrawal, duplicate counts, retention, and public wording.</span></div><a class="btn" href="data/private-pilot-incident-closeout-log-v2.7.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Official handoff register CSV</strong><span>Eight rules for applications, roster, member number, payment, officer slate, demo attendance, supporter referrals, and redacted evidence.</span></div><a class="btn" href="data/private-pilot-official-handoff-register-v2.7.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Pilot ops package JSON</strong><span>Machine-readable v2.7 package summary, counts, files, no-go triggers, sources, safety rule, and run-day rule.</span></div><a class="btn" href="data/private-pilot-ops-package-v2.7.json">Open</a></div>
+        <div class="doc-row"><div><strong>Release notes v2.7</strong><span>What changed in the Pilot Operations Control upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v2.7.md">Open</a></div>
       </div>
     </section>
 
@@ -877,7 +910,7 @@
     </section>
 
     <footer>
-      Version v2.6. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v2.7. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
   <script>
@@ -897,3 +930,4 @@
   </script>
 </body>
 </html>
+

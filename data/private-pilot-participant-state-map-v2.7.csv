@@ -1,0 +1,13 @@
+id,state,privacy_level,allowed_record,public_output,stop_condition
+PS-001,Public interest,Public,Public sample interest only,Aggregate or fake sample count,Public interest becomes charter-ready count
+PS-002,Demo-first,Restricted,Minimal private contact if notice approved,No public identity,Demo attendee is counted as founder
+PS-003,Founder candidate,Restricted,Track choice and handoff status only,Aggregate readiness only,Official application copied into public package
+PS-004,Existing Toastmasters supporter,Restricted,Support role and referral note only,Approved support summary,Supporter receives member data
+PS-005,Organisation supporter,Restricted,Mentor host or referral offer,Approved organisation support summary,Organisation gains authority over members
+PS-006,Access support request,Never public,Support need to named role only,None,Access need appears in screenshot or CSV
+PS-007,Officer interest,Restricted,Private interest until consent and official confirmation,Aggregate only,Real officer slate published early
+PS-008,Withdrawn,Restricted,Withdrawal request and closeout action,Aggregate withdrawal count if approved,Withdrawn person remains active
+PS-009,Duplicate or unclear,Restricted,Hold marker and review note,None,Duplicate counted as separate founder
+PS-010,Age uncertain,Never public,Eligibility check outside public package,None,Underage or unclear record enters charter path
+PS-011,Incident affected,Never public,Locked incident-linked record,Redacted incident status only,Incident details published
+PS-012,Charter-ready summary,Restricted,Approved aggregate status only,Aggregate count if reviewed,Summary implies official acceptance

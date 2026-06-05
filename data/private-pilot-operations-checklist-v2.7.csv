@@ -1,0 +1,17 @@
+id,stage,title,status,owner,evidence,stop_condition
+OC-001,Start,Run authority confirmed,Required,Pilot authority,Named start pause close authority recorded,Pilot begins on informal approval
+OC-002,Start,No-public-data reminder read,Ready,Pilot coordinator,Start-of-day note confirms public package remains fake only,Team shares real records in public channels
+OC-003,Intake,Private intake notice active,Required,Privacy reviewer,Notice explains purpose fields access retention deletion and official handoff,Participant submits private details without notice
+OC-004,Evidence,Fake IDs only in public evidence,Ready,QA reviewer,Screenshots exports and reports use fake IDs only,Public evidence shows names contact or access needs
+OC-005,Consent,Consent and withdrawal route live,Hold,Pilot coordinator,Participant can change track withdraw or ask what is stored,Withdrawal request has no owner
+OC-006,Support,Access support route private,Hold,Access support lead,Access needs go to named support role only,Access needs shared with organisation supporters
+OC-007,Official,Toastmasters handoff external,Required,Launch team,Applications signatures roster and member numbers stay outside public package,Official forms stored in Governance Commons public files
+OC-008,Payment,Sponsorship status external,Required,Finance or launch owner,Only approved status summary can be recorded,Fee card receipt or bank detail enters Governance Commons
+OC-009,Access,Admin access removal tested,Required,Technical maintainer,Admin removal and role review are rehearsed,Departed helper keeps admin access
+OC-010,Incident,Incident clock ready,Required,Security privacy reviewer,Triage owner containment path and notification route exist,Exposure has no response clock
+OC-011,Evidence,Redaction export checked,Ready,QA reviewer,Export sample strips private fields before publication,Export includes private raw fields
+OC-012,Correction,Correction request route rehearsed,Hold,Data steward,Participant correction request has owner and decision log,Correction request handled in public comments
+OC-013,Closeout,Deletion date set,Hold,Data steward,Pilot end date retention period export and deletion owner recorded,Records remain indefinitely
+OC-014,Public update,Public wording reviewed,Hold,Communications reviewer,Update says sample or proposed club where appropriate,Public wording implies charter acceptance or official membership
+OC-015,Decision,Daily checkpoint recorded,Complete,Pilot authority,Start pause continue or close decision is recorded,Pilot continues without decision evidence
+OC-016,Closeout,Post-pilot deletion proof planned,Required,Data steward,Deletion export and retained evidence plan exists,Closeout has no proof trail

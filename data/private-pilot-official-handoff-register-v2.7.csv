@@ -1,0 +1,9 @@
+id,stream,record,handling_rule,public_output,stop_condition
+OH-001,Applications,Charter membership application,External only,Handoff status only,Application stored in public package
+OH-002,Roster,Charter roster,External only,Aggregate readiness only,Roster published or exported publicly
+OH-003,Member number,Toastmasters member number,External only,None,Member number enters Governance Commons
+OH-004,Payment,Payment or sponsorship reconciliation,External only,Approved status summary only,Receipt card or bank detail copied
+OH-005,Officer slate,Officer interest and confirmation,Summary only,Aggregate or consented role summary,Real slate published before official confirmation
+OH-006,Demo,Demo attendance,Aggregate only,Attendance count only,Attendance list published
+OH-007,Support,Supporter referral,Summary only,Approved public supporter note,Supporter gets member records
+OH-008,Evidence,Governance Commons evidence,Redacted public,Fake IDs and aggregate findings,Evidence reveals private fields

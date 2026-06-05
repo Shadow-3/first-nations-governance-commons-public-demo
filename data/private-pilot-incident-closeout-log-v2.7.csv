@@ -1,0 +1,11 @@
+id,trigger,severity,status,owner,response,closeout_evidence
+IL-001,Private field in public screenshot,High,Open,QA reviewer,Remove evidence and notify privacy reviewer,Replacement screenshot uses fake ID only
+IL-002,Wrong role has access,High,Hold,Technical maintainer,Remove access and review role matrix,Admin access register updated
+IL-003,Meeting link public,Medium,Hold,Pilot coordinator,Rotate link and notify affected participants,Public page confirms link is private
+IL-004,Official form uploaded,High,Blocked,Launch team,Remove file and move workflow external,No official form remains in package
+IL-005,Access need shared too widely,High,Blocked,Access support lead,Contain detail and limit to support role,Access route and supporter role corrected
+IL-006,Payment detail recorded,High,Blocked,Finance or launch owner,Remove payment detail and separate finance workflow,Only approved status summary remains
+IL-007,Withdrawal not actioned,Medium,Open,Data steward,Pause record use and confirm deletion or retention,Withdrawal action logged
+IL-008,Duplicate founder count,Medium,Hold,Launch team,Reconcile fake IDs and official count externally,Aggregate count corrected
+IL-009,Records retained after closeout,Medium,Open,Data steward,Apply retention and deletion schedule,Deletion evidence stored privately
+IL-010,Public wording implies chartered club,Medium,Open,Communications reviewer,Correct wording to proposed or in formation,Public summary reviewed

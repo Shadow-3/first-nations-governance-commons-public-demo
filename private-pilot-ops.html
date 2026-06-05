@@ -1,0 +1,839 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>Pilot Operations Control - First Nations Governance Commons</title>
+  <meta name="description" content="Public fake-data pilot operations control templates for the First Nations Governance Commons demo.">
+  <style>
+    :root {
+      --bg: #f6f7f5;
+      --surface: #ffffff;
+      --surface-2: #edf3ef;
+      --text: #16231f;
+      --muted: #60706b;
+      --line: #d8e0dc;
+      --teal: #0d675f;
+      --green: #247654;
+      --amber: #b66a25;
+      --red: #aa3d36;
+      --teal-2: #e4f2ef;
+      --green-2: #e7f4ed;
+      --amber-2: #fff2d4;
+      --red-2: #fae8e7;
+      --radius: 6px;
+      --shadow: 0 18px 42px rgba(18, 33, 29, 0.08);
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #fbfcfb 0%, var(--bg) 42%, #ffffff 100%);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.5;
+    }
+
+    a { color: inherit; }
+
+    .topbar {
+      min-height: 72px;
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .brand {
+      display: flex;
+      flex: 1 1 260px;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, var(--teal), #26806f);
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .brand strong,
+    .brand span {
+      display: block;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .btn,
+    button,
+    select {
+      min-height: 40px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--text);
+      font: inherit;
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 9px 13px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn.primary,
+    button.primary {
+      background: var(--teal);
+      border-color: var(--teal);
+      color: #fff;
+      box-shadow: 0 10px 22px rgba(13, 103, 95, 0.18);
+    }
+
+    .label {
+      background: var(--amber-2);
+      color: #7a4c13;
+      border: 1px solid #f2dca4;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    main {
+      width: min(1280px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 66px 0 58px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 28px;
+      align-items: center;
+      margin-bottom: 46px;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 820px;
+      font-size: clamp(44px, 6vw, 76px);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 900px;
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 42px;
+    }
+
+    .metric,
+    .card,
+    .check-card,
+    .state-card,
+    .incident-card,
+    .handoff-card,
+    .resource {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .metric {
+      padding: 20px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+    }
+
+    section {
+      margin-top: 36px;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: end;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 31px;
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      margin: 8px 0 0;
+      color: var(--muted);
+    }
+
+    .grid,
+    .check-grid,
+    .state-grid,
+    .incident-grid,
+    .handoff-grid,
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .grid.two {
+      grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+    }
+
+    .card,
+    .check-card,
+    .state-card,
+    .incident-card,
+    .handoff-card,
+    .resource {
+      padding: 16px;
+      min-width: 0;
+    }
+
+    .card.is-active {
+      border-color: var(--teal);
+      box-shadow: 0 18px 38px rgba(13, 103, 95, 0.18);
+    }
+
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .badge.required,
+    .badge.high,
+    .badge.external {
+      color: #7c211d;
+      background: var(--red-2);
+    }
+
+    .badge.hold,
+    .badge.medium,
+    .badge.summary {
+      color: #7a4c13;
+      background: var(--amber-2);
+    }
+
+    .badge.ready,
+    .badge.low,
+    .badge.redacted {
+      color: #15583b;
+      background: var(--green-2);
+    }
+
+    .badge.complete,
+    .badge.aggregate {
+      color: #0d675f;
+      background: var(--teal-2);
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .detail {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 10px;
+      min-width: 0;
+    }
+
+    .detail small {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .detail span {
+      overflow-wrap: anywhere;
+    }
+
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .brief {
+      margin: 14px 0 0;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #101b18;
+      color: #eef8f5;
+      padding: 14px;
+      min-height: 260px;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      font-family: var(--mono);
+      font-size: 12px;
+      overflow: auto;
+    }
+
+    .resource {
+      display: grid;
+      gap: 10px;
+      text-decoration: none;
+      min-height: 128px;
+    }
+
+    footer {
+      margin-top: 46px;
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    @media (max-width: 980px) {
+      .topbar {
+        position: static;
+        padding: 14px 18px;
+      }
+
+      .hero,
+      .section-head {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions,
+      .filter-row {
+        justify-content: stretch;
+      }
+
+      .btn,
+      button,
+      select {
+        width: 100%;
+      }
+
+      .metrics,
+      .grid,
+      .grid.two,
+      .check-grid,
+      .state-grid,
+      .incident-grid,
+      .handoff-grid,
+      .resource-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      main {
+        width: min(100% - 28px, 1280px);
+        padding: 38px 0 46px;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">O</div>
+      <div>
+        <strong>Pilot Operations Control</strong>
+        <span>First Nations Governance Commons</span>
+      </div>
+    </div>
+    <a class="btn" href="index.html">Public Demo</a>
+    <a class="btn" href="organisation-onboarding.html">Org Onboarding</a>
+    <a class="btn" href="private-pilot-readiness.html">Pilot Readiness</a>
+    <a class="btn primary" href="private-pilot-ops.html">Pilot Ops</a>
+    <a class="btn" href="document.html?file=docs%2Fprivate-pilot-operations-runbook-v2.7.md">Runbook</a>
+    <div class="label">No real data in public demo</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Pilot Operations Control</h1>
+        <p>Operate the Toastmasters First Nations controlled sample after readiness approval, without moving real member, contact, payment, access-need, official paperwork, meeting-link, or authority records into the public demo.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn" href="document.html?file=data%2Fprivate-pilot-ops-package-v2.7.json">Ops JSON</a>
+        <button class="primary" type="button" onclick="downloadBrief()">Download Brief</button>
+      </div>
+    </section>
+
+    <div class="metrics" aria-label="Pilot operations metrics">
+      <div class="metric"><strong id="checkMetric">0</strong><span>Operations checks</span></div>
+      <div class="metric"><strong id="stateMetric">0</strong><span>Participant state rules</span></div>
+      <div class="metric"><strong id="incidentMetric">0</strong><span>Incident and closeout rows</span></div>
+      <div class="metric"><strong id="handoffMetric">0</strong><span>Official handoff rules</span></div>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Run-Day Control</h2>
+          <p>The pilot can only operate while every private workflow is separated from the public package.</p>
+        </div>
+      </div>
+      <div class="grid two">
+        <div class="grid" id="runGrid"></div>
+        <article class="card">
+          <div class="card-head">
+            <h3 id="selectedName">Selected run</h3>
+            <span class="badge hold" id="selectedStatus">Hold</span>
+          </div>
+          <p id="selectedSummary"></p>
+          <div class="detail-grid">
+            <div class="detail"><small>Allowed operation</small><span id="selectedAllowed"></span></div>
+            <div class="detail"><small>Hard boundary</small><span id="selectedBoundary"></span></div>
+            <div class="detail"><small>Clock</small><span id="selectedClock"></span></div>
+            <div class="detail"><small>No-go trigger</small><span id="selectedStop"></span></div>
+          </div>
+          <pre class="brief" id="opsBrief"></pre>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Operations Checklist</h2>
+          <p>Daily controls for intake routing, consent, access, admin permissions, evidence, and closeout.</p>
+        </div>
+        <div class="filter-row" aria-label="Operations status filter">
+          <button class="primary" type="button" data-check-filter="All">All</button>
+          <button type="button" data-check-filter="Required">Required</button>
+          <button type="button" data-check-filter="Hold">Hold</button>
+          <button type="button" data-check-filter="Ready">Ready</button>
+          <button type="button" data-check-filter="Complete">Complete</button>
+        </div>
+      </div>
+      <div class="check-grid" id="checkGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Participant State Map</h2>
+          <p>Every participant state uses fake IDs in public evidence and keeps private records in a separate approved environment.</p>
+        </div>
+        <select id="stateFilter" aria-label="Filter participant states"></select>
+      </div>
+      <div class="state-grid" id="stateGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Incident And Closeout Log</h2>
+          <p>These are rehearsal rows for response discipline, not real incident records.</p>
+        </div>
+        <select id="incidentFilter" aria-label="Filter incident severity"></select>
+      </div>
+      <div class="incident-grid" id="incidentGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Official Handoff Register</h2>
+          <p>Official Toastmasters workflow stays external. Governance Commons may only keep approved summaries or redacted evidence.</p>
+        </div>
+        <select id="handoffFilter" aria-label="Filter official handoff rule"></select>
+      </div>
+      <div class="handoff-grid" id="handoffGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Ops Resources</h2>
+          <p>All v2.7 resources are public templates with fake/sample data only.</p>
+        </div>
+      </div>
+      <div class="resource-grid">
+        <a class="resource" href="document.html?file=docs%2Fprivate-pilot-operations-runbook-v2.7.md"><strong>Operations runbook</strong><span>Daily start, intake, support, evidence, incident, and closeout sequence.</span></a>
+        <a class="resource" href="document.html?file=docs%2Ftoastmasters-private-pilot-ops-script-v2.7.md"><strong>Toastmasters ops script</strong><span>Controlled run-day rehearsal for the First Nations Toastmasters sample.</span></a>
+        <a class="resource" href="document.html?file=data%2Fprivate-pilot-operations-checklist-v2.7.csv"><strong>Operations checklist CSV</strong><span>Sixteen daily control checks.</span></a>
+        <a class="resource" href="document.html?file=data%2Fprivate-pilot-participant-state-map-v2.7.csv"><strong>Participant state CSV</strong><span>Twelve state rules for consent, withdrawal, support, and official handoff.</span></a>
+        <a class="resource" href="document.html?file=data%2Fprivate-pilot-incident-closeout-log-v2.7.csv"><strong>Incident closeout CSV</strong><span>Ten rehearsal response and closure rows.</span></a>
+        <a class="resource" href="document.html?file=data%2Fprivate-pilot-official-handoff-register-v2.7.csv"><strong>Official handoff CSV</strong><span>Eight rules separating Toastmasters records from public evidence.</span></a>
+        <a class="resource" href="document.html?file=data%2Fprivate-pilot-ops-package-v2.7.json"><strong>Ops package JSON</strong><span>Machine-readable v2.7 package summary.</span></a>
+      </div>
+    </section>
+
+    <footer>
+      Version v2.7. Initial developer/custodian: Barayamal / Dean Foley. Pilot operations controls are templates only; no real private pilot data belongs in this public demo.
+    </footer>
+  </main>
+
+  <script>
+    const runs = [
+      {
+        id: "OPS-001",
+        name: "Toastmasters First Nations operations rehearsal",
+        status: "Hold",
+        summary: "A fake-data run-day control model for operating a private pilot only after v2.6 readiness gates are approved.",
+        owner: "Barayamal / Dean Foley plus named approval reviewers",
+        allowed: "Operate a private workflow rehearsal with fake IDs, approved minimum fields, and redacted public evidence.",
+        boundary: "Do not put real member, access, payment, official Toastmasters, meeting-link, or authority records in the public demo.",
+        clock: "Daily start check, same-day incident triage, and end-of-run closeout.",
+        stop: "Any private field appears in public evidence or the official Toastmasters process is treated as Governance Commons data."
+      }
+    ];
+
+    const checks = [
+      { id: "OC-001", stage: "Start", title: "Run authority confirmed", status: "Required", owner: "Pilot authority", evidence: "Named start pause close authority recorded", stop: "Pilot begins on informal approval" },
+      { id: "OC-002", stage: "Start", title: "No-public-data reminder read", status: "Ready", owner: "Pilot coordinator", evidence: "Start-of-day note confirms public package remains fake only", stop: "Team shares real records in public channels" },
+      { id: "OC-003", stage: "Intake", title: "Private intake notice active", status: "Required", owner: "Privacy reviewer", evidence: "Notice explains purpose fields access retention deletion and official handoff", stop: "Participant submits private details without notice" },
+      { id: "OC-004", stage: "Evidence", title: "Fake IDs only in public evidence", status: "Ready", owner: "QA reviewer", evidence: "Screenshots exports and reports use fake IDs only", stop: "Public evidence shows names contact or access needs" },
+      { id: "OC-005", stage: "Consent", title: "Consent and withdrawal route live", status: "Hold", owner: "Pilot coordinator", evidence: "Participant can change track withdraw or ask what is stored", stop: "Withdrawal request has no owner" },
+      { id: "OC-006", stage: "Support", title: "Access support route private", status: "Hold", owner: "Access support lead", evidence: "Access needs go to named support role only", stop: "Access needs shared with organisation supporters" },
+      { id: "OC-007", stage: "Official", title: "Toastmasters handoff external", status: "Required", owner: "Launch team", evidence: "Applications signatures roster and member numbers stay outside public package", stop: "Official forms stored in Governance Commons public files" },
+      { id: "OC-008", stage: "Payment", title: "Sponsorship status external", status: "Required", owner: "Finance or launch owner", evidence: "Only approved status summary can be recorded", stop: "Fee card receipt or bank detail enters Governance Commons" },
+      { id: "OC-009", stage: "Access", title: "Admin access removal tested", status: "Required", owner: "Technical maintainer", evidence: "Admin removal and role review are rehearsed", stop: "Departed helper keeps admin access" },
+      { id: "OC-010", stage: "Incident", title: "Incident clock ready", status: "Required", owner: "Security privacy reviewer", evidence: "Triage owner containment path and notification route exist", stop: "Exposure has no response clock" },
+      { id: "OC-011", stage: "Evidence", title: "Redaction export checked", status: "Ready", owner: "QA reviewer", evidence: "Export sample strips private fields before publication", stop: "Export includes private raw fields" },
+      { id: "OC-012", stage: "Correction", title: "Correction request route rehearsed", status: "Hold", owner: "Data steward", evidence: "Participant correction request has owner and decision log", stop: "Correction request handled in public comments" },
+      { id: "OC-013", stage: "Closeout", title: "Deletion date set", status: "Hold", owner: "Data steward", evidence: "Pilot end date retention period export and deletion owner recorded", stop: "Records remain indefinitely" },
+      { id: "OC-014", stage: "Public update", title: "Public wording reviewed", status: "Hold", owner: "Communications reviewer", evidence: "Update says sample or proposed club where appropriate", stop: "Public wording implies charter acceptance or official membership" },
+      { id: "OC-015", stage: "Decision", title: "Daily checkpoint recorded", status: "Complete", owner: "Pilot authority", evidence: "Start pause continue or close decision is recorded", stop: "Pilot continues without decision evidence" },
+      { id: "OC-016", stage: "Closeout", title: "Post-pilot deletion proof planned", status: "Required", owner: "Data steward", evidence: "Deletion export and retained evidence plan exists", stop: "Closeout has no proof trail" }
+    ];
+
+    const states = [
+      { id: "PS-001", state: "Public interest", privacy: "Public", record: "Public sample interest only", output: "Aggregate or fake sample count", stop: "Public interest becomes charter-ready count" },
+      { id: "PS-002", state: "Demo-first", privacy: "Restricted", record: "Minimal private contact if notice approved", output: "No public identity", stop: "Demo attendee is counted as founder" },
+      { id: "PS-003", state: "Founder candidate", privacy: "Restricted", record: "Track choice and handoff status only", output: "Aggregate readiness only", stop: "Official application copied into public package" },
+      { id: "PS-004", state: "Existing Toastmasters supporter", privacy: "Restricted", record: "Support role and referral note only", output: "Approved support summary", stop: "Supporter receives member data" },
+      { id: "PS-005", state: "Organisation supporter", privacy: "Restricted", record: "Mentor host or referral offer", output: "Approved organisation support summary", stop: "Organisation gains authority over members" },
+      { id: "PS-006", state: "Access support request", privacy: "Never public", record: "Support need to named role only", output: "None", stop: "Access need appears in screenshot or CSV" },
+      { id: "PS-007", state: "Officer interest", privacy: "Restricted", record: "Private interest until consent and official confirmation", output: "Aggregate only", stop: "Real officer slate published early" },
+      { id: "PS-008", state: "Withdrawn", privacy: "Restricted", record: "Withdrawal request and closeout action", output: "Aggregate withdrawal count if approved", stop: "Withdrawn person remains active" },
+      { id: "PS-009", state: "Duplicate or unclear", privacy: "Restricted", record: "Hold marker and review note", output: "None", stop: "Duplicate counted as separate founder" },
+      { id: "PS-010", state: "Age uncertain", privacy: "Never public", record: "Eligibility check outside public package", output: "None", stop: "Underage or unclear record enters charter path" },
+      { id: "PS-011", state: "Incident affected", privacy: "Never public", record: "Locked incident-linked record", output: "Redacted incident status only", stop: "Incident details published" },
+      { id: "PS-012", state: "Charter-ready summary", privacy: "Restricted", record: "Approved aggregate status only", output: "Aggregate count if reviewed", stop: "Summary implies official acceptance" }
+    ];
+
+    const incidents = [
+      { id: "IL-001", trigger: "Private field in public screenshot", severity: "High", status: "Open", owner: "QA reviewer", response: "Remove evidence and notify privacy reviewer", closeout: "Replacement screenshot uses fake ID only" },
+      { id: "IL-002", trigger: "Wrong role has access", severity: "High", status: "Hold", owner: "Technical maintainer", response: "Remove access and review role matrix", closeout: "Admin access register updated" },
+      { id: "IL-003", trigger: "Meeting link public", severity: "Medium", status: "Hold", owner: "Pilot coordinator", response: "Rotate link and notify affected participants", closeout: "Public page confirms link is private" },
+      { id: "IL-004", trigger: "Official form uploaded", severity: "High", status: "Blocked", owner: "Launch team", response: "Remove file and move workflow external", closeout: "No official form remains in package" },
+      { id: "IL-005", trigger: "Access need shared too widely", severity: "High", status: "Blocked", owner: "Access support lead", response: "Contain detail and limit to support role", closeout: "Access route and supporter role corrected" },
+      { id: "IL-006", trigger: "Payment detail recorded", severity: "High", status: "Blocked", owner: "Finance or launch owner", response: "Remove payment detail and separate finance workflow", closeout: "Only approved status summary remains" },
+      { id: "IL-007", trigger: "Withdrawal not actioned", severity: "Medium", status: "Open", owner: "Data steward", response: "Pause record use and confirm deletion or retention", closeout: "Withdrawal action logged" },
+      { id: "IL-008", trigger: "Duplicate founder count", severity: "Medium", status: "Hold", owner: "Launch team", response: "Reconcile fake IDs and official count externally", closeout: "Aggregate count corrected" },
+      { id: "IL-009", trigger: "Records retained after closeout", severity: "Medium", status: "Open", owner: "Data steward", response: "Apply retention and deletion schedule", closeout: "Deletion evidence stored privately" },
+      { id: "IL-010", trigger: "Public wording implies chartered club", severity: "Medium", status: "Open", owner: "Communications reviewer", response: "Correct wording to proposed or in formation", closeout: "Public summary reviewed" }
+    ];
+
+    const handoffs = [
+      { id: "OH-001", stream: "Applications", record: "Charter membership application", rule: "External only", output: "Handoff status only", stop: "Application stored in public package" },
+      { id: "OH-002", stream: "Roster", record: "Charter roster", rule: "External only", output: "Aggregate readiness only", stop: "Roster published or exported publicly" },
+      { id: "OH-003", stream: "Member number", record: "Toastmasters member number", rule: "External only", output: "None", stop: "Member number enters Governance Commons" },
+      { id: "OH-004", stream: "Payment", record: "Payment or sponsorship reconciliation", rule: "External only", output: "Approved status summary only", stop: "Receipt card or bank detail copied" },
+      { id: "OH-005", stream: "Officer slate", record: "Officer interest and confirmation", rule: "Summary only", output: "Aggregate or consented role summary", stop: "Real slate published before official confirmation" },
+      { id: "OH-006", stream: "Demo", record: "Demo attendance", rule: "Aggregate only", output: "Attendance count only", stop: "Attendance list published" },
+      { id: "OH-007", stream: "Support", record: "Supporter referral", rule: "Summary only", output: "Approved public supporter note", stop: "Supporter gets member records" },
+      { id: "OH-008", stream: "Evidence", record: "Governance Commons evidence", rule: "Redacted public", output: "Fake IDs and aggregate findings", stop: "Evidence reveals private fields" }
+    ];
+
+    let activeRun = runs[0].id;
+    let checkFilter = "All";
+    let stateFilter = "All";
+    let incidentFilter = "All";
+    let handoffFilter = "All";
+
+    const statusClass = value => value.toLowerCase().replace(/[^a-z]+/g, "");
+    const badge = value => `<span class="badge ${statusClass(value)}">${value}</span>`;
+
+    function populateSelect(id, values) {
+      const select = document.getElementById(id);
+      select.innerHTML = values.map(value => `<option value="${value}">${value}</option>`).join("");
+    }
+
+    function init() {
+      document.getElementById("checkMetric").textContent = checks.length;
+      document.getElementById("stateMetric").textContent = states.length;
+      document.getElementById("incidentMetric").textContent = incidents.length;
+      document.getElementById("handoffMetric").textContent = handoffs.length;
+      populateSelect("stateFilter", ["All", ...new Set(states.map(item => item.state))]);
+      populateSelect("incidentFilter", ["All", ...new Set(incidents.map(item => item.severity))]);
+      populateSelect("handoffFilter", ["All", ...new Set(handoffs.map(item => item.rule))]);
+      bindControls();
+      renderRuns();
+      renderChecks();
+      renderStates();
+      renderIncidents();
+      renderHandoffs();
+    }
+
+    function renderRuns() {
+      document.getElementById("runGrid").innerHTML = runs.map(item => `
+        <article class="card ${item.id === activeRun ? "is-active" : ""}">
+          <div class="card-head">
+            <h3>${item.name}</h3>
+            ${badge(item.status)}
+          </div>
+          <p>${item.summary}</p>
+          <div class="detail-grid">
+            <div class="detail"><small>Owner</small><span>${item.owner}</span></div>
+            <div class="detail"><small>Clock</small><span>${item.clock}</span></div>
+          </div>
+          <button class="primary" type="button" onclick="selectRun('${item.id}')">Use Run</button>
+        </article>
+      `).join("");
+      renderSelected();
+    }
+
+    function renderSelected() {
+      const item = runs.find(run => run.id === activeRun);
+      document.getElementById("selectedName").textContent = item.name;
+      document.getElementById("selectedStatus").textContent = item.status;
+      document.getElementById("selectedStatus").className = `badge ${statusClass(item.status)}`;
+      document.getElementById("selectedSummary").textContent = item.summary;
+      document.getElementById("selectedAllowed").textContent = item.allowed;
+      document.getElementById("selectedBoundary").textContent = item.boundary;
+      document.getElementById("selectedClock").textContent = item.clock;
+      document.getElementById("selectedStop").textContent = item.stop;
+      document.getElementById("opsBrief").textContent = makeBrief(item);
+    }
+
+    function renderChecks() {
+      const visible = checks.filter(item => checkFilter === "All" || item.status === checkFilter);
+      document.getElementById("checkGrid").innerHTML = visible.map(item => `
+        <article class="check-card">
+          <div class="card-head">
+            <h3>${item.id}: ${item.title}</h3>
+            ${badge(item.status)}
+          </div>
+          <p>${item.evidence}</p>
+          <div class="detail-grid">
+            <div class="detail"><small>Stage</small><span>${item.stage}</span></div>
+            <div class="detail"><small>Owner</small><span>${item.owner}</span></div>
+          </div>
+          <div class="detail"><small>Stop condition</small><span>${item.stop}</span></div>
+        </article>
+      `).join("");
+    }
+
+    function renderStates() {
+      const visible = states.filter(item => stateFilter === "All" || item.state === stateFilter);
+      document.getElementById("stateGrid").innerHTML = visible.map(item => `
+        <article class="state-card">
+          <div class="card-head">
+            <h3>${item.id}: ${item.state}</h3>
+            ${badge(item.privacy)}
+          </div>
+          <div class="detail"><small>Allowed record</small><span>${item.record}</span></div>
+          <div class="detail"><small>Public output</small><span>${item.output}</span></div>
+          <div class="detail"><small>Stop condition</small><span>${item.stop}</span></div>
+        </article>
+      `).join("");
+    }
+
+    function renderIncidents() {
+      const visible = incidents.filter(item => incidentFilter === "All" || item.severity === incidentFilter);
+      document.getElementById("incidentGrid").innerHTML = visible.map(item => `
+        <article class="incident-card">
+          <div class="card-head">
+            <h3>${item.id}: ${item.trigger}</h3>
+            ${badge(item.severity)}
+          </div>
+          <div class="detail-grid">
+            <div class="detail"><small>Status</small><span>${item.status}</span></div>
+            <div class="detail"><small>Owner</small><span>${item.owner}</span></div>
+          </div>
+          <div class="detail"><small>Response</small><span>${item.response}</span></div>
+          <div class="detail"><small>Closeout evidence</small><span>${item.closeout}</span></div>
+        </article>
+      `).join("");
+    }
+
+    function renderHandoffs() {
+      const visible = handoffs.filter(item => handoffFilter === "All" || item.rule === handoffFilter);
+      document.getElementById("handoffGrid").innerHTML = visible.map(item => `
+        <article class="handoff-card">
+          <div class="card-head">
+            <h3>${item.id}: ${item.record}</h3>
+            ${badge(item.rule)}
+          </div>
+          <div class="detail-grid">
+            <div class="detail"><small>Stream</small><span>${item.stream}</span></div>
+            <div class="detail"><small>Public output</small><span>${item.output}</span></div>
+          </div>
+          <div class="detail"><small>Stop condition</small><span>${item.stop}</span></div>
+        </article>
+      `).join("");
+    }
+
+    function bindControls() {
+      document.querySelectorAll("[data-check-filter]").forEach(button => {
+        button.addEventListener("click", () => {
+          checkFilter = button.dataset.checkFilter;
+          document.querySelectorAll("[data-check-filter]").forEach(item => item.classList.toggle("primary", item === button));
+          renderChecks();
+          renderSelected();
+        });
+      });
+      document.getElementById("stateFilter").addEventListener("change", event => {
+        stateFilter = event.target.value;
+        renderStates();
+      });
+      document.getElementById("incidentFilter").addEventListener("change", event => {
+        incidentFilter = event.target.value;
+        renderIncidents();
+      });
+      document.getElementById("handoffFilter").addEventListener("change", event => {
+        handoffFilter = event.target.value;
+        renderHandoffs();
+      });
+    }
+
+    function selectRun(id) {
+      activeRun = id;
+      renderRuns();
+    }
+
+    function makeBrief(item) {
+      const checkCounts = checks.reduce((acc, check) => {
+        acc[check.status] = (acc[check.status] || 0) + 1;
+        return acc;
+      }, {});
+      const incidentCounts = incidents.reduce((acc, incident) => {
+        acc[incident.severity] = (acc[incident.severity] || 0) + 1;
+        return acc;
+      }, {});
+      return [
+        "# Pilot Operations Control Brief",
+        "",
+        `Run: ${item.name}`,
+        `Status: ${item.status}`,
+        `Owner: ${item.owner}`,
+        "",
+        "## Operating boundary",
+        item.boundary,
+        "",
+        "## Operations checks by status",
+        ...Object.entries(checkCounts).sort().map(([status, count]) => `- ${status}: ${count}`),
+        "",
+        "## Incident rehearsal by severity",
+        ...Object.entries(incidentCounts).sort().map(([severity, count]) => `- ${severity}: ${count}`),
+        "",
+        "## Required checks",
+        ...checks.filter(check => check.status === "Required").map(check => `- ${check.id}: ${check.title}`),
+        "",
+        "## Never-public participant states",
+        ...states.filter(state => state.privacy === "Never public").map(state => `- ${state.id}: ${state.state}`),
+        "",
+        "Next action: operate only after v2.6 readiness approval and keep all real private records outside the public demo, public repository, public screenshots, and fake-data sandbox."
+      ].join("\n");
+    }
+
+    function downloadBrief() {
+      const item = runs.find(run => run.id === activeRun);
+      const blob = new Blob([makeBrief(item)], { type: "text/markdown" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "private-pilot-operations-brief-v2.7.md";
+      link.click();
+      URL.revokeObjectURL(link.href);
+    }
+
+    init();
+  </script>
+</body>
+</html>
+

@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "2.6",
+  "version": "2.7",
   "date": "2026-06-05",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, Build Delivery Control, and Organisation Onboarding first. Then use Private Pilot Readiness to check approval gates, private workflow test scenarios, role access, data-transfer rules, incident response, closeout, and go/no-go evidence before any real organisation, member, payment, access-need, official paperwork, or private pilot data is introduced.",
+  "recommendedDecision": "Use Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, Build Delivery Control, Organisation Onboarding, Private Pilot Readiness, and Pilot Operations Control in sequence. Pilot Ops is only a public fake/sample operations template; any real private pilot needs a separate approved private environment, role access, incident response, official handoff, retention, deletion, and closeout evidence.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -55,6 +55,15 @@
     "data/private-pilot-role-access-matrix-v2.6.csv",
     "data/private-pilot-data-transfer-map-v2.6.csv",
     "data/private-pilot-package-v2.6.json",
+    "private-pilot-ops.html",
+    "docs/private-pilot-operations-runbook-v2.7.md",
+    "docs/toastmasters-private-pilot-ops-script-v2.7.md",
+    "docs/public-demo-release-notes-v2.7.md",
+    "data/private-pilot-operations-checklist-v2.7.csv",
+    "data/private-pilot-participant-state-map-v2.7.csv",
+    "data/private-pilot-incident-closeout-log-v2.7.csv",
+    "data/private-pilot-official-handoff-register-v2.7.csv",
+    "data/private-pilot-ops-package-v2.7.json",
     "docs/public-demo-release-notes-v2.4.md",
     "docs/build-delivery-control-playbook-v2.4.md",
     "docs/provider-contract-gates-v2.4.md",
@@ -129,7 +138,7 @@
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v2.6.md",
+    "releaseNotes": "docs/public-demo-release-notes-v2.7.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -221,7 +230,17 @@
       "qa-v26-deployed-private-pilot-required-desktop.png",
       "qa-v26-deployed-private-pilot-data-desktop.png",
       "qa-v26-deployed-private-pilot-mobile.png",
-      "qa-v26-deployed-private-pilot-package-mobile.png"
+      "qa-v26-deployed-private-pilot-package-mobile.png",
+      "qa-v27-local-pilot-ops-desktop.png",
+      "qa-v27-local-pilot-ops-required-desktop.png",
+      "qa-v27-local-pilot-ops-handoff-desktop.png",
+      "qa-v27-local-pilot-ops-mobile.png",
+      "qa-v27-local-pilot-ops-package-mobile.png",
+      "qa-v27-deployed-pilot-ops-desktop.png",
+      "qa-v27-deployed-pilot-ops-required-desktop.png",
+      "qa-v27-deployed-pilot-ops-handoff-desktop.png",
+      "qa-v27-deployed-pilot-ops-mobile.png",
+      "qa-v27-deployed-pilot-ops-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -408,7 +427,11 @@
       "data/private-pilot-test-scenarios-v2.6.csv",
       "data/private-pilot-role-access-matrix-v2.6.csv",
       "data/private-pilot-data-transfer-map-v2.6.csv",
-      "data/private-pilot-package-v2.6.json"
+      "data/private-pilot-package-v2.6.json",
+      "private-pilot-ops.html",
+      "docs/private-pilot-operations-runbook-v2.7.md",
+      "docs/toastmasters-private-pilot-ops-script-v2.7.md",
+      "data/private-pilot-ops-package-v2.7.json"
     ],
     "actionCenter": [
       "docs/next-steps-action-plan-v1.1.md",
@@ -610,7 +633,11 @@
       "data/private-pilot-test-scenarios-v2.6.csv",
       "data/private-pilot-role-access-matrix-v2.6.csv",
       "data/private-pilot-data-transfer-map-v2.6.csv",
-      "data/private-pilot-package-v2.6.json"
+      "data/private-pilot-package-v2.6.json",
+      "private-pilot-ops.html",
+      "docs/private-pilot-operations-runbook-v2.7.md",
+      "docs/toastmasters-private-pilot-ops-script-v2.7.md",
+      "data/private-pilot-ops-package-v2.7.json"
     ],
     "opsRoom": [
       "docs/sandbox-ops-runbook-v1.6.md",
@@ -946,7 +973,11 @@
       "data/private-pilot-test-scenarios-v2.6.csv",
       "data/private-pilot-role-access-matrix-v2.6.csv",
       "data/private-pilot-data-transfer-map-v2.6.csv",
-      "data/private-pilot-package-v2.6.json"
+      "data/private-pilot-package-v2.6.json",
+      "private-pilot-ops.html",
+      "docs/private-pilot-operations-runbook-v2.7.md",
+      "docs/toastmasters-private-pilot-ops-script-v2.7.md",
+      "data/private-pilot-ops-package-v2.7.json"
     ],
     "privatePilotReadiness": [
       "private-pilot-readiness.html",
@@ -957,7 +988,22 @@
       "data/private-pilot-test-scenarios-v2.6.csv",
       "data/private-pilot-role-access-matrix-v2.6.csv",
       "data/private-pilot-data-transfer-map-v2.6.csv",
-      "data/private-pilot-package-v2.6.json"
+      "data/private-pilot-package-v2.6.json",
+      "private-pilot-ops.html",
+      "docs/private-pilot-operations-runbook-v2.7.md",
+      "docs/toastmasters-private-pilot-ops-script-v2.7.md",
+      "data/private-pilot-ops-package-v2.7.json"
+    ],
+    "privatePilotOps": [
+      "private-pilot-ops.html",
+      "docs/private-pilot-operations-runbook-v2.7.md",
+      "docs/toastmasters-private-pilot-ops-script-v2.7.md",
+      "docs/public-demo-release-notes-v2.7.md",
+      "data/private-pilot-operations-checklist-v2.7.csv",
+      "data/private-pilot-participant-state-map-v2.7.csv",
+      "data/private-pilot-incident-closeout-log-v2.7.csv",
+      "data/private-pilot-official-handoff-register-v2.7.csv",
+      "data/private-pilot-ops-package-v2.7.json"
     ]
   },
   "safetyRules": [
@@ -976,7 +1022,10 @@
     "Toastmasters First Nations is a controlled sample only; real intake, meeting links, official paperwork, sponsorship/payment reconciliation, and charter acceptance stay outside the package.",
     "No real private pilot records in the public demo, public repository, public screenshots, or fake-data sandbox.",
     "Private pilot cannot start until privacy notice, consent, role access, data-transfer map, incident response, hosting, withdrawal/deletion, official handoff, and closeout are approved.",
-    "Organisation supporters cannot receive member data, access needs, payments, official acceptance records, or unrestricted admin access by default."
+    "Organisation supporters cannot receive member data, access needs, payments, official acceptance records, or unrestricted admin access by default.",
+    "Pilot Operations Control is a public fake/sample template only. It must not be used as the private pilot system of record.",
+    "Real private pilot operations require a separate approved private environment with role access, incident response, official handoff, retention, deletion, and closeout evidence before any real records are collected.",
+    "No real meeting links, incident details, official Toastmasters forms, member numbers, payment records, access needs, or private participant states belong in public evidence."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -1289,5 +1338,49 @@
     ],
     "safetyRule": "Private pilot controls are public templates only. No real membership, address, phone, email, access-need, official application, Toastmasters member-number, payment, signature, private organisation contact, or real authority data belongs in the public demo, public repository, public screenshots, or fake-data Decidim sandbox.",
     "controlledPilotRule": "Private-pilot controls are templates only. Real records require a separate private environment, approved notices, role access, incident response, and closeout."
+  },
+  "privatePilotOps": {
+    "entrypoint": "private-pilot-ops.html",
+    "runbook": "docs/private-pilot-operations-runbook-v2.7.md",
+    "opsScript": "docs/toastmasters-private-pilot-ops-script-v2.7.md",
+    "releaseNotes": "docs/public-demo-release-notes-v2.7.md",
+    "operationsChecklist": "data/private-pilot-operations-checklist-v2.7.csv",
+    "participantStateMap": "data/private-pilot-participant-state-map-v2.7.csv",
+    "incidentCloseoutLog": "data/private-pilot-incident-closeout-log-v2.7.csv",
+    "officialHandoffRegister": "data/private-pilot-official-handoff-register-v2.7.csv",
+    "opsPackage": "data/private-pilot-ops-package-v2.7.json",
+    "sampleInitiative": "Toastmasters First Nations",
+    "mode": "public_demo_private_pilot_operations_template_only",
+    "operationsCheckCount": 16,
+    "participantStateRuleCount": 12,
+    "incidentCloseoutRowCount": 10,
+    "officialHandoffRuleCount": 8,
+    "requiredOperationsCheckCount": 7,
+    "holdOperationsCheckCount": 5,
+    "readyOperationsCheckCount": 3,
+    "completeOperationsCheckCount": 1,
+    "highIncidentRowCount": 5,
+    "neverPublicParticipantStateCount": 3,
+    "noGoTriggers": [
+      "real_private_field_enters_public_demo_or_public_repository",
+      "official_toastmasters_record_stored_in_governance_commons_public_package",
+      "payment_or_sponsorship_detail_enters_governance_commons",
+      "access_need_visible_to_organisation_supporters_or_public_reviewers",
+      "withdrawal_or_correction_request_has_no_owner",
+      "incident_has_no_response_clock_or_closeout_evidence",
+      "public_wording_implies_chartered_club_or_official_membership_before_acceptance",
+      "pilot_continues_without_daily_authority_decision"
+    ],
+    "sourceAnchors": [
+      "https://barayamal.com.au/toastmasters-first-nations/",
+      "https://toastmasters.org/start-a-club",
+      "https://content.toastmasters.org/image/upload/1102-club-charter-requirments-form-ff.pdf",
+      "https://prod103.toastmasters.org/Membership/Leadership/governing-documents/",
+      "https://docs.decidim.org/en/develop/features/participatory-spaces.html",
+      "https://docs.decidim.org/en/develop/admin/spaces.html",
+      "https://docs.decidim.org/en/develop/admin/components.html"
+    ],
+    "safetyRule": "Pilot operations controls are public templates only. No real membership, address, phone, email, access-need, official application, Toastmasters member-number, payment, signature, private organisation contact, meeting link, incident detail, or real authority data belongs in the public demo, public repository, public screenshots, or fake-data Decidim sandbox.",
+    "runDayRule": "Operate only after v2.6 readiness approval and keep all real private records in a separate approved private environment with role access, incident response, official handoff, retention, deletion, and closeout evidence."
   }
 }

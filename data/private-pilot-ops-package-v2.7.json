@@ -1,0 +1,453 @@
+{
+  "version": "2.7",
+  "name": "Pilot Operations Control",
+  "mode": "public_demo_private_pilot_operations_template_only",
+  "sampleInitiative": "Toastmasters First Nations",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "recommendedUse": "Use after v2.6 Private Pilot Readiness approval to rehearse run-day operations without exposing real member, contact, access-need, payment, official Toastmasters, meeting-link, or authority records in the public demo.",
+  "counts": {
+    "operationsChecks": 16,
+    "participantStateRules": 12,
+    "incidentCloseoutRows": 10,
+    "officialHandoffRules": 8,
+    "requiredOperationsChecks": 7,
+    "holdOperationsChecks": 5,
+    "readyOperationsChecks": 3,
+    "completeOperationsChecks": 1,
+    "highIncidentRows": 5,
+    "neverPublicParticipantStates": 3
+  },
+  "files": {
+    "entrypoint": "private-pilot-ops.html",
+    "runbook": "docs/private-pilot-operations-runbook-v2.7.md",
+    "opsScript": "docs/toastmasters-private-pilot-ops-script-v2.7.md",
+    "releaseNotes": "docs/public-demo-release-notes-v2.7.md",
+    "operationsChecklist": "data/private-pilot-operations-checklist-v2.7.csv",
+    "participantStateMap": "data/private-pilot-participant-state-map-v2.7.csv",
+    "incidentCloseoutLog": "data/private-pilot-incident-closeout-log-v2.7.csv",
+    "officialHandoffRegister": "data/private-pilot-official-handoff-register-v2.7.csv"
+  },
+  "noGoTriggers": [
+    "real_private_field_enters_public_demo_or_public_repository",
+    "official_toastmasters_record_stored_in_governance_commons_public_package",
+    "payment_or_sponsorship_detail_enters_governance_commons",
+    "access_need_visible_to_organisation_supporters_or_public_reviewers",
+    "withdrawal_or_correction_request_has_no_owner",
+    "incident_has_no_response_clock_or_closeout_evidence",
+    "public_wording_implies_chartered_club_or_official_membership_before_acceptance",
+    "pilot_continues_without_daily_authority_decision"
+  ],
+  "sourceAnchors": [
+    "https://barayamal.com.au/toastmasters-first-nations/",
+    "https://toastmasters.org/start-a-club",
+    "https://content.toastmasters.org/image/upload/1102-club-charter-requirments-form-ff.pdf",
+    "https://prod103.toastmasters.org/Membership/Leadership/governing-documents/",
+    "https://docs.decidim.org/en/develop/features/participatory-spaces.html",
+    "https://docs.decidim.org/en/develop/admin/spaces.html",
+    "https://docs.decidim.org/en/develop/admin/components.html"
+  ],
+  "safetyRule": "Pilot operations controls are public templates only. No real membership, address, phone, email, access-need, official application, Toastmasters member-number, payment, signature, private organisation contact, meeting link, incident detail, or real authority data belongs in the public demo, public repository, public screenshots, or fake-data Decidim sandbox.",
+  "runDayRule": "Operate only after v2.6 readiness approval and keep all real private records in a separate approved private environment with role access, incident response, official handoff, retention, deletion, and closeout evidence.",
+  "operationsChecks": [
+    {
+      "id": "OC-001",
+      "stage": "Start",
+      "title": "Run authority confirmed",
+      "status": "Required",
+      "owner": "Pilot authority",
+      "evidence": "Named start pause close authority recorded",
+      "stop_condition": "Pilot begins on informal approval"
+    },
+    {
+      "id": "OC-002",
+      "stage": "Start",
+      "title": "No-public-data reminder read",
+      "status": "Ready",
+      "owner": "Pilot coordinator",
+      "evidence": "Start-of-day note confirms public package remains fake only",
+      "stop_condition": "Team shares real records in public channels"
+    },
+    {
+      "id": "OC-003",
+      "stage": "Intake",
+      "title": "Private intake notice active",
+      "status": "Required",
+      "owner": "Privacy reviewer",
+      "evidence": "Notice explains purpose fields access retention deletion and official handoff",
+      "stop_condition": "Participant submits private details without notice"
+    },
+    {
+      "id": "OC-004",
+      "stage": "Evidence",
+      "title": "Fake IDs only in public evidence",
+      "status": "Ready",
+      "owner": "QA reviewer",
+      "evidence": "Screenshots exports and reports use fake IDs only",
+      "stop_condition": "Public evidence shows names contact or access needs"
+    },
+    {
+      "id": "OC-005",
+      "stage": "Consent",
+      "title": "Consent and withdrawal route live",
+      "status": "Hold",
+      "owner": "Pilot coordinator",
+      "evidence": "Participant can change track withdraw or ask what is stored",
+      "stop_condition": "Withdrawal request has no owner"
+    },
+    {
+      "id": "OC-006",
+      "stage": "Support",
+      "title": "Access support route private",
+      "status": "Hold",
+      "owner": "Access support lead",
+      "evidence": "Access needs go to named support role only",
+      "stop_condition": "Access needs shared with organisation supporters"
+    },
+    {
+      "id": "OC-007",
+      "stage": "Official",
+      "title": "Toastmasters handoff external",
+      "status": "Required",
+      "owner": "Launch team",
+      "evidence": "Applications signatures roster and member numbers stay outside public package",
+      "stop_condition": "Official forms stored in Governance Commons public files"
+    },
+    {
+      "id": "OC-008",
+      "stage": "Payment",
+      "title": "Sponsorship status external",
+      "status": "Required",
+      "owner": "Finance or launch owner",
+      "evidence": "Only approved status summary can be recorded",
+      "stop_condition": "Fee card receipt or bank detail enters Governance Commons"
+    },
+    {
+      "id": "OC-009",
+      "stage": "Access",
+      "title": "Admin access removal tested",
+      "status": "Required",
+      "owner": "Technical maintainer",
+      "evidence": "Admin removal and role review are rehearsed",
+      "stop_condition": "Departed helper keeps admin access"
+    },
+    {
+      "id": "OC-010",
+      "stage": "Incident",
+      "title": "Incident clock ready",
+      "status": "Required",
+      "owner": "Security privacy reviewer",
+      "evidence": "Triage owner containment path and notification route exist",
+      "stop_condition": "Exposure has no response clock"
+    },
+    {
+      "id": "OC-011",
+      "stage": "Evidence",
+      "title": "Redaction export checked",
+      "status": "Ready",
+      "owner": "QA reviewer",
+      "evidence": "Export sample strips private fields before publication",
+      "stop_condition": "Export includes private raw fields"
+    },
+    {
+      "id": "OC-012",
+      "stage": "Correction",
+      "title": "Correction request route rehearsed",
+      "status": "Hold",
+      "owner": "Data steward",
+      "evidence": "Participant correction request has owner and decision log",
+      "stop_condition": "Correction request handled in public comments"
+    },
+    {
+      "id": "OC-013",
+      "stage": "Closeout",
+      "title": "Deletion date set",
+      "status": "Hold",
+      "owner": "Data steward",
+      "evidence": "Pilot end date retention period export and deletion owner recorded",
+      "stop_condition": "Records remain indefinitely"
+    },
+    {
+      "id": "OC-014",
+      "stage": "Public update",
+      "title": "Public wording reviewed",
+      "status": "Hold",
+      "owner": "Communications reviewer",
+      "evidence": "Update says sample or proposed club where appropriate",
+      "stop_condition": "Public wording implies charter acceptance or official membership"
+    },
+    {
+      "id": "OC-015",
+      "stage": "Decision",
+      "title": "Daily checkpoint recorded",
+      "status": "Complete",
+      "owner": "Pilot authority",
+      "evidence": "Start pause continue or close decision is recorded",
+      "stop_condition": "Pilot continues without decision evidence"
+    },
+    {
+      "id": "OC-016",
+      "stage": "Closeout",
+      "title": "Post-pilot deletion proof planned",
+      "status": "Required",
+      "owner": "Data steward",
+      "evidence": "Deletion export and retained evidence plan exists",
+      "stop_condition": "Closeout has no proof trail"
+    }
+  ],
+  "participantStateRules": [
+    {
+      "id": "PS-001",
+      "state": "Public interest",
+      "privacy_level": "Public",
+      "allowed_record": "Public sample interest only",
+      "public_output": "Aggregate or fake sample count",
+      "stop_condition": "Public interest becomes charter-ready count"
+    },
+    {
+      "id": "PS-002",
+      "state": "Demo-first",
+      "privacy_level": "Restricted",
+      "allowed_record": "Minimal private contact if notice approved",
+      "public_output": "No public identity",
+      "stop_condition": "Demo attendee is counted as founder"
+    },
+    {
+      "id": "PS-003",
+      "state": "Founder candidate",
+      "privacy_level": "Restricted",
+      "allowed_record": "Track choice and handoff status only",
+      "public_output": "Aggregate readiness only",
+      "stop_condition": "Official application copied into public package"
+    },
+    {
+      "id": "PS-004",
+      "state": "Existing Toastmasters supporter",
+      "privacy_level": "Restricted",
+      "allowed_record": "Support role and referral note only",
+      "public_output": "Approved support summary",
+      "stop_condition": "Supporter receives member data"
+    },
+    {
+      "id": "PS-005",
+      "state": "Organisation supporter",
+      "privacy_level": "Restricted",
+      "allowed_record": "Mentor host or referral offer",
+      "public_output": "Approved organisation support summary",
+      "stop_condition": "Organisation gains authority over members"
+    },
+    {
+      "id": "PS-006",
+      "state": "Access support request",
+      "privacy_level": "Never public",
+      "allowed_record": "Support need to named role only",
+      "public_output": "None",
+      "stop_condition": "Access need appears in screenshot or CSV"
+    },
+    {
+      "id": "PS-007",
+      "state": "Officer interest",
+      "privacy_level": "Restricted",
+      "allowed_record": "Private interest until consent and official confirmation",
+      "public_output": "Aggregate only",
+      "stop_condition": "Real officer slate published early"
+    },
+    {
+      "id": "PS-008",
+      "state": "Withdrawn",
+      "privacy_level": "Restricted",
+      "allowed_record": "Withdrawal request and closeout action",
+      "public_output": "Aggregate withdrawal count if approved",
+      "stop_condition": "Withdrawn person remains active"
+    },
+    {
+      "id": "PS-009",
+      "state": "Duplicate or unclear",
+      "privacy_level": "Restricted",
+      "allowed_record": "Hold marker and review note",
+      "public_output": "None",
+      "stop_condition": "Duplicate counted as separate founder"
+    },
+    {
+      "id": "PS-010",
+      "state": "Age uncertain",
+      "privacy_level": "Never public",
+      "allowed_record": "Eligibility check outside public package",
+      "public_output": "None",
+      "stop_condition": "Underage or unclear record enters charter path"
+    },
+    {
+      "id": "PS-011",
+      "state": "Incident affected",
+      "privacy_level": "Never public",
+      "allowed_record": "Locked incident-linked record",
+      "public_output": "Redacted incident status only",
+      "stop_condition": "Incident details published"
+    },
+    {
+      "id": "PS-012",
+      "state": "Charter-ready summary",
+      "privacy_level": "Restricted",
+      "allowed_record": "Approved aggregate status only",
+      "public_output": "Aggregate count if reviewed",
+      "stop_condition": "Summary implies official acceptance"
+    }
+  ],
+  "incidentCloseoutRows": [
+    {
+      "id": "IL-001",
+      "trigger": "Private field in public screenshot",
+      "severity": "High",
+      "status": "Open",
+      "owner": "QA reviewer",
+      "response": "Remove evidence and notify privacy reviewer",
+      "closeout_evidence": "Replacement screenshot uses fake ID only"
+    },
+    {
+      "id": "IL-002",
+      "trigger": "Wrong role has access",
+      "severity": "High",
+      "status": "Hold",
+      "owner": "Technical maintainer",
+      "response": "Remove access and review role matrix",
+      "closeout_evidence": "Admin access register updated"
+    },
+    {
+      "id": "IL-003",
+      "trigger": "Meeting link public",
+      "severity": "Medium",
+      "status": "Hold",
+      "owner": "Pilot coordinator",
+      "response": "Rotate link and notify affected participants",
+      "closeout_evidence": "Public page confirms link is private"
+    },
+    {
+      "id": "IL-004",
+      "trigger": "Official form uploaded",
+      "severity": "High",
+      "status": "Blocked",
+      "owner": "Launch team",
+      "response": "Remove file and move workflow external",
+      "closeout_evidence": "No official form remains in package"
+    },
+    {
+      "id": "IL-005",
+      "trigger": "Access need shared too widely",
+      "severity": "High",
+      "status": "Blocked",
+      "owner": "Access support lead",
+      "response": "Contain detail and limit to support role",
+      "closeout_evidence": "Access route and supporter role corrected"
+    },
+    {
+      "id": "IL-006",
+      "trigger": "Payment detail recorded",
+      "severity": "High",
+      "status": "Blocked",
+      "owner": "Finance or launch owner",
+      "response": "Remove payment detail and separate finance workflow",
+      "closeout_evidence": "Only approved status summary remains"
+    },
+    {
+      "id": "IL-007",
+      "trigger": "Withdrawal not actioned",
+      "severity": "Medium",
+      "status": "Open",
+      "owner": "Data steward",
+      "response": "Pause record use and confirm deletion or retention",
+      "closeout_evidence": "Withdrawal action logged"
+    },
+    {
+      "id": "IL-008",
+      "trigger": "Duplicate founder count",
+      "severity": "Medium",
+      "status": "Hold",
+      "owner": "Launch team",
+      "response": "Reconcile fake IDs and official count externally",
+      "closeout_evidence": "Aggregate count corrected"
+    },
+    {
+      "id": "IL-009",
+      "trigger": "Records retained after closeout",
+      "severity": "Medium",
+      "status": "Open",
+      "owner": "Data steward",
+      "response": "Apply retention and deletion schedule",
+      "closeout_evidence": "Deletion evidence stored privately"
+    },
+    {
+      "id": "IL-010",
+      "trigger": "Public wording implies chartered club",
+      "severity": "Medium",
+      "status": "Open",
+      "owner": "Communications reviewer",
+      "response": "Correct wording to proposed or in formation",
+      "closeout_evidence": "Public summary reviewed"
+    }
+  ],
+  "officialHandoffRules": [
+    {
+      "id": "OH-001",
+      "stream": "Applications",
+      "record": "Charter membership application",
+      "handling_rule": "External only",
+      "public_output": "Handoff status only",
+      "stop_condition": "Application stored in public package"
+    },
+    {
+      "id": "OH-002",
+      "stream": "Roster",
+      "record": "Charter roster",
+      "handling_rule": "External only",
+      "public_output": "Aggregate readiness only",
+      "stop_condition": "Roster published or exported publicly"
+    },
+    {
+      "id": "OH-003",
+      "stream": "Member number",
+      "record": "Toastmasters member number",
+      "handling_rule": "External only",
+      "public_output": "None",
+      "stop_condition": "Member number enters Governance Commons"
+    },
+    {
+      "id": "OH-004",
+      "stream": "Payment",
+      "record": "Payment or sponsorship reconciliation",
+      "handling_rule": "External only",
+      "public_output": "Approved status summary only",
+      "stop_condition": "Receipt card or bank detail copied"
+    },
+    {
+      "id": "OH-005",
+      "stream": "Officer slate",
+      "record": "Officer interest and confirmation",
+      "handling_rule": "Summary only",
+      "public_output": "Aggregate or consented role summary",
+      "stop_condition": "Real slate published before official confirmation"
+    },
+    {
+      "id": "OH-006",
+      "stream": "Demo",
+      "record": "Demo attendance",
+      "handling_rule": "Aggregate only",
+      "public_output": "Attendance count only",
+      "stop_condition": "Attendance list published"
+    },
+    {
+      "id": "OH-007",
+      "stream": "Support",
+      "record": "Supporter referral",
+      "handling_rule": "Summary only",
+      "public_output": "Approved public supporter note",
+      "stop_condition": "Supporter gets member records"
+    },
+    {
+      "id": "OH-008",
+      "stream": "Evidence",
+      "record": "Governance Commons evidence",
+      "handling_rule": "Redacted public",
+      "public_output": "Fake IDs and aggregate findings",
+      "stop_condition": "Evidence reveals private fields"
+    }
+  ]
+}
