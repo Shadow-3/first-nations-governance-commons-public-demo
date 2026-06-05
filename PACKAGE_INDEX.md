@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v2.9  
+Version: v3.0  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -70,64 +70,74 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 60. `data/private-pilot-learning-metrics-v2.9.csv` - v2.9 learning metrics.
 61. `data/private-pilot-launch-package-v2.9.json` - v2.9 launch package snapshot.
 62. `docs/public-demo-release-notes-v2.9.md` - v2.9 release summary.
-63. `docs/build-delivery-control-playbook-v2.4.md` - v2.4 delivery control playbook.
-64. `docs/provider-contract-gates-v2.4.md` - v2.4 provider contract gates guide.
-65. `data/build-delivery-milestones-v2.4.csv` - v2.4 delivery milestones.
-66. `data/build-delivery-deliverables-v2.4.csv` - v2.4 delivery deliverables.
-67. `data/provider-payment-evidence-gates-v2.4.csv` - v2.4 payment and evidence gates.
-68. `data/build-delivery-raci-v2.4.csv` - v2.4 delivery RACI.
-69. `data/build-delivery-package-v2.4.json` - v2.4 delivery package snapshot.
-70. `docs/build-partner-rfq-pack-v2.3.md` - v2.3 RFQ pack.
-71. `docs/provider-evaluation-guide-v2.3.md` - v2.3 provider evaluation guide.
-72. `data/build-partner-shortlist-v2.3.csv` - v2.3 fake provider archetype shortlist.
-73. `data/provider-evaluation-scorecard-v2.3.csv` - v2.3 weighted provider scorecard.
-74. `data/provider-rfq-question-bank-v2.3.csv` - v2.3 RFQ question bank.
-75. `data/provider-decision-gates-v2.3.csv` - v2.3 quote-to-build decision gates.
-76. `data/build-partner-package-v2.3.json` - v2.3 partner package snapshot.
-77. `docs/decidim-sandbox-build-pack-v2.2.md` - v2.2 build execution playbook.
-78. `docs/provider-self-build-handoff-v2.2.md` - v2.2 provider and self-build handoff.
-79. `data/decidim-build-environment-check-v2.2.csv` - v2.2 environment readiness checks.
-80. `data/decidim-build-runbook-v2.2.csv` - v2.2 build runbook.
-81. `data/decidim-provider-handoff-v2.2.csv` - v2.2 provider handoff table.
-82. `data/decidim-build-acceptance-tests-v2.2.csv` - v2.2 build acceptance tests.
-83. `data/decidim-build-package-v2.2.json` - v2.2 build package snapshot.
-84. `docs/fake-data-seed-playbook-v2.1.md` - v2.1 seed playbook.
-85. `docs/decidim-seed-admin-guide-v2.1.md` - v2.1 Decidim seed admin guide.
-86. `data/decidim-space-component-seed-v2.1.csv` - v2.1 space/component seed map.
-87. `data/fake-content-seed-register-v2.1.csv` - v2.1 fake content register.
-88. `data/seed-safety-review-v2.1.csv` - v2.1 seed safety review.
-89. `data/fake-seed-package-v2.1.json` - v2.1 seed package snapshot.
-90. `docs/sandbox-launch-playbook-v2.0.md` - v2.0 launch playbook.
-91. `docs/decidim-environment-options-v2.0.md` - v2.0 environment options.
-92. `data/sandbox-launch-checklist-v2.0.csv` - v2.0 launch checklist.
-93. `data/sandbox-pathway-comparison-v2.0.csv` - v2.0 pathway comparison.
-94. `data/decidim-sandbox-output-map-v2.0.csv` - v2.0 setup output map.
-95. `data/sandbox-launch-readiness-v2.0.json` - v2.0 launch readiness snapshot.
-96. `docs/sandbox-assurance-playbook-v1.9.md` - v1.9 assurance playbook.
-97. `docs/fake-data-boundary-audit-v1.9.md` - v1.9 fake-data boundary audit.
-98. `data/sandbox-assurance-checklist-v1.9.csv` - v1.9 assurance checklist.
-99. `data/go-live-decision-gates-v1.9.csv` - v1.9 decision gates.
-100. `data/assurance-readiness-snapshot-v1.9.json` - v1.9 readiness snapshot.
-101. `docs/sprint-execution-playbook-v1.8.md` - v1.8 execution playbook.
-102. `data/sprint-execution-tracker-v1.8.csv` - v1.8 execution tracker.
-103. `docs/sandbox-ops-runbook-v1.6.md` - v1.6 ops runbook.
-104. `data/sandbox-ops-checklist-v1.6.csv` - 18 run-day ops checks.
-105. `docs/sandbox-sprint-kickoff-v1.5.md` - v1.5 sprint kickoff.
-106. `data/sandbox-sprint-issues-v1.5.csv` - first 12 sprint issues.
-107. `docs/open-source-contributor-model-v1.4.md` - v1.4 contributor model.
-108. `docs/decidim-sandbox-blueprint-v1.3.md` - v1.3 Decidim sandbox blueprint.
-109. `data/decidim-admin-config-map-v1.6.csv` - v1.6 Decidim admin config map.
-110. `data/decidim-component-map-v1.3.csv` - demo-to-Decidim component map.
-111. `data/sandbox-qa-scenarios-v1.6.csv` - v1.6 QA scenarios.
-112. `docs/github-sprint-launch-report-v1.7.md` - live GitHub sprint setup report.
-113. `data/github-sprint-live-issue-map-v1.7.csv` - live issue URL map.
-114. `data/github-sprint-label-map-v1.7.csv` - label and status map.
-115. `docs/public-demo-release-notes-v2.6.md` - v2.6 release summary.
-116. `docs/public-demo-release-notes-v2.5.md` - v2.5 release summary.
-117. `docs/public-demo-release-notes-v2.4.md` - v2.4 release summary.
-118. `docs/public-demo-release-notes-v2.3.md` - v2.3 release summary.
-119. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
-120. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
+63. `private-pilot-closeout.html` - Private Pilot Closeout Decision for closeout checks, scale decision options, evidence ledger, deletion/retention proof, and transition backlog.
+64. `docs/private-pilot-closeout-and-scale-playbook-v3.0.md` - v3.0 private-pilot closeout and scale playbook.
+65. `docs/toastmasters-private-pilot-closeout-plan-v3.0.md` - v3.0 Toastmasters closeout plan.
+66. `docs/private-pilot-scale-decision-record-v3.0.md` - v3.0 scale decision record.
+67. `data/private-pilot-closeout-checklist-v3.0.csv` - v3.0 closeout checklist.
+68. `data/private-pilot-scale-decision-options-v3.0.csv` - v3.0 scale decision options.
+69. `data/private-pilot-evidence-ledger-v3.0.csv` - v3.0 evidence ledger.
+70. `data/private-pilot-transition-backlog-v3.0.csv` - v3.0 transition backlog.
+71. `data/private-pilot-closeout-package-v3.0.json` - v3.0 closeout package snapshot.
+72. `docs/public-demo-release-notes-v3.0.md` - v3.0 release summary.
+73. `docs/build-delivery-control-playbook-v2.4.md` - v2.4 delivery control playbook.
+74. `docs/provider-contract-gates-v2.4.md` - v2.4 provider contract gates guide.
+75. `data/build-delivery-milestones-v2.4.csv` - v2.4 delivery milestones.
+76. `data/build-delivery-deliverables-v2.4.csv` - v2.4 delivery deliverables.
+77. `data/provider-payment-evidence-gates-v2.4.csv` - v2.4 payment and evidence gates.
+78. `data/build-delivery-raci-v2.4.csv` - v2.4 delivery RACI.
+79. `data/build-delivery-package-v2.4.json` - v2.4 delivery package snapshot.
+80. `docs/build-partner-rfq-pack-v2.3.md` - v2.3 RFQ pack.
+81. `docs/provider-evaluation-guide-v2.3.md` - v2.3 provider evaluation guide.
+82. `data/build-partner-shortlist-v2.3.csv` - v2.3 fake provider archetype shortlist.
+83. `data/provider-evaluation-scorecard-v2.3.csv` - v2.3 weighted provider scorecard.
+84. `data/provider-rfq-question-bank-v2.3.csv` - v2.3 RFQ question bank.
+85. `data/provider-decision-gates-v2.3.csv` - v2.3 quote-to-build decision gates.
+86. `data/build-partner-package-v2.3.json` - v2.3 partner package snapshot.
+87. `docs/decidim-sandbox-build-pack-v2.2.md` - v2.2 build execution playbook.
+88. `docs/provider-self-build-handoff-v2.2.md` - v2.2 provider and self-build handoff.
+89. `data/decidim-build-environment-check-v2.2.csv` - v2.2 environment readiness checks.
+90. `data/decidim-build-runbook-v2.2.csv` - v2.2 build runbook.
+91. `data/decidim-provider-handoff-v2.2.csv` - v2.2 provider handoff table.
+92. `data/decidim-build-acceptance-tests-v2.2.csv` - v2.2 build acceptance tests.
+93. `data/decidim-build-package-v2.2.json` - v2.2 build package snapshot.
+94. `docs/fake-data-seed-playbook-v2.1.md` - v2.1 seed playbook.
+95. `docs/decidim-seed-admin-guide-v2.1.md` - v2.1 Decidim seed admin guide.
+96. `data/decidim-space-component-seed-v2.1.csv` - v2.1 space/component seed map.
+97. `data/fake-content-seed-register-v2.1.csv` - v2.1 fake content register.
+98. `data/seed-safety-review-v2.1.csv` - v2.1 seed safety review.
+99. `data/fake-seed-package-v2.1.json` - v2.1 seed package snapshot.
+100. `docs/sandbox-launch-playbook-v2.0.md` - v2.0 launch playbook.
+101. `docs/decidim-environment-options-v2.0.md` - v2.0 environment options.
+102. `data/sandbox-launch-checklist-v2.0.csv` - v2.0 launch checklist.
+103. `data/sandbox-pathway-comparison-v2.0.csv` - v2.0 pathway comparison.
+104. `data/decidim-sandbox-output-map-v2.0.csv` - v2.0 setup output map.
+105. `data/sandbox-launch-readiness-v2.0.json` - v2.0 launch readiness snapshot.
+106. `docs/sandbox-assurance-playbook-v1.9.md` - v1.9 assurance playbook.
+107. `docs/fake-data-boundary-audit-v1.9.md` - v1.9 fake-data boundary audit.
+108. `data/sandbox-assurance-checklist-v1.9.csv` - v1.9 assurance checklist.
+109. `data/go-live-decision-gates-v1.9.csv` - v1.9 decision gates.
+110. `data/assurance-readiness-snapshot-v1.9.json` - v1.9 readiness snapshot.
+111. `docs/sprint-execution-playbook-v1.8.md` - v1.8 execution playbook.
+112. `data/sprint-execution-tracker-v1.8.csv` - v1.8 execution tracker.
+113. `docs/sandbox-ops-runbook-v1.6.md` - v1.6 ops runbook.
+114. `data/sandbox-ops-checklist-v1.6.csv` - 18 run-day ops checks.
+115. `docs/sandbox-sprint-kickoff-v1.5.md` - v1.5 sprint kickoff.
+116. `data/sandbox-sprint-issues-v1.5.csv` - first 12 sprint issues.
+117. `docs/open-source-contributor-model-v1.4.md` - v1.4 contributor model.
+118. `docs/decidim-sandbox-blueprint-v1.3.md` - v1.3 Decidim sandbox blueprint.
+119. `data/decidim-admin-config-map-v1.6.csv` - v1.6 Decidim admin config map.
+120. `data/decidim-component-map-v1.3.csv` - demo-to-Decidim component map.
+121. `data/sandbox-qa-scenarios-v1.6.csv` - v1.6 QA scenarios.
+122. `docs/github-sprint-launch-report-v1.7.md` - live GitHub sprint setup report.
+123. `data/github-sprint-live-issue-map-v1.7.csv` - live issue URL map.
+124. `data/github-sprint-label-map-v1.7.csv` - label and status map.
+125. `docs/public-demo-release-notes-v2.6.md` - v2.6 release summary.
+126. `docs/public-demo-release-notes-v2.5.md` - v2.5 release summary.
+127. `docs/public-demo-release-notes-v2.4.md` - v2.4 release summary.
+128. `docs/public-demo-release-notes-v2.3.md` - v2.3 release summary.
+129. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
+130. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
 
 ## Recommended Reading Order
 
@@ -515,6 +525,21 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 11. `private-pilot-ops.html`
 12. `private-pilot-readiness.html`
 
+### For Private Pilot Closeout Team
+
+- Start with `private-pilot-closeout.html`.
+- Review `docs/private-pilot-closeout-and-scale-playbook-v3.0.md`.
+- Review `docs/toastmasters-private-pilot-closeout-plan-v3.0.md`.
+- Record the decision in `docs/private-pilot-scale-decision-record-v3.0.md`.
+- Check required closeout gates in `data/private-pilot-closeout-checklist-v3.0.csv`.
+- Compare proceed, hold, no-go, archive, and second-pilot choices in `data/private-pilot-scale-decision-options-v3.0.csv`.
+- Classify every evidence item with `data/private-pilot-evidence-ledger-v3.0.csv`.
+- Move accepted work into `data/private-pilot-transition-backlog-v3.0.csv`.
+- Check machine-readable counts in `data/private-pilot-closeout-package-v3.0.json`.
+- Publish only public-safe learning and redacted decision status.
+- Do not place real closeout evidence, access records, incident details, or official Toastmasters records in this public package.
+- Use v3.0 before repeat, scale, archive, handoff, or second-pilot decisions.
+
 ### For Governance/Data Review
 
 1. `docs-index.html#governance`
@@ -539,6 +564,12 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 20. `docs/security-baseline-checklist-v0.8.md`
 
 ## Data Files
+
+- `data/private-pilot-closeout-checklist-v3.0.csv`
+- `data/private-pilot-scale-decision-options-v3.0.csv`
+- `data/private-pilot-evidence-ledger-v3.0.csv`
+- `data/private-pilot-transition-backlog-v3.0.csv`
+- `data/private-pilot-closeout-package-v3.0.json`
 
 - `data/sample-process-data.json`
 - `data/sample-proposals.csv`
@@ -647,6 +678,7 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 - `private-pilot-implementation.html` is the public Private Pilot Implementation page for private environment, minimum data schema, access register, dry run, go/no-go decision, and implementation brief.
 - `docs/github-sprint-launch-report-v1.7.md` records the live GitHub issues, milestone, labels, and Projects blocker.
 - `private-pilot-launch.html` is the public Private Pilot Launch Control page for controlled launch gates, intake states, communications, learning metrics, and closeout decision.
+- `private-pilot-closeout.html` is the public Private Pilot Closeout Decision page for closeout checks, scale decisions, evidence classification, deletion/retention proof, and transition backlog.
 - `docs-index.html` is the public reviewer hub.
 - `document.html` renders Markdown, CSV, and JSON files from a whitelisted package catalog.
 - `404.html` gives visitors a clean recovery page.

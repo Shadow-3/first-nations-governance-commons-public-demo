@@ -1,0 +1,675 @@
+{
+  "packageName": "Private Pilot Closeout Decision v3.0",
+  "version": "3.0",
+  "date": "2026-06-05",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "mode": "public_demo_private_pilot_closeout_template_only",
+  "sampleInitiative": "Toastmasters First Nations",
+  "closeoutRule": "Do not repeat, scale, archive, or hand off the pilot until closeout checks, evidence ledger, deletion/retention proof, official boundary, and proceed/hold/no-go decision are recorded.",
+  "publicSafetyRule": "This public v3.0 closeout package is fake/sample only. It must not collect or expose real closeout records, private pilot evidence, incident details, access needs, official Toastmasters records, payment details, member numbers, or authority records.",
+  "files": {
+    "entrypoint": "private-pilot-closeout.html",
+    "playbook": "docs/private-pilot-closeout-and-scale-playbook-v3.0.md",
+    "toastmastersPlan": "docs/toastmasters-private-pilot-closeout-plan-v3.0.md",
+    "scaleDecisionRecord": "docs/private-pilot-scale-decision-record-v3.0.md",
+    "releaseNotes": "docs/public-demo-release-notes-v3.0.md",
+    "closeoutChecklist": "data/private-pilot-closeout-checklist-v3.0.csv",
+    "decisionOptions": "data/private-pilot-scale-decision-options-v3.0.csv",
+    "evidenceLedger": "data/private-pilot-evidence-ledger-v3.0.csv",
+    "transitionBacklog": "data/private-pilot-transition-backlog-v3.0.csv",
+    "closeoutPackage": "data/private-pilot-closeout-package-v3.0.json"
+  },
+  "counts": {
+    "closeoutChecks": 18,
+    "decisionOptions": 12,
+    "evidenceLedgerItems": 14,
+    "transitionBacklogActions": 16,
+    "requiredCloseoutChecks": 11,
+    "holdCloseoutChecks": 3,
+    "readyCloseoutChecks": 4,
+    "proceedDecisionOptions": 2,
+    "holdDecisionOptions": 3,
+    "neverPublicEvidenceItems": 5,
+    "requiredBacklogActions": 7
+  },
+  "noGoTriggers": [
+    "Pilot repeats, scales, or hands off without closeout decision evidence.",
+    "Private closeout evidence, incident details, access needs, official Toastmasters records, payment details, member numbers, or authority records appear in the public package.",
+    "Records inventory, deletion proof, retention reason, access revocation, or withdrawal/correction resolution is missing.",
+    "Supporters, sponsors, or public reviewers receive member data, access needs, incidents, official records, or unrestricted private access.",
+    "A second pilot opens using old consent, old gates, or old public wording.",
+    "Community authority is implied by repository maintainers or developer custody instead of the approved authority pathway."
+  ],
+  "sourceAnchors": [
+    {
+      "label": "Barayamal Toastmasters First Nations",
+      "url": "https://barayamal.com.au/toastmasters-first-nations/"
+    },
+    {
+      "label": "Toastmasters Start a Club",
+      "url": "https://www.toastmasters.org/Start-a-Club"
+    },
+    {
+      "label": "Toastmasters Club Charter Requirements Form",
+      "url": "https://content.toastmasters.org/image/upload/ATO-club-chartering-requirements-ff.pdf"
+    },
+    {
+      "label": "Toastmasters Governing Documents",
+      "url": "https://www.toastmasters.org/resources/governing-documents"
+    },
+    {
+      "label": "Decidim install overview",
+      "url": "https://docs.decidim.org/en/develop/install/index.html"
+    },
+    {
+      "label": "Decidim deployment docs",
+      "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+    },
+    {
+      "label": "OAIC Australian Privacy Principles",
+      "url": "https://www.oaic.gov.au/privacy/australian-privacy-principles"
+    },
+    {
+      "label": "Maiam nayri Wingara Indigenous Data Sovereignty",
+      "url": "https://www.maiamnayriwingara.org/"
+    },
+    {
+      "label": "AIATSIS ethical research",
+      "url": "https://aiatsis.gov.au/research/ethical-research"
+    }
+  ],
+  "closeoutChecks": [
+    {
+      "id": "CO-001",
+      "phase": "Authority",
+      "check": "Closeout authority confirmed",
+      "status": "Required",
+      "owner": "Pilot authority",
+      "evidence": "Named person can close, hold, or extend the pilot",
+      "publicRule": "Authority status only",
+      "noGo": "Pilot ends without accountable closeout owner"
+    },
+    {
+      "id": "CO-002",
+      "phase": "Intake",
+      "check": "Controlled intake closed or extended by record",
+      "status": "Required",
+      "owner": "Pilot coordinator",
+      "evidence": "Private intake status, date, and next route",
+      "publicRule": "Open/closed status only",
+      "noGo": "Contacts continue entering without current notice or authority"
+    },
+    {
+      "id": "CO-003",
+      "phase": "Inventory",
+      "check": "Private records inventory exported",
+      "status": "Required",
+      "owner": "Data reviewer",
+      "evidence": "Record count by class, owner, and retention rule",
+      "publicRule": "Aggregate inventory only",
+      "noGo": "Team cannot prove what was collected"
+    },
+    {
+      "id": "CO-004",
+      "phase": "Withdrawal",
+      "check": "Withdrawal and correction requests resolved",
+      "status": "Required",
+      "owner": "Privacy reviewer",
+      "evidence": "Resolution log with response time and result",
+      "publicRule": "Aggregate compliance only",
+      "noGo": "Open request has no owner or result"
+    },
+    {
+      "id": "CO-005",
+      "phase": "Retention",
+      "check": "Retention and deletion schedule applied",
+      "status": "Required",
+      "owner": "Data reviewer",
+      "evidence": "Delete, retain, or handoff action for each data class",
+      "publicRule": "Retention rule summary only",
+      "noGo": "Records kept without reason or review date"
+    },
+    {
+      "id": "CO-006",
+      "phase": "Access",
+      "check": "Access register revoked or reviewed",
+      "status": "Required",
+      "owner": "Technical custodian",
+      "evidence": "Named access review and removal evidence",
+      "publicRule": "Access model summary only",
+      "noGo": "Private access remains open after closeout without approval"
+    },
+    {
+      "id": "CO-007",
+      "phase": "Official handoff",
+      "check": "Official Toastmasters handoff reconciled",
+      "status": "Required",
+      "owner": "Toastmasters launch lead",
+      "evidence": "Private status of official process and documents outside package",
+      "publicRule": "External handoff status only",
+      "noGo": "Official forms, member numbers, signatures, or payment records enter public package"
+    },
+    {
+      "id": "CO-008",
+      "phase": "Incident",
+      "check": "Incident log closed or escalated",
+      "status": "Required",
+      "owner": "Safety reviewer",
+      "evidence": "Private incident closeout, escalation, or hold decision",
+      "publicRule": "No incident detail public",
+      "noGo": "Open incident lacks pause or closure decision"
+    },
+    {
+      "id": "CO-009",
+      "phase": "Access support",
+      "check": "Access support notes minimised",
+      "status": "Required",
+      "owner": "Access support contact",
+      "evidence": "Support records deleted, minimised, or retained with reason",
+      "publicRule": "Support offered summary only",
+      "noGo": "Access needs appear in public evidence"
+    },
+    {
+      "id": "CO-010",
+      "phase": "Public evidence",
+      "check": "Public summary redaction QA complete",
+      "status": "Required",
+      "owner": "QA reviewer",
+      "evidence": "Screenshot and summary review before publishing",
+      "publicRule": "Public-safe summary only",
+      "noGo": "Public summary can identify a person or private circumstance"
+    },
+    {
+      "id": "CO-011",
+      "phase": "Learning",
+      "check": "Learning metrics reviewed",
+      "status": "Ready",
+      "owner": "Pilot authority",
+      "evidence": "Metrics snapshot and interpretation",
+      "publicRule": "Aggregate learning only",
+      "noGo": "Decision made without learning evidence"
+    },
+    {
+      "id": "CO-012",
+      "phase": "Founder readiness",
+      "check": "Founder readiness verified",
+      "status": "Ready",
+      "owner": "Toastmasters launch lead",
+      "evidence": "Confirmed founder pathway and official boundary",
+      "publicRule": "Aggregate readiness only",
+      "noGo": "Supporters or demo-first attendees counted as confirmed founders"
+    },
+    {
+      "id": "CO-013",
+      "phase": "Supporters",
+      "check": "Sponsor and supporter boundary reviewed",
+      "status": "Ready",
+      "owner": "Pilot coordinator",
+      "evidence": "Supporter access and sponsorship boundary check",
+      "publicRule": "Support role summary only",
+      "noGo": "Supporters receive member or access-need data"
+    },
+    {
+      "id": "CO-014",
+      "phase": "Capacity",
+      "check": "Operator load review complete",
+      "status": "Ready",
+      "owner": "Barayamal / Dean Foley",
+      "evidence": "Workload, response clocks, and one-person dependency review",
+      "publicRule": "Capacity risk only",
+      "noGo": "Scale proceeds while response clocks rely on one person"
+    },
+    {
+      "id": "CO-015",
+      "phase": "Communications",
+      "check": "Thank-you and decision note ready",
+      "status": "Hold",
+      "owner": "Pilot coordinator",
+      "evidence": "Approved participant closeout message",
+      "publicRule": "Template name only",
+      "noGo": "Participants do not know closeout result or their data options"
+    },
+    {
+      "id": "CO-016",
+      "phase": "Decision meeting",
+      "check": "Second pilot decision meeting scheduled",
+      "status": "Hold",
+      "owner": "Pilot authority",
+      "evidence": "Proceed, hold, or no-go meeting and agenda",
+      "publicRule": "Meeting status only",
+      "noGo": "Second pilot starts without decision record"
+    },
+    {
+      "id": "CO-017",
+      "phase": "Transition",
+      "check": "Handover package assembled",
+      "status": "Hold",
+      "owner": "Technical custodian",
+      "evidence": "Backlog, risks, evidence, owners, and next build path",
+      "publicRule": "Public-safe package index only",
+      "noGo": "Build proceeds without handover evidence"
+    },
+    {
+      "id": "CO-018",
+      "phase": "Decision",
+      "check": "Final closeout decision recorded",
+      "status": "Required",
+      "owner": "Pilot authority",
+      "evidence": "Proceed, hold, no-go, archive, or second pilot decision",
+      "publicRule": "Redacted decision status only",
+      "noGo": "Pilot drifts into wider rollout without closeout decision"
+    }
+  ],
+  "decisionOptions": [
+    {
+      "id": "DO-001",
+      "option": "Proceed to second controlled pilot",
+      "decision": "Proceed",
+      "owner": "Pilot authority",
+      "useWhen": "All required closeout checks pass and operator load is sustainable",
+      "evidence": "Closeout record, learning metrics, no-go review, and approval",
+      "publicRule": "Proceed status and public-safe learning only",
+      "noGo": "No deletion or access closeout evidence"
+    },
+    {
+      "id": "DO-002",
+      "option": "Hold and fix named gates",
+      "decision": "Hold",
+      "owner": "Pilot authority",
+      "useWhen": "Useful signal exists but one or more closeout controls remain unresolved",
+      "evidence": "Named hold actions, owner, due date, and recheck date",
+      "publicRule": "Hold reason summary only",
+      "noGo": "Hold has no owner or review date"
+    },
+    {
+      "id": "DO-003",
+      "option": "No-go and close records",
+      "decision": "No-go",
+      "owner": "Pilot authority",
+      "useWhen": "No-go trigger occurred or the pilot cannot safely continue",
+      "evidence": "No-go record, deletion/retention proof, and participant closeout",
+      "publicRule": "No-go status and public-safe reason only",
+      "noGo": "Records left open after no-go"
+    },
+    {
+      "id": "DO-004",
+      "option": "Continue public demo only",
+      "decision": "Ready",
+      "owner": "Barayamal / Dean Foley",
+      "useWhen": "Real pilot is not ready, but public fake/sample review remains useful",
+      "evidence": "Public demo backlog and safety boundary",
+      "publicRule": "Public demo remains fake/sample only",
+      "noGo": "Public page implies real intake is open"
+    },
+    {
+      "id": "DO-005",
+      "option": "Move official Toastmasters pathway outside package",
+      "decision": "External",
+      "owner": "Toastmasters launch lead",
+      "useWhen": "Founder path needs official process outside Governance Commons public files",
+      "evidence": "Official handoff status stored privately or externally",
+      "publicRule": "External handoff boundary only",
+      "noGo": "Official records stored in public demo"
+    },
+    {
+      "id": "DO-006",
+      "option": "Build private Decidim pilot workspace",
+      "decision": "Proceed",
+      "owner": "Technical custodian",
+      "useWhen": "Pilot evidence supports a private Decidim environment beyond static public demo",
+      "evidence": "Hosting, roles, backups, privacy, and migration plan",
+      "publicRule": "Private workspace decision summary only",
+      "noGo": "Static public demo becomes private system of record"
+    },
+    {
+      "id": "DO-007",
+      "option": "Seek provider quote for production",
+      "decision": "Ready",
+      "owner": "Build delivery lead",
+      "useWhen": "Scale requires external Decidim hosting or implementation capacity",
+      "evidence": "Scope, acceptance, privacy, source code, and handover requirements",
+      "publicRule": "Provider pathway only",
+      "noGo": "Provider asks for real private pilot data during quote"
+    },
+    {
+      "id": "DO-008",
+      "option": "Seek community governance approval",
+      "decision": "Required",
+      "owner": "Governance reviewer",
+      "useWhen": "Any wider First Nations use needs authority beyond developer custody",
+      "evidence": "Authority pathway, consultation scope, and decision rights",
+      "publicRule": "Authority pathway summary only",
+      "noGo": "Repository maintainers decide community authority"
+    },
+    {
+      "id": "DO-009",
+      "option": "Publish public learning note",
+      "decision": "Ready",
+      "owner": "QA reviewer",
+      "useWhen": "Closeout produced safe aggregate lessons",
+      "evidence": "Redaction QA and aggregate-only public note",
+      "publicRule": "Public-safe learning only",
+      "noGo": "Identities or private circumstances can be inferred"
+    },
+    {
+      "id": "DO-010",
+      "option": "Transfer initiative ownership",
+      "decision": "Hold",
+      "owner": "Pilot authority",
+      "useWhen": "Another organisation or group should operate the next stage",
+      "evidence": "Ownership, admin, data, and authority transfer record",
+      "publicRule": "Transfer status only",
+      "noGo": "Ownership changes without data and access handover"
+    },
+    {
+      "id": "DO-011",
+      "option": "Archive pilot package",
+      "decision": "Required",
+      "owner": "Data reviewer",
+      "useWhen": "Pilot ends or pauses and records need closeout proof",
+      "evidence": "Archive index, deletion evidence, retention reasons, and review date",
+      "publicRule": "Archive status only",
+      "noGo": "Archive contains public-excluded records"
+    },
+    {
+      "id": "DO-012",
+      "option": "Open wider EOI later",
+      "decision": "Hold",
+      "owner": "Pilot coordinator",
+      "useWhen": "Learning supports future broader interest but not immediate scale",
+      "evidence": "New notice, new authority, refreshed support capacity",
+      "publicRule": "Future EOI status only",
+      "noGo": "Wider EOI opens on old consent and old gates"
+    }
+  ],
+  "evidenceLedger": [
+    {
+      "id": "EL-001",
+      "evidence": "Closeout authority record",
+      "classification": "Private restricted",
+      "owner": "Pilot authority",
+      "storage": "Private workspace",
+      "publicRule": "Authority status only",
+      "closeoutAction": "Retain until final decision review"
+    },
+    {
+      "id": "EL-002",
+      "evidence": "Launch gate outcome snapshot",
+      "classification": "Public safe summary",
+      "owner": "QA reviewer",
+      "storage": "Public package allowed after redaction",
+      "publicRule": "Gate counts and statuses only",
+      "closeoutAction": "Publish redacted aggregate"
+    },
+    {
+      "id": "EL-003",
+      "evidence": "Consent and notice versions",
+      "classification": "Private restricted",
+      "owner": "Privacy reviewer",
+      "storage": "Private workspace",
+      "publicRule": "Version labels only",
+      "closeoutAction": "Retain with closeout record"
+    },
+    {
+      "id": "EL-004",
+      "evidence": "Access register closeout",
+      "classification": "Never public",
+      "owner": "Technical custodian",
+      "storage": "Private workspace only",
+      "publicRule": "Access model summary only",
+      "closeoutAction": "Revoke, retain proof, review date"
+    },
+    {
+      "id": "EL-005",
+      "evidence": "Private records inventory",
+      "classification": "Private restricted",
+      "owner": "Data reviewer",
+      "storage": "Private workspace",
+      "publicRule": "Aggregate inventory only",
+      "closeoutAction": "Map every data class to delete, retain, or handoff"
+    },
+    {
+      "id": "EL-006",
+      "evidence": "Deletion evidence log",
+      "classification": "Never public",
+      "owner": "Data reviewer",
+      "storage": "Private workspace only",
+      "publicRule": "Deletion completed statement only",
+      "closeoutAction": "Retain proof privately for review period"
+    },
+    {
+      "id": "EL-007",
+      "evidence": "Retention reasons log",
+      "classification": "Private restricted",
+      "owner": "Data reviewer",
+      "storage": "Private workspace",
+      "publicRule": "Retention categories only",
+      "closeoutAction": "Set review date and owner"
+    },
+    {
+      "id": "EL-008",
+      "evidence": "Withdrawal and correction log",
+      "classification": "Never public",
+      "owner": "Privacy reviewer",
+      "storage": "Private workspace only",
+      "publicRule": "Aggregate compliance only",
+      "closeoutAction": "Close each request with outcome"
+    },
+    {
+      "id": "EL-009",
+      "evidence": "Access support response summary",
+      "classification": "Never public",
+      "owner": "Access support contact",
+      "storage": "Private support route",
+      "publicRule": "Support offered aggregate only",
+      "closeoutAction": "Minimise or delete support details"
+    },
+    {
+      "id": "EL-010",
+      "evidence": "Incident closeout summary",
+      "classification": "Never public",
+      "owner": "Safety reviewer",
+      "storage": "Private incident route",
+      "publicRule": "No incident details public",
+      "closeoutAction": "Close, escalate, or keep pilot on hold"
+    },
+    {
+      "id": "EL-011",
+      "evidence": "Official handoff status",
+      "classification": "Private restricted",
+      "owner": "Toastmasters launch lead",
+      "storage": "Official route or private workspace",
+      "publicRule": "External handoff status only",
+      "closeoutAction": "Keep official records outside public package"
+    },
+    {
+      "id": "EL-012",
+      "evidence": "Learning metrics snapshot",
+      "classification": "Public safe summary",
+      "owner": "Pilot authority",
+      "storage": "Public package allowed after redaction",
+      "publicRule": "Aggregate learning only",
+      "closeoutAction": "Publish only if sample size is safe"
+    },
+    {
+      "id": "EL-013",
+      "evidence": "Public summary QA record",
+      "classification": "Private restricted",
+      "owner": "QA reviewer",
+      "storage": "Private workspace",
+      "publicRule": "Redaction QA passed statement only",
+      "closeoutAction": "Keep checklist private; publish summary"
+    },
+    {
+      "id": "EL-014",
+      "evidence": "Final decision record",
+      "classification": "Public safe summary",
+      "owner": "Pilot authority",
+      "storage": "Private record plus redacted public note",
+      "publicRule": "Proceed, hold, or no-go summary only",
+      "closeoutAction": "Publish redacted decision after approval"
+    }
+  ],
+  "transitionBacklog": [
+    {
+      "id": "TB-001",
+      "lane": "Authority",
+      "action": "Confirm community authority pathway beyond developer custody",
+      "priority": "Required",
+      "owner": "Governance reviewer",
+      "output": "Decision-rights note",
+      "dependency": "Closeout decision",
+      "stopCondition": "Scale proceeds by repository maintainer decision only"
+    },
+    {
+      "id": "TB-002",
+      "lane": "Data governance",
+      "action": "Run data governance and Indigenous Data Sovereignty review",
+      "priority": "Required",
+      "owner": "Data reviewer",
+      "output": "Data governance checklist",
+      "dependency": "Records inventory",
+      "stopCondition": "Data classes lack owner or purpose"
+    },
+    {
+      "id": "TB-003",
+      "lane": "Privacy",
+      "action": "Complete privacy impact review for wider pilot",
+      "priority": "Required",
+      "owner": "Privacy reviewer",
+      "output": "Privacy impact decision",
+      "dependency": "Minimum data schema",
+      "stopCondition": "New collection uses old notice"
+    },
+    {
+      "id": "TB-004",
+      "lane": "Cultural safety",
+      "action": "Review moderation, incident, and meeting conduct rules",
+      "priority": "Required",
+      "owner": "Safety reviewer",
+      "output": "Safety update pack",
+      "dependency": "Incident closeout",
+      "stopCondition": "Incidents or conduct gaps unresolved"
+    },
+    {
+      "id": "TB-005",
+      "lane": "Hosting",
+      "action": "Choose private hosting or Decidim environment for next stage",
+      "priority": "Hold",
+      "owner": "Technical custodian",
+      "output": "Hosting decision record",
+      "dependency": "Provider or self-build path",
+      "stopCondition": "Public static demo used for private records"
+    },
+    {
+      "id": "TB-006",
+      "lane": "Decidim scope",
+      "action": "Map closeout learning to Decidim spaces and components",
+      "priority": "Ready",
+      "owner": "Build lead",
+      "output": "Updated component map",
+      "dependency": "Learning metrics",
+      "stopCondition": "Build ignores pilot evidence"
+    },
+    {
+      "id": "TB-007",
+      "lane": "Private intake",
+      "action": "Design next-stage private intake workflow",
+      "priority": "Required",
+      "owner": "Pilot coordinator",
+      "output": "Private intake flow",
+      "dependency": "Consent and withdrawal route",
+      "stopCondition": "Intake cannot support withdrawal or correction"
+    },
+    {
+      "id": "TB-008",
+      "lane": "Official boundary",
+      "action": "Lock Toastmasters official process boundary",
+      "priority": "Required",
+      "owner": "Toastmasters launch lead",
+      "output": "Official boundary note",
+      "dependency": "Handoff status",
+      "stopCondition": "Official records enter public package"
+    },
+    {
+      "id": "TB-009",
+      "lane": "Organisation onboarding",
+      "action": "Convert sample into repeatable First Nations organisation join pattern",
+      "priority": "Ready",
+      "owner": "Onboarding lead",
+      "output": "Organisation join blueprint",
+      "dependency": "Toastmasters sample closeout",
+      "stopCondition": "Pattern collects real org records publicly"
+    },
+    {
+      "id": "TB-010",
+      "lane": "Support model",
+      "action": "Set access support and participant support capacity",
+      "priority": "Hold",
+      "owner": "Access support contact",
+      "output": "Support operating model",
+      "dependency": "Operator load review",
+      "stopCondition": "Support requests outpace response clocks"
+    },
+    {
+      "id": "TB-011",
+      "lane": "Incident response",
+      "action": "Update incident response and pause process",
+      "priority": "Required",
+      "owner": "Safety reviewer",
+      "output": "Incident playbook update",
+      "dependency": "Incident closeout",
+      "stopCondition": "No escalation path for next stage"
+    },
+    {
+      "id": "TB-012",
+      "lane": "Funding",
+      "action": "Prepare funding/provider decision pack",
+      "priority": "Ready",
+      "owner": "Build delivery lead",
+      "output": "Scope and budget note",
+      "dependency": "Scale option chosen",
+      "stopCondition": "Funding request lacks evidence and boundaries"
+    },
+    {
+      "id": "TB-013",
+      "lane": "Training",
+      "action": "Prepare admin and operator handover",
+      "priority": "Ready",
+      "owner": "Technical custodian",
+      "output": "Training and admin handover plan",
+      "dependency": "Chosen hosting path",
+      "stopCondition": "Only one person can operate the system"
+    },
+    {
+      "id": "TB-014",
+      "lane": "Reporting",
+      "action": "Create public reporting template",
+      "priority": "Ready",
+      "owner": "QA reviewer",
+      "output": "Public learning note template",
+      "dependency": "Redaction QA",
+      "stopCondition": "Public reporting exposes private circumstances"
+    },
+    {
+      "id": "TB-015",
+      "lane": "Archive",
+      "action": "Automate archive/deletion checklist for future pilots",
+      "priority": "Hold",
+      "owner": "Data reviewer",
+      "output": "Reusable closeout checklist",
+      "dependency": "Deletion evidence log",
+      "stopCondition": "Future pilots cannot prove closeout"
+    },
+    {
+      "id": "TB-016",
+      "lane": "Second pilot",
+      "action": "Define second controlled pilot recruitment conditions",
+      "priority": "Hold",
+      "owner": "Pilot authority",
+      "output": "Second pilot gate list",
+      "dependency": "Proceed or hold decision",
+      "stopCondition": "Wider EOI opens before closeout gates pass"
+    }
+  ]
+}

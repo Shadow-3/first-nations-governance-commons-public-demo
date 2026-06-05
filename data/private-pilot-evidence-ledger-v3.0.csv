@@ -1,0 +1,15 @@
+id,evidence,classification,owner,storage,publicRule,closeoutAction
+EL-001,Closeout authority record,Private restricted,Pilot authority,Private workspace,Authority status only,Retain until final decision review
+EL-002,Launch gate outcome snapshot,Public safe summary,QA reviewer,Public package allowed after redaction,Gate counts and statuses only,Publish redacted aggregate
+EL-003,Consent and notice versions,Private restricted,Privacy reviewer,Private workspace,Version labels only,Retain with closeout record
+EL-004,Access register closeout,Never public,Technical custodian,Private workspace only,Access model summary only,"Revoke, retain proof, review date"
+EL-005,Private records inventory,Private restricted,Data reviewer,Private workspace,Aggregate inventory only,"Map every data class to delete, retain, or handoff"
+EL-006,Deletion evidence log,Never public,Data reviewer,Private workspace only,Deletion completed statement only,Retain proof privately for review period
+EL-007,Retention reasons log,Private restricted,Data reviewer,Private workspace,Retention categories only,Set review date and owner
+EL-008,Withdrawal and correction log,Never public,Privacy reviewer,Private workspace only,Aggregate compliance only,Close each request with outcome
+EL-009,Access support response summary,Never public,Access support contact,Private support route,Support offered aggregate only,Minimise or delete support details
+EL-010,Incident closeout summary,Never public,Safety reviewer,Private incident route,No incident details public,"Close, escalate, or keep pilot on hold"
+EL-011,Official handoff status,Private restricted,Toastmasters launch lead,Official route or private workspace,External handoff status only,Keep official records outside public package
+EL-012,Learning metrics snapshot,Public safe summary,Pilot authority,Public package allowed after redaction,Aggregate learning only,Publish only if sample size is safe
+EL-013,Public summary QA record,Private restricted,QA reviewer,Private workspace,Redaction QA passed statement only,Keep checklist private; publish summary
+EL-014,Final decision record,Public safe summary,Pilot authority,Private record plus redacted public note,"Proceed, hold, or no-go summary only",Publish redacted decision after approval

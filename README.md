@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v2.9
+Current package version: v3.0
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -52,6 +52,7 @@ Open `private-pilot-ops.html` to use Pilot Operations Control for run-day checks
 Open `private-pilot-implementation.html` to use Private Pilot Implementation for the private environment, minimum data schema, access register, implementation workplan, dry run, and go/no-go decision before real intake opens.
 
 Open `private-pilot-launch.html` to use Private Pilot Launch Control for controlled launch gates, intake states, communications, learning metrics, and a closeout decision before any wider rollout.
+Open `private-pilot-closeout.html` to use Private Pilot Closeout Decision for closeout checks, scale decision options, evidence ledger, deletion/retention proof, and transition backlog before any repeat, archive, handoff, or wider rollout.
 
 The demo shows:
 
@@ -83,6 +84,16 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v3.0.md`
+- `docs/private-pilot-closeout-and-scale-playbook-v3.0.md`
+- `docs/toastmasters-private-pilot-closeout-plan-v3.0.md`
+- `docs/private-pilot-scale-decision-record-v3.0.md`
+- `data/private-pilot-closeout-checklist-v3.0.csv`
+- `data/private-pilot-scale-decision-options-v3.0.csv`
+- `data/private-pilot-evidence-ledger-v3.0.csv`
+- `data/private-pilot-transition-backlog-v3.0.csv`
+- `data/private-pilot-closeout-package-v3.0.json`
+
 - `docs/public-demo-release-notes-v1.0.md`
 - `docs/public-demo-release-notes-v1.1.md`
 - `docs/public-demo-release-notes-v1.2.md`
@@ -716,9 +727,25 @@ The v2.9 package adds the controlled launch layer needed after private pilot imp
 
 Use this version after v2.8 implementation approval. Private Pilot Launch Control still uses public fake/sample templates only. Real controlled intake requires a separate approved private environment, named operators, privacy notice, consent/withdrawal process, access register, incident route, official Toastmasters handoff boundary, retention/deletion rule, closeout evidence, and weekly learning review.
 
+## v3.0 Private Pilot Closeout Decision Upgrade
+
+The v3.0 package adds the end-of-pilot decision layer needed after the first controlled pilot window:
+
+- Interactive Private Pilot Closeout Decision page.
+- Eighteen closeout checks.
+- Twelve scale decision options.
+- Fourteen evidence ledger items.
+- Sixteen transition backlog actions.
+- Browser-generated closeout brief.
+- Private pilot closeout and scale playbook, Toastmasters closeout plan, and scale decision record.
+- Document viewer coverage for all v3.0 closeout docs, CSVs, and JSON.
+- Package manifest coverage for the new private pilot closeout evidence group.
+
+Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
 ## Next Build Step
 
-Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, Delivery Room, Assurance Room, Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, Build Delivery Control, Organisation Onboarding, Private Pilot Readiness, Pilot Operations Control, and Private Pilot Implementation and Private Pilot Launch Control to configure, operate, select a provider for, control delivery of, test organisation/initiative onboarding for, check private-pilot readiness for, rehearse private-pilot run-day operations for, prepare the separate private pilot environment for, and safely hand over a fake-data Decidim sandbox:
+Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, Delivery Room, Assurance Room, Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, Build Delivery Control, Organisation Onboarding, Private Pilot Readiness, Pilot Operations Control, and Private Pilot Implementation, Private Pilot Launch Control, and Private Pilot Closeout Decision to configure, operate, select a provider for, control delivery of, test organisation/initiative onboarding for, check private-pilot readiness for, rehearse private-pilot run-day operations for, prepare the separate private pilot environment for, launch and learn from a controlled pilot for, close or scale-decision the pilot for, and safely hand over a fake-data Decidim sandbox:
 
 - One organisation.
 - One public assembly.
@@ -734,5 +761,6 @@ Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Ro
 - Pilot operations controls.
 - Private-pilot implementation controls.
 - Private-pilot launch controls.
+- Private-pilot closeout and scale-decision controls.
 
 Use the files in `docs/` and `data/` as the first mapping package.

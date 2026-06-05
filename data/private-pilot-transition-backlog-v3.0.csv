@@ -1,0 +1,17 @@
+id,lane,action,priority,owner,output,dependency,stopCondition
+TB-001,Authority,Confirm community authority pathway beyond developer custody,Required,Governance reviewer,Decision-rights note,Closeout decision,Scale proceeds by repository maintainer decision only
+TB-002,Data governance,Run data governance and Indigenous Data Sovereignty review,Required,Data reviewer,Data governance checklist,Records inventory,Data classes lack owner or purpose
+TB-003,Privacy,Complete privacy impact review for wider pilot,Required,Privacy reviewer,Privacy impact decision,Minimum data schema,New collection uses old notice
+TB-004,Cultural safety,"Review moderation, incident, and meeting conduct rules",Required,Safety reviewer,Safety update pack,Incident closeout,Incidents or conduct gaps unresolved
+TB-005,Hosting,Choose private hosting or Decidim environment for next stage,Hold,Technical custodian,Hosting decision record,Provider or self-build path,Public static demo used for private records
+TB-006,Decidim scope,Map closeout learning to Decidim spaces and components,Ready,Build lead,Updated component map,Learning metrics,Build ignores pilot evidence
+TB-007,Private intake,Design next-stage private intake workflow,Required,Pilot coordinator,Private intake flow,Consent and withdrawal route,Intake cannot support withdrawal or correction
+TB-008,Official boundary,Lock Toastmasters official process boundary,Required,Toastmasters launch lead,Official boundary note,Handoff status,Official records enter public package
+TB-009,Organisation onboarding,Convert sample into repeatable First Nations organisation join pattern,Ready,Onboarding lead,Organisation join blueprint,Toastmasters sample closeout,Pattern collects real org records publicly
+TB-010,Support model,Set access support and participant support capacity,Hold,Access support contact,Support operating model,Operator load review,Support requests outpace response clocks
+TB-011,Incident response,Update incident response and pause process,Required,Safety reviewer,Incident playbook update,Incident closeout,No escalation path for next stage
+TB-012,Funding,Prepare funding/provider decision pack,Ready,Build delivery lead,Scope and budget note,Scale option chosen,Funding request lacks evidence and boundaries
+TB-013,Training,Prepare admin and operator handover,Ready,Technical custodian,Training and admin handover plan,Chosen hosting path,Only one person can operate the system
+TB-014,Reporting,Create public reporting template,Ready,QA reviewer,Public learning note template,Redaction QA,Public reporting exposes private circumstances
+TB-015,Archive,Automate archive/deletion checklist for future pilots,Hold,Data reviewer,Reusable closeout checklist,Deletion evidence log,Future pilots cannot prove closeout
+TB-016,Second pilot,Define second controlled pilot recruitment conditions,Hold,Pilot authority,Second pilot gate list,Proceed or hold decision,Wider EOI opens before closeout gates pass

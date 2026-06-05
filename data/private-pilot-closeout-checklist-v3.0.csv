@@ -1,0 +1,19 @@
+id,phase,check,status,owner,evidence,publicRule,noGo
+CO-001,Authority,Closeout authority confirmed,Required,Pilot authority,"Named person can close, hold, or extend the pilot",Authority status only,Pilot ends without accountable closeout owner
+CO-002,Intake,Controlled intake closed or extended by record,Required,Pilot coordinator,"Private intake status, date, and next route",Open/closed status only,Contacts continue entering without current notice or authority
+CO-003,Inventory,Private records inventory exported,Required,Data reviewer,"Record count by class, owner, and retention rule",Aggregate inventory only,Team cannot prove what was collected
+CO-004,Withdrawal,Withdrawal and correction requests resolved,Required,Privacy reviewer,Resolution log with response time and result,Aggregate compliance only,Open request has no owner or result
+CO-005,Retention,Retention and deletion schedule applied,Required,Data reviewer,"Delete, retain, or handoff action for each data class",Retention rule summary only,Records kept without reason or review date
+CO-006,Access,Access register revoked or reviewed,Required,Technical custodian,Named access review and removal evidence,Access model summary only,Private access remains open after closeout without approval
+CO-007,Official handoff,Official Toastmasters handoff reconciled,Required,Toastmasters launch lead,Private status of official process and documents outside package,External handoff status only,"Official forms, member numbers, signatures, or payment records enter public package"
+CO-008,Incident,Incident log closed or escalated,Required,Safety reviewer,"Private incident closeout, escalation, or hold decision",No incident detail public,Open incident lacks pause or closure decision
+CO-009,Access support,Access support notes minimised,Required,Access support contact,"Support records deleted, minimised, or retained with reason",Support offered summary only,Access needs appear in public evidence
+CO-010,Public evidence,Public summary redaction QA complete,Required,QA reviewer,Screenshot and summary review before publishing,Public-safe summary only,Public summary can identify a person or private circumstance
+CO-011,Learning,Learning metrics reviewed,Ready,Pilot authority,Metrics snapshot and interpretation,Aggregate learning only,Decision made without learning evidence
+CO-012,Founder readiness,Founder readiness verified,Ready,Toastmasters launch lead,Confirmed founder pathway and official boundary,Aggregate readiness only,Supporters or demo-first attendees counted as confirmed founders
+CO-013,Supporters,Sponsor and supporter boundary reviewed,Ready,Pilot coordinator,Supporter access and sponsorship boundary check,Support role summary only,Supporters receive member or access-need data
+CO-014,Capacity,Operator load review complete,Ready,Barayamal / Dean Foley,"Workload, response clocks, and one-person dependency review",Capacity risk only,Scale proceeds while response clocks rely on one person
+CO-015,Communications,Thank-you and decision note ready,Hold,Pilot coordinator,Approved participant closeout message,Template name only,Participants do not know closeout result or their data options
+CO-016,Decision meeting,Second pilot decision meeting scheduled,Hold,Pilot authority,"Proceed, hold, or no-go meeting and agenda",Meeting status only,Second pilot starts without decision record
+CO-017,Transition,Handover package assembled,Hold,Technical custodian,"Backlog, risks, evidence, owners, and next build path",Public-safe package index only,Build proceeds without handover evidence
+CO-018,Decision,Final closeout decision recorded,Required,Pilot authority,"Proceed, hold, no-go, archive, or second pilot decision",Redacted decision status only,Pilot drifts into wider rollout without closeout decision
