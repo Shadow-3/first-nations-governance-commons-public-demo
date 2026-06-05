@@ -1,0 +1,15 @@
+id,approval,status,owner,requiredBefore,privateRecord
+APP-001,Private authority approval,Blocked,Authority chair,Before real participant invitation,Decision minute outside public package.
+APP-002,IDS/data governance approval,Blocked,Data governance reviewer,Before any real data entry,"Data class, access, retention, export, delete decision."
+APP-003,Privacy impact acceptance,Blocked,Privacy reviewer,Before real intake form,Privacy decision and notice approval.
+APP-004,Official Toastmasters boundary acceptance,Blocked,Official-route owner,Before member path opens,External official record decision.
+APP-005,Support and incident pause approval,Hold,Safety reviewer,Before real support route,Tabletop closeout and escalation rule.
+APP-006,Admin revoke and least privilege approval,Hold,Technical custodian,Before real admins,Private access proof.
+APP-007,Backup restore delete approval,Hold,Technical custodian,Before real records,Private technical proof.
+APP-008,Barayamal founder path approval,Hold,Barayamal program operator,Before founder intake,Private run result and field review.
+APP-009,FN Toastmasters guest/member boundary approval,Hold,Club facilitator,Before member tester repeat,Boundary wording review.
+APP-010,Dean advisory review accepted as advisory only,Ready,Review coordinator,Before advisory handoff,Advisory note in private review pack.
+APP-011,Public update approval,Hold,Comms lead,Before public post,Approved public-safe wording.
+APP-012,Provider handoff approval,Hold,Technical custodian,Before provider access,Private handoff boundary.
+APP-013,Second rehearsal approval,Ready,Pilot owner,If critical/high blockers remain,Decision to repeat fake-data run.
+APP-014,No-go/archive approval,Ready,Authority chair,If approvals fail,Decision to pause or archive.

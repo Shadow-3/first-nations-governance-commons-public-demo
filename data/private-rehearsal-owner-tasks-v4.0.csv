@@ -1,0 +1,19 @@
+id,owner,task,status,due,evidence
+TSK-001,Technical custodian,Create private fake-data Decidim sandbox.,Next,Before rehearsal,Private sandbox URL and setup note.
+TSK-002,Technical custodian,Create sample accounts and roles.,Next,Before rehearsal,Fake account register.
+TSK-003,Pilot owner,Load v3.8 scripts and v3.9 scorecard into private run pack.,Next,Before rehearsal,Run pack checklist.
+TSK-004,Privacy reviewer,Review business owner and learning survey fields.,Next,Before Barayamal/FNT survey run,Private privacy note.
+TSK-005,Official-route owner,Approve Toastmasters boundary wording.,Blocked,Before member path opens,Private official-route note.
+TSK-006,Safety reviewer,Schedule support pause tabletop.,Blocked,Before real intake,Tabletop agenda.
+TSK-007,Technical custodian,"Run admin invite, role change, revoke, denied access proof.",Next,During rehearsal,Private access proof.
+TSK-008,Technical custodian,"Run backup, restore, export, delete proof.",Hold,During rehearsal,Private technical proof.
+TSK-009,Data governance reviewer,Record IDS/data governance approval or hold.,Blocked,Before real data,Private decision record.
+TSK-010,Authority chair,Hold closeout decision meeting.,Blocked,After rehearsal,Private decision record.
+TSK-011,Comms lead,Draft public-safe learning update.,Hold,After private review,Approved public wording.
+TSK-012,Review coordinator,Collect Dean advisory note as advisory-only evidence.,Next,Before closeout,Advisory note.
+TSK-013,Barayamal program operator,Run founder and business owner fake-data scripts.,Next,During rehearsal,Private run note.
+TSK-014,Club facilitator,Run guest/member boundary scripts.,Hold,After official wording review,Private run note.
+TSK-015,Mentor coordinator,Draft mentor conflict and privacy rule.,Next,Before mentor access,Private policy note.
+TSK-016,Provider lead,Prepare provider handoff boundary if needed.,Hold,Before provider access,Handoff checklist.
+TSK-017,Pilot owner,Update v4.0 package with actual fake-data run results.,Next,After rehearsal,Public-safe package update.
+TSK-018,Authority chair,"Choose hold, second rehearsal, no-go, archive, or controlled pilot readiness.",Hold,Closeout,Private decision summary.

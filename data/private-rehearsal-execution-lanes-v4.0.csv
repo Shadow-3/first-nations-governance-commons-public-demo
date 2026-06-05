@@ -1,0 +1,9 @@
+id,lane,track,status,nextAction,publicBoundary,owner
+LAN-001,Private sandbox setup,Cross-track,Next,Create private fake-data Decidim spaces and sample accounts.,Public can say private rehearsal is being prepared.,Technical custodian
+LAN-002,Barayamal founder path,Barayamal,Next,"Run founder, business owner, mentor, and advisor fake-data scripts.",Publish only aggregate learning.,Barayamal program operator
+LAN-003,First Nations Toastmasters member path,FN Toastmasters,Hold,"Run member, guest, meeting role, and survey scripts only after official-route wording is reviewed.",Do not imply official Toastmasters membership.,Club facilitator
+LAN-004,Authority and IDS review,Cross-track,Blocked,"Hold private authority, privacy, and data governance review.",Public cannot cite private approvals.,Authority chair
+LAN-005,Support and safety rehearsal,Cross-track,Blocked,Run support pause and incident tabletop with fake scenario.,Public summary can state whether tabletop occurred.,Safety reviewer
+LAN-006,Access and revocation proof,Cross-track,Next,"Prove invite, role change, revocation, denied access, export, backup, restore, and delete.",Never publish access logs.,Technical custodian
+LAN-007,Public update drafting,Cross-track,Hold,Draft public-safe learning note after private evidence is checked.,Only public-safe statements.,Comms lead
+LAN-008,Closeout decision meeting,Cross-track,Hold,"Choose hold, second rehearsal, no-go, archive, or pilot-ready-with-conditions.",Public result must not overstate readiness.,Authority chair

@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v3.9  
+Version: v4.0  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -153,9 +153,29 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
 
+## v4.0 Private Rehearsal Closeout Board Additions
+
+- `private-rehearsal-closeout.html` - public-safe board for private fake-data rehearsal runs, closeout gates, evidence checks, approvals, public updates, launch decisions, and owner tasks.
+- `docs/private-rehearsal-closeout-playbook-v4.0.md`
+- `docs/rehearsal-run-sheet-v4.0.md`
+- `docs/private-approval-and-evidence-checklist-v4.0.md`
+- `docs/public-update-and-launch-decision-brief-v4.0.md`
+- `docs/public-demo-release-notes-v4.0.md`
+- `data/private-rehearsal-execution-lanes-v4.0.csv`
+- `data/private-rehearsal-run-register-v4.0.csv`
+- `data/private-rehearsal-closeout-gates-v4.0.csv`
+- `data/private-rehearsal-evidence-checks-v4.0.csv`
+- `data/private-rehearsal-approval-actions-v4.0.csv`
+- `data/private-rehearsal-public-update-v4.0.csv`
+- `data/private-rehearsal-launch-readiness-v4.0.csv`
+- `data/private-rehearsal-owner-tasks-v4.0.csv`
+- `data/private-rehearsal-closeout-package-v4.0.json`
+
+
 ## v3.9 Sandbox Rehearsal Scorecard Additions
 
 - `sandbox-rehearsal-scorecard.html` - public-safe scorecard for fake-data rehearsal results, blockers, remediations, decisions, rollout tasks, and summary boundaries.
+- `private-rehearsal-closeout.html` is the public-safe Private Rehearsal Closeout Board for private fake-data run execution, gates, approvals, public updates, launch choices, and owner actions.
 - `docs/sandbox-rehearsal-scorecard-playbook-v3.9.md`
 - `docs/test-results-and-score-method-v3.9.md`
 - `docs/remediation-and-decision-log-v3.9.md`

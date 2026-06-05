@@ -1,0 +1,17 @@
+id,track,scenario,status,required,sampleAccount,expectedProof,nextAction
+RUN-001,Barayamal,Founder interest to proposal,Ready,Yes,FN-Fake-Founder-01,Proposal created with no identity or commercial sensitivity.,Run in private fake-data sandbox and attach public-safe note only.
+RUN-002,Barayamal,Business owner survey field review,Hold,Yes,FN-Fake-Business-01,Survey avoids sensitive commercial fields.,Privacy reviewer must approve fields before run.
+RUN-003,Barayamal,Founder yarning meeting summary,Ready,Yes,FN-Fake-Founder-02,Public summary has no attendee identity or private story.,Run and compare with redaction checklist.
+RUN-004,Barayamal,Mentor access and conflict rule,Hold,Yes,FN-Fake-Mentor-01,Mentor sees only approved public-safe material.,Create private mentor conflict rule first.
+RUN-005,Barayamal,Partner observer least privilege,Ready,No,FN-Fake-Observer-01,Observer cannot access private evidence.,Run after account setup.
+RUN-006,Barayamal,Dean advisory review note,Ready,No,FN-Fake-Advisor-01,"Advisory note cannot approve authority, privacy, IDS, or official route.",Run after scorecard is loaded.
+RUN-007,FN Toastmasters,Member welcome path,Hold,Yes,FNT-Fake-Member-01,Member welcome clearly separates official records.,Official-route wording review required first.
+RUN-008,FN Toastmasters,Guest path stays guest-only,Ready,Yes,FNT-Fake-Guest-01,Guest cannot see member-only or official records.,Run after sample roles are created.
+RUN-009,FN Toastmasters,Meeting role agenda,Ready,Yes,FNT-Fake-Speaker-01,Agenda uses fake roles and no evaluation records.,Run and verify public-safe minutes.
+RUN-010,FN Toastmasters,Learning survey aggregate,Hold,Yes,FNT-Fake-Member-02,Survey stays aggregate and not personal evaluation.,Remove personal-evaluation fields first.
+RUN-011,FN Toastmasters,Sample motion not official,Hold,No,FNT-Fake-Facilitator-01,Motion copy cannot be mistaken for official Toastmasters decision.,Rewrite motion wording before run.
+RUN-012,Cross-track,Support pause tabletop,Blocked,Yes,FN-Fake-Safety-01,"Pause route, escalation, and affected-person privacy are proven.",Safety reviewer must schedule tabletop.
+RUN-013,Cross-track,Admin invite and revoke,Ready,Yes,FN-Fake-Admin-01,Revoked user cannot log in or export after role removal.,Run in private sandbox only.
+RUN-014,Cross-track,Backup restore export delete proof,Hold,Yes,FN-Fake-Tech-01,"Backup, restore, export, delete, and retention rule are proven.",Prepare private technical checklist first.
+RUN-015,Cross-track,Public summary redaction scan,Ready,Yes,FN-Fake-Comms-01,Public update contains only approved statements.,Run before any public post.
+RUN-016,Cross-track,Closeout decision meeting rehearsal,Blocked,Yes,FN-Fake-Authority-01,"Authority, privacy, IDS, official-route, support, and technical owners choose hold/go/no-go.",Blocked until approval packet is ready.

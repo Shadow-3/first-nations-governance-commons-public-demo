@@ -625,6 +625,7 @@
 <a class="btn" href="two-track-pilot-onboarding.html">Two-Track Pilot</a>
 <a class="btn" href="controlled-sandbox-test-lab.html">Test Lab</a>
 <a class="btn" href="sandbox-rehearsal-scorecard.html">Scorecard</a>
+<a class="btn" href="private-rehearsal-closeout.html">Closeout</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -675,6 +676,10 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Private rehearsal closeout playbook", path: "docs/private-rehearsal-closeout-playbook-v4.0.md", type: "markdown", description: "Run the private fake-data rehearsal safely." },
+      { category: "Start Here", title: "Rehearsal run sheet", path: "docs/rehearsal-run-sheet-v4.0.md", type: "markdown", description: "Sixteen fake-data scripts and proof expectations." },
+      { category: "Start Here", title: "Private approval and evidence checklist", path: "docs/private-approval-and-evidence-checklist-v4.0.md", type: "markdown", description: "Private gates, evidence classes, and owners." },
+      { category: "Start Here", title: "Public update and launch decision brief", path: "docs/public-update-and-launch-decision-brief-v4.0.md", type: "markdown", description: "What can be said publicly and what remains blocked." },
       { category: "Start Here", title: "Sandbox rehearsal scorecard playbook", path: "docs/sandbox-rehearsal-scorecard-playbook-v3.9.md", type: "markdown", description: "Turn fake-data rehearsal results into decision-ready evidence." },
       { category: "Start Here", title: "Test results and score method", path: "docs/test-results-and-score-method-v3.9.md", type: "markdown", description: "Interpret pass, hold, blocked, and score values." },
       { category: "Start Here", title: "Remediation and decision log", path: "docs/remediation-and-decision-log-v3.9.md", type: "markdown", description: "Owner actions and closeout options." },
@@ -739,6 +744,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v4.0", path: "docs/public-demo-release-notes-v4.0.md", type: "markdown", description: "Private Rehearsal Closeout Board upgrade summary." },
       { category: "Release Notes", title: "Release notes v3.9", path: "docs/public-demo-release-notes-v3.9.md", type: "markdown", description: "Sandbox Rehearsal Scorecard upgrade summary." },
       { category: "Release Notes", title: "Release notes v3.8", path: "docs/public-demo-release-notes-v3.8.md", type: "markdown", description: "Controlled Sandbox Test Lab upgrade summary." },
       { category: "Release Notes", title: "Release notes v3.7", path: "docs/public-demo-release-notes-v3.7.md", type: "markdown", description: "Two-Track Pilot Onboarding upgrade summary." },
@@ -962,6 +968,19 @@
       { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
       { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
       { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Private Rehearsal Closeout", title: "Closeout playbook v4.0", path: "docs/private-rehearsal-closeout-playbook-v4.0.md", type: "markdown", description: "Run the private fake-data rehearsal safely." },
+      { category: "Private Rehearsal Closeout", title: "Rehearsal run sheet v4.0", path: "docs/rehearsal-run-sheet-v4.0.md", type: "markdown", description: "Sixteen fake-data scripts and proof expectations." },
+      { category: "Private Rehearsal Closeout", title: "Approval and evidence checklist v4.0", path: "docs/private-approval-and-evidence-checklist-v4.0.md", type: "markdown", description: "Private gates, evidence classes, and owners." },
+      { category: "Private Rehearsal Closeout", title: "Public update and launch decision brief v4.0", path: "docs/public-update-and-launch-decision-brief-v4.0.md", type: "markdown", description: "Public-safe update and launch choices." },
+      { category: "Private Rehearsal Closeout", title: "Execution lanes v4.0", path: "data/private-rehearsal-execution-lanes-v4.0.csv", type: "csv", description: "Eight private execution lanes." },
+      { category: "Private Rehearsal Closeout", title: "Run register v4.0", path: "data/private-rehearsal-run-register-v4.0.csv", type: "csv", description: "Sixteen fake-data run rows." },
+      { category: "Private Rehearsal Closeout", title: "Closeout gates v4.0", path: "data/private-rehearsal-closeout-gates-v4.0.csv", type: "csv", description: "Fourteen gate records." },
+      { category: "Private Rehearsal Closeout", title: "Evidence checks v4.0", path: "data/private-rehearsal-evidence-checks-v4.0.csv", type: "csv", description: "Eighteen evidence checks." },
+      { category: "Private Rehearsal Closeout", title: "Approval actions v4.0", path: "data/private-rehearsal-approval-actions-v4.0.csv", type: "csv", description: "Fourteen private approval actions." },
+      { category: "Private Rehearsal Closeout", title: "Public update v4.0", path: "data/private-rehearsal-public-update-v4.0.csv", type: "csv", description: "Ten public-safe update rows." },
+      { category: "Private Rehearsal Closeout", title: "Launch readiness v4.0", path: "data/private-rehearsal-launch-readiness-v4.0.csv", type: "csv", description: "Twelve launch decision choices." },
+      { category: "Private Rehearsal Closeout", title: "Owner tasks v4.0", path: "data/private-rehearsal-owner-tasks-v4.0.csv", type: "csv", description: "Eighteen owner action rows." },
+      { category: "Private Rehearsal Closeout", title: "Closeout package v4.0", path: "data/private-rehearsal-closeout-package-v4.0.json", type: "json", description: "Machine-readable v4.0 closeout package." },
       { category: "Sandbox Rehearsal Scorecard", title: "Scorecard playbook v3.9", path: "docs/sandbox-rehearsal-scorecard-playbook-v3.9.md", type: "markdown", description: "Use after the fake-data Test Lab." },
       { category: "Sandbox Rehearsal Scorecard", title: "Results and score method v3.9", path: "docs/test-results-and-score-method-v3.9.md", type: "markdown", description: "Interpret pass, hold, blocked, and score values." },
       { category: "Sandbox Rehearsal Scorecard", title: "Remediation and decision log v3.9", path: "docs/remediation-and-decision-log-v3.9.md", type: "markdown", description: "Owner actions and closeout options." },

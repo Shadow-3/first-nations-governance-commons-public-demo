@@ -1,0 +1,13 @@
+id,decision,status,condition,result
+LRD-001,Go to real pilot,Not available,All critical gates pass and high holds are accepted privately.,Not current.
+LRD-002,Hold and complete approvals,Recommended,"Authority, IDS, privacy, official route, support, and technical proofs still pending.",Current decision.
+LRD-003,Run second fake-data rehearsal,Recommended,Any critical/high blocker remains after first private run.,Likely next.
+LRD-004,Barayamal-only second run,Available,Founder/business owner path is ready but Toastmasters boundary remains held.,Use if official route is delayed.
+LRD-005,FN Toastmasters-only second run,Hold,Official boundary wording passes but Barayamal business field review is held.,Not current.
+LRD-006,Archive public demo as concept,Available,Private approval route is paused or declined.,Keep public demo only.
+LRD-007,Provider-assisted private sandbox,Available,Self-build dependencies remain blocked.,Use with private contract controls.
+LRD-008,Self-build private sandbox,Hold,Local Ruby/Postgres/ImageMagick/Vips/Decidim scaffold are ready.,Environment not ready in this static package.
+LRD-009,Public update only,Available,Only public-safe learning is approved.,No private evidence.
+LRD-010,No-go,Available,"Authority, privacy, IDS, official route, or safety owner declines.",Stop real pilot.
+LRD-011,Wait for official-route owner,Recommended,Toastmasters boundary not accepted privately.,Protect member path.
+LRD-012,Wait for support tabletop,Recommended,Support pause route not rehearsed.,Protect participants.

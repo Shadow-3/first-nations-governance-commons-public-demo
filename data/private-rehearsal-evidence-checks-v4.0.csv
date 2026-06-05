@@ -1,0 +1,19 @@
+id,evidence,dataClass,status,storageRule,publicSummary
+EVD-001,Public demo contains fake/sample data only,Public safe,Ready,Public repository,Can publish as fake-data QA.
+EVD-002,Private sandbox URL and credentials,Never public,Blocked,Private access vault only,Never publish.
+EVD-003,Authority decision minutes,Private restricted,Blocked,Private authority folder,Publish only existence if approved.
+EVD-004,IDS/data governance approval,Private restricted,Blocked,Private data governance folder,Publish only aggregate status.
+EVD-005,Privacy impact decision,Private restricted,Blocked,Private privacy folder,Publish only aggregate status.
+EVD-006,Official Toastmasters boundary review,Private restricted,Blocked,Private official-route folder,Do not publish official records.
+EVD-007,Support pause tabletop notes,Private restricted,Hold,Private safety folder,Publish only tabletop completed/not completed.
+EVD-008,Admin revoke access logs,Never public,Hold,Private technical evidence vault,Never publish logs.
+EVD-009,Backup restore proof,Private restricted,Hold,Private technical evidence vault,Publish only proof completed.
+EVD-010,Delete and retention proof,Private restricted,Hold,Private technical evidence vault,Publish only proof completed.
+EVD-011,Barayamal founder run screenshot,Public safe,Ready,Redacted screenshot folder,Can publish if names and details are fake.
+EVD-012,Business owner field review notes,Private restricted,Hold,Private privacy folder,Do not publish commercial sensitivity.
+EVD-013,Mentor conflict notes,Private restricted,Hold,Private governance folder,Publish only policy exists.
+EVD-014,FN Toastmasters member welcome screenshot,Public safe,Hold,Redacted screenshot folder,Can publish if official boundary is visible.
+EVD-015,Learning survey response file,Never public,Blocked,Private data folder only,Never publish response-level data.
+EVD-016,Public update draft,Public safe,Ready,Public comms folder,Can publish after approval.
+EVD-017,Provider handoff notes,Private restricted,Hold,Private provider folder,Publish no private evidence.
+EVD-018,Closeout decision record,Private restricted,Blocked,Private authority folder,Publish only public-safe decision summary.

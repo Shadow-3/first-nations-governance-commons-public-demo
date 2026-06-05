@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v3.9
+Current package version: v4.0
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -62,6 +62,7 @@ Open `decidim-build-blueprint.html` to use Decidim Build Blueprint for spaces, c
 Open `two-track-pilot-onboarding.html` to run Barayamal as the organisation onboarding test and First Nations Toastmasters as the controlled member onboarding tester.
 Open `controlled-sandbox-test-lab.html` to run fake accounts, scripts, observer notes, issue triage, gates, and evidence checks before any real private pilot.
 Open `sandbox-rehearsal-scorecard.html` to convert fake-data rehearsal results into pass, hold, blocked, remediation, rollout, and public-summary decisions.
+Open `private-rehearsal-closeout.html` to execute and close the private fake-data rehearsal with gates, approvals, public updates, and launch decisions.
 
 The demo shows:
 
@@ -93,6 +94,21 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v4.0.md`
+- `docs/private-rehearsal-closeout-playbook-v4.0.md`
+- `docs/rehearsal-run-sheet-v4.0.md`
+- `docs/private-approval-and-evidence-checklist-v4.0.md`
+- `docs/public-update-and-launch-decision-brief-v4.0.md`
+- `data/private-rehearsal-execution-lanes-v4.0.csv`
+- `data/private-rehearsal-run-register-v4.0.csv`
+- `data/private-rehearsal-closeout-gates-v4.0.csv`
+- `data/private-rehearsal-evidence-checks-v4.0.csv`
+- `data/private-rehearsal-approval-actions-v4.0.csv`
+- `data/private-rehearsal-public-update-v4.0.csv`
+- `data/private-rehearsal-launch-readiness-v4.0.csv`
+- `data/private-rehearsal-owner-tasks-v4.0.csv`
+- `data/private-rehearsal-closeout-package-v4.0.json`
+
 - `docs/public-demo-release-notes-v3.9.md`
 - `docs/sandbox-rehearsal-scorecard-playbook-v3.9.md`
 - `docs/test-results-and-score-method-v3.9.md`
@@ -871,6 +887,17 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v4.0 Private Rehearsal Closeout Board Upgrade
+
+The v4.0 package adds the closeout layer needed after the Sandbox Rehearsal Scorecard:
+
+- Eight execution lanes, sixteen rehearsal run rows, fourteen closeout gates, and eighteen evidence checks.
+- Fourteen approval actions, ten public update boundary rows, twelve launch readiness choices, and eighteen owner tasks.
+- A stronger rule that the public demo can support the private fake-data rehearsal, but cannot become the authority, privacy, IDS/data governance, official Toastmasters, support, access-log, or incident evidence store.
+
+Use this version to run and close the private fake-data rehearsal before any real participant decision.
+
 
 ## v3.9 Sandbox Rehearsal Scorecard Upgrade
 

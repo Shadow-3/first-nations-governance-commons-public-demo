@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "3.9",
+  "version": "4.0",
   "date": "2026-06-05",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use Sandbox Rehearsal Scorecard as the default next fake-data decision layer: keep the current decision at hold, run a private fake-data Decidim sandbox rehearsal, close blocked critical/high items, and publish only public-safe summary learning. Do not invite real participants until private authority, privacy, Indigenous Data Sovereignty/data governance, official Toastmasters boundary, support, access, backup/restore, monitoring, incident response, and closeout approvals pass.",
+  "recommendedDecision": "Use Private Rehearsal Closeout Board as the default next fake-data execution layer: run the private fake-data rehearsal, update the closeout board with actual fake-data outcomes, close or formally accept critical/high blockers privately, approve only a public-safe update, and keep real participant launch on hold until private authority, privacy, Indigenous Data Sovereignty/data governance, official Toastmasters boundary, support, access, backup/restore, monitoring, incident response, and closeout approvals pass.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -282,13 +282,28 @@
     "data/sandbox-decision-options-v3.9.csv",
     "data/sandbox-rollout-tasks-v3.9.csv",
     "data/sandbox-public-summary-v3.9.csv",
-    "data/sandbox-rehearsal-scorecard-package-v3.9.json"
+    "data/sandbox-rehearsal-scorecard-package-v3.9.json",
+    "private-rehearsal-closeout.html",
+    "docs/private-rehearsal-closeout-playbook-v4.0.md",
+    "docs/rehearsal-run-sheet-v4.0.md",
+    "docs/private-approval-and-evidence-checklist-v4.0.md",
+    "docs/public-update-and-launch-decision-brief-v4.0.md",
+    "docs/public-demo-release-notes-v4.0.md",
+    "data/private-rehearsal-execution-lanes-v4.0.csv",
+    "data/private-rehearsal-run-register-v4.0.csv",
+    "data/private-rehearsal-closeout-gates-v4.0.csv",
+    "data/private-rehearsal-evidence-checks-v4.0.csv",
+    "data/private-rehearsal-approval-actions-v4.0.csv",
+    "data/private-rehearsal-public-update-v4.0.csv",
+    "data/private-rehearsal-launch-readiness-v4.0.csv",
+    "data/private-rehearsal-owner-tasks-v4.0.csv",
+    "data/private-rehearsal-closeout-package-v4.0.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v3.9.md",
+    "releaseNotes": "docs/public-demo-release-notes-v4.0.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -510,7 +525,17 @@
       "qa-v39-deployed-sandbox-rehearsal-scorecard-barayamal-desktop.png",
       "qa-v39-deployed-sandbox-rehearsal-scorecard-blockers-desktop.png",
       "qa-v39-deployed-sandbox-rehearsal-scorecard-mobile.png",
-      "qa-v39-deployed-sandbox-rehearsal-scorecard-package-mobile.png"
+      "qa-v39-deployed-sandbox-rehearsal-scorecard-package-mobile.png",
+      "qa-v40-local-private-rehearsal-closeout-desktop.png",
+      "qa-v40-local-private-rehearsal-closeout-barayamal-desktop.png",
+      "qa-v40-local-private-rehearsal-closeout-blocked-gates-desktop.png",
+      "qa-v40-local-private-rehearsal-closeout-mobile.png",
+      "qa-v40-local-private-rehearsal-closeout-package-mobile.png",
+      "qa-v40-deployed-private-rehearsal-closeout-desktop.png",
+      "qa-v40-deployed-private-rehearsal-closeout-barayamal-desktop.png",
+      "qa-v40-deployed-private-rehearsal-closeout-blocked-gates-desktop.png",
+      "qa-v40-deployed-private-rehearsal-closeout-mobile.png",
+      "qa-v40-deployed-private-rehearsal-closeout-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -1454,6 +1479,23 @@
       "data/sandbox-rollout-tasks-v3.9.csv",
       "data/sandbox-public-summary-v3.9.csv",
       "data/sandbox-rehearsal-scorecard-package-v3.9.json"
+    ],
+    "privateRehearsalCloseout": [
+      "private-rehearsal-closeout.html",
+      "docs/private-rehearsal-closeout-playbook-v4.0.md",
+      "docs/rehearsal-run-sheet-v4.0.md",
+      "docs/private-approval-and-evidence-checklist-v4.0.md",
+      "docs/public-update-and-launch-decision-brief-v4.0.md",
+      "docs/public-demo-release-notes-v4.0.md",
+      "data/private-rehearsal-execution-lanes-v4.0.csv",
+      "data/private-rehearsal-run-register-v4.0.csv",
+      "data/private-rehearsal-closeout-gates-v4.0.csv",
+      "data/private-rehearsal-evidence-checks-v4.0.csv",
+      "data/private-rehearsal-approval-actions-v4.0.csv",
+      "data/private-rehearsal-public-update-v4.0.csv",
+      "data/private-rehearsal-launch-readiness-v4.0.csv",
+      "data/private-rehearsal-owner-tasks-v4.0.csv",
+      "data/private-rehearsal-closeout-package-v4.0.json"
     ]
   },
   "safetyRules": [
@@ -1514,7 +1556,11 @@
     "This v3.9 scorecard is public fake/sample data only. Do not record real participant names, contact details, founder/business records, member numbers, payments, signatures, official Toastmasters records, authority minutes, consent evidence, access logs, incident details, support records, or private pilot evidence.",
     "Dean Foley / Barayamal may provide advisory review and initial developer/custodian feedback on the scorecard, but cannot convert fake-data rehearsal results into First Nations authority, privacy, Indigenous Data Sovereignty, official Toastmasters, real participant, or private pilot approval.",
     "Use the Sandbox Rehearsal Scorecard after the v3.8 Controlled Sandbox Test Lab. The scorecard converts fake-data rehearsal results into a decision-ready readout: what passed, what is blocked, what must be remediated, what can be publicly summarized, and what must remain private.",
-    "A private pilot can move beyond rehearsal only when blocked critical/high items are closed or formally accepted in a private authority process, role revocation is proven, official Toastmasters records remain external, evidence boundaries are respected, and private authority/privacy/IDS/data governance approvals exist outside this public package."
+    "A private pilot can move beyond rehearsal only when blocked critical/high items are closed or formally accepted in a private authority process, role revocation is proven, official Toastmasters records remain external, evidence boundaries are respected, and private authority/privacy/IDS/data governance approvals exist outside this public package.",
+    "This v4.0 package is public fake/sample data only. Do not store real participant names, emails, phone numbers, founder or business records, member numbers, payments, signatures, official Toastmasters records, cultural material, support records, access logs, incident details, authority minutes, consent evidence, or private pilot evidence in this public package.",
+    "Dean Foley / Barayamal may act as initial developer, custodian, advisory reviewer, and trusted reviewer for this closeout board, but private First Nations authority, privacy, Indigenous Data Sovereignty/data governance, official Toastmasters, safety/support, and real participant decisions remain separate approval responsibilities.",
+    "Use the Private Rehearsal Closeout Board after v3.9. It turns the scorecard into a controlled private fake-data execution plan: run scripts, record private evidence status, close blockers, prepare a public-safe update, and choose hold, second rehearsal, no-go, or tightly controlled pilot readiness.",
+    "A real participant pilot remains blocked until every critical closeout gate is passed privately, high-risk holds are either closed or formally accepted by the right authority, official Toastmasters records remain external, support pause and admin revocation are proven, and public communications use only the approved public-safe update."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -2897,5 +2943,88 @@
     "advisoryRule": "Dean Foley / Barayamal may provide advisory review and initial developer/custodian feedback on the scorecard, but cannot convert fake-data rehearsal results into First Nations authority, privacy, Indigenous Data Sovereignty, official Toastmasters, real participant, or private pilot approval.",
     "decisionRule": "A private pilot can move beyond rehearsal only when blocked critical/high items are closed or formally accepted in a private authority process, role revocation is proven, official Toastmasters records remain external, evidence boundaries are respected, and private authority/privacy/IDS/data governance approvals exist outside this public package.",
     "safetyRule": "This v3.9 scorecard is public fake/sample data only. Do not record real participant names, contact details, founder/business records, member numbers, payments, signatures, official Toastmasters records, authority minutes, consent evidence, access logs, incident details, support records, or private pilot evidence."
+  },
+  "privateRehearsalCloseout": {
+    "entrypoint": "private-rehearsal-closeout.html",
+    "playbook": "docs/private-rehearsal-closeout-playbook-v4.0.md",
+    "runSheet": "docs/rehearsal-run-sheet-v4.0.md",
+    "evidenceGuide": "docs/private-approval-and-evidence-checklist-v4.0.md",
+    "publicDecisionBrief": "docs/public-update-and-launch-decision-brief-v4.0.md",
+    "releaseNotes": "docs/public-demo-release-notes-v4.0.md",
+    "dataFiles": [
+      "data/private-rehearsal-execution-lanes-v4.0.csv",
+      "data/private-rehearsal-run-register-v4.0.csv",
+      "data/private-rehearsal-closeout-gates-v4.0.csv",
+      "data/private-rehearsal-evidence-checks-v4.0.csv",
+      "data/private-rehearsal-approval-actions-v4.0.csv",
+      "data/private-rehearsal-public-update-v4.0.csv",
+      "data/private-rehearsal-launch-readiness-v4.0.csv",
+      "data/private-rehearsal-owner-tasks-v4.0.csv",
+      "data/private-rehearsal-closeout-package-v4.0.json"
+    ],
+    "primaryOrganisationTest": "Barayamal",
+    "controlledMemberTester": "First Nations Toastmasters",
+    "counts": {
+      "executionLanes": 8,
+      "rehearsalRuns": 16,
+      "closeoutGates": 14,
+      "evidenceChecks": 18,
+      "approvalActions": 14,
+      "publicUpdates": 10,
+      "launchReadiness": 12,
+      "ownerTasks": 18,
+      "closeoutRecords": 110,
+      "barayamalRuns": 6,
+      "toastmastersRuns": 5,
+      "crossTrackRuns": 5,
+      "blockedRuns": 2,
+      "readyRuns": 8,
+      "blockedGates": 4,
+      "blockedApprovals": 4,
+      "neverPublicEvidence": 3,
+      "nextOwnerTasks": 9
+    },
+    "sourceAnchors": [
+      {
+        "label": "Decidim spaces",
+        "url": "https://docs.decidim.org/en/develop/admin/spaces.html"
+      },
+      {
+        "label": "Decidim components",
+        "url": "https://docs.decidim.org/en/develop/admin/components.html"
+      },
+      {
+        "label": "Decidim authorizations",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+      },
+      {
+        "label": "Decidim administrators",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/admins.html"
+      },
+      {
+        "label": "Decidim production checklist",
+        "url": "https://docs.decidim.org/en/develop/install/checklist.html"
+      },
+      {
+        "label": "Barayamal Toastmasters First Nations",
+        "url": "https://barayamal.com.au/toastmasters-first-nations/"
+      },
+      {
+        "label": "Toastmasters Start a Club",
+        "url": "https://www.toastmasters.org/Start-a-Club"
+      },
+      {
+        "label": "OAIC privacy impact assessments",
+        "url": "https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/privacy-impact-assessments/guide-to-undertaking-privacy-impact-assessments"
+      },
+      {
+        "label": "AIATSIS ethical research",
+        "url": "https://aiatsis.gov.au/research/ethical-research"
+      }
+    ],
+    "operatingRule": "Use the Private Rehearsal Closeout Board after v3.9. It turns the scorecard into a controlled private fake-data execution plan: run scripts, record private evidence status, close blockers, prepare a public-safe update, and choose hold, second rehearsal, no-go, or tightly controlled pilot readiness.",
+    "advisoryRule": "Dean Foley / Barayamal may act as initial developer, custodian, advisory reviewer, and trusted reviewer for this closeout board, but private First Nations authority, privacy, Indigenous Data Sovereignty/data governance, official Toastmasters, safety/support, and real participant decisions remain separate approval responsibilities.",
+    "safetyRule": "This v4.0 package is public fake/sample data only. Do not store real participant names, emails, phone numbers, founder or business records, member numbers, payments, signatures, official Toastmasters records, cultural material, support records, access logs, incident details, authority minutes, consent evidence, or private pilot evidence in this public package.",
+    "launchRule": "A real participant pilot remains blocked until every critical closeout gate is passed privately, high-risk holds are either closed or formally accepted by the right authority, official Toastmasters records remain external, support pause and admin revocation are proven, and public communications use only the approved public-safe update."
   }
 }

@@ -1,0 +1,11 @@
+id,statement,status,dataClass,action,avoid
+PUB-001,The project remains a public fake/sample Decidim-style demo.,Ready,Public safe,Can publish,Do not imply real consultation.
+PUB-002,Barayamal is the First Nations organisation test pathway.,Ready,Public safe,Can publish,Do not imply live founder intake.
+PUB-003,"First Nations Toastmasters is a controlled member tester, not an official records system.",Hold,Public safe,Can publish after official wording review,Do not imply official membership.
+PUB-004,Private fake-data rehearsal is the next step.,Ready,Public safe,Can publish,Do not publish private URLs.
+PUB-005,Critical approvals remain before any real participant pilot.,Ready,Public safe,Can publish,Do not name private approvers.
+PUB-006,Dean/Barayamal can provide advisory and developer custody review.,Ready,Public safe,Can publish,Do not imply approval authority.
+PUB-007,Support and incident pause must be rehearsed privately.,Ready,Public safe,Can publish,No incident details.
+PUB-008,Admin revoke and data handling proofs must be completed privately.,Ready,Public safe,Can publish,No logs or screenshots with private data.
+PUB-009,The project may repeat the fake-data rehearsal before real pilot.,Ready,Public safe,Can publish,Do not overstate readiness.
+PUB-010,Real participant launch remains on hold until private approvals pass.,Ready,Public safe,Can publish,Keep hold language.

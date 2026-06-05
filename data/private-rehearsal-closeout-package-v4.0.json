@@ -1,0 +1,1028 @@
+{
+  "packageName": "Private Rehearsal Closeout Board v4.0",
+  "version": "4.0",
+  "date": "2026-06-05",
+  "primaryOrganisationTest": "Barayamal",
+  "controlledMemberTester": "First Nations Toastmasters",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "advisoryTrustedReviewer": "Dean Foley / Barayamal",
+  "mode": "public_demo_fake_sample_private_rehearsal_closeout_only",
+  "reviewFinding": "v3.9 created a decision-ready scorecard, but the project still needed a controlled execution and closeout board for the private fake-data rehearsal itself.",
+  "operatingRule": "Use the Private Rehearsal Closeout Board after v3.9. It turns the scorecard into a controlled private fake-data execution plan: run scripts, record private evidence status, close blockers, prepare a public-safe update, and choose hold, second rehearsal, no-go, or tightly controlled pilot readiness.",
+  "advisoryRule": "Dean Foley / Barayamal may act as initial developer, custodian, advisory reviewer, and trusted reviewer for this closeout board, but private First Nations authority, privacy, Indigenous Data Sovereignty/data governance, official Toastmasters, safety/support, and real participant decisions remain separate approval responsibilities.",
+  "safetyRule": "This v4.0 package is public fake/sample data only. Do not store real participant names, emails, phone numbers, founder or business records, member numbers, payments, signatures, official Toastmasters records, cultural material, support records, access logs, incident details, authority minutes, consent evidence, or private pilot evidence in this public package.",
+  "launchRule": "A real participant pilot remains blocked until every critical closeout gate is passed privately, high-risk holds are either closed or formally accepted by the right authority, official Toastmasters records remain external, support pause and admin revocation are proven, and public communications use only the approved public-safe update.",
+  "counts": {
+    "executionLanes": 8,
+    "rehearsalRuns": 16,
+    "closeoutGates": 14,
+    "evidenceChecks": 18,
+    "approvalActions": 14,
+    "publicUpdates": 10,
+    "launchReadiness": 12,
+    "ownerTasks": 18,
+    "closeoutRecords": 110,
+    "barayamalRuns": 6,
+    "toastmastersRuns": 5,
+    "crossTrackRuns": 5,
+    "blockedRuns": 2,
+    "readyRuns": 8,
+    "blockedGates": 4,
+    "blockedApprovals": 4,
+    "neverPublicEvidence": 3,
+    "nextOwnerTasks": 9
+  },
+  "sourceAnchors": [
+    {
+      "label": "Decidim spaces",
+      "url": "https://docs.decidim.org/en/develop/admin/spaces.html"
+    },
+    {
+      "label": "Decidim components",
+      "url": "https://docs.decidim.org/en/develop/admin/components.html"
+    },
+    {
+      "label": "Decidim authorizations",
+      "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+    },
+    {
+      "label": "Decidim administrators",
+      "url": "https://docs.decidim.org/en/develop/admin/participants/admins.html"
+    },
+    {
+      "label": "Decidim production checklist",
+      "url": "https://docs.decidim.org/en/develop/install/checklist.html"
+    },
+    {
+      "label": "Barayamal Toastmasters First Nations",
+      "url": "https://barayamal.com.au/toastmasters-first-nations/"
+    },
+    {
+      "label": "Toastmasters Start a Club",
+      "url": "https://www.toastmasters.org/Start-a-Club"
+    },
+    {
+      "label": "OAIC privacy impact assessments",
+      "url": "https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/privacy-impact-assessments/guide-to-undertaking-privacy-impact-assessments"
+    },
+    {
+      "label": "AIATSIS ethical research",
+      "url": "https://aiatsis.gov.au/research/ethical-research"
+    }
+  ],
+  "files": {
+    "entrypoint": "private-rehearsal-closeout.html",
+    "playbook": "docs/private-rehearsal-closeout-playbook-v4.0.md",
+    "runSheet": "docs/rehearsal-run-sheet-v4.0.md",
+    "evidenceGuide": "docs/private-approval-and-evidence-checklist-v4.0.md",
+    "publicDecisionBrief": "docs/public-update-and-launch-decision-brief-v4.0.md",
+    "releaseNotes": "docs/public-demo-release-notes-v4.0.md",
+    "lanesCsv": "data/private-rehearsal-execution-lanes-v4.0.csv",
+    "runsCsv": "data/private-rehearsal-run-register-v4.0.csv",
+    "gatesCsv": "data/private-rehearsal-closeout-gates-v4.0.csv",
+    "evidenceCsv": "data/private-rehearsal-evidence-checks-v4.0.csv",
+    "approvalsCsv": "data/private-rehearsal-approval-actions-v4.0.csv",
+    "publicUpdatesCsv": "data/private-rehearsal-public-update-v4.0.csv",
+    "launchCsv": "data/private-rehearsal-launch-readiness-v4.0.csv",
+    "tasksCsv": "data/private-rehearsal-owner-tasks-v4.0.csv",
+    "packageJson": "data/private-rehearsal-closeout-package-v4.0.json"
+  },
+  "executionLanes": [
+    {
+      "id": "LAN-001",
+      "lane": "Private sandbox setup",
+      "track": "Cross-track",
+      "status": "Next",
+      "nextAction": "Create private fake-data Decidim spaces and sample accounts.",
+      "publicBoundary": "Public can say private rehearsal is being prepared.",
+      "owner": "Technical custodian"
+    },
+    {
+      "id": "LAN-002",
+      "lane": "Barayamal founder path",
+      "track": "Barayamal",
+      "status": "Next",
+      "nextAction": "Run founder, business owner, mentor, and advisor fake-data scripts.",
+      "publicBoundary": "Publish only aggregate learning.",
+      "owner": "Barayamal program operator"
+    },
+    {
+      "id": "LAN-003",
+      "lane": "First Nations Toastmasters member path",
+      "track": "FN Toastmasters",
+      "status": "Hold",
+      "nextAction": "Run member, guest, meeting role, and survey scripts only after official-route wording is reviewed.",
+      "publicBoundary": "Do not imply official Toastmasters membership.",
+      "owner": "Club facilitator"
+    },
+    {
+      "id": "LAN-004",
+      "lane": "Authority and IDS review",
+      "track": "Cross-track",
+      "status": "Blocked",
+      "nextAction": "Hold private authority, privacy, and data governance review.",
+      "publicBoundary": "Public cannot cite private approvals.",
+      "owner": "Authority chair"
+    },
+    {
+      "id": "LAN-005",
+      "lane": "Support and safety rehearsal",
+      "track": "Cross-track",
+      "status": "Blocked",
+      "nextAction": "Run support pause and incident tabletop with fake scenario.",
+      "publicBoundary": "Public summary can state whether tabletop occurred.",
+      "owner": "Safety reviewer"
+    },
+    {
+      "id": "LAN-006",
+      "lane": "Access and revocation proof",
+      "track": "Cross-track",
+      "status": "Next",
+      "nextAction": "Prove invite, role change, revocation, denied access, export, backup, restore, and delete.",
+      "publicBoundary": "Never publish access logs.",
+      "owner": "Technical custodian"
+    },
+    {
+      "id": "LAN-007",
+      "lane": "Public update drafting",
+      "track": "Cross-track",
+      "status": "Hold",
+      "nextAction": "Draft public-safe learning note after private evidence is checked.",
+      "publicBoundary": "Only public-safe statements.",
+      "owner": "Comms lead"
+    },
+    {
+      "id": "LAN-008",
+      "lane": "Closeout decision meeting",
+      "track": "Cross-track",
+      "status": "Hold",
+      "nextAction": "Choose hold, second rehearsal, no-go, archive, or pilot-ready-with-conditions.",
+      "publicBoundary": "Public result must not overstate readiness.",
+      "owner": "Authority chair"
+    }
+  ],
+  "rehearsalRuns": [
+    {
+      "id": "RUN-001",
+      "track": "Barayamal",
+      "scenario": "Founder interest to proposal",
+      "status": "Ready",
+      "required": "Yes",
+      "sampleAccount": "FN-Fake-Founder-01",
+      "expectedProof": "Proposal created with no identity or commercial sensitivity.",
+      "nextAction": "Run in private fake-data sandbox and attach public-safe note only."
+    },
+    {
+      "id": "RUN-002",
+      "track": "Barayamal",
+      "scenario": "Business owner survey field review",
+      "status": "Hold",
+      "required": "Yes",
+      "sampleAccount": "FN-Fake-Business-01",
+      "expectedProof": "Survey avoids sensitive commercial fields.",
+      "nextAction": "Privacy reviewer must approve fields before run."
+    },
+    {
+      "id": "RUN-003",
+      "track": "Barayamal",
+      "scenario": "Founder yarning meeting summary",
+      "status": "Ready",
+      "required": "Yes",
+      "sampleAccount": "FN-Fake-Founder-02",
+      "expectedProof": "Public summary has no attendee identity or private story.",
+      "nextAction": "Run and compare with redaction checklist."
+    },
+    {
+      "id": "RUN-004",
+      "track": "Barayamal",
+      "scenario": "Mentor access and conflict rule",
+      "status": "Hold",
+      "required": "Yes",
+      "sampleAccount": "FN-Fake-Mentor-01",
+      "expectedProof": "Mentor sees only approved public-safe material.",
+      "nextAction": "Create private mentor conflict rule first."
+    },
+    {
+      "id": "RUN-005",
+      "track": "Barayamal",
+      "scenario": "Partner observer least privilege",
+      "status": "Ready",
+      "required": "No",
+      "sampleAccount": "FN-Fake-Observer-01",
+      "expectedProof": "Observer cannot access private evidence.",
+      "nextAction": "Run after account setup."
+    },
+    {
+      "id": "RUN-006",
+      "track": "Barayamal",
+      "scenario": "Dean advisory review note",
+      "status": "Ready",
+      "required": "No",
+      "sampleAccount": "FN-Fake-Advisor-01",
+      "expectedProof": "Advisory note cannot approve authority, privacy, IDS, or official route.",
+      "nextAction": "Run after scorecard is loaded."
+    },
+    {
+      "id": "RUN-007",
+      "track": "FN Toastmasters",
+      "scenario": "Member welcome path",
+      "status": "Hold",
+      "required": "Yes",
+      "sampleAccount": "FNT-Fake-Member-01",
+      "expectedProof": "Member welcome clearly separates official records.",
+      "nextAction": "Official-route wording review required first."
+    },
+    {
+      "id": "RUN-008",
+      "track": "FN Toastmasters",
+      "scenario": "Guest path stays guest-only",
+      "status": "Ready",
+      "required": "Yes",
+      "sampleAccount": "FNT-Fake-Guest-01",
+      "expectedProof": "Guest cannot see member-only or official records.",
+      "nextAction": "Run after sample roles are created."
+    },
+    {
+      "id": "RUN-009",
+      "track": "FN Toastmasters",
+      "scenario": "Meeting role agenda",
+      "status": "Ready",
+      "required": "Yes",
+      "sampleAccount": "FNT-Fake-Speaker-01",
+      "expectedProof": "Agenda uses fake roles and no evaluation records.",
+      "nextAction": "Run and verify public-safe minutes."
+    },
+    {
+      "id": "RUN-010",
+      "track": "FN Toastmasters",
+      "scenario": "Learning survey aggregate",
+      "status": "Hold",
+      "required": "Yes",
+      "sampleAccount": "FNT-Fake-Member-02",
+      "expectedProof": "Survey stays aggregate and not personal evaluation.",
+      "nextAction": "Remove personal-evaluation fields first."
+    },
+    {
+      "id": "RUN-011",
+      "track": "FN Toastmasters",
+      "scenario": "Sample motion not official",
+      "status": "Hold",
+      "required": "No",
+      "sampleAccount": "FNT-Fake-Facilitator-01",
+      "expectedProof": "Motion copy cannot be mistaken for official Toastmasters decision.",
+      "nextAction": "Rewrite motion wording before run."
+    },
+    {
+      "id": "RUN-012",
+      "track": "Cross-track",
+      "scenario": "Support pause tabletop",
+      "status": "Blocked",
+      "required": "Yes",
+      "sampleAccount": "FN-Fake-Safety-01",
+      "expectedProof": "Pause route, escalation, and affected-person privacy are proven.",
+      "nextAction": "Safety reviewer must schedule tabletop."
+    },
+    {
+      "id": "RUN-013",
+      "track": "Cross-track",
+      "scenario": "Admin invite and revoke",
+      "status": "Ready",
+      "required": "Yes",
+      "sampleAccount": "FN-Fake-Admin-01",
+      "expectedProof": "Revoked user cannot log in or export after role removal.",
+      "nextAction": "Run in private sandbox only."
+    },
+    {
+      "id": "RUN-014",
+      "track": "Cross-track",
+      "scenario": "Backup restore export delete proof",
+      "status": "Hold",
+      "required": "Yes",
+      "sampleAccount": "FN-Fake-Tech-01",
+      "expectedProof": "Backup, restore, export, delete, and retention rule are proven.",
+      "nextAction": "Prepare private technical checklist first."
+    },
+    {
+      "id": "RUN-015",
+      "track": "Cross-track",
+      "scenario": "Public summary redaction scan",
+      "status": "Ready",
+      "required": "Yes",
+      "sampleAccount": "FN-Fake-Comms-01",
+      "expectedProof": "Public update contains only approved statements.",
+      "nextAction": "Run before any public post."
+    },
+    {
+      "id": "RUN-016",
+      "track": "Cross-track",
+      "scenario": "Closeout decision meeting rehearsal",
+      "status": "Blocked",
+      "required": "Yes",
+      "sampleAccount": "FN-Fake-Authority-01",
+      "expectedProof": "Authority, privacy, IDS, official-route, support, and technical owners choose hold/go/no-go.",
+      "nextAction": "Blocked until approval packet is ready."
+    }
+  ],
+  "closeoutGates": [
+    {
+      "id": "GAT-001",
+      "gate": "Authority owner accepts rehearsal result",
+      "status": "Blocked",
+      "owner": "Authority chair",
+      "evidenceClass": "Private restricted",
+      "passRule": "Private decision record exists.",
+      "holdRule": "Keep decision at Hold."
+    },
+    {
+      "id": "GAT-002",
+      "gate": "IDS/data governance approval recorded",
+      "status": "Blocked",
+      "owner": "Data governance reviewer",
+      "evidenceClass": "Private restricted",
+      "passRule": "Private approval covers data classes, access, retention, export, and deletion.",
+      "holdRule": "No real participant data."
+    },
+    {
+      "id": "GAT-003",
+      "gate": "Privacy impact decision recorded",
+      "status": "Blocked",
+      "owner": "Privacy reviewer",
+      "evidenceClass": "Private restricted",
+      "passRule": "Privacy risks and notices accepted privately.",
+      "holdRule": "No real participant intake."
+    },
+    {
+      "id": "GAT-004",
+      "gate": "Official Toastmasters boundary signed off",
+      "status": "Blocked",
+      "owner": "Official-route owner",
+      "evidenceClass": "Private restricted",
+      "passRule": "Official records remain external and wording is accepted.",
+      "holdRule": "No member records in Decidim."
+    },
+    {
+      "id": "GAT-005",
+      "gate": "Support pause tabletop passed",
+      "status": "Hold",
+      "owner": "Safety reviewer",
+      "evidenceClass": "Private restricted",
+      "passRule": "Pause, escalation, and affected-person privacy are proven.",
+      "holdRule": "Do not open real intake."
+    },
+    {
+      "id": "GAT-006",
+      "gate": "Admin revoke proof passed",
+      "status": "Hold",
+      "owner": "Technical custodian",
+      "evidenceClass": "Private restricted",
+      "passRule": "Revoked fake admin loses access and export rights.",
+      "holdRule": "No real admins beyond rehearsal."
+    },
+    {
+      "id": "GAT-007",
+      "gate": "Backup restore export delete proof passed",
+      "status": "Hold",
+      "owner": "Technical custodian",
+      "evidenceClass": "Private restricted",
+      "passRule": "Recoverability and deletion proof are recorded privately.",
+      "holdRule": "No real records."
+    },
+    {
+      "id": "GAT-008",
+      "gate": "Barayamal founder path passed",
+      "status": "Hold",
+      "owner": "Barayamal program operator",
+      "evidenceClass": "Private restricted",
+      "passRule": "Founder path is safe with fake data.",
+      "holdRule": "Repeat after privacy field review."
+    },
+    {
+      "id": "GAT-009",
+      "gate": "FN Toastmasters guest/member boundary passed",
+      "status": "Hold",
+      "owner": "Club facilitator",
+      "evidenceClass": "Private restricted",
+      "passRule": "Guest and member roles remain separated.",
+      "holdRule": "Repeat after official wording review."
+    },
+    {
+      "id": "GAT-010",
+      "gate": "Dean advisory boundary preserved",
+      "status": "Pass",
+      "owner": "Review coordinator",
+      "evidenceClass": "Public safe",
+      "passRule": "Advisory note cannot approve launch.",
+      "holdRule": "Keep wording in every pack."
+    },
+    {
+      "id": "GAT-011",
+      "gate": "Public update approved",
+      "status": "Hold",
+      "owner": "Comms lead",
+      "evidenceClass": "Public safe",
+      "passRule": "Only approved public-safe statements are used.",
+      "holdRule": "Draft after private closeout."
+    },
+    {
+      "id": "GAT-012",
+      "gate": "Provider handoff boundary set",
+      "status": "Hold",
+      "owner": "Technical custodian",
+      "evidenceClass": "Private restricted",
+      "passRule": "Provider receives public package and private tasks only under private controls.",
+      "holdRule": "Do not send private evidence publicly."
+    },
+    {
+      "id": "GAT-013",
+      "gate": "Second rehearsal decision made",
+      "status": "Hold",
+      "owner": "Authority chair",
+      "evidenceClass": "Private restricted",
+      "passRule": "If blockers remain, repeat fake-data rehearsal.",
+      "holdRule": "Default if any critical item remains blocked."
+    },
+    {
+      "id": "GAT-014",
+      "gate": "Real pilot decision made",
+      "status": "Hold",
+      "owner": "Authority chair",
+      "evidenceClass": "Private restricted",
+      "passRule": "Go/hold/no-go is recorded by the right private owners.",
+      "holdRule": "Current public decision remains Hold."
+    }
+  ],
+  "evidenceChecks": [
+    {
+      "id": "EVD-001",
+      "evidence": "Public demo contains fake/sample data only",
+      "dataClass": "Public safe",
+      "status": "Ready",
+      "storageRule": "Public repository",
+      "publicSummary": "Can publish as fake-data QA."
+    },
+    {
+      "id": "EVD-002",
+      "evidence": "Private sandbox URL and credentials",
+      "dataClass": "Never public",
+      "status": "Blocked",
+      "storageRule": "Private access vault only",
+      "publicSummary": "Never publish."
+    },
+    {
+      "id": "EVD-003",
+      "evidence": "Authority decision minutes",
+      "dataClass": "Private restricted",
+      "status": "Blocked",
+      "storageRule": "Private authority folder",
+      "publicSummary": "Publish only existence if approved."
+    },
+    {
+      "id": "EVD-004",
+      "evidence": "IDS/data governance approval",
+      "dataClass": "Private restricted",
+      "status": "Blocked",
+      "storageRule": "Private data governance folder",
+      "publicSummary": "Publish only aggregate status."
+    },
+    {
+      "id": "EVD-005",
+      "evidence": "Privacy impact decision",
+      "dataClass": "Private restricted",
+      "status": "Blocked",
+      "storageRule": "Private privacy folder",
+      "publicSummary": "Publish only aggregate status."
+    },
+    {
+      "id": "EVD-006",
+      "evidence": "Official Toastmasters boundary review",
+      "dataClass": "Private restricted",
+      "status": "Blocked",
+      "storageRule": "Private official-route folder",
+      "publicSummary": "Do not publish official records."
+    },
+    {
+      "id": "EVD-007",
+      "evidence": "Support pause tabletop notes",
+      "dataClass": "Private restricted",
+      "status": "Hold",
+      "storageRule": "Private safety folder",
+      "publicSummary": "Publish only tabletop completed/not completed."
+    },
+    {
+      "id": "EVD-008",
+      "evidence": "Admin revoke access logs",
+      "dataClass": "Never public",
+      "status": "Hold",
+      "storageRule": "Private technical evidence vault",
+      "publicSummary": "Never publish logs."
+    },
+    {
+      "id": "EVD-009",
+      "evidence": "Backup restore proof",
+      "dataClass": "Private restricted",
+      "status": "Hold",
+      "storageRule": "Private technical evidence vault",
+      "publicSummary": "Publish only proof completed."
+    },
+    {
+      "id": "EVD-010",
+      "evidence": "Delete and retention proof",
+      "dataClass": "Private restricted",
+      "status": "Hold",
+      "storageRule": "Private technical evidence vault",
+      "publicSummary": "Publish only proof completed."
+    },
+    {
+      "id": "EVD-011",
+      "evidence": "Barayamal founder run screenshot",
+      "dataClass": "Public safe",
+      "status": "Ready",
+      "storageRule": "Redacted screenshot folder",
+      "publicSummary": "Can publish if names and details are fake."
+    },
+    {
+      "id": "EVD-012",
+      "evidence": "Business owner field review notes",
+      "dataClass": "Private restricted",
+      "status": "Hold",
+      "storageRule": "Private privacy folder",
+      "publicSummary": "Do not publish commercial sensitivity."
+    },
+    {
+      "id": "EVD-013",
+      "evidence": "Mentor conflict notes",
+      "dataClass": "Private restricted",
+      "status": "Hold",
+      "storageRule": "Private governance folder",
+      "publicSummary": "Publish only policy exists."
+    },
+    {
+      "id": "EVD-014",
+      "evidence": "FN Toastmasters member welcome screenshot",
+      "dataClass": "Public safe",
+      "status": "Hold",
+      "storageRule": "Redacted screenshot folder",
+      "publicSummary": "Can publish if official boundary is visible."
+    },
+    {
+      "id": "EVD-015",
+      "evidence": "Learning survey response file",
+      "dataClass": "Never public",
+      "status": "Blocked",
+      "storageRule": "Private data folder only",
+      "publicSummary": "Never publish response-level data."
+    },
+    {
+      "id": "EVD-016",
+      "evidence": "Public update draft",
+      "dataClass": "Public safe",
+      "status": "Ready",
+      "storageRule": "Public comms folder",
+      "publicSummary": "Can publish after approval."
+    },
+    {
+      "id": "EVD-017",
+      "evidence": "Provider handoff notes",
+      "dataClass": "Private restricted",
+      "status": "Hold",
+      "storageRule": "Private provider folder",
+      "publicSummary": "Publish no private evidence."
+    },
+    {
+      "id": "EVD-018",
+      "evidence": "Closeout decision record",
+      "dataClass": "Private restricted",
+      "status": "Blocked",
+      "storageRule": "Private authority folder",
+      "publicSummary": "Publish only public-safe decision summary."
+    }
+  ],
+  "approvalActions": [
+    {
+      "id": "APP-001",
+      "approval": "Private authority approval",
+      "status": "Blocked",
+      "owner": "Authority chair",
+      "requiredBefore": "Before real participant invitation",
+      "privateRecord": "Decision minute outside public package."
+    },
+    {
+      "id": "APP-002",
+      "approval": "IDS/data governance approval",
+      "status": "Blocked",
+      "owner": "Data governance reviewer",
+      "requiredBefore": "Before any real data entry",
+      "privateRecord": "Data class, access, retention, export, delete decision."
+    },
+    {
+      "id": "APP-003",
+      "approval": "Privacy impact acceptance",
+      "status": "Blocked",
+      "owner": "Privacy reviewer",
+      "requiredBefore": "Before real intake form",
+      "privateRecord": "Privacy decision and notice approval."
+    },
+    {
+      "id": "APP-004",
+      "approval": "Official Toastmasters boundary acceptance",
+      "status": "Blocked",
+      "owner": "Official-route owner",
+      "requiredBefore": "Before member path opens",
+      "privateRecord": "External official record decision."
+    },
+    {
+      "id": "APP-005",
+      "approval": "Support and incident pause approval",
+      "status": "Hold",
+      "owner": "Safety reviewer",
+      "requiredBefore": "Before real support route",
+      "privateRecord": "Tabletop closeout and escalation rule."
+    },
+    {
+      "id": "APP-006",
+      "approval": "Admin revoke and least privilege approval",
+      "status": "Hold",
+      "owner": "Technical custodian",
+      "requiredBefore": "Before real admins",
+      "privateRecord": "Private access proof."
+    },
+    {
+      "id": "APP-007",
+      "approval": "Backup restore delete approval",
+      "status": "Hold",
+      "owner": "Technical custodian",
+      "requiredBefore": "Before real records",
+      "privateRecord": "Private technical proof."
+    },
+    {
+      "id": "APP-008",
+      "approval": "Barayamal founder path approval",
+      "status": "Hold",
+      "owner": "Barayamal program operator",
+      "requiredBefore": "Before founder intake",
+      "privateRecord": "Private run result and field review."
+    },
+    {
+      "id": "APP-009",
+      "approval": "FN Toastmasters guest/member boundary approval",
+      "status": "Hold",
+      "owner": "Club facilitator",
+      "requiredBefore": "Before member tester repeat",
+      "privateRecord": "Boundary wording review."
+    },
+    {
+      "id": "APP-010",
+      "approval": "Dean advisory review accepted as advisory only",
+      "status": "Ready",
+      "owner": "Review coordinator",
+      "requiredBefore": "Before advisory handoff",
+      "privateRecord": "Advisory note in private review pack."
+    },
+    {
+      "id": "APP-011",
+      "approval": "Public update approval",
+      "status": "Hold",
+      "owner": "Comms lead",
+      "requiredBefore": "Before public post",
+      "privateRecord": "Approved public-safe wording."
+    },
+    {
+      "id": "APP-012",
+      "approval": "Provider handoff approval",
+      "status": "Hold",
+      "owner": "Technical custodian",
+      "requiredBefore": "Before provider access",
+      "privateRecord": "Private handoff boundary."
+    },
+    {
+      "id": "APP-013",
+      "approval": "Second rehearsal approval",
+      "status": "Ready",
+      "owner": "Pilot owner",
+      "requiredBefore": "If critical/high blockers remain",
+      "privateRecord": "Decision to repeat fake-data run."
+    },
+    {
+      "id": "APP-014",
+      "approval": "No-go/archive approval",
+      "status": "Ready",
+      "owner": "Authority chair",
+      "requiredBefore": "If approvals fail",
+      "privateRecord": "Decision to pause or archive."
+    }
+  ],
+  "publicUpdates": [
+    {
+      "id": "PUB-001",
+      "statement": "The project remains a public fake/sample Decidim-style demo.",
+      "status": "Ready",
+      "dataClass": "Public safe",
+      "action": "Can publish",
+      "avoid": "Do not imply real consultation."
+    },
+    {
+      "id": "PUB-002",
+      "statement": "Barayamal is the First Nations organisation test pathway.",
+      "status": "Ready",
+      "dataClass": "Public safe",
+      "action": "Can publish",
+      "avoid": "Do not imply live founder intake."
+    },
+    {
+      "id": "PUB-003",
+      "statement": "First Nations Toastmasters is a controlled member tester, not an official records system.",
+      "status": "Hold",
+      "dataClass": "Public safe",
+      "action": "Can publish after official wording review",
+      "avoid": "Do not imply official membership."
+    },
+    {
+      "id": "PUB-004",
+      "statement": "Private fake-data rehearsal is the next step.",
+      "status": "Ready",
+      "dataClass": "Public safe",
+      "action": "Can publish",
+      "avoid": "Do not publish private URLs."
+    },
+    {
+      "id": "PUB-005",
+      "statement": "Critical approvals remain before any real participant pilot.",
+      "status": "Ready",
+      "dataClass": "Public safe",
+      "action": "Can publish",
+      "avoid": "Do not name private approvers."
+    },
+    {
+      "id": "PUB-006",
+      "statement": "Dean/Barayamal can provide advisory and developer custody review.",
+      "status": "Ready",
+      "dataClass": "Public safe",
+      "action": "Can publish",
+      "avoid": "Do not imply approval authority."
+    },
+    {
+      "id": "PUB-007",
+      "statement": "Support and incident pause must be rehearsed privately.",
+      "status": "Ready",
+      "dataClass": "Public safe",
+      "action": "Can publish",
+      "avoid": "No incident details."
+    },
+    {
+      "id": "PUB-008",
+      "statement": "Admin revoke and data handling proofs must be completed privately.",
+      "status": "Ready",
+      "dataClass": "Public safe",
+      "action": "Can publish",
+      "avoid": "No logs or screenshots with private data."
+    },
+    {
+      "id": "PUB-009",
+      "statement": "The project may repeat the fake-data rehearsal before real pilot.",
+      "status": "Ready",
+      "dataClass": "Public safe",
+      "action": "Can publish",
+      "avoid": "Do not overstate readiness."
+    },
+    {
+      "id": "PUB-010",
+      "statement": "Real participant launch remains on hold until private approvals pass.",
+      "status": "Ready",
+      "dataClass": "Public safe",
+      "action": "Can publish",
+      "avoid": "Keep hold language."
+    }
+  ],
+  "launchReadiness": [
+    {
+      "id": "LRD-001",
+      "decision": "Go to real pilot",
+      "status": "Not available",
+      "condition": "All critical gates pass and high holds are accepted privately.",
+      "result": "Not current."
+    },
+    {
+      "id": "LRD-002",
+      "decision": "Hold and complete approvals",
+      "status": "Recommended",
+      "condition": "Authority, IDS, privacy, official route, support, and technical proofs still pending.",
+      "result": "Current decision."
+    },
+    {
+      "id": "LRD-003",
+      "decision": "Run second fake-data rehearsal",
+      "status": "Recommended",
+      "condition": "Any critical/high blocker remains after first private run.",
+      "result": "Likely next."
+    },
+    {
+      "id": "LRD-004",
+      "decision": "Barayamal-only second run",
+      "status": "Available",
+      "condition": "Founder/business owner path is ready but Toastmasters boundary remains held.",
+      "result": "Use if official route is delayed."
+    },
+    {
+      "id": "LRD-005",
+      "decision": "FN Toastmasters-only second run",
+      "status": "Hold",
+      "condition": "Official boundary wording passes but Barayamal business field review is held.",
+      "result": "Not current."
+    },
+    {
+      "id": "LRD-006",
+      "decision": "Archive public demo as concept",
+      "status": "Available",
+      "condition": "Private approval route is paused or declined.",
+      "result": "Keep public demo only."
+    },
+    {
+      "id": "LRD-007",
+      "decision": "Provider-assisted private sandbox",
+      "status": "Available",
+      "condition": "Self-build dependencies remain blocked.",
+      "result": "Use with private contract controls."
+    },
+    {
+      "id": "LRD-008",
+      "decision": "Self-build private sandbox",
+      "status": "Hold",
+      "condition": "Local Ruby/Postgres/ImageMagick/Vips/Decidim scaffold are ready.",
+      "result": "Environment not ready in this static package."
+    },
+    {
+      "id": "LRD-009",
+      "decision": "Public update only",
+      "status": "Available",
+      "condition": "Only public-safe learning is approved.",
+      "result": "No private evidence."
+    },
+    {
+      "id": "LRD-010",
+      "decision": "No-go",
+      "status": "Available",
+      "condition": "Authority, privacy, IDS, official route, or safety owner declines.",
+      "result": "Stop real pilot."
+    },
+    {
+      "id": "LRD-011",
+      "decision": "Wait for official-route owner",
+      "status": "Recommended",
+      "condition": "Toastmasters boundary not accepted privately.",
+      "result": "Protect member path."
+    },
+    {
+      "id": "LRD-012",
+      "decision": "Wait for support tabletop",
+      "status": "Recommended",
+      "condition": "Support pause route not rehearsed.",
+      "result": "Protect participants."
+    }
+  ],
+  "ownerTasks": [
+    {
+      "id": "TSK-001",
+      "owner": "Technical custodian",
+      "task": "Create private fake-data Decidim sandbox.",
+      "status": "Next",
+      "due": "Before rehearsal",
+      "evidence": "Private sandbox URL and setup note."
+    },
+    {
+      "id": "TSK-002",
+      "owner": "Technical custodian",
+      "task": "Create sample accounts and roles.",
+      "status": "Next",
+      "due": "Before rehearsal",
+      "evidence": "Fake account register."
+    },
+    {
+      "id": "TSK-003",
+      "owner": "Pilot owner",
+      "task": "Load v3.8 scripts and v3.9 scorecard into private run pack.",
+      "status": "Next",
+      "due": "Before rehearsal",
+      "evidence": "Run pack checklist."
+    },
+    {
+      "id": "TSK-004",
+      "owner": "Privacy reviewer",
+      "task": "Review business owner and learning survey fields.",
+      "status": "Next",
+      "due": "Before Barayamal/FNT survey run",
+      "evidence": "Private privacy note."
+    },
+    {
+      "id": "TSK-005",
+      "owner": "Official-route owner",
+      "task": "Approve Toastmasters boundary wording.",
+      "status": "Blocked",
+      "due": "Before member path opens",
+      "evidence": "Private official-route note."
+    },
+    {
+      "id": "TSK-006",
+      "owner": "Safety reviewer",
+      "task": "Schedule support pause tabletop.",
+      "status": "Blocked",
+      "due": "Before real intake",
+      "evidence": "Tabletop agenda."
+    },
+    {
+      "id": "TSK-007",
+      "owner": "Technical custodian",
+      "task": "Run admin invite, role change, revoke, denied access proof.",
+      "status": "Next",
+      "due": "During rehearsal",
+      "evidence": "Private access proof."
+    },
+    {
+      "id": "TSK-008",
+      "owner": "Technical custodian",
+      "task": "Run backup, restore, export, delete proof.",
+      "status": "Hold",
+      "due": "During rehearsal",
+      "evidence": "Private technical proof."
+    },
+    {
+      "id": "TSK-009",
+      "owner": "Data governance reviewer",
+      "task": "Record IDS/data governance approval or hold.",
+      "status": "Blocked",
+      "due": "Before real data",
+      "evidence": "Private decision record."
+    },
+    {
+      "id": "TSK-010",
+      "owner": "Authority chair",
+      "task": "Hold closeout decision meeting.",
+      "status": "Blocked",
+      "due": "After rehearsal",
+      "evidence": "Private decision record."
+    },
+    {
+      "id": "TSK-011",
+      "owner": "Comms lead",
+      "task": "Draft public-safe learning update.",
+      "status": "Hold",
+      "due": "After private review",
+      "evidence": "Approved public wording."
+    },
+    {
+      "id": "TSK-012",
+      "owner": "Review coordinator",
+      "task": "Collect Dean advisory note as advisory-only evidence.",
+      "status": "Next",
+      "due": "Before closeout",
+      "evidence": "Advisory note."
+    },
+    {
+      "id": "TSK-013",
+      "owner": "Barayamal program operator",
+      "task": "Run founder and business owner fake-data scripts.",
+      "status": "Next",
+      "due": "During rehearsal",
+      "evidence": "Private run note."
+    },
+    {
+      "id": "TSK-014",
+      "owner": "Club facilitator",
+      "task": "Run guest/member boundary scripts.",
+      "status": "Hold",
+      "due": "After official wording review",
+      "evidence": "Private run note."
+    },
+    {
+      "id": "TSK-015",
+      "owner": "Mentor coordinator",
+      "task": "Draft mentor conflict and privacy rule.",
+      "status": "Next",
+      "due": "Before mentor access",
+      "evidence": "Private policy note."
+    },
+    {
+      "id": "TSK-016",
+      "owner": "Provider lead",
+      "task": "Prepare provider handoff boundary if needed.",
+      "status": "Hold",
+      "due": "Before provider access",
+      "evidence": "Handoff checklist."
+    },
+    {
+      "id": "TSK-017",
+      "owner": "Pilot owner",
+      "task": "Update v4.0 package with actual fake-data run results.",
+      "status": "Next",
+      "due": "After rehearsal",
+      "evidence": "Public-safe package update."
+    },
+    {
+      "id": "TSK-018",
+      "owner": "Authority chair",
+      "task": "Choose hold, second rehearsal, no-go, archive, or controlled pilot readiness.",
+      "status": "Hold",
+      "due": "Closeout",
+      "evidence": "Private decision summary."
+    }
+  ]
+}

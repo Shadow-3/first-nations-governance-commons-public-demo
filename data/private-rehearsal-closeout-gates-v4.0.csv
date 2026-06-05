@@ -1,0 +1,15 @@
+id,gate,status,owner,evidenceClass,passRule,holdRule
+GAT-001,Authority owner accepts rehearsal result,Blocked,Authority chair,Private restricted,Private decision record exists.,Keep decision at Hold.
+GAT-002,IDS/data governance approval recorded,Blocked,Data governance reviewer,Private restricted,"Private approval covers data classes, access, retention, export, and deletion.",No real participant data.
+GAT-003,Privacy impact decision recorded,Blocked,Privacy reviewer,Private restricted,Privacy risks and notices accepted privately.,No real participant intake.
+GAT-004,Official Toastmasters boundary signed off,Blocked,Official-route owner,Private restricted,Official records remain external and wording is accepted.,No member records in Decidim.
+GAT-005,Support pause tabletop passed,Hold,Safety reviewer,Private restricted,"Pause, escalation, and affected-person privacy are proven.",Do not open real intake.
+GAT-006,Admin revoke proof passed,Hold,Technical custodian,Private restricted,Revoked fake admin loses access and export rights.,No real admins beyond rehearsal.
+GAT-007,Backup restore export delete proof passed,Hold,Technical custodian,Private restricted,Recoverability and deletion proof are recorded privately.,No real records.
+GAT-008,Barayamal founder path passed,Hold,Barayamal program operator,Private restricted,Founder path is safe with fake data.,Repeat after privacy field review.
+GAT-009,FN Toastmasters guest/member boundary passed,Hold,Club facilitator,Private restricted,Guest and member roles remain separated.,Repeat after official wording review.
+GAT-010,Dean advisory boundary preserved,Pass,Review coordinator,Public safe,Advisory note cannot approve launch.,Keep wording in every pack.
+GAT-011,Public update approved,Hold,Comms lead,Public safe,Only approved public-safe statements are used.,Draft after private closeout.
+GAT-012,Provider handoff boundary set,Hold,Technical custodian,Private restricted,Provider receives public package and private tasks only under private controls.,Do not send private evidence publicly.
+GAT-013,Second rehearsal decision made,Hold,Authority chair,Private restricted,"If blockers remain, repeat fake-data rehearsal.",Default if any critical item remains blocked.
+GAT-014,Real pilot decision made,Hold,Authority chair,Private restricted,Go/hold/no-go is recorded by the right private owners.,Current public decision remains Hold.
