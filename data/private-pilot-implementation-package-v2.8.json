@@ -1,0 +1,585 @@
+{
+  "version": "2.8",
+  "name": "Private Pilot Implementation Pack",
+  "mode": "public_demo_private_pilot_implementation_template_only",
+  "sampleInitiative": "Toastmasters First Nations",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "recommendedUse": "Use after v2.6 readiness and v2.7 operations rehearsal to prepare a separate approved private pilot environment before real intake begins.",
+  "counts": {
+    "implementationActions": 16,
+    "minimumDataFields": 14,
+    "environmentControls": 12,
+    "accessRegisterRoles": 10,
+    "requiredImplementationActions": 9,
+    "holdImplementationActions": 4,
+    "readyImplementationActions": 3,
+    "neverPublicFields": 3,
+    "requiredEnvironmentControls": 7,
+    "adminAccessRoles": 2
+  },
+  "files": {
+    "entrypoint": "private-pilot-implementation.html",
+    "playbook": "docs/private-pilot-implementation-playbook-v2.8.md",
+    "toastmastersPlan": "docs/toastmasters-private-pilot-implementation-plan-v2.8.md",
+    "environmentDecisionRecord": "docs/private-environment-decision-record-v2.8.md",
+    "releaseNotes": "docs/public-demo-release-notes-v2.8.md",
+    "implementationWorkplan": "data/private-pilot-implementation-workplan-v2.8.csv",
+    "minimumDataSchema": "data/private-pilot-minimum-data-schema-v2.8.csv",
+    "environmentControls": "data/private-pilot-environment-controls-v2.8.csv",
+    "accessRegisterTemplate": "data/private-pilot-access-register-template-v2.8.csv"
+  },
+  "noGoTriggers": [
+    "Real private data appears in the public demo, public repository, public screenshots, public CSVs, or fake-data Decidim sandbox.",
+    "Official Toastmasters applications, signatures, member numbers, payment/card details, or meeting links are stored in the public package.",
+    "The private environment has no named owner, MFA, backup/export, incident route, or deletion rule.",
+    "A participant cannot withdraw, ask what is stored, or request correction.",
+    "Access needs or incident details are copied into public evidence.",
+    "Supporters, mentors, demo-first attendees, or unsure contacts are counted as charter-ready founders without confirmation."
+  ],
+  "sourceAnchors": [
+    {
+      "label": "Barayamal Toastmasters First Nations",
+      "url": "https://barayamal.com.au/toastmasters-first-nations/"
+    },
+    {
+      "label": "Toastmasters Start a Club",
+      "url": "https://www.toastmasters.org/Start-a-Club"
+    },
+    {
+      "label": "Toastmasters Club Charter Requirements Form",
+      "url": "https://content.toastmasters.org/image/upload/ATO-club-chartering-requirements-ff.pdf"
+    },
+    {
+      "label": "Toastmasters Governing Documents",
+      "url": "https://www.toastmasters.org/resources/governing-documents"
+    },
+    {
+      "label": "Decidim install overview",
+      "url": "https://docs.decidim.org/en/develop/install/index.html"
+    },
+    {
+      "label": "Decidim deployment docs",
+      "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+    },
+    {
+      "label": "OAIC Australian Privacy Principles",
+      "url": "https://www.oaic.gov.au/privacy/australian-privacy-principles"
+    },
+    {
+      "label": "Maiam nayri Wingara Indigenous Data Sovereignty",
+      "url": "https://www.maiamnayriwingara.org/"
+    },
+    {
+      "label": "AIATSIS ethical research",
+      "url": "https://aiatsis.gov.au/research/ethical-research"
+    }
+  ],
+  "safetyRule": "This public package is fake/sample only. Real First Nations Toastmasters pilot records require a separate approved private environment with named operators, privacy controls, official handoff boundaries, incident response, retention, deletion, and closeout evidence.",
+  "implementationRule": "Do not open real intake until required implementation actions, required environment controls, never-public field rules, and access register are approved.",
+  "implementationActions": [
+    {
+      "id": "IW-001",
+      "phase": "Authority",
+      "action": "Pilot authority confirmed",
+      "status": "Required",
+      "owner": "Barayamal / Dean Foley",
+      "private_evidence": "Signed internal pilot authority note",
+      "public_evidence": "Redacted authority gate marked complete",
+      "no_go": "Pilot starts without named accountable owner"
+    },
+    {
+      "id": "IW-002",
+      "phase": "Privacy",
+      "action": "Collection notice approved",
+      "status": "Required",
+      "owner": "Privacy reviewer",
+      "private_evidence": "Approved privacy and consent text",
+      "public_evidence": "Template notice version only",
+      "no_go": "Real details collected without notice"
+    },
+    {
+      "id": "IW-003",
+      "phase": "Environment",
+      "action": "Private workspace selected",
+      "status": "Required",
+      "owner": "Technical custodian",
+      "private_evidence": "Workspace URL, owners, backup rule",
+      "public_evidence": "Private environment chosen",
+      "no_go": "Public demo is used as private record store"
+    },
+    {
+      "id": "IW-004",
+      "phase": "Access",
+      "action": "Role access register approved",
+      "status": "Required",
+      "owner": "Pilot approval reviewer",
+      "private_evidence": "Named role register with expiry",
+      "public_evidence": "Access model summary only",
+      "no_go": "Shared admin account or unreviewed access"
+    },
+    {
+      "id": "IW-005",
+      "phase": "Data",
+      "action": "Minimum data schema locked",
+      "status": "Required",
+      "owner": "Data reviewer",
+      "private_evidence": "Approved field list and exclusions",
+      "public_evidence": "Schema template only",
+      "no_go": "Open text fields collect sensitive details early"
+    },
+    {
+      "id": "IW-006",
+      "phase": "Toastmasters",
+      "action": "Official paperwork handoff separated",
+      "status": "Required",
+      "owner": "Toastmasters launch lead",
+      "private_evidence": "Official process owner and filing rule",
+      "public_evidence": "External handoff boundary",
+      "no_go": "Official forms or signatures stored in public package"
+    },
+    {
+      "id": "IW-007",
+      "phase": "Consent",
+      "action": "Withdrawal route ready",
+      "status": "Required",
+      "owner": "Pilot coordinator",
+      "private_evidence": "Withdrawal owner, response SLA, deletion rule",
+      "public_evidence": "Withdrawal route exists",
+      "no_go": "Participant cannot withdraw or ask what is stored"
+    },
+    {
+      "id": "IW-008",
+      "phase": "Intake",
+      "action": "Track-based intake routing ready",
+      "status": "Ready",
+      "owner": "Pilot coordinator",
+      "private_evidence": "Founder, demo-first, supporter, not-sure routes tested",
+      "public_evidence": "Routing model summary",
+      "no_go": "Supporters counted as charter-ready founders"
+    },
+    {
+      "id": "IW-009",
+      "phase": "Support",
+      "action": "Access support process ready",
+      "status": "Ready",
+      "owner": "Access support contact",
+      "private_evidence": "Private support channel and escalation rule",
+      "public_evidence": "Access support available",
+      "no_go": "Access needs copied to public evidence"
+    },
+    {
+      "id": "IW-010",
+      "phase": "Incident",
+      "action": "Incident route rehearsed",
+      "status": "Hold",
+      "owner": "Safety reviewer",
+      "private_evidence": "Incident owner, pause rule, closure template",
+      "public_evidence": "Incident response tested",
+      "no_go": "Incident details appear in public notes"
+    },
+    {
+      "id": "IW-011",
+      "phase": "Moderation",
+      "action": "Meeting conduct rule approved",
+      "status": "Hold",
+      "owner": "Cultural safety reviewer",
+      "private_evidence": "Conduct note, moderator owner, pause wording",
+      "public_evidence": "Conduct rule active",
+      "no_go": "Demo runs without named moderator"
+    },
+    {
+      "id": "IW-012",
+      "phase": "Evidence",
+      "action": "Public evidence redaction QA ready",
+      "status": "Ready",
+      "owner": "QA reviewer",
+      "private_evidence": "Screenshot redaction checklist",
+      "public_evidence": "Fake IDs only in public evidence",
+      "no_go": "Public evidence shows real names or contact details"
+    },
+    {
+      "id": "IW-013",
+      "phase": "Security",
+      "action": "Admin MFA and backup rule approved",
+      "status": "Required",
+      "owner": "Technical custodian",
+      "private_evidence": "MFA, backup, recovery, export test",
+      "public_evidence": "Security baseline complete",
+      "no_go": "Private system has weak admin controls"
+    },
+    {
+      "id": "IW-014",
+      "phase": "Dry run",
+      "action": "End-to-end fake-data dry run completed",
+      "status": "Hold",
+      "owner": "Pilot operations team",
+      "private_evidence": "Dry-run log and defect list",
+      "public_evidence": "Dry run complete summary",
+      "no_go": "Real intake starts before fake-data dry run"
+    },
+    {
+      "id": "IW-015",
+      "phase": "Approval",
+      "action": "Go/no-go meeting scheduled",
+      "status": "Hold",
+      "owner": "Pilot authority",
+      "private_evidence": "Decision record and approver names",
+      "public_evidence": "Decision pending or approved summary",
+      "no_go": "Pilot proceeds on informal chat approval"
+    },
+    {
+      "id": "IW-016",
+      "phase": "Closeout",
+      "action": "Retention and deletion template ready",
+      "status": "Required",
+      "owner": "Data reviewer",
+      "private_evidence": "Retention schedule and deletion evidence template",
+      "public_evidence": "Closeout rule approved",
+      "no_go": "Pilot cannot prove what was kept or deleted"
+    }
+  ],
+  "minimumDataSchema": [
+    {
+      "field_id": "MD-001",
+      "field_name": "Public fake participant ID",
+      "purpose": "Public evidence only",
+      "track": "All public reports",
+      "classification": "Public fake",
+      "allowed_storage": "Public package allowed",
+      "retention": "Permanent sample",
+      "public_rule": "No real person can be inferred"
+    },
+    {
+      "field_id": "MD-002",
+      "field_name": "First and last name",
+      "purpose": "Private follow-up and official prep",
+      "track": "Ready founder",
+      "classification": "Private restricted",
+      "allowed_storage": "Private pilot workspace only",
+      "retention": "Delete or archive at closeout",
+      "public_rule": "Never publish in public screenshots"
+    },
+    {
+      "field_id": "MD-003",
+      "field_name": "Preferred name",
+      "purpose": "Respectful contact and meeting facilitation",
+      "track": "Founder or demo-first",
+      "classification": "Private restricted",
+      "allowed_storage": "Private pilot workspace only",
+      "retention": "Review at closeout",
+      "public_rule": "Public evidence uses fake name only"
+    },
+    {
+      "field_id": "MD-004",
+      "field_name": "Email address",
+      "purpose": "Pilot contact",
+      "track": "All real contacts",
+      "classification": "Private restricted",
+      "allowed_storage": "Private pilot workspace only",
+      "retention": "Delete if person withdraws",
+      "public_rule": "Never export to public package"
+    },
+    {
+      "field_id": "MD-005",
+      "field_name": "Mobile phone",
+      "purpose": "Optional contact or access support",
+      "track": "Founder if needed",
+      "classification": "Private restricted",
+      "allowed_storage": "Private pilot workspace only",
+      "retention": "Delete if not needed",
+      "public_rule": "Not required for demo-first path unless justified"
+    },
+    {
+      "field_id": "MD-006",
+      "field_name": "Timezone and meeting availability",
+      "purpose": "Schedule the online demo and recurring meetings",
+      "track": "Founder or demo-first",
+      "classification": "Private restricted",
+      "allowed_storage": "Private pilot workspace only",
+      "retention": "Aggregate only in public",
+      "public_rule": "Public reports show counts, not names"
+    },
+    {
+      "field_id": "MD-007",
+      "field_name": "Founder readiness track",
+      "purpose": "Route founder, demo-first, supporter, or unsure contacts",
+      "track": "All real contacts",
+      "classification": "Private restricted",
+      "allowed_storage": "Private pilot workspace only",
+      "retention": "Review at closeout",
+      "public_rule": "Supporters are not counted as charter-ready founders"
+    },
+    {
+      "field_id": "MD-008",
+      "field_name": "Age confirmation",
+      "purpose": "Confirm 18+ charter eligibility",
+      "track": "Ready founder",
+      "classification": "Private restricted",
+      "allowed_storage": "Yes/no only in private workspace",
+      "retention": "Keep only while needed",
+      "public_rule": "Do not collect date of birth in public demo"
+    },
+    {
+      "field_id": "MD-009",
+      "field_name": "Toastmasters membership type",
+      "purpose": "Assess new, reinstate, dual, transfer, or not applying",
+      "track": "Founder or supporter",
+      "classification": "Private restricted",
+      "allowed_storage": "Private pilot workspace only",
+      "retention": "Closeout review",
+      "public_rule": "Public evidence uses aggregate counts only"
+    },
+    {
+      "field_id": "MD-010",
+      "field_name": "Toastmasters member number",
+      "purpose": "Official Toastmasters process only if needed",
+      "track": "Existing member",
+      "classification": "Never public",
+      "allowed_storage": "Official Toastmasters handoff only",
+      "retention": "Do not keep in public package",
+      "public_rule": "Never enter into public demo or fake sandbox"
+    },
+    {
+      "field_id": "MD-011",
+      "field_name": "Access needs",
+      "purpose": "Support participation safely",
+      "track": "As requested",
+      "classification": "Never public",
+      "allowed_storage": "Private support route only",
+      "retention": "Delete or minimise at closeout",
+      "public_rule": "Public evidence says support offered only"
+    },
+    {
+      "field_id": "MD-012",
+      "field_name": "Consent timestamp",
+      "purpose": "Prove private pilot consent and withdrawal route",
+      "track": "All real contacts",
+      "classification": "Private restricted",
+      "allowed_storage": "Private pilot workspace only",
+      "retention": "Keep with intake record until closeout",
+      "public_rule": "No signature image in public package"
+    },
+    {
+      "field_id": "MD-013",
+      "field_name": "Sponsorship or payment status",
+      "purpose": "Confirm status without storing payment details",
+      "track": "Ready founder",
+      "classification": "Private restricted",
+      "allowed_storage": "Status summary only",
+      "retention": "Closeout review",
+      "public_rule": "Card, bank, receipt details are never stored here"
+    },
+    {
+      "field_id": "MD-014",
+      "field_name": "Official application and signature",
+      "purpose": "Toastmasters charter paperwork",
+      "track": "Ready founder",
+      "classification": "Never public",
+      "allowed_storage": "Official Toastmasters process only",
+      "retention": "According to official process",
+      "public_rule": "Do not store in Governance Commons public package"
+    }
+  ],
+  "environmentControls": [
+    {
+      "control_id": "EC-001",
+      "domain": "Workspace",
+      "control": "Separate private workspace exists",
+      "status": "Required",
+      "owner": "Technical custodian",
+      "evidence": "Private URL, owner, access list, backup rule",
+      "no_go": "Public site is used for real records"
+    },
+    {
+      "control_id": "EC-002",
+      "domain": "Hosting",
+      "control": "Private hosting decision approved",
+      "status": "Required",
+      "owner": "Pilot authority",
+      "evidence": "Decision record lists chosen option and rejected options",
+      "no_go": "Hosting chosen without privacy review"
+    },
+    {
+      "control_id": "EC-003",
+      "domain": "Access",
+      "control": "Named accounts only",
+      "status": "Required",
+      "owner": "Technical custodian",
+      "evidence": "No shared admin account",
+      "no_go": "Shared passwords or generic operator login"
+    },
+    {
+      "control_id": "EC-004",
+      "domain": "Security",
+      "control": "MFA enabled for operators",
+      "status": "Required",
+      "owner": "Technical custodian",
+      "evidence": "MFA check screenshot stored privately",
+      "no_go": "Admin access without MFA"
+    },
+    {
+      "control_id": "EC-005",
+      "domain": "Backup",
+      "control": "Export and recovery tested",
+      "status": "Hold",
+      "owner": "Technical custodian",
+      "evidence": "Fake-data restore or export check",
+      "no_go": "No recovery path for private records"
+    },
+    {
+      "control_id": "EC-006",
+      "domain": "Audit",
+      "control": "Access review log active",
+      "status": "Ready",
+      "owner": "Privacy reviewer",
+      "evidence": "Access review schedule and log",
+      "no_go": "No record of who can see private data"
+    },
+    {
+      "control_id": "EC-007",
+      "domain": "Forms",
+      "control": "Official Toastmasters forms separated",
+      "status": "Required",
+      "owner": "Toastmasters launch lead",
+      "evidence": "External official filing process named",
+      "no_go": "Official signatures stored in public demo"
+    },
+    {
+      "control_id": "EC-008",
+      "domain": "Meeting",
+      "control": "Meeting link shared privately",
+      "status": "Required",
+      "owner": "Pilot coordinator",
+      "evidence": "Invite route and access-needs route",
+      "no_go": "Meeting link appears in public evidence"
+    },
+    {
+      "control_id": "EC-009",
+      "domain": "Incident",
+      "control": "Pause and incident channel ready",
+      "status": "Hold",
+      "owner": "Safety reviewer",
+      "evidence": "Incident owner and stop wording",
+      "no_go": "Incident handled only in informal chat"
+    },
+    {
+      "control_id": "EC-010",
+      "domain": "Evidence",
+      "control": "Public screenshot redaction checklist ready",
+      "status": "Ready",
+      "owner": "QA reviewer",
+      "evidence": "Redaction checklist and fake-ID rule",
+      "no_go": "Real name or contact detail in public screenshot"
+    },
+    {
+      "control_id": "EC-011",
+      "domain": "Retention",
+      "control": "Retention and deletion rule approved",
+      "status": "Required",
+      "owner": "Data reviewer",
+      "evidence": "Retention schedule and deletion evidence template",
+      "no_go": "No closeout rule before intake"
+    },
+    {
+      "control_id": "EC-012",
+      "domain": "Handover",
+      "control": "Operator handover notes prepared",
+      "status": "Ready",
+      "owner": "Barayamal / Dean Foley",
+      "evidence": "Private operator notes and public summary",
+      "no_go": "Only one person can operate critical workflow"
+    }
+  ],
+  "accessRegisterRoles": [
+    {
+      "role_id": "AR-001",
+      "role": "Initial developer-custodian",
+      "access_level": "Admin",
+      "systems_allowed": "Public demo, private workspace setup, package release notes",
+      "systems_excluded": "Official Toastmasters filing unless separately authorised",
+      "approval_needed": "Pilot authority",
+      "review_cadence": "Before launch and closeout"
+    },
+    {
+      "role_id": "AR-002",
+      "role": "Pilot coordinator",
+      "access_level": "Editor",
+      "systems_allowed": "Private intake status, meeting coordination, participant routing",
+      "systems_excluded": "Payment details and official member numbers",
+      "approval_needed": "Pilot authority",
+      "review_cadence": "Weekly during pilot"
+    },
+    {
+      "role_id": "AR-003",
+      "role": "Privacy and data reviewer",
+      "access_level": "Reviewer",
+      "systems_allowed": "Private schema, retention, deletion, access review",
+      "systems_excluded": "Unneeded meeting facilitation content",
+      "approval_needed": "Pilot authority",
+      "review_cadence": "Before intake and closeout"
+    },
+    {
+      "role_id": "AR-004",
+      "role": "Technical custodian",
+      "access_level": "Admin",
+      "systems_allowed": "Private workspace configuration, exports, backups, access settings",
+      "systems_excluded": "Official Toastmasters applications unless needed for support",
+      "approval_needed": "Pilot authority",
+      "review_cadence": "After dry run"
+    },
+    {
+      "role_id": "AR-005",
+      "role": "Cultural safety and moderation reviewer",
+      "access_level": "Reviewer",
+      "systems_allowed": "Conduct rule, incident summary, moderation notes",
+      "systems_excluded": "Payment and official member records",
+      "approval_needed": "Pilot authority",
+      "review_cadence": "Before demo and after first meeting"
+    },
+    {
+      "role_id": "AR-006",
+      "role": "Access support contact",
+      "access_level": "Support",
+      "systems_allowed": "Access support requests and follow-up",
+      "systems_excluded": "Founder count exports and payment status",
+      "approval_needed": "Privacy reviewer",
+      "review_cadence": "Weekly while active"
+    },
+    {
+      "role_id": "AR-007",
+      "role": "Toastmasters launch lead",
+      "access_level": "Editor",
+      "systems_allowed": "Founder status, official handoff checklist, officer slate status",
+      "systems_excluded": "Public demo editing and unrelated private notes",
+      "approval_needed": "Pilot authority",
+      "review_cadence": "Before official submission"
+    },
+    {
+      "role_id": "AR-008",
+      "role": "Organisation supporter",
+      "access_level": "Status only",
+      "systems_allowed": "Aggregate progress and referral status",
+      "systems_excluded": "Names, contacts, access needs, member numbers, payment details",
+      "approval_needed": "Pilot coordinator",
+      "review_cadence": "Every status update"
+    },
+    {
+      "role_id": "AR-009",
+      "role": "QA reviewer",
+      "access_level": "Reviewer",
+      "systems_allowed": "Fake-data screenshots, redaction checklist, public evidence",
+      "systems_excluded": "Raw private records",
+      "approval_needed": "Technical custodian",
+      "review_cadence": "Before every public release"
+    },
+    {
+      "role_id": "AR-010",
+      "role": "Public reviewer",
+      "access_level": "No private access",
+      "systems_allowed": "Public fake/sample demo only",
+      "systems_excluded": "All real private pilot records",
+      "approval_needed": "Not applicable",
+      "review_cadence": "Always public only"
+    }
+  ]
+}

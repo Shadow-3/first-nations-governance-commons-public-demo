@@ -1,0 +1,11 @@
+role_id,role,access_level,systems_allowed,systems_excluded,approval_needed,review_cadence
+AR-001,Initial developer-custodian,Admin,"Public demo, private workspace setup, package release notes",Official Toastmasters filing unless separately authorised,Pilot authority,Before launch and closeout
+AR-002,Pilot coordinator,Editor,"Private intake status, meeting coordination, participant routing",Payment details and official member numbers,Pilot authority,Weekly during pilot
+AR-003,Privacy and data reviewer,Reviewer,"Private schema, retention, deletion, access review",Unneeded meeting facilitation content,Pilot authority,Before intake and closeout
+AR-004,Technical custodian,Admin,"Private workspace configuration, exports, backups, access settings",Official Toastmasters applications unless needed for support,Pilot authority,After dry run
+AR-005,Cultural safety and moderation reviewer,Reviewer,"Conduct rule, incident summary, moderation notes",Payment and official member records,Pilot authority,Before demo and after first meeting
+AR-006,Access support contact,Support,Access support requests and follow-up,Founder count exports and payment status,Privacy reviewer,Weekly while active
+AR-007,Toastmasters launch lead,Editor,"Founder status, official handoff checklist, officer slate status",Public demo editing and unrelated private notes,Pilot authority,Before official submission
+AR-008,Organisation supporter,Status only,Aggregate progress and referral status,"Names, contacts, access needs, member numbers, payment details",Pilot coordinator,Every status update
+AR-009,QA reviewer,Reviewer,"Fake-data screenshots, redaction checklist, public evidence",Raw private records,Technical custodian,Before every public release
+AR-010,Public reviewer,No private access,Public fake/sample demo only,All real private pilot records,Not applicable,Always public only

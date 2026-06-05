@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "2.7",
+  "version": "2.8",
   "date": "2026-06-05",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, Build Delivery Control, Organisation Onboarding, Private Pilot Readiness, and Pilot Operations Control in sequence. Pilot Ops is only a public fake/sample operations template; any real private pilot needs a separate approved private environment, role access, incident response, official handoff, retention, deletion, and closeout evidence.",
+  "recommendedDecision": "Use Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, Build Delivery Control, Organisation Onboarding, Private Pilot Readiness, Pilot Operations Control, and Private Pilot Implementation in sequence. Pilot Build is only a public fake/sample implementation template; any real private pilot needs a separate approved private environment, named operators, role access, privacy notice, consent and withdrawal, incident response, official handoff, retention, deletion, and closeout evidence.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -132,13 +132,23 @@
     "docs/sprint-execution-playbook-v1.8.md",
     "docs/github-projects-scope-fix-v1.8.md",
     "data/sprint-execution-tracker-v1.8.csv",
-    "data/delivery-readiness-snapshot-v1.8.json"
+    "data/delivery-readiness-snapshot-v1.8.json",
+    "private-pilot-implementation.html",
+    "docs/private-pilot-implementation-playbook-v2.8.md",
+    "docs/toastmasters-private-pilot-implementation-plan-v2.8.md",
+    "docs/private-environment-decision-record-v2.8.md",
+    "docs/public-demo-release-notes-v2.8.md",
+    "data/private-pilot-implementation-workplan-v2.8.csv",
+    "data/private-pilot-minimum-data-schema-v2.8.csv",
+    "data/private-pilot-environment-controls-v2.8.csv",
+    "data/private-pilot-access-register-template-v2.8.csv",
+    "data/private-pilot-implementation-package-v2.8.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v2.7.md",
+    "releaseNotes": "docs/public-demo-release-notes-v2.8.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -240,7 +250,17 @@
       "qa-v27-deployed-pilot-ops-required-desktop.png",
       "qa-v27-deployed-pilot-ops-handoff-desktop.png",
       "qa-v27-deployed-pilot-ops-mobile.png",
-      "qa-v27-deployed-pilot-ops-package-mobile.png"
+      "qa-v27-deployed-pilot-ops-package-mobile.png",
+      "qa-v28-local-private-pilot-implementation-desktop.png",
+      "qa-v28-local-private-pilot-implementation-required-desktop.png",
+      "qa-v28-local-private-pilot-implementation-data-desktop.png",
+      "qa-v28-local-private-pilot-implementation-mobile.png",
+      "qa-v28-local-private-pilot-implementation-package-mobile.png",
+      "qa-v28-deployed-private-pilot-implementation-desktop.png",
+      "qa-v28-deployed-private-pilot-implementation-required-desktop.png",
+      "qa-v28-deployed-private-pilot-implementation-data-desktop.png",
+      "qa-v28-deployed-private-pilot-implementation-mobile.png",
+      "qa-v28-deployed-private-pilot-implementation-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -1004,6 +1024,18 @@
       "data/private-pilot-incident-closeout-log-v2.7.csv",
       "data/private-pilot-official-handoff-register-v2.7.csv",
       "data/private-pilot-ops-package-v2.7.json"
+    ],
+    "privatePilotImplementation": [
+      "private-pilot-implementation.html",
+      "docs/private-pilot-implementation-playbook-v2.8.md",
+      "docs/toastmasters-private-pilot-implementation-plan-v2.8.md",
+      "docs/private-environment-decision-record-v2.8.md",
+      "docs/public-demo-release-notes-v2.8.md",
+      "data/private-pilot-implementation-workplan-v2.8.csv",
+      "data/private-pilot-minimum-data-schema-v2.8.csv",
+      "data/private-pilot-environment-controls-v2.8.csv",
+      "data/private-pilot-access-register-template-v2.8.csv",
+      "data/private-pilot-implementation-package-v2.8.json"
     ]
   },
   "safetyRules": [
@@ -1025,7 +1057,10 @@
     "Organisation supporters cannot receive member data, access needs, payments, official acceptance records, or unrestricted admin access by default.",
     "Pilot Operations Control is a public fake/sample template only. It must not be used as the private pilot system of record.",
     "Real private pilot operations require a separate approved private environment with role access, incident response, official handoff, retention, deletion, and closeout evidence before any real records are collected.",
-    "No real meeting links, incident details, official Toastmasters forms, member numbers, payment records, access needs, or private participant states belong in public evidence."
+    "No real meeting links, incident details, official Toastmasters forms, member numbers, payment records, access needs, or private participant states belong in public evidence.",
+    "Private Pilot Implementation is a public fake/sample template only; it must not collect or expose real private pilot records.",
+    "Real intake requires a separate approved private environment with named operators, minimum fields, role access, privacy notice, consent and withdrawal, incident response, official handoff, retention, deletion, and closeout evidence.",
+    "Never store real member numbers, official applications, signatures, payment/card details, meeting links, access needs, incident details, or authority records in the public demo."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -1382,5 +1417,79 @@
     ],
     "safetyRule": "Pilot operations controls are public templates only. No real membership, address, phone, email, access-need, official application, Toastmasters member-number, payment, signature, private organisation contact, meeting link, incident detail, or real authority data belongs in the public demo, public repository, public screenshots, or fake-data Decidim sandbox.",
     "runDayRule": "Operate only after v2.6 readiness approval and keep all real private records in a separate approved private environment with role access, incident response, official handoff, retention, deletion, and closeout evidence."
+  },
+  "privatePilotImplementation": {
+    "entrypoint": "private-pilot-implementation.html",
+    "playbook": "docs/private-pilot-implementation-playbook-v2.8.md",
+    "toastmastersPlan": "docs/toastmasters-private-pilot-implementation-plan-v2.8.md",
+    "environmentDecisionRecord": "docs/private-environment-decision-record-v2.8.md",
+    "releaseNotes": "docs/public-demo-release-notes-v2.8.md",
+    "dataFiles": [
+      "data/private-pilot-implementation-workplan-v2.8.csv",
+      "data/private-pilot-minimum-data-schema-v2.8.csv",
+      "data/private-pilot-environment-controls-v2.8.csv",
+      "data/private-pilot-access-register-template-v2.8.csv",
+      "data/private-pilot-implementation-package-v2.8.json"
+    ],
+    "counts": {
+      "implementationActions": 16,
+      "minimumDataFields": 14,
+      "environmentControls": 12,
+      "accessRegisterRoles": 10,
+      "requiredImplementationActions": 9,
+      "holdImplementationActions": 4,
+      "readyImplementationActions": 3,
+      "neverPublicFields": 3,
+      "requiredEnvironmentControls": 7,
+      "adminAccessRoles": 2
+    },
+    "noGoTriggers": [
+      "Real private data appears in the public demo, public repository, public screenshots, public CSVs, or fake-data Decidim sandbox.",
+      "Official Toastmasters applications, signatures, member numbers, payment/card details, or meeting links are stored in the public package.",
+      "The private environment has no named owner, MFA, backup/export, incident route, or deletion rule.",
+      "A participant cannot withdraw, ask what is stored, or request correction.",
+      "Access needs or incident details are copied into public evidence.",
+      "Supporters, mentors, demo-first attendees, or unsure contacts are counted as charter-ready founders without confirmation."
+    ],
+    "sourceAnchors": [
+      {
+        "label": "Barayamal Toastmasters First Nations",
+        "url": "https://barayamal.com.au/toastmasters-first-nations/"
+      },
+      {
+        "label": "Toastmasters Start a Club",
+        "url": "https://www.toastmasters.org/Start-a-Club"
+      },
+      {
+        "label": "Toastmasters Club Charter Requirements Form",
+        "url": "https://content.toastmasters.org/image/upload/ATO-club-chartering-requirements-ff.pdf"
+      },
+      {
+        "label": "Toastmasters Governing Documents",
+        "url": "https://www.toastmasters.org/resources/governing-documents"
+      },
+      {
+        "label": "Decidim install overview",
+        "url": "https://docs.decidim.org/en/develop/install/index.html"
+      },
+      {
+        "label": "Decidim deployment docs",
+        "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+      },
+      {
+        "label": "OAIC Australian Privacy Principles",
+        "url": "https://www.oaic.gov.au/privacy/australian-privacy-principles"
+      },
+      {
+        "label": "Maiam nayri Wingara Indigenous Data Sovereignty",
+        "url": "https://www.maiamnayriwingara.org/"
+      },
+      {
+        "label": "AIATSIS ethical research",
+        "url": "https://aiatsis.gov.au/research/ethical-research"
+      }
+    ],
+    "safetyRule": "This public package is fake/sample only. Real First Nations Toastmasters pilot records require a separate approved private environment with named operators, privacy controls, official handoff boundaries, incident response, retention, deletion, and closeout evidence.",
+    "implementationRule": "Do not open real intake until required implementation actions, required environment controls, never-public field rules, and access register are approved."
   }
 }

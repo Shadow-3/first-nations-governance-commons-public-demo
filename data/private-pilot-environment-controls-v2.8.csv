@@ -1,0 +1,13 @@
+control_id,domain,control,status,owner,evidence,no_go
+EC-001,Workspace,Separate private workspace exists,Required,Technical custodian,"Private URL, owner, access list, backup rule",Public site is used for real records
+EC-002,Hosting,Private hosting decision approved,Required,Pilot authority,Decision record lists chosen option and rejected options,Hosting chosen without privacy review
+EC-003,Access,Named accounts only,Required,Technical custodian,No shared admin account,Shared passwords or generic operator login
+EC-004,Security,MFA enabled for operators,Required,Technical custodian,MFA check screenshot stored privately,Admin access without MFA
+EC-005,Backup,Export and recovery tested,Hold,Technical custodian,Fake-data restore or export check,No recovery path for private records
+EC-006,Audit,Access review log active,Ready,Privacy reviewer,Access review schedule and log,No record of who can see private data
+EC-007,Forms,Official Toastmasters forms separated,Required,Toastmasters launch lead,External official filing process named,Official signatures stored in public demo
+EC-008,Meeting,Meeting link shared privately,Required,Pilot coordinator,Invite route and access-needs route,Meeting link appears in public evidence
+EC-009,Incident,Pause and incident channel ready,Hold,Safety reviewer,Incident owner and stop wording,Incident handled only in informal chat
+EC-010,Evidence,Public screenshot redaction checklist ready,Ready,QA reviewer,Redaction checklist and fake-ID rule,Real name or contact detail in public screenshot
+EC-011,Retention,Retention and deletion rule approved,Required,Data reviewer,Retention schedule and deletion evidence template,No closeout rule before intake
+EC-012,Handover,Operator handover notes prepared,Ready,Barayamal / Dean Foley,Private operator notes and public summary,Only one person can operate critical workflow

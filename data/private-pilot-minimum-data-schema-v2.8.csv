@@ -1,0 +1,15 @@
+field_id,field_name,purpose,track,classification,allowed_storage,retention,public_rule
+MD-001,Public fake participant ID,Public evidence only,All public reports,Public fake,Public package allowed,Permanent sample,No real person can be inferred
+MD-002,First and last name,Private follow-up and official prep,Ready founder,Private restricted,Private pilot workspace only,Delete or archive at closeout,Never publish in public screenshots
+MD-003,Preferred name,Respectful contact and meeting facilitation,Founder or demo-first,Private restricted,Private pilot workspace only,Review at closeout,Public evidence uses fake name only
+MD-004,Email address,Pilot contact,All real contacts,Private restricted,Private pilot workspace only,Delete if person withdraws,Never export to public package
+MD-005,Mobile phone,Optional contact or access support,Founder if needed,Private restricted,Private pilot workspace only,Delete if not needed,Not required for demo-first path unless justified
+MD-006,Timezone and meeting availability,Schedule the online demo and recurring meetings,Founder or demo-first,Private restricted,Private pilot workspace only,Aggregate only in public,"Public reports show counts, not names"
+MD-007,Founder readiness track,"Route founder, demo-first, supporter, or unsure contacts",All real contacts,Private restricted,Private pilot workspace only,Review at closeout,Supporters are not counted as charter-ready founders
+MD-008,Age confirmation,Confirm 18+ charter eligibility,Ready founder,Private restricted,Yes/no only in private workspace,Keep only while needed,Do not collect date of birth in public demo
+MD-009,Toastmasters membership type,"Assess new, reinstate, dual, transfer, or not applying",Founder or supporter,Private restricted,Private pilot workspace only,Closeout review,Public evidence uses aggregate counts only
+MD-010,Toastmasters member number,Official Toastmasters process only if needed,Existing member,Never public,Official Toastmasters handoff only,Do not keep in public package,Never enter into public demo or fake sandbox
+MD-011,Access needs,Support participation safely,As requested,Never public,Private support route only,Delete or minimise at closeout,Public evidence says support offered only
+MD-012,Consent timestamp,Prove private pilot consent and withdrawal route,All real contacts,Private restricted,Private pilot workspace only,Keep with intake record until closeout,No signature image in public package
+MD-013,Sponsorship or payment status,Confirm status without storing payment details,Ready founder,Private restricted,Status summary only,Closeout review,"Card, bank, receipt details are never stored here"
+MD-014,Official application and signature,Toastmasters charter paperwork,Ready founder,Never public,Official Toastmasters process only,According to official process,Do not store in Governance Commons public package

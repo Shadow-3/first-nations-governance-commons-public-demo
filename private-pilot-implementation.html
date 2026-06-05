@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>Private Pilot Implementation - First Nations Governance Commons</title>
+  <meta name="description" content="Public fake-data private pilot implementation templates for the First Nations Governance Commons demo.">
+  <style>
+    :root {
+      --bg: #f6f7f5;
+      --surface: #ffffff;
+      --surface-2: #edf3ef;
+      --text: #16231f;
+      --muted: #60706b;
+      --line: #d8e0dc;
+      --teal: #0d675f;
+      --green: #247654;
+      --amber: #b66a25;
+      --red: #aa3d36;
+      --teal-2: #e4f2ef;
+      --green-2: #e7f4ed;
+      --amber-2: #fff2d4;
+      --red-2: #fae8e7;
+      --radius: 6px;
+      --shadow: 0 18px 42px rgba(18, 33, 29, 0.08);
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #fbfcfb 0%, var(--bg) 42%, #ffffff 100%);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.5;
+    }
+
+    a { color: inherit; }
+
+    .topbar {
+      min-height: 72px;
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .brand {
+      display: flex;
+      flex: 1 1 260px;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, var(--teal), #26806f);
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .brand strong,
+    .brand span {
+      display: block;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .btn,
+    button,
+    select {
+      min-height: 40px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--text);
+      font: inherit;
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 9px 13px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn.primary,
+    button.primary {
+      background: var(--teal);
+      border-color: var(--teal);
+      color: #fff;
+      box-shadow: 0 10px 22px rgba(13, 103, 95, 0.18);
+    }
+
+    .label {
+      background: var(--amber-2);
+      color: #7a4c13;
+      border: 1px solid #f2dca4;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    main {
+      width: min(1280px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 66px 0 58px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 28px;
+      align-items: center;
+      margin-bottom: 46px;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 880px;
+      font-size: clamp(44px, 6vw, 76px);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 940px;
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 42px;
+    }
+
+    .metric,
+    .card,
+    .work-card,
+    .data-card,
+    .control-card,
+    .access-card,
+    .resource {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .metric {
+      padding: 20px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+    }
+
+    section {
+      margin-top: 36px;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: end;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 31px;
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      margin: 8px 0 0;
+      color: var(--muted);
+    }
+
+    .grid,
+    .work-grid,
+    .data-grid,
+    .control-grid,
+    .access-grid,
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .grid.two {
+      grid-template-columns: minmax(360px, 0.82fr) minmax(0, 1.18fr);
+      align-items: start;
+    }
+
+    #decisionGrid {
+      grid-template-columns: 1fr;
+    }
+
+    .card,
+    .work-card,
+    .data-card,
+    .control-card,
+    .access-card,
+    .resource {
+      padding: 16px;
+      min-width: 0;
+    }
+
+    .card.is-active {
+      border-color: var(--teal);
+      box-shadow: 0 18px 38px rgba(13, 103, 95, 0.18);
+    }
+
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .badge.required,
+    .badge.never,
+    .badge.admin {
+      color: #7c211d;
+      background: var(--red-2);
+    }
+
+    .badge.hold,
+    .badge.private,
+    .badge.editor {
+      color: #7a4c13;
+      background: var(--amber-2);
+    }
+
+    .badge.ready,
+    .badge.restricted,
+    .badge.reviewer {
+      color: #15583b;
+      background: var(--green-2);
+    }
+
+    .badge.complete,
+    .badge.public,
+    .badge.status {
+      color: #0d675f;
+      background: var(--teal-2);
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .detail {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 10px;
+      min-width: 0;
+    }
+
+    .detail small {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .detail span {
+      overflow-wrap: anywhere;
+    }
+
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .brief {
+      margin: 14px 0 0;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #101b18;
+      color: #eef8f5;
+      font-family: var(--mono);
+      font-size: 12px;
+      line-height: 1.55;
+      padding: 14px;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      max-height: 300px;
+      overflow: auto;
+    }
+
+    .resource {
+      display: block;
+      text-decoration: none;
+    }
+
+    .resource strong,
+    .resource span {
+      display: block;
+    }
+
+    .resource span {
+      margin-top: 6px;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 54px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .section-head,
+      .grid.two {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions,
+      .filter-row {
+        justify-content: flex-start;
+      }
+
+      .metrics,
+      .work-grid,
+      .data-grid,
+      .control-grid,
+      .access-grid,
+      .resource-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .topbar {
+        position: static;
+        padding: 14px 16px;
+      }
+
+      .btn,
+      button,
+      select {
+        width: 100%;
+      }
+
+      .label {
+        white-space: normal;
+      }
+
+      main {
+        width: min(100% - 28px, 1280px);
+        padding-top: 48px;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .metrics,
+      .work-grid,
+      .data-grid,
+      .control-grid,
+      .access-grid,
+      .resource-grid,
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card-head {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="mark">I</span>
+      <span>
+        <strong>Private Pilot Implementation</strong>
+        <span>First Nations Governance Commons</span>
+      </span>
+    </a>
+    <a class="btn" href="index.html">Public Demo</a>
+    <a class="btn" href="organisation-onboarding.html">Org Onboarding</a>
+    <a class="btn" href="private-pilot-readiness.html">Pilot Readiness</a>
+    <a class="btn" href="private-pilot-ops.html">Pilot Ops</a>
+    <a class="btn primary" href="private-pilot-implementation.html">Pilot Build</a>
+    <a class="btn" href="document.html?file=docs%2Fprivate-pilot-implementation-playbook-v2.8.md">Runbook</a>
+    <span class="label">No real private data in public demo</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Private Pilot Implementation</h1>
+        <p>Prepare the controlled First Nations Toastmasters private pilot after readiness and operations rehearsal, while keeping real member, contact, access-need, payment, official paperwork, meeting-link, incident, and authority records out of the public demo.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn" href="document.html?file=data%2Fprivate-pilot-implementation-package-v2.8.json">Implementation JSON</a>
+        <button class="primary" type="button" id="downloadBrief">Download Brief</button>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Implementation metrics">
+      <article class="metric"><strong id="workCount">0</strong><span>Implementation actions</span></article>
+      <article class="metric"><strong id="dataCount">0</strong><span>Minimum data fields</span></article>
+      <article class="metric"><strong id="controlCount">0</strong><span>Environment controls</span></article>
+      <article class="metric"><strong id="accessCount">0</strong><span>Access register roles</span></article>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Pilot Build Decision</h2>
+          <p>The public package can prepare the private build, but it cannot become the private system of record.</p>
+        </div>
+      </div>
+      <div class="grid two">
+        <div class="grid" id="decisionGrid"></div>
+        <article class="card">
+          <div class="card-head">
+            <h3 id="selectedName">Selected implementation</h3>
+            <span class="badge hold" id="selectedStatus">Hold</span>
+          </div>
+          <p id="selectedSummary"></p>
+          <div class="detail-grid">
+            <div class="detail"><small>Recommended build</small><span id="selectedBuild"></span></div>
+            <div class="detail"><small>Hard boundary</small><span id="selectedBoundary"></span></div>
+            <div class="detail"><small>Approval gate</small><span id="selectedApproval"></span></div>
+            <div class="detail"><small>No-go trigger</small><span id="selectedStop"></span></div>
+          </div>
+          <pre class="brief" id="implementationBrief"></pre>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Implementation Workplan</h2>
+          <p>Private pilot preparation tasks for authority, environment, data, access, dry run, approval, and closeout.</p>
+        </div>
+        <div class="filter-row" aria-label="Implementation status filter">
+          <button class="primary" type="button" data-work-filter="All">All</button>
+          <button type="button" data-work-filter="Required">Required</button>
+          <button type="button" data-work-filter="Hold">Hold</button>
+          <button type="button" data-work-filter="Ready">Ready</button>
+          <button type="button" data-work-filter="Complete">Complete</button>
+        </div>
+      </div>
+      <div class="work-grid" id="workGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Minimum Data Schema</h2>
+          <p>Lock the smallest safe private fields before any real intake moves beyond the public sample.</p>
+        </div>
+        <select id="dataFilter" aria-label="Filter data fields"></select>
+      </div>
+      <div class="data-grid" id="dataGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Private Environment Controls</h2>
+          <p>Controls that must exist in the separate private environment before real pilot records are handled.</p>
+        </div>
+        <select id="controlFilter" aria-label="Filter environment controls"></select>
+      </div>
+      <div class="control-grid" id="controlGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Access Register Template</h2>
+          <p>Named access is reviewed before launch and again after the first dry run.</p>
+        </div>
+        <select id="accessFilter" aria-label="Filter access roles"></select>
+      </div>
+      <div class="access-grid" id="accessGrid"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Implementation Resources</h2>
+          <p>All v2.8 resources are public templates with fake/sample data only.</p>
+        </div>
+      </div>
+      <div class="resource-grid">
+        <a class="resource" href="document.html?file=docs%2Fprivate-pilot-implementation-playbook-v2.8.md"><strong>Implementation playbook</strong><span>30-day preparation sequence, gates, evidence, and stop rules.</span></a>
+        <a class="resource" href="document.html?file=docs%2Ftoastmasters-private-pilot-implementation-plan-v2.8.md"><strong>Toastmasters implementation plan</strong><span>Controlled First Nations Toastmasters pilot preparation path.</span></a>
+        <a class="resource" href="document.html?file=docs%2Fprivate-environment-decision-record-v2.8.md"><strong>Environment decision record</strong><span>Recommended private hosting and workflow decision before real intake.</span></a>
+        <a class="resource" href="document.html?file=data%2Fprivate-pilot-implementation-workplan-v2.8.csv"><strong>Implementation workplan CSV</strong><span>Sixteen preparation actions.</span></a>
+        <a class="resource" href="document.html?file=data%2Fprivate-pilot-minimum-data-schema-v2.8.csv"><strong>Minimum data schema CSV</strong><span>Fourteen allowed or excluded fields.</span></a>
+        <a class="resource" href="document.html?file=data%2Fprivate-pilot-environment-controls-v2.8.csv"><strong>Environment controls CSV</strong><span>Twelve private environment controls.</span></a>
+        <a class="resource" href="document.html?file=data%2Fprivate-pilot-access-register-template-v2.8.csv"><strong>Access register CSV</strong><span>Ten named role templates.</span></a>
+        <a class="resource" href="document.html?file=data%2Fprivate-pilot-implementation-package-v2.8.json"><strong>Implementation package JSON</strong><span>Machine-readable v2.8 package summary.</span></a>
+      </div>
+    </section>
+
+    <footer>
+      Version v2.8. Initial developer/custodian: Barayamal / Dean Foley. Private pilot implementation controls are templates only; no real private pilot data belongs in this public demo.
+    </footer>
+  </main>
+
+  <script>
+    const decisions = [
+      {
+        id: "PI-001",
+        name: "Toastmasters First Nations private pilot preparation",
+        status: "Hold",
+        summary: "A fake-data implementation pack for preparing a separate approved private pilot environment after v2.6 readiness and v2.7 operations rehearsal.",
+        build: "Use the public demo for review, then run real intake only in a separate approved private workspace with named operators and minimum fields.",
+        boundary: "Do not treat GitHub Pages, public screenshots, public CSVs, or the fake Decidim sandbox as the private system of record.",
+        approval: "Authority, privacy notice, role access, minimum data schema, incident path, official handoff, and deletion evidence must be approved before real intake.",
+        stop: "Any real private field, meeting link, official form, payment detail, access need, or authority record appears in the public package."
+      }
+    ];
+
+    const workplan = [
+      { id: "IW-001", phase: "Authority", action: "Pilot authority confirmed", status: "Required", owner: "Barayamal / Dean Foley", privateEvidence: "Signed internal pilot authority note", publicEvidence: "Redacted authority gate marked complete", noGo: "Pilot starts without named accountable owner" },
+      { id: "IW-002", phase: "Privacy", action: "Collection notice approved", status: "Required", owner: "Privacy reviewer", privateEvidence: "Approved privacy and consent text", publicEvidence: "Template notice version only", noGo: "Real details collected without notice" },
+      { id: "IW-003", phase: "Environment", action: "Private workspace selected", status: "Required", owner: "Technical custodian", privateEvidence: "Workspace URL, owners, backup rule", publicEvidence: "Private environment chosen", noGo: "Public demo is used as private record store" },
+      { id: "IW-004", phase: "Access", action: "Role access register approved", status: "Required", owner: "Pilot approval reviewer", privateEvidence: "Named role register with expiry", publicEvidence: "Access model summary only", noGo: "Shared admin account or unreviewed access" },
+      { id: "IW-005", phase: "Data", action: "Minimum data schema locked", status: "Required", owner: "Data reviewer", privateEvidence: "Approved field list and exclusions", publicEvidence: "Schema template only", noGo: "Open text fields collect sensitive details early" },
+      { id: "IW-006", phase: "Toastmasters", action: "Official paperwork handoff separated", status: "Required", owner: "Toastmasters launch lead", privateEvidence: "Official process owner and filing rule", publicEvidence: "External handoff boundary", noGo: "Official forms or signatures stored in public package" },
+      { id: "IW-007", phase: "Consent", action: "Withdrawal route ready", status: "Required", owner: "Pilot coordinator", privateEvidence: "Withdrawal owner, response SLA, deletion rule", publicEvidence: "Withdrawal route exists", noGo: "Participant cannot withdraw or ask what is stored" },
+      { id: "IW-008", phase: "Intake", action: "Track-based intake routing ready", status: "Ready", owner: "Pilot coordinator", privateEvidence: "Founder, demo-first, supporter, not-sure routes tested", publicEvidence: "Routing model summary", noGo: "Supporters counted as charter-ready founders" },
+      { id: "IW-009", phase: "Support", action: "Access support process ready", status: "Ready", owner: "Access support contact", privateEvidence: "Private support channel and escalation rule", publicEvidence: "Access support available", noGo: "Access needs copied to public evidence" },
+      { id: "IW-010", phase: "Incident", action: "Incident route rehearsed", status: "Hold", owner: "Safety reviewer", privateEvidence: "Incident owner, pause rule, closure template", publicEvidence: "Incident response tested", noGo: "Incident details appear in public notes" },
+      { id: "IW-011", phase: "Moderation", action: "Meeting conduct rule approved", status: "Hold", owner: "Cultural safety reviewer", privateEvidence: "Conduct note, moderator owner, pause wording", publicEvidence: "Conduct rule active", noGo: "Demo runs without named moderator" },
+      { id: "IW-012", phase: "Evidence", action: "Public evidence redaction QA ready", status: "Ready", owner: "QA reviewer", privateEvidence: "Screenshot redaction checklist", publicEvidence: "Fake IDs only in public evidence", noGo: "Public evidence shows real names or contact details" },
+      { id: "IW-013", phase: "Security", action: "Admin MFA and backup rule approved", status: "Required", owner: "Technical custodian", privateEvidence: "MFA, backup, recovery, export test", publicEvidence: "Security baseline complete", noGo: "Private system has weak admin controls" },
+      { id: "IW-014", phase: "Dry run", action: "End-to-end fake-data dry run completed", status: "Hold", owner: "Pilot operations team", privateEvidence: "Dry-run log and defect list", publicEvidence: "Dry run complete summary", noGo: "Real intake starts before fake-data dry run" },
+      { id: "IW-015", phase: "Approval", action: "Go/no-go meeting scheduled", status: "Hold", owner: "Pilot authority", privateEvidence: "Decision record and approver names", publicEvidence: "Decision pending or approved summary", noGo: "Pilot proceeds on informal chat approval" },
+      { id: "IW-016", phase: "Closeout", action: "Retention and deletion template ready", status: "Required", owner: "Data reviewer", privateEvidence: "Retention schedule and deletion evidence template", publicEvidence: "Closeout rule approved", noGo: "Pilot cannot prove what was kept or deleted" }
+    ];
+
+    const dataFields = [
+      { id: "MD-001", field: "Public fake participant ID", purpose: "Public evidence only", track: "All public reports", classification: "Public fake", storage: "Public package allowed", retention: "Permanent sample", rule: "No real person can be inferred" },
+      { id: "MD-002", field: "First and last name", purpose: "Private follow-up and official prep", track: "Ready founder", classification: "Private restricted", storage: "Private pilot workspace only", retention: "Delete or archive at closeout", rule: "Never publish in public screenshots" },
+      { id: "MD-003", field: "Preferred name", purpose: "Respectful contact and meeting facilitation", track: "Founder or demo-first", classification: "Private restricted", storage: "Private pilot workspace only", retention: "Review at closeout", rule: "Public evidence uses fake name only" },
+      { id: "MD-004", field: "Email address", purpose: "Pilot contact", track: "All real contacts", classification: "Private restricted", storage: "Private pilot workspace only", retention: "Delete if person withdraws", rule: "Never export to public package" },
+      { id: "MD-005", field: "Mobile phone", purpose: "Optional contact or access support", track: "Founder if needed", classification: "Private restricted", storage: "Private pilot workspace only", retention: "Delete if not needed", rule: "Not required for demo-first path unless justified" },
+      { id: "MD-006", field: "Timezone and meeting availability", purpose: "Schedule the online demo and recurring meetings", track: "Founder or demo-first", classification: "Private restricted", storage: "Private pilot workspace only", retention: "Aggregate only in public", rule: "Public reports show counts, not names" },
+      { id: "MD-007", field: "Founder readiness track", purpose: "Route founder, demo-first, supporter, or unsure contacts", track: "All real contacts", classification: "Private restricted", storage: "Private pilot workspace only", retention: "Review at closeout", rule: "Supporters are not counted as charter-ready founders" },
+      { id: "MD-008", field: "Age confirmation", purpose: "Confirm 18+ charter eligibility", track: "Ready founder", classification: "Private restricted", storage: "Yes/no only in private workspace", retention: "Keep only while needed", rule: "Do not collect date of birth in public demo" },
+      { id: "MD-009", field: "Toastmasters membership type", purpose: "Assess new, reinstate, dual, transfer, or not applying", track: "Founder or supporter", classification: "Private restricted", storage: "Private pilot workspace only", retention: "Closeout review", rule: "Public evidence uses aggregate counts only" },
+      { id: "MD-010", field: "Toastmasters member number", purpose: "Official Toastmasters process only if needed", track: "Existing member", classification: "Never public", storage: "Official Toastmasters handoff only", retention: "Do not keep in public package", rule: "Never enter into public demo or fake sandbox" },
+      { id: "MD-011", field: "Access needs", purpose: "Support participation safely", track: "As requested", classification: "Never public", storage: "Private support route only", retention: "Delete or minimise at closeout", rule: "Public evidence says support offered only" },
+      { id: "MD-012", field: "Consent timestamp", purpose: "Prove private pilot consent and withdrawal route", track: "All real contacts", classification: "Private restricted", storage: "Private pilot workspace only", retention: "Keep with intake record until closeout", rule: "No signature image in public package" },
+      { id: "MD-013", field: "Sponsorship or payment status", purpose: "Confirm status without storing payment details", track: "Ready founder", classification: "Private restricted", storage: "Status summary only", retention: "Closeout review", rule: "Card, bank, receipt details are never stored here" },
+      { id: "MD-014", field: "Official application and signature", purpose: "Toastmasters charter paperwork", track: "Ready founder", classification: "Never public", storage: "Official Toastmasters process only", retention: "According to official process", rule: "Do not store in Governance Commons public package" }
+    ];
+
+    const controls = [
+      { id: "EC-001", domain: "Workspace", control: "Separate private workspace exists", status: "Required", owner: "Technical custodian", evidence: "Private URL, owner, access list, backup rule", noGo: "Public site is used for real records" },
+      { id: "EC-002", domain: "Hosting", control: "Private hosting decision approved", status: "Required", owner: "Pilot authority", evidence: "Decision record lists chosen option and rejected options", noGo: "Hosting chosen without privacy review" },
+      { id: "EC-003", domain: "Access", control: "Named accounts only", status: "Required", owner: "Technical custodian", evidence: "No shared admin account", noGo: "Shared passwords or generic operator login" },
+      { id: "EC-004", domain: "Security", control: "MFA enabled for operators", status: "Required", owner: "Technical custodian", evidence: "MFA check screenshot stored privately", noGo: "Admin access without MFA" },
+      { id: "EC-005", domain: "Backup", control: "Export and recovery tested", status: "Hold", owner: "Technical custodian", evidence: "Fake-data restore or export check", noGo: "No recovery path for private records" },
+      { id: "EC-006", domain: "Audit", control: "Access review log active", status: "Ready", owner: "Privacy reviewer", evidence: "Access review schedule and log", noGo: "No record of who can see private data" },
+      { id: "EC-007", domain: "Forms", control: "Official Toastmasters forms separated", status: "Required", owner: "Toastmasters launch lead", evidence: "External official filing process named", noGo: "Official signatures stored in public demo" },
+      { id: "EC-008", domain: "Meeting", control: "Meeting link shared privately", status: "Required", owner: "Pilot coordinator", evidence: "Invite route and access-needs route", noGo: "Meeting link appears in public evidence" },
+      { id: "EC-009", domain: "Incident", control: "Pause and incident channel ready", status: "Hold", owner: "Safety reviewer", evidence: "Incident owner and stop wording", noGo: "Incident handled only in informal chat" },
+      { id: "EC-010", domain: "Evidence", control: "Public screenshot redaction checklist ready", status: "Ready", owner: "QA reviewer", evidence: "Redaction checklist and fake-ID rule", noGo: "Real name or contact detail in public screenshot" },
+      { id: "EC-011", domain: "Retention", control: "Retention and deletion rule approved", status: "Required", owner: "Data reviewer", evidence: "Retention schedule and deletion evidence template", noGo: "No closeout rule before intake" },
+      { id: "EC-012", domain: "Handover", control: "Operator handover notes prepared", status: "Ready", owner: "Barayamal / Dean Foley", evidence: "Private operator notes and public summary", noGo: "Only one person can operate critical workflow" }
+    ];
+
+    const accessRoles = [
+      { id: "AR-001", role: "Initial developer-custodian", access: "Admin", allowed: "Public demo, private workspace setup, package release notes", excluded: "Official Toastmasters filing unless separately authorised", approval: "Pilot authority", review: "Before launch and closeout" },
+      { id: "AR-002", role: "Pilot coordinator", access: "Editor", allowed: "Private intake status, meeting coordination, participant routing", excluded: "Payment details and official member numbers", approval: "Pilot authority", review: "Weekly during pilot" },
+      { id: "AR-003", role: "Privacy and data reviewer", access: "Reviewer", allowed: "Private schema, retention, deletion, access review", excluded: "Unneeded meeting facilitation content", approval: "Pilot authority", review: "Before intake and closeout" },
+      { id: "AR-004", role: "Technical custodian", access: "Admin", allowed: "Private workspace configuration, exports, backups, access settings", excluded: "Official Toastmasters applications unless needed for support", approval: "Pilot authority", review: "After dry run" },
+      { id: "AR-005", role: "Cultural safety and moderation reviewer", access: "Reviewer", allowed: "Conduct rule, incident summary, moderation notes", excluded: "Payment and official member records", approval: "Pilot authority", review: "Before demo and after first meeting" },
+      { id: "AR-006", role: "Access support contact", access: "Support", allowed: "Access support requests and follow-up", excluded: "Founder count exports and payment status", approval: "Privacy reviewer", review: "Weekly while active" },
+      { id: "AR-007", role: "Toastmasters launch lead", access: "Editor", allowed: "Founder status, official handoff checklist, officer slate status", excluded: "Public demo editing and unrelated private notes", approval: "Pilot authority", review: "Before official submission" },
+      { id: "AR-008", role: "Organisation supporter", access: "Status only", allowed: "Aggregate progress and referral status", excluded: "Names, contacts, access needs, member numbers, payment details", approval: "Pilot coordinator", review: "Every status update" },
+      { id: "AR-009", role: "QA reviewer", access: "Reviewer", allowed: "Fake-data screenshots, redaction checklist, public evidence", excluded: "Raw private records", approval: "Technical custodian", review: "Before every public release" },
+      { id: "AR-010", role: "Public reviewer", access: "No private access", allowed: "Public fake/sample demo only", excluded: "All real private pilot records", approval: "Not applicable", review: "Always public only" }
+    ];
+
+    let activeDecision = decisions[0].id;
+    let workFilter = "All";
+    let dataFilter = "All";
+    let controlFilter = "All";
+    let accessFilter = "All";
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+    }
+
+    function statusClass(value) {
+      const clean = String(value).toLowerCase();
+      if (clean.includes("never")) return "never";
+      if (clean.includes("public")) return "public";
+      if (clean.includes("restricted")) return "restricted";
+      if (clean.includes("private")) return "private";
+      if (clean.includes("admin")) return "admin";
+      if (clean.includes("editor")) return "editor";
+      if (clean.includes("reviewer") || clean.includes("support")) return "reviewer";
+      if (clean.includes("status") || clean.includes("no private")) return "status";
+      return clean.split(/\s+/)[0];
+    }
+
+    function renderDecisions() {
+      document.getElementById("decisionGrid").innerHTML = decisions.map(item => `
+        <article class="card ${item.id === activeDecision ? "is-active" : ""}">
+          <div class="card-head">
+            <h3>${escapeHtml(item.name)}</h3>
+            <span class="badge ${statusClass(item.status)}">${escapeHtml(item.status)}</span>
+          </div>
+          <p>${escapeHtml(item.summary)}</p>
+          <div class="detail-grid">
+            <div class="detail"><small>Build</small><span>${escapeHtml(item.build)}</span></div>
+            <div class="detail"><small>Approval</small><span>${escapeHtml(item.approval)}</span></div>
+          </div>
+          <button class="${item.id === activeDecision ? "primary" : ""}" type="button" data-decision="${escapeHtml(item.id)}">Use Build</button>
+        </article>
+      `).join("");
+      document.querySelectorAll("[data-decision]").forEach(button => {
+        button.addEventListener("click", () => {
+          activeDecision = button.dataset.decision;
+          renderAll();
+        });
+      });
+    }
+
+    function renderSelectedDecision() {
+      const item = decisions.find(decision => decision.id === activeDecision);
+      document.getElementById("selectedName").textContent = item.name;
+      document.getElementById("selectedStatus").textContent = item.status;
+      document.getElementById("selectedStatus").className = `badge ${statusClass(item.status)}`;
+      document.getElementById("selectedSummary").textContent = item.summary;
+      document.getElementById("selectedBuild").textContent = item.build;
+      document.getElementById("selectedBoundary").textContent = item.boundary;
+      document.getElementById("selectedApproval").textContent = item.approval;
+      document.getElementById("selectedStop").textContent = item.stop;
+      document.getElementById("implementationBrief").textContent = buildBrief(item);
+    }
+
+    function renderWorkplan() {
+      const visible = workplan.filter(item => workFilter === "All" || item.status === workFilter);
+      document.getElementById("workGrid").innerHTML = visible.map(item => `
+        <article class="work-card">
+          <div class="card-head">
+            <h3>${escapeHtml(item.action)}</h3>
+            <span class="badge ${statusClass(item.status)}">${escapeHtml(item.status)}</span>
+          </div>
+          <p>${escapeHtml(item.phase)} - ${escapeHtml(item.owner)}</p>
+          <div class="detail-grid">
+            <div class="detail"><small>Private evidence</small><span>${escapeHtml(item.privateEvidence)}</span></div>
+            <div class="detail"><small>No-go</small><span>${escapeHtml(item.noGo)}</span></div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function renderDataFields() {
+      const visible = dataFields.filter(item => dataFilter === "All" || item.classification === dataFilter);
+      document.getElementById("dataGrid").innerHTML = visible.map(item => `
+        <article class="data-card">
+          <div class="card-head">
+            <h3>${escapeHtml(item.field)}</h3>
+            <span class="badge ${statusClass(item.classification)}">${escapeHtml(item.classification)}</span>
+          </div>
+          <p>${escapeHtml(item.purpose)}</p>
+          <div class="detail-grid">
+            <div class="detail"><small>Track</small><span>${escapeHtml(item.track)}</span></div>
+            <div class="detail"><small>Public rule</small><span>${escapeHtml(item.rule)}</span></div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function renderControls() {
+      const visible = controls.filter(item => controlFilter === "All" || item.status === controlFilter);
+      document.getElementById("controlGrid").innerHTML = visible.map(item => `
+        <article class="control-card">
+          <div class="card-head">
+            <h3>${escapeHtml(item.control)}</h3>
+            <span class="badge ${statusClass(item.status)}">${escapeHtml(item.status)}</span>
+          </div>
+          <p>${escapeHtml(item.domain)} - ${escapeHtml(item.owner)}</p>
+          <div class="detail-grid">
+            <div class="detail"><small>Evidence</small><span>${escapeHtml(item.evidence)}</span></div>
+            <div class="detail"><small>No-go</small><span>${escapeHtml(item.noGo)}</span></div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function renderAccessRoles() {
+      const visible = accessRoles.filter(item => accessFilter === "All" || item.access === accessFilter);
+      document.getElementById("accessGrid").innerHTML = visible.map(item => `
+        <article class="access-card">
+          <div class="card-head">
+            <h3>${escapeHtml(item.role)}</h3>
+            <span class="badge ${statusClass(item.access)}">${escapeHtml(item.access)}</span>
+          </div>
+          <p>${escapeHtml(item.allowed)}</p>
+          <div class="detail-grid">
+            <div class="detail"><small>Excluded</small><span>${escapeHtml(item.excluded)}</span></div>
+            <div class="detail"><small>Review</small><span>${escapeHtml(item.review)}</span></div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function populateSelect(id, values, current) {
+      const select = document.getElementById(id);
+      select.innerHTML = values.map(value => `<option value="${escapeHtml(value)}" ${value === current ? "selected" : ""}>${escapeHtml(value)}</option>`).join("");
+    }
+
+    function buildBrief(item) {
+      return [
+        "# Private Pilot Implementation Brief v2.8",
+        "",
+        `Implementation: ${item.name}`,
+        `Status: ${item.status}`,
+        `Initial developer/custodian: Barayamal / Dean Foley`,
+        "",
+        "Recommended build:",
+        item.build,
+        "",
+        "Hard boundary:",
+        item.boundary,
+        "",
+        "Required actions:",
+        ...workplan.filter(row => row.status === "Required").map(row => `- ${row.id}: ${row.action}`),
+        "",
+        "Never-public fields:",
+        ...dataFields.filter(row => row.classification === "Never public").map(row => `- ${row.id}: ${row.field}`),
+        "",
+        "Required environment controls:",
+        ...controls.filter(row => row.status === "Required").map(row => `- ${row.id}: ${row.control}`),
+        "",
+        "No-go trigger:",
+        item.stop,
+        "",
+        "Public demo rule: keep this page fake/sample only. Real pilot data belongs only in the approved private environment."
+      ].join("\n");
+    }
+
+    function renderAll() {
+      document.getElementById("workCount").textContent = workplan.length;
+      document.getElementById("dataCount").textContent = dataFields.length;
+      document.getElementById("controlCount").textContent = controls.length;
+      document.getElementById("accessCount").textContent = accessRoles.length;
+      populateSelect("dataFilter", ["All", ...new Set(dataFields.map(item => item.classification))], dataFilter);
+      populateSelect("controlFilter", ["All", ...new Set(controls.map(item => item.status))], controlFilter);
+      populateSelect("accessFilter", ["All", ...new Set(accessRoles.map(item => item.access))], accessFilter);
+      renderDecisions();
+      renderSelectedDecision();
+      renderWorkplan();
+      renderDataFields();
+      renderControls();
+      renderAccessRoles();
+    }
+
+    document.querySelectorAll("[data-work-filter]").forEach(button => {
+      button.addEventListener("click", () => {
+        workFilter = button.dataset.workFilter;
+        document.querySelectorAll("[data-work-filter]").forEach(item => item.classList.toggle("primary", item === button));
+        renderWorkplan();
+      });
+    });
+
+    document.getElementById("dataFilter").addEventListener("change", event => {
+      dataFilter = event.target.value;
+      renderDataFields();
+    });
+
+    document.getElementById("controlFilter").addEventListener("change", event => {
+      controlFilter = event.target.value;
+      renderControls();
+    });
+
+    document.getElementById("accessFilter").addEventListener("change", event => {
+      accessFilter = event.target.value;
+      renderAccessRoles();
+    });
+
+    document.getElementById("downloadBrief").addEventListener("click", () => {
+      const item = decisions.find(decision => decision.id === activeDecision);
+      const blob = new Blob([buildBrief(item)], { type: "text/markdown" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "private-pilot-implementation-brief-v2.8.md";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(link.href);
+    });
+
+    renderAll();
+  </script>
+</body>
+</html>

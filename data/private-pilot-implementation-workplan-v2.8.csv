@@ -1,0 +1,17 @@
+id,phase,action,status,owner,private_evidence,public_evidence,no_go
+IW-001,Authority,Pilot authority confirmed,Required,Barayamal / Dean Foley,Signed internal pilot authority note,Redacted authority gate marked complete,Pilot starts without named accountable owner
+IW-002,Privacy,Collection notice approved,Required,Privacy reviewer,Approved privacy and consent text,Template notice version only,Real details collected without notice
+IW-003,Environment,Private workspace selected,Required,Technical custodian,"Workspace URL, owners, backup rule",Private environment chosen,Public demo is used as private record store
+IW-004,Access,Role access register approved,Required,Pilot approval reviewer,Named role register with expiry,Access model summary only,Shared admin account or unreviewed access
+IW-005,Data,Minimum data schema locked,Required,Data reviewer,Approved field list and exclusions,Schema template only,Open text fields collect sensitive details early
+IW-006,Toastmasters,Official paperwork handoff separated,Required,Toastmasters launch lead,Official process owner and filing rule,External handoff boundary,Official forms or signatures stored in public package
+IW-007,Consent,Withdrawal route ready,Required,Pilot coordinator,"Withdrawal owner, response SLA, deletion rule",Withdrawal route exists,Participant cannot withdraw or ask what is stored
+IW-008,Intake,Track-based intake routing ready,Ready,Pilot coordinator,"Founder, demo-first, supporter, not-sure routes tested",Routing model summary,Supporters counted as charter-ready founders
+IW-009,Support,Access support process ready,Ready,Access support contact,Private support channel and escalation rule,Access support available,Access needs copied to public evidence
+IW-010,Incident,Incident route rehearsed,Hold,Safety reviewer,"Incident owner, pause rule, closure template",Incident response tested,Incident details appear in public notes
+IW-011,Moderation,Meeting conduct rule approved,Hold,Cultural safety reviewer,"Conduct note, moderator owner, pause wording",Conduct rule active,Demo runs without named moderator
+IW-012,Evidence,Public evidence redaction QA ready,Ready,QA reviewer,Screenshot redaction checklist,Fake IDs only in public evidence,Public evidence shows real names or contact details
+IW-013,Security,Admin MFA and backup rule approved,Required,Technical custodian,"MFA, backup, recovery, export test",Security baseline complete,Private system has weak admin controls
+IW-014,Dry run,End-to-end fake-data dry run completed,Hold,Pilot operations team,Dry-run log and defect list,Dry run complete summary,Real intake starts before fake-data dry run
+IW-015,Approval,Go/no-go meeting scheduled,Hold,Pilot authority,Decision record and approver names,Decision pending or approved summary,Pilot proceeds on informal chat approval
+IW-016,Closeout,Retention and deletion template ready,Required,Data reviewer,Retention schedule and deletion evidence template,Closeout rule approved,Pilot cannot prove what was kept or deleted

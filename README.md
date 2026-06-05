@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v2.7
+Current package version: v2.8
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -49,6 +49,8 @@ Open `private-pilot-readiness.html` to use Private Pilot Readiness for approval 
 
 Open `private-pilot-ops.html` to use Pilot Operations Control for run-day checks, participant state rules, incident closeout, official Toastmasters handoff, deletion evidence, and a downloadable operations brief after readiness approval.
 
+Open `private-pilot-implementation.html` to use Private Pilot Implementation for the private environment, minimum data schema, access register, implementation workplan, dry run, and go/no-go decision before real intake opens.
+
 The demo shows:
 
 - A sample 2026 Community Priorities and Budget process.
@@ -91,6 +93,7 @@ The demo shows:
 - `docs/public-demo-release-notes-v2.5.md`
 - `docs/public-demo-release-notes-v2.6.md`
 - `docs/public-demo-release-notes-v2.7.md`
+- `docs/public-demo-release-notes-v2.8.md`
 - `docs/public-demo-release-notes-v2.3.md`
 - `docs/public-demo-release-notes-v2.2.md`
 - `docs/public-demo-release-notes-v2.1.md`
@@ -109,6 +112,9 @@ The demo shows:
 - `docs/toastmasters-private-pilot-test-script-v2.6.md`
 - `docs/private-pilot-operations-runbook-v2.7.md`
 - `docs/toastmasters-private-pilot-ops-script-v2.7.md`
+- `docs/private-pilot-implementation-playbook-v2.8.md`
+- `docs/toastmasters-private-pilot-implementation-plan-v2.8.md`
+- `docs/private-environment-decision-record-v2.8.md`
 - `docs/build-partner-rfq-pack-v2.3.md`
 - `docs/provider-evaluation-guide-v2.3.md`
 - `docs/sandbox-launch-playbook-v2.0.md`
@@ -223,6 +229,11 @@ The demo shows:
 - `data/private-pilot-incident-closeout-log-v2.7.csv`
 - `data/private-pilot-official-handoff-register-v2.7.csv`
 - `data/private-pilot-ops-package-v2.7.json`
+- `data/private-pilot-implementation-workplan-v2.8.csv`
+- `data/private-pilot-minimum-data-schema-v2.8.csv`
+- `data/private-pilot-environment-controls-v2.8.csv`
+- `data/private-pilot-access-register-template-v2.8.csv`
+- `data/private-pilot-implementation-package-v2.8.json`
 - `data/sandbox-task-board.csv`
 - `data/decision-log-template.csv`
 - `PACKAGE_INDEX.md`
@@ -662,9 +673,25 @@ The v2.7 package adds a run-day operations layer after Private Pilot Readiness:
 
 Use this version only after v2.6 readiness approval. Pilot Ops still uses public fake/sample templates only. Real operations require a separate approved private environment, access register, privacy notice, consent text, incident route, official Toastmasters handoff boundary, retention/deletion rule, and closeout evidence.
 
+## v2.8 Private Pilot Implementation Upgrade
+
+The v2.8 package adds the preparation layer needed before any real private intake opens:
+
+- Interactive Private Pilot Implementation page.
+- Sixteen implementation actions.
+- Fourteen minimum data schema rules.
+- Twelve private environment controls.
+- Ten access register role templates.
+- Browser-generated implementation brief.
+- Private pilot implementation playbook, Toastmasters implementation plan, and private environment decision record.
+- Document viewer coverage for all v2.8 implementation docs, CSVs, and JSON.
+- Package manifest coverage for the new private pilot implementation evidence group.
+
+Use this version after v2.6 readiness and v2.7 operations rehearsal. Private Pilot Implementation still uses public fake/sample templates only. Real intake requires a separate approved private environment, named operators, privacy notice, consent/withdrawal process, access register, incident route, official Toastmasters handoff boundary, retention/deletion rule, and closeout evidence.
+
 ## Next Build Step
 
-Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, Delivery Room, Assurance Room, Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, Build Delivery Control, Organisation Onboarding, Private Pilot Readiness, and Pilot Operations Control to configure, operate, select a provider for, control delivery of, test organisation/initiative onboarding for, check private-pilot readiness for, rehearse private-pilot run-day operations for, and safely hand over a fake-data Decidim sandbox:
+Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Room, Ops Room, Delivery Room, Assurance Room, Sandbox Launcher, Seed Studio, Sandbox Build Pack, Build Partner Desk, Build Delivery Control, Organisation Onboarding, Private Pilot Readiness, Pilot Operations Control, and Private Pilot Implementation to configure, operate, select a provider for, control delivery of, test organisation/initiative onboarding for, check private-pilot readiness for, rehearse private-pilot run-day operations for, prepare the separate private pilot environment for, and safely hand over a fake-data Decidim sandbox:
 
 - One organisation.
 - One public assembly.
@@ -678,5 +705,6 @@ Use the live GitHub sprint issues plus Contributor Room, Builder Room, Sprint Ro
 - Controlled organisation/initiative onboarding sample.
 - Private-pilot readiness controls.
 - Pilot operations controls.
+- Private-pilot implementation controls.
 
 Use the files in `docs/` and `data/` as the first mapping package.
