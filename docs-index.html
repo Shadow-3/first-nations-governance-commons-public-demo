@@ -353,6 +353,7 @@
 <a class="btn" href="private-intake-consent-triage.html">Intake</a>
 <a class="btn" href="private-approval-pilot-gate.html">Gate</a>
 <a class="btn" href="private-decision-evidence-docket.html">Docket</a>
+<a class="btn" href="private-implementation-control-ledger.html">Ledger</a>
     <a class="btn" href="index.html">Open Demo</a>
     <div class="label">Public demo - fake data only</div>
   </header>
@@ -498,6 +499,10 @@
       <a href="#docket">
         <strong>Docket</strong>
         <span>Meeting agenda, evidence custody, owner decisions, redactions, outcomes, actions, audit, and comms.</span>
+      </a>
+      <a href="#ledger">
+        <strong>Ledger</strong>
+        <span>Release locks, carry-forward mapping, access controls, acceptance evidence, rollback, and comms.</span>
       </a>
       <a href="#governance">
         <strong>Governance/Data</strong>
@@ -746,6 +751,13 @@
         </div>
         <div class="doc-row">
           <div>
+            <strong>Private Implementation Control Ledger</strong>
+            <span>Turn v4.4 decision outcomes into locked implementation work.</span>
+          </div>
+          <a class="btn primary" href="private-implementation-control-ledger.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
             <strong>Public demo prototype</strong>
             <span>Sample Decidim-style participatory process.</span>
           </div>
@@ -775,9 +787,9 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v4.4 Private Decision Evidence Docket upgrade.</span>
+            <span>What changed in the v4.5 Private Implementation Control Ledger upgrade.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v4.4.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v4.5.md">Open</a>
         </div>
       </div>
     </section>
@@ -1161,6 +1173,33 @@
         <div class="doc-row"><div><strong>Control Tower package JSON</strong><span>Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays.</span></div><a class="btn" href="data/pilot-control-tower-package-v3.3.json">Open</a></div>
         <div class="doc-row"><div><strong>Release notes v3.3</strong><span>What changed in the Pilot Control Tower upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v3.3.md">Open</a></div>
         <div class="doc-row"><div><strong>Evidence Vault & Advisory Review</strong><span>Dean advisory review, private evidence vault, access rules, authority meeting steps, and decision gates.</span></div><a class="btn primary" href="private-pilot-evidence-vault.html">Open</a></div>
+      </div>
+    </section>
+    <section id="ledger">
+      <div class="section-head">
+        <div>
+          <h2>Private Implementation Control Ledger</h2>
+          <p>Use these files to lock carry-forward decisions before build, access, release, rollback, or public communications.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Private Implementation Control Ledger</strong><span>Interactive release locks, workstreams, task ledger, access controls, evidence, rollback, and comms.</span></div><a class="btn primary" href="private-implementation-control-ledger.html">Open</a></div>
+        <div class="doc-row"><div><strong>Implementation ledger playbook v4.5</strong><span>Run implementation control after the decision docket.</span></div><a class="btn" href="docs/private-implementation-control-ledger-playbook-v4.5.md">Open</a></div>
+        <div class="doc-row"><div><strong>Decision-to-implementation sprint plan v4.5</strong><span>Map carry-forward decisions to locked tasks.</span></div><a class="btn" href="docs/decision-to-implementation-sprint-plan-v4.5.md">Open</a></div>
+        <div class="doc-row"><div><strong>Release lock and access protocol v4.5</strong><span>Release locks, access controls, and environment checks.</span></div><a class="btn" href="docs/release-lock-and-access-control-protocol-v4.5.md">Open</a></div>
+        <div class="doc-row"><div><strong>Evidence and rollback pack v4.5</strong><span>Acceptance tests, change control, no-go, and rollback.</span></div><a class="btn" href="docs/implementation-evidence-and-rollback-pack-v4.5.md">Open</a></div>
+        <div class="doc-row"><div><strong>Workstreams CSV</strong><span>Fourteen implementation workstreams.</span></div><a class="btn" href="data/implementation-workstreams-v4.5.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Release locks CSV</strong><span>Sixteen release locks.</span></div><a class="btn" href="data/release-lock-register-v4.5.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Carry-forward map CSV</strong><span>Sixteen carry-forward items.</span></div><a class="btn" href="data/decision-carryover-map-v4.5.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Build task ledger CSV</strong><span>Eighteen build tasks.</span></div><a class="btn" href="data/build-task-ledger-v4.5.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Access controls CSV</strong><span>Fourteen access controls.</span></div><a class="btn" href="data/access-provisioning-controls-v4.5.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Environment checks CSV</strong><span>Twelve environment checks.</span></div><a class="btn" href="data/environment-readiness-checks-v4.5.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Change control CSV</strong><span>Fourteen change controls.</span></div><a class="btn" href="data/change-control-log-v4.5.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Acceptance tests CSV</strong><span>Sixteen acceptance tests.</span></div><a class="btn" href="data/acceptance-evidence-tests-v4.5.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Rollback controls CSV</strong><span>Twelve rollback controls.</span></div><a class="btn" href="data/rollback-and-exit-controls-v4.5.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Implementation comms CSV</strong><span>Twelve communications templates.</span></div><a class="btn" href="data/implementation-comms-v4.5.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Ledger package JSON</strong><span>Machine-readable v4.5 implementation ledger.</span></div><a class="btn" href="data/private-implementation-control-ledger-package-v4.5.json">Open</a></div>
+        <div class="doc-row"><div><strong>Release notes v4.5</strong><span>What changed in the implementation ledger upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v4.5.md">Open</a></div>
       </div>
     </section>
     <section id="docket">
@@ -1549,7 +1588,7 @@
     </section>
 
     <footer>
-      Version v4.4. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v4.5. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
   <script>

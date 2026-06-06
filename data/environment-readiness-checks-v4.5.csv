@@ -1,0 +1,13 @@
+id,check,status,owner,finding,blocks,nextAction
+"ENV-001","Ruby/Rails availability","Blocked","Technical/admin custodian","No real Decidim app scaffold in static package.","Self-build Decidim install.","Prepare provider or local build environment."
+"ENV-002","PostgreSQL availability","Blocked","Technical/admin custodian","Database client/server not proven in this package.","Self-build sandbox.","Confirm database path."
+"ENV-003","Image processing dependencies","Blocked","Technical/admin custodian","ImageMagick/libvips not confirmed.","Media upload readiness.","Confirm dependencies."
+"ENV-004","Docker/provider fallback","Hold","Provider access owner","Provider-assisted route remains safer until local stack passes.","Sandbox setup decision.","Decide provider route controls."
+"ENV-005","Node/runtime alignment","Hold","Technical/admin custodian","Static demo has Node; Decidim app dependency alignment not proven.","Manual install.","Pin build runtime."
+"ENV-006","SMTP/email path","Blocked","Technical/admin custodian","Participant email path not configured.","Real user onboarding.","Choose SMTP provider privately."
+"ENV-007","Object storage path","Hold","Technical/admin custodian","Upload storage not configured.","Attachment/media testing.","Choose storage path."
+"ENV-008","Backups and restore","Hold","Technical/admin custodian","Backup/restore proof pending.","Sandbox launch.","Run fake-data proof."
+"ENV-009","Monitoring and alerting","Hold","Technical/admin custodian","Uptime/error monitoring not configured.","Operational readiness.","Draft monitoring plan."
+"ENV-010","Access revoke test","Hold","Technical/admin custodian","Revoke proof pending.","Account provisioning.","Run revoke proof."
+"ENV-011","Mobile/accessibility QA","Ready","Pilot owner","Static demo QA passed; Decidim app QA not yet applicable.","Live app readiness.","Carry into app build."
+"ENV-012","Public static demo hosting","Ready","Pilot owner","GitHub Pages public demo is live with fake/sample data.","Public review only.","Keep fake-data boundary."

@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v4.4  
+Version: v4.5  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -153,9 +153,31 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
 
+## v4.5 Private Implementation Control Ledger Additions
+
+- `private-implementation-control-ledger.html` - public-safe ledger for implementation workstreams, release locks, carry-forward mapping, build tasks, access controls, environment checks, change control, acceptance evidence, rollback, and comms.
+- `docs/private-implementation-control-ledger-playbook-v4.5.md`
+- `docs/decision-to-implementation-sprint-plan-v4.5.md`
+- `docs/release-lock-and-access-control-protocol-v4.5.md`
+- `docs/implementation-evidence-and-rollback-pack-v4.5.md`
+- `docs/public-demo-release-notes-v4.5.md`
+- `data/implementation-workstreams-v4.5.csv`
+- `data/release-lock-register-v4.5.csv`
+- `data/decision-carryover-map-v4.5.csv`
+- `data/build-task-ledger-v4.5.csv`
+- `data/access-provisioning-controls-v4.5.csv`
+- `data/environment-readiness-checks-v4.5.csv`
+- `data/change-control-log-v4.5.csv`
+- `data/acceptance-evidence-tests-v4.5.csv`
+- `data/rollback-and-exit-controls-v4.5.csv`
+- `data/implementation-comms-v4.5.csv`
+- `data/private-implementation-control-ledger-package-v4.5.json`
+
+
 ## v4.4 Private Decision Evidence Docket Additions
 
 - `private-decision-evidence-docket.html` - public-safe docket for private meeting agenda, evidence custody, owner decisions, conflicts/recusals, redactions, public outcome lines, carry-forward actions, custody rules, audit log, and comms.
+- `private-implementation-control-ledger.html` is the public-safe Private Implementation Control Ledger for release locks, implementation tasks, access controls, acceptance evidence, rollback, and comms.
 - `docs/private-decision-evidence-docket-playbook-v4.4.md`
 - `docs/approval-meeting-agenda-and-minutes-v4.4.md`
 - `docs/evidence-custody-and-redaction-protocol-v4.4.md`

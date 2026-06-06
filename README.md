@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v4.4
+Current package version: v4.5
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -67,6 +67,7 @@ Open `pilot-agreement-onboarding.html` to prepare safe joining terms, role commi
 Open `private-intake-consent-triage.html` to rehearse private intake fields, consent checks, support routes, access provisioning, approval tickets, communications, risk controls, and decisions.
 Open `private-approval-pilot-gate.html` to close or hold private approval owners, motions, gates, risks, tickets, sandbox checks, boundaries, actions, and comms before any real intake.
 Open `private-decision-evidence-docket.html` to run the private fake-data decision meeting with agenda, evidence custody, owner decisions, conflicts, redactions, public outcomes, carry-forward actions, audit, and comms.
+Open `private-implementation-control-ledger.html` to lock carry-forward decisions into implementation workstreams, release locks, access controls, acceptance tests, rollback controls, and public-safe comms.
 
 The demo shows:
 
@@ -98,6 +99,23 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v4.5.md`
+- `docs/private-implementation-control-ledger-playbook-v4.5.md`
+- `docs/decision-to-implementation-sprint-plan-v4.5.md`
+- `docs/release-lock-and-access-control-protocol-v4.5.md`
+- `docs/implementation-evidence-and-rollback-pack-v4.5.md`
+- `data/implementation-workstreams-v4.5.csv`
+- `data/release-lock-register-v4.5.csv`
+- `data/decision-carryover-map-v4.5.csv`
+- `data/build-task-ledger-v4.5.csv`
+- `data/access-provisioning-controls-v4.5.csv`
+- `data/environment-readiness-checks-v4.5.csv`
+- `data/change-control-log-v4.5.csv`
+- `data/acceptance-evidence-tests-v4.5.csv`
+- `data/rollback-and-exit-controls-v4.5.csv`
+- `data/implementation-comms-v4.5.csv`
+- `data/private-implementation-control-ledger-package-v4.5.json`
+
 - `docs/public-demo-release-notes-v4.4.md`
 - `docs/private-decision-evidence-docket-playbook-v4.4.md`
 - `docs/approval-meeting-agenda-and-minutes-v4.4.md`
@@ -958,6 +976,17 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v4.5 Private Implementation Control Ledger Upgrade
+
+The v4.5 package adds the decision-to-implementation control layer after the private decision docket:
+
+- Fourteen workstreams, sixteen release locks, sixteen carry-forward items, eighteen build tasks, and fourteen access controls.
+- Twelve environment checks, fourteen change controls, sixteen acceptance tests, twelve rollback controls, and twelve comms templates.
+- A stronger launch lock: real participant intake and live Decidim access remain blocked until every critical implementation lock, access control, acceptance test, and rollback path passes privately.
+
+Use this version to plan implementation without accidentally turning a private hold decision into a live launch.
+
 
 ## v4.4 Private Decision Evidence Docket Upgrade
 

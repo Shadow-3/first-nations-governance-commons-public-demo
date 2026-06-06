@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "4.4",
+  "version": "4.5",
   "date": "2026-06-06",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use Private Decision Evidence Docket as the default next fake-data decision execution layer: run the private approval meeting, classify evidence, capture owner decision records, manage conflicts and recusals, approve redactions, publish only public-safe outcome lines, and carry unresolved actions forward while keeping real intake and live Decidim access on hold until all private approvals pass.",
+  "recommendedDecision": "Use Private Implementation Control Ledger as the default next fake-data implementation layer: convert the private decision docket into release locks, owner workstreams, carry-forward mapping, task controls, access controls, acceptance evidence, rollback controls, and public-safe communications while keeping real intake and live Decidim access blocked until all private implementation locks pass.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -364,13 +364,30 @@
     "data/evidence-custody-rules-v4.4.csv",
     "data/decision-audit-log-v4.4.csv",
     "data/decision-docket-comms-v4.4.csv",
-    "data/private-decision-evidence-docket-package-v4.4.json"
+    "data/private-decision-evidence-docket-package-v4.4.json",
+    "private-implementation-control-ledger.html",
+    "docs/private-implementation-control-ledger-playbook-v4.5.md",
+    "docs/decision-to-implementation-sprint-plan-v4.5.md",
+    "docs/release-lock-and-access-control-protocol-v4.5.md",
+    "docs/implementation-evidence-and-rollback-pack-v4.5.md",
+    "docs/public-demo-release-notes-v4.5.md",
+    "data/implementation-workstreams-v4.5.csv",
+    "data/release-lock-register-v4.5.csv",
+    "data/decision-carryover-map-v4.5.csv",
+    "data/build-task-ledger-v4.5.csv",
+    "data/access-provisioning-controls-v4.5.csv",
+    "data/environment-readiness-checks-v4.5.csv",
+    "data/change-control-log-v4.5.csv",
+    "data/acceptance-evidence-tests-v4.5.csv",
+    "data/rollback-and-exit-controls-v4.5.csv",
+    "data/implementation-comms-v4.5.csv",
+    "data/private-implementation-control-ledger-package-v4.5.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v4.4.md",
+    "releaseNotes": "docs/public-demo-release-notes-v4.5.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -642,7 +659,17 @@
       "qa-v44-deployed-private-decision-evidence-docket-barayamal-desktop.png",
       "qa-v44-deployed-private-decision-evidence-docket-evidence-desktop.png",
       "qa-v44-deployed-private-decision-evidence-docket-mobile.png",
-      "qa-v44-deployed-private-decision-evidence-docket-package-mobile.png"
+      "qa-v44-deployed-private-decision-evidence-docket-package-mobile.png",
+      "qa-v45-local-private-implementation-control-ledger-desktop.png",
+      "qa-v45-local-private-implementation-control-ledger-barayamal-desktop.png",
+      "qa-v45-local-private-implementation-control-ledger-access-desktop.png",
+      "qa-v45-local-private-implementation-control-ledger-mobile.png",
+      "qa-v45-local-private-implementation-control-ledger-package-mobile.png",
+      "qa-v45-deployed-private-implementation-control-ledger-desktop.png",
+      "qa-v45-deployed-private-implementation-control-ledger-barayamal-desktop.png",
+      "qa-v45-deployed-private-implementation-control-ledger-access-desktop.png",
+      "qa-v45-deployed-private-implementation-control-ledger-mobile.png",
+      "qa-v45-deployed-private-implementation-control-ledger-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -1678,6 +1705,25 @@
       "data/decision-audit-log-v4.4.csv",
       "data/decision-docket-comms-v4.4.csv",
       "data/private-decision-evidence-docket-package-v4.4.json"
+    ],
+    "privateImplementationControlLedger": [
+      "private-implementation-control-ledger.html",
+      "docs/private-implementation-control-ledger-playbook-v4.5.md",
+      "docs/decision-to-implementation-sprint-plan-v4.5.md",
+      "docs/release-lock-and-access-control-protocol-v4.5.md",
+      "docs/implementation-evidence-and-rollback-pack-v4.5.md",
+      "docs/public-demo-release-notes-v4.5.md",
+      "data/implementation-workstreams-v4.5.csv",
+      "data/release-lock-register-v4.5.csv",
+      "data/decision-carryover-map-v4.5.csv",
+      "data/build-task-ledger-v4.5.csv",
+      "data/access-provisioning-controls-v4.5.csv",
+      "data/environment-readiness-checks-v4.5.csv",
+      "data/change-control-log-v4.5.csv",
+      "data/acceptance-evidence-tests-v4.5.csv",
+      "data/rollback-and-exit-controls-v4.5.csv",
+      "data/implementation-comms-v4.5.csv",
+      "data/private-implementation-control-ledger-package-v4.5.json"
     ]
   },
   "safetyRules": [
@@ -1758,7 +1804,11 @@
     "This v4.4 package remains public fake/sample data only. Private meeting minutes, owner names beyond role labels, authority evidence, consent evidence, member numbers, payments, signatures, support records, incident details, access logs, credentials, backups, exports, official Toastmasters records, business-sensitive details, cultural material, and private URLs must remain outside the public package.",
     "Dean Foley / Barayamal may support docket preparation, developer notes, and trusted-review comments only where an approval owner permits it. Advisory review never replaces First Nations authority, privacy, IDS/data governance, official Toastmasters, support, payment, consent, access, or launch approvals.",
     "Use the v4.4 Private Decision Evidence Docket after the v4.3 gate room. It turns owners, motions, gates, risks, and sandbox checks into a private meeting docket with agenda steps, evidence custody, owner decision records, conflict/recusal checks, redaction, public outcome lines, carry-forward actions, audit log, and communications.",
-    "Recommended decision remains Hold. Run the private fake-data decision meeting, close or carry forward every owner decision record, approve redactions, and publish only the public-safe outcome line. Real intake and live Decidim access remain blocked until all private owner approvals pass."
+    "Recommended decision remains Hold. Run the private fake-data decision meeting, close or carry forward every owner decision record, approve redactions, and publish only the public-safe outcome line. Real intake and live Decidim access remain blocked until all private owner approvals pass.",
+    "This v4.5 package remains public fake/sample data only. No real names, emails, phone numbers, member numbers, payments, signatures, authority evidence, consent records, support or incident details, access logs, credentials, backups, exports, official Toastmasters records, business-sensitive details, cultural material, private URLs, or live Decidim configuration belong in the public package.",
+    "Dean Foley / Barayamal may support implementation planning, developer notes, sample task triage, and trusted review only where the responsible owner permits it. Advisory review never replaces First Nations authority, privacy, IDS/data governance, official Toastmasters, support, payment, consent, access, launch, release lock, rollback, or closeout approvals.",
+    "Use the v4.5 Private Implementation Control Ledger after the v4.4 decision docket. It converts owner decisions and carry-forward actions into locked implementation workstreams, dependency checks, build tasks, access controls, acceptance evidence, rollback controls, and public-safe communications.",
+    "Recommended decision remains Hold. Keep the implementation release lock closed until every blocked release lock, access control, environment check, change-control item, acceptance test, and rollback control is privately approved. Real intake and live Decidim access remain blocked."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -3568,5 +3618,97 @@
     "advisoryRule": "Dean Foley / Barayamal may support docket preparation, developer notes, and trusted-review comments only where an approval owner permits it. Advisory review never replaces First Nations authority, privacy, IDS/data governance, official Toastmasters, support, payment, consent, access, or launch approvals.",
     "safetyRule": "This v4.4 package remains public fake/sample data only. Private meeting minutes, owner names beyond role labels, authority evidence, consent evidence, member numbers, payments, signatures, support records, incident details, access logs, credentials, backups, exports, official Toastmasters records, business-sensitive details, cultural material, and private URLs must remain outside the public package.",
     "decisionRule": "Recommended decision remains Hold. Run the private fake-data decision meeting, close or carry forward every owner decision record, approve redactions, and publish only the public-safe outcome line. Real intake and live Decidim access remain blocked until all private owner approvals pass."
+  },
+  "privateImplementationControlLedger": {
+    "entrypoint": "private-implementation-control-ledger.html",
+    "playbook": "docs/private-implementation-control-ledger-playbook-v4.5.md",
+    "sprintPlan": "docs/decision-to-implementation-sprint-plan-v4.5.md",
+    "releaseLockProtocol": "docs/release-lock-and-access-control-protocol-v4.5.md",
+    "evidenceRollbackPack": "docs/implementation-evidence-and-rollback-pack-v4.5.md",
+    "releaseNotes": "docs/public-demo-release-notes-v4.5.md",
+    "dataFiles": [
+      "data/implementation-workstreams-v4.5.csv",
+      "data/release-lock-register-v4.5.csv",
+      "data/decision-carryover-map-v4.5.csv",
+      "data/build-task-ledger-v4.5.csv",
+      "data/access-provisioning-controls-v4.5.csv",
+      "data/environment-readiness-checks-v4.5.csv",
+      "data/change-control-log-v4.5.csv",
+      "data/acceptance-evidence-tests-v4.5.csv",
+      "data/rollback-and-exit-controls-v4.5.csv",
+      "data/implementation-comms-v4.5.csv",
+      "data/private-implementation-control-ledger-package-v4.5.json"
+    ],
+    "primaryOrganisationTest": "Barayamal",
+    "controlledMemberTester": "First Nations Toastmasters",
+    "counts": {
+      "workstreams": 14,
+      "releaseLocks": 16,
+      "carryoverItems": 16,
+      "buildTasks": 18,
+      "accessControls": 14,
+      "environmentChecks": 12,
+      "changeControls": 14,
+      "acceptanceTests": 16,
+      "rollbackControls": 12,
+      "commsTemplates": 12,
+      "ledgerRecords": 144,
+      "barayamalTasks": 4,
+      "toastmastersTasks": 4,
+      "crossTrackTasks": 10,
+      "blockedLocks": 7,
+      "holdLocks": 6,
+      "readyLocks": 3,
+      "neverPublicAccessControls": 6,
+      "blockedEnvironmentChecks": 4,
+      "blockedChangeControls": 7,
+      "readyComms": 3
+    },
+    "sourceAnchors": [
+      {
+        "label": "Decidim install overview",
+        "url": "https://docs.decidim.org/en/develop/install/index.html"
+      },
+      {
+        "label": "Decidim deployment docs",
+        "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+      },
+      {
+        "label": "Decidim authorizations",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+      },
+      {
+        "label": "Decidim permissions",
+        "url": "https://docs.decidim.org/en/develop/develop/permissions.html"
+      },
+      {
+        "label": "Decidim accountability",
+        "url": "https://docs.decidim.org/en/develop/admin/components/accountability.html"
+      },
+      {
+        "label": "Barayamal Toastmasters First Nations",
+        "url": "https://barayamal.com.au/toastmasters-first-nations/"
+      },
+      {
+        "label": "Toastmasters governing documents",
+        "url": "https://www.toastmasters.org/resources/governing-documents"
+      },
+      {
+        "label": "OAIC Notifiable Data Breaches",
+        "url": "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme"
+      },
+      {
+        "label": "Cyber.gov.au Essential Eight",
+        "url": "https://www.cyber.gov.au/resources-business-and-government/essential-cybersecurity/essential-eight/essential-eight-maturity-model"
+      },
+      {
+        "label": "AIATSIS ethical research",
+        "url": "https://aiatsis.gov.au/research/ethical-research"
+      }
+    ],
+    "operatingRule": "Use the v4.5 Private Implementation Control Ledger after the v4.4 decision docket. It converts owner decisions and carry-forward actions into locked implementation workstreams, dependency checks, build tasks, access controls, acceptance evidence, rollback controls, and public-safe communications.",
+    "advisoryRule": "Dean Foley / Barayamal may support implementation planning, developer notes, sample task triage, and trusted review only where the responsible owner permits it. Advisory review never replaces First Nations authority, privacy, IDS/data governance, official Toastmasters, support, payment, consent, access, launch, release lock, rollback, or closeout approvals.",
+    "safetyRule": "This v4.5 package remains public fake/sample data only. No real names, emails, phone numbers, member numbers, payments, signatures, authority evidence, consent records, support or incident details, access logs, credentials, backups, exports, official Toastmasters records, business-sensitive details, cultural material, private URLs, or live Decidim configuration belong in the public package.",
+    "decisionRule": "Recommended decision remains Hold. Keep the implementation release lock closed until every blocked release lock, access control, environment check, change-control item, acceptance test, and rollback control is privately approved. Real intake and live Decidim access remain blocked."
   }
 }

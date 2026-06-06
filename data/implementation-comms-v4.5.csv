@@ -1,0 +1,13 @@
+id,template,status,audience,safeMessage,mustNotSay,owner
+"COM-001","Public v4.5 release note","Ready","Public visitors","The public demo now includes a fake-data implementation control ledger.","Implementation or launch has been approved.","Comms lead"
+"COM-002","Owner lock request","Hold","Approval owners","Please close or carry forward your release lock privately.","Upload private evidence publicly.","Meeting chair"
+"COM-003","Technical environment request","Hold","Technical/admin custodian","Please confirm environment readiness and access proof.","Share credentials or logs publicly.","Pilot owner"
+"COM-004","Authority follow-up","Blocked","Authority chair","Authority route remains required before real intake.","Authority has approved launch.","Pilot owner"
+"COM-005","Privacy/IDS follow-up","Blocked","Privacy/IDS reviewers","Privacy and data control locks remain closed.","Fields/data controls are approved.","Pilot owner"
+"COM-006","Support follow-up","Blocked","Support owner","Support route remains required before participant-facing work.","Support details.","Pilot owner"
+"COM-007","Toastmasters boundary follow-up","Blocked","Official-route owner","Member route remains closed; guest-only route is under review.","Member numbers or official records.","Pilot owner"
+"COM-008","Barayamal track follow-up","Hold","Barayamal program operator","Barayamal-only fake-data implementation is under review.","Business-sensitive details.","Pilot owner"
+"COM-009","Dean advisory implementation request","Ready","Dean trusted reviewer","Please review task quality and boundary logic as advisory only.","Approve owner locks.","Pilot owner"
+"COM-010","Provider route request","Hold","Provider access owner","Provider-assisted setup remains conditional on access controls.","Provider has access.","Pilot owner"
+"COM-011","Public hold update","Ready","Public visitors","Real participant intake and live Decidim access remain blocked.","Pilot is open.","Comms lead"
+"COM-012","No-go/archive update","Available","Public visitors","The project can safely publish no-go/archive status without private evidence.","Private reasons or owner evidence.","Comms lead"

@@ -630,6 +630,7 @@
 <a class="btn" href="private-intake-consent-triage.html">Intake</a>
 <a class="btn" href="private-approval-pilot-gate.html">Gate</a>
 <a class="btn" href="private-decision-evidence-docket.html">Docket</a>
+<a class="btn" href="private-implementation-control-ledger.html">Ledger</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -680,6 +681,10 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Private implementation ledger playbook", path: "docs/private-implementation-control-ledger-playbook-v4.5.md", type: "markdown", description: "Run implementation control after the decision docket." },
+      { category: "Start Here", title: "Decision-to-implementation sprint plan", path: "docs/decision-to-implementation-sprint-plan-v4.5.md", type: "markdown", description: "Map carry-forward decisions to locked tasks." },
+      { category: "Start Here", title: "Release lock and access protocol", path: "docs/release-lock-and-access-control-protocol-v4.5.md", type: "markdown", description: "Release locks, access controls, and environment checks." },
+      { category: "Start Here", title: "Implementation evidence and rollback pack", path: "docs/implementation-evidence-and-rollback-pack-v4.5.md", type: "markdown", description: "Acceptance tests, change control, no-go, and rollback." },
       { category: "Start Here", title: "Private decision evidence docket playbook", path: "docs/private-decision-evidence-docket-playbook-v4.4.md", type: "markdown", description: "Run the private fake-data decision meeting." },
       { category: "Start Here", title: "Approval meeting agenda and minutes", path: "docs/approval-meeting-agenda-and-minutes-v4.4.md", type: "markdown", description: "Meeting agenda, decisions, conflicts, and audit log." },
       { category: "Start Here", title: "Evidence custody and redaction protocol", path: "docs/evidence-custody-and-redaction-protocol-v4.4.md", type: "markdown", description: "Evidence handling and public/private redaction." },
@@ -764,6 +769,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v4.5", path: "docs/public-demo-release-notes-v4.5.md", type: "markdown", description: "Private Implementation Control Ledger upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.4", path: "docs/public-demo-release-notes-v4.4.md", type: "markdown", description: "Private Decision Evidence Docket upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.3", path: "docs/public-demo-release-notes-v4.3.md", type: "markdown", description: "Private Approval & Pilot Gate Room upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.2", path: "docs/public-demo-release-notes-v4.2.md", type: "markdown", description: "Private Intake & Consent Triage upgrade summary." },
@@ -992,6 +998,21 @@
       { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
       { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
       { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Private Implementation Control Ledger", title: "Implementation ledger playbook v4.5", path: "docs/private-implementation-control-ledger-playbook-v4.5.md", type: "markdown", description: "Run implementation control after the decision docket." },
+      { category: "Private Implementation Control Ledger", title: "Decision-to-implementation sprint plan v4.5", path: "docs/decision-to-implementation-sprint-plan-v4.5.md", type: "markdown", description: "Map carry-forward decisions to locked tasks." },
+      { category: "Private Implementation Control Ledger", title: "Release lock and access protocol v4.5", path: "docs/release-lock-and-access-control-protocol-v4.5.md", type: "markdown", description: "Release locks, access controls, and environment checks." },
+      { category: "Private Implementation Control Ledger", title: "Implementation evidence and rollback v4.5", path: "docs/implementation-evidence-and-rollback-pack-v4.5.md", type: "markdown", description: "Acceptance tests, change control, no-go, and rollback." },
+      { category: "Private Implementation Control Ledger", title: "Workstreams v4.5", path: "data/implementation-workstreams-v4.5.csv", type: "csv", description: "Fourteen implementation workstreams." },
+      { category: "Private Implementation Control Ledger", title: "Release locks v4.5", path: "data/release-lock-register-v4.5.csv", type: "csv", description: "Sixteen release locks." },
+      { category: "Private Implementation Control Ledger", title: "Carry-forward map v4.5", path: "data/decision-carryover-map-v4.5.csv", type: "csv", description: "Sixteen carry-forward items." },
+      { category: "Private Implementation Control Ledger", title: "Build task ledger v4.5", path: "data/build-task-ledger-v4.5.csv", type: "csv", description: "Eighteen build tasks." },
+      { category: "Private Implementation Control Ledger", title: "Access controls v4.5", path: "data/access-provisioning-controls-v4.5.csv", type: "csv", description: "Fourteen access controls." },
+      { category: "Private Implementation Control Ledger", title: "Environment checks v4.5", path: "data/environment-readiness-checks-v4.5.csv", type: "csv", description: "Twelve environment checks." },
+      { category: "Private Implementation Control Ledger", title: "Change control v4.5", path: "data/change-control-log-v4.5.csv", type: "csv", description: "Fourteen change controls." },
+      { category: "Private Implementation Control Ledger", title: "Acceptance tests v4.5", path: "data/acceptance-evidence-tests-v4.5.csv", type: "csv", description: "Sixteen acceptance tests." },
+      { category: "Private Implementation Control Ledger", title: "Rollback controls v4.5", path: "data/rollback-and-exit-controls-v4.5.csv", type: "csv", description: "Twelve rollback controls." },
+      { category: "Private Implementation Control Ledger", title: "Implementation comms v4.5", path: "data/implementation-comms-v4.5.csv", type: "csv", description: "Twelve communications templates." },
+      { category: "Private Implementation Control Ledger", title: "Ledger package v4.5", path: "data/private-implementation-control-ledger-package-v4.5.json", type: "json", description: "Machine-readable v4.5 implementation ledger." },
       { category: "Private Decision Evidence Docket", title: "Decision docket playbook v4.4", path: "docs/private-decision-evidence-docket-playbook-v4.4.md", type: "markdown", description: "Run the private fake-data decision meeting." },
       { category: "Private Decision Evidence Docket", title: "Approval meeting agenda and minutes v4.4", path: "docs/approval-meeting-agenda-and-minutes-v4.4.md", type: "markdown", description: "Meeting agenda, decisions, conflicts, and audit log." },
       { category: "Private Decision Evidence Docket", title: "Evidence custody and redaction protocol v4.4", path: "docs/evidence-custody-and-redaction-protocol-v4.4.md", type: "markdown", description: "Evidence handling and public/private redaction." },

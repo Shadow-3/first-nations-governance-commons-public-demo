@@ -1,0 +1,13 @@
+id,control,status,owner,trigger,action,publicBoundary
+"RBK-001","Authority no-go rollback","Ready","Authority chair","Authority route declined.","Stop real intake and publish public-safe no-go status.","No private reasons."
+"RBK-002","Privacy failure rollback","Hold","Privacy reviewer","Private data captured before approval.","Delete data, document breach route, pause workflow.","No personal details."
+"RBK-003","IDS/data failure rollback","Hold","IDS/data reviewer","Control/export/delete rule fails.","Pause processing and remediate privately.","Aggregate status only."
+"RBK-004","Support incident rollback","Blocked","Support owner","Support or incident risk triggers.","Pause process and move to private support route.","No incident details."
+"RBK-005","Official record leakage rollback","Blocked","Official-route owner","Member/club/payment/education record enters Decidim.","Remove data and notify private owner route.","No official records."
+"RBK-006","Barayamal sensitive field rollback","Hold","Barayamal program operator","Business-sensitive field appears publicly.","Remove, redact, and review minimisation.","No business details."
+"RBK-007","Access overreach rollback","Hold","Technical/admin custodian","Account sees more than allowed.","Revoke access and audit privately.","No logs."
+"RBK-008","Provider access rollback","Hold","Provider access owner","Provider access exceeds scope.","Revoke provider access and record incident privately.","No provider logs."
+"RBK-009","Public comms rollback","Ready","Comms lead","Public statement overstates readiness.","Replace with corrected hold/fake-data message.","Corrected public line."
+"RBK-010","Cultural protocol rollback","Blocked","Cultural safety reviewer","Cultural material or protocol risk appears.","Stop public processing and route privately.","No cultural material."
+"RBK-011","Technical environment rollback","Hold","Technical/admin custodian","Sandbox build fails acceptance.","Archive fake-data build and return to static demo.","Status only."
+"RBK-012","Archive closeout rollback","Ready","Closeout archivist","Pilot no-go or unresolved blockers remain.","Archive private evidence index and public-safe outcome.","Status only."
