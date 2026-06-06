@@ -633,6 +633,7 @@
 <a class="btn" href="private-implementation-control-ledger.html">Ledger</a>
 <a class="btn" href="controlled-pilot-execution.html">Pilot Runbook</a>
 <a class="btn" href="pilot-rehearsal-control-room.html">Control Room</a>
+<a class="btn" href="pilot-decision-build-handoff.html">Decision Handoff</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -683,6 +684,10 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Pilot decision and build handoff playbook", path: "docs/pilot-decision-and-build-handoff-playbook-v4.8.md", type: "markdown", description: "Run the private decision and build handoff sequence." },
+      { category: "Start Here", title: "Owner vote and gate closure", path: "docs/owner-vote-and-gate-closure-v4.8.md", type: "markdown", description: "Decision rights, owner votes, and gate closure rules." },
+      { category: "Start Here", title: "Technical build handoff and hosting", path: "docs/technical-build-handoff-and-hosting-v4.8.md", type: "markdown", description: "Decidim hosting, dependencies, provider/self-build choice, and tickets." },
+      { category: "Start Here", title: "Public/private decision communications", path: "docs/public-private-decision-communications-v4.8.md", type: "markdown", description: "Allowed public lines, prohibited claims, and evidence boundaries." },
       { category: "Start Here", title: "Pilot rehearsal control room playbook", path: "docs/pilot-rehearsal-control-room-playbook-v4.7.md", type: "markdown", description: "Run the day-by-day rehearsal sequence." },
       { category: "Start Here", title: "Owner sign-off board and decision rights", path: "docs/owner-signoff-board-and-decision-rights-v4.7.md", type: "markdown", description: "Decision rights and approval boundaries." },
       { category: "Start Here", title: "Rehearsal schedule and facilitation scripts", path: "docs/rehearsal-schedule-and-facilitation-script-v4.7.md", type: "markdown", description: "Schedule, prompts, and sample-safe roster." },
@@ -780,6 +785,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v4.8", path: "docs/public-demo-release-notes-v4.8.md", type: "markdown", description: "Pilot Decision and Build Handoff Room upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.7", path: "docs/public-demo-release-notes-v4.7.md", type: "markdown", description: "Pilot Rehearsal Control Room upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.6", path: "docs/public-demo-release-notes-v4.6.md", type: "markdown", description: "Controlled Pilot Execution Pack upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.5", path: "docs/public-demo-release-notes-v4.5.md", type: "markdown", description: "Private Implementation Control Ledger upgrade summary." },
@@ -1011,6 +1017,20 @@
       { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
       { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
       { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Pilot Decision and Build Handoff", title: "Decision handoff playbook v4.8", path: "docs/pilot-decision-and-build-handoff-playbook-v4.8.md", type: "markdown", description: "Run the private decision and build handoff sequence." },
+      { category: "Pilot Decision and Build Handoff", title: "Owner vote and gate closure v4.8", path: "docs/owner-vote-and-gate-closure-v4.8.md", type: "markdown", description: "Decision rights, owner votes, and gate closure rules." },
+      { category: "Pilot Decision and Build Handoff", title: "Technical build handoff v4.8", path: "docs/technical-build-handoff-and-hosting-v4.8.md", type: "markdown", description: "Decidim hosting, dependencies, provider/self-build choice, and tickets." },
+      { category: "Pilot Decision and Build Handoff", title: "Public/private communications v4.8", path: "docs/public-private-decision-communications-v4.8.md", type: "markdown", description: "Allowed public lines, prohibited claims, and evidence boundaries." },
+      { category: "Pilot Decision and Build Handoff", title: "Decision meeting agenda v4.8", path: "data/decision-meeting-agenda-v4.8.csv", type: "csv", description: "Fourteen private decision agenda items." },
+      { category: "Pilot Decision and Build Handoff", title: "Owner vote register v4.8", path: "data/owner-vote-register-v4.8.csv", type: "csv", description: "Twenty-two owner vote records." },
+      { category: "Pilot Decision and Build Handoff", title: "Blocker closure board v4.8", path: "data/blocker-closure-board-v4.8.csv", type: "csv", description: "Twenty blocker records." },
+      { category: "Pilot Decision and Build Handoff", title: "Technical build handoff v4.8", path: "data/technical-build-handoff-v4.8.csv", type: "csv", description: "Eighteen technical handoff items." },
+      { category: "Pilot Decision and Build Handoff", title: "Provider/self-build comparison v4.8", path: "data/provider-self-build-comparison-v4.8.csv", type: "csv", description: "Fourteen build route criteria." },
+      { category: "Pilot Decision and Build Handoff", title: "Launch lane policy v4.8", path: "data/launch-lane-policy-v4.8.csv", type: "csv", description: "Twelve launch lane policy rows." },
+      { category: "Pilot Decision and Build Handoff", title: "Public/private communications v4.8", path: "data/public-private-communications-v4.8.csv", type: "csv", description: "Twelve communications controls." },
+      { category: "Pilot Decision and Build Handoff", title: "Implementation ticket backlog v4.8", path: "data/implementation-ticket-backlog-v4.8.csv", type: "csv", description: "Eighteen owner-routed build tickets." },
+      { category: "Pilot Decision and Build Handoff", title: "Evidence to decision map v4.8", path: "data/evidence-to-decision-map-v4.8.csv", type: "csv", description: "Sixteen evidence mapping records." },
+      { category: "Pilot Decision and Build Handoff", title: "Decision handoff package v4.8", path: "data/pilot-decision-build-handoff-package-v4.8.json", type: "json", description: "Machine-readable v4.8 handoff package." },
       { category: "Pilot Rehearsal Control Room", title: "Control room playbook v4.7", path: "docs/pilot-rehearsal-control-room-playbook-v4.7.md", type: "markdown", description: "Run the day-by-day rehearsal sequence." },
       { category: "Pilot Rehearsal Control Room", title: "Owner sign-off board v4.7", path: "docs/owner-signoff-board-and-decision-rights-v4.7.md", type: "markdown", description: "Decision rights and approval boundaries." },
       { category: "Pilot Rehearsal Control Room", title: "Rehearsal scripts v4.7", path: "docs/rehearsal-schedule-and-facilitation-script-v4.7.md", type: "markdown", description: "Schedule, prompts, and sample-safe roster." },

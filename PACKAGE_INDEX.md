@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v4.7  
+Version: v4.8  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -153,9 +153,30 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
 
+## v4.8 Pilot Decision and Build Handoff Additions
+
+- `pilot-decision-build-handoff.html` - public-safe decision and build handoff room for owner votes, blocker closure, Decidim build route, implementation tickets, launch lane policy, and public-safe communications.
+- `docs/pilot-decision-and-build-handoff-playbook-v4.8.md`
+- `docs/owner-vote-and-gate-closure-v4.8.md`
+- `docs/technical-build-handoff-and-hosting-v4.8.md`
+- `docs/public-private-decision-communications-v4.8.md`
+- `docs/public-demo-release-notes-v4.8.md`
+- `data/decision-meeting-agenda-v4.8.csv`
+- `data/owner-vote-register-v4.8.csv`
+- `data/blocker-closure-board-v4.8.csv`
+- `data/technical-build-handoff-v4.8.csv`
+- `data/provider-self-build-comparison-v4.8.csv`
+- `data/launch-lane-policy-v4.8.csv`
+- `data/public-private-communications-v4.8.csv`
+- `data/implementation-ticket-backlog-v4.8.csv`
+- `data/evidence-to-decision-map-v4.8.csv`
+- `data/pilot-decision-build-handoff-package-v4.8.json`
+
+
 ## v4.7 Pilot Rehearsal Control Room Additions
 
 - `pilot-rehearsal-control-room.html` - public-safe rehearsal control room for schedule, owner sign-offs, issue triage, sample-safe roster, acceptance scorecard, decision options, and handoff actions.
+- `pilot-decision-build-handoff.html` is the public-safe Pilot Decision and Build Handoff Room for owner votes, blocker closure, Decidim build route, implementation tickets, launch lane policy, and public-safe communications.
 - `docs/pilot-rehearsal-control-room-playbook-v4.7.md`
 - `docs/owner-signoff-board-and-decision-rights-v4.7.md`
 - `docs/rehearsal-schedule-and-facilitation-script-v4.7.md`

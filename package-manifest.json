@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "4.7",
+  "version": "4.8",
   "date": "2026-06-06",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use v4.7 as the current operating pack for private fake/sample rehearsals. Run the schedule, sign-off board, issue triage, sample-safe roster, acceptance scorecard, and handoff actions before any real participant intake or live Decidim access. Keep live launch blocked unless all critical owners pass privately.",
+  "recommendedDecision": "Use v4.8 to convert private fake/sample rehearsal evidence into a controlled owner decision, blocker closure plan, and Decidim build handoff. Keep real participant intake, public onboarding, official Toastmasters workflows, and live Decidim access blocked until every critical owner vote passes privately.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -413,13 +413,29 @@
     "data/acceptance-scorecard-v4.7.csv",
     "data/pilot-decision-options-v4.7.csv",
     "data/rehearsal-handoff-actions-v4.7.csv",
-    "data/pilot-rehearsal-control-room-package-v4.7.json"
+    "data/pilot-rehearsal-control-room-package-v4.7.json",
+    "pilot-decision-build-handoff.html",
+    "docs/pilot-decision-and-build-handoff-playbook-v4.8.md",
+    "docs/owner-vote-and-gate-closure-v4.8.md",
+    "docs/technical-build-handoff-and-hosting-v4.8.md",
+    "docs/public-private-decision-communications-v4.8.md",
+    "docs/public-demo-release-notes-v4.8.md",
+    "data/decision-meeting-agenda-v4.8.csv",
+    "data/owner-vote-register-v4.8.csv",
+    "data/blocker-closure-board-v4.8.csv",
+    "data/technical-build-handoff-v4.8.csv",
+    "data/provider-self-build-comparison-v4.8.csv",
+    "data/launch-lane-policy-v4.8.csv",
+    "data/public-private-communications-v4.8.csv",
+    "data/implementation-ticket-backlog-v4.8.csv",
+    "data/evidence-to-decision-map-v4.8.csv",
+    "data/pilot-decision-build-handoff-package-v4.8.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v4.7.md",
+    "releaseNotes": "docs/public-demo-release-notes-v4.8.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -719,7 +735,15 @@
       "qa-v47-deployed-pilot-rehearsal-control-room-desktop.png",
       "qa-v47-deployed-pilot-rehearsal-control-room-issues-desktop.png",
       "qa-v47-deployed-pilot-rehearsal-control-room-mobile.png",
-      "qa-v47-deployed-pilot-rehearsal-control-room-package-mobile.png"
+      "qa-v47-deployed-pilot-rehearsal-control-room-package-mobile.png",
+      "qa-v48-local-pilot-decision-build-handoff-desktop.png",
+      "qa-v48-local-pilot-decision-build-handoff-blockers-desktop.png",
+      "qa-v48-local-pilot-decision-build-handoff-mobile.png",
+      "qa-v48-local-pilot-decision-build-handoff-package-mobile.png",
+      "qa-v48-deployed-pilot-decision-build-handoff-desktop.png",
+      "qa-v48-deployed-pilot-decision-build-handoff-blockers-desktop.png",
+      "qa-v48-deployed-pilot-decision-build-handoff-mobile.png",
+      "qa-v48-deployed-pilot-decision-build-handoff-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -1810,6 +1834,24 @@
       "data/pilot-decision-options-v4.7.csv",
       "data/rehearsal-handoff-actions-v4.7.csv",
       "data/pilot-rehearsal-control-room-package-v4.7.json"
+    ],
+    "pilotDecisionBuildHandoff": [
+      "pilot-decision-build-handoff.html",
+      "docs/pilot-decision-and-build-handoff-playbook-v4.8.md",
+      "docs/owner-vote-and-gate-closure-v4.8.md",
+      "docs/technical-build-handoff-and-hosting-v4.8.md",
+      "docs/public-private-decision-communications-v4.8.md",
+      "docs/public-demo-release-notes-v4.8.md",
+      "data/decision-meeting-agenda-v4.8.csv",
+      "data/owner-vote-register-v4.8.csv",
+      "data/blocker-closure-board-v4.8.csv",
+      "data/technical-build-handoff-v4.8.csv",
+      "data/provider-self-build-comparison-v4.8.csv",
+      "data/launch-lane-policy-v4.8.csv",
+      "data/public-private-communications-v4.8.csv",
+      "data/implementation-ticket-backlog-v4.8.csv",
+      "data/evidence-to-decision-map-v4.8.csv",
+      "data/pilot-decision-build-handoff-package-v4.8.json"
     ]
   },
   "safetyRules": [
@@ -1904,7 +1946,12 @@
     "Decision rights stay explicit: Dean Foley / Barayamal can advise and improve the build path, Barayamal and First Nations Toastmasters owners can accept their controlled sample workflows, and only the relevant authority, privacy, IDS/data, support, official-route, access, rollback, and communications owners can close live-intake gates.",
     "Run rehearsals with fake/sample records only. Every session must begin with a boundary readout, confirm no real personal/member/business-sensitive records are used, capture issues privately, and end with pass, hold, repeat, or stop.",
     "All issues must be routed to an owner, severity, decision right, and next action. Critical issues stop the affected lane. High issues block real intake until closed or explicitly accepted by the right owner.",
-    "v4.7 still does not approve live launch. It only prepares the private rehearsal evidence needed to choose hold, repeat rehearsal, provider-assisted build, limited private pilot, no-go, or archive."
+    "v4.7 still does not approve live launch. It only prepares the private rehearsal evidence needed to choose hold, repeat rehearsal, provider-assisted build, limited private pilot, no-go, or archive.",
+    "Use v4.8 after the v4.7 rehearsal control room to turn rehearsal evidence into a private owner decision, blocker closure plan, Decidim build handoff, implementation-ticket backlog, and public-safe status line.",
+    "No single reviewer, developer, founder, provider, or comms owner can approve live intake. Each critical gate needs the named owner vote and evidence before any limited private pilot or live Decidim access can proceed.",
+    "The static public demo is not a real Decidim app. Because the local self-build environment still has blocked dependencies, v4.8 keeps provider-assisted sandbox as the practical route unless Ruby, PostgreSQL, image tooling, email safety, backups, restore, delete, monitoring, and access controls are proven privately.",
+    "Public pages may show fake/sample status, counts, route options, and aggregate learning only. They must not publish owner evidence, participant details, support cases, access logs, credentials, official Toastmasters records, cultural material, or business-sensitive data.",
+    "v4.8 does not approve launch. It only creates the decision and handoff machinery needed to choose hold, repeat rehearsal, provider-assisted build, limited private pilot, no-go, or archive."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -3980,5 +4027,104 @@
     "rehearsalRule": "Run rehearsals with fake/sample records only. Every session must begin with a boundary readout, confirm no real personal/member/business-sensitive records are used, capture issues privately, and end with pass, hold, repeat, or stop.",
     "issueRule": "All issues must be routed to an owner, severity, decision right, and next action. Critical issues stop the affected lane. High issues block real intake until closed or explicitly accepted by the right owner.",
     "launchRule": "v4.7 still does not approve live launch. It only prepares the private rehearsal evidence needed to choose hold, repeat rehearsal, provider-assisted build, limited private pilot, no-go, or archive."
+  },
+  "pilotDecisionBuildHandoff": {
+    "entrypoint": "pilot-decision-build-handoff.html",
+    "playbook": "docs/pilot-decision-and-build-handoff-playbook-v4.8.md",
+    "ownerDoc": "docs/owner-vote-and-gate-closure-v4.8.md",
+    "techDoc": "docs/technical-build-handoff-and-hosting-v4.8.md",
+    "commsDoc": "docs/public-private-decision-communications-v4.8.md",
+    "releaseNotes": "docs/public-demo-release-notes-v4.8.md",
+    "dataFiles": [
+      "data/decision-meeting-agenda-v4.8.csv",
+      "data/owner-vote-register-v4.8.csv",
+      "data/blocker-closure-board-v4.8.csv",
+      "data/technical-build-handoff-v4.8.csv",
+      "data/provider-self-build-comparison-v4.8.csv",
+      "data/launch-lane-policy-v4.8.csv",
+      "data/public-private-communications-v4.8.csv",
+      "data/implementation-ticket-backlog-v4.8.csv",
+      "data/evidence-to-decision-map-v4.8.csv",
+      "data/pilot-decision-build-handoff-package-v4.8.json"
+    ],
+    "primaryOrganisationTest": "Barayamal",
+    "controlledMemberTester": "First Nations Toastmasters",
+    "trustedReviewer": "Dean Foley / Barayamal",
+    "counts": {
+      "decisionAgendaItems": 14,
+      "ownerVotes": 22,
+      "blockerItems": 20,
+      "technicalHandoffItems": 18,
+      "providerCriteria": 14,
+      "launchLaneRules": 12,
+      "communicationsItems": 12,
+      "implementationTickets": 18,
+      "evidenceMapItems": 16,
+      "handoffRecords": 146,
+      "blockedOwnerVotes": 10,
+      "openCriticalBlockers": 6,
+      "blockedTechnicalItems": 7,
+      "readyTickets": 3,
+      "blockedTickets": 8
+    },
+    "sourceAnchors": [
+      {
+        "label": "Decidim first steps",
+        "url": "https://decidim.org/first-steps/"
+      },
+      {
+        "label": "Decidim GitHub example applications",
+        "url": "https://github.com/decidim/decidim#example-applications"
+      },
+      {
+        "label": "Decidim install overview",
+        "url": "https://docs.decidim.org/en/develop/install/index.html"
+      },
+      {
+        "label": "Decidim deployment docs",
+        "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+      },
+      {
+        "label": "Decidim authorizations",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+      },
+      {
+        "label": "Barayamal Toastmasters First Nations",
+        "url": "https://barayamal.com.au/toastmasters-first-nations/"
+      },
+      {
+        "label": "Toastmasters governing documents",
+        "url": "https://www.toastmasters.org/resources/governing-documents"
+      },
+      {
+        "label": "OAIC Notifiable Data Breaches",
+        "url": "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme"
+      },
+      {
+        "label": "AIATSIS ethical research",
+        "url": "https://aiatsis.gov.au/research/ethical-research"
+      },
+      {
+        "label": "v4.6 Controlled Pilot Execution Pack",
+        "url": "data/controlled-pilot-execution-pack-v4.6.json"
+      },
+      {
+        "label": "v4.7 Pilot Rehearsal Control Room",
+        "url": "data/pilot-rehearsal-control-room-package-v4.7.json"
+      },
+      {
+        "label": "Decidim deployment docs",
+        "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+      },
+      {
+        "label": "Decidim install checklist",
+        "url": "https://docs.decidim.org/en/develop/install/checklist.html"
+      }
+    ],
+    "operatingRule": "Use v4.8 after the v4.7 rehearsal control room to turn rehearsal evidence into a private owner decision, blocker closure plan, Decidim build handoff, implementation-ticket backlog, and public-safe status line.",
+    "decisionRule": "No single reviewer, developer, founder, provider, or comms owner can approve live intake. Each critical gate needs the named owner vote and evidence before any limited private pilot or live Decidim access can proceed.",
+    "buildRule": "The static public demo is not a real Decidim app. Because the local self-build environment still has blocked dependencies, v4.8 keeps provider-assisted sandbox as the practical route unless Ruby, PostgreSQL, image tooling, email safety, backups, restore, delete, monitoring, and access controls are proven privately.",
+    "publicRule": "Public pages may show fake/sample status, counts, route options, and aggregate learning only. They must not publish owner evidence, participant details, support cases, access logs, credentials, official Toastmasters records, cultural material, or business-sensitive data.",
+    "launchRule": "v4.8 does not approve launch. It only creates the decision and handoff machinery needed to choose hold, repeat rehearsal, provider-assisted build, limited private pilot, no-go, or archive."
   }
 }

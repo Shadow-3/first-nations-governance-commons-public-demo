@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v4.7
+Current package version: v4.8
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -70,6 +70,7 @@ Open `private-decision-evidence-docket.html` to run the private fake-data decisi
 Open `private-implementation-control-ledger.html` to lock carry-forward decisions into implementation workstreams, release locks, access controls, acceptance tests, rollback controls, and public-safe comms.
 Open `controlled-pilot-execution.html` to run the Barayamal and First Nations Toastmasters controlled fake/sample tests, Dean advisory review, and gated Decidim build backlog.
 Open `pilot-rehearsal-control-room.html` to run the v4.7 rehearsal schedule, owner sign-off board, issue triage, sample-safe roster, acceptance scorecard, decision options, and handoff actions.
+Open `pilot-decision-build-handoff.html` to convert rehearsal evidence into owner votes, blocker closure, Decidim build route, implementation tickets, launch lane policy, and public-safe communications.
 
 The demo shows:
 
@@ -101,6 +102,22 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v4.8.md`
+- `docs/pilot-decision-and-build-handoff-playbook-v4.8.md`
+- `docs/owner-vote-and-gate-closure-v4.8.md`
+- `docs/technical-build-handoff-and-hosting-v4.8.md`
+- `docs/public-private-decision-communications-v4.8.md`
+- `data/decision-meeting-agenda-v4.8.csv`
+- `data/owner-vote-register-v4.8.csv`
+- `data/blocker-closure-board-v4.8.csv`
+- `data/technical-build-handoff-v4.8.csv`
+- `data/provider-self-build-comparison-v4.8.csv`
+- `data/launch-lane-policy-v4.8.csv`
+- `data/public-private-communications-v4.8.csv`
+- `data/implementation-ticket-backlog-v4.8.csv`
+- `data/evidence-to-decision-map-v4.8.csv`
+- `data/pilot-decision-build-handoff-package-v4.8.json`
+
 - `docs/public-demo-release-notes-v4.7.md`
 - `docs/pilot-rehearsal-control-room-playbook-v4.7.md`
 - `docs/owner-signoff-board-and-decision-rights-v4.7.md`
@@ -1010,6 +1027,17 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v4.8 Pilot Decision and Build Handoff Upgrade
+
+The v4.8 package converts rehearsal control into a decision and technical handoff layer:
+
+- Fourteen private decision agenda items and twenty-two owner vote records.
+- Twenty blocker closure records, eighteen technical build handoff items, fourteen provider/self-build criteria, twelve launch lane rules, twelve communications controls, eighteen implementation tickets, and sixteen evidence-to-decision records.
+- A stronger launch boundary: provider-assisted sandbox or self-build preparation can be considered, but real participant intake, public onboarding, official Toastmasters workflows, and live Decidim access remain blocked until every critical owner vote passes privately.
+
+Use this version as the default public demo and private operating pack for controlled decision and build handoff preparation.
+
 
 ## v4.7 Pilot Rehearsal Control Room Upgrade
 

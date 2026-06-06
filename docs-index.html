@@ -356,6 +356,7 @@
 <a class="btn" href="private-implementation-control-ledger.html">Ledger</a>
 <a class="btn" href="controlled-pilot-execution.html">Pilot Runbook</a>
 <a class="btn" href="pilot-rehearsal-control-room.html">Control Room</a>
+<a class="btn" href="pilot-decision-build-handoff.html">Decision Handoff</a>
     <a class="btn" href="index.html">Open Demo</a>
     <div class="label">Public demo - fake data only</div>
   </header>
@@ -513,6 +514,10 @@
       <a href="#rehearsal">
         <strong>Control Room</strong>
         <span>Rehearsal schedule, sign-offs, issues, scorecard, and handoff actions.</span>
+      </a>
+      <a href="#decision-handoff">
+        <strong>Decision Handoff</strong>
+        <span>Owner votes, blocker closure, build route, tickets, and public-safe communications.</span>
       </a>
       <a href="#governance">
         <strong>Governance/Data</strong>
@@ -782,6 +787,13 @@
         </div>
         <div class="doc-row">
           <div>
+            <strong>Pilot Decision and Build Handoff Room</strong>
+            <span>Convert the v4.7 rehearsal into owner votes, blocker closure, Decidim build route, implementation tickets, and public-safe communications.</span>
+          </div>
+          <a class="btn primary" href="pilot-decision-build-handoff.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
             <strong>Public demo prototype</strong>
             <span>Sample Decidim-style participatory process.</span>
           </div>
@@ -811,9 +823,9 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v4.7 Pilot Rehearsal Control Room upgrade.</span>
+            <span>What changed in the v4.8 Pilot Decision and Build Handoff upgrade.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v4.7.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v4.8.md">Open</a>
         </div>
       </div>
     </section>
@@ -1197,6 +1209,32 @@
         <div class="doc-row"><div><strong>Control Tower package JSON</strong><span>Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays.</span></div><a class="btn" href="data/pilot-control-tower-package-v3.3.json">Open</a></div>
         <div class="doc-row"><div><strong>Release notes v3.3</strong><span>What changed in the Pilot Control Tower upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v3.3.md">Open</a></div>
         <div class="doc-row"><div><strong>Evidence Vault & Advisory Review</strong><span>Dean advisory review, private evidence vault, access rules, authority meeting steps, and decision gates.</span></div><a class="btn primary" href="private-pilot-evidence-vault.html">Open</a></div>
+      </div>
+    </section>
+    <section id="decision-handoff">
+      <div class="section-head">
+        <div>
+          <h2>Pilot Decision and Build Handoff Room</h2>
+          <p>Use these files to turn private fake/sample rehearsal evidence into owner votes, blocker closure, Decidim build handoff, implementation tickets, and public-safe communications.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Pilot Decision and Build Handoff Room</strong><span>Interactive owner vote, blocker closure, technical handoff, ticket, lane, and comms board.</span></div><a class="btn primary" href="pilot-decision-build-handoff.html">Open</a></div>
+        <div class="doc-row"><div><strong>Decision handoff playbook v4.8</strong><span>Run the private decision and build handoff sequence.</span></div><a class="btn" href="docs/pilot-decision-and-build-handoff-playbook-v4.8.md">Open</a></div>
+        <div class="doc-row"><div><strong>Owner vote and gate closure v4.8</strong><span>Decision rights, owner votes, and gate closure rules.</span></div><a class="btn" href="docs/owner-vote-and-gate-closure-v4.8.md">Open</a></div>
+        <div class="doc-row"><div><strong>Technical build handoff v4.8</strong><span>Decidim hosting, dependencies, provider/self-build choice, and tickets.</span></div><a class="btn" href="docs/technical-build-handoff-and-hosting-v4.8.md">Open</a></div>
+        <div class="doc-row"><div><strong>Public/private communications v4.8</strong><span>Allowed public lines, prohibited claims, and evidence boundaries.</span></div><a class="btn" href="docs/public-private-decision-communications-v4.8.md">Open</a></div>
+        <div class="doc-row"><div><strong>Decision meeting agenda CSV</strong><span>Fourteen private decision agenda items.</span></div><a class="btn" href="data/decision-meeting-agenda-v4.8.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Owner vote register CSV</strong><span>Twenty-two owner vote records.</span></div><a class="btn" href="data/owner-vote-register-v4.8.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Blocker closure board CSV</strong><span>Twenty blocker records.</span></div><a class="btn" href="data/blocker-closure-board-v4.8.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Technical build handoff CSV</strong><span>Eighteen technical handoff items.</span></div><a class="btn" href="data/technical-build-handoff-v4.8.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Provider/self-build comparison CSV</strong><span>Fourteen build route criteria.</span></div><a class="btn" href="data/provider-self-build-comparison-v4.8.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Launch lane policy CSV</strong><span>Twelve launch lane policy rows.</span></div><a class="btn" href="data/launch-lane-policy-v4.8.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Public/private comms CSV</strong><span>Twelve communications controls.</span></div><a class="btn" href="data/public-private-communications-v4.8.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Implementation ticket backlog CSV</strong><span>Eighteen owner-routed build tickets.</span></div><a class="btn" href="data/implementation-ticket-backlog-v4.8.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Evidence to decision map CSV</strong><span>Sixteen evidence mapping records.</span></div><a class="btn" href="data/evidence-to-decision-map-v4.8.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Decision handoff package JSON</strong><span>Machine-readable v4.8 package.</span></div><a class="btn" href="data/pilot-decision-build-handoff-package-v4.8.json">Open</a></div>
+        <div class="doc-row"><div><strong>Release notes v4.8</strong><span>What changed in the decision/build handoff upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v4.8.md">Open</a></div>
       </div>
     </section>
     <section id="rehearsal">
@@ -1664,7 +1702,7 @@
     </section>
 
     <footer>
-      Version v4.7. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v4.8. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
   <script>
