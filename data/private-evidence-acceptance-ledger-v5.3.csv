@@ -1,0 +1,17 @@
+id,linkedRecord,owner,evidenceType,acceptance,custodyRef,publicReplacement,gap,retestRequired
+EVA-001,P0R-001,Authority chair,Private authority proof,Missing,CUST-PRIVATE-001,Aggregate authority status only,Named chair and authority minute absent,Yes
+EVA-002,P0R-002,Privacy reviewer,Consent and notice screenshots,Hold,CUST-PRIVATE-002,Aggregate privacy status only,Withdrawal wording incomplete,Yes
+EVA-003,P0R-003,Privacy reviewer,Outbound email disabled proof,Accepted with hold,CUST-PRIVATE-003,No outbound email active,Proof accepted but final copy not approved,Yes
+EVA-004,P0R-004,IDS/data reviewer,Export/delete/retention drill,Hold,CUST-PRIVATE-004,Aggregate data-control status only,Deletion proof missing,Yes
+EVA-005,P0R-005,Support owner,Support pause route proof,Missing,CUST-PRIVATE-005,Support not live,Complaint escalation evidence absent,Yes
+EVA-006,P0R-006,Official-route owner,Official Toastmasters boundary proof,Rejected,CUST-PRIVATE-006,Official workflow not approved,Boundary wording implies official process,Yes
+EVA-007,P0R-007,Security reviewer,Credential/log exposure check,Accepted,CUST-PRIVATE-007,No credentials published,None for fake/sample run,No
+EVA-008,P0R-008,IDS/data reviewer,Evidence redaction and custody ledger,Hold,CUST-PRIVATE-008,Private evidence withheld,Custody index incomplete,Yes
+EVA-009,P0R-009,Barayamal custodian,Business-sensitive field block proof,Accepted,CUST-PRIVATE-009,Controlled Barayamal sample only,None for fake/sample run,No
+EVA-010,P0R-010,Training owner,Guest/member-boundary review,Hold,CUST-PRIVATE-010,Fake guest sample only,Support copy too close to member service,Yes
+EVA-011,P0R-011,Provider access owner,Provider real-record rejection proof,Accepted with repeat,CUST-PRIVATE-011,No provider real-record access,Repeat drill required after RFQ wording update,Yes
+EVA-012,BAR-SAMPLE,Barayamal custodian,Controlled organisation sample proof,Accepted,CUST-PRIVATE-012,Aggregate Barayamal sample status only,None for accepted fake records,No
+EVA-013,FNT-SAMPLE,Training owner,Controlled guest/member-boundary sample proof,Hold,CUST-PRIVATE-013,Aggregate First Nations Toastmasters sample status only,Three sample copy issues remain,Yes
+EVA-014,PROVIDER-BOUNDARY,Provider access owner,Provider boundary response log,Hold,CUST-PRIVATE-014,Aggregate provider boundary status only,RFQ rejection wording needs approval,Yes
+EVA-015,PUBLIC-SUMMARY,Comms lead,Approved public lines,Accepted,CUST-PRIVATE-015,Approved public summary lines,None for approved lines,No
+EVA-016,FINAL-MINUTES,Meeting chair,Private final decision minute,Missing,CUST-PRIVATE-016,Final decision status only,No final private minute captured,Yes

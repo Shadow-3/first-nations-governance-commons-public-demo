@@ -1,0 +1,17 @@
+id,priority,owner,action,status,dueWindow,blocks
+NXT-001,P0,Authority chair,Name private authority chair and alternate,Open,Before repeat run,Limited private pilot
+NXT-002,P0,Privacy reviewer,"Rewrite consent, notice, withdrawal, and outbound email wording",Open,Before repeat run,Real participant intake
+NXT-003,P0,IDS/data reviewer,"Repeat export, delete, retention, and evidence custody drill",Open,Before repeat run,Data-rights approval
+NXT-004,P0,Support owner,"Run complaint, pause, escalation, and closeout drill",Open,Before repeat run,Support route acceptance
+NXT-005,P0,Official-route owner,Confirm official Toastmasters boundary remains out of scope,Open,Before repeat run,Official workflow
+NXT-006,P0,Provider access owner,Approve fake/sample-only RFQ language and retest real-record rejection,Open,Before provider contact,Provider handoff
+NXT-007,P1,Training owner,Rewrite First Nations Toastmasters guest-support copy,Open,Before repeat sample,Sample acceptance
+NXT-008,P1,Security reviewer,Attach backup restore and access-expiry proof to private ledger,Open,Before final minute,Live Decidim access
+NXT-009,P1,Meeting chair,Complete private final decision minute,Open,Before public status refresh,Final decision record
+NXT-010,P1,Barayamal custodian,Revise two held Barayamal sample records,Open,Before sample acceptance,Barayamal sample acceptance
+NXT-011,P2,Comms lead,Publish only approved preparation-status lines,Ready,After v5.3 release,Public status
+NXT-012,P2,Documentation owner,Add v5.3 docs to reviewer pack,Ready,After v5.3 release,Reviewer handoff
+NXT-013,P2,Meeting chair,Schedule repeat P0 stress lab,Ready,After owner roster update,Repeat run
+NXT-014,P2,Dean Foley / Barayamal,Review v5.3 board as advisory/trusted reviewer,Ready,Before repeat run,Advisory note
+NXT-015,P2,Provider access owner,Prepare provider no-real-record script,Open,Before provider conversation,Provider boundary
+NXT-016,P2,All owners,Keep no-go/archive as explicit option,Ready,Every decision meeting,Decision integrity

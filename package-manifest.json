@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "5.2",
+  "version": "5.3",
   "date": "2026-06-06",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use v5.2 to run the first private fake/sample stress-lab session. Do not treat the run pack as evidence that P0 controls have passed; it prepares the private run, owner roster, evidence custody, sample tests, provider boundaries, public lines, and go/no-go register.",
+  "recommendedDecision": "Use v5.3 as the post-run decision board for controlled fake/sample outcomes. Proceed to limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, and live Decidim access remain blocked until every P0 outcome passes, every P0 evidence item is accepted, every P0 issue is closed, and every required owner signs off privately.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -496,13 +496,29 @@
     "data/provider-boundary-test-register-v5.2.csv",
     "data/communications-approval-register-v5.2.csv",
     "data/go-no-go-decision-register-v5.2.csv",
-    "data/private-stress-lab-run-package-v5.2.json"
+    "data/private-stress-lab-run-package-v5.2.json",
+    "private-run-results-decision-board.html",
+    "docs/private-run-results-decision-board-v5.3.md",
+    "docs/p0-outcome-and-repeat-run-protocol-v5.3.md",
+    "docs/private-evidence-acceptance-ledger-v5.3.md",
+    "docs/public-summary-and-next-action-pack-v5.3.md",
+    "docs/public-demo-release-notes-v5.3.md",
+    "data/p0-run-outcome-register-v5.3.csv",
+    "data/private-evidence-acceptance-ledger-v5.3.csv",
+    "data/private-run-issue-register-v5.3.csv",
+    "data/controlled-sample-result-register-v5.3.csv",
+    "data/provider-boundary-result-register-v5.3.csv",
+    "data/owner-signoff-register-v5.3.csv",
+    "data/final-decision-register-v5.3.csv",
+    "data/public-summary-line-register-v5.3.csv",
+    "data/private-run-next-action-register-v5.3.csv",
+    "data/private-run-results-decision-package-v5.3.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v5.2.md",
+    "releaseNotes": "docs/public-demo-release-notes-v5.3.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -842,7 +858,15 @@
       "qa-v52-deployed-private-stress-lab-run-pack-desktop.png",
       "qa-v52-deployed-private-stress-lab-run-pack-p0-desktop.png",
       "qa-v52-deployed-private-stress-lab-run-pack-mobile.png",
-      "qa-v52-deployed-private-stress-lab-run-package-mobile.png"
+      "qa-v52-deployed-private-stress-lab-run-package-mobile.png",
+      "qa-v53-local-private-run-results-decision-board-desktop.png",
+      "qa-v53-local-private-run-results-decision-board-repeat-filter.png",
+      "qa-v53-local-private-run-results-decision-board-mobile.png",
+      "qa-v53-local-private-run-results-package-mobile.png",
+      "qa-v53-deployed-private-run-results-decision-board-desktop.png",
+      "qa-v53-deployed-private-run-results-decision-board-repeat-filter.png",
+      "qa-v53-deployed-private-run-results-decision-board-mobile.png",
+      "qa-v53-deployed-private-run-results-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -2026,6 +2050,24 @@
       "data/communications-approval-register-v5.2.csv",
       "data/go-no-go-decision-register-v5.2.csv",
       "data/private-stress-lab-run-package-v5.2.json"
+    ],
+    "privateRunResultsDecisionBoard": [
+      "private-run-results-decision-board.html",
+      "docs/private-run-results-decision-board-v5.3.md",
+      "docs/p0-outcome-and-repeat-run-protocol-v5.3.md",
+      "docs/private-evidence-acceptance-ledger-v5.3.md",
+      "docs/public-summary-and-next-action-pack-v5.3.md",
+      "docs/public-demo-release-notes-v5.3.md",
+      "data/p0-run-outcome-register-v5.3.csv",
+      "data/private-evidence-acceptance-ledger-v5.3.csv",
+      "data/private-run-issue-register-v5.3.csv",
+      "data/controlled-sample-result-register-v5.3.csv",
+      "data/provider-boundary-result-register-v5.3.csv",
+      "data/owner-signoff-register-v5.3.csv",
+      "data/final-decision-register-v5.3.csv",
+      "data/public-summary-line-register-v5.3.csv",
+      "data/private-run-next-action-register-v5.3.csv",
+      "data/private-run-results-decision-package-v5.3.json"
     ]
   },
   "safetyRules": [
@@ -2143,7 +2185,11 @@
     "Use v5.2 to run the first private fake/sample stress-lab session for Barayamal and First Nations Toastmasters without touching real intake, official Toastmasters records, provider real-record access, outbound email, or live Decidim access.",
     "Private run evidence must stay outside the public package; public pages may show only fake/sample status, aggregate counts, approved public-safe lines, and learning summaries.",
     "Dean Foley / Barayamal may advise, build, and review, but cannot replace owner approval for authority, privacy, IDS/data governance, official Toastmasters boundary, support, access, security, provider scope, rollback, communications, or launch.",
-    "No limited private pilot or provider handoff can proceed until every P0 stress run has a private owner decision, evidence custody record, rollback route, and public-safe status line."
+    "No limited private pilot or provider handoff can proceed until every P0 stress run has a private owner decision, evidence custody record, rollback route, and public-safe status line.",
+    "Use v5.3 after a controlled fake/sample private run to record P0 outcomes, accepted evidence status, issues, owner signoffs, repeat actions, and final proceed/repeat/no-go decisions without publishing private evidence.",
+    "Private evidence is never published; the public package may show only fake/sample acceptance status, custody placeholders, issue counts, approved public lines, and next actions.",
+    "Any P0 Hold, Repeat required, No-go, Missing evidence, Rejected evidence, or Open P0 issue blocks limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, and live Decidim access.",
+    "Proceed to any limited private pilot remains blocked until every P0 outcome is Pass, every P0 evidence item is Accepted, every P0 issue is Closed, and required owners sign off privately."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -4758,5 +4804,129 @@
     "evidenceRule": "Private run evidence must stay outside the public package; public pages may show only fake/sample status, aggregate counts, approved public-safe lines, and learning summaries.",
     "authorityRule": "Dean Foley / Barayamal may advise, build, and review, but cannot replace owner approval for authority, privacy, IDS/data governance, official Toastmasters boundary, support, access, security, provider scope, rollback, communications, or launch.",
     "decisionRule": "No limited private pilot or provider handoff can proceed until every P0 stress run has a private owner decision, evidence custody record, rollback route, and public-safe status line."
+  },
+  "privateRunResultsDecisionBoard": {
+    "entrypoint": "private-run-results-decision-board.html",
+    "boardDoc": "docs/private-run-results-decision-board-v5.3.md",
+    "repeatProtocolDoc": "docs/p0-outcome-and-repeat-run-protocol-v5.3.md",
+    "evidenceLedgerDoc": "docs/private-evidence-acceptance-ledger-v5.3.md",
+    "publicSummaryDoc": "docs/public-summary-and-next-action-pack-v5.3.md",
+    "releaseNotes": "docs/public-demo-release-notes-v5.3.md",
+    "dataFiles": [
+      "data/p0-run-outcome-register-v5.3.csv",
+      "data/private-evidence-acceptance-ledger-v5.3.csv",
+      "data/private-run-issue-register-v5.3.csv",
+      "data/controlled-sample-result-register-v5.3.csv",
+      "data/provider-boundary-result-register-v5.3.csv",
+      "data/owner-signoff-register-v5.3.csv",
+      "data/final-decision-register-v5.3.csv",
+      "data/public-summary-line-register-v5.3.csv",
+      "data/private-run-next-action-register-v5.3.csv",
+      "data/private-run-results-decision-package-v5.3.json"
+    ],
+    "primaryOrganisationTest": "Barayamal",
+    "controlledMemberTester": "First Nations Toastmasters",
+    "trustedReviewer": "Dean Foley / Barayamal",
+    "counts": {
+      "p0Outcomes": 11,
+      "p0Passed": 2,
+      "p0Held": 5,
+      "p0RepeatRequired": 3,
+      "p0NoGo": 1,
+      "evidenceAcceptances": 16,
+      "evidenceAccepted": 4,
+      "evidenceMissingOrRejected": 4,
+      "issueRecords": 18,
+      "p0OpenIssues": 8,
+      "sampleResults": 28,
+      "barayamalResults": 14,
+      "toastmastersResults": 14,
+      "providerResults": 10,
+      "ownerSignoffs": 12,
+      "acceptedOwnerSignoffs": 3,
+      "finalDecisions": 8,
+      "blockedFinalDecisions": 3,
+      "publicSummaryLines": 10,
+      "nextActions": 16,
+      "totalDecisionRecords": 129
+    },
+    "sourceAnchors": [
+      {
+        "label": "Decidim first steps",
+        "url": "https://decidim.org/first-steps/"
+      },
+      {
+        "label": "Decidim GitHub example applications",
+        "url": "https://github.com/decidim/decidim#example-applications"
+      },
+      {
+        "label": "Decidim install overview",
+        "url": "https://docs.decidim.org/en/develop/install/index.html"
+      },
+      {
+        "label": "Decidim deployment docs",
+        "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+      },
+      {
+        "label": "Decidim authorizations",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+      },
+      {
+        "label": "Barayamal Toastmasters First Nations",
+        "url": "https://barayamal.com.au/toastmasters-first-nations/"
+      },
+      {
+        "label": "Toastmasters governing documents",
+        "url": "https://www.toastmasters.org/resources/governing-documents"
+      },
+      {
+        "label": "OAIC Notifiable Data Breaches",
+        "url": "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme"
+      },
+      {
+        "label": "AIATSIS ethical research",
+        "url": "https://aiatsis.gov.au/research/ethical-research"
+      },
+      {
+        "label": "v4.6 Controlled Pilot Execution Pack",
+        "url": "data/controlled-pilot-execution-pack-v4.6.json"
+      },
+      {
+        "label": "v4.7 Pilot Rehearsal Control Room",
+        "url": "data/pilot-rehearsal-control-room-package-v4.7.json"
+      },
+      {
+        "label": "Decidim deployment docs",
+        "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+      },
+      {
+        "label": "Decidim install checklist",
+        "url": "https://docs.decidim.org/en/develop/install/checklist.html"
+      },
+      {
+        "label": "v4.8 Pilot Decision and Build Handoff Room",
+        "url": "data/pilot-decision-build-handoff-package-v4.8.json"
+      },
+      {
+        "label": "v4.9 Private Owner Decision Meeting Pack",
+        "url": "data/private-owner-decision-meeting-package-v4.9.json"
+      },
+      {
+        "label": "v5.0 Private Decision Execution Control Pack",
+        "url": "data/private-decision-execution-control-package-v5.0.json"
+      },
+      {
+        "label": "v5.1 Private Evidence Stress Test Lab Pack",
+        "url": "data/private-evidence-stress-test-package-v5.1.json"
+      },
+      {
+        "label": "v5.2 Private Stress Lab Run Pack",
+        "url": "data/private-stress-lab-run-package-v5.2.json"
+      }
+    ],
+    "resultsRule": "Use v5.3 after a controlled fake/sample private run to record P0 outcomes, accepted evidence status, issues, owner signoffs, repeat actions, and final proceed/repeat/no-go decisions without publishing private evidence.",
+    "evidenceAcceptanceRule": "Private evidence is never published; the public package may show only fake/sample acceptance status, custody placeholders, issue counts, approved public lines, and next actions.",
+    "defectRule": "Any P0 Hold, Repeat required, No-go, Missing evidence, Rejected evidence, or Open P0 issue blocks limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, and live Decidim access.",
+    "finalGateRule": "Proceed to any limited private pilot remains blocked until every P0 outcome is Pass, every P0 evidence item is Accepted, every P0 issue is Closed, and required owners sign off privately."
   }
 }

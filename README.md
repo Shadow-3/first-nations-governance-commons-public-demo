@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v5.2
+Current package version: v5.3
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -75,6 +75,7 @@ Open `private-owner-decision-meeting.html` to run the v4.9 private owner meeting
 Open `private-decision-execution-control.html` to convert the private owner meeting into controlled fake/sample execution with evidence gates, owner actions, provider/build activation, acceptance tests, rollback triggers, custody, public communications, and next review triggers.
 Open `private-evidence-stress-test-lab.html` to stress-test the v5.0 execution controls with fake/sample failure drills, owner thresholds, red-team checks, provider failure drills, rollback rehearsal, public wording stress, Decidim hardening, and evidence traceability.
 Open `private-stress-lab-run-pack.html` to run the first private fake/sample stress-lab session with owner roster, P0 run register, evidence custody, controlled samples, provider boundaries, public-safe comms, and go/no-go records.
+Open `private-run-results-decision-board.html` after the controlled fake/sample run to record outcomes, evidence acceptance, issues, owner signoffs, public lines, final decisions, and next actions.
 
 The demo shows:
 
@@ -106,6 +107,22 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v5.3.md`
+- `docs/private-run-results-decision-board-v5.3.md`
+- `docs/p0-outcome-and-repeat-run-protocol-v5.3.md`
+- `docs/private-evidence-acceptance-ledger-v5.3.md`
+- `docs/public-summary-and-next-action-pack-v5.3.md`
+- `data/p0-run-outcome-register-v5.3.csv`
+- `data/private-evidence-acceptance-ledger-v5.3.csv`
+- `data/private-run-issue-register-v5.3.csv`
+- `data/controlled-sample-result-register-v5.3.csv`
+- `data/provider-boundary-result-register-v5.3.csv`
+- `data/owner-signoff-register-v5.3.csv`
+- `data/final-decision-register-v5.3.csv`
+- `data/public-summary-line-register-v5.3.csv`
+- `data/private-run-next-action-register-v5.3.csv`
+- `data/private-run-results-decision-package-v5.3.json`
+
 - `docs/public-demo-release-notes-v5.2.md`
 - `docs/private-stress-lab-session-plan-v5.2.md`
 - `docs/owner-roster-and-authority-map-v5.2.md`
@@ -1098,6 +1115,17 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v5.3 Private Run Results Decision Board Upgrade
+
+The v5.3 package adds the missing post-run decision layer:
+
+- Eleven P0 outcome records, sixteen evidence acceptance records, eighteen issue records, twenty-eight controlled sample results, ten provider-boundary results, twelve owner signoffs, eight final decisions, ten public summary lines, sixteen next actions, and one hundred and twenty-nine total decision records.
+- A stricter final gate: limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, and live Decidim access remain blocked until every P0 outcome passes, every P0 evidence item is accepted, every P0 issue is closed, and every required owner signs off privately.
+- Public-safe outcome wording only: private evidence, real participant records, official Toastmasters records, provider records, credentials, logs, and private minutes remain outside the package.
+
+Use this version as the default public demo and private operating pack after the controlled fake/sample stress run.
+
 
 ## v5.2 Private Stress Lab Run Pack Upgrade
 

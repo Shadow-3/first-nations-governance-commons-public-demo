@@ -635,7 +635,7 @@
 <a class="btn" href="pilot-rehearsal-control-room.html">Control Room</a>
 <a class="btn" href="pilot-decision-build-handoff.html">Decision Handoff</a>
 <a class="btn" href="private-owner-decision-meeting.html">Owner Meeting</a>
-<a class="btn" href="private-decision-execution-control.html">Execution Control</a><a class="btn" href="private-evidence-stress-test-lab.html">Stress Lab</a><a class="btn primary" href="private-stress-lab-run-pack.html">Run Pack</a>
+<a class="btn" href="private-decision-execution-control.html">Execution Control</a><a class="btn" href="private-evidence-stress-test-lab.html">Stress Lab</a><a class="btn" href="private-stress-lab-run-pack.html">Run Pack</a><a class="btn primary" href="private-run-results-decision-board.html">Results Board</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -686,6 +686,10 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Private run results decision board guide", path: "docs/private-run-results-decision-board-v5.3.md", type: "markdown", description: "How to read and use the v5.3 post-run layer." },
+      { category: "Start Here", title: "P0 outcome and repeat-run protocol", path: "docs/p0-outcome-and-repeat-run-protocol-v5.3.md", type: "markdown", description: "Outcome thresholds and repeat rules." },
+      { category: "Start Here", title: "Private evidence acceptance ledger", path: "docs/private-evidence-acceptance-ledger-v5.3.md", type: "markdown", description: "Public-safe custody and evidence acceptance model." },
+      { category: "Start Here", title: "Public summary and next-action pack", path: "docs/public-summary-and-next-action-pack-v5.3.md", type: "markdown", description: "Approved public lines and next actions." },
       { category: "Start Here", title: "Private stress lab session plan", path: "docs/private-stress-lab-session-plan-v5.2.md", type: "markdown", description: "Run order and hold rules." },
       { category: "Start Here", title: "Owner roster and authority map", path: "docs/owner-roster-and-authority-map-v5.2.md", type: "markdown", description: "Owner roles and Dean advisory boundary." },
       { category: "Start Here", title: "Controlled sample runbook", path: "docs/controlled-sample-runbook-barayamal-toastmasters-v5.2.md", type: "markdown", description: "Barayamal and First Nations Toastmasters sample paths." },
@@ -803,6 +807,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v5.3", path: "docs/public-demo-release-notes-v5.3.md", type: "markdown", description: "Private Run Results Decision Board upgrade summary." },
       { category: "Release Notes", title: "Release notes v5.2", path: "docs/public-demo-release-notes-v5.2.md", type: "markdown", description: "Private Stress Lab Run Pack upgrade summary." },
       { category: "Release Notes", title: "Release notes v5.1", path: "docs/public-demo-release-notes-v5.1.md", type: "markdown", description: "Private Evidence Stress Test Lab upgrade summary." },
       { category: "Release Notes", title: "Release notes v5.0", path: "docs/public-demo-release-notes-v5.0.md", type: "markdown", description: "Private Decision Execution Control upgrade summary." },
@@ -1039,6 +1044,20 @@
       { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
       { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
       { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Private Run Results Decision Board", title: "Decision board guide v5.3", path: "docs/private-run-results-decision-board-v5.3.md", type: "markdown", description: "How to read and use the post-run layer." },
+      { category: "Private Run Results Decision Board", title: "P0 outcome and repeat-run protocol v5.3", path: "docs/p0-outcome-and-repeat-run-protocol-v5.3.md", type: "markdown", description: "Outcome thresholds and repeat rules." },
+      { category: "Private Run Results Decision Board", title: "Private evidence acceptance ledger v5.3", path: "docs/private-evidence-acceptance-ledger-v5.3.md", type: "markdown", description: "Public-safe custody and evidence acceptance model." },
+      { category: "Private Run Results Decision Board", title: "Public summary and next-action pack v5.3", path: "docs/public-summary-and-next-action-pack-v5.3.md", type: "markdown", description: "Approved lines and follow-up actions." },
+      { category: "Private Run Results Decision Board", title: "P0 outcome register v5.3", path: "data/p0-run-outcome-register-v5.3.csv", type: "csv", description: "Eleven P0 outcome records." },
+      { category: "Private Run Results Decision Board", title: "Evidence acceptance ledger v5.3", path: "data/private-evidence-acceptance-ledger-v5.3.csv", type: "csv", description: "Sixteen evidence acceptance records." },
+      { category: "Private Run Results Decision Board", title: "Issue register v5.3", path: "data/private-run-issue-register-v5.3.csv", type: "csv", description: "Eighteen issue records." },
+      { category: "Private Run Results Decision Board", title: "Controlled sample result register v5.3", path: "data/controlled-sample-result-register-v5.3.csv", type: "csv", description: "Twenty-eight controlled sample results." },
+      { category: "Private Run Results Decision Board", title: "Provider boundary result register v5.3", path: "data/provider-boundary-result-register-v5.3.csv", type: "csv", description: "Ten provider-boundary records." },
+      { category: "Private Run Results Decision Board", title: "Owner signoff register v5.3", path: "data/owner-signoff-register-v5.3.csv", type: "csv", description: "Twelve owner signoff records." },
+      { category: "Private Run Results Decision Board", title: "Final decision register v5.3", path: "data/final-decision-register-v5.3.csv", type: "csv", description: "Eight final decision records." },
+      { category: "Private Run Results Decision Board", title: "Public summary line register v5.3", path: "data/public-summary-line-register-v5.3.csv", type: "csv", description: "Ten approved public lines." },
+      { category: "Private Run Results Decision Board", title: "Private run next-action register v5.3", path: "data/private-run-next-action-register-v5.3.csv", type: "csv", description: "Sixteen next-action records." },
+      { category: "Private Run Results Decision Board", title: "Private run results decision package v5.3", path: "data/private-run-results-decision-package-v5.3.json", type: "json", description: "Machine-readable v5.3 package." },
       { category: "Private Stress Lab Run Pack", title: "Session plan v5.2", path: "docs/private-stress-lab-session-plan-v5.2.md", type: "markdown", description: "Run order and hold rules." },
       { category: "Private Stress Lab Run Pack", title: "Owner roster and authority map v5.2", path: "docs/owner-roster-and-authority-map-v5.2.md", type: "markdown", description: "Owner roles and Dean advisory boundary." },
       { category: "Private Stress Lab Run Pack", title: "Controlled sample runbook v5.2", path: "docs/controlled-sample-runbook-barayamal-toastmasters-v5.2.md", type: "markdown", description: "Barayamal and First Nations Toastmasters sample paths." },

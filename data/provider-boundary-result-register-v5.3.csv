@@ -1,0 +1,11 @@
+id,test,result,owner,providerAsk,response,decision,nextAction
+PBR-001,Provider asks for real participant records,Rejected,Provider access owner,Can you send the real intake spreadsheet?,Reject and provide fake/sample schema only.,Pass only if request is rejected,Repeat after RFQ wording update
+PBR-002,Provider asks for official Toastmasters member list,Rejected,Official-route owner,Can we import current member data?,Reject and state official records are out of scope.,No-go for official workflow,Keep official-route owner in approval loop
+PBR-003,Provider asks to enable outbound email,Blocked,Privacy reviewer,Can we turn on email invitations?,Reject until privacy evidence passes.,Outbound email remains blocked,Repeat email-disabled drill
+PBR-004,Provider asks for admin credentials,Blocked,Security reviewer,Can you share admin access?,Reject; use least privilege only after approval.,Credentials remain private,Add access expiry proof
+PBR-005,Provider expands scope after quote,Hold,Provider access owner,Can we add live onboarding?,Hold and re-scope fake/sample-only.,Scope needs approval,Approve fake/sample RFQ
+PBR-006,Provider requests logs with private evidence,Blocked,Security reviewer,Can you send logs?,Provide redacted synthetic logs only.,No private log transfer,Prepare synthetic log sample
+PBR-007,Provider stores sample export externally,Hold,IDS/data reviewer,Can we keep a copy?,Require deletion and retention proof.,Hold until retention proof,Define deletion proof format
+PBR-008,Provider cannot prove backup restore,Hold,Security reviewer,Backup is assumed.,Require restore proof before next step.,Hold until restore proof,Run backup restore proof privately
+PBR-009,Provider asks to invite real users,Blocked,Authority chair,Can we invite founders?,Reject; fake/sample run only.,No real invite,Keep invite feature disabled
+PBR-010,Provider asks for public launch wording,Hold,Comms lead,Can we say launch is coming?,Use approved preparation wording only.,Hold until comms approval,Use public summary register

@@ -1,0 +1,19 @@
+id,severity,area,status,owner,summary,impact,fix,repeatRequired,linkedRecord
+ISS-001,P0,Authority,Open,Authority chair,Authority chair not named in private evidence,No approval pathway,Name chair and record private authority minute,Yes,P0R-001
+ISS-002,P0,Privacy,Open,Privacy reviewer,Consent and withdrawal wording incomplete,Cannot invite real people,Rewrite notice and rerun consent drill,Yes,P0R-002
+ISS-003,P0,Privacy,Hold,Privacy reviewer,Outbound email disabled proof not fully accepted,Email could imply live intake,Record disabled-email proof and public-safe copy,Yes,P0R-003
+ISS-004,P0,IDS/data,Open,IDS/data reviewer,Delete and retention evidence missing,Data rights cannot be proven,Repeat export/delete/retention drill,Yes,P0R-004
+ISS-005,P0,Support,Open,Support owner,Complaint and pause route incomplete,Participant harm response not proven,Run support pause drill,Yes,P0R-005
+ISS-006,P0,FN Toastmasters,Open,Official-route owner,Official Toastmasters route not approved,Official workflow could be implied,Keep fake guest-only path and name official-route owner,Yes,P0R-006
+ISS-007,P0,Evidence,Hold,IDS/data reviewer,Evidence custody index incomplete,Private evidence could be mishandled,Complete custody ledger and redaction review,Yes,P0R-008
+ISS-008,P0,Provider,Open,Provider access owner,Provider real-record rejection flow needs repeat,Provider could ask for real records,Rerun provider drill with approved rejection wording,Yes,P0R-011
+ISS-009,P1,Barayamal,Closed,Barayamal custodian,Business-sensitive sample fields were visible in one draft,Sensitive field creep,Blocked fields removed from public sample,No,P0R-009
+ISS-010,P1,FN Toastmasters,Hold,Training owner,Guest copy reads like member service in three samples,Official-service implication,Rewrite guest-support language,Yes,P0R-010
+ISS-011,P1,Communications,Closed,Comms lead,One public line implied launch timing,Public expectation risk,Replaced with preparation-only wording,No,PUBLIC-SUMMARY
+ISS-012,P1,Security,Open,Security reviewer,Backup restore proof not linked to final gate,Recovery route uncertain,Attach restore proof to decision minute,Yes,FINAL-MINUTES
+ISS-013,P1,Access,Open,Security reviewer,Admin access expiry not proven,Access creep risk,Add revoke/expiry evidence to private ledger,Yes,FINAL-MINUTES
+ISS-014,P2,Sample data,Closed,Meeting chair,Sample seed labels inconsistent,Reviewer confusion,Normalized sample labels in v5.3 package,No,BAR-SAMPLE
+ISS-015,P2,Owners,Open,Meeting chair,Owner alternate rota incomplete,Meeting reschedule risk,Add alternates before repeat run,Yes,OWNER-SIGNOFF
+ISS-016,P2,Documents,Closed,Documentation owner,Results board not available in v5.2,Post-run decision gap,Added v5.3 decision board and ledger,No,FINAL-DECISION
+ISS-017,P1,Provider,Open,Provider access owner,Provider RFQ boundary not approved,Vendor scope drift,Approve fake/sample-only RFQ text,Yes,PROVIDER-BOUNDARY
+ISS-018,P2,Minutes,Closed,Meeting chair,Post-run minutes template missing,Decision record inconsistency,Added final decision and next-action registers,No,FINAL-MINUTES

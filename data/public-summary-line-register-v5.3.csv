@@ -1,0 +1,11 @@
+id,topic,status,approvedPublicLine,blockedLanguage,owner
+PSL-001,Overall status,Ready,The public demo remains a fake/sample preparation tool; no live pilot has been approved.,We are launching the pilot.,Comms lead
+PSL-002,Run result,Ready,"A controlled fake/sample results board now records what would be accepted, held, repeated, or blocked.",Private testing passed.,Comms lead
+PSL-003,Barayamal,Ready,Barayamal is represented as a controlled First Nations organisation sample using fake/sample records only.,Barayamal founders are being onboarded.,Barayamal custodian
+PSL-004,First Nations Toastmasters,Ready,First Nations Toastmasters is represented as a fake guest/member-boundary sample only.,Official Toastmasters members are being onboarded.,Training owner
+PSL-005,Privacy,Ready,Privacy and consent controls remain under private owner review.,Privacy has approved the pilot.,Privacy reviewer
+PSL-006,Provider,Ready,"No provider has access to real participant, organisation, or Toastmasters records.",A provider is reviewing real data.,Provider access owner
+PSL-007,Evidence,Ready,Private evidence is not published in the public package.,Evidence can be shared on request.,IDS/data reviewer
+PSL-008,Decision,Ready,The next valid operating step is a repeat private fake/sample stress run or a no-go/archive decision.,Proceeding to pilot.,Meeting chair
+PSL-009,Decidim access,Ready,No live Decidim access is approved by this public demo.,The Decidim platform is live.,Security reviewer
+PSL-010,Owner authority,Ready,"Dean Foley / Barayamal may advise and review, but named owners must approve their own gates privately.",Dean approval is enough to proceed.,Authority chair

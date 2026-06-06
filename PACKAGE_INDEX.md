@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v5.2  
+Version: v5.3  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -152,6 +152,26 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 142. `docs/public-demo-release-notes-v2.3.md` - v2.3 release summary.
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
+
+## v5.3 Private Run Results Decision Board Additions
+
+- `private-run-results-decision-board.html` - public-safe post-run decision board for controlled fake/sample outcomes.
+- `docs/private-run-results-decision-board-v5.3.md`
+- `docs/p0-outcome-and-repeat-run-protocol-v5.3.md`
+- `docs/private-evidence-acceptance-ledger-v5.3.md`
+- `docs/public-summary-and-next-action-pack-v5.3.md`
+- `docs/public-demo-release-notes-v5.3.md`
+- `data/p0-run-outcome-register-v5.3.csv`
+- `data/private-evidence-acceptance-ledger-v5.3.csv`
+- `data/private-run-issue-register-v5.3.csv`
+- `data/controlled-sample-result-register-v5.3.csv`
+- `data/provider-boundary-result-register-v5.3.csv`
+- `data/owner-signoff-register-v5.3.csv`
+- `data/final-decision-register-v5.3.csv`
+- `data/public-summary-line-register-v5.3.csv`
+- `data/private-run-next-action-register-v5.3.csv`
+- `data/private-run-results-decision-package-v5.3.json`
+
 
 ## v5.2 Private Stress Lab Run Pack Additions
 

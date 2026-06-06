@@ -1,0 +1,9 @@
+id,decision,status,authority,requiredBeforeProceed,recordedOutcome,nextAction,publicOutcome
+FDR-001,Proceed to limited private pilot,Blocked,Authority chair,"All P0 outcomes Pass, evidence Accepted, P0 issues Closed, owner signoffs Accepted","Blocked by P0 Hold, Repeat required, No-go, missing evidence, and open issues",Do not proceed,No live or private pilot approved
+FDR-002,Repeat P0 stress lab,Ready,Meeting chair,"Any P0 Hold, Repeat required, or missing evidence",Ready because several P0 outcomes require repeat,Schedule repeat run,Preparation continues
+FDR-003,No-go/archive,Ready,Authority chair,Authority cannot be proven or official boundary remains unresolved after repeat,Available as a valid decision path,Keep no-go option visible,No live pilot approved
+FDR-004,Provider handoff,Blocked,Provider access owner,Provider boundary tests pass and fake/sample RFQ approved,Blocked by provider real-record repeat,Approve fake/sample RFQ then retest,No provider has real records
+FDR-005,Barayamal controlled sample acceptance,Hold,Barayamal custodian,All Barayamal sample holds closed,Mostly accepted; two repeat records remain,Revise held sample records,Controlled sample only
+FDR-006,First Nations Toastmasters sample acceptance,Hold,Training owner,Official-boundary language accepted,Hold due guest/member wording risk,Rewrite and retest guest sample,No official Toastmasters process
+FDR-007,Public summary update,Ready,Comms lead,Approved public lines only,Ready with preparation-only language,Publish approved lines,Public-safe status only
+FDR-008,Live Decidim access,Blocked,Security reviewer,"Authority, privacy, data, support, official boundary, provider, and final minute pass",Blocked,Keep live access disabled,No live Decidim approval

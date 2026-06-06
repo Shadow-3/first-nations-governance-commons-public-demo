@@ -1,0 +1,13 @@
+id,role,ownerName,signoffStatus,scope,acceptedEvidence,holdReason,nextStep
+OSG-001,Initial developer and trusted reviewer,Dean Foley / Barayamal,Advisory noted,"Build, custodian support, and trusted review",Sample build review noted,Cannot replace owner approval,Continue advisory review only
+OSG-002,Authority chair,To be named privately,Hold,Project authority and pilot approval,No,Private chair not named,Name chair before repeat run
+OSG-003,Privacy reviewer,To be named privately,Hold,"Consent, notice, outbound email, privacy review",Partial,Consent and email proof need repeat,Repeat privacy drill
+OSG-004,IDS/data reviewer,To be named privately,Hold,"Data minimisation, export/delete, retention, evidence custody",Partial,Retention and custody index incomplete,Repeat data-control drill
+OSG-005,Support owner,To be named privately,Hold,"Support complaint, pause, escalation",No,Support pause proof missing,Run support drill
+OSG-006,Official-route owner,To be named privately,Blocked,Official Toastmasters boundary,No,Official route not approved,Keep official workflows out of scope
+OSG-007,Security reviewer,To be named privately,Accepted,"Credentials, logs, access, backup route",Yes,Backup link still to be attached to final minute,Carry forward security checklist
+OSG-008,Provider access owner,To be named privately,Hold,Provider scope and fake/sample-only access,Partial,Provider real-record rejection needs repeat,Approve RFQ language and retest
+OSG-009,Comms lead,To be named privately,Accepted,Public-safe status wording,Yes,None for public lines,Publish only approved lines
+OSG-010,Barayamal custodian,Barayamal,Accepted,Controlled organisation sample,Yes,None for fake/sample path,Carry forward to repeat run
+OSG-011,Training owner,To be named privately,Hold,First Nations Toastmasters guest/member-boundary sample,Partial,Guest copy still implies member service in some samples,Rewrite and retest sample path
+OSG-012,Meeting chair,To be named privately,Hold,"Run order, minutes, final decisions",No,Final private minute missing,Complete final decision minute
