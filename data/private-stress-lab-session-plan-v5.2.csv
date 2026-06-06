@@ -1,0 +1,13 @@
+id,step,stage,status,owner,input,output,blocker
+SES-001,Open private stress lab,Preparation,Ready,Meeting chair,v5.1 stress package,Confirmed fake/sample-only run scope,No private run until owner roster is named
+SES-002,Confirm owner roster,Preparation,Ready,Meeting chair,Owner map,Named owners and alternates,Any missing P0 owner
+SES-003,Confirm evidence custody,Preparation,Ready,IDS/data reviewer,Evidence log template,Private evidence folder and retention rule,Evidence enters public package
+SES-004,Run authority P0 tests,P0 stress run,Scheduled,Authority chair,STS-001,Pass/Hold/No-go decision,Authority route cannot be proven
+SES-005,Run privacy and data P0 tests,P0 stress run,Scheduled,Privacy reviewer,STS-002 to STS-004,"Consent, email, export/delete/retention decisions",Real data or outbound email touched
+SES-006,Run support and official-boundary tests,P0 stress run,Scheduled,Support owner,STS-005 to STS-006,Support and official Toastmasters boundary decisions,Official records or member services implied
+SES-007,Run security and evidence custody tests,P0 stress run,Scheduled,Security reviewer,STS-007 to STS-008,Credential/log/evidence custody decisions,Credential or private evidence leak
+SES-008,Run Barayamal controlled sample,Controlled sample,Ready,Barayamal custodian,Fake founder/business-owner records,Safe onboarding notes,Business-sensitive data requested
+SES-009,Run First Nations Toastmasters controlled sample,Controlled sample,Ready,Training owner,Fake guest/member-boundary records,Safe guest workflow notes,Official Toastmasters workflow implied
+SES-010,Run provider boundary tests,Provider boundary,Ready,Provider access owner,Provider failure register,Provider accept/reject/hold decisions,Provider asks for real records
+SES-011,Approve public-safe wording,Public status,Ready,Comms lead,Comms register,Approved public status line,Public line implies launch
+SES-012,Record go/no-go decision,Decision,Scheduled,Meeting chair,Decision register,Proceed/repeat/no-go outcome,Any P0 unresolved

@@ -1,0 +1,11 @@
+id,scenario,status,owner,approvedLine,blockedLine,reason
+COM-001,General project status,Ready,Comms lead,The public demo is a fake/sample preparation tool; no live pilot has been approved.,We are launching soon.,Avoid launch implication
+COM-002,Barayamal sample,Ready,Comms lead,Barayamal is being used as a controlled sample pathway with fake/sample records only.,Barayamal founders are being onboarded.,Avoid real intake implication
+COM-003,First Nations Toastmasters sample,Ready,Comms lead,First Nations Toastmasters workflows are represented only as fake guest/member-boundary samples.,Official Toastmasters members are being onboarded.,Avoid official workflow implication
+COM-004,Provider status,Ready,Comms lead,Provider or self-build options remain under fake/sample-only review.,A provider has access to records.,Avoid real data implication
+COM-005,Stress lab status,Ready,Comms lead,Private stress testing is being prepared before any live step.,Stress testing is complete.,Do not claim private evidence outcome
+COM-006,Privacy status,Ready,Privacy reviewer,Privacy and consent controls remain under private review.,Privacy has approved launch.,Do not replace owner approval
+COM-007,Authority status,Ready,Authority chair,Authority gates remain private and unresolved until owner evidence is accepted.,Authority has approved the pilot.,Do not claim approval
+COM-008,No-go status,Ready,Meeting chair,"The project may hold, repeat, or archive based on private owner decisions.",The project cannot fail.,Keep no-go visible
+COM-009,Live Decidim status,Ready,Security reviewer,No live Decidim access is approved by this public demo.,The Decidim platform is live.,Avoid live access claim
+COM-010,Evidence status,Ready,IDS/data reviewer,Private evidence is not published in the public package.,Evidence is available on request.,Protect private evidence

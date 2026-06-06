@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v5.1  
+Version: v5.2  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -152,6 +152,26 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 142. `docs/public-demo-release-notes-v2.3.md` - v2.3 release summary.
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
+
+## v5.2 Private Stress Lab Run Pack Additions
+
+- `private-stress-lab-run-pack.html` - public-safe run pack for the first private fake/sample stress-lab session.
+- `docs/private-stress-lab-session-plan-v5.2.md`
+- `docs/owner-roster-and-authority-map-v5.2.md`
+- `docs/controlled-sample-runbook-barayamal-toastmasters-v5.2.md`
+- `docs/evidence-custody-and-go-no-go-minutes-v5.2.md`
+- `docs/public-demo-release-notes-v5.2.md`
+- `data/private-stress-lab-session-plan-v5.2.csv`
+- `data/p0-stress-run-register-v5.2.csv`
+- `data/private-owner-roster-v5.2.csv`
+- `data/private-evidence-log-template-v5.2.csv`
+- `data/barayamal-controlled-onboarding-sample-v5.2.csv`
+- `data/fn-toastmasters-controlled-onboarding-sample-v5.2.csv`
+- `data/provider-boundary-test-register-v5.2.csv`
+- `data/communications-approval-register-v5.2.csv`
+- `data/go-no-go-decision-register-v5.2.csv`
+- `data/private-stress-lab-run-package-v5.2.json`
+
 
 ## v5.1 Private Evidence Stress Test Lab Additions
 

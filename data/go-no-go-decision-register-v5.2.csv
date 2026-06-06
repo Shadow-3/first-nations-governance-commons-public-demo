@@ -1,0 +1,13 @@
+id,decision,status,owner,minimumEvidence,nextAction,publicOutcome
+GNG-001,Proceed to limited private pilot,Blocked,Authority chair,Every P0 run passes privately,Only consider after all P0 passes,No public pilot claim
+GNG-002,Repeat stress lab,Ready,Meeting chair,Any P0 hold or unclear owner evidence,Schedule repeat run,Preparation continues
+GNG-003,No-go/archive,Ready,Authority chair,Repeated P0 failure or authority cannot be proven,Archive safely,No live pilot approved
+GNG-004,Provider handoff,Blocked,Provider access owner,Provider boundary tests pass,Prepare fake/sample RFQ only,No provider has real records
+GNG-005,Self-build dependency prep,Ready,Security reviewer,Local build path and access controls defined,Prepare environment privately,No live access approved
+GNG-006,Barayamal controlled sample acceptance,Hold,Barayamal custodian,Fake onboarding sample passes,Repeat sample if needed,Controlled sample only
+GNG-007,FN Toastmasters controlled sample acceptance,Hold,Training owner,Fake guest/member-boundary sample passes,Repeat sample if needed,No official Toastmasters process
+GNG-008,Public status refresh,Ready,Comms lead,Approved line exists,Publish only approved line,Fake/sample preparation status
+GNG-009,Evidence custody closeout,Hold,IDS/data reviewer,Evidence log complete,Hold until private proof filed,Aggregate status only
+GNG-010,Support route acceptance,Blocked,Support owner,Support complaint/pause route passes,Repeat support drill,No support service launched
+GNG-011,Outbound email acceptance,Blocked,Privacy reviewer,Email remains disabled or safely captured,Repeat privacy drill,No outbound email active
+GNG-012,Live Decidim access acceptance,Blocked,Security reviewer,"Access, backup, revoke, logs, and privacy pass",No live access,No live Decidim approval

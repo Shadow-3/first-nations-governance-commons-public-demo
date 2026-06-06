@@ -635,7 +635,7 @@
 <a class="btn" href="pilot-rehearsal-control-room.html">Control Room</a>
 <a class="btn" href="pilot-decision-build-handoff.html">Decision Handoff</a>
 <a class="btn" href="private-owner-decision-meeting.html">Owner Meeting</a>
-<a class="btn" href="private-decision-execution-control.html">Execution Control</a><a class="btn" href="private-evidence-stress-test-lab.html">Stress Lab</a>
+<a class="btn" href="private-decision-execution-control.html">Execution Control</a><a class="btn" href="private-evidence-stress-test-lab.html">Stress Lab</a><a class="btn primary" href="private-stress-lab-run-pack.html">Run Pack</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -686,6 +686,10 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Private stress lab session plan", path: "docs/private-stress-lab-session-plan-v5.2.md", type: "markdown", description: "Run order and hold rules." },
+      { category: "Start Here", title: "Owner roster and authority map", path: "docs/owner-roster-and-authority-map-v5.2.md", type: "markdown", description: "Owner roles and Dean advisory boundary." },
+      { category: "Start Here", title: "Controlled sample runbook", path: "docs/controlled-sample-runbook-barayamal-toastmasters-v5.2.md", type: "markdown", description: "Barayamal and First Nations Toastmasters sample paths." },
+      { category: "Start Here", title: "Evidence custody and go/no-go minutes", path: "docs/evidence-custody-and-go-no-go-minutes-v5.2.md", type: "markdown", description: "Private evidence and minutes template." },
       { category: "Start Here", title: "Private evidence stress test lab playbook", path: "docs/private-evidence-stress-test-lab-playbook-v5.1.md", type: "markdown", description: "Run the private fake/sample stress lab." },
       { category: "Start Here", title: "Owner go/no-go threshold protocol", path: "docs/owner-go-no-go-and-threshold-protocol-v5.1.md", type: "markdown", description: "Go/no-go thresholds and hold rules." },
       { category: "Start Here", title: "Red-team privacy provider failure drillbook", path: "docs/red-team-privacy-provider-failure-drillbook-v5.1.md", type: "markdown", description: "Red-team, privacy, provider, and rollback drills." },
@@ -799,6 +803,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v5.2", path: "docs/public-demo-release-notes-v5.2.md", type: "markdown", description: "Private Stress Lab Run Pack upgrade summary." },
       { category: "Release Notes", title: "Release notes v5.1", path: "docs/public-demo-release-notes-v5.1.md", type: "markdown", description: "Private Evidence Stress Test Lab upgrade summary." },
       { category: "Release Notes", title: "Release notes v5.0", path: "docs/public-demo-release-notes-v5.0.md", type: "markdown", description: "Private Decision Execution Control upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.9", path: "docs/public-demo-release-notes-v4.9.md", type: "markdown", description: "Private Owner Decision Meeting Pack upgrade summary." },
@@ -1034,6 +1039,20 @@
       { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
       { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
       { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Private Stress Lab Run Pack", title: "Session plan v5.2", path: "docs/private-stress-lab-session-plan-v5.2.md", type: "markdown", description: "Run order and hold rules." },
+      { category: "Private Stress Lab Run Pack", title: "Owner roster and authority map v5.2", path: "docs/owner-roster-and-authority-map-v5.2.md", type: "markdown", description: "Owner roles and Dean advisory boundary." },
+      { category: "Private Stress Lab Run Pack", title: "Controlled sample runbook v5.2", path: "docs/controlled-sample-runbook-barayamal-toastmasters-v5.2.md", type: "markdown", description: "Barayamal and First Nations Toastmasters sample paths." },
+      { category: "Private Stress Lab Run Pack", title: "Evidence custody and go/no-go minutes v5.2", path: "docs/evidence-custody-and-go-no-go-minutes-v5.2.md", type: "markdown", description: "Private evidence and minutes template." },
+      { category: "Private Stress Lab Run Pack", title: "Session plan v5.2 CSV", path: "data/private-stress-lab-session-plan-v5.2.csv", type: "csv", description: "Twelve private session steps." },
+      { category: "Private Stress Lab Run Pack", title: "P0 stress run register v5.2", path: "data/p0-stress-run-register-v5.2.csv", type: "csv", description: "Eleven P0 stress runs." },
+      { category: "Private Stress Lab Run Pack", title: "Owner roster v5.2", path: "data/private-owner-roster-v5.2.csv", type: "csv", description: "Twelve owner roles." },
+      { category: "Private Stress Lab Run Pack", title: "Evidence log template v5.2", path: "data/private-evidence-log-template-v5.2.csv", type: "csv", description: "Sixteen evidence items." },
+      { category: "Private Stress Lab Run Pack", title: "Barayamal sample v5.2", path: "data/barayamal-controlled-onboarding-sample-v5.2.csv", type: "csv", description: "Fourteen controlled organisation records." },
+      { category: "Private Stress Lab Run Pack", title: "FN Toastmasters sample v5.2", path: "data/fn-toastmasters-controlled-onboarding-sample-v5.2.csv", type: "csv", description: "Fourteen guest/member-boundary records." },
+      { category: "Private Stress Lab Run Pack", title: "Provider boundary tests v5.2", path: "data/provider-boundary-test-register-v5.2.csv", type: "csv", description: "Ten provider-boundary tests." },
+      { category: "Private Stress Lab Run Pack", title: "Communications approvals v5.2", path: "data/communications-approval-register-v5.2.csv", type: "csv", description: "Ten public-safe lines." },
+      { category: "Private Stress Lab Run Pack", title: "Go/no-go decisions v5.2", path: "data/go-no-go-decision-register-v5.2.csv", type: "csv", description: "Twelve decision records." },
+      { category: "Private Stress Lab Run Pack", title: "Private stress lab run package v5.2", path: "data/private-stress-lab-run-package-v5.2.json", type: "json", description: "Machine-readable v5.2 run package." },
       { category: "Private Evidence Stress Test Lab", title: "Stress test playbook v5.1", path: "docs/private-evidence-stress-test-lab-playbook-v5.1.md", type: "markdown", description: "Run the private fake/sample stress lab." },
       { category: "Private Evidence Stress Test Lab", title: "Owner threshold protocol v5.1", path: "docs/owner-go-no-go-and-threshold-protocol-v5.1.md", type: "markdown", description: "Go/no-go thresholds and hold rules." },
       { category: "Private Evidence Stress Test Lab", title: "Failure drillbook v5.1", path: "docs/red-team-privacy-provider-failure-drillbook-v5.1.md", type: "markdown", description: "Red-team, privacy, provider, and rollback drills." },

@@ -1,0 +1,11 @@
+id,test,status,owner,providerPrompt,requiredResponse,exitTrigger
+PBT-001,Provider asks for real participant records,Blocked,Provider access owner,Can you send the real intake spreadsheet?,Reject; provide fake/sample schema only.,Repeat request for real records
+PBT-002,Provider asks for official Toastmasters member list,Blocked,Official-route owner,Can we import current member data?,Reject; state official records are out of scope.,Any official record request
+PBT-003,Provider asks to enable outbound email,Blocked,Privacy reviewer,Can we turn on email invitations?,Reject until private privacy evidence passes.,Outbound email attempted
+PBT-004,Provider asks for admin credentials,Blocked,Security reviewer,Can you share admin access?,Reject; use least-privilege temporary access only after approval.,Credential shared outside approved channel
+PBT-005,Provider expands scope after quote,Hold,Provider access owner,Can we add live onboarding?,Hold; re-scope as fake/sample-only.,Scope implies live launch
+PBT-006,Provider requests logs with private evidence,Blocked,Security reviewer,Can you send logs?,Provide redacted synthetic logs only.,Log contains private evidence
+PBT-007,Provider stores sample export externally,Hold,IDS/data reviewer,Can we keep a copy?,Require deletion/retention proof.,Retention proof missing
+PBT-008,Provider cannot prove backup restore,Hold,Security reviewer,Backup is assumed.,Require restore proof before next step.,Restore proof absent
+PBT-009,Provider asks to invite real users,Blocked,Authority chair,Can we invite founders?,Reject; fake/sample run only.,Any real invite sent
+PBT-010,Provider asks for public launch wording,Hold,Comms lead,Can we say launch is coming?,Use approved preparation wording only.,Public line implies launch

@@ -1,0 +1,13 @@
+id,role,namedOwner,authorityBoundary,decisionPower,alternate,mustAttend,cannotApprove
+OWN-001,Initial developer and trusted reviewer,Dean Foley / Barayamal,"Advisory, build, review, and custodian support only",Advise,Barayamal delegate,Yes,Cannot replace owner authority
+OWN-002,Authority chair,To be named privately,Project authority and pilot approval,Pass/Hold/No-go,Authority alternate,Yes,"Privacy, IDS/data, official Toastmasters"
+OWN-003,Privacy reviewer,To be named privately,"Consent, notice, outbound email, NDB readiness",Pass/Hold/No-go,Privacy alternate,Yes,"Authority, official Toastmasters"
+OWN-004,IDS/data reviewer,To be named privately,"Data minimisation, custody, export/delete/retention",Pass/Hold/No-go,IDS/data alternate,Yes,"Authority, provider commercial terms"
+OWN-005,Support owner,To be named privately,"Support complaint, pause, and escalation routes",Pass/Hold/No-go,Support alternate,Yes,Official Toastmasters
+OWN-006,Official-route owner,To be named privately,Toastmasters official boundary and external permission route,Pass/Hold/No-go,Official-route alternate,Yes,Barayamal internal path
+OWN-007,Security reviewer,To be named privately,"Credential, logging, access, backup, restore",Pass/Hold/No-go,Security alternate,Yes,Comms approval
+OWN-008,Provider access owner,To be named privately,"Provider scope, fake/sample-only access, contract boundary",Pass/Hold/No-go,Provider alternate,Yes,Privacy or authority
+OWN-009,Comms lead,To be named privately,Public-safe status wording only,Approve public line,Comms alternate,Yes,Private evidence
+OWN-010,Barayamal custodian,Barayamal,Controlled First Nations organisation sample,Pass/Hold/No-go for sample path,Barayamal alternate,Yes,Official Toastmasters
+OWN-011,Training owner,To be named privately,First Nations Toastmasters guest/member-boundary sample,Pass/Hold/No-go for sample path,Training alternate,Yes,Official Toastmasters approval
+OWN-012,Meeting chair,To be named privately,"Run order, minutes, decision register, follow-up",Record decision,Chair alternate,Yes,Substitute owner votes
