@@ -1,0 +1,34 @@
+# Barayamal Controlled Organisation Test Plan v4.6
+
+Use Barayamal as the first controlled First Nations organisation sample for Indigenous founders, business owners, mentors, programs, events, and feedback.
+
+## Controlled Sample Rule
+
+Barayamal is the first controlled First Nations organisation sample for Indigenous founders, business owners, mentors, programs, events, and feedback. Use fake/sample records until private owner approvals explicitly permit any real intake.
+
+## Test Cases
+
+| id | case | status | owner | decidimUse | sampleData | success | boundary |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| BAR-001 | Indigenous founder sample onboarding | Hold | Barayamal program operator | Private assembly intake form and welcome process. | Fake founder profile. | Founder can enter sample needs without sensitive fields. | No real founder names/contact details. |
+| BAR-002 | Business owner minimum profile | Hold | Privacy reviewer | Profile form with non-sensitive tags only. | Fake business sector and region. | Only useful minimum data is requested. | No ABN, revenue, client, or private business details. |
+| BAR-003 | Mentor matching interest | Ready | Pilot owner | Proposal/comment workflow for mentorship needs. | Fake mentor/mentee interests. | Needs can be grouped without private disclosure. | No real matching or contact exchange. |
+| BAR-004 | Program priority proposal | Ready | Barayamal program operator | Proposal component for program ideas. | Fake startup support proposals. | Participants can rank sample priorities. | No commitment to funded programs. |
+| BAR-005 | Event co-design poll | Ready | Barayamal program operator | Survey/poll component for event formats. | Fake event options. | Sample voting works and exports aggregate results. | No real event registration. |
+| BAR-006 | Founder feedback loop | Hold | Support owner | Accountability/comment component for feedback. | Fake feedback items. | Feedback can be triaged with support route. | No complaints/incidents in public/demo space. |
+| BAR-007 | Resource library suggestion | Ready | Pilot owner | Ideas/proposals for useful founder resources. | Fake resource titles. | Suggestions can be reviewed by owners. | No legal/financial advice claims. |
+| BAR-008 | Grant readiness discussion | Hold | Privacy reviewer | Private discussion space for grant-readiness themes. | Fake grant-readiness needs. | Themes are captured without sensitive financial data. | No financial documents or business plans. |
+| BAR-009 | Founder yarning circle agenda | Ready | Barayamal program operator | Meeting component for agenda and notes. | Fake meeting agenda. | Agenda can be published sample-only. | No real attendance list. |
+| BAR-010 | Advisory action triage | Ready | Dean trusted reviewer | Task board for Dean advisory comments. | Fake advisory comments. | Comments route to owner tasks. | Dean comments are not approvals. |
+| BAR-011 | Pilot learning metric review | Ready | Pilot owner | Accountability component for learning metrics. | Fake metrics. | Learning captured without personal data. | No performance claims. |
+| BAR-012 | Exit/no-go rehearsal | Ready | Closeout archivist | Decision process for hold/no-go/archive. | Fake decision outcome. | No-go can close safely. | No private reasons public. |
+| BAR-013 | Barayamal admin role rehearsal | Hold | Technical/admin custodian | Admin permissions check for sample organisation. | Fake admin account. | Role can be revoked and audited. | No real admin credential exposure. |
+| BAR-014 | Barayamal public-safe summary | Ready | Comms lead | Public update drafted from aggregate sample learning. | Fake aggregate findings. | Summary avoids names/details/approval claims. | No real participant story without consent. |
+
+## Decidim Fit
+
+The Barayamal sample maps to Decidim assemblies, proposals, meetings, surveys, accountability, and private role permissions. It remains fake/sample until private owner approvals permit any real intake.
+
+## Blocked Data
+
+Do not collect real founder names, emails, phone numbers, ABNs, revenue, client details, grant documents, private business plans, support records, cultural material, or consent records in the public/demo package.

@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v4.5  
+Version: v4.6  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -153,9 +153,30 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
 
+## v4.6 Controlled Pilot Execution Pack Additions
+
+- `controlled-pilot-execution.html` - public-safe runbook for controlled pilot execution gates, Barayamal and First Nations Toastmasters test cases, Dean trusted review, Decidim live-build backlog, metrics, no-go triggers, and comms.
+- `docs/controlled-pilot-execution-playbook-v4.6.md`
+- `docs/dean-trusted-reviewer-and-barayamal-stewardship-path-v4.6.md`
+- `docs/barayamal-controlled-organisation-test-plan-v4.6.md`
+- `docs/first-nations-toastmasters-controlled-member-test-plan-v4.6.md`
+- `docs/decidim-live-build-backlog-and-hosting-plan-v4.6.md`
+- `docs/public-demo-release-notes-v4.6.md`
+- `data/pilot-execution-gates-v4.6.csv`
+- `data/trusted-reviewer-path-v4.6.csv`
+- `data/barayamal-controlled-test-cases-v4.6.csv`
+- `data/toastmasters-controlled-test-cases-v4.6.csv`
+- `data/decidim-live-build-backlog-v4.6.csv`
+- `data/pilot-success-metrics-v4.6.csv`
+- `data/pilot-no-go-triggers-v4.6.csv`
+- `data/pilot-comms-and-consent-queue-v4.6.csv`
+- `data/controlled-pilot-execution-pack-v4.6.json`
+
+
 ## v4.5 Private Implementation Control Ledger Additions
 
 - `private-implementation-control-ledger.html` - public-safe ledger for implementation workstreams, release locks, carry-forward mapping, build tasks, access controls, environment checks, change control, acceptance evidence, rollback, and comms.
+- `controlled-pilot-execution.html` is the public-safe Controlled Pilot Execution Pack for Barayamal, First Nations Toastmasters, Dean advisory review, and the gated Decidim build backlog.
 - `docs/private-implementation-control-ledger-playbook-v4.5.md`
 - `docs/decision-to-implementation-sprint-plan-v4.5.md`
 - `docs/release-lock-and-access-control-protocol-v4.5.md`

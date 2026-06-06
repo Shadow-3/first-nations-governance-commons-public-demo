@@ -631,6 +631,7 @@
 <a class="btn" href="private-approval-pilot-gate.html">Gate</a>
 <a class="btn" href="private-decision-evidence-docket.html">Docket</a>
 <a class="btn" href="private-implementation-control-ledger.html">Ledger</a>
+<a class="btn" href="controlled-pilot-execution.html">Pilot Runbook</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -681,6 +682,11 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Controlled pilot execution playbook", path: "docs/controlled-pilot-execution-playbook-v4.6.md", type: "markdown", description: "Run the controlled fake/sample pilot sequence." },
+      { category: "Start Here", title: "Dean trusted reviewer path", path: "docs/dean-trusted-reviewer-and-barayamal-stewardship-path-v4.6.md", type: "markdown", description: "Advisory role, limits, and routing." },
+      { category: "Start Here", title: "Barayamal controlled organisation test plan", path: "docs/barayamal-controlled-organisation-test-plan-v4.6.md", type: "markdown", description: "First controlled organisation sample." },
+      { category: "Start Here", title: "First Nations Toastmasters controlled member test plan", path: "docs/first-nations-toastmasters-controlled-member-test-plan-v4.6.md", type: "markdown", description: "Second controlled guest/member-adjacent sample." },
+      { category: "Start Here", title: "Decidim live-build backlog and hosting plan", path: "docs/decidim-live-build-backlog-and-hosting-plan-v4.6.md", type: "markdown", description: "Hosting, environment, and build gates." },
       { category: "Start Here", title: "Private implementation ledger playbook", path: "docs/private-implementation-control-ledger-playbook-v4.5.md", type: "markdown", description: "Run implementation control after the decision docket." },
       { category: "Start Here", title: "Decision-to-implementation sprint plan", path: "docs/decision-to-implementation-sprint-plan-v4.5.md", type: "markdown", description: "Map carry-forward decisions to locked tasks." },
       { category: "Start Here", title: "Release lock and access protocol", path: "docs/release-lock-and-access-control-protocol-v4.5.md", type: "markdown", description: "Release locks, access controls, and environment checks." },
@@ -769,6 +775,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v4.6", path: "docs/public-demo-release-notes-v4.6.md", type: "markdown", description: "Controlled Pilot Execution Pack upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.5", path: "docs/public-demo-release-notes-v4.5.md", type: "markdown", description: "Private Implementation Control Ledger upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.4", path: "docs/public-demo-release-notes-v4.4.md", type: "markdown", description: "Private Decision Evidence Docket upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.3", path: "docs/public-demo-release-notes-v4.3.md", type: "markdown", description: "Private Approval & Pilot Gate Room upgrade summary." },
@@ -998,6 +1005,20 @@
       { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
       { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
       { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Controlled Pilot Execution Pack", title: "Execution playbook v4.6", path: "docs/controlled-pilot-execution-playbook-v4.6.md", type: "markdown", description: "Run the controlled fake/sample pilot sequence." },
+      { category: "Controlled Pilot Execution Pack", title: "Dean reviewer path v4.6", path: "docs/dean-trusted-reviewer-and-barayamal-stewardship-path-v4.6.md", type: "markdown", description: "Advisory role, boundaries, and routing." },
+      { category: "Controlled Pilot Execution Pack", title: "Barayamal test plan v4.6", path: "docs/barayamal-controlled-organisation-test-plan-v4.6.md", type: "markdown", description: "First controlled organisation sample." },
+      { category: "Controlled Pilot Execution Pack", title: "First Nations Toastmasters test plan v4.6", path: "docs/first-nations-toastmasters-controlled-member-test-plan-v4.6.md", type: "markdown", description: "Second controlled guest/member-adjacent sample." },
+      { category: "Controlled Pilot Execution Pack", title: "Decidim live-build backlog v4.6", path: "docs/decidim-live-build-backlog-and-hosting-plan-v4.6.md", type: "markdown", description: "Hosting, environment, and build gates." },
+      { category: "Controlled Pilot Execution Pack", title: "Execution gates v4.6", path: "data/pilot-execution-gates-v4.6.csv", type: "csv", description: "Sixteen private execution gates." },
+      { category: "Controlled Pilot Execution Pack", title: "Trusted reviewer path v4.6", path: "data/trusted-reviewer-path-v4.6.csv", type: "csv", description: "Twelve reviewer steps." },
+      { category: "Controlled Pilot Execution Pack", title: "Barayamal test cases v4.6", path: "data/barayamal-controlled-test-cases-v4.6.csv", type: "csv", description: "Fourteen controlled sample cases." },
+      { category: "Controlled Pilot Execution Pack", title: "Toastmasters test cases v4.6", path: "data/toastmasters-controlled-test-cases-v4.6.csv", type: "csv", description: "Fourteen controlled sample cases." },
+      { category: "Controlled Pilot Execution Pack", title: "Decidim backlog v4.6", path: "data/decidim-live-build-backlog-v4.6.csv", type: "csv", description: "Twenty gated build tasks." },
+      { category: "Controlled Pilot Execution Pack", title: "Success metrics v4.6", path: "data/pilot-success-metrics-v4.6.csv", type: "csv", description: "Twelve success and guardrail metrics." },
+      { category: "Controlled Pilot Execution Pack", title: "No-go triggers v4.6", path: "data/pilot-no-go-triggers-v4.6.csv", type: "csv", description: "Twelve stop triggers." },
+      { category: "Controlled Pilot Execution Pack", title: "Comms queue v4.6", path: "data/pilot-comms-and-consent-queue-v4.6.csv", type: "csv", description: "Twelve communication items." },
+      { category: "Controlled Pilot Execution Pack", title: "Execution package v4.6", path: "data/controlled-pilot-execution-pack-v4.6.json", type: "json", description: "Machine-readable v4.6 execution pack." },
       { category: "Private Implementation Control Ledger", title: "Implementation ledger playbook v4.5", path: "docs/private-implementation-control-ledger-playbook-v4.5.md", type: "markdown", description: "Run implementation control after the decision docket." },
       { category: "Private Implementation Control Ledger", title: "Decision-to-implementation sprint plan v4.5", path: "docs/decision-to-implementation-sprint-plan-v4.5.md", type: "markdown", description: "Map carry-forward decisions to locked tasks." },
       { category: "Private Implementation Control Ledger", title: "Release lock and access protocol v4.5", path: "docs/release-lock-and-access-control-protocol-v4.5.md", type: "markdown", description: "Release locks, access controls, and environment checks." },

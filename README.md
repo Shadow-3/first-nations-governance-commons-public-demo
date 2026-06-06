@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v4.5
+Current package version: v4.6
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -68,6 +68,7 @@ Open `private-intake-consent-triage.html` to rehearse private intake fields, con
 Open `private-approval-pilot-gate.html` to close or hold private approval owners, motions, gates, risks, tickets, sandbox checks, boundaries, actions, and comms before any real intake.
 Open `private-decision-evidence-docket.html` to run the private fake-data decision meeting with agenda, evidence custody, owner decisions, conflicts, redactions, public outcomes, carry-forward actions, audit, and comms.
 Open `private-implementation-control-ledger.html` to lock carry-forward decisions into implementation workstreams, release locks, access controls, acceptance tests, rollback controls, and public-safe comms.
+Open `controlled-pilot-execution.html` to run the Barayamal and First Nations Toastmasters controlled fake/sample tests, Dean advisory review, and gated Decidim build backlog.
 
 The demo shows:
 
@@ -99,6 +100,22 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v4.6.md`
+- `docs/controlled-pilot-execution-playbook-v4.6.md`
+- `docs/dean-trusted-reviewer-and-barayamal-stewardship-path-v4.6.md`
+- `docs/barayamal-controlled-organisation-test-plan-v4.6.md`
+- `docs/first-nations-toastmasters-controlled-member-test-plan-v4.6.md`
+- `docs/decidim-live-build-backlog-and-hosting-plan-v4.6.md`
+- `data/pilot-execution-gates-v4.6.csv`
+- `data/trusted-reviewer-path-v4.6.csv`
+- `data/barayamal-controlled-test-cases-v4.6.csv`
+- `data/toastmasters-controlled-test-cases-v4.6.csv`
+- `data/decidim-live-build-backlog-v4.6.csv`
+- `data/pilot-success-metrics-v4.6.csv`
+- `data/pilot-no-go-triggers-v4.6.csv`
+- `data/pilot-comms-and-consent-queue-v4.6.csv`
+- `data/controlled-pilot-execution-pack-v4.6.json`
+
 - `docs/public-demo-release-notes-v4.5.md`
 - `docs/private-implementation-control-ledger-playbook-v4.5.md`
 - `docs/decision-to-implementation-sprint-plan-v4.5.md`
@@ -976,6 +993,17 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v4.6 Controlled Pilot Execution Pack Upgrade
+
+The v4.6 package turns the current next steps into an executable fake/sample pilot plan:
+
+- Sixteen execution gates, twelve Dean trusted reviewer steps, fourteen Barayamal cases, fourteen First Nations Toastmasters cases, and twenty Decidim build backlog tasks.
+- Twelve success metrics, twelve no-go triggers, and twelve public-safe communication items.
+- A stronger live-launch boundary: controlled preparation can proceed, but real participant intake and live Decidim access remain blocked until critical release locks and execution gates pass privately.
+
+Use this version to run the controlled Barayamal and First Nations Toastmasters test path without confusing it with a real consultation, official Toastmasters process, or live Decidim approval.
+
 
 ## v4.5 Private Implementation Control Ledger Upgrade
 

@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "4.5",
+  "version": "4.6",
   "date": "2026-06-06",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use Private Implementation Control Ledger as the default next fake-data implementation layer: convert the private decision docket into release locks, owner workstreams, carry-forward mapping, task controls, access controls, acceptance evidence, rollback controls, and public-safe communications while keeping real intake and live Decidim access blocked until all private implementation locks pass.",
+  "recommendedDecision": "Proceed with private controlled pilot preparation using fake/sample data only. Keep real participant intake and live Decidim access blocked until every critical release lock, execution gate, support route, access control, acceptance test, rollback path, and public communication passes privately.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -381,13 +381,29 @@
     "data/acceptance-evidence-tests-v4.5.csv",
     "data/rollback-and-exit-controls-v4.5.csv",
     "data/implementation-comms-v4.5.csv",
-    "data/private-implementation-control-ledger-package-v4.5.json"
+    "data/private-implementation-control-ledger-package-v4.5.json",
+    "controlled-pilot-execution.html",
+    "docs/controlled-pilot-execution-playbook-v4.6.md",
+    "docs/dean-trusted-reviewer-and-barayamal-stewardship-path-v4.6.md",
+    "docs/barayamal-controlled-organisation-test-plan-v4.6.md",
+    "docs/first-nations-toastmasters-controlled-member-test-plan-v4.6.md",
+    "docs/decidim-live-build-backlog-and-hosting-plan-v4.6.md",
+    "docs/public-demo-release-notes-v4.6.md",
+    "data/pilot-execution-gates-v4.6.csv",
+    "data/trusted-reviewer-path-v4.6.csv",
+    "data/barayamal-controlled-test-cases-v4.6.csv",
+    "data/toastmasters-controlled-test-cases-v4.6.csv",
+    "data/decidim-live-build-backlog-v4.6.csv",
+    "data/pilot-success-metrics-v4.6.csv",
+    "data/pilot-no-go-triggers-v4.6.csv",
+    "data/pilot-comms-and-consent-queue-v4.6.csv",
+    "data/controlled-pilot-execution-pack-v4.6.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v4.5.md",
+    "releaseNotes": "docs/public-demo-release-notes-v4.6.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -669,7 +685,17 @@
       "qa-v45-deployed-private-implementation-control-ledger-barayamal-desktop.png",
       "qa-v45-deployed-private-implementation-control-ledger-access-desktop.png",
       "qa-v45-deployed-private-implementation-control-ledger-mobile.png",
-      "qa-v45-deployed-private-implementation-control-ledger-package-mobile.png"
+      "qa-v45-deployed-private-implementation-control-ledger-package-mobile.png",
+      "qa-v46-local-controlled-pilot-execution-desktop.png",
+      "qa-v46-local-controlled-pilot-execution-barayamal-desktop.png",
+      "qa-v46-local-controlled-pilot-execution-backlog-desktop.png",
+      "qa-v46-local-controlled-pilot-execution-mobile.png",
+      "qa-v46-local-controlled-pilot-execution-package-mobile.png",
+      "qa-v46-deployed-controlled-pilot-execution-desktop.png",
+      "qa-v46-deployed-controlled-pilot-execution-barayamal-desktop.png",
+      "qa-v46-deployed-controlled-pilot-execution-backlog-desktop.png",
+      "qa-v46-deployed-controlled-pilot-execution-mobile.png",
+      "qa-v46-deployed-controlled-pilot-execution-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -1724,6 +1750,24 @@
       "data/rollback-and-exit-controls-v4.5.csv",
       "data/implementation-comms-v4.5.csv",
       "data/private-implementation-control-ledger-package-v4.5.json"
+    ],
+    "controlledPilotExecution": [
+      "controlled-pilot-execution.html",
+      "docs/controlled-pilot-execution-playbook-v4.6.md",
+      "docs/dean-trusted-reviewer-and-barayamal-stewardship-path-v4.6.md",
+      "docs/barayamal-controlled-organisation-test-plan-v4.6.md",
+      "docs/first-nations-toastmasters-controlled-member-test-plan-v4.6.md",
+      "docs/decidim-live-build-backlog-and-hosting-plan-v4.6.md",
+      "docs/public-demo-release-notes-v4.6.md",
+      "data/pilot-execution-gates-v4.6.csv",
+      "data/trusted-reviewer-path-v4.6.csv",
+      "data/barayamal-controlled-test-cases-v4.6.csv",
+      "data/toastmasters-controlled-test-cases-v4.6.csv",
+      "data/decidim-live-build-backlog-v4.6.csv",
+      "data/pilot-success-metrics-v4.6.csv",
+      "data/pilot-no-go-triggers-v4.6.csv",
+      "data/pilot-comms-and-consent-queue-v4.6.csv",
+      "data/controlled-pilot-execution-pack-v4.6.json"
     ]
   },
   "safetyRules": [
@@ -1808,7 +1852,12 @@
     "This v4.5 package remains public fake/sample data only. No real names, emails, phone numbers, member numbers, payments, signatures, authority evidence, consent records, support or incident details, access logs, credentials, backups, exports, official Toastmasters records, business-sensitive details, cultural material, private URLs, or live Decidim configuration belong in the public package.",
     "Dean Foley / Barayamal may support implementation planning, developer notes, sample task triage, and trusted review only where the responsible owner permits it. Advisory review never replaces First Nations authority, privacy, IDS/data governance, official Toastmasters, support, payment, consent, access, launch, release lock, rollback, or closeout approvals.",
     "Use the v4.5 Private Implementation Control Ledger after the v4.4 decision docket. It converts owner decisions and carry-forward actions into locked implementation workstreams, dependency checks, build tasks, access controls, acceptance evidence, rollback controls, and public-safe communications.",
-    "Recommended decision remains Hold. Keep the implementation release lock closed until every blocked release lock, access control, environment check, change-control item, acceptance test, and rollback control is privately approved. Real intake and live Decidim access remain blocked."
+    "Recommended decision remains Hold. Keep the implementation release lock closed until every blocked release lock, access control, environment check, change-control item, acceptance test, and rollback control is privately approved. Real intake and live Decidim access remain blocked.",
+    "Use v4.6 after the v4.5 Private Implementation Control Ledger. It turns the next steps into a controlled fake/sample pilot execution pack for Barayamal, First Nations Toastmasters, Dean advisory review, and the gated Decidim live-build backlog.",
+    "Dean Foley / Barayamal is the initial trusted reviewer and developer/custodian path. Dean may review clarity, technical quality, workflow safety, and sample-data fit, but advisory review never replaces authority, privacy, IDS/data governance, support, official Toastmasters, or community approvals.",
+    "Barayamal is the first controlled First Nations organisation sample for Indigenous founders, business owners, mentors, programs, events, and feedback. Use fake/sample records until private owner approvals explicitly permit any real intake.",
+    "First Nations Toastmasters is the second controlled tester for guest/member-adjacent workflows. Keep all official member, club, education, payment, and Toastmasters record systems outside Decidim unless the official route privately approves a specific guest-only boundary.",
+    "Proceed with private controlled pilot preparation only. Do not open public onboarding, real participant intake, or live Decidim access until all critical v4.5 release locks, v4.6 execution gates, access controls, acceptance tests, rollback paths, and public communications pass privately."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -3710,5 +3759,89 @@
     "advisoryRule": "Dean Foley / Barayamal may support implementation planning, developer notes, sample task triage, and trusted review only where the responsible owner permits it. Advisory review never replaces First Nations authority, privacy, IDS/data governance, official Toastmasters, support, payment, consent, access, launch, release lock, rollback, or closeout approvals.",
     "safetyRule": "This v4.5 package remains public fake/sample data only. No real names, emails, phone numbers, member numbers, payments, signatures, authority evidence, consent records, support or incident details, access logs, credentials, backups, exports, official Toastmasters records, business-sensitive details, cultural material, private URLs, or live Decidim configuration belong in the public package.",
     "decisionRule": "Recommended decision remains Hold. Keep the implementation release lock closed until every blocked release lock, access control, environment check, change-control item, acceptance test, and rollback control is privately approved. Real intake and live Decidim access remain blocked."
+  },
+  "controlledPilotExecution": {
+    "entrypoint": "controlled-pilot-execution.html",
+    "playbook": "docs/controlled-pilot-execution-playbook-v4.6.md",
+    "reviewerPath": "docs/dean-trusted-reviewer-and-barayamal-stewardship-path-v4.6.md",
+    "barayamalPlan": "docs/barayamal-controlled-organisation-test-plan-v4.6.md",
+    "toastmastersPlan": "docs/first-nations-toastmasters-controlled-member-test-plan-v4.6.md",
+    "buildBacklogPlan": "docs/decidim-live-build-backlog-and-hosting-plan-v4.6.md",
+    "releaseNotes": "docs/public-demo-release-notes-v4.6.md",
+    "dataFiles": [
+      "data/pilot-execution-gates-v4.6.csv",
+      "data/trusted-reviewer-path-v4.6.csv",
+      "data/barayamal-controlled-test-cases-v4.6.csv",
+      "data/toastmasters-controlled-test-cases-v4.6.csv",
+      "data/decidim-live-build-backlog-v4.6.csv",
+      "data/pilot-success-metrics-v4.6.csv",
+      "data/pilot-no-go-triggers-v4.6.csv",
+      "data/pilot-comms-and-consent-queue-v4.6.csv",
+      "data/controlled-pilot-execution-pack-v4.6.json"
+    ],
+    "primaryOrganisationTest": "Barayamal",
+    "controlledMemberTester": "First Nations Toastmasters",
+    "trustedReviewer": "Dean Foley / Barayamal",
+    "counts": {
+      "executionGates": 16,
+      "reviewerSteps": 12,
+      "barayamalCases": 14,
+      "toastmastersCases": 14,
+      "controlledTestCases": 28,
+      "buildBacklogTasks": 20,
+      "successMetrics": 12,
+      "noGoTriggers": 12,
+      "commsItems": 12,
+      "executionRecords": 112,
+      "readyGates": 3,
+      "holdGates": 9,
+      "blockedGates": 4,
+      "readyBacklogTasks": 4,
+      "blockedBacklogTasks": 6,
+      "criticalNoGoTriggers": 8
+    },
+    "sourceAnchors": [
+      {
+        "label": "Decidim first steps",
+        "url": "https://decidim.org/first-steps/"
+      },
+      {
+        "label": "Decidim GitHub example applications",
+        "url": "https://github.com/decidim/decidim#example-applications"
+      },
+      {
+        "label": "Decidim install overview",
+        "url": "https://docs.decidim.org/en/develop/install/index.html"
+      },
+      {
+        "label": "Decidim deployment docs",
+        "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+      },
+      {
+        "label": "Decidim authorizations",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+      },
+      {
+        "label": "Barayamal Toastmasters First Nations",
+        "url": "https://barayamal.com.au/toastmasters-first-nations/"
+      },
+      {
+        "label": "Toastmasters governing documents",
+        "url": "https://www.toastmasters.org/resources/governing-documents"
+      },
+      {
+        "label": "OAIC Notifiable Data Breaches",
+        "url": "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme"
+      },
+      {
+        "label": "AIATSIS ethical research",
+        "url": "https://aiatsis.gov.au/research/ethical-research"
+      }
+    ],
+    "executionRule": "Use v4.6 after the v4.5 Private Implementation Control Ledger. It turns the next steps into a controlled fake/sample pilot execution pack for Barayamal, First Nations Toastmasters, Dean advisory review, and the gated Decidim live-build backlog.",
+    "deanBoundaryRule": "Dean Foley / Barayamal is the initial trusted reviewer and developer/custodian path. Dean may review clarity, technical quality, workflow safety, and sample-data fit, but advisory review never replaces authority, privacy, IDS/data governance, support, official Toastmasters, or community approvals.",
+    "barayamalRule": "Barayamal is the first controlled First Nations organisation sample for Indigenous founders, business owners, mentors, programs, events, and feedback. Use fake/sample records until private owner approvals explicitly permit any real intake.",
+    "toastmastersRule": "First Nations Toastmasters is the second controlled tester for guest/member-adjacent workflows. Keep all official member, club, education, payment, and Toastmasters record systems outside Decidim unless the official route privately approves a specific guest-only boundary.",
+    "liveLaunchRule": "Proceed with private controlled pilot preparation only. Do not open public onboarding, real participant intake, or live Decidim access until all critical v4.5 release locks, v4.6 execution gates, access controls, acceptance tests, rollback paths, and public communications pass privately."
   }
 }
