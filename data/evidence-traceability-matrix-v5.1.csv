@@ -1,0 +1,21 @@
+id,sourceGate,stressTest,owner,status,privateEvidence,publicReplacement,nextReview
+ETM-001,EGA-001,STS-001,Authority chair,Blocked,Private proof for critical authority route missing held outside the public package.,Aggregate Authority stress status only.,Next owner review required before any live step.
+ETM-002,EGA-002,STS-002,Privacy reviewer,Blocked,Private proof for privacy notice and consent gap held outside the public package.,Aggregate Privacy stress status only.,Next owner review required before any live step.
+ETM-003,EGA-003,STS-003,Privacy reviewer,Blocked,Private proof for outbound real email escape held outside the public package.,Aggregate Privacy stress status only.,Next owner review required before any live step.
+ETM-004,EGA-004,STS-004,IDS/data reviewer,Blocked,Private proof for export/delete/retention failure held outside the public package.,Aggregate IDS/data stress status only.,Next owner review required before any live step.
+ETM-005,EGA-005,STS-005,Support owner,Blocked,Private proof for support complaint and pause route failure held outside the public package.,Aggregate Support stress status only.,Next owner review required before any live step.
+ETM-006,EGA-006,STS-006,Official-route owner,Blocked,Private proof for official Toastmasters boundary drift held outside the public package.,Aggregate FN Toastmasters stress status only.,Next owner review required before any live step.
+ETM-007,EGA-007,STS-007,Security reviewer,Blocked,Private proof for credential or log exposure held outside the public package.,Aggregate Security stress status only.,Next owner review required before any live step.
+ETM-008,EGA-008,STS-008,IDS/data reviewer,Blocked,Private proof for private evidence custody leak held outside the public package.,Aggregate Evidence stress status only.,Next owner review required before any live step.
+ETM-009,EGA-009,STS-009,Barayamal custodian,Hold,Private proof for business-sensitive field creep held outside the public package.,Aggregate Barayamal stress status only.,Review after owner action update.
+ETM-010,EGA-010,STS-010,Training owner,Hold,Private proof for guest support mistaken for member service held outside the public package.,Aggregate FN Toastmasters stress status only.,Review after owner action update.
+ETM-011,EGA-011,STS-011,Provider access owner,Hold,Private proof for provider asks for real records held outside the public package.,Aggregate Provider stress status only.,Review after owner action update.
+ETM-012,EGA-012,STS-012,Technical/admin custodian,Hold,Private proof for backup restore cannot be proven held outside the public package.,Aggregate Decidim build stress status only.,Review after owner action update.
+ETM-013,EGA-013,STS-013,Technical/admin custodian,Hold,Private proof for role revoke fails held outside the public package.,Aggregate Access stress status only.,Review after owner action update.
+ETM-014,EGA-014,STS-014,Community admin trainer,Hold,Private proof for admin handoff before training held outside the public package.,Aggregate Training stress status only.,Review after owner action update.
+ETM-015,EGA-015,STS-015,Meeting chair,Hold,Private proof for private minutes accidentally public held outside the public package.,Aggregate Meeting stress status only.,Review after owner action update.
+ETM-016,EGA-016,STS-016,Pilot owner,Ready,Private proof for advisory comment treated as approval held outside the public package.,Aggregate Dean review stress status only.,Review after owner action update.
+ETM-017,EGA-017,STS-017,Comms lead,Ready,Private proof for public wording implies launch held outside the public package.,Aggregate Comms stress status only.,Review after owner action update.
+ETM-018,EGA-018,STS-018,Closeout archivist,Ready,Private proof for no-go route ignored held outside the public package.,Aggregate Closeout stress status only.,Review after owner action update.
+ETM-019,EGA-019,STS-019,Pilot owner,Ready,Private proof for ticket scope implies real launch held outside the public package.,Aggregate Build handoff stress status only.,Review after owner action update.
+ETM-020,EGA-020,STS-020,Provider access owner,Ready,Private proof for RFQ scope expands after response held outside the public package.,Aggregate Provider stress status only.,Review after owner action update.

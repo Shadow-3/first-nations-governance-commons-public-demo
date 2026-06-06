@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v5.0
+Current package version: v5.1
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -73,6 +73,7 @@ Open `pilot-rehearsal-control-room.html` to run the v4.7 rehearsal schedule, own
 Open `pilot-decision-build-handoff.html` to convert rehearsal evidence into owner votes, blocker closure, Decidim build route, implementation tickets, launch lane policy, and public-safe communications.
 Open `private-owner-decision-meeting.html` to run the v4.9 private owner meeting with ballots, quorum, blocker closure, provider RFQ, Decidim ticket import, minutes, public status, no-go/archive, and actions.
 Open `private-decision-execution-control.html` to convert the private owner meeting into controlled fake/sample execution with evidence gates, owner actions, provider/build activation, acceptance tests, rollback triggers, custody, public communications, and next review triggers.
+Open `private-evidence-stress-test-lab.html` to stress-test the v5.0 execution controls with fake/sample failure drills, owner thresholds, red-team checks, provider failure drills, rollback rehearsal, public wording stress, Decidim hardening, and evidence traceability.
 
 The demo shows:
 
@@ -104,6 +105,23 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v5.1.md`
+- `docs/private-evidence-stress-test-lab-playbook-v5.1.md`
+- `docs/owner-go-no-go-and-threshold-protocol-v5.1.md`
+- `docs/red-team-privacy-provider-failure-drillbook-v5.1.md`
+- `docs/decidim-hardening-evidence-traceability-plan-v5.1.md`
+- `data/private-evidence-stress-scenarios-v5.1.csv`
+- `data/owner-go-no-go-rehearsals-v5.1.csv`
+- `data/red-team-control-tests-v5.1.csv`
+- `data/provider-failure-drills-v5.1.csv`
+- `data/rollback-rehearsal-matrix-v5.1.csv`
+- `data/public-comms-stress-lines-v5.1.csv`
+- `data/decision-threshold-register-v5.1.csv`
+- `data/decidim-hardening-tests-v5.1.csv`
+- `data/evidence-traceability-matrix-v5.1.csv`
+- `data/final-owner-review-scenarios-v5.1.csv`
+- `data/private-evidence-stress-test-package-v5.1.json`
+
 - `docs/public-demo-release-notes-v5.0.md`
 - `docs/private-decision-execution-control-playbook-v5.0.md`
 - `docs/owner-evidence-acceptance-protocol-v5.0.md`
@@ -1063,6 +1081,16 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v5.1 Private Evidence Stress Test Lab Upgrade
+
+The v5.1 package stress-tests the v5.0 execution controls before any live step:
+
+- Twenty-four stress scenarios, twenty-two owner go/no-go rehearsals, twenty-four red-team tests, twenty provider failure drills, twenty-two rollback drills, eighteen public communications stress lines, eighteen decision thresholds, twenty-four Decidim hardening tests, twenty evidence trace records, eighteen final owner review scenarios, and two hundred and ten readiness records.
+- A stronger readiness boundary: no live pilot, real intake, provider access to real records, outbound email, or live Decidim access can proceed unless every P0 stress scenario and owner threshold passes privately.
+
+Use this version as the default public demo and private operating pack for evidence stress testing.
+
 
 ## v5.0 Private Decision Execution Control Upgrade
 

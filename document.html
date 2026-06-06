@@ -635,7 +635,7 @@
 <a class="btn" href="pilot-rehearsal-control-room.html">Control Room</a>
 <a class="btn" href="pilot-decision-build-handoff.html">Decision Handoff</a>
 <a class="btn" href="private-owner-decision-meeting.html">Owner Meeting</a>
-<a class="btn" href="private-decision-execution-control.html">Execution Control</a>
+<a class="btn" href="private-decision-execution-control.html">Execution Control</a><a class="btn" href="private-evidence-stress-test-lab.html">Stress Lab</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -686,6 +686,10 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Private evidence stress test lab playbook", path: "docs/private-evidence-stress-test-lab-playbook-v5.1.md", type: "markdown", description: "Run the private fake/sample stress lab." },
+      { category: "Start Here", title: "Owner go/no-go threshold protocol", path: "docs/owner-go-no-go-and-threshold-protocol-v5.1.md", type: "markdown", description: "Go/no-go thresholds and hold rules." },
+      { category: "Start Here", title: "Red-team privacy provider failure drillbook", path: "docs/red-team-privacy-provider-failure-drillbook-v5.1.md", type: "markdown", description: "Red-team, privacy, provider, and rollback drills." },
+      { category: "Start Here", title: "Decidim hardening evidence traceability plan", path: "docs/decidim-hardening-evidence-traceability-plan-v5.1.md", type: "markdown", description: "Hardening checks and evidence traceability." },
       { category: "Start Here", title: "Private decision execution control playbook", path: "docs/private-decision-execution-control-playbook-v5.0.md", type: "markdown", description: "Run the post-meeting execution ledger." },
       { category: "Start Here", title: "Owner evidence acceptance protocol", path: "docs/owner-evidence-acceptance-protocol-v5.0.md", type: "markdown", description: "Accept, reject, custody, and public-boundary rules." },
       { category: "Start Here", title: "Provider and build activation plan", path: "docs/provider-and-build-activation-plan-v5.0.md", type: "markdown", description: "Fake/sample RFQ and Decidim ticket path." },
@@ -795,6 +799,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v5.1", path: "docs/public-demo-release-notes-v5.1.md", type: "markdown", description: "Private Evidence Stress Test Lab upgrade summary." },
       { category: "Release Notes", title: "Release notes v5.0", path: "docs/public-demo-release-notes-v5.0.md", type: "markdown", description: "Private Decision Execution Control upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.9", path: "docs/public-demo-release-notes-v4.9.md", type: "markdown", description: "Private Owner Decision Meeting Pack upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.8", path: "docs/public-demo-release-notes-v4.8.md", type: "markdown", description: "Pilot Decision and Build Handoff Room upgrade summary." },
@@ -1029,6 +1034,21 @@
       { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
       { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
       { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Private Evidence Stress Test Lab", title: "Stress test playbook v5.1", path: "docs/private-evidence-stress-test-lab-playbook-v5.1.md", type: "markdown", description: "Run the private fake/sample stress lab." },
+      { category: "Private Evidence Stress Test Lab", title: "Owner threshold protocol v5.1", path: "docs/owner-go-no-go-and-threshold-protocol-v5.1.md", type: "markdown", description: "Go/no-go thresholds and hold rules." },
+      { category: "Private Evidence Stress Test Lab", title: "Failure drillbook v5.1", path: "docs/red-team-privacy-provider-failure-drillbook-v5.1.md", type: "markdown", description: "Red-team, privacy, provider, and rollback drills." },
+      { category: "Private Evidence Stress Test Lab", title: "Hardening and traceability plan v5.1", path: "docs/decidim-hardening-evidence-traceability-plan-v5.1.md", type: "markdown", description: "Hardening checks and evidence traceability." },
+      { category: "Private Evidence Stress Test Lab", title: "Stress scenarios v5.1", path: "data/private-evidence-stress-scenarios-v5.1.csv", type: "csv", description: "Twenty-four stress scenarios." },
+      { category: "Private Evidence Stress Test Lab", title: "Owner go/no-go rehearsals v5.1", path: "data/owner-go-no-go-rehearsals-v5.1.csv", type: "csv", description: "Twenty-two owner rehearsals." },
+      { category: "Private Evidence Stress Test Lab", title: "Red-team control tests v5.1", path: "data/red-team-control-tests-v5.1.csv", type: "csv", description: "Twenty-four red-team tests." },
+      { category: "Private Evidence Stress Test Lab", title: "Provider failure drills v5.1", path: "data/provider-failure-drills-v5.1.csv", type: "csv", description: "Twenty provider failure drills." },
+      { category: "Private Evidence Stress Test Lab", title: "Rollback rehearsal matrix v5.1", path: "data/rollback-rehearsal-matrix-v5.1.csv", type: "csv", description: "Twenty-two rollback drills." },
+      { category: "Private Evidence Stress Test Lab", title: "Public comms stress lines v5.1", path: "data/public-comms-stress-lines-v5.1.csv", type: "csv", description: "Eighteen public wording stress lines." },
+      { category: "Private Evidence Stress Test Lab", title: "Decision threshold register v5.1", path: "data/decision-threshold-register-v5.1.csv", type: "csv", description: "Eighteen decision thresholds." },
+      { category: "Private Evidence Stress Test Lab", title: "Decidim hardening tests v5.1", path: "data/decidim-hardening-tests-v5.1.csv", type: "csv", description: "Twenty-four hardening tests." },
+      { category: "Private Evidence Stress Test Lab", title: "Evidence traceability matrix v5.1", path: "data/evidence-traceability-matrix-v5.1.csv", type: "csv", description: "Twenty evidence trace records." },
+      { category: "Private Evidence Stress Test Lab", title: "Final owner review scenarios v5.1", path: "data/final-owner-review-scenarios-v5.1.csv", type: "csv", description: "Eighteen final review scenarios." },
+      { category: "Private Evidence Stress Test Lab", title: "Stress test package v5.1", path: "data/private-evidence-stress-test-package-v5.1.json", type: "json", description: "Machine-readable v5.1 stress test package." },
       { category: "Private Decision Execution Control", title: "Execution control playbook v5.0", path: "docs/private-decision-execution-control-playbook-v5.0.md", type: "markdown", description: "Run the post-meeting execution ledger." },
       { category: "Private Decision Execution Control", title: "Owner evidence acceptance protocol v5.0", path: "docs/owner-evidence-acceptance-protocol-v5.0.md", type: "markdown", description: "Accept, reject, custody, and public-boundary rules." },
       { category: "Private Decision Execution Control", title: "Provider and build activation plan v5.0", path: "docs/provider-and-build-activation-plan-v5.0.md", type: "markdown", description: "Fake/sample RFQ and Decidim ticket path." },

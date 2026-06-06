@@ -358,7 +358,7 @@
 <a class="btn" href="pilot-rehearsal-control-room.html">Control Room</a>
 <a class="btn" href="pilot-decision-build-handoff.html">Decision Handoff</a>
 <a class="btn" href="private-owner-decision-meeting.html">Owner Meeting</a>
-<a class="btn" href="private-decision-execution-control.html">Execution Control</a>
+<a class="btn" href="private-decision-execution-control.html">Execution Control</a><a class="btn" href="private-evidence-stress-test-lab.html">Stress Lab</a>
     <a class="btn" href="index.html">Open Demo</a>
     <div class="label">Public demo - fake data only</div>
   </header>
@@ -528,6 +528,10 @@
       <a href="#execution-control">
         <strong>Execution Control</strong>
         <span>Evidence gates, owner actions, build activation, rollback, public lines, and next review.</span>
+      </a>
+      <a href="#stress-lab">
+        <strong>Stress Lab</strong>
+        <span>Failure drills, owner thresholds, rollback rehearsal, hardening, traceability, and final review.</span>
       </a>
       <a href="#governance">
         <strong>Governance/Data</strong>
@@ -818,6 +822,13 @@
         </div>
         <div class="doc-row">
           <div>
+            <strong>Private Evidence Stress Test Lab</strong>
+            <span>Stress-test v5.0 execution controls before any live pilot, real intake, provider real-record access, outbound email, or live Decidim access.</span>
+          </div>
+          <a class="btn primary" href="private-evidence-stress-test-lab.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
             <strong>Public demo prototype</strong>
             <span>Sample Decidim-style participatory process.</span>
           </div>
@@ -847,9 +858,9 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v5.0 Private Decision Execution Control upgrade.</span>
+            <span>What changed in the v5.1 Private Evidence Stress Test Lab upgrade.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v5.0.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v5.1.md">Open</a>
         </div>
       </div>
     </section>
@@ -1233,6 +1244,33 @@
         <div class="doc-row"><div><strong>Control Tower package JSON</strong><span>Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays.</span></div><a class="btn" href="data/pilot-control-tower-package-v3.3.json">Open</a></div>
         <div class="doc-row"><div><strong>Release notes v3.3</strong><span>What changed in the Pilot Control Tower upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v3.3.md">Open</a></div>
         <div class="doc-row"><div><strong>Evidence Vault & Advisory Review</strong><span>Dean advisory review, private evidence vault, access rules, authority meeting steps, and decision gates.</span></div><a class="btn primary" href="private-pilot-evidence-vault.html">Open</a></div>
+      </div>
+    </section>
+    <section id="stress-lab">
+      <div class="section-head">
+        <div>
+          <h2>Private Evidence Stress Test Lab</h2>
+          <p>Use these files to stress-test evidence gates, owner thresholds, provider boundaries, rollback, public wording, Decidim hardening, and traceability before any live step.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Private Evidence Stress Test Lab</strong><span>Interactive stress scenarios, owner rehearsals, red-team drills, provider failure, rollback, public lines, thresholds, hardening, traceability, and final review.</span></div><a class="btn primary" href="private-evidence-stress-test-lab.html">Open</a></div>
+        <div class="doc-row"><div><strong>Stress test playbook v5.1</strong><span>Run the private fake/sample stress lab.</span></div><a class="btn" href="docs/private-evidence-stress-test-lab-playbook-v5.1.md">Open</a></div>
+        <div class="doc-row"><div><strong>Owner threshold protocol v5.1</strong><span>Go/no-go thresholds and hold rules.</span></div><a class="btn" href="docs/owner-go-no-go-and-threshold-protocol-v5.1.md">Open</a></div>
+        <div class="doc-row"><div><strong>Failure drillbook v5.1</strong><span>Red-team, privacy, provider, and rollback drills.</span></div><a class="btn" href="docs/red-team-privacy-provider-failure-drillbook-v5.1.md">Open</a></div>
+        <div class="doc-row"><div><strong>Hardening and traceability plan v5.1</strong><span>Decidim hardening checks and evidence traceability.</span></div><a class="btn" href="docs/decidim-hardening-evidence-traceability-plan-v5.1.md">Open</a></div>
+        <div class="doc-row"><div><strong>Stress scenarios CSV</strong><span>Twenty-four stress scenarios.</span></div><a class="btn" href="data/private-evidence-stress-scenarios-v5.1.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Owner rehearsal CSV</strong><span>Twenty-two owner go/no-go rehearsals.</span></div><a class="btn" href="data/owner-go-no-go-rehearsals-v5.1.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Red-team control tests CSV</strong><span>Twenty-four red-team tests.</span></div><a class="btn" href="data/red-team-control-tests-v5.1.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Provider failure drills CSV</strong><span>Twenty provider failure drills.</span></div><a class="btn" href="data/provider-failure-drills-v5.1.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Rollback rehearsal matrix CSV</strong><span>Twenty-two rollback drills.</span></div><a class="btn" href="data/rollback-rehearsal-matrix-v5.1.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Public comms stress lines CSV</strong><span>Eighteen public wording stress lines.</span></div><a class="btn" href="data/public-comms-stress-lines-v5.1.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Decision threshold register CSV</strong><span>Eighteen decision thresholds.</span></div><a class="btn" href="data/decision-threshold-register-v5.1.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Decidim hardening tests CSV</strong><span>Twenty-four hardening tests.</span></div><a class="btn" href="data/decidim-hardening-tests-v5.1.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Evidence traceability matrix CSV</strong><span>Twenty evidence trace records.</span></div><a class="btn" href="data/evidence-traceability-matrix-v5.1.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Final owner review scenarios CSV</strong><span>Eighteen final owner review scenarios.</span></div><a class="btn" href="data/final-owner-review-scenarios-v5.1.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Stress test package JSON</strong><span>Machine-readable v5.1 package.</span></div><a class="btn" href="data/private-evidence-stress-test-package-v5.1.json">Open</a></div>
+        <div class="doc-row"><div><strong>Release notes v5.1</strong><span>What changed in the stress test upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v5.1.md">Open</a></div>
       </div>
     </section>
     <section id="execution-control">
@@ -1780,7 +1818,7 @@
     </section>
 
     <footer>
-      Version v5.0. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v5.1. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
   <script>

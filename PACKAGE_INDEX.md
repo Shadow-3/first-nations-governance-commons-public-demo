@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v5.0  
+Version: v5.1  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -153,9 +153,31 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
 
+## v5.1 Private Evidence Stress Test Lab Additions
+
+- `private-evidence-stress-test-lab.html` - public-safe stress test lab for red-team drills, owner thresholds, provider failure, rollback, public wording, Decidim hardening, traceability, and final review.
+- `docs/private-evidence-stress-test-lab-playbook-v5.1.md`
+- `docs/owner-go-no-go-and-threshold-protocol-v5.1.md`
+- `docs/red-team-privacy-provider-failure-drillbook-v5.1.md`
+- `docs/decidim-hardening-evidence-traceability-plan-v5.1.md`
+- `docs/public-demo-release-notes-v5.1.md`
+- `data/private-evidence-stress-scenarios-v5.1.csv`
+- `data/owner-go-no-go-rehearsals-v5.1.csv`
+- `data/red-team-control-tests-v5.1.csv`
+- `data/provider-failure-drills-v5.1.csv`
+- `data/rollback-rehearsal-matrix-v5.1.csv`
+- `data/public-comms-stress-lines-v5.1.csv`
+- `data/decision-threshold-register-v5.1.csv`
+- `data/decidim-hardening-tests-v5.1.csv`
+- `data/evidence-traceability-matrix-v5.1.csv`
+- `data/final-owner-review-scenarios-v5.1.csv`
+- `data/private-evidence-stress-test-package-v5.1.json`
+
+
 ## v5.0 Private Decision Execution Control Additions
 
 - `private-decision-execution-control.html` - public-safe execution control room for evidence gates, owner actions, provider/build activation, acceptance tests, rollback triggers, custody, public communications, and next review triggers.
+- `private-evidence-stress-test-lab.html` is the public-safe Private Evidence Stress Test Lab for failure drills, owner thresholds, rollback rehearsal, hardening, traceability, and final review.
 - `docs/private-decision-execution-control-playbook-v5.0.md`
 - `docs/owner-evidence-acceptance-protocol-v5.0.md`
 - `docs/provider-and-build-activation-plan-v5.0.md`
