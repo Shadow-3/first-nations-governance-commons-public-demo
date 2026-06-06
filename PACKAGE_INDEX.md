@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v4.6  
+Version: v4.7  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -153,9 +153,30 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
 
+## v4.7 Pilot Rehearsal Control Room Additions
+
+- `pilot-rehearsal-control-room.html` - public-safe rehearsal control room for schedule, owner sign-offs, issue triage, sample-safe roster, acceptance scorecard, decision options, and handoff actions.
+- `docs/pilot-rehearsal-control-room-playbook-v4.7.md`
+- `docs/owner-signoff-board-and-decision-rights-v4.7.md`
+- `docs/rehearsal-schedule-and-facilitation-script-v4.7.md`
+- `docs/issue-triage-and-improvement-loop-v4.7.md`
+- `docs/public-demo-release-notes-v4.7.md`
+- `data/pilot-rehearsal-schedule-v4.7.csv`
+- `data/owner-signoff-board-v4.7.csv`
+- `data/rehearsal-session-scripts-v4.7.csv`
+- `data/pilot-issue-triage-v4.7.csv`
+- `data/change-request-log-v4.7.csv`
+- `data/participant-safe-sample-roster-v4.7.csv`
+- `data/acceptance-scorecard-v4.7.csv`
+- `data/pilot-decision-options-v4.7.csv`
+- `data/rehearsal-handoff-actions-v4.7.csv`
+- `data/pilot-rehearsal-control-room-package-v4.7.json`
+
+
 ## v4.6 Controlled Pilot Execution Pack Additions
 
 - `controlled-pilot-execution.html` - public-safe runbook for controlled pilot execution gates, Barayamal and First Nations Toastmasters test cases, Dean trusted review, Decidim live-build backlog, metrics, no-go triggers, and comms.
+- `pilot-rehearsal-control-room.html` is the public-safe Pilot Rehearsal Control Room for the v4.7 schedule, owner sign-offs, issue triage, sample-safe roster, scorecard, decision options, and handoffs.
 - `docs/controlled-pilot-execution-playbook-v4.6.md`
 - `docs/dean-trusted-reviewer-and-barayamal-stewardship-path-v4.6.md`
 - `docs/barayamal-controlled-organisation-test-plan-v4.6.md`

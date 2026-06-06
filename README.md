@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v4.6
+Current package version: v4.7
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -69,6 +69,7 @@ Open `private-approval-pilot-gate.html` to close or hold private approval owners
 Open `private-decision-evidence-docket.html` to run the private fake-data decision meeting with agenda, evidence custody, owner decisions, conflicts, redactions, public outcomes, carry-forward actions, audit, and comms.
 Open `private-implementation-control-ledger.html` to lock carry-forward decisions into implementation workstreams, release locks, access controls, acceptance tests, rollback controls, and public-safe comms.
 Open `controlled-pilot-execution.html` to run the Barayamal and First Nations Toastmasters controlled fake/sample tests, Dean advisory review, and gated Decidim build backlog.
+Open `pilot-rehearsal-control-room.html` to run the v4.7 rehearsal schedule, owner sign-off board, issue triage, sample-safe roster, acceptance scorecard, decision options, and handoff actions.
 
 The demo shows:
 
@@ -100,6 +101,22 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v4.7.md`
+- `docs/pilot-rehearsal-control-room-playbook-v4.7.md`
+- `docs/owner-signoff-board-and-decision-rights-v4.7.md`
+- `docs/rehearsal-schedule-and-facilitation-script-v4.7.md`
+- `docs/issue-triage-and-improvement-loop-v4.7.md`
+- `data/pilot-rehearsal-schedule-v4.7.csv`
+- `data/owner-signoff-board-v4.7.csv`
+- `data/rehearsal-session-scripts-v4.7.csv`
+- `data/pilot-issue-triage-v4.7.csv`
+- `data/change-request-log-v4.7.csv`
+- `data/participant-safe-sample-roster-v4.7.csv`
+- `data/acceptance-scorecard-v4.7.csv`
+- `data/pilot-decision-options-v4.7.csv`
+- `data/rehearsal-handoff-actions-v4.7.csv`
+- `data/pilot-rehearsal-control-room-package-v4.7.json`
+
 - `docs/public-demo-release-notes-v4.6.md`
 - `docs/controlled-pilot-execution-playbook-v4.6.md`
 - `docs/dean-trusted-reviewer-and-barayamal-stewardship-path-v4.6.md`
@@ -993,6 +1010,18 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v4.7 Pilot Rehearsal Control Room Upgrade
+
+The v4.7 package makes the next step operational rather than just planned:
+
+- Twelve scheduled rehearsal sessions from kickoff through closeout decision briefing.
+- Twenty owner sign-off records that separate Dean advisory review from formal approvals.
+- Fourteen facilitation scripts, eighteen issue-triage records, twelve change requests, eighteen sample-safe fake roster records, eighteen acceptance checks, eight decision options, and twelve handoff actions.
+- A stronger launch boundary: the rehearsal can proceed with fake/sample records, but real participant intake, official Toastmasters workflows, and live Decidim access remain blocked until all critical owner signoffs pass privately.
+
+Use this version as the default public demo and private operating pack for controlled rehearsal preparation.
+
 
 ## v4.6 Controlled Pilot Execution Pack Upgrade
 

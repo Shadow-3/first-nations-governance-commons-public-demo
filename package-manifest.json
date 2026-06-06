@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "4.6",
+  "version": "4.7",
   "date": "2026-06-06",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Proceed with private controlled pilot preparation using fake/sample data only. Keep real participant intake and live Decidim access blocked until every critical release lock, execution gate, support route, access control, acceptance test, rollback path, and public communication passes privately.",
+  "recommendedDecision": "Use v4.7 as the current operating pack for private fake/sample rehearsals. Run the schedule, sign-off board, issue triage, sample-safe roster, acceptance scorecard, and handoff actions before any real participant intake or live Decidim access. Keep live launch blocked unless all critical owners pass privately.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -397,13 +397,29 @@
     "data/pilot-success-metrics-v4.6.csv",
     "data/pilot-no-go-triggers-v4.6.csv",
     "data/pilot-comms-and-consent-queue-v4.6.csv",
-    "data/controlled-pilot-execution-pack-v4.6.json"
+    "data/controlled-pilot-execution-pack-v4.6.json",
+    "pilot-rehearsal-control-room.html",
+    "docs/pilot-rehearsal-control-room-playbook-v4.7.md",
+    "docs/owner-signoff-board-and-decision-rights-v4.7.md",
+    "docs/rehearsal-schedule-and-facilitation-script-v4.7.md",
+    "docs/issue-triage-and-improvement-loop-v4.7.md",
+    "docs/public-demo-release-notes-v4.7.md",
+    "data/pilot-rehearsal-schedule-v4.7.csv",
+    "data/owner-signoff-board-v4.7.csv",
+    "data/rehearsal-session-scripts-v4.7.csv",
+    "data/pilot-issue-triage-v4.7.csv",
+    "data/change-request-log-v4.7.csv",
+    "data/participant-safe-sample-roster-v4.7.csv",
+    "data/acceptance-scorecard-v4.7.csv",
+    "data/pilot-decision-options-v4.7.csv",
+    "data/rehearsal-handoff-actions-v4.7.csv",
+    "data/pilot-rehearsal-control-room-package-v4.7.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v4.6.md",
+    "releaseNotes": "docs/public-demo-release-notes-v4.7.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -695,7 +711,15 @@
       "qa-v46-deployed-controlled-pilot-execution-barayamal-desktop.png",
       "qa-v46-deployed-controlled-pilot-execution-backlog-desktop.png",
       "qa-v46-deployed-controlled-pilot-execution-mobile.png",
-      "qa-v46-deployed-controlled-pilot-execution-package-mobile.png"
+      "qa-v46-deployed-controlled-pilot-execution-package-mobile.png",
+      "qa-v47-local-pilot-rehearsal-control-room-desktop.png",
+      "qa-v47-local-pilot-rehearsal-control-room-issues-desktop.png",
+      "qa-v47-local-pilot-rehearsal-control-room-mobile.png",
+      "qa-v47-local-pilot-rehearsal-control-room-package-mobile.png",
+      "qa-v47-deployed-pilot-rehearsal-control-room-desktop.png",
+      "qa-v47-deployed-pilot-rehearsal-control-room-issues-desktop.png",
+      "qa-v47-deployed-pilot-rehearsal-control-room-mobile.png",
+      "qa-v47-deployed-pilot-rehearsal-control-room-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -1768,6 +1792,24 @@
       "data/pilot-no-go-triggers-v4.6.csv",
       "data/pilot-comms-and-consent-queue-v4.6.csv",
       "data/controlled-pilot-execution-pack-v4.6.json"
+    ],
+    "pilotRehearsalControlRoom": [
+      "pilot-rehearsal-control-room.html",
+      "docs/pilot-rehearsal-control-room-playbook-v4.7.md",
+      "docs/owner-signoff-board-and-decision-rights-v4.7.md",
+      "docs/rehearsal-schedule-and-facilitation-script-v4.7.md",
+      "docs/issue-triage-and-improvement-loop-v4.7.md",
+      "docs/public-demo-release-notes-v4.7.md",
+      "data/pilot-rehearsal-schedule-v4.7.csv",
+      "data/owner-signoff-board-v4.7.csv",
+      "data/rehearsal-session-scripts-v4.7.csv",
+      "data/pilot-issue-triage-v4.7.csv",
+      "data/change-request-log-v4.7.csv",
+      "data/participant-safe-sample-roster-v4.7.csv",
+      "data/acceptance-scorecard-v4.7.csv",
+      "data/pilot-decision-options-v4.7.csv",
+      "data/rehearsal-handoff-actions-v4.7.csv",
+      "data/pilot-rehearsal-control-room-package-v4.7.json"
     ]
   },
   "safetyRules": [
@@ -1857,7 +1899,12 @@
     "Dean Foley / Barayamal is the initial trusted reviewer and developer/custodian path. Dean may review clarity, technical quality, workflow safety, and sample-data fit, but advisory review never replaces authority, privacy, IDS/data governance, support, official Toastmasters, or community approvals.",
     "Barayamal is the first controlled First Nations organisation sample for Indigenous founders, business owners, mentors, programs, events, and feedback. Use fake/sample records until private owner approvals explicitly permit any real intake.",
     "First Nations Toastmasters is the second controlled tester for guest/member-adjacent workflows. Keep all official member, club, education, payment, and Toastmasters record systems outside Decidim unless the official route privately approves a specific guest-only boundary.",
-    "Proceed with private controlled pilot preparation only. Do not open public onboarding, real participant intake, or live Decidim access until all critical v4.5 release locks, v4.6 execution gates, access controls, acceptance tests, rollback paths, and public communications pass privately."
+    "Proceed with private controlled pilot preparation only. Do not open public onboarding, real participant intake, or live Decidim access until all critical v4.5 release locks, v4.6 execution gates, access controls, acceptance tests, rollback paths, and public communications pass privately.",
+    "Use v4.7 as the rehearsal control room layered on top of v4.6. It gives the pilot owner a day-by-day schedule, sign-off board, issue triage loop, sample-safe roster, acceptance scorecard, and handoff actions before any real intake or live Decidim access.",
+    "Decision rights stay explicit: Dean Foley / Barayamal can advise and improve the build path, Barayamal and First Nations Toastmasters owners can accept their controlled sample workflows, and only the relevant authority, privacy, IDS/data, support, official-route, access, rollback, and communications owners can close live-intake gates.",
+    "Run rehearsals with fake/sample records only. Every session must begin with a boundary readout, confirm no real personal/member/business-sensitive records are used, capture issues privately, and end with pass, hold, repeat, or stop.",
+    "All issues must be routed to an owner, severity, decision right, and next action. Critical issues stop the affected lane. High issues block real intake until closed or explicitly accepted by the right owner.",
+    "v4.7 still does not approve live launch. It only prepares the private rehearsal evidence needed to choose hold, repeat rehearsal, provider-assisted build, limited private pilot, no-go, or archive."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -3843,5 +3890,95 @@
     "barayamalRule": "Barayamal is the first controlled First Nations organisation sample for Indigenous founders, business owners, mentors, programs, events, and feedback. Use fake/sample records until private owner approvals explicitly permit any real intake.",
     "toastmastersRule": "First Nations Toastmasters is the second controlled tester for guest/member-adjacent workflows. Keep all official member, club, education, payment, and Toastmasters record systems outside Decidim unless the official route privately approves a specific guest-only boundary.",
     "liveLaunchRule": "Proceed with private controlled pilot preparation only. Do not open public onboarding, real participant intake, or live Decidim access until all critical v4.5 release locks, v4.6 execution gates, access controls, acceptance tests, rollback paths, and public communications pass privately."
+  },
+  "pilotRehearsalControlRoom": {
+    "entrypoint": "pilot-rehearsal-control-room.html",
+    "playbook": "docs/pilot-rehearsal-control-room-playbook-v4.7.md",
+    "signoffDoc": "docs/owner-signoff-board-and-decision-rights-v4.7.md",
+    "scriptDoc": "docs/rehearsal-schedule-and-facilitation-script-v4.7.md",
+    "issueDoc": "docs/issue-triage-and-improvement-loop-v4.7.md",
+    "releaseNotes": "docs/public-demo-release-notes-v4.7.md",
+    "dataFiles": [
+      "data/pilot-rehearsal-schedule-v4.7.csv",
+      "data/owner-signoff-board-v4.7.csv",
+      "data/rehearsal-session-scripts-v4.7.csv",
+      "data/pilot-issue-triage-v4.7.csv",
+      "data/change-request-log-v4.7.csv",
+      "data/participant-safe-sample-roster-v4.7.csv",
+      "data/acceptance-scorecard-v4.7.csv",
+      "data/pilot-decision-options-v4.7.csv",
+      "data/rehearsal-handoff-actions-v4.7.csv",
+      "data/pilot-rehearsal-control-room-package-v4.7.json"
+    ],
+    "primaryOrganisationTest": "Barayamal",
+    "controlledMemberTester": "First Nations Toastmasters",
+    "trustedReviewer": "Dean Foley / Barayamal",
+    "counts": {
+      "rehearsalSessions": 12,
+      "ownerSignoffs": 20,
+      "sessionScripts": 14,
+      "issueTriageItems": 18,
+      "changeRequests": 12,
+      "sampleRosterRecords": 18,
+      "acceptanceChecks": 18,
+      "decisionOptions": 8,
+      "handoffActions": 12,
+      "controlRecords": 132,
+      "readySessions": 3,
+      "holdSessions": 7,
+      "blockedSessions": 2,
+      "blockedSignoffs": 8,
+      "openCriticalIssues": 5,
+      "passingAcceptanceChecks": 5,
+      "blockedAcceptanceChecks": 7,
+      "readyChanges": 12
+    },
+    "sourceAnchors": [
+      {
+        "label": "Decidim first steps",
+        "url": "https://decidim.org/first-steps/"
+      },
+      {
+        "label": "Decidim GitHub example applications",
+        "url": "https://github.com/decidim/decidim#example-applications"
+      },
+      {
+        "label": "Decidim install overview",
+        "url": "https://docs.decidim.org/en/develop/install/index.html"
+      },
+      {
+        "label": "Decidim deployment docs",
+        "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+      },
+      {
+        "label": "Decidim authorizations",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+      },
+      {
+        "label": "Barayamal Toastmasters First Nations",
+        "url": "https://barayamal.com.au/toastmasters-first-nations/"
+      },
+      {
+        "label": "Toastmasters governing documents",
+        "url": "https://www.toastmasters.org/resources/governing-documents"
+      },
+      {
+        "label": "OAIC Notifiable Data Breaches",
+        "url": "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme"
+      },
+      {
+        "label": "AIATSIS ethical research",
+        "url": "https://aiatsis.gov.au/research/ethical-research"
+      },
+      {
+        "label": "v4.6 Controlled Pilot Execution Pack",
+        "url": "data/controlled-pilot-execution-pack-v4.6.json"
+      }
+    ],
+    "operatingRule": "Use v4.7 as the rehearsal control room layered on top of v4.6. It gives the pilot owner a day-by-day schedule, sign-off board, issue triage loop, sample-safe roster, acceptance scorecard, and handoff actions before any real intake or live Decidim access.",
+    "decisionRule": "Decision rights stay explicit: Dean Foley / Barayamal can advise and improve the build path, Barayamal and First Nations Toastmasters owners can accept their controlled sample workflows, and only the relevant authority, privacy, IDS/data, support, official-route, access, rollback, and communications owners can close live-intake gates.",
+    "rehearsalRule": "Run rehearsals with fake/sample records only. Every session must begin with a boundary readout, confirm no real personal/member/business-sensitive records are used, capture issues privately, and end with pass, hold, repeat, or stop.",
+    "issueRule": "All issues must be routed to an owner, severity, decision right, and next action. Critical issues stop the affected lane. High issues block real intake until closed or explicitly accepted by the right owner.",
+    "launchRule": "v4.7 still does not approve live launch. It only prepares the private rehearsal evidence needed to choose hold, repeat rehearsal, provider-assisted build, limited private pilot, no-go, or archive."
   }
 }
