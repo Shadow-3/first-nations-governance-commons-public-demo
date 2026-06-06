@@ -635,7 +635,7 @@
 <a class="btn" href="pilot-rehearsal-control-room.html">Control Room</a>
 <a class="btn" href="pilot-decision-build-handoff.html">Decision Handoff</a>
 <a class="btn" href="private-owner-decision-meeting.html">Owner Meeting</a>
-<a class="btn" href="private-decision-execution-control.html">Execution Control</a><a class="btn" href="private-evidence-stress-test-lab.html">Stress Lab</a><a class="btn" href="private-stress-lab-run-pack.html">Run Pack</a><a class="btn primary" href="private-run-results-decision-board.html">Results Board</a>
+<a class="btn" href="private-decision-execution-control.html">Execution Control</a><a class="btn" href="private-evidence-stress-test-lab.html">Stress Lab</a><a class="btn" href="private-stress-lab-run-pack.html">Run Pack</a><a class="btn" href="private-run-results-decision-board.html">Results Board</a><a class="btn primary" href="p0-remediation-repeat-run-control.html">Repeat Control</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -686,6 +686,10 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "P0 remediation repeat-run control guide", path: "docs/p0-remediation-repeat-run-control-v5.4.md", type: "markdown", description: "How to use the v5.4 remediation layer." },
+      { category: "Start Here", title: "Owner action closeout playbook", path: "docs/owner-action-closeout-playbook-v5.4.md", type: "markdown", description: "Owner actions, substitutions, and signoff limits." },
+      { category: "Start Here", title: "Repeat-run evidence briefing pack", path: "docs/repeat-run-evidence-briefing-pack-v5.4.md", type: "markdown", description: "Private evidence placeholders and closeout conditions." },
+      { category: "Start Here", title: "Sample and provider remediation scripts", path: "docs/barayamal-toastmasters-provider-remediation-scripts-v5.4.md", type: "markdown", description: "Barayamal, First Nations Toastmasters, and provider scripts." },
       { category: "Start Here", title: "Private run results decision board guide", path: "docs/private-run-results-decision-board-v5.3.md", type: "markdown", description: "How to read and use the v5.3 post-run layer." },
       { category: "Start Here", title: "P0 outcome and repeat-run protocol", path: "docs/p0-outcome-and-repeat-run-protocol-v5.3.md", type: "markdown", description: "Outcome thresholds and repeat rules." },
       { category: "Start Here", title: "Private evidence acceptance ledger", path: "docs/private-evidence-acceptance-ledger-v5.3.md", type: "markdown", description: "Public-safe custody and evidence acceptance model." },
@@ -807,6 +811,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v5.4", path: "docs/public-demo-release-notes-v5.4.md", type: "markdown", description: "P0 Remediation Repeat-Run Control upgrade summary." },
       { category: "Release Notes", title: "Release notes v5.3", path: "docs/public-demo-release-notes-v5.3.md", type: "markdown", description: "Private Run Results Decision Board upgrade summary." },
       { category: "Release Notes", title: "Release notes v5.2", path: "docs/public-demo-release-notes-v5.2.md", type: "markdown", description: "Private Stress Lab Run Pack upgrade summary." },
       { category: "Release Notes", title: "Release notes v5.1", path: "docs/public-demo-release-notes-v5.1.md", type: "markdown", description: "Private Evidence Stress Test Lab upgrade summary." },
@@ -1044,6 +1049,22 @@
       { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
       { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
       { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "P0 Remediation Repeat-Run Control", title: "Control guide v5.4", path: "docs/p0-remediation-repeat-run-control-v5.4.md", type: "markdown", description: "How to use the remediation layer." },
+      { category: "P0 Remediation Repeat-Run Control", title: "Owner closeout playbook v5.4", path: "docs/owner-action-closeout-playbook-v5.4.md", type: "markdown", description: "Owner actions, substitutions, and signoff limits." },
+      { category: "P0 Remediation Repeat-Run Control", title: "Repeat-run evidence briefing pack v5.4", path: "docs/repeat-run-evidence-briefing-pack-v5.4.md", type: "markdown", description: "Private evidence placeholders and closeout conditions." },
+      { category: "P0 Remediation Repeat-Run Control", title: "Sample and provider remediation scripts v5.4", path: "docs/barayamal-toastmasters-provider-remediation-scripts-v5.4.md", type: "markdown", description: "Barayamal, First Nations Toastmasters, and provider scripts." },
+      { category: "P0 Remediation Repeat-Run Control", title: "P0 remediation backlog v5.4", path: "data/p0-remediation-backlog-v5.4.csv", type: "csv", description: "Eighteen remediation backlog records." },
+      { category: "P0 Remediation Repeat-Run Control", title: "Repeat-run test script v5.4", path: "data/repeat-run-test-script-v5.4.csv", type: "csv", description: "Eleven repeat-run test scripts." },
+      { category: "P0 Remediation Repeat-Run Control", title: "Evidence-to-close map v5.4", path: "data/evidence-to-close-map-v5.4.csv", type: "csv", description: "Sixteen evidence close records." },
+      { category: "P0 Remediation Repeat-Run Control", title: "Owner closeout signoff checklist v5.4", path: "data/owner-closeout-signoff-checklist-v5.4.csv", type: "csv", description: "Twelve owner closeout records." },
+      { category: "P0 Remediation Repeat-Run Control", title: "Decision readiness matrix v5.4", path: "data/decision-readiness-matrix-v5.4.csv", type: "csv", description: "Eight decision readiness records." },
+      { category: "P0 Remediation Repeat-Run Control", title: "Risk burndown register v5.4", path: "data/risk-burn-down-register-v5.4.csv", type: "csv", description: "Twelve risk burndown records." },
+      { category: "P0 Remediation Repeat-Run Control", title: "Barayamal remediation script v5.4", path: "data/barayamal-remediation-script-v5.4.csv", type: "csv", description: "Twelve Barayamal retest scripts." },
+      { category: "P0 Remediation Repeat-Run Control", title: "FN Toastmasters remediation script v5.4", path: "data/fn-toastmasters-remediation-script-v5.4.csv", type: "csv", description: "Twelve guest/member-boundary retest scripts." },
+      { category: "P0 Remediation Repeat-Run Control", title: "Provider real-record refusal script v5.4", path: "data/provider-real-record-refusal-script-v5.4.csv", type: "csv", description: "Ten provider refusal scripts." },
+      { category: "P0 Remediation Repeat-Run Control", title: "Repeat-run calendar and quorum v5.4", path: "data/repeat-run-calendar-and-quorum-v5.4.csv", type: "csv", description: "Ten calendar and quorum records." },
+      { category: "P0 Remediation Repeat-Run Control", title: "Public closeout update register v5.4", path: "data/public-closeout-update-register-v5.4.csv", type: "csv", description: "Ten public-safe closeout lines." },
+      { category: "P0 Remediation Repeat-Run Control", title: "P0 remediation repeat-run control package v5.4", path: "data/p0-remediation-repeat-run-control-package-v5.4.json", type: "json", description: "Machine-readable v5.4 package." },
       { category: "Private Run Results Decision Board", title: "Decision board guide v5.3", path: "docs/private-run-results-decision-board-v5.3.md", type: "markdown", description: "How to read and use the post-run layer." },
       { category: "Private Run Results Decision Board", title: "P0 outcome and repeat-run protocol v5.3", path: "docs/p0-outcome-and-repeat-run-protocol-v5.3.md", type: "markdown", description: "Outcome thresholds and repeat rules." },
       { category: "Private Run Results Decision Board", title: "Private evidence acceptance ledger v5.3", path: "docs/private-evidence-acceptance-ledger-v5.3.md", type: "markdown", description: "Public-safe custody and evidence acceptance model." },

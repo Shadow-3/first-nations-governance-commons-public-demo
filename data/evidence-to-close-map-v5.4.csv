@@ -1,0 +1,17 @@
+id,linkedRemediation,owner,evidenceNeed,acceptanceStatus,privateCustodyRef,publicReplacement,closeoutCondition
+E2C-001,REM-001,Authority chair,Authority chair and alternate private minute,Needed,CUST-CLOSE-001,Aggregate authority status only,Authority chair accepts P0R-001 repeat pass
+E2C-002,REM-002,Privacy reviewer,"Consent, notice, withdrawal, storage, and contact copy proof",Needed,CUST-CLOSE-002,Aggregate privacy status only,Privacy reviewer accepts P0R-002 repeat pass
+E2C-003,REM-003,Privacy reviewer,Disabled outbound email proof,In review,CUST-CLOSE-003,No outbound email active,Privacy reviewer accepts P0R-003 repeat pass
+E2C-004,REM-004,IDS/data reviewer,Export/delete/retention proof,Needed,CUST-CLOSE-004,Aggregate data-control status only,IDS/data reviewer accepts P0R-004 repeat pass
+E2C-005,REM-005,Support owner,"Complaint, pause, escalation, and closeout proof",Needed,CUST-CLOSE-005,Support not live,Support owner accepts P0R-005 repeat pass
+E2C-006,REM-006,Official-route owner,Official-boundary confirmation,Blocked,CUST-CLOSE-006,Official workflow not approved,Official-route owner accepts boundary or no-go remains
+E2C-007,REM-010,Security reviewer,"Credential, log, backup, and revoke proof",In review,CUST-CLOSE-007,No credentials published,Security reviewer accepts security repeat proof
+E2C-008,REM-007,IDS/data reviewer,Evidence custody index and redaction proof,Needed,CUST-CLOSE-008,Private evidence withheld,IDS/data reviewer accepts evidence custody repeat pass
+E2C-009,REM-014,Barayamal custodian,Barayamal blocked-field sample proof,Ready,CUST-CLOSE-009,Controlled Barayamal sample only,Barayamal custodian accepts sample repeat pass
+E2C-010,REM-009,Training owner,First Nations Toastmasters guest/member-boundary copy proof,Needed,CUST-CLOSE-010,Fake guest sample only,Training owner accepts P0R-010 repeat pass
+E2C-011,REM-008,Provider access owner,Provider real-record refusal script and retest proof,Needed,CUST-CLOSE-011,No provider real-record access,Provider access owner accepts P0R-011 repeat pass
+E2C-012,REM-014,Barayamal custodian,Held Barayamal sample revisions,Ready,CUST-CLOSE-012,Aggregate Barayamal sample status only,Held Barayamal records are accepted
+E2C-013,REM-009,Training owner,Held First Nations Toastmasters sample revisions,Needed,CUST-CLOSE-013,Aggregate First Nations Toastmasters sample status only,Held guest/member-boundary records are accepted
+E2C-014,REM-012,Provider access owner,Fake/sample-only RFQ approval,Needed,CUST-CLOSE-014,Aggregate provider boundary status only,RFQ boundary is accepted privately
+E2C-015,REM-015,Comms lead,Approved public closeout lines,Ready,CUST-CLOSE-015,Approved public lines only,Comms lead accepts closeout wording
+E2C-016,REM-017,Meeting chair,Final private decision minute,Needed,CUST-CLOSE-016,Final decision status only,Meeting chair records repeat or no-go decision

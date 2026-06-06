@@ -1,0 +1,13 @@
+id,risk,severity,currentState,targetState,owner,trend,control
+RBD-001,Unclear authority route,P0,Open,Named chair and alternate,Authority chair,Not reduced,REM-001
+RBD-002,Consent and privacy gap,P0,Open,Accepted privacy copy,Privacy reviewer,Not reduced,REM-002
+RBD-003,Outbound real email escape,P0,In review,Disabled or contained,Privacy reviewer,Reducing,REM-003
+RBD-004,Export/delete/retention failure,P0,Open,Accepted data rights drill,IDS/data reviewer,Not reduced,REM-004
+RBD-005,Support pause route failure,P0,Open,Accepted support pause drill,Support owner,Not reduced,REM-005
+RBD-006,Official Toastmasters boundary drift,P0,Blocked,Boundary accepted or no-go retained,Official-route owner,Not reduced,REM-006
+RBD-007,Private evidence custody leak,P0,Open,Accepted custody index,IDS/data reviewer,Not reduced,REM-007
+RBD-008,Provider asks for real records,P0,Open,Refusal script accepted and retested,Provider access owner,Not reduced,REM-008
+RBD-009,Guest copy implies member service,P1,Open,Guest copy accepted,Training owner,Not reduced,REM-009
+RBD-010,Security proof not linked,P1,In review,Restore and revoke proof linked,Security reviewer,Reducing,REM-010
+RBD-011,Owner alternates incomplete,P2,Open,Quorum roster complete,Meeting chair,Not reduced,REM-013
+RBD-012,Public wording implies launch,P1,Ready,Preparation-only wording,Comms lead,Reduced,REM-015

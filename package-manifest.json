@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "5.3",
+  "version": "5.4",
   "date": "2026-06-06",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use v5.3 as the post-run decision board for controlled fake/sample outcomes. Proceed to limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, and live Decidim access remain blocked until every P0 outcome passes, every P0 evidence item is accepted, every P0 issue is closed, and every required owner signs off privately.",
+  "recommendedDecision": "Use v5.4 to close owner actions and prepare the repeat private fake/sample P0 stress run. Do not proceed to limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, or live Decidim access until every P0 remediation item closes, the repeat run passes, owner evidence is accepted privately, and the final decision minute records proceed rather than repeat or no-go.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -512,13 +512,31 @@
     "data/final-decision-register-v5.3.csv",
     "data/public-summary-line-register-v5.3.csv",
     "data/private-run-next-action-register-v5.3.csv",
-    "data/private-run-results-decision-package-v5.3.json"
+    "data/private-run-results-decision-package-v5.3.json",
+    "p0-remediation-repeat-run-control.html",
+    "docs/p0-remediation-repeat-run-control-v5.4.md",
+    "docs/owner-action-closeout-playbook-v5.4.md",
+    "docs/repeat-run-evidence-briefing-pack-v5.4.md",
+    "docs/barayamal-toastmasters-provider-remediation-scripts-v5.4.md",
+    "docs/public-demo-release-notes-v5.4.md",
+    "data/p0-remediation-backlog-v5.4.csv",
+    "data/repeat-run-test-script-v5.4.csv",
+    "data/evidence-to-close-map-v5.4.csv",
+    "data/owner-closeout-signoff-checklist-v5.4.csv",
+    "data/decision-readiness-matrix-v5.4.csv",
+    "data/risk-burn-down-register-v5.4.csv",
+    "data/barayamal-remediation-script-v5.4.csv",
+    "data/fn-toastmasters-remediation-script-v5.4.csv",
+    "data/provider-real-record-refusal-script-v5.4.csv",
+    "data/repeat-run-calendar-and-quorum-v5.4.csv",
+    "data/public-closeout-update-register-v5.4.csv",
+    "data/p0-remediation-repeat-run-control-package-v5.4.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v5.3.md",
+    "releaseNotes": "docs/public-demo-release-notes-v5.4.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -866,7 +884,15 @@
       "qa-v53-deployed-private-run-results-decision-board-desktop.png",
       "qa-v53-deployed-private-run-results-decision-board-repeat-filter.png",
       "qa-v53-deployed-private-run-results-decision-board-mobile.png",
-      "qa-v53-deployed-private-run-results-package-mobile.png"
+      "qa-v53-deployed-private-run-results-package-mobile.png",
+      "qa-v54-local-p0-remediation-repeat-run-control-desktop.png",
+      "qa-v54-local-p0-remediation-repeat-run-control-provider-filter.png",
+      "qa-v54-local-p0-remediation-repeat-run-control-mobile.png",
+      "qa-v54-local-p0-remediation-package-mobile.png",
+      "qa-v54-deployed-p0-remediation-repeat-run-control-desktop.png",
+      "qa-v54-deployed-p0-remediation-repeat-run-control-provider-filter.png",
+      "qa-v54-deployed-p0-remediation-repeat-run-control-mobile.png",
+      "qa-v54-deployed-p0-remediation-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -2068,6 +2094,26 @@
       "data/public-summary-line-register-v5.3.csv",
       "data/private-run-next-action-register-v5.3.csv",
       "data/private-run-results-decision-package-v5.3.json"
+    ],
+    "p0RemediationRepeatRunControl": [
+      "p0-remediation-repeat-run-control.html",
+      "docs/p0-remediation-repeat-run-control-v5.4.md",
+      "docs/owner-action-closeout-playbook-v5.4.md",
+      "docs/repeat-run-evidence-briefing-pack-v5.4.md",
+      "docs/barayamal-toastmasters-provider-remediation-scripts-v5.4.md",
+      "docs/public-demo-release-notes-v5.4.md",
+      "data/p0-remediation-backlog-v5.4.csv",
+      "data/repeat-run-test-script-v5.4.csv",
+      "data/evidence-to-close-map-v5.4.csv",
+      "data/owner-closeout-signoff-checklist-v5.4.csv",
+      "data/decision-readiness-matrix-v5.4.csv",
+      "data/risk-burn-down-register-v5.4.csv",
+      "data/barayamal-remediation-script-v5.4.csv",
+      "data/fn-toastmasters-remediation-script-v5.4.csv",
+      "data/provider-real-record-refusal-script-v5.4.csv",
+      "data/repeat-run-calendar-and-quorum-v5.4.csv",
+      "data/public-closeout-update-register-v5.4.csv",
+      "data/p0-remediation-repeat-run-control-package-v5.4.json"
     ]
   },
   "safetyRules": [
@@ -2189,7 +2235,11 @@
     "Use v5.3 after a controlled fake/sample private run to record P0 outcomes, accepted evidence status, issues, owner signoffs, repeat actions, and final proceed/repeat/no-go decisions without publishing private evidence.",
     "Private evidence is never published; the public package may show only fake/sample acceptance status, custody placeholders, issue counts, approved public lines, and next actions.",
     "Any P0 Hold, Repeat required, No-go, Missing evidence, Rejected evidence, or Open P0 issue blocks limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, and live Decidim access.",
-    "Proceed to any limited private pilot remains blocked until every P0 outcome is Pass, every P0 evidence item is Accepted, every P0 issue is Closed, and required owners sign off privately."
+    "Proceed to any limited private pilot remains blocked until every P0 outcome is Pass, every P0 evidence item is Accepted, every P0 issue is Closed, and required owners sign off privately.",
+    "Use v5.4 to close or repeat P0 issues before the next private fake/sample stress run; it is a remediation control layer, not approval to proceed.",
+    "A repeat P0 run can be scheduled only after named owners confirm their action, evidence, quorum, stop trigger, and public-safe line.",
+    "A P0 item can close only when owner evidence is accepted privately, the repeat run passes, the public-safe replacement line is approved, and the final decision minute is updated.",
+    "Limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, and live Decidim access remain blocked until all v5.4 closeout gates pass."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -4928,5 +4978,130 @@
     "evidenceAcceptanceRule": "Private evidence is never published; the public package may show only fake/sample acceptance status, custody placeholders, issue counts, approved public lines, and next actions.",
     "defectRule": "Any P0 Hold, Repeat required, No-go, Missing evidence, Rejected evidence, or Open P0 issue blocks limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, and live Decidim access.",
     "finalGateRule": "Proceed to any limited private pilot remains blocked until every P0 outcome is Pass, every P0 evidence item is Accepted, every P0 issue is Closed, and required owners sign off privately."
+  },
+  "p0RemediationRepeatRunControl": {
+    "entrypoint": "p0-remediation-repeat-run-control.html",
+    "controlDoc": "docs/p0-remediation-repeat-run-control-v5.4.md",
+    "ownerCloseoutDoc": "docs/owner-action-closeout-playbook-v5.4.md",
+    "evidenceBriefDoc": "docs/repeat-run-evidence-briefing-pack-v5.4.md",
+    "sampleProviderDoc": "docs/barayamal-toastmasters-provider-remediation-scripts-v5.4.md",
+    "releaseNotes": "docs/public-demo-release-notes-v5.4.md",
+    "dataFiles": [
+      "data/p0-remediation-backlog-v5.4.csv",
+      "data/repeat-run-test-script-v5.4.csv",
+      "data/evidence-to-close-map-v5.4.csv",
+      "data/owner-closeout-signoff-checklist-v5.4.csv",
+      "data/decision-readiness-matrix-v5.4.csv",
+      "data/risk-burn-down-register-v5.4.csv",
+      "data/barayamal-remediation-script-v5.4.csv",
+      "data/fn-toastmasters-remediation-script-v5.4.csv",
+      "data/provider-real-record-refusal-script-v5.4.csv",
+      "data/repeat-run-calendar-and-quorum-v5.4.csv",
+      "data/public-closeout-update-register-v5.4.csv",
+      "data/p0-remediation-repeat-run-control-package-v5.4.json"
+    ],
+    "primaryOrganisationTest": "Barayamal",
+    "controlledMemberTester": "First Nations Toastmasters",
+    "trustedReviewer": "Dean Foley / Barayamal",
+    "counts": {
+      "remediationBacklog": 18,
+      "p0RemediationItems": 9,
+      "openRemediationItems": 12,
+      "repeatRunTests": 11,
+      "blockedRepeatRunTests": 2,
+      "evidenceCloseRecords": 16,
+      "ownerCloseouts": 12,
+      "decisionReadinessRecords": 8,
+      "blockedPilotDecisions": 4,
+      "riskBurnDownRecords": 12,
+      "barayamalScripts": 12,
+      "toastmastersScripts": 12,
+      "providerRefusalScripts": 10,
+      "calendarQuorumRecords": 10,
+      "publicCloseoutUpdates": 10,
+      "totalRemediationRecords": 131
+    },
+    "sourceAnchors": [
+      {
+        "label": "Decidim first steps",
+        "url": "https://decidim.org/first-steps/"
+      },
+      {
+        "label": "Decidim GitHub example applications",
+        "url": "https://github.com/decidim/decidim#example-applications"
+      },
+      {
+        "label": "Decidim install overview",
+        "url": "https://docs.decidim.org/en/develop/install/index.html"
+      },
+      {
+        "label": "Decidim deployment docs",
+        "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+      },
+      {
+        "label": "Decidim authorizations",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+      },
+      {
+        "label": "Barayamal Toastmasters First Nations",
+        "url": "https://barayamal.com.au/toastmasters-first-nations/"
+      },
+      {
+        "label": "Toastmasters governing documents",
+        "url": "https://www.toastmasters.org/resources/governing-documents"
+      },
+      {
+        "label": "OAIC Notifiable Data Breaches",
+        "url": "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme"
+      },
+      {
+        "label": "AIATSIS ethical research",
+        "url": "https://aiatsis.gov.au/research/ethical-research"
+      },
+      {
+        "label": "v4.6 Controlled Pilot Execution Pack",
+        "url": "data/controlled-pilot-execution-pack-v4.6.json"
+      },
+      {
+        "label": "v4.7 Pilot Rehearsal Control Room",
+        "url": "data/pilot-rehearsal-control-room-package-v4.7.json"
+      },
+      {
+        "label": "Decidim deployment docs",
+        "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+      },
+      {
+        "label": "Decidim install checklist",
+        "url": "https://docs.decidim.org/en/develop/install/checklist.html"
+      },
+      {
+        "label": "v4.8 Pilot Decision and Build Handoff Room",
+        "url": "data/pilot-decision-build-handoff-package-v4.8.json"
+      },
+      {
+        "label": "v4.9 Private Owner Decision Meeting Pack",
+        "url": "data/private-owner-decision-meeting-package-v4.9.json"
+      },
+      {
+        "label": "v5.0 Private Decision Execution Control Pack",
+        "url": "data/private-decision-execution-control-package-v5.0.json"
+      },
+      {
+        "label": "v5.1 Private Evidence Stress Test Lab Pack",
+        "url": "data/private-evidence-stress-test-package-v5.1.json"
+      },
+      {
+        "label": "v5.2 Private Stress Lab Run Pack",
+        "url": "data/private-stress-lab-run-package-v5.2.json"
+      },
+      {
+        "label": "v5.3 Private Run Results Decision Package",
+        "url": "data/private-run-results-decision-package-v5.3.json"
+      }
+    ],
+    "remediationRule": "Use v5.4 to close or repeat P0 issues before the next private fake/sample stress run; it is a remediation control layer, not approval to proceed.",
+    "repeatRunRule": "A repeat P0 run can be scheduled only after named owners confirm their action, evidence, quorum, stop trigger, and public-safe line.",
+    "closeoutRule": "A P0 item can close only when owner evidence is accepted privately, the repeat run passes, the public-safe replacement line is approved, and the final decision minute is updated.",
+    "launchBlockRule": "Limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, and live Decidim access remain blocked until all v5.4 closeout gates pass."
   }
 }

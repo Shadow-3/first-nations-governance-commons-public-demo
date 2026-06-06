@@ -1,0 +1,11 @@
+id,checkpoint,status,owner,requiredBefore,failureAction
+RQC-001,Authority chair named,Open,Meeting chair,Calendar hold,Do not schedule repeat run
+RQC-002,Privacy reviewer confirmed,Open,Meeting chair,Calendar hold,Hold privacy tests
+RQC-003,IDS/data reviewer confirmed,Open,Meeting chair,Evidence folder setup,Hold data and evidence tests
+RQC-004,Support owner confirmed,Open,Meeting chair,Support drill,Hold support test
+RQC-005,Official-route owner confirmed,Blocked,Meeting chair,FN Toastmasters boundary test,Keep official-boundary no-go
+RQC-006,Security reviewer confirmed,In review,Meeting chair,Security test,Hold access and restore review
+RQC-007,Provider access owner confirmed,Open,Meeting chair,Provider refusal test,Hold provider test
+RQC-008,Barayamal custodian confirmed,Ready,Meeting chair,Barayamal sample retest,Hold Barayamal sample
+RQC-009,Training owner confirmed,Open,Meeting chair,FN Toastmasters sample retest,Hold guest/member-boundary sample
+RQC-010,Comms lead and final minute owner confirmed,Ready,Meeting chair,Public closeout update,Do not publish update

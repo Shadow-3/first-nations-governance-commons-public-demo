@@ -1,0 +1,9 @@
+id,decision,status,requiredInputs,blockedBy,allowedAction,publicOutcome
+DRM-001,Proceed to limited private pilot,Blocked,All P0 closeouts accepted and repeat run passes,Open P0 remediation and no-go official boundary,Do not proceed,No pilot approved
+DRM-002,Repeat P0 stress lab,Ready after P0 prep,"Owner roster, evidence folder, stop triggers, and scripts ready",P0 owner actions still open,Schedule repeat run after owner prep,Preparation continues
+DRM-003,No-go/archive,Ready,Authority chair or official-route owner records no-go,None,Archive safely if authority or boundary cannot be proven,No live pilot approved
+DRM-004,Provider handoff,Blocked,Provider refusal script and fake/sample RFQ accepted,Open provider P0 and RFQ boundary,Prepare script only,No provider has real records
+DRM-005,Barayamal sample acceptance,Ready after revisions,Held sample records accepted by Barayamal custodian,Two held sample revisions,Revise and retest,Controlled sample only
+DRM-006,First Nations Toastmasters sample acceptance,Blocked,Guest/member-boundary copy accepted by training and official-route owners,Official-boundary no-go and copy holds,Rewrite and retest,No official Toastmasters process
+DRM-007,Public closeout update,Ready,Comms lead approval and no private evidence exposure,None for preparation-only wording,Publish approved status,Public-safe update only
+DRM-008,Live Decidim access,Blocked,"Authority, privacy, data, support, official boundary, security, provider, and final minute pass",Multiple open P0 gates,Keep disabled,No live Decidim approval

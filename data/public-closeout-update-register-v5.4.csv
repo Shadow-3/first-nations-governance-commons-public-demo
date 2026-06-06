@@ -1,0 +1,11 @@
+id,topic,status,approvedLine,blockedLine,owner
+PCU-001,Overall,Ready,The public demo now includes a remediation and repeat-run control layer; no live pilot has been approved.,The project is ready for pilot.,Comms lead
+PCU-002,P0 remediation,Ready,P0 owner actions remain open and must close privately before any next gate.,P0 issues are resolved.,Comms lead
+PCU-003,Repeat run,Ready,The next valid operating step is repeat private fake/sample stress testing after owner preparation.,Repeat testing has passed.,Meeting chair
+PCU-004,Barayamal,Ready,Barayamal remains a controlled fake/sample organisation pathway.,Barayamal founders are being onboarded.,Barayamal custodian
+PCU-005,First Nations Toastmasters,Ready,First Nations Toastmasters remains a fake guest/member-boundary sample only.,Official Toastmasters members are being onboarded.,Training owner
+PCU-006,Provider,Ready,"No provider has access to real participant, organisation, or Toastmasters records.",A provider is reviewing real data.,Provider access owner
+PCU-007,Evidence,Ready,Private evidence remains outside the public package.,Evidence can be shared publicly.,IDS/data reviewer
+PCU-008,Privacy,Ready,Privacy and consent controls remain under private owner review.,Privacy approval is complete.,Privacy reviewer
+PCU-009,Official boundary,Ready,Official Toastmasters workflows are not active or approved in this demo.,Official Toastmasters processes are being tested live.,Official-route owner
+PCU-010,Decision,Ready,No-go/archive remains an explicit option if P0 gates do not close.,Proceed is inevitable.,Authority chair

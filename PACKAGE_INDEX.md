@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v5.3  
+Version: v5.4  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -152,6 +152,28 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 142. `docs/public-demo-release-notes-v2.3.md` - v2.3 release summary.
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
+
+## v5.4 P0 Remediation Repeat-Run Control Additions
+
+- `p0-remediation-repeat-run-control.html` - public-safe P0 remediation and repeat-run control page.
+- `docs/p0-remediation-repeat-run-control-v5.4.md`
+- `docs/owner-action-closeout-playbook-v5.4.md`
+- `docs/repeat-run-evidence-briefing-pack-v5.4.md`
+- `docs/barayamal-toastmasters-provider-remediation-scripts-v5.4.md`
+- `docs/public-demo-release-notes-v5.4.md`
+- `data/p0-remediation-backlog-v5.4.csv`
+- `data/repeat-run-test-script-v5.4.csv`
+- `data/evidence-to-close-map-v5.4.csv`
+- `data/owner-closeout-signoff-checklist-v5.4.csv`
+- `data/decision-readiness-matrix-v5.4.csv`
+- `data/risk-burn-down-register-v5.4.csv`
+- `data/barayamal-remediation-script-v5.4.csv`
+- `data/fn-toastmasters-remediation-script-v5.4.csv`
+- `data/provider-real-record-refusal-script-v5.4.csv`
+- `data/repeat-run-calendar-and-quorum-v5.4.csv`
+- `data/public-closeout-update-register-v5.4.csv`
+- `data/p0-remediation-repeat-run-control-package-v5.4.json`
+
 
 ## v5.3 Private Run Results Decision Board Additions
 

@@ -1,0 +1,13 @@
+id,role,ownerName,closeoutStatus,mustAccept,cannotSubstitute,beforeRepeatRun,afterRepeatRun
+OCS-001,Initial developer and trusted reviewer,Dean Foley / Barayamal,Advisory ready,"Review build, sample safety, and public-safe wording",Owner approvals,Review v5.4 pack,Record advisory notes only
+OCS-002,Authority chair,To be named privately,Open,"Authority chair, alternate, quorum, final decision path",Privacy or IDS/data approval,Name owner and scope,Accept or block P0R-001
+OCS-003,Privacy reviewer,To be named privately,Open,"Consent, notice, withdrawal, outbound email containment",Authority or official-route approval,Approve privacy copy,Accept or block P0R-002 and P0R-003
+OCS-004,IDS/data reviewer,To be named privately,Open,"Export/delete/retention, custody, redaction, data minimisation",Authority or provider approval,Prepare evidence folder,Accept or block P0R-004 and P0R-008
+OCS-005,Support owner,To be named privately,Open,"Complaint, pause, escalation, closeout route",Privacy approval,Prepare support drill,Accept or block P0R-005
+OCS-006,Official-route owner,To be named privately,Blocked,Official Toastmasters boundary,Barayamal or training approval,Confirm official systems out of scope,Accept boundary or keep no-go
+OCS-007,Security reviewer,To be named privately,In review,"Credentials, logs, admin expiry, revoke, backup restore",Comms approval,Attach proof refs,Accept or block security scope
+OCS-008,Provider access owner,To be named privately,Open,Provider fake/sample-only scope and real-record refusal,Privacy or authority approval,Approve RFQ/refusal script,Accept or block P0R-011
+OCS-009,Comms lead,To be named privately,Ready,Public-safe closeout wording,Private evidence approval,Approve preparation-only lines,Publish approved status only
+OCS-010,Barayamal custodian,Barayamal,Ready,Controlled organisation sample path,Official Toastmasters approval,Review sample revisions,Accept or hold Barayamal sample
+OCS-011,Training owner,To be named privately,Open,First Nations Toastmasters fake guest/member-boundary sample,Official-route approval,Rewrite guest copy,Accept or hold guest/member-boundary sample
+OCS-012,Meeting chair,To be named privately,Open,"Quorum, agenda, minutes, final decision record",Owner votes,Confirm calendar/quorum,"Record repeat, hold, or no-go outcome"

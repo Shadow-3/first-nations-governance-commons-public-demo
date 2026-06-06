@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v5.3
+Current package version: v5.4
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -76,6 +76,7 @@ Open `private-decision-execution-control.html` to convert the private owner meet
 Open `private-evidence-stress-test-lab.html` to stress-test the v5.0 execution controls with fake/sample failure drills, owner thresholds, red-team checks, provider failure drills, rollback rehearsal, public wording stress, Decidim hardening, and evidence traceability.
 Open `private-stress-lab-run-pack.html` to run the first private fake/sample stress-lab session with owner roster, P0 run register, evidence custody, controlled samples, provider boundaries, public-safe comms, and go/no-go records.
 Open `private-run-results-decision-board.html` after the controlled fake/sample run to record outcomes, evidence acceptance, issues, owner signoffs, public lines, final decisions, and next actions.
+Open `p0-remediation-repeat-run-control.html` to close P0 owner actions, prepare evidence, confirm quorum, run remediation scripts, and prepare the repeat private fake/sample stress run.
 
 The demo shows:
 
@@ -107,6 +108,24 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v5.4.md`
+- `docs/p0-remediation-repeat-run-control-v5.4.md`
+- `docs/owner-action-closeout-playbook-v5.4.md`
+- `docs/repeat-run-evidence-briefing-pack-v5.4.md`
+- `docs/barayamal-toastmasters-provider-remediation-scripts-v5.4.md`
+- `data/p0-remediation-backlog-v5.4.csv`
+- `data/repeat-run-test-script-v5.4.csv`
+- `data/evidence-to-close-map-v5.4.csv`
+- `data/owner-closeout-signoff-checklist-v5.4.csv`
+- `data/decision-readiness-matrix-v5.4.csv`
+- `data/risk-burn-down-register-v5.4.csv`
+- `data/barayamal-remediation-script-v5.4.csv`
+- `data/fn-toastmasters-remediation-script-v5.4.csv`
+- `data/provider-real-record-refusal-script-v5.4.csv`
+- `data/repeat-run-calendar-and-quorum-v5.4.csv`
+- `data/public-closeout-update-register-v5.4.csv`
+- `data/p0-remediation-repeat-run-control-package-v5.4.json`
+
 - `docs/public-demo-release-notes-v5.3.md`
 - `docs/private-run-results-decision-board-v5.3.md`
 - `docs/p0-outcome-and-repeat-run-protocol-v5.3.md`
@@ -1115,6 +1134,17 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v5.4 P0 Remediation Repeat-Run Control Upgrade
+
+The v5.4 package turns the v5.3 blocked results into a remediation and repeat-run control layer:
+
+- Eighteen remediation backlog records, eleven repeat-run tests, sixteen evidence-to-close records, twelve owner closeouts, eight decision readiness records, twelve risk burndown records, twelve Barayamal scripts, twelve First Nations Toastmasters scripts, ten provider refusal scripts, ten calendar/quorum records, ten public closeout update lines, and one hundred and thirty-one total remediation records.
+- A stricter operating sequence: close P0 owner actions first, prepare private evidence placeholders, confirm quorum and stop triggers, then run the repeat private fake/sample P0 stress lab.
+- The public package still does not approve limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, or live Decidim access.
+
+Use this version as the default public demo and private operating pack for P0 remediation and repeat-run preparation.
+
 
 ## v5.3 Private Run Results Decision Board Upgrade
 
