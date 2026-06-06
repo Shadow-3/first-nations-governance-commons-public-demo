@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v4.8
+Current package version: v4.9
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -71,6 +71,7 @@ Open `private-implementation-control-ledger.html` to lock carry-forward decision
 Open `controlled-pilot-execution.html` to run the Barayamal and First Nations Toastmasters controlled fake/sample tests, Dean advisory review, and gated Decidim build backlog.
 Open `pilot-rehearsal-control-room.html` to run the v4.7 rehearsal schedule, owner sign-off board, issue triage, sample-safe roster, acceptance scorecard, decision options, and handoff actions.
 Open `pilot-decision-build-handoff.html` to convert rehearsal evidence into owner votes, blocker closure, Decidim build route, implementation tickets, launch lane policy, and public-safe communications.
+Open `private-owner-decision-meeting.html` to run the v4.9 private owner meeting with ballots, quorum, blocker closure, provider RFQ, Decidim ticket import, minutes, public status, no-go/archive, and actions.
 
 The demo shows:
 
@@ -102,6 +103,23 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v4.9.md`
+- `docs/private-owner-decision-meeting-playbook-v4.9.md`
+- `docs/owner-ballot-and-minutes-template-v4.9.md`
+- `docs/provider-assisted-sandbox-rfq-v4.9.md`
+- `docs/decidim-ticket-import-and-build-brief-v4.9.md`
+- `data/owner-decision-meeting-agenda-v4.9.csv`
+- `data/owner-vote-ballot-v4.9.csv`
+- `data/quorum-authority-checklist-v4.9.csv`
+- `data/meeting-blocker-resolution-plan-v4.9.csv`
+- `data/provider-assisted-sandbox-rfq-v4.9.csv`
+- `data/decidim-build-ticket-import-v4.9.csv`
+- `data/decision-minutes-template-v4.9.csv`
+- `data/public-status-update-lines-v4.9.csv`
+- `data/no-go-archive-plan-v4.9.csv`
+- `data/owner-action-register-v4.9.csv`
+- `data/private-owner-decision-meeting-package-v4.9.json`
+
 - `docs/public-demo-release-notes-v4.8.md`
 - `docs/pilot-decision-and-build-handoff-playbook-v4.8.md`
 - `docs/owner-vote-and-gate-closure-v4.8.md`
@@ -1027,6 +1045,16 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v4.9 Private Owner Decision Meeting Pack Upgrade
+
+The v4.9 package turns v4.8 handoff readiness into a private meeting pack:
+
+- Sixteen agenda items, twenty-four owner ballots, fourteen quorum checks, twenty blocker resolutions, eighteen provider RFQ items, twenty-two build tickets, fourteen minutes fields, twelve public status lines, twelve no-go/archive routes, and eighteen owner actions.
+- A stronger decision boundary: owner ballots can record hold, repeat, provider RFQ, self-build prep, no-go, or archive, but real participant intake, public onboarding, official Toastmasters workflows, and live Decidim access remain blocked unless every critical owner ballot passes privately.
+
+Use this version as the default public demo and private operating pack for the owner decision meeting.
+
 
 ## v4.8 Pilot Decision and Build Handoff Upgrade
 

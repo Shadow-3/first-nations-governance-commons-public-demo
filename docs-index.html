@@ -357,6 +357,7 @@
 <a class="btn" href="controlled-pilot-execution.html">Pilot Runbook</a>
 <a class="btn" href="pilot-rehearsal-control-room.html">Control Room</a>
 <a class="btn" href="pilot-decision-build-handoff.html">Decision Handoff</a>
+<a class="btn" href="private-owner-decision-meeting.html">Owner Meeting</a>
     <a class="btn" href="index.html">Open Demo</a>
     <div class="label">Public demo - fake data only</div>
   </header>
@@ -518,6 +519,10 @@
       <a href="#decision-handoff">
         <strong>Decision Handoff</strong>
         <span>Owner votes, blocker closure, build route, tickets, and public-safe communications.</span>
+      </a>
+      <a href="#owner-meeting">
+        <strong>Owner Meeting</strong>
+        <span>Ballots, quorum, blocker closure, RFQ, tickets, minutes, public lines, and actions.</span>
       </a>
       <a href="#governance">
         <strong>Governance/Data</strong>
@@ -794,6 +799,13 @@
         </div>
         <div class="doc-row">
           <div>
+            <strong>Private Owner Decision Meeting Pack</strong>
+            <span>Run the v4.9 private owner meeting with ballots, quorum, blocker closure, provider RFQ, Decidim tickets, minutes, public lines, and owner actions.</span>
+          </div>
+          <a class="btn primary" href="private-owner-decision-meeting.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
             <strong>Public demo prototype</strong>
             <span>Sample Decidim-style participatory process.</span>
           </div>
@@ -823,9 +835,9 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v4.8 Pilot Decision and Build Handoff upgrade.</span>
+            <span>What changed in the v4.9 Private Owner Decision Meeting Pack upgrade.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v4.8.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v4.9.md">Open</a>
         </div>
       </div>
     </section>
@@ -1209,6 +1221,33 @@
         <div class="doc-row"><div><strong>Control Tower package JSON</strong><span>Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays.</span></div><a class="btn" href="data/pilot-control-tower-package-v3.3.json">Open</a></div>
         <div class="doc-row"><div><strong>Release notes v3.3</strong><span>What changed in the Pilot Control Tower upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v3.3.md">Open</a></div>
         <div class="doc-row"><div><strong>Evidence Vault & Advisory Review</strong><span>Dean advisory review, private evidence vault, access rules, authority meeting steps, and decision gates.</span></div><a class="btn primary" href="private-pilot-evidence-vault.html">Open</a></div>
+      </div>
+    </section>
+    <section id="owner-meeting">
+      <div class="section-head">
+        <div>
+          <h2>Private Owner Decision Meeting Pack</h2>
+          <p>Use these files to run the private owner meeting and keep all real intake, public onboarding, official Toastmasters workflows, and live Decidim access blocked unless every critical owner ballot passes privately.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Private Owner Decision Meeting Pack</strong><span>Interactive meeting agenda, ballots, quorum, blockers, RFQ, tickets, minutes, public lines, no-go/archive, and actions.</span></div><a class="btn primary" href="private-owner-decision-meeting.html">Open</a></div>
+        <div class="doc-row"><div><strong>Meeting playbook v4.9</strong><span>Run the private owner decision meeting.</span></div><a class="btn" href="docs/private-owner-decision-meeting-playbook-v4.9.md">Open</a></div>
+        <div class="doc-row"><div><strong>Owner ballot and minutes template v4.9</strong><span>Record owner votes and private minutes.</span></div><a class="btn" href="docs/owner-ballot-and-minutes-template-v4.9.md">Open</a></div>
+        <div class="doc-row"><div><strong>Provider-assisted sandbox RFQ v4.9</strong><span>Fake/sample-only provider questions.</span></div><a class="btn" href="docs/provider-assisted-sandbox-rfq-v4.9.md">Open</a></div>
+        <div class="doc-row"><div><strong>Decidim ticket import and build brief v4.9</strong><span>Build tickets, public lines, archive plan, and owner actions.</span></div><a class="btn" href="docs/decidim-ticket-import-and-build-brief-v4.9.md">Open</a></div>
+        <div class="doc-row"><div><strong>Meeting agenda CSV</strong><span>Sixteen meeting agenda items.</span></div><a class="btn" href="data/owner-decision-meeting-agenda-v4.9.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Owner vote ballot CSV</strong><span>Twenty-four owner ballot records.</span></div><a class="btn" href="data/owner-vote-ballot-v4.9.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Quorum authority checklist CSV</strong><span>Fourteen quorum checks.</span></div><a class="btn" href="data/quorum-authority-checklist-v4.9.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Blocker resolution plan CSV</strong><span>Twenty blocker resolutions.</span></div><a class="btn" href="data/meeting-blocker-resolution-plan-v4.9.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Provider RFQ CSV</strong><span>Eighteen provider RFQ items.</span></div><a class="btn" href="data/provider-assisted-sandbox-rfq-v4.9.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Decidim build ticket import CSV</strong><span>Twenty-two build tickets.</span></div><a class="btn" href="data/decidim-build-ticket-import-v4.9.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Decision minutes template CSV</strong><span>Fourteen minutes fields.</span></div><a class="btn" href="data/decision-minutes-template-v4.9.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Public status lines CSV</strong><span>Twelve public status lines.</span></div><a class="btn" href="data/public-status-update-lines-v4.9.csv">Open</a></div>
+        <div class="doc-row"><div><strong>No-go archive plan CSV</strong><span>Twelve no-go/archive routes.</span></div><a class="btn" href="data/no-go-archive-plan-v4.9.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Owner action register CSV</strong><span>Eighteen owner actions.</span></div><a class="btn" href="data/owner-action-register-v4.9.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Owner meeting package JSON</strong><span>Machine-readable v4.9 package.</span></div><a class="btn" href="data/private-owner-decision-meeting-package-v4.9.json">Open</a></div>
+        <div class="doc-row"><div><strong>Release notes v4.9</strong><span>What changed in the owner meeting upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v4.9.md">Open</a></div>
       </div>
     </section>
     <section id="decision-handoff">
@@ -1702,7 +1741,7 @@
     </section>
 
     <footer>
-      Version v4.8. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v4.9. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
   <script>

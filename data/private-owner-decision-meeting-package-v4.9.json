@@ -1,0 +1,1781 @@
+{
+  "title": "Private Owner Decision Meeting Pack v4.9",
+  "version": "4.9",
+  "date": "2026-06-06",
+  "mode": "public_demo_fake_sample_data_only",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "previousPackage": "Pilot Decision and Build Handoff Room v4.8",
+  "primaryOrganisationTest": "Barayamal",
+  "controlledMemberTester": "First Nations Toastmasters",
+  "trustedReviewer": "Dean Foley / Barayamal",
+  "recommendedDecision": "Use v4.9 to run the private owner decision meeting and record ballots, quorum, blocker resolutions, provider RFQ requirements, Decidim ticket import, minutes, public status lines, no-go/archive routes, and owner actions. Keep real participant intake, public onboarding, official Toastmasters workflows, and live Decidim access blocked unless every critical owner ballot passes privately.",
+  "operatingRule": "Use v4.9 to run the private owner decision meeting. The pack records quorum, owner ballots, blocker resolutions, provider RFQ requirements, Decidim build tickets, minutes, public status lines, no-go/archive choices, and owner actions.",
+  "authorityRule": "A meeting can record hold, repeat, provider-assisted sandbox preparation, self-build dependency preparation, no-go, or archive. It cannot approve real intake, public onboarding, official Toastmasters workflows, or live Decidim access unless every critical owner ballot passes privately.",
+  "ballotRule": "Each owner ballot must name the decision, vote, evidence, conditions, and cannot-approve boundary. Dean Foley / Barayamal advisory input can be recorded, but advisory input cannot substitute for owner votes.",
+  "rfqRule": "Provider-assisted sandbox RFQ work is allowed only for fake/sample data until authority, privacy, IDS/data, support, official-route, access, security, backup, deletion, rollback, and communications votes pass.",
+  "publicRule": "Public updates may state that the project is in controlled decision/build preparation. They must not name private owner reasons, publish minutes, imply launch approval, collect real participant details, or describe official Toastmasters workflows as active.",
+  "counts": {
+    "meetingAgendaItems": 16,
+    "ownerBallots": 24,
+    "quorumChecks": 14,
+    "blockerResolutions": 20,
+    "providerRfqItems": 18,
+    "buildTickets": 22,
+    "minutesFields": 14,
+    "publicStatusLines": 12,
+    "noGoArchiveRoutes": 12,
+    "ownerActions": 18,
+    "meetingRecords": 170,
+    "blockedBallots": 11,
+    "openCriticalResolutions": 6,
+    "readyProviderQuestions": 11,
+    "blockedBuildTickets": 8,
+    "readyPublicLines": 4
+  },
+  "sourceAnchors": [
+    {
+      "label": "Decidim first steps",
+      "url": "https://decidim.org/first-steps/"
+    },
+    {
+      "label": "Decidim GitHub example applications",
+      "url": "https://github.com/decidim/decidim#example-applications"
+    },
+    {
+      "label": "Decidim install overview",
+      "url": "https://docs.decidim.org/en/develop/install/index.html"
+    },
+    {
+      "label": "Decidim deployment docs",
+      "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+    },
+    {
+      "label": "Decidim authorizations",
+      "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+    },
+    {
+      "label": "Barayamal Toastmasters First Nations",
+      "url": "https://barayamal.com.au/toastmasters-first-nations/"
+    },
+    {
+      "label": "Toastmasters governing documents",
+      "url": "https://www.toastmasters.org/resources/governing-documents"
+    },
+    {
+      "label": "OAIC Notifiable Data Breaches",
+      "url": "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme"
+    },
+    {
+      "label": "AIATSIS ethical research",
+      "url": "https://aiatsis.gov.au/research/ethical-research"
+    },
+    {
+      "label": "v4.6 Controlled Pilot Execution Pack",
+      "url": "data/controlled-pilot-execution-pack-v4.6.json"
+    },
+    {
+      "label": "v4.7 Pilot Rehearsal Control Room",
+      "url": "data/pilot-rehearsal-control-room-package-v4.7.json"
+    },
+    {
+      "label": "Decidim deployment docs",
+      "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+    },
+    {
+      "label": "Decidim install checklist",
+      "url": "https://docs.decidim.org/en/develop/install/checklist.html"
+    },
+    {
+      "label": "v4.8 Pilot Decision and Build Handoff Room",
+      "url": "data/pilot-decision-build-handoff-package-v4.8.json"
+    }
+  ],
+  "localDecidimStatus": {
+    "git": "ready: git 2.53.0.windows.2 detected",
+    "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
+    "ruby": "blocked: not_installed",
+    "bundler": "blocked: not_installed",
+    "postgresqlClient": "blocked: psql_not_installed",
+    "docker": "hold: not_installed",
+    "node": "hold: v24.14.0 detected; Decidim develop docs currently list Node 22.14.x for manual setup",
+    "npm": "hold: 11.9.0 detected",
+    "imageMagick": "blocked: magick_not_installed",
+    "libVips": "blocked: vips_not_installed",
+    "browserTestTooling": "hold: Chromium/Playwright available through Codex tooling, not confirmed as project dependency",
+    "decidimApp": "blocked: no real Decidim app scaffold exists in this static package",
+    "result": "provider_assisted_sandbox_recommended_until_self_build_environment_is_prepared"
+  },
+  "meetingAgenda": [
+    {
+      "id": "MTG-001",
+      "order": "1",
+      "agendaItem": "Open private owner decision meeting",
+      "track": "Meeting",
+      "status": "Ready",
+      "chairPrompt": "Confirm private meeting, fake/sample-only scope, and no live approval by default.",
+      "requiredEvidence": "v4.9 pack and owner list.",
+      "meetingOutput": "Meeting opened with boundary readout."
+    },
+    {
+      "id": "MTG-002",
+      "order": "2",
+      "agendaItem": "Confirm quorum and authority coverage",
+      "track": "Authority",
+      "status": "Blocked",
+      "chairPrompt": "Check whether each critical owner is present or has delegated authority.",
+      "requiredEvidence": "Quorum checklist.",
+      "meetingOutput": "Quorum passed or decision held."
+    },
+    {
+      "id": "MTG-003",
+      "order": "3",
+      "agendaItem": "Accept v4.8 handoff evidence",
+      "track": "Evidence",
+      "status": "Ready",
+      "chairPrompt": "Confirm v4.8 evidence is adequate for meeting review.",
+      "requiredEvidence": "v4.8 package and evidence map.",
+      "meetingOutput": "Evidence accepted for discussion only."
+    },
+    {
+      "id": "MTG-004",
+      "order": "4",
+      "agendaItem": "Record Dean advisory input",
+      "track": "Dean review",
+      "status": "Ready",
+      "chairPrompt": "Record Dean comments as advisory input and route them to owners.",
+      "requiredEvidence": "Advisory comment register.",
+      "meetingOutput": "Advisory comments logged without approval power."
+    },
+    {
+      "id": "MTG-005",
+      "order": "5",
+      "agendaItem": "Authority vote",
+      "track": "Authority",
+      "status": "Blocked",
+      "chairPrompt": "Ask whether authority evidence supports the next lane.",
+      "requiredEvidence": "Private authority note.",
+      "meetingOutput": "Authority pass, hold, no, or abstain."
+    },
+    {
+      "id": "MTG-006",
+      "order": "6",
+      "agendaItem": "Privacy and consent vote",
+      "track": "Privacy",
+      "status": "Blocked",
+      "chairPrompt": "Ask whether notice, consent, withdrawal, retention, breach, and email locks are acceptable.",
+      "requiredEvidence": "Privacy review pack.",
+      "meetingOutput": "Privacy pass, hold, no, or abstain."
+    },
+    {
+      "id": "MTG-007",
+      "order": "7",
+      "agendaItem": "IDS/data governance vote",
+      "track": "IDS/data",
+      "status": "Blocked",
+      "chairPrompt": "Ask whether custody, export, delete, archive, and retention evidence is adequate.",
+      "requiredEvidence": "Lifecycle proof note.",
+      "meetingOutput": "IDS/data pass, hold, no, or abstain."
+    },
+    {
+      "id": "MTG-008",
+      "order": "8",
+      "agendaItem": "Support and safety vote",
+      "track": "Support",
+      "status": "Blocked",
+      "chairPrompt": "Ask whether pause, complaint, incident, and withdrawal paths are ready.",
+      "requiredEvidence": "Support drill record.",
+      "meetingOutput": "Support pass, hold, no, or abstain."
+    },
+    {
+      "id": "MTG-009",
+      "order": "9",
+      "agendaItem": "Official Toastmasters boundary vote",
+      "track": "FN Toastmasters",
+      "status": "Blocked",
+      "chairPrompt": "Confirm member, education, payment, election, and official record routes stay outside Decidim.",
+      "requiredEvidence": "Official-route boundary note.",
+      "meetingOutput": "Official-route pass, hold, no, or abstain."
+    },
+    {
+      "id": "MTG-010",
+      "order": "10",
+      "agendaItem": "Barayamal controlled sample vote",
+      "track": "Barayamal",
+      "status": "Hold",
+      "chairPrompt": "Decide whether Barayamal fake founder/business workflows can repeat or prepare privately.",
+      "requiredEvidence": "Barayamal sample note and minimisation review.",
+      "meetingOutput": "Barayamal lane decision."
+    },
+    {
+      "id": "MTG-011",
+      "order": "11",
+      "agendaItem": "Decidim build route decision",
+      "track": "Decidim build",
+      "status": "Hold",
+      "chairPrompt": "Choose provider-assisted sandbox RFQ, self-build dependency prep, hold, no-go, or archive.",
+      "requiredEvidence": "Technical handoff and local dependency status.",
+      "meetingOutput": "Build route decision."
+    },
+    {
+      "id": "MTG-012",
+      "order": "12",
+      "agendaItem": "Provider RFQ approval",
+      "track": "Provider",
+      "status": "Hold",
+      "chairPrompt": "Approve fake/sample-only RFQ questions and provider access boundaries.",
+      "requiredEvidence": "RFQ schedule.",
+      "meetingOutput": "RFQ approved, held, or blocked."
+    },
+    {
+      "id": "MTG-013",
+      "order": "13",
+      "agendaItem": "Implementation ticket import approval",
+      "track": "Build handoff",
+      "status": "Hold",
+      "chairPrompt": "Approve P0/P1 tickets that are safe to work with fake/sample data.",
+      "requiredEvidence": "Ticket import pack.",
+      "meetingOutput": "Ticket pack approved, held, or blocked."
+    },
+    {
+      "id": "MTG-014",
+      "order": "14",
+      "agendaItem": "Public status line approval",
+      "track": "Comms",
+      "status": "Ready",
+      "chairPrompt": "Approve public-safe status line or choose no update.",
+      "requiredEvidence": "Public status line register.",
+      "meetingOutput": "Public line approved or held."
+    },
+    {
+      "id": "MTG-015",
+      "order": "15",
+      "agendaItem": "No-go/archive route",
+      "track": "Closeout",
+      "status": "Ready",
+      "chairPrompt": "Confirm safe no-go/archive route remains available.",
+      "requiredEvidence": "Archive plan.",
+      "meetingOutput": "No-go/archive route accepted."
+    },
+    {
+      "id": "MTG-016",
+      "order": "16",
+      "agendaItem": "Close minutes and owner action register",
+      "track": "Meeting",
+      "status": "Hold",
+      "chairPrompt": "Record actions, blockers, due dates, and next meeting trigger.",
+      "requiredEvidence": "Minutes template and action register.",
+      "meetingOutput": "Private minutes and action register created."
+    }
+  ],
+  "ownerBallots": [
+    {
+      "id": "BAL-001",
+      "owner": "Authority chair",
+      "decision": "Real intake/live access authority",
+      "track": "Authority",
+      "voteStatus": "Blocked",
+      "vote": "No",
+      "conditions": "Private authority note must pass.",
+      "evidence": "Authority evidence.",
+      "cannotApprove": "Launch from public demo or advisory input."
+    },
+    {
+      "id": "BAL-002",
+      "owner": "Privacy reviewer",
+      "decision": "Consent, notice, withdrawal, and email lock",
+      "track": "Privacy",
+      "voteStatus": "Blocked",
+      "vote": "No",
+      "conditions": "Notice, consent, retention, email lock, and breach route must pass.",
+      "evidence": "Privacy review pack.",
+      "cannotApprove": "Any private invite before privacy pass."
+    },
+    {
+      "id": "BAL-003",
+      "owner": "IDS/data reviewer",
+      "decision": "Custody, export, delete, archive, retention",
+      "track": "IDS/data",
+      "voteStatus": "Blocked",
+      "vote": "No",
+      "conditions": "Lifecycle proof must pass with fake data.",
+      "evidence": "Data lifecycle proof.",
+      "cannotApprove": "Processing real data."
+    },
+    {
+      "id": "BAL-004",
+      "owner": "Support owner",
+      "decision": "Support, complaint, incident, pause, withdrawal",
+      "track": "Support",
+      "voteStatus": "Blocked",
+      "vote": "No",
+      "conditions": "Support drill must pass.",
+      "evidence": "Support drill.",
+      "cannotApprove": "Private invitations without support route."
+    },
+    {
+      "id": "BAL-005",
+      "owner": "Official-route owner",
+      "decision": "Official Toastmasters boundary",
+      "track": "FN Toastmasters",
+      "voteStatus": "Blocked",
+      "vote": "No",
+      "conditions": "Official systems remain primary and outside Decidim.",
+      "evidence": "Boundary note.",
+      "cannotApprove": "Official member, education, payment, election, or club record workflow."
+    },
+    {
+      "id": "BAL-006",
+      "owner": "Barayamal program operator",
+      "decision": "Barayamal fake/sample workflow",
+      "track": "Barayamal",
+      "voteStatus": "Hold",
+      "vote": "Hold",
+      "conditions": "Sensitive fields removed and owner accepts sample.",
+      "evidence": "Barayamal sample review.",
+      "cannotApprove": "Real founder intake."
+    },
+    {
+      "id": "BAL-007",
+      "owner": "Barayamal custodian",
+      "decision": "Founder/business data minimisation",
+      "track": "Barayamal",
+      "voteStatus": "Blocked",
+      "vote": "No",
+      "conditions": "Minimum field schedule must pass.",
+      "evidence": "Field schedule.",
+      "cannotApprove": "ABN, revenue, client, contact, grant, business-plan detail."
+    },
+    {
+      "id": "BAL-008",
+      "owner": "Training owner",
+      "decision": "Toastmasters guest-only fake workflow",
+      "track": "FN Toastmasters",
+      "voteStatus": "Hold",
+      "vote": "Hold",
+      "conditions": "Guest-only support route and boundary note needed.",
+      "evidence": "Guest workflow review.",
+      "cannotApprove": "Official member workflow."
+    },
+    {
+      "id": "BAL-009",
+      "owner": "Dean Foley / Barayamal",
+      "decision": "Advisory review",
+      "track": "Dean review",
+      "voteStatus": "Ready",
+      "vote": "Advisory",
+      "conditions": "Comments routed to owners.",
+      "evidence": "Advisory register.",
+      "cannotApprove": "Approving launch or owner gates."
+    },
+    {
+      "id": "BAL-010",
+      "owner": "Technical/admin custodian",
+      "decision": "Provider-assisted sandbox RFQ",
+      "track": "Provider",
+      "voteStatus": "Hold",
+      "vote": "Hold",
+      "conditions": "RFQ terms and access boundaries accepted.",
+      "evidence": "RFQ schedule.",
+      "cannotApprove": "Provider handling real data."
+    },
+    {
+      "id": "BAL-011",
+      "owner": "Technical/admin custodian",
+      "decision": "Self-build dependency preparation",
+      "track": "Decidim build",
+      "voteStatus": "Blocked",
+      "vote": "No",
+      "conditions": "Ruby, PostgreSQL, image tooling, app scaffold, backups, security must be prepared.",
+      "evidence": "Local dependency status.",
+      "cannotApprove": "Self-build sprint as live build."
+    },
+    {
+      "id": "BAL-012",
+      "owner": "Provider access owner",
+      "decision": "Provider access and exit terms",
+      "track": "Provider",
+      "voteStatus": "Hold",
+      "vote": "Hold",
+      "conditions": "Agreement covers least privilege, data, deletion, export, exit.",
+      "evidence": "Provider terms.",
+      "cannotApprove": "Provider access to private records."
+    },
+    {
+      "id": "BAL-013",
+      "owner": "Security reviewer",
+      "decision": "Secrets, logs, audit, monitoring",
+      "track": "Security",
+      "voteStatus": "Blocked",
+      "vote": "No",
+      "conditions": "Secrets/logs/monitoring path must pass.",
+      "evidence": "Security plan.",
+      "cannotApprove": "Credentials or logs in public or unmanaged provider access."
+    },
+    {
+      "id": "BAL-014",
+      "owner": "Accessibility reviewer",
+      "decision": "Mobile and accessibility acceptance",
+      "track": "QA",
+      "voteStatus": "Hold",
+      "vote": "Hold",
+      "conditions": "Critical flows need QA owner and checks.",
+      "evidence": "QA script.",
+      "cannotApprove": "Participant workflow without access checks."
+    },
+    {
+      "id": "BAL-015",
+      "owner": "Community admin trainer",
+      "decision": "Admin training and support handoff",
+      "track": "Training",
+      "voteStatus": "Hold",
+      "vote": "Hold",
+      "conditions": "Training script and escalation route ready.",
+      "evidence": "Training plan.",
+      "cannotApprove": "Live admin access without training."
+    },
+    {
+      "id": "BAL-016",
+      "owner": "Comms lead",
+      "decision": "Public status update",
+      "track": "Comms",
+      "voteStatus": "Ready",
+      "vote": "Yes",
+      "conditions": "Use approved fake/sample hold wording.",
+      "evidence": "Public status lines.",
+      "cannotApprove": "Public launch claim."
+    },
+    {
+      "id": "BAL-017",
+      "owner": "Closeout archivist",
+      "decision": "No-go/archive route",
+      "track": "Closeout",
+      "voteStatus": "Ready",
+      "vote": "Yes",
+      "conditions": "Archive status can be public-safe.",
+      "evidence": "Archive plan.",
+      "cannotApprove": "Publishing private reasons."
+    },
+    {
+      "id": "BAL-018",
+      "owner": "Finance/admin owner",
+      "decision": "Provider budget/procurement",
+      "track": "Provider",
+      "voteStatus": "Hold",
+      "vote": "Hold",
+      "conditions": "Budget cap and procurement route needed.",
+      "evidence": "RFQ response.",
+      "cannotApprove": "Open-ended provider spend."
+    },
+    {
+      "id": "BAL-019",
+      "owner": "Meeting chair",
+      "decision": "Meeting process completeness",
+      "track": "Meeting",
+      "voteStatus": "Hold",
+      "vote": "Hold",
+      "conditions": "Quorum, votes, blockers, minutes, actions complete.",
+      "evidence": "Minutes template.",
+      "cannotApprove": "Overriding blocked critical ballots."
+    },
+    {
+      "id": "BAL-020",
+      "owner": "Pilot owner",
+      "decision": "Ticket import readiness",
+      "track": "Build handoff",
+      "voteStatus": "Hold",
+      "vote": "Hold",
+      "conditions": "P0/P1 tickets have owners, blockers, acceptance.",
+      "evidence": "Ticket import pack.",
+      "cannotApprove": "Tickets implying live launch."
+    },
+    {
+      "id": "BAL-021",
+      "owner": "IDS/data reviewer",
+      "decision": "Backup/restore/delete evidence",
+      "track": "Decidim build",
+      "voteStatus": "Blocked",
+      "vote": "No",
+      "conditions": "Fake lifecycle proof must pass.",
+      "evidence": "Technical proof.",
+      "cannotApprove": "Real data before lifecycle pass."
+    },
+    {
+      "id": "BAL-022",
+      "owner": "Privacy reviewer",
+      "decision": "Outbound email safety",
+      "track": "Decidim build",
+      "voteStatus": "Blocked",
+      "vote": "No",
+      "conditions": "No real outbound email before consent.",
+      "evidence": "Email lock proof.",
+      "cannotApprove": "Accidental real invites."
+    },
+    {
+      "id": "BAL-023",
+      "owner": "Authority chair",
+      "decision": "Limited private pilot option",
+      "track": "Authority",
+      "voteStatus": "Blocked",
+      "vote": "No",
+      "conditions": "Every critical owner vote must pass first.",
+      "evidence": "Full vote register.",
+      "cannotApprove": "Limited pilot with any critical blocker open."
+    },
+    {
+      "id": "BAL-024",
+      "owner": "Meeting chair",
+      "decision": "Final route",
+      "track": "Meeting",
+      "voteStatus": "Hold",
+      "vote": "Hold",
+      "conditions": "Choose hold, repeat, RFQ, self-build prep, no-go, or archive.",
+      "evidence": "All ballots and blockers.",
+      "cannotApprove": "Silent approval or momentum launch."
+    }
+  ],
+  "quorumChecklist": [
+    {
+      "id": "QRM-001",
+      "check": "Authority owner present or delegated",
+      "owner": "Authority chair",
+      "status": "Blocked",
+      "evidence": "Private authority delegate note.",
+      "failResult": "Decision cannot approve real intake."
+    },
+    {
+      "id": "QRM-002",
+      "check": "Privacy owner present or delegated",
+      "owner": "Privacy reviewer",
+      "status": "Blocked",
+      "evidence": "Privacy delegate note.",
+      "failResult": "Private invite gate remains blocked."
+    },
+    {
+      "id": "QRM-003",
+      "check": "IDS/data owner present or delegated",
+      "owner": "IDS/data reviewer",
+      "status": "Blocked",
+      "evidence": "IDS/data delegate note.",
+      "failResult": "Real data processing blocked."
+    },
+    {
+      "id": "QRM-004",
+      "check": "Support owner present or delegated",
+      "owner": "Support owner",
+      "status": "Blocked",
+      "evidence": "Support delegate note.",
+      "failResult": "Private invite gate remains blocked."
+    },
+    {
+      "id": "QRM-005",
+      "check": "Official Toastmasters boundary owner present",
+      "owner": "Official-route owner",
+      "status": "Blocked",
+      "evidence": "Official-route note.",
+      "failResult": "Toastmasters member workflow blocked."
+    },
+    {
+      "id": "QRM-006",
+      "check": "Barayamal controlled sample owner present",
+      "owner": "Barayamal program operator",
+      "status": "Hold",
+      "evidence": "Barayamal sample note.",
+      "failResult": "Barayamal lane remains hold."
+    },
+    {
+      "id": "QRM-007",
+      "check": "Dean advisory input available",
+      "owner": "Dean Foley / Barayamal",
+      "status": "Ready",
+      "evidence": "Advisory register.",
+      "failResult": "Advisory input can be deferred."
+    },
+    {
+      "id": "QRM-008",
+      "check": "Technical/admin custodian present",
+      "owner": "Technical/admin custodian",
+      "status": "Hold",
+      "evidence": "Technical handoff.",
+      "failResult": "Build route held."
+    },
+    {
+      "id": "QRM-009",
+      "check": "Provider access owner present",
+      "owner": "Provider access owner",
+      "status": "Hold",
+      "evidence": "Provider access boundary.",
+      "failResult": "Provider RFQ held."
+    },
+    {
+      "id": "QRM-010",
+      "check": "Security reviewer present",
+      "owner": "Security reviewer",
+      "status": "Blocked",
+      "evidence": "Security plan.",
+      "failResult": "Build handoff held."
+    },
+    {
+      "id": "QRM-011",
+      "check": "Comms lead present",
+      "owner": "Comms lead",
+      "status": "Ready",
+      "evidence": "Public status lines.",
+      "failResult": "No public update."
+    },
+    {
+      "id": "QRM-012",
+      "check": "Closeout archivist present",
+      "owner": "Closeout archivist",
+      "status": "Ready",
+      "evidence": "Archive plan.",
+      "failResult": "No-go/archive wording held."
+    },
+    {
+      "id": "QRM-013",
+      "check": "Meeting chair and minutes keeper present",
+      "owner": "Meeting chair",
+      "status": "Ready",
+      "evidence": "Minutes template.",
+      "failResult": "Meeting cannot record formal outcome."
+    },
+    {
+      "id": "QRM-014",
+      "check": "Action owner list confirmed",
+      "owner": "Pilot owner",
+      "status": "Hold",
+      "evidence": "Owner action register.",
+      "failResult": "Actions remain unassigned."
+    }
+  ],
+  "blockerResolutionPlan": [
+    {
+      "id": "RES-001",
+      "blocker": "Authority route evidence missing.",
+      "severity": "Critical",
+      "status": "Open",
+      "owner": "Authority chair",
+      "resolutionMotion": "Hold all real intake until authority note passes.",
+      "closeTest": "Authority note accepted.",
+      "fallback": "No-go/archive or repeat prep."
+    },
+    {
+      "id": "RES-002",
+      "blocker": "Consent notice not accepted.",
+      "severity": "Critical",
+      "status": "Open",
+      "owner": "Privacy reviewer",
+      "resolutionMotion": "Hold private invitations until notice passes.",
+      "closeTest": "Notice and withdrawal route accepted.",
+      "fallback": "Repeat fake-data only."
+    },
+    {
+      "id": "RES-003",
+      "blocker": "IDS/data lifecycle proof incomplete.",
+      "severity": "Critical",
+      "status": "Open",
+      "owner": "IDS/data reviewer",
+      "resolutionMotion": "Hold real data processing until export/delete/archive proof passes.",
+      "closeTest": "Lifecycle proof accepted.",
+      "fallback": "Provider RFQ asks lifecycle evidence."
+    },
+    {
+      "id": "RES-004",
+      "blocker": "Support route not drilled.",
+      "severity": "Critical",
+      "status": "Open",
+      "owner": "Support owner",
+      "resolutionMotion": "Hold private invitations until support drill passes.",
+      "closeTest": "Support drill accepted.",
+      "fallback": "No participant-facing activity."
+    },
+    {
+      "id": "RES-005",
+      "blocker": "Official Toastmasters boundary unresolved.",
+      "severity": "Critical",
+      "status": "Open",
+      "owner": "Official-route owner",
+      "resolutionMotion": "Keep member/official workflows out of Decidim.",
+      "closeTest": "Boundary note accepted.",
+      "fallback": "Guest-only fake rehearsal only."
+    },
+    {
+      "id": "RES-006",
+      "blocker": "Email invite lock not proven.",
+      "severity": "Critical",
+      "status": "Open",
+      "owner": "Privacy reviewer",
+      "resolutionMotion": "Block any private Decidim invite until email lock passes.",
+      "closeTest": "No real outbound email can send.",
+      "fallback": "Static demo only."
+    },
+    {
+      "id": "RES-007",
+      "blocker": "Self-build dependencies missing.",
+      "severity": "High",
+      "status": "Open",
+      "owner": "Technical/admin custodian",
+      "resolutionMotion": "Use provider-assisted RFQ or prepare dependencies before self-build.",
+      "closeTest": "Dependency plan or provider route chosen.",
+      "fallback": "Hold build."
+    },
+    {
+      "id": "RES-008",
+      "blocker": "Backup/restore/delete proof not run.",
+      "severity": "High",
+      "status": "Open",
+      "owner": "Technical/admin custodian",
+      "resolutionMotion": "Require fake lifecycle proof in RFQ/build tickets.",
+      "closeTest": "Proof passes.",
+      "fallback": "No real data."
+    },
+    {
+      "id": "RES-009",
+      "blocker": "Provider access terms not drafted.",
+      "severity": "High",
+      "status": "Open",
+      "owner": "Provider access owner",
+      "resolutionMotion": "RFQ must include access, deletion, export, exit, support.",
+      "closeTest": "Provider terms accepted.",
+      "fallback": "No provider access."
+    },
+    {
+      "id": "RES-010",
+      "blocker": "Security monitoring and secrets path missing.",
+      "severity": "High",
+      "status": "Open",
+      "owner": "Security reviewer",
+      "resolutionMotion": "Hold build until secrets/logs/monitoring plan exists.",
+      "closeTest": "Security plan accepted.",
+      "fallback": "No live app."
+    },
+    {
+      "id": "RES-011",
+      "blocker": "Barayamal sensitive field schedule blocked.",
+      "severity": "High",
+      "status": "Open",
+      "owner": "Barayamal custodian",
+      "resolutionMotion": "Remove sensitive fields before any Barayamal private prep.",
+      "closeTest": "Minimum field schedule passes.",
+      "fallback": "Fake sample only."
+    },
+    {
+      "id": "RES-012",
+      "blocker": "Toastmasters feedback support route incomplete.",
+      "severity": "High",
+      "status": "Open",
+      "owner": "Support owner",
+      "resolutionMotion": "Separate feedback, support, complaint, incident routing.",
+      "closeTest": "Support route passes.",
+      "fallback": "No guest workflow."
+    },
+    {
+      "id": "RES-013",
+      "blocker": "Admin training not scheduled.",
+      "severity": "Medium",
+      "status": "Open",
+      "owner": "Community admin trainer",
+      "resolutionMotion": "Schedule admin training before admin access.",
+      "closeTest": "Training date and script accepted.",
+      "fallback": "No admin handoff."
+    },
+    {
+      "id": "RES-014",
+      "blocker": "Mobile/accessibility QA owner not assigned.",
+      "severity": "Medium",
+      "status": "Open",
+      "owner": "Accessibility reviewer",
+      "resolutionMotion": "Assign QA owner and acceptance script.",
+      "closeTest": "QA script accepted.",
+      "fallback": "No participant workflow."
+    },
+    {
+      "id": "RES-015",
+      "blocker": "Ticket priority review incomplete.",
+      "severity": "Medium",
+      "status": "Open",
+      "owner": "Pilot owner",
+      "resolutionMotion": "Review P0/P1 ticket scope.",
+      "closeTest": "Tickets owner-routed.",
+      "fallback": "Manual backlog only."
+    },
+    {
+      "id": "RES-016",
+      "blocker": "GitHub import scope limited.",
+      "severity": "Medium",
+      "status": "Open",
+      "owner": "Technical/admin custodian",
+      "resolutionMotion": "Manual import or update GitHub auth scope.",
+      "closeTest": "Tickets can be imported or manually created.",
+      "fallback": "CSV handoff only."
+    },
+    {
+      "id": "RES-017",
+      "blocker": "Public wording could imply approval.",
+      "severity": "Medium",
+      "status": "Ready",
+      "owner": "Comms lead",
+      "resolutionMotion": "Use approved v4.9 hold language.",
+      "closeTest": "Public line reviewed.",
+      "fallback": "No public update."
+    },
+    {
+      "id": "RES-018",
+      "blocker": "No-go/archive date missing.",
+      "severity": "Low",
+      "status": "Ready",
+      "owner": "Closeout archivist",
+      "resolutionMotion": "Add meeting date to archive line.",
+      "closeTest": "Archive line dated.",
+      "fallback": "Hold archive update."
+    },
+    {
+      "id": "RES-019",
+      "blocker": "Dean comments need owner routing.",
+      "severity": "Medium",
+      "status": "Ready",
+      "owner": "Pilot owner",
+      "resolutionMotion": "Turn comments into owner tasks only.",
+      "closeTest": "Tasks created.",
+      "fallback": "Hold advisory comments."
+    },
+    {
+      "id": "RES-020",
+      "blocker": "Minutes cannot include private evidence in public package.",
+      "severity": "High",
+      "status": "Ready",
+      "owner": "Meeting chair",
+      "resolutionMotion": "Keep minutes private and publish only status line.",
+      "closeTest": "Public/private boundary passes.",
+      "fallback": "No public minutes."
+    }
+  ],
+  "providerRfq": [
+    {
+      "id": "RFQ-001",
+      "question": "Can you host a Decidim sandbox with fake/sample data only?",
+      "category": "Scope",
+      "priority": "P0",
+      "status": "Ready",
+      "mustAsk": "Yes",
+      "acceptableAnswer": "Explicit fake/sample sandbox boundary.",
+      "redFlag": "Provider assumes real participant launch."
+    },
+    {
+      "id": "RFQ-002",
+      "question": "What Decidim version and hosting architecture do you recommend?",
+      "category": "Hosting",
+      "priority": "P0",
+      "status": "Ready",
+      "mustAsk": "Yes",
+      "acceptableAnswer": "Version, runtime, database, storage, workers, monitoring described.",
+      "redFlag": "Vague stack."
+    },
+    {
+      "id": "RFQ-003",
+      "question": "How will outbound email be locked before consent approval?",
+      "category": "Privacy",
+      "priority": "P0",
+      "status": "Ready",
+      "mustAsk": "Yes",
+      "acceptableAnswer": "Email sandbox or disabled outbound mail.",
+      "redFlag": "Real invites can send."
+    },
+    {
+      "id": "RFQ-004",
+      "question": "How will backups, restore, export, delete, and archive be proven?",
+      "category": "IDS/data",
+      "priority": "P0",
+      "status": "Ready",
+      "mustAsk": "Yes",
+      "acceptableAnswer": "Fake-data lifecycle proof included.",
+      "redFlag": "No deletion/export proof."
+    },
+    {
+      "id": "RFQ-005",
+      "question": "How will role provisioning and revoke proof be shown?",
+      "category": "Access",
+      "priority": "P0",
+      "status": "Ready",
+      "mustAsk": "Yes",
+      "acceptableAnswer": "Least-privilege roles and revoke evidence.",
+      "redFlag": "Shared admin accounts."
+    },
+    {
+      "id": "RFQ-006",
+      "question": "How will logs, credentials, and secrets be protected?",
+      "category": "Security",
+      "priority": "P0",
+      "status": "Ready",
+      "mustAsk": "Yes",
+      "acceptableAnswer": "Secrets not in repo/logs/public package.",
+      "redFlag": "Credentials in email/docs."
+    },
+    {
+      "id": "RFQ-007",
+      "question": "What is the provider exit and data deletion process?",
+      "category": "Exit",
+      "priority": "P0",
+      "status": "Ready",
+      "mustAsk": "Yes",
+      "acceptableAnswer": "Export, delete, archive, and access revocation terms.",
+      "redFlag": "Lock-in without export."
+    },
+    {
+      "id": "RFQ-008",
+      "question": "Can Barayamal sample workflows be configured without sensitive business fields?",
+      "category": "Barayamal",
+      "priority": "P0",
+      "status": "Ready",
+      "mustAsk": "Yes",
+      "acceptableAnswer": "Minimum fake/sample fields only.",
+      "redFlag": "Requests ABN/revenue/contact/client data."
+    },
+    {
+      "id": "RFQ-009",
+      "question": "Can Toastmasters guest-only workflows stay separate from official member systems?",
+      "category": "FN Toastmasters",
+      "priority": "P0",
+      "status": "Ready",
+      "mustAsk": "Yes",
+      "acceptableAnswer": "Guest-only sample scope.",
+      "redFlag": "Claims to replace official Toastmasters systems."
+    },
+    {
+      "id": "RFQ-010",
+      "question": "Can offline meeting import be tested with fake/sample records?",
+      "category": "Features",
+      "priority": "P1",
+      "status": "Hold",
+      "mustAsk": "Yes",
+      "acceptableAnswer": "CSV/import option or manual workflow described.",
+      "redFlag": "Requires real records."
+    },
+    {
+      "id": "RFQ-011",
+      "question": "Can admin training be included?",
+      "category": "Training",
+      "priority": "P1",
+      "status": "Hold",
+      "mustAsk": "Yes",
+      "acceptableAnswer": "Training session and handover docs included.",
+      "redFlag": "No handover support."
+    },
+    {
+      "id": "RFQ-012",
+      "question": "Can accessibility/mobile QA be included?",
+      "category": "QA",
+      "priority": "P1",
+      "status": "Hold",
+      "mustAsk": "Yes",
+      "acceptableAnswer": "Viewport and keyboard/screen reader checks included.",
+      "redFlag": "No QA scope."
+    },
+    {
+      "id": "RFQ-013",
+      "question": "What support response time is available during sandbox?",
+      "category": "Support",
+      "priority": "P1",
+      "status": "Hold",
+      "mustAsk": "Yes",
+      "acceptableAnswer": "Support hours and escalation path.",
+      "redFlag": "No support route."
+    },
+    {
+      "id": "RFQ-014",
+      "question": "What is the cost cap and cancellation process?",
+      "category": "Finance",
+      "priority": "P1",
+      "status": "Hold",
+      "mustAsk": "Yes",
+      "acceptableAnswer": "Clear cost, cancellation, no hidden production fees.",
+      "redFlag": "Open-ended costs."
+    },
+    {
+      "id": "RFQ-015",
+      "question": "Can all work proceed without real community records?",
+      "category": "Data boundary",
+      "priority": "P0",
+      "status": "Ready",
+      "mustAsk": "Yes",
+      "acceptableAnswer": "Fake/sample-only commitment.",
+      "redFlag": "Requires real data."
+    },
+    {
+      "id": "RFQ-016",
+      "question": "How will public/private evidence boundaries be maintained?",
+      "category": "Comms",
+      "priority": "P1",
+      "status": "Hold",
+      "mustAsk": "Yes",
+      "acceptableAnswer": "Private evidence remains private; public-safe summaries only.",
+      "redFlag": "Provider publishes private evidence."
+    },
+    {
+      "id": "RFQ-017",
+      "question": "Can the sandbox be archived or destroyed after no-go?",
+      "category": "Closeout",
+      "priority": "P1",
+      "status": "Hold",
+      "mustAsk": "Yes",
+      "acceptableAnswer": "Archive/destroy procedure.",
+      "redFlag": "No closure path."
+    },
+    {
+      "id": "RFQ-018",
+      "question": "Can provider access be least-privilege and time-limited?",
+      "category": "Access",
+      "priority": "P0",
+      "status": "Ready",
+      "mustAsk": "Yes",
+      "acceptableAnswer": "Named users, time limit, revocation.",
+      "redFlag": "Broad standing access."
+    }
+  ],
+  "buildTicketImport": [
+    {
+      "id": "GHI-001",
+      "title": "Create private Decidim app repository",
+      "track": "Repository",
+      "priority": "P0",
+      "status": "Hold",
+      "owner": "Technical/admin custodian",
+      "acceptance": "Private repo and maintainer list created.",
+      "blockedBy": "Owner access list."
+    },
+    {
+      "id": "GHI-002",
+      "title": "Prepare provider-assisted sandbox RFQ",
+      "track": "Provider",
+      "priority": "P0",
+      "status": "Ready",
+      "owner": "Provider access owner",
+      "acceptance": "RFQ packet approved for fake/sample scope.",
+      "blockedBy": "RFQ owner vote."
+    },
+    {
+      "id": "GHI-003",
+      "title": "Document self-build dependency gap",
+      "track": "Runtime",
+      "priority": "P0",
+      "status": "Ready",
+      "owner": "Technical/admin custodian",
+      "acceptance": "Ruby/PostgreSQL/image/app scaffold gaps documented.",
+      "blockedBy": "None."
+    },
+    {
+      "id": "GHI-004",
+      "title": "Prove outbound email lock",
+      "track": "Privacy",
+      "priority": "P0",
+      "status": "Blocked",
+      "owner": "Privacy reviewer",
+      "acceptance": "No real email can send.",
+      "blockedBy": "RES-006."
+    },
+    {
+      "id": "GHI-005",
+      "title": "Create fake seed import script",
+      "track": "Data",
+      "priority": "P0",
+      "status": "Ready",
+      "owner": "Pilot owner",
+      "acceptance": "Fake records import and can be wiped.",
+      "blockedBy": "None."
+    },
+    {
+      "id": "GHI-006",
+      "title": "Run fake role assignment and revoke proof",
+      "track": "Access",
+      "priority": "P0",
+      "status": "Hold",
+      "owner": "Technical/admin custodian",
+      "acceptance": "Revoked fake account loses access.",
+      "blockedBy": "RES-008/Access owner."
+    },
+    {
+      "id": "GHI-007",
+      "title": "Run fake export/delete/archive proof",
+      "track": "IDS/data",
+      "priority": "P0",
+      "status": "Blocked",
+      "owner": "IDS/data reviewer",
+      "acceptance": "Lifecycle proof accepted.",
+      "blockedBy": "RES-003."
+    },
+    {
+      "id": "GHI-008",
+      "title": "Draft provider access terms",
+      "track": "Provider",
+      "priority": "P0",
+      "status": "Hold",
+      "owner": "Provider access owner",
+      "acceptance": "Terms cover access, deletion, export, exit.",
+      "blockedBy": "RES-009."
+    },
+    {
+      "id": "GHI-009",
+      "title": "Create Barayamal minimum field schedule",
+      "track": "Barayamal",
+      "priority": "P0",
+      "status": "Blocked",
+      "owner": "Barayamal custodian",
+      "acceptance": "Sensitive fields removed.",
+      "blockedBy": "RES-011."
+    },
+    {
+      "id": "GHI-010",
+      "title": "Create Toastmasters official-route boundary note",
+      "track": "FN Toastmasters",
+      "priority": "P0",
+      "status": "Blocked",
+      "owner": "Official-route owner",
+      "acceptance": "Official systems stay outside Decidim.",
+      "blockedBy": "RES-005."
+    },
+    {
+      "id": "GHI-011",
+      "title": "Write support/pause/withdrawal drill",
+      "track": "Support",
+      "priority": "P0",
+      "status": "Blocked",
+      "owner": "Support owner",
+      "acceptance": "Support drill passes.",
+      "blockedBy": "RES-004."
+    },
+    {
+      "id": "GHI-012",
+      "title": "Write privacy notice and consent text",
+      "track": "Privacy",
+      "priority": "P0",
+      "status": "Blocked",
+      "owner": "Privacy reviewer",
+      "acceptance": "Notice accepted privately.",
+      "blockedBy": "RES-002."
+    },
+    {
+      "id": "GHI-013",
+      "title": "Prepare public-safe status update",
+      "track": "Comms",
+      "priority": "P1",
+      "status": "Ready",
+      "owner": "Comms lead",
+      "acceptance": "Text says decision/build prep only.",
+      "blockedBy": "Comms review."
+    },
+    {
+      "id": "GHI-014",
+      "title": "Set secrets, logs, and monitoring policy",
+      "track": "Security",
+      "priority": "P0",
+      "status": "Blocked",
+      "owner": "Security reviewer",
+      "acceptance": "No secrets public; monitoring route documented.",
+      "blockedBy": "RES-010."
+    },
+    {
+      "id": "GHI-015",
+      "title": "Prepare admin training handoff",
+      "track": "Training",
+      "priority": "P1",
+      "status": "Hold",
+      "owner": "Community admin trainer",
+      "acceptance": "Fake admin can complete key tasks.",
+      "blockedBy": "RES-013."
+    },
+    {
+      "id": "GHI-016",
+      "title": "Create mobile/accessibility QA script",
+      "track": "QA",
+      "priority": "P1",
+      "status": "Hold",
+      "owner": "Accessibility reviewer",
+      "acceptance": "Critical flows pass mobile/access checks.",
+      "blockedBy": "RES-014."
+    },
+    {
+      "id": "GHI-017",
+      "title": "Prepare no-go/archive public line",
+      "track": "Closeout",
+      "priority": "P1",
+      "status": "Ready",
+      "owner": "Closeout archivist",
+      "acceptance": "Archive/no-go can be public-safe.",
+      "blockedBy": "RES-018."
+    },
+    {
+      "id": "GHI-018",
+      "title": "Bundle private owner meeting minutes",
+      "track": "Meeting",
+      "priority": "P0",
+      "status": "Hold",
+      "owner": "Meeting chair",
+      "acceptance": "Private minutes record ballots and actions.",
+      "blockedBy": "Quorum and blockers."
+    },
+    {
+      "id": "GHI-019",
+      "title": "Create implementation action register",
+      "track": "Meeting",
+      "priority": "P0",
+      "status": "Ready",
+      "owner": "Pilot owner",
+      "acceptance": "Every action has owner, due date, blocker, next check.",
+      "blockedBy": "None."
+    },
+    {
+      "id": "GHI-020",
+      "title": "Prepare manual GitHub issue import fallback",
+      "track": "Build handoff",
+      "priority": "P1",
+      "status": "Ready",
+      "owner": "Technical/admin custodian",
+      "acceptance": "Tickets can be created manually if auth scope is limited.",
+      "blockedBy": "None."
+    },
+    {
+      "id": "GHI-021",
+      "title": "Draft provider sandbox acceptance checklist",
+      "track": "Provider",
+      "priority": "P0",
+      "status": "Hold",
+      "owner": "Provider access owner",
+      "acceptance": "Acceptance covers email, access, backups, delete, exit.",
+      "blockedBy": "RFQ response."
+    },
+    {
+      "id": "GHI-022",
+      "title": "Create limited private pilot preconditions checklist",
+      "track": "Authority",
+      "priority": "P0",
+      "status": "Blocked",
+      "owner": "Authority chair",
+      "acceptance": "All critical ballots pass before private pilot option.",
+      "blockedBy": "BAL-001/BAL-023."
+    }
+  ],
+  "minutesTemplate": [
+    {
+      "id": "MIN-001",
+      "minutesField": "Meeting date and attendees",
+      "status": "Ready",
+      "owner": "Meeting chair",
+      "instructions": "Record private attendees and roles.",
+      "publicBoundary": "Publish count only."
+    },
+    {
+      "id": "MIN-002",
+      "minutesField": "Boundary readout",
+      "status": "Ready",
+      "owner": "Meeting chair",
+      "instructions": "Record fake/sample-only statement.",
+      "publicBoundary": "Public status can repeat boundary."
+    },
+    {
+      "id": "MIN-003",
+      "minutesField": "Quorum result",
+      "status": "Hold",
+      "owner": "Meeting chair",
+      "instructions": "Record passed/held/blocked quorum.",
+      "publicBoundary": "Status only."
+    },
+    {
+      "id": "MIN-004",
+      "minutesField": "Dean advisory summary",
+      "status": "Ready",
+      "owner": "Pilot owner",
+      "instructions": "Record advisory themes and task routing.",
+      "publicBoundary": "No private comments."
+    },
+    {
+      "id": "MIN-005",
+      "minutesField": "Owner ballots",
+      "status": "Hold",
+      "owner": "Meeting chair",
+      "instructions": "Record each vote, conditions, evidence, and cannot-approve boundary.",
+      "publicBoundary": "Aggregate status only."
+    },
+    {
+      "id": "MIN-006",
+      "minutesField": "Critical blocker decisions",
+      "status": "Hold",
+      "owner": "Meeting chair",
+      "instructions": "Record closure, hold, no-go, or archive decisions.",
+      "publicBoundary": "No private reasons."
+    },
+    {
+      "id": "MIN-007",
+      "minutesField": "Provider RFQ decision",
+      "status": "Hold",
+      "owner": "Provider access owner",
+      "instructions": "Record RFQ approval, held questions, and access boundaries.",
+      "publicBoundary": "Status only."
+    },
+    {
+      "id": "MIN-008",
+      "minutesField": "Build ticket decision",
+      "status": "Hold",
+      "owner": "Pilot owner",
+      "instructions": "Record approved, held, and blocked tickets.",
+      "publicBoundary": "Ticket titles only if public-safe."
+    },
+    {
+      "id": "MIN-009",
+      "minutesField": "Public status line",
+      "status": "Ready",
+      "owner": "Comms lead",
+      "instructions": "Record approved line or no-update decision.",
+      "publicBoundary": "Approved line only."
+    },
+    {
+      "id": "MIN-010",
+      "minutesField": "No-go/archive option",
+      "status": "Ready",
+      "owner": "Closeout archivist",
+      "instructions": "Record whether no-go/archive remains open.",
+      "publicBoundary": "Public-safe archive line only."
+    },
+    {
+      "id": "MIN-011",
+      "minutesField": "Action register",
+      "status": "Hold",
+      "owner": "Pilot owner",
+      "instructions": "Record owner, due date, blocker, next check.",
+      "publicBoundary": "Status only."
+    },
+    {
+      "id": "MIN-012",
+      "minutesField": "Private evidence custody",
+      "status": "Blocked",
+      "owner": "IDS/data reviewer",
+      "instructions": "Record where private evidence is held.",
+      "publicBoundary": "Never public."
+    },
+    {
+      "id": "MIN-013",
+      "minutesField": "Next meeting trigger",
+      "status": "Hold",
+      "owner": "Meeting chair",
+      "instructions": "Record what must happen before reconvening.",
+      "publicBoundary": "Public-safe milestone only."
+    },
+    {
+      "id": "MIN-014",
+      "minutesField": "Final route",
+      "status": "Hold",
+      "owner": "Meeting chair",
+      "instructions": "Record hold, repeat, RFQ, self-build prep, no-go, or archive.",
+      "publicBoundary": "Public outcome line only."
+    }
+  ],
+  "publicStatusLines": [
+    {
+      "id": "PUB-001",
+      "scenario": "Default v4.9 status",
+      "status": "Ready",
+      "approvedLine": "The project is in controlled private decision and build preparation using fake/sample data only.",
+      "doNotSay": "The pilot has launched.",
+      "owner": "Comms lead"
+    },
+    {
+      "id": "PUB-002",
+      "scenario": "Owner meeting scheduled",
+      "status": "Hold",
+      "approvedLine": "A private owner decision meeting is being prepared.",
+      "doNotSay": "Owners have approved live launch.",
+      "owner": "Meeting chair"
+    },
+    {
+      "id": "PUB-003",
+      "scenario": "Owner meeting held but blockers remain",
+      "status": "Ready",
+      "approvedLine": "The project remains in preparation while private blockers are reviewed.",
+      "doNotSay": "Blocker details or owner names.",
+      "owner": "Comms lead"
+    },
+    {
+      "id": "PUB-004",
+      "scenario": "Provider RFQ approved",
+      "status": "Hold",
+      "approvedLine": "A fake/sample Decidim sandbox build route is under private review.",
+      "doNotSay": "A provider has access to real data.",
+      "owner": "Provider access owner"
+    },
+    {
+      "id": "PUB-005",
+      "scenario": "Self-build prep chosen",
+      "status": "Hold",
+      "approvedLine": "Self-build prerequisites are being reviewed before any live Decidim access.",
+      "doNotSay": "A live app is ready.",
+      "owner": "Technical/admin custodian"
+    },
+    {
+      "id": "PUB-006",
+      "scenario": "Barayamal lane repeats",
+      "status": "Hold",
+      "approvedLine": "Barayamal sample preparation continues with fake/sample records only.",
+      "doNotSay": "Real founder applications are open.",
+      "owner": "Barayamal program operator"
+    },
+    {
+      "id": "PUB-007",
+      "scenario": "Toastmasters guest-only lane repeats",
+      "status": "Hold",
+      "approvedLine": "Guest-only sample preparation continues with official Toastmasters systems remaining separate.",
+      "doNotSay": "Official Toastmasters records are in Decidim.",
+      "owner": "Training owner"
+    },
+    {
+      "id": "PUB-008",
+      "scenario": "No-go",
+      "status": "Available",
+      "approvedLine": "The project will not proceed at this time; the public demo remains a learning artefact.",
+      "doNotSay": "Private reasons, names, or evidence.",
+      "owner": "Closeout archivist"
+    },
+    {
+      "id": "PUB-009",
+      "scenario": "Archive public-demo-only",
+      "status": "Available",
+      "approvedLine": "The public fake/sample demo remains available as a learning artefact.",
+      "doNotSay": "Private archive contents.",
+      "owner": "Closeout archivist"
+    },
+    {
+      "id": "PUB-010",
+      "scenario": "Limited private pilot not approved",
+      "status": "Ready",
+      "approvedLine": "No limited private pilot has been approved.",
+      "doNotSay": "Applications are open.",
+      "owner": "Authority chair"
+    },
+    {
+      "id": "PUB-011",
+      "scenario": "Public update held",
+      "status": "Ready",
+      "approvedLine": "No public update will be issued until private wording is approved.",
+      "doNotSay": "Silence means approval.",
+      "owner": "Comms lead"
+    },
+    {
+      "id": "PUB-012",
+      "scenario": "Future decision",
+      "status": "Hold",
+      "approvedLine": "A further private decision will be made after critical owner votes and blockers are reviewed.",
+      "doNotSay": "Launch date promised.",
+      "owner": "Meeting chair"
+    }
+  ],
+  "noGoArchivePlan": [
+    {
+      "id": "NGA-001",
+      "route": "Hold and fix blockers",
+      "status": "Available",
+      "whenToUse": "Any critical ballot remains blocked.",
+      "owner": "Meeting chair",
+      "publicOutput": "Preparation remains in progress.",
+      "privateHandling": "Private blocker plan."
+    },
+    {
+      "id": "NGA-002",
+      "route": "Repeat fake/sample owner meeting",
+      "status": "Available",
+      "whenToUse": "Owners need more evidence or revised wording.",
+      "owner": "Meeting chair",
+      "publicOutput": "A further private review is planned.",
+      "privateHandling": "Private minutes."
+    },
+    {
+      "id": "NGA-003",
+      "route": "Provider RFQ only",
+      "status": "Hold",
+      "whenToUse": "Build route can be explored safely with fake/sample scope.",
+      "owner": "Provider access owner",
+      "publicOutput": "Build route under private review.",
+      "privateHandling": "RFQ responses private."
+    },
+    {
+      "id": "NGA-004",
+      "route": "Self-build dependency prep only",
+      "status": "Hold",
+      "whenToUse": "Self-build dependencies need preparation before app scaffold.",
+      "owner": "Technical/admin custodian",
+      "publicOutput": "Self-build prerequisites are being reviewed.",
+      "privateHandling": "Environment evidence private."
+    },
+    {
+      "id": "NGA-005",
+      "route": "Barayamal-only sample repeat",
+      "status": "Hold",
+      "whenToUse": "Barayamal sample is useful but other lanes blocked.",
+      "owner": "Barayamal program operator",
+      "publicOutput": "Barayamal sample preparation continues.",
+      "privateHandling": "Business-sensitive details private."
+    },
+    {
+      "id": "NGA-006",
+      "route": "Toastmasters guest-only sample repeat",
+      "status": "Hold",
+      "whenToUse": "Guest-only lane needs another fake rehearsal.",
+      "owner": "Training owner",
+      "publicOutput": "Guest-only sample preparation continues.",
+      "privateHandling": "Official records remain outside Decidim."
+    },
+    {
+      "id": "NGA-007",
+      "route": "Limited private pilot",
+      "status": "Blocked",
+      "whenToUse": "All critical owner ballots pass privately.",
+      "owner": "Authority chair",
+      "publicOutput": "Limited private pilot approved only if owners approve wording.",
+      "privateHandling": "Private decision record."
+    },
+    {
+      "id": "NGA-008",
+      "route": "No-go",
+      "status": "Available",
+      "whenToUse": "Authority, privacy, support, IDS/data, official-route, security, or provider risk cannot be resolved.",
+      "owner": "Meeting chair",
+      "publicOutput": "Project will not proceed at this time.",
+      "privateHandling": "Private reasons stay private."
+    },
+    {
+      "id": "NGA-009",
+      "route": "Archive public-demo-only",
+      "status": "Available",
+      "whenToUse": "Demo remains useful but real pilot is inappropriate now.",
+      "owner": "Closeout archivist",
+      "publicOutput": "Public demo remains a learning artefact.",
+      "privateHandling": "Private evidence archived separately."
+    },
+    {
+      "id": "NGA-010",
+      "route": "Pause pending official Toastmasters boundary",
+      "status": "Available",
+      "whenToUse": "Official-route owner cannot pass boundary.",
+      "owner": "Official-route owner",
+      "publicOutput": "Toastmasters official workflows are not open.",
+      "privateHandling": "Official correspondence private."
+    },
+    {
+      "id": "NGA-011",
+      "route": "Pause pending data governance",
+      "status": "Available",
+      "whenToUse": "IDS/data or privacy proof remains blocked.",
+      "owner": "IDS/data reviewer",
+      "publicOutput": "Data governance review continues privately.",
+      "privateHandling": "Data evidence private."
+    },
+    {
+      "id": "NGA-012",
+      "route": "Close public update",
+      "status": "Ready",
+      "whenToUse": "No public-safe line can be approved.",
+      "owner": "Comms lead",
+      "publicOutput": "No public update issued.",
+      "privateHandling": "Private minutes only."
+    }
+  ],
+  "ownerActionRegister": [
+    {
+      "id": "ACT49-001",
+      "action": "Prepare private authority note.",
+      "owner": "Authority chair",
+      "priority": "P0",
+      "status": "Blocked",
+      "dueTrigger": "Before next owner meeting.",
+      "input": "Authority evidence gap.",
+      "output": "Authority pass/hold/no note."
+    },
+    {
+      "id": "ACT49-002",
+      "action": "Revise privacy notice and withdrawal wording.",
+      "owner": "Privacy reviewer",
+      "priority": "P0",
+      "status": "Blocked",
+      "dueTrigger": "Before any private invite.",
+      "input": "Privacy blocker.",
+      "output": "Approved notice or hold."
+    },
+    {
+      "id": "ACT49-003",
+      "action": "Run IDS/data lifecycle proof.",
+      "owner": "IDS/data reviewer",
+      "priority": "P0",
+      "status": "Blocked",
+      "dueTrigger": "Before any real data processing.",
+      "input": "Lifecycle blocker.",
+      "output": "Export/delete/archive proof."
+    },
+    {
+      "id": "ACT49-004",
+      "action": "Run support route drill.",
+      "owner": "Support owner",
+      "priority": "P0",
+      "status": "Blocked",
+      "dueTrigger": "Before private invite.",
+      "input": "Support blocker.",
+      "output": "Support drill pass/hold."
+    },
+    {
+      "id": "ACT49-005",
+      "action": "Request official Toastmasters boundary note.",
+      "owner": "Official-route owner",
+      "priority": "P0",
+      "status": "Blocked",
+      "dueTrigger": "Before Toastmasters member-adjacent lane.",
+      "input": "Official-route blocker.",
+      "output": "Boundary pass/hold/no."
+    },
+    {
+      "id": "ACT49-006",
+      "action": "Approve Barayamal minimum field schedule.",
+      "owner": "Barayamal custodian",
+      "priority": "P0",
+      "status": "Blocked",
+      "dueTrigger": "Before Barayamal private prep.",
+      "input": "Sensitive field blocker.",
+      "output": "Minimum field schedule."
+    },
+    {
+      "id": "ACT49-007",
+      "action": "Prepare provider RFQ packet.",
+      "owner": "Provider access owner",
+      "priority": "P0",
+      "status": "Ready",
+      "dueTrigger": "After meeting chair approves RFQ route.",
+      "input": "RFQ table.",
+      "output": "Provider request pack."
+    },
+    {
+      "id": "ACT49-008",
+      "action": "Document self-build dependency gap.",
+      "owner": "Technical/admin custodian",
+      "priority": "P0",
+      "status": "Ready",
+      "dueTrigger": "Before self-build route decision.",
+      "input": "Local dependency status.",
+      "output": "Self-build prep note."
+    },
+    {
+      "id": "ACT49-009",
+      "action": "Prove email invite lock.",
+      "owner": "Privacy reviewer",
+      "priority": "P0",
+      "status": "Blocked",
+      "dueTrigger": "Before any Decidim invite.",
+      "input": "Email risk.",
+      "output": "Email lock proof."
+    },
+    {
+      "id": "ACT49-010",
+      "action": "Draft provider access and exit terms.",
+      "owner": "Provider access owner",
+      "priority": "P0",
+      "status": "Hold",
+      "dueTrigger": "Before provider access.",
+      "input": "Provider RFQ.",
+      "output": "Access/deletion/export/exit terms."
+    },
+    {
+      "id": "ACT49-011",
+      "action": "Write security monitoring and secrets policy.",
+      "owner": "Security reviewer",
+      "priority": "P0",
+      "status": "Blocked",
+      "dueTrigger": "Before build handoff.",
+      "input": "Security blocker.",
+      "output": "Security pass/hold note."
+    },
+    {
+      "id": "ACT49-012",
+      "action": "Prepare admin training session.",
+      "owner": "Community admin trainer",
+      "priority": "P1",
+      "status": "Hold",
+      "dueTrigger": "Before admin handoff.",
+      "input": "Training blocker.",
+      "output": "Training script/date."
+    },
+    {
+      "id": "ACT49-013",
+      "action": "Create mobile/accessibility QA script.",
+      "owner": "Accessibility reviewer",
+      "priority": "P1",
+      "status": "Hold",
+      "dueTrigger": "Before participant workflow.",
+      "input": "QA blocker.",
+      "output": "QA checklist."
+    },
+    {
+      "id": "ACT49-014",
+      "action": "Approve public status line.",
+      "owner": "Comms lead",
+      "priority": "P1",
+      "status": "Ready",
+      "dueTrigger": "After private decision route chosen.",
+      "input": "Public status table.",
+      "output": "Approved line or no update."
+    },
+    {
+      "id": "ACT49-015",
+      "action": "Prepare no-go/archive dated line.",
+      "owner": "Closeout archivist",
+      "priority": "P1",
+      "status": "Ready",
+      "dueTrigger": "If no-go/archive route chosen.",
+      "input": "Archive plan.",
+      "output": "Public-safe no-go/archive line."
+    },
+    {
+      "id": "ACT49-016",
+      "action": "Create manual GitHub issue import fallback.",
+      "owner": "Technical/admin custodian",
+      "priority": "P1",
+      "status": "Ready",
+      "dueTrigger": "Before ticket handoff.",
+      "input": "Build ticket CSV.",
+      "output": "Manual issue creation pack."
+    },
+    {
+      "id": "ACT49-017",
+      "action": "Finalize private minutes.",
+      "owner": "Meeting chair",
+      "priority": "P0",
+      "status": "Hold",
+      "dueTrigger": "After owner meeting.",
+      "input": "Ballots and blockers.",
+      "output": "Private minutes."
+    },
+    {
+      "id": "ACT49-018",
+      "action": "Schedule next owner meeting trigger.",
+      "owner": "Pilot owner",
+      "priority": "P1",
+      "status": "Hold",
+      "dueTrigger": "After blocker owners respond.",
+      "input": "Action register.",
+      "output": "Next decision date or hold."
+    }
+  ],
+  "priorPilotDecisionBuildHandoff": {
+    "package": "data/pilot-decision-build-handoff-package-v4.8.json",
+    "counts": {
+      "decisionAgendaItems": 14,
+      "ownerVotes": 22,
+      "blockerItems": 20,
+      "technicalHandoffItems": 18,
+      "providerCriteria": 14,
+      "launchLaneRules": 12,
+      "communicationsItems": 12,
+      "implementationTickets": 18,
+      "evidenceMapItems": 16,
+      "handoffRecords": 146,
+      "blockedOwnerVotes": 10,
+      "openCriticalBlockers": 6,
+      "blockedTechnicalItems": 7,
+      "readyTickets": 3,
+      "blockedTickets": 8
+    },
+    "recommendedDecision": "Use v4.8 to convert private fake/sample rehearsal evidence into a controlled owner decision, blocker closure plan, and Decidim build handoff. Keep real participant intake, public onboarding, official Toastmasters workflows, and live Decidim access blocked until every critical owner vote passes privately."
+  }
+}

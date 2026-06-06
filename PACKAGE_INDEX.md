@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v4.8  
+Version: v4.9  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -153,9 +153,31 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
 
+## v4.9 Private Owner Decision Meeting Pack Additions
+
+- `private-owner-decision-meeting.html` - public-safe owner decision meeting pack for ballots, quorum, blocker closure, provider RFQ, Decidim ticket import, minutes, public status lines, no-go/archive routes, and owner actions.
+- `docs/private-owner-decision-meeting-playbook-v4.9.md`
+- `docs/owner-ballot-and-minutes-template-v4.9.md`
+- `docs/provider-assisted-sandbox-rfq-v4.9.md`
+- `docs/decidim-ticket-import-and-build-brief-v4.9.md`
+- `docs/public-demo-release-notes-v4.9.md`
+- `data/owner-decision-meeting-agenda-v4.9.csv`
+- `data/owner-vote-ballot-v4.9.csv`
+- `data/quorum-authority-checklist-v4.9.csv`
+- `data/meeting-blocker-resolution-plan-v4.9.csv`
+- `data/provider-assisted-sandbox-rfq-v4.9.csv`
+- `data/decidim-build-ticket-import-v4.9.csv`
+- `data/decision-minutes-template-v4.9.csv`
+- `data/public-status-update-lines-v4.9.csv`
+- `data/no-go-archive-plan-v4.9.csv`
+- `data/owner-action-register-v4.9.csv`
+- `data/private-owner-decision-meeting-package-v4.9.json`
+
+
 ## v4.8 Pilot Decision and Build Handoff Additions
 
 - `pilot-decision-build-handoff.html` - public-safe decision and build handoff room for owner votes, blocker closure, Decidim build route, implementation tickets, launch lane policy, and public-safe communications.
+- `private-owner-decision-meeting.html` is the public-safe Private Owner Decision Meeting Pack for ballots, quorum, blocker closure, provider RFQ, Decidim ticket import, minutes, public status lines, no-go/archive routes, and owner actions.
 - `docs/pilot-decision-and-build-handoff-playbook-v4.8.md`
 - `docs/owner-vote-and-gate-closure-v4.8.md`
 - `docs/technical-build-handoff-and-hosting-v4.8.md`

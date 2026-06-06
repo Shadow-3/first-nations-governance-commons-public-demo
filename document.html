@@ -634,6 +634,7 @@
 <a class="btn" href="controlled-pilot-execution.html">Pilot Runbook</a>
 <a class="btn" href="pilot-rehearsal-control-room.html">Control Room</a>
 <a class="btn" href="pilot-decision-build-handoff.html">Decision Handoff</a>
+<a class="btn" href="private-owner-decision-meeting.html">Owner Meeting</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -684,6 +685,10 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Private owner decision meeting playbook", path: "docs/private-owner-decision-meeting-playbook-v4.9.md", type: "markdown", description: "Run the private owner decision meeting." },
+      { category: "Start Here", title: "Owner ballot and minutes template", path: "docs/owner-ballot-and-minutes-template-v4.9.md", type: "markdown", description: "Record owner votes and private minutes." },
+      { category: "Start Here", title: "Provider-assisted sandbox RFQ", path: "docs/provider-assisted-sandbox-rfq-v4.9.md", type: "markdown", description: "Fake/sample-only provider questions." },
+      { category: "Start Here", title: "Decidim ticket import and build brief", path: "docs/decidim-ticket-import-and-build-brief-v4.9.md", type: "markdown", description: "Build tickets, public lines, archive plan, and owner actions." },
       { category: "Start Here", title: "Pilot decision and build handoff playbook", path: "docs/pilot-decision-and-build-handoff-playbook-v4.8.md", type: "markdown", description: "Run the private decision and build handoff sequence." },
       { category: "Start Here", title: "Owner vote and gate closure", path: "docs/owner-vote-and-gate-closure-v4.8.md", type: "markdown", description: "Decision rights, owner votes, and gate closure rules." },
       { category: "Start Here", title: "Technical build handoff and hosting", path: "docs/technical-build-handoff-and-hosting-v4.8.md", type: "markdown", description: "Decidim hosting, dependencies, provider/self-build choice, and tickets." },
@@ -785,6 +790,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v4.9", path: "docs/public-demo-release-notes-v4.9.md", type: "markdown", description: "Private Owner Decision Meeting Pack upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.8", path: "docs/public-demo-release-notes-v4.8.md", type: "markdown", description: "Pilot Decision and Build Handoff Room upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.7", path: "docs/public-demo-release-notes-v4.7.md", type: "markdown", description: "Pilot Rehearsal Control Room upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.6", path: "docs/public-demo-release-notes-v4.6.md", type: "markdown", description: "Controlled Pilot Execution Pack upgrade summary." },
@@ -1017,6 +1023,21 @@
       { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
       { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
       { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Private Owner Decision Meeting", title: "Meeting playbook v4.9", path: "docs/private-owner-decision-meeting-playbook-v4.9.md", type: "markdown", description: "Run the private owner decision meeting." },
+      { category: "Private Owner Decision Meeting", title: "Owner ballot and minutes template v4.9", path: "docs/owner-ballot-and-minutes-template-v4.9.md", type: "markdown", description: "Record owner votes and private minutes." },
+      { category: "Private Owner Decision Meeting", title: "Provider-assisted sandbox RFQ v4.9", path: "docs/provider-assisted-sandbox-rfq-v4.9.md", type: "markdown", description: "Fake/sample-only provider questions." },
+      { category: "Private Owner Decision Meeting", title: "Decidim ticket import and build brief v4.9", path: "docs/decidim-ticket-import-and-build-brief-v4.9.md", type: "markdown", description: "Build tickets, public lines, archive plan, and owner actions." },
+      { category: "Private Owner Decision Meeting", title: "Meeting agenda v4.9", path: "data/owner-decision-meeting-agenda-v4.9.csv", type: "csv", description: "Sixteen meeting agenda items." },
+      { category: "Private Owner Decision Meeting", title: "Owner vote ballot v4.9", path: "data/owner-vote-ballot-v4.9.csv", type: "csv", description: "Twenty-four owner ballot records." },
+      { category: "Private Owner Decision Meeting", title: "Quorum authority checklist v4.9", path: "data/quorum-authority-checklist-v4.9.csv", type: "csv", description: "Fourteen quorum checks." },
+      { category: "Private Owner Decision Meeting", title: "Blocker resolution plan v4.9", path: "data/meeting-blocker-resolution-plan-v4.9.csv", type: "csv", description: "Twenty blocker resolutions." },
+      { category: "Private Owner Decision Meeting", title: "Provider-assisted sandbox RFQ v4.9", path: "data/provider-assisted-sandbox-rfq-v4.9.csv", type: "csv", description: "Eighteen provider RFQ items." },
+      { category: "Private Owner Decision Meeting", title: "Decidim build ticket import v4.9", path: "data/decidim-build-ticket-import-v4.9.csv", type: "csv", description: "Twenty-two build tickets." },
+      { category: "Private Owner Decision Meeting", title: "Decision minutes template v4.9", path: "data/decision-minutes-template-v4.9.csv", type: "csv", description: "Fourteen minutes fields." },
+      { category: "Private Owner Decision Meeting", title: "Public status update lines v4.9", path: "data/public-status-update-lines-v4.9.csv", type: "csv", description: "Twelve public status lines." },
+      { category: "Private Owner Decision Meeting", title: "No-go archive plan v4.9", path: "data/no-go-archive-plan-v4.9.csv", type: "csv", description: "Twelve no-go/archive routes." },
+      { category: "Private Owner Decision Meeting", title: "Owner action register v4.9", path: "data/owner-action-register-v4.9.csv", type: "csv", description: "Eighteen owner actions." },
+      { category: "Private Owner Decision Meeting", title: "Owner meeting package v4.9", path: "data/private-owner-decision-meeting-package-v4.9.json", type: "json", description: "Machine-readable v4.9 owner meeting package." },
       { category: "Pilot Decision and Build Handoff", title: "Decision handoff playbook v4.8", path: "docs/pilot-decision-and-build-handoff-playbook-v4.8.md", type: "markdown", description: "Run the private decision and build handoff sequence." },
       { category: "Pilot Decision and Build Handoff", title: "Owner vote and gate closure v4.8", path: "docs/owner-vote-and-gate-closure-v4.8.md", type: "markdown", description: "Decision rights, owner votes, and gate closure rules." },
       { category: "Pilot Decision and Build Handoff", title: "Technical build handoff v4.8", path: "docs/technical-build-handoff-and-hosting-v4.8.md", type: "markdown", description: "Decidim hosting, dependencies, provider/self-build choice, and tickets." },
