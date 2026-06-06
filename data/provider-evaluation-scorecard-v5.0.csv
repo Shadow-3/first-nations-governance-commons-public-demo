@@ -1,0 +1,17 @@
+id,criterion,category,weight,status,minimumAnswer,redFlag
+PRO-001,Fake/sample-only scope,Scope,P0,Ready,Provider explicitly excludes real records.,Requests real participant data.
+PRO-002,Decidim version and architecture,Hosting,P0,Ready,"Runtime, DB, workers, storage, monitoring, and version stated.",Vague stack.
+PRO-003,Outbound email control,Privacy,P0,Blocked,Sandbox email disabled or safely captured.,Real invites can send.
+PRO-004,Data lifecycle proof,IDS/data,P0,Blocked,"Export, delete, archive, backup, restore demo included.",No delete/export proof.
+PRO-005,Access and revoke proof,Access,P0,Hold,"Least privilege, named users, revoke evidence.",Shared admin accounts.
+PRO-006,Secrets/logs/monitoring,Security,P0,Blocked,Secrets not public; logs and monitoring protected.,Credentials in docs or logs.
+PRO-007,"Exit, export, and deletion terms",Exit,P0,Hold,Provider exit and deletion process accepted.,No exit route.
+PRO-008,Barayamal minimum-field handling,Barayamal,P0,Hold,No sensitive business fields required.,ABN/revenue/client/contact required.
+PRO-009,Toastmasters official boundary,FN Toastmasters,P0,Hold,Guest-only sample with official systems separate.,Provider replaces official systems.
+PRO-010,Admin training,Training,P1,Hold,Training and handover included.,No handover.
+PRO-011,Mobile/accessibility QA,QA,P1,Ready,Viewport and keyboard checks included.,No QA scope.
+PRO-012,Support response route,Support,P1,Hold,Support hours and escalation route.,No support.
+PRO-013,Cost cap and cancellation,Finance,P1,Ready,"Clear cap, cancellation, no hidden production fees.",Open-ended cost.
+PRO-014,Private evidence boundary,Evidence,P0,Ready,Provider does not receive private records by default.,Provider asks for private minutes.
+PRO-015,Archive or destroy sandbox after no-go,Closeout,P1,Ready,Archive/destroy procedure included.,No closure path.
+PRO-016,Public communication restraint,Comms,P1,Ready,No public launch claim without approval.,Provider markets project as live.

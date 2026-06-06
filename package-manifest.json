@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "4.9",
+  "version": "5.0",
   "date": "2026-06-06",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use v4.9 to run the private owner decision meeting and record ballots, quorum, blocker resolutions, provider RFQ requirements, Decidim ticket import, minutes, public status lines, no-go/archive routes, and owner actions. Keep real participant intake, public onboarding, official Toastmasters workflows, and live Decidim access blocked unless every critical owner ballot passes privately.",
+  "recommendedDecision": "Use v5.0 to convert the private owner meeting into controlled execution: accepted evidence gates, owner actions, provider/build activation, sandbox acceptance tests, risk rollback triggers, private evidence custody, public communications approvals, and next meeting triggers. Keep real participant intake, public onboarding, official Toastmasters workflows, provider access to real records, and live Decidim access blocked unless every critical owner ballot and evidence gate passes privately.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -446,13 +446,30 @@
     "data/public-status-update-lines-v4.9.csv",
     "data/no-go-archive-plan-v4.9.csv",
     "data/owner-action-register-v4.9.csv",
-    "data/private-owner-decision-meeting-package-v4.9.json"
+    "data/private-owner-decision-meeting-package-v4.9.json",
+    "private-decision-execution-control.html",
+    "docs/private-decision-execution-control-playbook-v5.0.md",
+    "docs/owner-evidence-acceptance-protocol-v5.0.md",
+    "docs/provider-and-build-activation-plan-v5.0.md",
+    "docs/sandbox-acceptance-rollback-and-public-status-v5.0.md",
+    "docs/public-demo-release-notes-v5.0.md",
+    "data/decision-outcome-register-v5.0.csv",
+    "data/evidence-acceptance-gates-v5.0.csv",
+    "data/owner-execution-action-board-v5.0.csv",
+    "data/provider-evaluation-scorecard-v5.0.csv",
+    "data/decidim-build-activation-tickets-v5.0.csv",
+    "data/sandbox-acceptance-tests-v5.0.csv",
+    "data/risk-rollback-triggers-v5.0.csv",
+    "data/public-communications-approval-v5.0.csv",
+    "data/private-evidence-custody-register-v5.0.csv",
+    "data/next-meeting-trigger-register-v5.0.csv",
+    "data/private-decision-execution-control-package-v5.0.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v4.9.md",
+    "releaseNotes": "docs/public-demo-release-notes-v5.0.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -768,7 +785,15 @@
       "qa-v49-deployed-private-owner-decision-meeting-desktop.png",
       "qa-v49-deployed-private-owner-decision-meeting-blockers-desktop.png",
       "qa-v49-deployed-private-owner-decision-meeting-mobile.png",
-      "qa-v49-deployed-private-owner-decision-meeting-package-mobile.png"
+      "qa-v49-deployed-private-owner-decision-meeting-package-mobile.png",
+      "qa-v50-local-private-decision-execution-control-desktop.png",
+      "qa-v50-local-private-decision-execution-control-evidence-desktop.png",
+      "qa-v50-local-private-decision-execution-control-mobile.png",
+      "qa-v50-local-private-decision-execution-control-package-mobile.png",
+      "qa-v50-deployed-private-decision-execution-control-desktop.png",
+      "qa-v50-deployed-private-decision-execution-control-evidence-desktop.png",
+      "qa-v50-deployed-private-decision-execution-control-mobile.png",
+      "qa-v50-deployed-private-decision-execution-control-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -1896,6 +1921,25 @@
       "data/no-go-archive-plan-v4.9.csv",
       "data/owner-action-register-v4.9.csv",
       "data/private-owner-decision-meeting-package-v4.9.json"
+    ],
+    "privateDecisionExecutionControl": [
+      "private-decision-execution-control.html",
+      "docs/private-decision-execution-control-playbook-v5.0.md",
+      "docs/owner-evidence-acceptance-protocol-v5.0.md",
+      "docs/provider-and-build-activation-plan-v5.0.md",
+      "docs/sandbox-acceptance-rollback-and-public-status-v5.0.md",
+      "docs/public-demo-release-notes-v5.0.md",
+      "data/decision-outcome-register-v5.0.csv",
+      "data/evidence-acceptance-gates-v5.0.csv",
+      "data/owner-execution-action-board-v5.0.csv",
+      "data/provider-evaluation-scorecard-v5.0.csv",
+      "data/decidim-build-activation-tickets-v5.0.csv",
+      "data/sandbox-acceptance-tests-v5.0.csv",
+      "data/risk-rollback-triggers-v5.0.csv",
+      "data/public-communications-approval-v5.0.csv",
+      "data/private-evidence-custody-register-v5.0.csv",
+      "data/next-meeting-trigger-register-v5.0.csv",
+      "data/private-decision-execution-control-package-v5.0.json"
     ]
   },
   "safetyRules": [
@@ -2000,7 +2044,12 @@
     "A meeting can record hold, repeat, provider-assisted sandbox preparation, self-build dependency preparation, no-go, or archive. It cannot approve real intake, public onboarding, official Toastmasters workflows, or live Decidim access unless every critical owner ballot passes privately.",
     "Each owner ballot must name the decision, vote, evidence, conditions, and cannot-approve boundary. Dean Foley / Barayamal advisory input can be recorded, but advisory input cannot substitute for owner votes.",
     "Provider-assisted sandbox RFQ work is allowed only for fake/sample data until authority, privacy, IDS/data, support, official-route, access, security, backup, deletion, rollback, and communications votes pass.",
-    "Public updates may state that the project is in controlled decision/build preparation. They must not name private owner reasons, publish minutes, imply launch approval, collect real participant details, or describe official Toastmasters workflows as active."
+    "Public updates may state that the project is in controlled decision/build preparation. They must not name private owner reasons, publish minutes, imply launch approval, collect real participant details, or describe official Toastmasters workflows as active.",
+    "Use v5.0 after the private owner meeting to convert ballots, minutes, blockers, RFQ choices, and build tickets into a controlled execution ledger.",
+    "Execution work can only proceed for fake/sample data unless every critical owner ballot, evidence gate, access control, privacy rule, support route, and rollback trigger passes privately.",
+    "Every action must name accepted evidence, rejected evidence, evidence owner, public/private boundary, next review trigger, and no-go fallback.",
+    "Provider-assisted sandbox or self-build preparation can start only when the relevant fake/sample gates are accepted; no provider or app may handle real records by default.",
+    "Public pages may show aggregate fake/sample execution status only; they must not publish private minutes, owner reasons, participant details, official Toastmasters data, credentials, or evidence files."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -4280,5 +4329,114 @@
     "ballotRule": "Each owner ballot must name the decision, vote, evidence, conditions, and cannot-approve boundary. Dean Foley / Barayamal advisory input can be recorded, but advisory input cannot substitute for owner votes.",
     "rfqRule": "Provider-assisted sandbox RFQ work is allowed only for fake/sample data until authority, privacy, IDS/data, support, official-route, access, security, backup, deletion, rollback, and communications votes pass.",
     "publicRule": "Public updates may state that the project is in controlled decision/build preparation. They must not name private owner reasons, publish minutes, imply launch approval, collect real participant details, or describe official Toastmasters workflows as active."
+  },
+  "privateDecisionExecutionControl": {
+    "entrypoint": "private-decision-execution-control.html",
+    "playbook": "docs/private-decision-execution-control-playbook-v5.0.md",
+    "evidenceDoc": "docs/owner-evidence-acceptance-protocol-v5.0.md",
+    "activationDoc": "docs/provider-and-build-activation-plan-v5.0.md",
+    "acceptanceDoc": "docs/sandbox-acceptance-rollback-and-public-status-v5.0.md",
+    "releaseNotes": "docs/public-demo-release-notes-v5.0.md",
+    "dataFiles": [
+      "data/decision-outcome-register-v5.0.csv",
+      "data/evidence-acceptance-gates-v5.0.csv",
+      "data/owner-execution-action-board-v5.0.csv",
+      "data/provider-evaluation-scorecard-v5.0.csv",
+      "data/decidim-build-activation-tickets-v5.0.csv",
+      "data/sandbox-acceptance-tests-v5.0.csv",
+      "data/risk-rollback-triggers-v5.0.csv",
+      "data/public-communications-approval-v5.0.csv",
+      "data/private-evidence-custody-register-v5.0.csv",
+      "data/next-meeting-trigger-register-v5.0.csv",
+      "data/private-decision-execution-control-package-v5.0.json"
+    ],
+    "primaryOrganisationTest": "Barayamal",
+    "controlledMemberTester": "First Nations Toastmasters",
+    "trustedReviewer": "Dean Foley / Barayamal",
+    "counts": {
+      "decisionOutcomes": 18,
+      "evidenceGates": 22,
+      "ownerActions": 24,
+      "providerCriteria": 16,
+      "buildTickets": 26,
+      "acceptanceTests": 22,
+      "riskRollbackTriggers": 16,
+      "publicCommsApprovals": 14,
+      "custodyRecords": 16,
+      "nextMeetingTriggers": 12,
+      "executionRecords": 186,
+      "blockedEvidenceGates": 8,
+      "openCriticalRisks": 7,
+      "readyProviderCriteria": 7,
+      "blockedBuildTickets": 9,
+      "readyPublicApprovals": 5
+    },
+    "sourceAnchors": [
+      {
+        "label": "Decidim first steps",
+        "url": "https://decidim.org/first-steps/"
+      },
+      {
+        "label": "Decidim GitHub example applications",
+        "url": "https://github.com/decidim/decidim#example-applications"
+      },
+      {
+        "label": "Decidim install overview",
+        "url": "https://docs.decidim.org/en/develop/install/index.html"
+      },
+      {
+        "label": "Decidim deployment docs",
+        "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+      },
+      {
+        "label": "Decidim authorizations",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+      },
+      {
+        "label": "Barayamal Toastmasters First Nations",
+        "url": "https://barayamal.com.au/toastmasters-first-nations/"
+      },
+      {
+        "label": "Toastmasters governing documents",
+        "url": "https://www.toastmasters.org/resources/governing-documents"
+      },
+      {
+        "label": "OAIC Notifiable Data Breaches",
+        "url": "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme"
+      },
+      {
+        "label": "AIATSIS ethical research",
+        "url": "https://aiatsis.gov.au/research/ethical-research"
+      },
+      {
+        "label": "v4.6 Controlled Pilot Execution Pack",
+        "url": "data/controlled-pilot-execution-pack-v4.6.json"
+      },
+      {
+        "label": "v4.7 Pilot Rehearsal Control Room",
+        "url": "data/pilot-rehearsal-control-room-package-v4.7.json"
+      },
+      {
+        "label": "Decidim deployment docs",
+        "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+      },
+      {
+        "label": "Decidim install checklist",
+        "url": "https://docs.decidim.org/en/develop/install/checklist.html"
+      },
+      {
+        "label": "v4.8 Pilot Decision and Build Handoff Room",
+        "url": "data/pilot-decision-build-handoff-package-v4.8.json"
+      },
+      {
+        "label": "v4.9 Private Owner Decision Meeting Pack",
+        "url": "data/private-owner-decision-meeting-package-v4.9.json"
+      }
+    ],
+    "operatingRule": "Use v5.0 after the private owner meeting to convert ballots, minutes, blockers, RFQ choices, and build tickets into a controlled execution ledger.",
+    "executionRule": "Execution work can only proceed for fake/sample data unless every critical owner ballot, evidence gate, access control, privacy rule, support route, and rollback trigger passes privately.",
+    "evidenceRule": "Every action must name accepted evidence, rejected evidence, evidence owner, public/private boundary, next review trigger, and no-go fallback.",
+    "buildRule": "Provider-assisted sandbox or self-build preparation can start only when the relevant fake/sample gates are accepted; no provider or app may handle real records by default.",
+    "publicRule": "Public pages may show aggregate fake/sample execution status only; they must not publish private minutes, owner reasons, participant details, official Toastmasters data, credentials, or evidence files."
   }
 }

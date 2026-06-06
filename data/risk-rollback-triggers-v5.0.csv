@@ -1,0 +1,17 @@
+id,risk,severity,status,owner,trigger,rollbackAction,publicLine
+RR-001,Authority approval missing,Critical,Open,Authority chair,Any real intake proposed before authority pass.,Stop intake; return to owner meeting.,Preparation remains in progress.
+RR-002,Privacy or consent not accepted,Critical,Open,Privacy reviewer,"Invite, form, or app access proposed before privacy pass.",Stop invite; revise privacy pack.,No private pilot has been approved.
+RR-003,IDS/data lifecycle unproven,Critical,Open,IDS/data reviewer,Real data processing proposed before lifecycle proof.,Destroy fake copy; rerun proof.,Data governance review continues privately.
+RR-004,Support route missing,Critical,Open,Support owner,Participant-facing step proposed before support drill.,Pause workflow.,Preparation remains in progress.
+RR-005,Official Toastmasters boundary crossed,Critical,Open,Official-route owner,"Official records, payments, education, elections, or member status enter Decidim.",Remove workflow; return to guest-only fake sample.,Official workflows are not open.
+RR-006,Outbound real email sends,Critical,Open,Privacy reviewer,Any real invite email can send from sandbox.,Disable mail; revoke access; investigate.,No private pilot has been approved.
+RR-007,Credentials or logs leak,Critical,Open,Security reviewer,"Secrets, logs, or credentials appear in public docs or repo.","Revoke, rotate, remove, and review.",Preparation remains in progress.
+RR-008,Provider requests real data,High,Open,Provider access owner,Provider asks for private records or real participant data.,Reject request; reset RFQ.,Build route remains under private review.
+RR-009,Barayamal sensitive fields requested,High,Open,Barayamal custodian,"ABN, revenue, contact, client, grant, or business-plan detail requested.",Remove fields; rerun minimisation.,Barayamal sample preparation continues with fake records only.
+RR-010,Admin access before training,Medium,Open,Community admin trainer,Admin handoff requested before training accepted.,Hold admin access.,Preparation remains in progress.
+RR-011,Accessibility failure on critical flow,Medium,Open,Accessibility reviewer,Critical UI not usable at mobile/keyboard size.,Fix and retest.,Preparation remains in progress.
+RR-012,Public wording implies launch,High,Ready,Comms lead,"Public copy says applications open, launch, or official workflow active.",Pull wording and use approved hold line.,No limited private pilot has been approved.
+RR-013,No-go route ignored,Medium,Available,Closeout archivist,Team keeps preparing despite unresolved critical risk.,Use no-go/archive route.,Public demo remains a learning artefact.
+RR-014,GitHub import scope blocks issue creation,Low,Available,Technical/admin custodian,Project scope missing.,Use manual issue fallback.,No public impact.
+RR-015,Evidence custody unclear,High,Open,IDS/data reviewer,Private evidence storage or delete path unclear.,Hold minutes closeout.,Preparation remains in progress.
+RR-016,Decision stale before action completes,Medium,Open,Meeting chair,Owner action remains unresolved after trigger date.,Reconvene owner review.,A further private review is planned.

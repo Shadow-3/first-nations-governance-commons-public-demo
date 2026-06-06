@@ -358,6 +358,7 @@
 <a class="btn" href="pilot-rehearsal-control-room.html">Control Room</a>
 <a class="btn" href="pilot-decision-build-handoff.html">Decision Handoff</a>
 <a class="btn" href="private-owner-decision-meeting.html">Owner Meeting</a>
+<a class="btn" href="private-decision-execution-control.html">Execution Control</a>
     <a class="btn" href="index.html">Open Demo</a>
     <div class="label">Public demo - fake data only</div>
   </header>
@@ -523,6 +524,10 @@
       <a href="#owner-meeting">
         <strong>Owner Meeting</strong>
         <span>Ballots, quorum, blocker closure, RFQ, tickets, minutes, public lines, and actions.</span>
+      </a>
+      <a href="#execution-control">
+        <strong>Execution Control</strong>
+        <span>Evidence gates, owner actions, build activation, rollback, public lines, and next review.</span>
       </a>
       <a href="#governance">
         <strong>Governance/Data</strong>
@@ -806,6 +811,13 @@
         </div>
         <div class="doc-row">
           <div>
+            <strong>Private Decision Execution Control</strong>
+            <span>Convert owner meeting outcomes into accepted evidence gates, owner actions, provider/build activation, acceptance tests, rollback triggers, custody, public lines, and next review triggers.</span>
+          </div>
+          <a class="btn primary" href="private-decision-execution-control.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
             <strong>Public demo prototype</strong>
             <span>Sample Decidim-style participatory process.</span>
           </div>
@@ -835,9 +847,9 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v4.9 Private Owner Decision Meeting Pack upgrade.</span>
+            <span>What changed in the v5.0 Private Decision Execution Control upgrade.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v4.9.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v5.0.md">Open</a>
         </div>
       </div>
     </section>
@@ -1221,6 +1233,33 @@
         <div class="doc-row"><div><strong>Control Tower package JSON</strong><span>Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays.</span></div><a class="btn" href="data/pilot-control-tower-package-v3.3.json">Open</a></div>
         <div class="doc-row"><div><strong>Release notes v3.3</strong><span>What changed in the Pilot Control Tower upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v3.3.md">Open</a></div>
         <div class="doc-row"><div><strong>Evidence Vault & Advisory Review</strong><span>Dean advisory review, private evidence vault, access rules, authority meeting steps, and decision gates.</span></div><a class="btn primary" href="private-pilot-evidence-vault.html">Open</a></div>
+      </div>
+    </section>
+    <section id="execution-control">
+      <div class="section-head">
+        <div>
+          <h2>Private Decision Execution Control</h2>
+          <p>Use these files after the private owner meeting to manage fake/sample execution without creating public launch or live-access drift.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Private Decision Execution Control</strong><span>Interactive execution outcomes, evidence gates, actions, provider/build activation, acceptance, rollback, public lines, and next review.</span></div><a class="btn primary" href="private-decision-execution-control.html">Open</a></div>
+        <div class="doc-row"><div><strong>Execution control playbook v5.0</strong><span>Run the post-meeting execution ledger.</span></div><a class="btn" href="docs/private-decision-execution-control-playbook-v5.0.md">Open</a></div>
+        <div class="doc-row"><div><strong>Owner evidence acceptance protocol v5.0</strong><span>Accept, reject, custody, and public-boundary rules.</span></div><a class="btn" href="docs/owner-evidence-acceptance-protocol-v5.0.md">Open</a></div>
+        <div class="doc-row"><div><strong>Provider and build activation plan v5.0</strong><span>Fake/sample RFQ and Decidim ticket path.</span></div><a class="btn" href="docs/provider-and-build-activation-plan-v5.0.md">Open</a></div>
+        <div class="doc-row"><div><strong>Acceptance, rollback, and public status v5.0</strong><span>Tests, rollback triggers, public lines, and next review.</span></div><a class="btn" href="docs/sandbox-acceptance-rollback-and-public-status-v5.0.md">Open</a></div>
+        <div class="doc-row"><div><strong>Decision outcome register CSV</strong><span>Eighteen post-meeting outcomes.</span></div><a class="btn" href="data/decision-outcome-register-v5.0.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Evidence acceptance gates CSV</strong><span>Twenty-two evidence gates.</span></div><a class="btn" href="data/evidence-acceptance-gates-v5.0.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Owner execution action board CSV</strong><span>Twenty-four owner actions.</span></div><a class="btn" href="data/owner-execution-action-board-v5.0.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Provider scorecard CSV</strong><span>Sixteen provider criteria.</span></div><a class="btn" href="data/provider-evaluation-scorecard-v5.0.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Decidim build activation tickets CSV</strong><span>Twenty-six build tickets.</span></div><a class="btn" href="data/decidim-build-activation-tickets-v5.0.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Sandbox acceptance tests CSV</strong><span>Twenty-two acceptance tests.</span></div><a class="btn" href="data/sandbox-acceptance-tests-v5.0.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Risk rollback triggers CSV</strong><span>Sixteen rollback triggers.</span></div><a class="btn" href="data/risk-rollback-triggers-v5.0.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Public communications approval CSV</strong><span>Fourteen public communications approvals.</span></div><a class="btn" href="data/public-communications-approval-v5.0.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Private evidence custody register CSV</strong><span>Sixteen custody records.</span></div><a class="btn" href="data/private-evidence-custody-register-v5.0.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Next meeting trigger register CSV</strong><span>Twelve next review triggers.</span></div><a class="btn" href="data/next-meeting-trigger-register-v5.0.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Execution control package JSON</strong><span>Machine-readable v5.0 package.</span></div><a class="btn" href="data/private-decision-execution-control-package-v5.0.json">Open</a></div>
+        <div class="doc-row"><div><strong>Release notes v5.0</strong><span>What changed in the execution control upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v5.0.md">Open</a></div>
       </div>
     </section>
     <section id="owner-meeting">
@@ -1741,7 +1780,7 @@
     </section>
 
     <footer>
-      Version v4.9. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v5.0. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
   <script>

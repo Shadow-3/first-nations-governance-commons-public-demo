@@ -1,0 +1,25 @@
+id,action,owner,priority,status,dueTrigger,evidenceGate,doneDefinition
+ACT50-001,Prepare authority note.,Authority chair,P0,Blocked,Before any real intake decision.,EGA-001,Authority route accepted privately.
+ACT50-002,Revise privacy notice and consent pack.,Privacy reviewer,P0,Blocked,Before any private invite.,EGA-002,Notice accepted privately.
+ACT50-003,Prove outbound email lock.,Privacy reviewer,P0,Blocked,Before any Decidim invite.,EGA-003,No real email can send.
+ACT50-004,Run IDS/data lifecycle drill.,IDS/data reviewer,P0,Blocked,Before any real data processing.,EGA-004,Export/delete/archive/backup/restore pass.
+ACT50-005,Run support and pause drill.,Support owner,P0,Blocked,Before private invite.,EGA-005,Support drill accepted.
+ACT50-006,Write official Toastmasters boundary note.,Official-route owner,P0,Blocked,Before Toastmasters-adjacent work.,EGA-006,Boundary accepted.
+ACT50-007,Draft security and monitoring plan.,Security reviewer,P0,Blocked,Before build handoff.,EGA-007,Security plan accepted.
+ACT50-008,Create evidence custody record.,IDS/data reviewer,P0,Blocked,Before minutes are closed.,EGA-008,Custody accepted.
+ACT50-009,Revise Barayamal minimum field schedule.,Barayamal custodian,P0,Hold,Before Barayamal private prep.,EGA-009,Minimum fields accepted.
+ACT50-010,Revise Toastmasters guest support path.,Training owner,P0,Hold,Before guest-only rehearsal.,EGA-010,Guest path accepted.
+ACT50-011,Draft provider access and exit terms.,Provider access owner,P0,Hold,Before provider access.,EGA-011,Provider terms accepted.
+ACT50-012,Run fake backup and restore proof.,Technical/admin custodian,P0,Hold,Before build route decision.,EGA-012,Restore proof accepted.
+ACT50-013,Run fake role revoke proof.,Technical/admin custodian,P0,Hold,Before any admin handoff.,EGA-013,Access revoke accepted.
+ACT50-014,Schedule admin training.,Community admin trainer,P1,Hold,Before admin access.,EGA-014,Training accepted.
+ACT50-015,Close private minutes shell.,Meeting chair,P0,Ready,After owner meeting.,EGA-015,Minutes split public/private evidence.
+ACT50-016,Route Dean advisory comments to owners.,Pilot owner,P1,Ready,After advisory review.,EGA-016,Tasks created without approval substitution.
+ACT50-017,Publish approved hold line only.,Comms lead,P1,Ready,After private wording approval.,EGA-017,Only approved line is public.
+ACT50-018,Keep no-go/archive route current.,Closeout archivist,P1,Ready,Any time blockers remain unresolved.,EGA-018,No-go/archive line available.
+ACT50-019,Import safe Decidim build tickets.,Pilot owner,P1,Ready,After ticket owner map accepted.,EGA-019,Fake/sample tickets created or staged.
+ACT50-020,Send fake/sample provider RFQ.,Provider access owner,P1,Ready,After RFQ scope accepted.,EGA-020,RFQ excludes real data.
+ACT50-021,Prepare manual GitHub issue fallback.,Technical/admin custodian,P1,Ready,If GitHub project scope remains limited.,EGA-021,Manual issue pack ready.
+ACT50-022,Run mobile/accessibility QA script.,Accessibility reviewer,P1,Ready,Before public status refresh.,EGA-022,Critical static demo flows pass.
+ACT50-023,Schedule next owner review trigger.,Meeting chair,P1,Hold,After blocker owner responses.,EGA-001/EGA-008,Next trigger date or condition recorded.
+ACT50-024,Update execution dashboard after each blocker response.,Pilot owner,P1,Ready,Each private owner response.,All gates,Dashboard reflects latest safe status.

@@ -635,6 +635,7 @@
 <a class="btn" href="pilot-rehearsal-control-room.html">Control Room</a>
 <a class="btn" href="pilot-decision-build-handoff.html">Decision Handoff</a>
 <a class="btn" href="private-owner-decision-meeting.html">Owner Meeting</a>
+<a class="btn" href="private-decision-execution-control.html">Execution Control</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -685,6 +686,10 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Private decision execution control playbook", path: "docs/private-decision-execution-control-playbook-v5.0.md", type: "markdown", description: "Run the post-meeting execution ledger." },
+      { category: "Start Here", title: "Owner evidence acceptance protocol", path: "docs/owner-evidence-acceptance-protocol-v5.0.md", type: "markdown", description: "Accept, reject, custody, and public-boundary rules." },
+      { category: "Start Here", title: "Provider and build activation plan", path: "docs/provider-and-build-activation-plan-v5.0.md", type: "markdown", description: "Fake/sample RFQ and Decidim ticket path." },
+      { category: "Start Here", title: "Sandbox acceptance rollback and public status", path: "docs/sandbox-acceptance-rollback-and-public-status-v5.0.md", type: "markdown", description: "Tests, rollback triggers, public lines, and next review." },
       { category: "Start Here", title: "Private owner decision meeting playbook", path: "docs/private-owner-decision-meeting-playbook-v4.9.md", type: "markdown", description: "Run the private owner decision meeting." },
       { category: "Start Here", title: "Owner ballot and minutes template", path: "docs/owner-ballot-and-minutes-template-v4.9.md", type: "markdown", description: "Record owner votes and private minutes." },
       { category: "Start Here", title: "Provider-assisted sandbox RFQ", path: "docs/provider-assisted-sandbox-rfq-v4.9.md", type: "markdown", description: "Fake/sample-only provider questions." },
@@ -790,6 +795,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v5.0", path: "docs/public-demo-release-notes-v5.0.md", type: "markdown", description: "Private Decision Execution Control upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.9", path: "docs/public-demo-release-notes-v4.9.md", type: "markdown", description: "Private Owner Decision Meeting Pack upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.8", path: "docs/public-demo-release-notes-v4.8.md", type: "markdown", description: "Pilot Decision and Build Handoff Room upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.7", path: "docs/public-demo-release-notes-v4.7.md", type: "markdown", description: "Pilot Rehearsal Control Room upgrade summary." },
@@ -1023,6 +1029,21 @@
       { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
       { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
       { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Private Decision Execution Control", title: "Execution control playbook v5.0", path: "docs/private-decision-execution-control-playbook-v5.0.md", type: "markdown", description: "Run the post-meeting execution ledger." },
+      { category: "Private Decision Execution Control", title: "Owner evidence acceptance protocol v5.0", path: "docs/owner-evidence-acceptance-protocol-v5.0.md", type: "markdown", description: "Accept, reject, custody, and public-boundary rules." },
+      { category: "Private Decision Execution Control", title: "Provider and build activation plan v5.0", path: "docs/provider-and-build-activation-plan-v5.0.md", type: "markdown", description: "Fake/sample RFQ and Decidim ticket path." },
+      { category: "Private Decision Execution Control", title: "Sandbox acceptance rollback and public status v5.0", path: "docs/sandbox-acceptance-rollback-and-public-status-v5.0.md", type: "markdown", description: "Tests, rollback triggers, public lines, and next review." },
+      { category: "Private Decision Execution Control", title: "Decision outcome register v5.0", path: "data/decision-outcome-register-v5.0.csv", type: "csv", description: "Eighteen post-meeting outcomes." },
+      { category: "Private Decision Execution Control", title: "Evidence acceptance gates v5.0", path: "data/evidence-acceptance-gates-v5.0.csv", type: "csv", description: "Twenty-two evidence gates." },
+      { category: "Private Decision Execution Control", title: "Owner execution action board v5.0", path: "data/owner-execution-action-board-v5.0.csv", type: "csv", description: "Twenty-four owner actions." },
+      { category: "Private Decision Execution Control", title: "Provider evaluation scorecard v5.0", path: "data/provider-evaluation-scorecard-v5.0.csv", type: "csv", description: "Sixteen provider criteria." },
+      { category: "Private Decision Execution Control", title: "Decidim build activation tickets v5.0", path: "data/decidim-build-activation-tickets-v5.0.csv", type: "csv", description: "Twenty-six build tickets." },
+      { category: "Private Decision Execution Control", title: "Sandbox acceptance tests v5.0", path: "data/sandbox-acceptance-tests-v5.0.csv", type: "csv", description: "Twenty-two acceptance tests." },
+      { category: "Private Decision Execution Control", title: "Risk rollback triggers v5.0", path: "data/risk-rollback-triggers-v5.0.csv", type: "csv", description: "Sixteen rollback triggers." },
+      { category: "Private Decision Execution Control", title: "Public communications approval v5.0", path: "data/public-communications-approval-v5.0.csv", type: "csv", description: "Fourteen public approvals." },
+      { category: "Private Decision Execution Control", title: "Private evidence custody register v5.0", path: "data/private-evidence-custody-register-v5.0.csv", type: "csv", description: "Sixteen custody records." },
+      { category: "Private Decision Execution Control", title: "Next meeting trigger register v5.0", path: "data/next-meeting-trigger-register-v5.0.csv", type: "csv", description: "Twelve next review triggers." },
+      { category: "Private Decision Execution Control", title: "Execution control package v5.0", path: "data/private-decision-execution-control-package-v5.0.json", type: "json", description: "Machine-readable v5.0 execution control package." },
       { category: "Private Owner Decision Meeting", title: "Meeting playbook v4.9", path: "docs/private-owner-decision-meeting-playbook-v4.9.md", type: "markdown", description: "Run the private owner decision meeting." },
       { category: "Private Owner Decision Meeting", title: "Owner ballot and minutes template v4.9", path: "docs/owner-ballot-and-minutes-template-v4.9.md", type: "markdown", description: "Record owner votes and private minutes." },
       { category: "Private Owner Decision Meeting", title: "Provider-assisted sandbox RFQ v4.9", path: "docs/provider-assisted-sandbox-rfq-v4.9.md", type: "markdown", description: "Fake/sample-only provider questions." },

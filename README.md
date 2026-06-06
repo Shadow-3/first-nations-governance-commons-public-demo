@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v4.9
+Current package version: v5.0
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -72,6 +72,7 @@ Open `controlled-pilot-execution.html` to run the Barayamal and First Nations To
 Open `pilot-rehearsal-control-room.html` to run the v4.7 rehearsal schedule, owner sign-off board, issue triage, sample-safe roster, acceptance scorecard, decision options, and handoff actions.
 Open `pilot-decision-build-handoff.html` to convert rehearsal evidence into owner votes, blocker closure, Decidim build route, implementation tickets, launch lane policy, and public-safe communications.
 Open `private-owner-decision-meeting.html` to run the v4.9 private owner meeting with ballots, quorum, blocker closure, provider RFQ, Decidim ticket import, minutes, public status, no-go/archive, and actions.
+Open `private-decision-execution-control.html` to convert the private owner meeting into controlled fake/sample execution with evidence gates, owner actions, provider/build activation, acceptance tests, rollback triggers, custody, public communications, and next review triggers.
 
 The demo shows:
 
@@ -103,6 +104,23 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v5.0.md`
+- `docs/private-decision-execution-control-playbook-v5.0.md`
+- `docs/owner-evidence-acceptance-protocol-v5.0.md`
+- `docs/provider-and-build-activation-plan-v5.0.md`
+- `docs/sandbox-acceptance-rollback-and-public-status-v5.0.md`
+- `data/decision-outcome-register-v5.0.csv`
+- `data/evidence-acceptance-gates-v5.0.csv`
+- `data/owner-execution-action-board-v5.0.csv`
+- `data/provider-evaluation-scorecard-v5.0.csv`
+- `data/decidim-build-activation-tickets-v5.0.csv`
+- `data/sandbox-acceptance-tests-v5.0.csv`
+- `data/risk-rollback-triggers-v5.0.csv`
+- `data/public-communications-approval-v5.0.csv`
+- `data/private-evidence-custody-register-v5.0.csv`
+- `data/next-meeting-trigger-register-v5.0.csv`
+- `data/private-decision-execution-control-package-v5.0.json`
+
 - `docs/public-demo-release-notes-v4.9.md`
 - `docs/private-owner-decision-meeting-playbook-v4.9.md`
 - `docs/owner-ballot-and-minutes-template-v4.9.md`
@@ -1045,6 +1063,16 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v5.0 Private Decision Execution Control Upgrade
+
+The v5.0 package turns the v4.9 private owner meeting into controlled execution:
+
+- Eighteen decision outcomes, twenty-two evidence gates, twenty-four owner actions, sixteen provider criteria, twenty-six build tickets, twenty-two acceptance tests, sixteen rollback triggers, fourteen public communications approvals, sixteen custody records, twelve next meeting triggers, and one hundred and eighty-six execution records.
+- A stronger execution boundary: provider-assisted sandbox, self-build preparation, Decidim ticket work, public updates, and next review steps stay fake/sample-safe unless every critical owner ballot and evidence gate passes privately.
+
+Use this version as the default public demo and private operating pack for post-meeting execution control.
+
 
 ## v4.9 Private Owner Decision Meeting Pack Upgrade
 

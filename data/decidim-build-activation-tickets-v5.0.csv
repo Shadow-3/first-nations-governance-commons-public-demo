@@ -1,0 +1,27 @@
+id,title,track,priority,status,owner,acceptance,blockedBy
+BAT-001,Create private Decidim app repository,Repository,P0,Hold,Technical/admin custodian,Private repo with owner access list.,EGA-001/EGA-007.
+BAT-002,Create provider RFQ issue pack,Provider,P0,Ready,Provider access owner,RFQ pack excludes real data.,None.
+BAT-003,Create self-build dependency checklist,Runtime,P0,Ready,Technical/admin custodian,Ruby/PostgreSQL/image/app scaffold gaps documented.,None.
+BAT-004,Disable outbound real email,Privacy,P0,Blocked,Privacy reviewer,Real outbound email cannot send.,EGA-003.
+BAT-005,Create fake seed import/wipe proof,Data,P0,Ready,Pilot owner,Fake records can be imported and wiped.,None.
+BAT-006,Run fake role assignment/revoke proof,Access,P0,Hold,Technical/admin custodian,Revoked fake account loses access.,EGA-013.
+BAT-007,Run fake export/delete/archive proof,IDS/data,P0,Blocked,IDS/data reviewer,Lifecycle proof accepted.,EGA-004.
+BAT-008,Draft provider access terms,Provider,P0,Hold,Provider access owner,"Access, deletion, export, exit terms drafted.",EGA-011.
+BAT-009,Implement Barayamal minimum-field sample,Barayamal,P0,Blocked,Barayamal custodian,Sensitive fields removed.,EGA-009.
+BAT-010,Implement Toastmasters guest-only sample,FN Toastmasters,P0,Blocked,Training owner,Official systems stay outside Decidim.,EGA-006/EGA-010.
+BAT-011,Create support/pause/withdrawal workflow,Support,P0,Blocked,Support owner,Support route accepted.,EGA-005.
+BAT-012,Create privacy notice content placeholder,Privacy,P0,Blocked,Privacy reviewer,Notice accepted before use.,EGA-002.
+BAT-013,Create public-safe status component,Comms,P1,Ready,Comms lead,Text says preparation only.,EGA-017.
+BAT-014,Create secrets/logs policy issue,Security,P0,Blocked,Security reviewer,No secrets public; logging policy set.,EGA-007.
+BAT-015,Create admin training script,Training,P1,Hold,Community admin trainer,Fake admin can complete core tasks.,EGA-014.
+BAT-016,Create mobile/accessibility QA script,QA,P1,Ready,Accessibility reviewer,Critical flows pass mobile/access checks.,EGA-022.
+BAT-017,Create no-go/archive status route,Closeout,P1,Ready,Closeout archivist,Archive/no-go public line available.,EGA-018.
+BAT-018,Bundle private meeting minutes locally,Meeting,P0,Hold,Meeting chair,Private minutes never enter public package.,EGA-008/EGA-015.
+BAT-019,Create execution action sync script,Build handoff,P1,Ready,Pilot owner,Owner actions can be mapped to issues.,EGA-019.
+BAT-020,Prepare manual GitHub issue import fallback,Build handoff,P1,Ready,Technical/admin custodian,Manual issue pack available.,EGA-021.
+BAT-021,Create provider sandbox acceptance checklist,Provider,P0,Hold,Provider access owner,"Acceptance covers email, access, backup, delete, exit.",Provider response.
+BAT-022,Create limited private pilot precondition issue,Authority,P0,Blocked,Authority chair,All critical gates pass first.,OUT-001/OUT-017.
+BAT-023,Create rollback/kill-switch checklist,Risk,P0,Hold,Meeting chair,Rollback triggers and owners named.,Risk review.
+BAT-024,Create evidence redaction checklist,Evidence,P0,Blocked,IDS/data reviewer,Private evidence excluded from public package.,EGA-008.
+BAT-025,Create owner decision replay pack,Meeting,P1,Ready,Meeting chair,Owners can review decisions without private evidence leak.,EGA-015.
+BAT-026,Create next review automation placeholder,Meeting,P1,Hold,Pilot owner,Next review trigger captured.,ACT50-023.

@@ -1,0 +1,13 @@
+id,trigger,status,owner,condition,meetingQuestion
+NMT-001,Authority note submitted,Blocked,Authority chair,Authority evidence owner responds.,Can authority gate move from blocked to hold/pass?
+NMT-002,Privacy pack revised,Blocked,Privacy reviewer,Notice and email-lock proof ready.,Can private invite gate move?
+NMT-003,IDS/data lifecycle proof complete,Blocked,IDS/data reviewer,Export/delete/archive/backup/restore proof ready.,Can data gate move?
+NMT-004,Support drill complete,Blocked,Support owner,Support route tested.,Can participant-facing prep move?
+NMT-005,Official Toastmasters boundary note ready,Blocked,Official-route owner,Official boundary note ready.,Can guest-only sample continue?
+NMT-006,Provider RFQ response received,Hold,Provider access owner,Provider answers P0 criteria.,"Accept, reject, or revise provider route?"
+NMT-007,Self-build dependency proof ready,Hold,Technical/admin custodian,Runtime and app scaffold gaps addressed.,Can self-build prep continue?
+NMT-008,Barayamal minimum fields accepted,Hold,Barayamal custodian,Sensitive field review complete.,Can Barayamal private prep continue?
+NMT-009,Toastmasters guest path accepted,Hold,Training owner,Guest support path complete.,Can guest-only fake sample continue?
+NMT-010,Security plan accepted,Blocked,Security reviewer,Secrets/logs/monitoring plan ready.,Can build handoff continue?
+NMT-011,All critical gates accepted,Available,Meeting chair,Every P0 gate passes privately.,Can limited private pilot be considered?
+NMT-012,Critical gates cannot be resolved,Available,Closeout archivist,Owner blocks remain after due trigger.,No-go or archive?

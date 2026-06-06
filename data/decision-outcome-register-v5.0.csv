@@ -1,0 +1,19 @@
+id,decision,track,route,status,owner,evidenceRequired,executionNext,publicBoundary
+OUT-001,Authority route for any real intake,Authority,Hold,Blocked,Authority chair,Private authority note and delegation proof.,Keep all real intake blocked.,Status only.
+OUT-002,"Privacy notice, consent, withdrawal, and email lock",Privacy,Hold,Blocked,Privacy reviewer,"Accepted notice, consent, withdrawal, retention, breach, and email-lock evidence.",Revise privacy pack and rerun gate.,No private details.
+OUT-003,IDS/data lifecycle approval,IDS/data,Hold,Blocked,IDS/data reviewer,"Fake export, delete, archive, backup, restore, and retention proof.",Run lifecycle drill.,Aggregate status only.
+OUT-004,"Support, complaint, incident, pause, and withdrawal readiness",Support,Hold,Blocked,Support owner,Support drill record and escalation route.,Run support drill.,No support cases.
+OUT-005,Official Toastmasters boundary,FN Toastmasters,Hold,Blocked,Official-route owner,Boundary note confirming official systems remain primary.,Keep guest-only fake path.,No official records.
+OUT-006,Barayamal controlled organisation sample,Barayamal,Repeat,Hold,Barayamal program operator,Minimum-field schedule and owner acceptance.,Repeat fake founder/business sample only.,No business-sensitive fields.
+OUT-007,First Nations Toastmasters guest-only sample,FN Toastmasters,Repeat,Hold,Training owner,Guest support path and official boundary note.,Repeat guest-only fake sample only.,No member workflow.
+OUT-008,Dean Foley / Barayamal advisory review,Dean review,Accepted,Ready,Pilot owner,Advisory comments routed to owner tasks.,Convert comments into tracked actions.,No advisory-as-approval claim.
+OUT-009,Provider-assisted sandbox RFQ,Provider,Prepare,Ready,Provider access owner,Fake/sample-only RFQ and access boundary.,Send or refine RFQ with no real data.,Status only.
+OUT-010,Self-build dependency preparation,Decidim build,Prepare,Hold,Technical/admin custodian,"Ruby, PostgreSQL, image tooling, app scaffold, backups, monitoring, and access plan.",Prepare dependency proof.,No live app claim.
+OUT-011,Decidim build ticket import,Build handoff,Prepare,Ready,Pilot owner,P0/P1 fake/sample tickets with owners and blockers.,Import or manually create safe tickets.,Ticket titles only.
+OUT-012,Public-safe status line,Comms,Publish safe hold line,Ready,Comms lead,Approved public wording.,Publish only approved hold wording.,Approved line only.
+OUT-013,No-go/archive remains valid,Closeout,Available,Ready,Closeout archivist,Archive/no-go route and public-safe wording.,Keep no-go/archive option open.,No private reasons.
+OUT-014,"Security, logs, secrets, monitoring",Security,Hold,Blocked,Security reviewer,"Secrets, logs, monitoring, audit, and access policy.",Draft and accept security plan.,No credentials/logs.
+OUT-015,Admin training and handoff,Training,Prepare,Hold,Community admin trainer,Admin training script and support handoff.,Schedule fake admin training.,No real admin access.
+OUT-016,Mobile/accessibility acceptance,QA,Prepare,Hold,Accessibility reviewer,"Mobile, keyboard, readable text, and critical-flow QA script.",Run fake/sample QA only.,QA status only.
+OUT-017,Private evidence custody,Evidence,Hold,Blocked,IDS/data reviewer,"Private evidence location, access list, retention, and delete route.",Create custody record.,Never public evidence.
+OUT-018,Next owner review trigger,Meeting,Schedule,Ready,Meeting chair,"Trigger list, owner action dates, and blocker responses.",Schedule next private review trigger.,Milestone only.

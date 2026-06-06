@@ -1,0 +1,17 @@
+id,evidence,classification,status,owner,storageRule,publicReplacement
+CUS-001,Authority note,Private,Blocked,Authority chair,Store outside public package with owner access only.,Authority status only.
+CUS-002,Privacy review pack,Private,Blocked,Privacy reviewer,Store outside public package; publish no personal detail.,Privacy gate status.
+CUS-003,IDS/data lifecycle proof,Private,Blocked,IDS/data reviewer,Store proof privately; public only says gate status.,Lifecycle gate status.
+CUS-004,Support drill record,Private,Blocked,Support owner,Store support evidence privately.,Support gate status.
+CUS-005,Official Toastmasters boundary note,Private,Blocked,Official-route owner,Store official-route note privately.,Boundary status only.
+CUS-006,Barayamal minimum field schedule,Private,Hold,Barayamal custodian,Store schedule privately; remove sensitive fields from public sample.,Minimum-field status.
+CUS-007,Toastmasters guest workflow note,Private,Hold,Training owner,Store note privately; keep official records out.,Guest-only status.
+CUS-008,Dean advisory comments,Private,Ready,Pilot owner,Store comments privately and route tasks.,Advisory routed status.
+CUS-009,Provider RFQ response,Private,Hold,Provider access owner,Store response privately until approved.,Provider review status.
+CUS-010,Security plan,Private,Blocked,Security reviewer,Never publish secrets/log details.,Security gate status.
+CUS-011,Admin training attendance,Private,Hold,Community admin trainer,Store attendance privately.,Training status.
+CUS-012,Mobile/accessibility QA record,Public-safe summary,Ready,Accessibility reviewer,Publish pass/fail summary only.,QA summary.
+CUS-013,Owner ballots,Private,Hold,Meeting chair,Store ballots privately.,Aggregate ballot status.
+CUS-014,Private minutes,Private,Hold,Meeting chair,Do not add minutes to public package.,Approved public line.
+CUS-015,No-go/archive reasons,Private,Available,Closeout archivist,Store private reasons separately.,Public archive/no-go line.
+CUS-016,Action register,Private with public-safe summary,Ready,Pilot owner,Store owner due dates privately; publish aggregate only.,Action status summary.

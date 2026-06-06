@@ -1,0 +1,15 @@
+id,scenario,status,owner,approvedLine,blockedPhrase
+COM-001,Default v5.0 status,Ready,Comms lead,The project is in controlled private decision execution using fake/sample data only.,The pilot has launched.
+COM-002,Execution control page published,Ready,Comms lead,A public-safe execution control pack has been added to the fake/sample demo.,Owners approved live access.
+COM-003,Provider RFQ prepared,Hold,Provider access owner,A fake/sample Decidim sandbox build route is under private review.,Provider has real data.
+COM-004,Self-build prep underway,Hold,Technical/admin custodian,Self-build prerequisites are being reviewed before any live Decidim access.,A live Decidim app is ready.
+COM-005,Barayamal sample continues,Hold,Barayamal program operator,Barayamal sample preparation continues with fake/sample records only.,Founder applications are open.
+COM-006,Toastmasters guest-only sample continues,Hold,Training owner,Guest-only sample preparation continues with official Toastmasters systems separate.,Official Toastmasters records are in Decidim.
+COM-007,Critical blockers remain,Ready,Meeting chair,The project remains in preparation while private blockers are reviewed.,Names or reasons for blockers.
+COM-008,No-go chosen,Available,Closeout archivist,The project will not proceed at this time; the public demo remains a learning artefact.,Private reasons.
+COM-009,Archive public-demo-only,Available,Closeout archivist,The public fake/sample demo remains available as a learning artefact.,Private archive contents.
+COM-010,Limited private pilot not approved,Ready,Authority chair,No limited private pilot has been approved.,Applications are open.
+COM-011,Public update held,Ready,Comms lead,No public update will be issued until private wording is approved.,Silence means approval.
+COM-012,Evidence gate accepted,Hold,Evidence owner,A private evidence gate has been accepted; public scope remains fake/sample only.,Private evidence detail.
+COM-013,Next owner review scheduled,Hold,Meeting chair,A further private review will be held after blocker owners respond.,Launch date promised.
+COM-014,All fake/sample tickets staged,Hold,Pilot owner,Fake/sample build preparation tickets have been staged for private review.,Build is live.

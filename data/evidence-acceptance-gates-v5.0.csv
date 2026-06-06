@@ -1,0 +1,23 @@
+id,gate,track,status,owner,acceptedEvidence,rejectIf,nextAction
+EGA-001,Authority delegation accepted,Authority,Blocked,Authority chair,Signed or otherwise accepted authority route.,No owner authority or unclear mandate.,Prepare authority note.
+EGA-002,Privacy notice accepted,Privacy,Blocked,Privacy reviewer,"Notice covers purpose, consent, withdrawal, retention, breach, and contact route.",Notice implies live launch or misses withdrawal.,Revise notice.
+EGA-003,Outbound email locked,Privacy,Blocked,Privacy reviewer,Fake app cannot send real invites.,Any real outbound email can send.,Prove email lock.
+EGA-004,IDS/data lifecycle proof accepted,IDS/data,Blocked,IDS/data reviewer,"Export, delete, archive, backup, restore, and retention pass with fake data.",Delete/export cannot be proven.,Run lifecycle drill.
+EGA-005,Support route drilled,Support,Blocked,Support owner,"Complaint, incident, pause, support, and withdrawal routes pass.",No named escalation owner.,Run support drill.
+EGA-006,Official Toastmasters boundary accepted,FN Toastmasters,Blocked,Official-route owner,Official records remain outside Decidim.,Decidim appears to replace official systems.,Write boundary note.
+EGA-007,Security plan accepted,Security,Blocked,Security reviewer,"Secrets, logs, monitoring, and audit rules pass.",Credentials or logs could leak.,Draft security plan.
+EGA-008,Private evidence custody accepted,Evidence,Blocked,IDS/data reviewer,"Private evidence location, access list, retention, and delete route pass.",Public package stores private evidence.,Create custody record.
+EGA-009,Barayamal minimum fields accepted,Barayamal,Hold,Barayamal custodian,Fake/sample minimum field list accepted.,"ABN, revenue, client, contact, grant, or business-plan detail requested.",Revise field schedule.
+EGA-010,Toastmasters guest support accepted,FN Toastmasters,Hold,Training owner,Guest-only support and referral route accepted.,Official member support implied.,Revise guest path.
+EGA-011,Provider access terms accepted,Provider,Hold,Provider access owner,"Least privilege, delete, export, exit, and support terms pass.",Provider has broad standing access.,Draft terms.
+EGA-012,Backup/restore proof accepted,Decidim build,Hold,Technical/admin custodian,Fake backup and restore pass.,No restore proof.,Run restore test.
+EGA-013,Role revoke proof accepted,Access,Hold,Technical/admin custodian,Fake role assignment and revoke pass.,Shared admin or revoke unproven.,Run access proof.
+EGA-014,Admin training accepted,Training,Hold,Community admin trainer,Fake admin can complete core tasks.,No training handoff.,Schedule training.
+EGA-015,Minutes shell accepted,Meeting,Ready,Meeting chair,Minutes template separates private evidence and public line.,Private evidence leaks into public minutes.,Use template.
+EGA-016,Dean advisory routing accepted,Dean review,Ready,Pilot owner,Advisory comments converted to owner tasks.,Advisory input treated as owner approval.,Route comments.
+EGA-017,Public hold line accepted,Comms,Ready,Comms lead,Approved public status says preparation only.,Line implies launch or applications.,Use approved line.
+EGA-018,No-go/archive route accepted,Closeout,Ready,Closeout archivist,No-go/archive route remains open.,No closeout option.,Keep route open.
+EGA-019,Ticket owner map accepted,Build handoff,Ready,Pilot owner,"Tickets have owner, blocker, acceptance, and safe scope.",Ticket implies real launch.,Use safe import.
+EGA-020,RFQ fake/sample scope accepted,Provider,Ready,Provider access owner,Provider questions explicitly exclude real data.,RFQ requests real records.,Send safe RFQ.
+EGA-021,Manual GitHub import fallback accepted,Build handoff,Ready,Technical/admin custodian,Tickets can be created manually if auth scope is limited.,No import fallback.,Use fallback.
+EGA-022,Browser/mobile QA evidence accepted,QA,Ready,Accessibility reviewer,Static demo renders without overflow and interactions pass.,Critical visible flow fails.,Rerun QA.

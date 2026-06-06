@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v4.9  
+Version: v5.0  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -153,9 +153,31 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
 
+## v5.0 Private Decision Execution Control Additions
+
+- `private-decision-execution-control.html` - public-safe execution control room for evidence gates, owner actions, provider/build activation, acceptance tests, rollback triggers, custody, public communications, and next review triggers.
+- `docs/private-decision-execution-control-playbook-v5.0.md`
+- `docs/owner-evidence-acceptance-protocol-v5.0.md`
+- `docs/provider-and-build-activation-plan-v5.0.md`
+- `docs/sandbox-acceptance-rollback-and-public-status-v5.0.md`
+- `docs/public-demo-release-notes-v5.0.md`
+- `data/decision-outcome-register-v5.0.csv`
+- `data/evidence-acceptance-gates-v5.0.csv`
+- `data/owner-execution-action-board-v5.0.csv`
+- `data/provider-evaluation-scorecard-v5.0.csv`
+- `data/decidim-build-activation-tickets-v5.0.csv`
+- `data/sandbox-acceptance-tests-v5.0.csv`
+- `data/risk-rollback-triggers-v5.0.csv`
+- `data/public-communications-approval-v5.0.csv`
+- `data/private-evidence-custody-register-v5.0.csv`
+- `data/next-meeting-trigger-register-v5.0.csv`
+- `data/private-decision-execution-control-package-v5.0.json`
+
+
 ## v4.9 Private Owner Decision Meeting Pack Additions
 
 - `private-owner-decision-meeting.html` - public-safe owner decision meeting pack for ballots, quorum, blocker closure, provider RFQ, Decidim ticket import, minutes, public status lines, no-go/archive routes, and owner actions.
+- `private-decision-execution-control.html` is the public-safe Private Decision Execution Control room for evidence gates, owner actions, provider/build activation, acceptance tests, rollback triggers, custody, public communications, and next review triggers.
 - `docs/private-owner-decision-meeting-playbook-v4.9.md`
 - `docs/owner-ballot-and-minutes-template-v4.9.md`
 - `docs/provider-assisted-sandbox-rfq-v4.9.md`

@@ -1,0 +1,23 @@
+id,test,track,status,owner,passCondition,failAction
+ACC-001,Public demo loads,Static demo,Pass,Pilot owner,Home page and v5.0 page render.,Fix static links.
+ACC-002,Owner execution page filters work,Static demo,Pass,Pilot owner,Filters change visible cards.,Fix JS filter state.
+ACC-003,Decision brief updates on select,Static demo,Pass,Pilot owner,Selected outcome updates panel and brief.,Fix selected state.
+ACC-004,Mobile viewport has no horizontal overflow,QA,Pass,Accessibility reviewer,390 px viewport stays within body width.,Fix responsive layout.
+ACC-005,Document viewer opens v5.0 JSON,Document viewer,Pass,Pilot owner,Viewer shows executionRecords and package title.,Fix catalog path.
+ACC-006,Authority evidence gate,Authority,Blocked,Authority chair,Authority note accepted privately.,Keep real intake blocked.
+ACC-007,Privacy evidence gate,Privacy,Blocked,Privacy reviewer,Notice and email lock accepted privately.,Keep private invite blocked.
+ACC-008,IDS/data lifecycle gate,IDS/data,Blocked,IDS/data reviewer,Lifecycle proof accepted privately.,Keep real data blocked.
+ACC-009,Support route gate,Support,Blocked,Support owner,Support drill accepted privately.,Keep participant-facing work blocked.
+ACC-010,Official Toastmasters boundary gate,FN Toastmasters,Blocked,Official-route owner,Boundary accepted privately.,Keep guest-only fake sample.
+ACC-011,Security monitoring gate,Security,Blocked,Security reviewer,Security plan accepted privately.,Hold build.
+ACC-012,Provider RFQ package,Provider,Hold,Provider access owner,RFQ excludes real data and sets access terms.,Hold provider contact.
+ACC-013,Provider response score,Provider,Hold,Provider access owner,P0 criteria pass before sandbox work.,Reject or revise RFQ.
+ACC-014,Barayamal minimum fields,Barayamal,Hold,Barayamal custodian,Sensitive fields removed.,Fake sample only.
+ACC-015,Toastmasters guest support,FN Toastmasters,Hold,Training owner,Guest-only route accepted.,No member workflow.
+ACC-016,Admin training,Training,Hold,Community admin trainer,Fake admin can complete core tasks.,No admin handoff.
+ACC-017,Role revoke proof,Access,Hold,Technical/admin custodian,Revoked account loses access.,No real access.
+ACC-018,Backup/restore proof,Decidim build,Hold,Technical/admin custodian,Restore proof accepted.,No real data.
+ACC-019,Public status approval,Comms,Pass,Comms lead,Only approved hold line is public.,Hold public update.
+ACC-020,No-go/archive route,Closeout,Pass,Closeout archivist,Archive/no-go route available.,Add route.
+ACC-021,Private minutes exclusion,Evidence,Blocked,Meeting chair,Private minutes stay outside public package.,Remove private evidence.
+ACC-022,Next review trigger,Meeting,Hold,Meeting chair,Trigger date or condition accepted.,Schedule review.
