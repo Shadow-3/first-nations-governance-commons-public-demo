@@ -1,0 +1,16 @@
+id,check,status,owner,mustBeTrue,failureAction
+RGN-001,Authority owner named,Blocked,Authority chair,Chair and alternate privately recorded,Do not run repeat lab
+RGN-002,Consent and privacy copy accepted,Open,Privacy reviewer,Privacy copy accepted for fake/sample testing,Hold privacy tests
+RGN-003,Outbound email disabled or contained,In review,Privacy reviewer,No real email can send,Hold invite path
+RGN-004,Export/delete/retention proof accepted,Open,IDS/data reviewer,Data rights drill passes privately,Hold data test
+RGN-005,Evidence custody index accepted,Open,IDS/data reviewer,Private evidence map and redaction rule pass,Hold public summary
+RGN-006,Complaint/pause route accepted,Open,Support owner,Support pause and escalation route pass,Hold support test
+RGN-007,Official Toastmasters boundary accepted,Blocked,Official-route owner,No official workflow is active or implied,Keep no-go
+RGN-008,Security restore and revoke proof accepted,In review,Security reviewer,"Restore, revoke, credential, and log proof pass",Hold live access
+RGN-009,Provider refusal script accepted,Open,Provider access owner,Real-record asks are rejected,Hold provider test
+RGN-010,Barayamal samples accepted,Ready,Barayamal custodian,Blocked fields absent,Revise sample
+RGN-011,First Nations Toastmasters guest samples accepted,Open,Training owner,No official member service implied,Revise sample
+RGN-012,Public wording accepted,Ready,Comms lead,Preparation-only wording approved,Do not publish update
+RGN-013,Quorum met,Open,Meeting chair,Required owners present or alternate accepted,Reschedule
+RGN-014,Stop triggers accepted,Open,Meeting chair,Every P0 has stop trigger and failure action,Do not run repeat lab
+RGN-015,Final minute template ready,Open,Meeting chair,Proceed/repeat/no-go options explicit,No decision recorded

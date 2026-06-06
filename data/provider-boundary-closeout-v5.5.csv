@@ -1,0 +1,11 @@
+id,providerAsk,status,owner,refusalLine,safeAlternative,stopTrigger
+PBC-001,Real participant records,Ready,Provider access owner,We cannot provide real participant records for this fake/sample review.,Use synthetic sample schema.,Provider repeats real-record request
+PBC-002,Official Toastmasters member list,Ready,Official-route owner,Official Toastmasters records are out of scope.,Use fake guest/member-boundary sample records.,Provider asks for official member list
+PBC-003,Outbound email invitations,In review,Privacy reviewer,Outbound email is not active for real people.,Use local fake invite preview only.,Any real email send is attempted
+PBC-004,Admin credentials,In review,Security reviewer,Admin credentials cannot be shared outside the approved channel.,Use least-privilege temporary account after owner approval.,Credential shared outside approved channel
+PBC-005,Live onboarding expansion,Hold,Authority chair,Live onboarding is not approved.,Keep scope fake/sample-only.,Provider implies live launch
+PBC-006,Private logs,In review,Security reviewer,Private logs or evidence cannot be transferred.,Use redacted synthetic logs.,Log contains private evidence
+PBC-007,External sample export retention,Hold,IDS/data reviewer,External retention needs deletion and retention proof.,Use temporary synthetic export with deletion proof.,Retention proof missing
+PBC-008,Backup restore assumed,Hold,Security reviewer,Restore proof must be demonstrated privately.,Use private restore proof placeholder.,Backup is assumed but not proven
+PBC-009,Invite real users,Ready,Authority chair,Real user invitations are blocked.,Use fake/sample participant aliases.,Any real invite sent
+PBC-010,Public launch wording,Ready,Comms lead,"Public wording must say preparation, not launch.",Use approved public status register.,Public wording implies launch

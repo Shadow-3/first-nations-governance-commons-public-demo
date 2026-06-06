@@ -1,0 +1,13 @@
+id,order,agendaItem,owner,status,output
+MTA-001,1,"Confirm meeting chair, scope, and authority",Meeting chair,Open,Authority and agenda accepted
+MTA-002,2,Confirm attendance and quorum,Meeting chair,Open,Quorum roster accepted
+MTA-003,3,Review P0 remediation sprint board,Authority chair,Open,P0 action owners confirmed
+MTA-004,4,Privacy and consent evidence review,Privacy reviewer,Open,Privacy copy accepted or held
+MTA-005,5,"IDS/data export, delete, retention, and custody review",IDS/data reviewer,Open,Data rights evidence accepted or held
+MTA-006,6,Support pause and escalation drill review,Support owner,Open,Support route accepted or held
+MTA-007,7,Official Toastmasters boundary review,Official-route owner,Blocked,Boundary accepted or no-go retained
+MTA-008,8,Provider real-record refusal review,Provider access owner,Open,Provider refusal accepted or held
+MTA-009,9,Barayamal and First Nations Toastmasters sample review,Barayamal custodian / Training owner,Ready after revisions,Sample revisions accepted or held
+MTA-010,10,Public status wording review,Comms lead,Ready,Public-safe lines accepted
+MTA-011,11,Repeat-run go/no-go decision,Authority chair,Blocked until P0 closeout,"Repeat run approved, repeated, or held"
+MTA-012,12,Final minute and next action assignment,Meeting chair,Open,Private minute completed

@@ -635,7 +635,7 @@
 <a class="btn" href="pilot-rehearsal-control-room.html">Control Room</a>
 <a class="btn" href="pilot-decision-build-handoff.html">Decision Handoff</a>
 <a class="btn" href="private-owner-decision-meeting.html">Owner Meeting</a>
-<a class="btn" href="private-decision-execution-control.html">Execution Control</a><a class="btn" href="private-evidence-stress-test-lab.html">Stress Lab</a><a class="btn" href="private-stress-lab-run-pack.html">Run Pack</a><a class="btn" href="private-run-results-decision-board.html">Results Board</a><a class="btn primary" href="p0-remediation-repeat-run-control.html">Repeat Control</a>
+<a class="btn" href="private-decision-execution-control.html">Execution Control</a><a class="btn" href="private-evidence-stress-test-lab.html">Stress Lab</a><a class="btn" href="private-stress-lab-run-pack.html">Run Pack</a><a class="btn" href="private-run-results-decision-board.html">Results Board</a><a class="btn" href="p0-remediation-repeat-run-control.html">Repeat Control</a><a class="btn primary" href="owner-closeout-sprint-pack.html">Closeout Sprint</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -686,6 +686,10 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Owner closeout sprint pack guide", path: "docs/owner-closeout-sprint-pack-v5.5.md", type: "markdown", description: "How to run the v5.5 owner closeout sprint." },
+      { category: "Start Here", title: "Private owner agenda and minute template", path: "docs/private-owner-agenda-and-minute-template-v5.5.md", type: "markdown", description: "Private agenda and final minute structure." },
+      { category: "Start Here", title: "P0 repeat-run readiness checklist", path: "docs/p0-repeat-run-readiness-checklist-v5.5.md", type: "markdown", description: "Go/no-go checks before repeat testing." },
+      { category: "Start Here", title: "Provider boundary closeout script", path: "docs/provider-boundary-closeout-script-v5.5.md", type: "markdown", description: "Provider refusal wording and fake/sample alternatives." },
       { category: "Start Here", title: "P0 remediation repeat-run control guide", path: "docs/p0-remediation-repeat-run-control-v5.4.md", type: "markdown", description: "How to use the v5.4 remediation layer." },
       { category: "Start Here", title: "Owner action closeout playbook", path: "docs/owner-action-closeout-playbook-v5.4.md", type: "markdown", description: "Owner actions, substitutions, and signoff limits." },
       { category: "Start Here", title: "Repeat-run evidence briefing pack", path: "docs/repeat-run-evidence-briefing-pack-v5.4.md", type: "markdown", description: "Private evidence placeholders and closeout conditions." },
@@ -811,6 +815,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v5.5", path: "docs/public-demo-release-notes-v5.5.md", type: "markdown", description: "Owner Closeout Sprint Pack upgrade summary." },
       { category: "Release Notes", title: "Release notes v5.4", path: "docs/public-demo-release-notes-v5.4.md", type: "markdown", description: "P0 Remediation Repeat-Run Control upgrade summary." },
       { category: "Release Notes", title: "Release notes v5.3", path: "docs/public-demo-release-notes-v5.3.md", type: "markdown", description: "Private Run Results Decision Board upgrade summary." },
       { category: "Release Notes", title: "Release notes v5.2", path: "docs/public-demo-release-notes-v5.2.md", type: "markdown", description: "Private Stress Lab Run Pack upgrade summary." },
@@ -1049,6 +1054,23 @@
       { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
       { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
       { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Owner Closeout Sprint Pack", title: "Sprint pack guide v5.5", path: "docs/owner-closeout-sprint-pack-v5.5.md", type: "markdown", description: "How to run the owner closeout sprint." },
+      { category: "Owner Closeout Sprint Pack", title: "Agenda and minute template v5.5", path: "docs/private-owner-agenda-and-minute-template-v5.5.md", type: "markdown", description: "Private agenda and final minute structure." },
+      { category: "Owner Closeout Sprint Pack", title: "Repeat-run readiness checklist v5.5", path: "docs/p0-repeat-run-readiness-checklist-v5.5.md", type: "markdown", description: "Go/no-go checks before repeat testing." },
+      { category: "Owner Closeout Sprint Pack", title: "Provider closeout script v5.5", path: "docs/provider-boundary-closeout-script-v5.5.md", type: "markdown", description: "Provider refusal wording and safe alternatives." },
+      { category: "Owner Closeout Sprint Pack", title: "Owner sprint board v5.5", path: "data/owner-closeout-sprint-board-v5.5.csv", type: "csv", description: "Eighteen owner closeout sprint records." },
+      { category: "Owner Closeout Sprint Pack", title: "Owner evidence intake v5.5", path: "data/owner-evidence-intake-register-v5.5.csv", type: "csv", description: "Eighteen evidence intake records." },
+      { category: "Owner Closeout Sprint Pack", title: "Private meeting agenda v5.5", path: "data/private-meeting-agenda-v5.5.csv", type: "csv", description: "Twelve agenda items." },
+      { category: "Owner Closeout Sprint Pack", title: "Repeat go/no-go checklist v5.5", path: "data/repeat-run-go-no-go-checklist-v5.5.csv", type: "csv", description: "Fifteen repeat-readiness checks." },
+      { category: "Owner Closeout Sprint Pack", title: "Quorum and attendance roster v5.5", path: "data/quorum-and-attendance-roster-v5.5.csv", type: "csv", description: "Twelve quorum records." },
+      { category: "Owner Closeout Sprint Pack", title: "P0 closeout decisions v5.5", path: "data/p0-remediation-closeout-decisions-v5.5.csv", type: "csv", description: "Eighteen closeout decision records." },
+      { category: "Owner Closeout Sprint Pack", title: "Sample test schedule v5.5", path: "data/sample-test-schedule-v5.5.csv", type: "csv", description: "Ten repeat-run schedule gates." },
+      { category: "Owner Closeout Sprint Pack", title: "Barayamal founder sample closeouts v5.5", path: "data/barayamal-founder-sample-closeout-v5.5.csv", type: "csv", description: "Ten Barayamal closeout records." },
+      { category: "Owner Closeout Sprint Pack", title: "FN Toastmasters member-boundary closeouts v5.5", path: "data/fn-toastmasters-member-boundary-closeout-v5.5.csv", type: "csv", description: "Ten guest/member-boundary closeout records." },
+      { category: "Owner Closeout Sprint Pack", title: "Provider boundary closeouts v5.5", path: "data/provider-boundary-closeout-v5.5.csv", type: "csv", description: "Ten provider closeout records." },
+      { category: "Owner Closeout Sprint Pack", title: "Public status approval lines v5.5", path: "data/public-status-approval-lines-v5.5.csv", type: "csv", description: "Ten public-safe status lines." },
+      { category: "Owner Closeout Sprint Pack", title: "Final decision minute template v5.5", path: "data/final-decision-minute-template-v5.5.csv", type: "csv", description: "Twelve final minute items." },
+      { category: "Owner Closeout Sprint Pack", title: "Owner closeout sprint package v5.5", path: "data/owner-closeout-sprint-pack-package-v5.5.json", type: "json", description: "Machine-readable v5.5 package." },
       { category: "P0 Remediation Repeat-Run Control", title: "Control guide v5.4", path: "docs/p0-remediation-repeat-run-control-v5.4.md", type: "markdown", description: "How to use the remediation layer." },
       { category: "P0 Remediation Repeat-Run Control", title: "Owner closeout playbook v5.4", path: "docs/owner-action-closeout-playbook-v5.4.md", type: "markdown", description: "Owner actions, substitutions, and signoff limits." },
       { category: "P0 Remediation Repeat-Run Control", title: "Repeat-run evidence briefing pack v5.4", path: "docs/repeat-run-evidence-briefing-pack-v5.4.md", type: "markdown", description: "Private evidence placeholders and closeout conditions." },

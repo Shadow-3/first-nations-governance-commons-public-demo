@@ -1,0 +1,11 @@
+id,runWindow,track,owner,status,scope,stopTrigger
+STS-001,After P0 owner closeout,Authority,Authority chair,Blocked,Authority repeat path,No named chair
+STS-002,After P0 owner closeout,Privacy,Privacy reviewer,Open,Consent and withdrawal fake/sample path,Copy implies real intake
+STS-003,After P0 owner closeout,IDS/data,IDS/data reviewer,Open,Export/delete/retention fake records,Delete or custody proof missing
+STS-004,After P0 owner closeout,Support,Support owner,Open,Complaint/pause route,No support owner
+STS-005,After P0 owner closeout,Official boundary,Official-route owner,Blocked,Guest/member-boundary only,Official workflow appears
+STS-006,After P0 owner closeout,Evidence,IDS/data reviewer,Open,Redaction and custody route,Private evidence leaks
+STS-007,After P0 owner closeout,Provider,Provider access owner,Open,Real-record refusal route,Provider receives real data
+STS-008,After P0 owner closeout,Barayamal,Barayamal custodian,Ready,Founder/business-owner fake samples,Sensitive business field appears
+STS-009,After P0 owner closeout,FN Toastmasters,Training owner,Open,Guest/member-boundary fake samples,Official member service implied
+STS-010,After P0 owner closeout,Final decision,Meeting chair,Open,Final minute and public line,Decision implies proceed early

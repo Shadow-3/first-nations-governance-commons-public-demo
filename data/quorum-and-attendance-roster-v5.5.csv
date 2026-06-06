@@ -1,0 +1,13 @@
+id,role,required,status,alternate,cannotSubstitute
+QAR-001,Authority chair,Yes,Open,To be named privately,Privacy approval
+QAR-002,Privacy reviewer,Yes,Open,To be named privately,Authority approval
+QAR-003,IDS/data reviewer,Yes,Open,To be named privately,Provider approval
+QAR-004,Support owner,Yes,Open,To be named privately,Privacy approval
+QAR-005,Official-route owner,Yes,Blocked,To be named privately,Training or Barayamal approval
+QAR-006,Security reviewer,Yes,In review,To be named privately,Comms approval
+QAR-007,Provider access owner,Yes,Open,To be named privately,Privacy or IDS/data approval
+QAR-008,Comms lead,Yes,Ready,To be named privately,Private evidence approval
+QAR-009,Barayamal custodian,Yes,Ready,Barayamal delegate,Official Toastmasters approval
+QAR-010,Training owner,Yes,Open,To be named privately,Official-route approval
+QAR-011,Meeting chair,Yes,Open,To be named privately,Owner votes
+QAR-012,Dean Foley / Barayamal,Advisory only,Advisory ready,Barayamal delegate,Owner approvals

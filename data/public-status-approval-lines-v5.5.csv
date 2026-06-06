@@ -1,0 +1,11 @@
+id,topic,status,approvedLine,blockedLine,owner
+PSL-001,Overall,Ready,The public demo now includes an owner closeout sprint pack; no live pilot has been approved.,The project is ready for pilot.,Comms lead
+PSL-002,Owner closeout,Ready,P0 owner closeout remains private and must pass before repeat testing.,Owners have approved launch.,Meeting chair
+PSL-003,Repeat run,Ready,The next valid operating step is repeat private fake/sample stress testing after owner closeout.,Repeat testing has passed.,Meeting chair
+PSL-004,Barayamal,Ready,Barayamal remains a controlled fake/sample organisation pathway.,Barayamal founders are being onboarded.,Barayamal custodian
+PSL-005,First Nations Toastmasters,Ready,First Nations Toastmasters remains a fake guest/member-boundary sample only.,Official Toastmasters members are being onboarded.,Training owner
+PSL-006,Provider,Ready,"No provider has access to real participant, organisation, or Toastmasters records.",A provider is reviewing real data.,Provider access owner
+PSL-007,Evidence,Ready,Private evidence remains outside the public package.,Evidence can be shared publicly.,IDS/data reviewer
+PSL-008,Privacy,Ready,Privacy and consent controls remain under private owner review.,Privacy approval is complete.,Privacy reviewer
+PSL-009,Official boundary,Ready,Official Toastmasters workflows are not active or approved in this demo.,Official Toastmasters processes are being tested live.,Official-route owner
+PSL-010,Decision,Ready,No-go/archive remains explicit if P0 closeout does not pass.,Proceed is inevitable.,Authority chair

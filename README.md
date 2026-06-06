@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v5.4
+Current package version: v5.5
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -77,6 +77,7 @@ Open `private-evidence-stress-test-lab.html` to stress-test the v5.0 execution c
 Open `private-stress-lab-run-pack.html` to run the first private fake/sample stress-lab session with owner roster, P0 run register, evidence custody, controlled samples, provider boundaries, public-safe comms, and go/no-go records.
 Open `private-run-results-decision-board.html` after the controlled fake/sample run to record outcomes, evidence acceptance, issues, owner signoffs, public lines, final decisions, and next actions.
 Open `p0-remediation-repeat-run-control.html` to close P0 owner actions, prepare evidence, confirm quorum, run remediation scripts, and prepare the repeat private fake/sample stress run.
+Open `owner-closeout-sprint-pack.html` to run owner closeout, evidence intake, quorum checks, provider refusal, public status approval, and final proceed/repeat/no-go minutes.
 
 The demo shows:
 
@@ -108,6 +109,24 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v5.5.md`
+- `docs/owner-closeout-sprint-pack-v5.5.md`
+- `docs/private-owner-agenda-and-minute-template-v5.5.md`
+- `docs/p0-repeat-run-readiness-checklist-v5.5.md`
+- `docs/provider-boundary-closeout-script-v5.5.md`
+- `data/owner-closeout-sprint-board-v5.5.csv`
+- `data/owner-evidence-intake-register-v5.5.csv`
+- `data/private-meeting-agenda-v5.5.csv`
+- `data/repeat-run-go-no-go-checklist-v5.5.csv`
+- `data/quorum-and-attendance-roster-v5.5.csv`
+- `data/p0-remediation-closeout-decisions-v5.5.csv`
+- `data/sample-test-schedule-v5.5.csv`
+- `data/barayamal-founder-sample-closeout-v5.5.csv`
+- `data/fn-toastmasters-member-boundary-closeout-v5.5.csv`
+- `data/provider-boundary-closeout-v5.5.csv`
+- `data/public-status-approval-lines-v5.5.csv`
+- `data/final-decision-minute-template-v5.5.csv`
+- `data/owner-closeout-sprint-pack-package-v5.5.json`
 - `docs/public-demo-release-notes-v5.4.md`
 - `docs/p0-remediation-repeat-run-control-v5.4.md`
 - `docs/owner-action-closeout-playbook-v5.4.md`
@@ -1134,6 +1153,44 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v5.5 Owner Closeout Sprint Pack Upgrade
+
+The v5.5 package turns the v5.4 remediation gates into a private owner closeout sprint:
+
+- 18 owner sprint items.
+- 18 evidence intake records.
+- 15 repeat go/no-go checks.
+- 12 quorum roster records.
+- 18 closeout decisions.
+- 10 Barayamal closeouts.
+- 10 First Nations Toastmasters closeouts.
+- 10 provider closeouts.
+- 10 public status approval lines.
+- 12 final minute items.
+- 145 total sprint records.
+
+Limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, and live Decidim access remain blocked until owner closeout and repeat P0 testing both pass privately.
+
+
+## v5.5 Owner Closeout Sprint Pack Upgrade
+
+The v5.5 package turns the v5.4 remediation gates into a private owner closeout sprint:
+
+- 18 owner sprint items.
+- 18 evidence intake records.
+- 15 repeat go/no-go checks.
+- 12 quorum roster records.
+- 18 closeout decisions.
+- 10 Barayamal closeouts.
+- 10 First Nations Toastmasters closeouts.
+- 10 provider closeouts.
+- 10 public status approval lines.
+- 12 final minute items.
+- 155 total sprint records.
+
+Limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, and live Decidim access remain blocked until owner closeout and repeat P0 testing both pass privately.
+
 
 ## v5.4 P0 Remediation Repeat-Run Control Upgrade
 

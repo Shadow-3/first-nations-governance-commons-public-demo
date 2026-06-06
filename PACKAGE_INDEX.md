@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v5.4  
+Version: v5.5  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -152,6 +152,29 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 142. `docs/public-demo-release-notes-v2.3.md` - v2.3 release summary.
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
+
+## v5.5 Owner Closeout Sprint Pack Additions
+
+- `owner-closeout-sprint-pack.html` interactive owner closeout sprint page.
+- `docs/owner-closeout-sprint-pack-v5.5.md` sprint pack guide.
+- `docs/private-owner-agenda-and-minute-template-v5.5.md` private agenda and minute template.
+- `docs/p0-repeat-run-readiness-checklist-v5.5.md` repeat-run readiness checklist.
+- `docs/provider-boundary-closeout-script-v5.5.md` provider refusal and safe-alternative script.
+- `docs/public-demo-release-notes-v5.5.md` release notes.
+- `data/owner-closeout-sprint-board-v5.5.csv`
+- `data/owner-evidence-intake-register-v5.5.csv`
+- `data/private-meeting-agenda-v5.5.csv`
+- `data/repeat-run-go-no-go-checklist-v5.5.csv`
+- `data/quorum-and-attendance-roster-v5.5.csv`
+- `data/p0-remediation-closeout-decisions-v5.5.csv`
+- `data/sample-test-schedule-v5.5.csv`
+- `data/barayamal-founder-sample-closeout-v5.5.csv`
+- `data/fn-toastmasters-member-boundary-closeout-v5.5.csv`
+- `data/provider-boundary-closeout-v5.5.csv`
+- `data/public-status-approval-lines-v5.5.csv`
+- `data/final-decision-minute-template-v5.5.csv`
+- `data/owner-closeout-sprint-pack-package-v5.5.json`
+
 
 ## v5.4 P0 Remediation Repeat-Run Control Additions
 
