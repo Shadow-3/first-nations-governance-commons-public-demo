@@ -1,0 +1,13 @@
+id,template,status,audience,safeMessage,mustNotSay,owner
+"COM-001","Public v4.4 release note","Ready","Public visitors","The demo now includes a private decision evidence docket using fake/sample data only.","Real approvals have passed.","Comms lead"
+"COM-002","Meeting invitation","Hold","Approval owners","Requests a private fake-data decision meeting.","Include private evidence in public links.","Meeting chair"
+"COM-003","Evidence request","Hold","Evidence custodians","Requests owner evidence classification and custody status.","Ask for public upload of private evidence.","Evidence custodian"
+"COM-004","Conflict/recusal request","Hold","Meeting owners","Asks owners to note conflicts privately.","Publish conflict details.","Meeting chair"
+"COM-005","Authority follow-up","Blocked","Authority chair","Requests private authority route confirmation.","Publish authority minutes.","Pilot owner"
+"COM-006","Privacy/IDS follow-up","Blocked","Privacy/IDS reviewers","Requests private field and data control decision.","Publish private evidence.","Pilot owner"
+"COM-007","Support route follow-up","Blocked","Support owner","Requests support, complaint, incident, withdrawal route decision.","Collect details publicly.","Pilot owner"
+"COM-008","Toastmasters boundary follow-up","Blocked","Official-route owner","Requests member/guest/official-record boundary decision.","Ask for member numbers.","Pilot owner"
+"COM-009","Barayamal field follow-up","Hold","Barayamal program operator","Requests business-field minimisation decision.","Ask for business-sensitive records.","Pilot owner"
+"COM-010","Dean advisory request","Ready","Dean trusted reviewer","Requests advisory comments on docket quality and public/private boundaries.","Ask for final owner approvals.","Pilot owner"
+"COM-011","Public hold outcome","Ready","Public visitors","Real intake remains closed while private approvals are unresolved.","Pilot is open.","Comms lead"
+"COM-012","No-go/archive notice","Available","Private owners","Summarises no-go/archive at safe status level.","Publish private reasons.","Authority chair"

@@ -1,0 +1,13 @@
+id,audience,status,line,allowed,notAllowed,owner
+"OUT-001","Public","Ready","The public demo now includes a private decision evidence docket using fake/sample data only.","Feature summary.","Private decision evidence.","Comms lead"
+"OUT-002","Public","Ready","Real participant intake remains closed while private approvals are unresolved.","Hold posture.","Launch implication.","Comms lead"
+"OUT-003","Public","Hold","Barayamal-only fake-data rehearsal is under private review.","Track status only.","Founder/business details.","Barayamal program operator"
+"OUT-004","Public","Hold","First Nations Toastmasters member route remains blocked pending official boundary review.","Boundary status.","Member/club records.","Official-route owner"
+"OUT-005","Private owners","Hold","Please close, hold, or no-go each owner decision record.","Private owner action.","Public sharing.","Pilot owner"
+"OUT-006","Dean reviewer","Ready","Please provide advisory comments on boundaries and sample evidence quality.","Advisory request.","Approval request.","Pilot owner"
+"OUT-007","Support owner","Blocked","Support and incident route must be confirmed privately.","Private request.","Support details public.","Support owner"
+"OUT-008","Privacy/IDS reviewers","Blocked","Field, retention, export, delete, access, and evidence rules must be decided privately.","Private request.","Public evidence.","Privacy/IDS reviewers"
+"OUT-009","Technical custodian","Hold","Run fake-data access/revoke/backup/export/delete proof.","Private technical task.","Credentials/logs public.","Technical/admin custodian"
+"OUT-010","Provider access owner","Hold","Provider route is available only with private access controls.","Private route status.","Provider logs.","Provider access owner"
+"OUT-011","Authority chair","Blocked","Authority pathway must be confirmed before any live intake.","Private authority request.","Authority minutes public.","Authority chair"
+"OUT-012","Public","Available","A no-go or archive outcome can be published at public-safe status level only.","Outcome status.","Private reasons/evidence.","Comms lead"

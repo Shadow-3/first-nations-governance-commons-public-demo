@@ -1,0 +1,13 @@
+id,rule,status,custodian,appliesTo,control,publicBoundary
+"CUS-001","Private evidence folder access","Blocked","Evidence custodian","Authority, privacy, IDS, support records.","Owner-only access.","No folder links public."
+"CUS-002","Consent evidence storage","Blocked","Consent owner","Consent acknowledgements.","Private consent store.","No signatures public."
+"CUS-003","Official records exclusion","Blocked","Official-route owner","Toastmasters member/club/payment records.","External official route.","No official records in Decidim."
+"CUS-004","Support/incident separation","Blocked","Support owner","Support, complaint, incident details.","Separate private support system.","No details public."
+"CUS-005","Business-sensitive data minimisation","Hold","Barayamal program operator","Founder/business owner details.","Collect minimum private fields only.","No business details public."
+"CUS-006","Access log custody","Hold","Technical/admin custodian","Access, revoke, admin proof.","Private logs only.","No logs public."
+"CUS-007","Backup/export/delete proof custody","Hold","Technical/admin custodian","Technical operations proof.","Fake-data proof only.","No backups/exports public."
+"CUS-008","Conflict register custody","Hold","Meeting chair","Conflicts and recusals.","Private meeting record.","No personal details public."
+"CUS-009","Redaction checklist custody","Hold","Comms lead","Public update approval.","Checklist stored privately; outcome public.","Status only."
+"CUS-010","Advisory comments custody","Ready","Pilot owner","Dean/advisory comments.","Label as advisory only.","Public-safe comments only."
+"CUS-011","Cultural protocol custody","Blocked","Cultural safety reviewer","Cultural protocol triggers/material.","Stop and route privately.","No cultural material public."
+"CUS-012","Archive closeout custody","Hold","Closeout archivist","Decision record and evidence index.","Private archive, public-safe status.","No private archive public."

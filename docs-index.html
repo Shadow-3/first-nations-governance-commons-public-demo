@@ -352,6 +352,7 @@
 <a class="btn" href="pilot-agreement-onboarding.html">Agreement</a>
 <a class="btn" href="private-intake-consent-triage.html">Intake</a>
 <a class="btn" href="private-approval-pilot-gate.html">Gate</a>
+<a class="btn" href="private-decision-evidence-docket.html">Docket</a>
     <a class="btn" href="index.html">Open Demo</a>
     <div class="label">Public demo - fake data only</div>
   </header>
@@ -493,6 +494,10 @@
       <a href="#gate">
         <strong>Gate</strong>
         <span>Private approval owners, motions, gates, risks, tickets, sandbox checks, and decisions.</span>
+      </a>
+      <a href="#docket">
+        <strong>Docket</strong>
+        <span>Meeting agenda, evidence custody, owner decisions, redactions, outcomes, actions, audit, and comms.</span>
       </a>
       <a href="#governance">
         <strong>Governance/Data</strong>
@@ -734,6 +739,13 @@
         </div>
         <div class="doc-row">
           <div>
+            <strong>Private Decision Evidence Docket</strong>
+            <span>Run the private fake-data decision meeting and public-safe outcome workflow.</span>
+          </div>
+          <a class="btn primary" href="private-decision-evidence-docket.html">Open</a>
+        </div>
+        <div class="doc-row">
+          <div>
             <strong>Public demo prototype</strong>
             <span>Sample Decidim-style participatory process.</span>
           </div>
@@ -763,9 +775,9 @@
         <div class="doc-row">
           <div>
             <strong>Release notes</strong>
-            <span>What changed in the v4.3 Private Approval & Pilot Gate Room upgrade.</span>
+            <span>What changed in the v4.4 Private Decision Evidence Docket upgrade.</span>
           </div>
-          <a class="btn" href="docs/public-demo-release-notes-v4.3.md">Open</a>
+          <a class="btn" href="docs/public-demo-release-notes-v4.4.md">Open</a>
         </div>
       </div>
     </section>
@@ -1151,6 +1163,33 @@
         <div class="doc-row"><div><strong>Evidence Vault & Advisory Review</strong><span>Dean advisory review, private evidence vault, access rules, authority meeting steps, and decision gates.</span></div><a class="btn primary" href="private-pilot-evidence-vault.html">Open</a></div>
       </div>
     </section>
+    <section id="docket">
+      <div class="section-head">
+        <div>
+          <h2>Private Decision Evidence Docket</h2>
+          <p>Use these files to run the private decision meeting and publish only redacted public-safe outcomes.</p>
+        </div>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-row"><div><strong>Private Decision Evidence Docket</strong><span>Interactive meeting agenda, evidence docket, owner decisions, conflicts, redactions, outcomes, actions, custody, audit, and comms.</span></div><a class="btn primary" href="private-decision-evidence-docket.html">Open</a></div>
+        <div class="doc-row"><div><strong>Decision docket playbook v4.4</strong><span>Run the private fake-data decision meeting.</span></div><a class="btn" href="docs/private-decision-evidence-docket-playbook-v4.4.md">Open</a></div>
+        <div class="doc-row"><div><strong>Agenda and minutes pack v4.4</strong><span>Meeting agenda, decisions, conflicts, and audit log.</span></div><a class="btn" href="docs/approval-meeting-agenda-and-minutes-v4.4.md">Open</a></div>
+        <div class="doc-row"><div><strong>Custody and redaction protocol v4.4</strong><span>Evidence handling and public/private redaction.</span></div><a class="btn" href="docs/evidence-custody-and-redaction-protocol-v4.4.md">Open</a></div>
+        <div class="doc-row"><div><strong>Outcome and carry-forward pack v4.4</strong><span>Public outcome lines and unresolved owner actions.</span></div><a class="btn" href="docs/public-outcome-and-action-carryover-pack-v4.4.md">Open</a></div>
+        <div class="doc-row"><div><strong>Agenda CSV</strong><span>Fourteen meeting agenda steps.</span></div><a class="btn" href="data/decision-meeting-agenda-v4.4.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Evidence docket CSV</strong><span>Sixteen evidence docket items.</span></div><a class="btn" href="data/evidence-docket-items-v4.4.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Owner decisions CSV</strong><span>Sixteen owner decision records.</span></div><a class="btn" href="data/owner-decision-records-v4.4.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Conflict register CSV</strong><span>Twelve conflict and recusal rows.</span></div><a class="btn" href="data/conflict-and-recusal-register-v4.4.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Redaction checklist CSV</strong><span>Fourteen redaction checks.</span></div><a class="btn" href="data/redaction-checklist-v4.4.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Outcome lines CSV</strong><span>Twelve public outcome lines.</span></div><a class="btn" href="data/public-outcome-lines-v4.4.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Carry-forward actions CSV</strong><span>Sixteen carry-forward actions.</span></div><a class="btn" href="data/carry-forward-actions-v4.4.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Custody rules CSV</strong><span>Twelve evidence custody rules.</span></div><a class="btn" href="data/evidence-custody-rules-v4.4.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Audit log CSV</strong><span>Fourteen decision audit events.</span></div><a class="btn" href="data/decision-audit-log-v4.4.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Docket comms CSV</strong><span>Twelve communications templates.</span></div><a class="btn" href="data/decision-docket-comms-v4.4.csv">Open</a></div>
+        <div class="doc-row"><div><strong>Docket package JSON</strong><span>Machine-readable v4.4 decision docket.</span></div><a class="btn" href="data/private-decision-evidence-docket-package-v4.4.json">Open</a></div>
+        <div class="doc-row"><div><strong>Release notes v4.4</strong><span>What changed in the decision docket upgrade.</span></div><a class="btn" href="docs/public-demo-release-notes-v4.4.md">Open</a></div>
+      </div>
+    </section>
     <section id="gate">
       <div class="section-head">
         <div>
@@ -1510,7 +1549,7 @@
     </section>
 
     <footer>
-      Version v4.3. Initial developer/custodian: Barayamal / Dean Foley.
+      Version v4.4. Initial developer/custodian: Barayamal / Dean Foley.
     </footer>
   </main>
   <script>

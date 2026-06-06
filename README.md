@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v4.3
+Current package version: v4.4
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -66,6 +66,7 @@ Open `private-rehearsal-closeout.html` to execute and close the private fake-dat
 Open `pilot-agreement-onboarding.html` to prepare safe joining terms, role commitments, notices, data schedules, support protocols, training, launch communications, and decision conditions.
 Open `private-intake-consent-triage.html` to rehearse private intake fields, consent checks, support routes, access provisioning, approval tickets, communications, risk controls, and decisions.
 Open `private-approval-pilot-gate.html` to close or hold private approval owners, motions, gates, risks, tickets, sandbox checks, boundaries, actions, and comms before any real intake.
+Open `private-decision-evidence-docket.html` to run the private fake-data decision meeting with agenda, evidence custody, owner decisions, conflicts, redactions, public outcomes, carry-forward actions, audit, and comms.
 
 The demo shows:
 
@@ -97,6 +98,23 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v4.4.md`
+- `docs/private-decision-evidence-docket-playbook-v4.4.md`
+- `docs/approval-meeting-agenda-and-minutes-v4.4.md`
+- `docs/evidence-custody-and-redaction-protocol-v4.4.md`
+- `docs/public-outcome-and-action-carryover-pack-v4.4.md`
+- `data/decision-meeting-agenda-v4.4.csv`
+- `data/evidence-docket-items-v4.4.csv`
+- `data/owner-decision-records-v4.4.csv`
+- `data/conflict-and-recusal-register-v4.4.csv`
+- `data/redaction-checklist-v4.4.csv`
+- `data/public-outcome-lines-v4.4.csv`
+- `data/carry-forward-actions-v4.4.csv`
+- `data/evidence-custody-rules-v4.4.csv`
+- `data/decision-audit-log-v4.4.csv`
+- `data/decision-docket-comms-v4.4.csv`
+- `data/private-decision-evidence-docket-package-v4.4.json`
+
 - `docs/public-demo-release-notes-v4.3.md`
 - `docs/private-approval-pilot-gate-playbook-v4.3.md`
 - `docs/private-approval-owner-matrix-v4.3.md`
@@ -940,6 +958,17 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v4.4 Private Decision Evidence Docket Upgrade
+
+The v4.4 package adds the private meeting execution layer needed after the approval gate room:
+
+- Fourteen agenda steps, sixteen evidence items, sixteen owner decision records, twelve conflict/recusal rows, and fourteen redaction checks.
+- Twelve public outcome lines, sixteen carry-forward actions, twelve custody rules, fourteen audit events, and twelve comms templates.
+- A stronger hold rule: real participant intake and live Decidim access remain closed until the private meeting closes or carries forward every decision, evidence, custody, redaction, and action item.
+
+Use this version to run the controlled fake-data private decision meeting and publish only redacted public-safe outcomes.
+
 
 ## v4.3 Private Approval & Pilot Gate Room Upgrade
 

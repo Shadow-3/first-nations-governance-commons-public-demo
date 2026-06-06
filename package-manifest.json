@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "4.3",
+  "version": "4.4",
   "date": "2026-06-06",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use Private Approval & Pilot Gate Room as the default next fake-data decision layer: run a private approval meeting, close or hold owner decisions, motions, gates, risk acceptances, tickets, sandbox checks, and public/private boundaries, while keeping real participant intake and live Decidim access on hold until private authority, privacy, Indigenous Data Sovereignty/data governance, official Toastmasters boundary, support, access, retention, incident response, technical operations, and closeout approvals pass.",
+  "recommendedDecision": "Use Private Decision Evidence Docket as the default next fake-data decision execution layer: run the private approval meeting, classify evidence, capture owner decision records, manage conflicts and recusals, approve redactions, publish only public-safe outcome lines, and carry unresolved actions forward while keeping real intake and live Decidim access on hold until all private approvals pass.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -347,13 +347,30 @@
     "data/public-private-decision-boundaries-v4.3.csv",
     "data/private-approval-action-log-v4.3.csv",
     "data/private-approval-comms-v4.3.csv",
-    "data/private-approval-pilot-gate-package-v4.3.json"
+    "data/private-approval-pilot-gate-package-v4.3.json",
+    "private-decision-evidence-docket.html",
+    "docs/private-decision-evidence-docket-playbook-v4.4.md",
+    "docs/approval-meeting-agenda-and-minutes-v4.4.md",
+    "docs/evidence-custody-and-redaction-protocol-v4.4.md",
+    "docs/public-outcome-and-action-carryover-pack-v4.4.md",
+    "docs/public-demo-release-notes-v4.4.md",
+    "data/decision-meeting-agenda-v4.4.csv",
+    "data/evidence-docket-items-v4.4.csv",
+    "data/owner-decision-records-v4.4.csv",
+    "data/conflict-and-recusal-register-v4.4.csv",
+    "data/redaction-checklist-v4.4.csv",
+    "data/public-outcome-lines-v4.4.csv",
+    "data/carry-forward-actions-v4.4.csv",
+    "data/evidence-custody-rules-v4.4.csv",
+    "data/decision-audit-log-v4.4.csv",
+    "data/decision-docket-comms-v4.4.csv",
+    "data/private-decision-evidence-docket-package-v4.4.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v4.3.md",
+    "releaseNotes": "docs/public-demo-release-notes-v4.4.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -615,7 +632,17 @@
       "qa-v43-deployed-private-approval-pilot-gate-barayamal-desktop.png",
       "qa-v43-deployed-private-approval-pilot-gate-risk-desktop.png",
       "qa-v43-deployed-private-approval-pilot-gate-mobile.png",
-      "qa-v43-deployed-private-approval-pilot-gate-package-mobile.png"
+      "qa-v43-deployed-private-approval-pilot-gate-package-mobile.png",
+      "qa-v44-local-private-decision-evidence-docket-desktop.png",
+      "qa-v44-local-private-decision-evidence-docket-barayamal-desktop.png",
+      "qa-v44-local-private-decision-evidence-docket-evidence-desktop.png",
+      "qa-v44-local-private-decision-evidence-docket-mobile.png",
+      "qa-v44-local-private-decision-evidence-docket-package-mobile.png",
+      "qa-v44-deployed-private-decision-evidence-docket-desktop.png",
+      "qa-v44-deployed-private-decision-evidence-docket-barayamal-desktop.png",
+      "qa-v44-deployed-private-decision-evidence-docket-evidence-desktop.png",
+      "qa-v44-deployed-private-decision-evidence-docket-mobile.png",
+      "qa-v44-deployed-private-decision-evidence-docket-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -1632,6 +1659,25 @@
       "data/private-approval-action-log-v4.3.csv",
       "data/private-approval-comms-v4.3.csv",
       "data/private-approval-pilot-gate-package-v4.3.json"
+    ],
+    "privateDecisionEvidenceDocket": [
+      "private-decision-evidence-docket.html",
+      "docs/private-decision-evidence-docket-playbook-v4.4.md",
+      "docs/approval-meeting-agenda-and-minutes-v4.4.md",
+      "docs/evidence-custody-and-redaction-protocol-v4.4.md",
+      "docs/public-outcome-and-action-carryover-pack-v4.4.md",
+      "docs/public-demo-release-notes-v4.4.md",
+      "data/decision-meeting-agenda-v4.4.csv",
+      "data/evidence-docket-items-v4.4.csv",
+      "data/owner-decision-records-v4.4.csv",
+      "data/conflict-and-recusal-register-v4.4.csv",
+      "data/redaction-checklist-v4.4.csv",
+      "data/public-outcome-lines-v4.4.csv",
+      "data/carry-forward-actions-v4.4.csv",
+      "data/evidence-custody-rules-v4.4.csv",
+      "data/decision-audit-log-v4.4.csv",
+      "data/decision-docket-comms-v4.4.csv",
+      "data/private-decision-evidence-docket-package-v4.4.json"
     ]
   },
   "safetyRules": [
@@ -1708,7 +1754,11 @@
     "This v4.3 package remains public fake/sample data only. Do not publish real names, emails, phone numbers, member numbers, business-sensitive material, payments, signatures, authority minutes, consent evidence, support records, incident details, access logs, official Toastmasters records, cultural material, private URLs, or private pilot evidence.",
     "Dean Foley / Barayamal may act as initial developer, custodian, and trusted reviewer for public-safe and approved fake-data evidence, but cannot approve First Nations authority, privacy, Indigenous Data Sovereignty/data governance, official Toastmasters, support, payment, consent, access, or pilot launch decisions owned by others.",
     "Use the v4.3 Private Approval & Pilot Gate Room after the v4.2 intake triage pack. It converts private intake holds into owner decisions, motions, gate status, risk acceptance, closeout actions, sandbox readiness checks, and public-safe updates.",
-    "Recommended decision remains Hold. Run a controlled fake-data private approval meeting first; real participant intake or live Decidim access can open only if authority, privacy, IDS/data governance, official-route, support, access, retention, incident, technical, and closeout gates pass privately."
+    "Recommended decision remains Hold. Run a controlled fake-data private approval meeting first; real participant intake or live Decidim access can open only if authority, privacy, IDS/data governance, official-route, support, access, retention, incident, technical, and closeout gates pass privately.",
+    "This v4.4 package remains public fake/sample data only. Private meeting minutes, owner names beyond role labels, authority evidence, consent evidence, member numbers, payments, signatures, support records, incident details, access logs, credentials, backups, exports, official Toastmasters records, business-sensitive details, cultural material, and private URLs must remain outside the public package.",
+    "Dean Foley / Barayamal may support docket preparation, developer notes, and trusted-review comments only where an approval owner permits it. Advisory review never replaces First Nations authority, privacy, IDS/data governance, official Toastmasters, support, payment, consent, access, or launch approvals.",
+    "Use the v4.4 Private Decision Evidence Docket after the v4.3 gate room. It turns owners, motions, gates, risks, and sandbox checks into a private meeting docket with agenda steps, evidence custody, owner decision records, conflict/recusal checks, redaction, public outcome lines, carry-forward actions, audit log, and communications.",
+    "Recommended decision remains Hold. Run the private fake-data decision meeting, close or carry forward every owner decision record, approve redactions, and publish only the public-safe outcome line. Real intake and live Decidim access remain blocked until all private owner approvals pass."
   ],
   "opsRoom": {
     "entrypoint": "ops-room.html",
@@ -3430,5 +3480,93 @@
     "advisoryRule": "Dean Foley / Barayamal may act as initial developer, custodian, and trusted reviewer for public-safe and approved fake-data evidence, but cannot approve First Nations authority, privacy, Indigenous Data Sovereignty/data governance, official Toastmasters, support, payment, consent, access, or pilot launch decisions owned by others.",
     "safetyRule": "This v4.3 package remains public fake/sample data only. Do not publish real names, emails, phone numbers, member numbers, business-sensitive material, payments, signatures, authority minutes, consent evidence, support records, incident details, access logs, official Toastmasters records, cultural material, private URLs, or private pilot evidence.",
     "decisionRule": "Recommended decision remains Hold. Run a controlled fake-data private approval meeting first; real participant intake or live Decidim access can open only if authority, privacy, IDS/data governance, official-route, support, access, retention, incident, technical, and closeout gates pass privately."
+  },
+  "privateDecisionEvidenceDocket": {
+    "entrypoint": "private-decision-evidence-docket.html",
+    "playbook": "docs/private-decision-evidence-docket-playbook-v4.4.md",
+    "agendaMinutes": "docs/approval-meeting-agenda-and-minutes-v4.4.md",
+    "custodyProtocol": "docs/evidence-custody-and-redaction-protocol-v4.4.md",
+    "outcomePack": "docs/public-outcome-and-action-carryover-pack-v4.4.md",
+    "releaseNotes": "docs/public-demo-release-notes-v4.4.md",
+    "dataFiles": [
+      "data/decision-meeting-agenda-v4.4.csv",
+      "data/evidence-docket-items-v4.4.csv",
+      "data/owner-decision-records-v4.4.csv",
+      "data/conflict-and-recusal-register-v4.4.csv",
+      "data/redaction-checklist-v4.4.csv",
+      "data/public-outcome-lines-v4.4.csv",
+      "data/carry-forward-actions-v4.4.csv",
+      "data/evidence-custody-rules-v4.4.csv",
+      "data/decision-audit-log-v4.4.csv",
+      "data/decision-docket-comms-v4.4.csv",
+      "data/private-decision-evidence-docket-package-v4.4.json"
+    ],
+    "primaryOrganisationTest": "Barayamal",
+    "controlledMemberTester": "First Nations Toastmasters",
+    "counts": {
+      "agendaSteps": 14,
+      "evidenceItems": 16,
+      "decisionRecords": 16,
+      "conflicts": 12,
+      "redactionChecks": 14,
+      "outcomeLines": 12,
+      "carryActions": 16,
+      "custodyRules": 12,
+      "auditEvents": 14,
+      "commsTemplates": 12,
+      "docketRecords": 138,
+      "barayamalDecisions": 4,
+      "toastmastersDecisions": 4,
+      "crossTrackDecisions": 8,
+      "blockedDecisions": 5,
+      "holdDecisions": 8,
+      "readyDecisions": 3,
+      "neverPublicEvidence": 4,
+      "blockedRedactions": 8,
+      "blockedCustodyRules": 5,
+      "readyComms": 3
+    },
+    "sourceAnchors": [
+      {
+        "label": "Decidim authorizations",
+        "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+      },
+      {
+        "label": "Decidim permissions",
+        "url": "https://docs.decidim.org/en/develop/develop/permissions.html"
+      },
+      {
+        "label": "Decidim accountability",
+        "url": "https://docs.decidim.org/en/develop/admin/components/accountability.html"
+      },
+      {
+        "label": "Barayamal Toastmasters First Nations",
+        "url": "https://barayamal.com.au/toastmasters-first-nations/"
+      },
+      {
+        "label": "Toastmasters governing documents",
+        "url": "https://www.toastmasters.org/resources/governing-documents"
+      },
+      {
+        "label": "OAIC privacy impact assessment guide",
+        "url": "https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/privacy-impact-assessments/guide-to-undertaking-privacy-impact-assessments"
+      },
+      {
+        "label": "OAIC Notifiable Data Breaches",
+        "url": "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme"
+      },
+      {
+        "label": "AIATSIS ethical research",
+        "url": "https://aiatsis.gov.au/research/ethical-research"
+      },
+      {
+        "label": "NHMRC Aboriginal and Torres Strait Islander research ethics",
+        "url": "https://www.nhmrc.gov.au/research-policy/ethics/ethical-guidelines-research-aboriginal-and-torres-strait-islander-peoples"
+      }
+    ],
+    "operatingRule": "Use the v4.4 Private Decision Evidence Docket after the v4.3 gate room. It turns owners, motions, gates, risks, and sandbox checks into a private meeting docket with agenda steps, evidence custody, owner decision records, conflict/recusal checks, redaction, public outcome lines, carry-forward actions, audit log, and communications.",
+    "advisoryRule": "Dean Foley / Barayamal may support docket preparation, developer notes, and trusted-review comments only where an approval owner permits it. Advisory review never replaces First Nations authority, privacy, IDS/data governance, official Toastmasters, support, payment, consent, access, or launch approvals.",
+    "safetyRule": "This v4.4 package remains public fake/sample data only. Private meeting minutes, owner names beyond role labels, authority evidence, consent evidence, member numbers, payments, signatures, support records, incident details, access logs, credentials, backups, exports, official Toastmasters records, business-sensitive details, cultural material, and private URLs must remain outside the public package.",
+    "decisionRule": "Recommended decision remains Hold. Run the private fake-data decision meeting, close or carry forward every owner decision record, approve redactions, and publish only the public-safe outcome line. Real intake and live Decidim access remain blocked until all private owner approvals pass."
   }
 }

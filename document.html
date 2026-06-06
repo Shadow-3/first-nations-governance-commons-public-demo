@@ -629,6 +629,7 @@
 <a class="btn" href="pilot-agreement-onboarding.html">Agreement</a>
 <a class="btn" href="private-intake-consent-triage.html">Intake</a>
 <a class="btn" href="private-approval-pilot-gate.html">Gate</a>
+<a class="btn" href="private-decision-evidence-docket.html">Docket</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -679,6 +680,10 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Private decision evidence docket playbook", path: "docs/private-decision-evidence-docket-playbook-v4.4.md", type: "markdown", description: "Run the private fake-data decision meeting." },
+      { category: "Start Here", title: "Approval meeting agenda and minutes", path: "docs/approval-meeting-agenda-and-minutes-v4.4.md", type: "markdown", description: "Meeting agenda, decisions, conflicts, and audit log." },
+      { category: "Start Here", title: "Evidence custody and redaction protocol", path: "docs/evidence-custody-and-redaction-protocol-v4.4.md", type: "markdown", description: "Evidence handling and public/private redaction." },
+      { category: "Start Here", title: "Public outcome and action carryover pack", path: "docs/public-outcome-and-action-carryover-pack-v4.4.md", type: "markdown", description: "Public outcome lines and unresolved owner actions." },
       { category: "Start Here", title: "Private approval gate playbook", path: "docs/private-approval-pilot-gate-playbook-v4.3.md", type: "markdown", description: "Run the private fake-data approval meeting." },
       { category: "Start Here", title: "Private approval owner matrix", path: "docs/private-approval-owner-matrix-v4.3.md", type: "markdown", description: "Who can approve, advise, or must not approve." },
       { category: "Start Here", title: "Decision meeting and motion pack", path: "docs/decision-meeting-and-motion-pack-v4.3.md", type: "markdown", description: "Private meeting motions and options." },
@@ -759,6 +764,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v4.4", path: "docs/public-demo-release-notes-v4.4.md", type: "markdown", description: "Private Decision Evidence Docket upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.3", path: "docs/public-demo-release-notes-v4.3.md", type: "markdown", description: "Private Approval & Pilot Gate Room upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.2", path: "docs/public-demo-release-notes-v4.2.md", type: "markdown", description: "Private Intake & Consent Triage upgrade summary." },
       { category: "Release Notes", title: "Release notes v4.1", path: "docs/public-demo-release-notes-v4.1.md", type: "markdown", description: "Pilot Agreement & Organisation Onboarding upgrade summary." },
@@ -986,6 +992,21 @@
       { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
       { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
       { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Private Decision Evidence Docket", title: "Decision docket playbook v4.4", path: "docs/private-decision-evidence-docket-playbook-v4.4.md", type: "markdown", description: "Run the private fake-data decision meeting." },
+      { category: "Private Decision Evidence Docket", title: "Approval meeting agenda and minutes v4.4", path: "docs/approval-meeting-agenda-and-minutes-v4.4.md", type: "markdown", description: "Meeting agenda, decisions, conflicts, and audit log." },
+      { category: "Private Decision Evidence Docket", title: "Evidence custody and redaction protocol v4.4", path: "docs/evidence-custody-and-redaction-protocol-v4.4.md", type: "markdown", description: "Evidence handling and public/private redaction." },
+      { category: "Private Decision Evidence Docket", title: "Public outcome and action carryover v4.4", path: "docs/public-outcome-and-action-carryover-pack-v4.4.md", type: "markdown", description: "Public outcome lines and unresolved owner actions." },
+      { category: "Private Decision Evidence Docket", title: "Agenda steps v4.4", path: "data/decision-meeting-agenda-v4.4.csv", type: "csv", description: "Fourteen meeting agenda steps." },
+      { category: "Private Decision Evidence Docket", title: "Evidence docket v4.4", path: "data/evidence-docket-items-v4.4.csv", type: "csv", description: "Sixteen evidence docket items." },
+      { category: "Private Decision Evidence Docket", title: "Owner decisions v4.4", path: "data/owner-decision-records-v4.4.csv", type: "csv", description: "Sixteen owner decision records." },
+      { category: "Private Decision Evidence Docket", title: "Conflict register v4.4", path: "data/conflict-and-recusal-register-v4.4.csv", type: "csv", description: "Twelve conflict and recusal rows." },
+      { category: "Private Decision Evidence Docket", title: "Redaction checklist v4.4", path: "data/redaction-checklist-v4.4.csv", type: "csv", description: "Fourteen redaction checks." },
+      { category: "Private Decision Evidence Docket", title: "Public outcome lines v4.4", path: "data/public-outcome-lines-v4.4.csv", type: "csv", description: "Twelve public outcome lines." },
+      { category: "Private Decision Evidence Docket", title: "Carry-forward actions v4.4", path: "data/carry-forward-actions-v4.4.csv", type: "csv", description: "Sixteen carry-forward actions." },
+      { category: "Private Decision Evidence Docket", title: "Evidence custody rules v4.4", path: "data/evidence-custody-rules-v4.4.csv", type: "csv", description: "Twelve evidence custody rules." },
+      { category: "Private Decision Evidence Docket", title: "Decision audit log v4.4", path: "data/decision-audit-log-v4.4.csv", type: "csv", description: "Fourteen decision audit events." },
+      { category: "Private Decision Evidence Docket", title: "Docket comms v4.4", path: "data/decision-docket-comms-v4.4.csv", type: "csv", description: "Twelve communications templates." },
+      { category: "Private Decision Evidence Docket", title: "Docket package v4.4", path: "data/private-decision-evidence-docket-package-v4.4.json", type: "json", description: "Machine-readable v4.4 decision docket." },
       { category: "Private Approval & Pilot Gate Room", title: "Approval gate playbook v4.3", path: "docs/private-approval-pilot-gate-playbook-v4.3.md", type: "markdown", description: "Run the private fake-data approval meeting." },
       { category: "Private Approval & Pilot Gate Room", title: "Private approval owner matrix v4.3", path: "docs/private-approval-owner-matrix-v4.3.md", type: "markdown", description: "Who can approve, advise, or must not approve." },
       { category: "Private Approval & Pilot Gate Room", title: "Decision meeting and motion pack v4.3", path: "docs/decision-meeting-and-motion-pack-v4.3.md", type: "markdown", description: "Private meeting motions and options." },

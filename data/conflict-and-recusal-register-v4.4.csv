@@ -1,0 +1,13 @@
+id,role,track,status,risk,recusalRule,publicBoundary
+"CON-001","Dean trusted reviewer","Cross-track","Ready","Advisory role mistaken for approval.","May advise; must not vote owner approvals.","Advisory only."
+"CON-002","Barayamal program operator","Barayamal","Hold","Program interest in Barayamal-only pathway.","Can present facts; authority/privacy owners decide their gates.","No personal/business details."
+"CON-003","Official-route owner","FN Toastmasters","Blocked","Official records may be confused with Decidim sample data.","Can approve boundary; no Decidim member-record storage.","No member records."
+"CON-004","Privacy reviewer","Cross-track","Blocked","Privacy owner may need separate evidence access.","Access only required private evidence.","No evidence public."
+"CON-005","Support owner","Cross-track","Blocked","Support records too sensitive for meeting room.","Summarise route; keep details outside docket.","No support details."
+"CON-006","Technical custodian","Cross-track","Hold","Admin may see more than needed.","Prove least privilege and revoke.","No logs/credentials."
+"CON-007","Provider access owner","Cross-track","Hold","Provider may gain excess access.","Provider access requires contract controls.","No provider evidence public."
+"CON-008","Comms lead","Cross-track","Ready","Public language could overstate readiness.","Use approved redaction checklist.","Public-safe line only."
+"CON-009","Training owner","Cross-track","Hold","Meeting script could imply official decisions.","Use fake-data-only training script.","Aggregate only."
+"CON-010","Authority chair","Cross-track","Blocked","Authority route not yet proven.","Do not approve launch before route confirmed.","Status only."
+"CON-011","Cultural safety reviewer","Cross-track","Blocked","Cultural material could be mishandled.","Stop and route privately if triggered.","No cultural material."
+"CON-012","Closeout archivist","Cross-track","Hold","Archive could include private evidence.","Archive index only; evidence stays private.","Public status only."

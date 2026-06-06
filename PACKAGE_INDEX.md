@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v4.3  
+Version: v4.4  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -153,9 +153,31 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
 
+## v4.4 Private Decision Evidence Docket Additions
+
+- `private-decision-evidence-docket.html` - public-safe docket for private meeting agenda, evidence custody, owner decisions, conflicts/recusals, redactions, public outcome lines, carry-forward actions, custody rules, audit log, and comms.
+- `docs/private-decision-evidence-docket-playbook-v4.4.md`
+- `docs/approval-meeting-agenda-and-minutes-v4.4.md`
+- `docs/evidence-custody-and-redaction-protocol-v4.4.md`
+- `docs/public-outcome-and-action-carryover-pack-v4.4.md`
+- `docs/public-demo-release-notes-v4.4.md`
+- `data/decision-meeting-agenda-v4.4.csv`
+- `data/evidence-docket-items-v4.4.csv`
+- `data/owner-decision-records-v4.4.csv`
+- `data/conflict-and-recusal-register-v4.4.csv`
+- `data/redaction-checklist-v4.4.csv`
+- `data/public-outcome-lines-v4.4.csv`
+- `data/carry-forward-actions-v4.4.csv`
+- `data/evidence-custody-rules-v4.4.csv`
+- `data/decision-audit-log-v4.4.csv`
+- `data/decision-docket-comms-v4.4.csv`
+- `data/private-decision-evidence-docket-package-v4.4.json`
+
+
 ## v4.3 Private Approval & Pilot Gate Room Additions
 
 - `private-approval-pilot-gate.html` - public-safe gate room for approval owners, decision motions, pilot gates, risk acceptance, blocked-ticket closeout, pilot options, sandbox checks, public/private boundaries, action log, and approval communications.
+- `private-decision-evidence-docket.html` is the public-safe Private Decision Evidence Docket for fake-data meeting agenda, evidence custody, owner decisions, redaction, public outcomes, carry-forward actions, audit, and comms.
 - `docs/private-approval-pilot-gate-playbook-v4.3.md`
 - `docs/private-approval-owner-matrix-v4.3.md`
 - `docs/decision-meeting-and-motion-pack-v4.3.md`

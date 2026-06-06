@@ -1,0 +1,1415 @@
+{
+  "title": "Private Decision Evidence Docket v4.4",
+  "version": "4.4",
+  "date": "2026-06-06",
+  "primaryOrganisationTest": "Barayamal",
+  "controlledMemberTester": "First Nations Toastmasters",
+  "operatingRule": "Use the v4.4 Private Decision Evidence Docket after the v4.3 gate room. It turns owners, motions, gates, risks, and sandbox checks into a private meeting docket with agenda steps, evidence custody, owner decision records, conflict/recusal checks, redaction, public outcome lines, carry-forward actions, audit log, and communications.",
+  "advisoryRule": "Dean Foley / Barayamal may support docket preparation, developer notes, and trusted-review comments only where an approval owner permits it. Advisory review never replaces First Nations authority, privacy, IDS/data governance, official Toastmasters, support, payment, consent, access, or launch approvals.",
+  "safetyRule": "This v4.4 package remains public fake/sample data only. Private meeting minutes, owner names beyond role labels, authority evidence, consent evidence, member numbers, payments, signatures, support records, incident details, access logs, credentials, backups, exports, official Toastmasters records, business-sensitive details, cultural material, and private URLs must remain outside the public package.",
+  "decisionRule": "Recommended decision remains Hold. Run the private fake-data decision meeting, close or carry forward every owner decision record, approve redactions, and publish only the public-safe outcome line. Real intake and live Decidim access remain blocked until all private owner approvals pass.",
+  "recommendedDecision": "Hold",
+  "counts": {
+    "agendaSteps": 14,
+    "evidenceItems": 16,
+    "decisionRecords": 16,
+    "conflicts": 12,
+    "redactionChecks": 14,
+    "outcomeLines": 12,
+    "carryActions": 16,
+    "custodyRules": 12,
+    "auditEvents": 14,
+    "commsTemplates": 12,
+    "docketRecords": 138,
+    "barayamalDecisions": 4,
+    "toastmastersDecisions": 4,
+    "crossTrackDecisions": 8,
+    "blockedDecisions": 5,
+    "holdDecisions": 8,
+    "readyDecisions": 3,
+    "neverPublicEvidence": 4,
+    "blockedRedactions": 8,
+    "blockedCustodyRules": 5,
+    "readyComms": 3
+  },
+  "sourceAnchors": [
+    {
+      "label": "Decidim authorizations",
+      "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+    },
+    {
+      "label": "Decidim permissions",
+      "url": "https://docs.decidim.org/en/develop/develop/permissions.html"
+    },
+    {
+      "label": "Decidim accountability",
+      "url": "https://docs.decidim.org/en/develop/admin/components/accountability.html"
+    },
+    {
+      "label": "Barayamal Toastmasters First Nations",
+      "url": "https://barayamal.com.au/toastmasters-first-nations/"
+    },
+    {
+      "label": "Toastmasters governing documents",
+      "url": "https://www.toastmasters.org/resources/governing-documents"
+    },
+    {
+      "label": "OAIC privacy impact assessment guide",
+      "url": "https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/privacy-impact-assessments/guide-to-undertaking-privacy-impact-assessments"
+    },
+    {
+      "label": "OAIC Notifiable Data Breaches",
+      "url": "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme"
+    },
+    {
+      "label": "AIATSIS ethical research",
+      "url": "https://aiatsis.gov.au/research/ethical-research"
+    },
+    {
+      "label": "NHMRC Aboriginal and Torres Strait Islander research ethics",
+      "url": "https://www.nhmrc.gov.au/research-policy/ethics/ethical-guidelines-research-aboriginal-and-torres-strait-islander-peoples"
+    }
+  ],
+  "agendaSteps": [
+    {
+      "id": "AGD-001",
+      "step": "Open meeting and confirm fake-data scope",
+      "status": "Ready",
+      "owner": "Meeting chair",
+      "purpose": "Confirm this is a fake-data approval meeting only.",
+      "privateOutput": "Private attendance note.",
+      "publicBoundary": "Public may say meeting was prepared, not who attended."
+    },
+    {
+      "id": "AGD-002",
+      "step": "Confirm authority owner and quorum rule",
+      "status": "Blocked",
+      "owner": "Authority chair",
+      "purpose": "Confirm the authority route is legitimate for the sample review.",
+      "privateOutput": "Private authority confirmation.",
+      "publicBoundary": "No authority minutes public."
+    },
+    {
+      "id": "AGD-003",
+      "step": "Read advisory boundary",
+      "status": "Ready",
+      "owner": "Pilot owner",
+      "purpose": "Confirm Dean/Barayamal advice does not substitute for owner approval.",
+      "privateOutput": "Private acknowledgement.",
+      "publicBoundary": "Public-safe boundary only."
+    },
+    {
+      "id": "AGD-004",
+      "step": "Review conflict and recusal register",
+      "status": "Hold",
+      "owner": "Meeting chair",
+      "purpose": "Identify owners who should observe, abstain, or leave an item.",
+      "privateOutput": "Private conflict register.",
+      "publicBoundary": "No personal conflict details public."
+    },
+    {
+      "id": "AGD-005",
+      "step": "Review evidence docket",
+      "status": "Hold",
+      "owner": "Evidence custodian",
+      "purpose": "Confirm each evidence item is present, private, redacted, or blocked.",
+      "privateOutput": "Private evidence docket.",
+      "publicBoundary": "Only evidence class/status public."
+    },
+    {
+      "id": "AGD-006",
+      "step": "Privacy and IDS/data decisions",
+      "status": "Blocked",
+      "owner": "Privacy and IDS reviewers",
+      "purpose": "Decide field, retention, export, delete, access, and evidence handling.",
+      "privateOutput": "Private decision records.",
+      "publicBoundary": "Aggregate status only."
+    },
+    {
+      "id": "AGD-007",
+      "step": "Support and incident decisions",
+      "status": "Blocked",
+      "owner": "Support owner",
+      "purpose": "Decide pause, withdrawal, complaint, incident, correction routes.",
+      "privateOutput": "Private support decision.",
+      "publicBoundary": "No support/incident details public."
+    },
+    {
+      "id": "AGD-008",
+      "step": "Official Toastmasters boundary decision",
+      "status": "Blocked",
+      "owner": "Official-route owner",
+      "purpose": "Decide guest-only/member route and official-record boundary.",
+      "privateOutput": "Private official-route decision.",
+      "publicBoundary": "No official records public."
+    },
+    {
+      "id": "AGD-009",
+      "step": "Barayamal sample pathway decision",
+      "status": "Hold",
+      "owner": "Barayamal program operator",
+      "purpose": "Decide whether a Barayamal-only fake-data rehearsal can run.",
+      "privateOutput": "Private track decision.",
+      "publicBoundary": "No business-sensitive details public."
+    },
+    {
+      "id": "AGD-010",
+      "step": "Technical sandbox decision",
+      "status": "Hold",
+      "owner": "Technical/admin custodian",
+      "purpose": "Decide access, revoke, backup, restore, export, and delete proof.",
+      "privateOutput": "Private technical proof record.",
+      "publicBoundary": "No credentials/logs public."
+    },
+    {
+      "id": "AGD-011",
+      "step": "Risk acceptance round",
+      "status": "Hold",
+      "owner": "Meeting chair",
+      "purpose": "Accept, reject, or carry forward each risk.",
+      "privateOutput": "Private risk register.",
+      "publicBoundary": "Risk class/status only."
+    },
+    {
+      "id": "AGD-012",
+      "step": "Public outcome redaction review",
+      "status": "Hold",
+      "owner": "Comms lead",
+      "purpose": "Approve what public update can say.",
+      "privateOutput": "Private redaction checklist.",
+      "publicBoundary": "Public outcome line only."
+    },
+    {
+      "id": "AGD-013",
+      "step": "Carry-forward action assignment",
+      "status": "Hold",
+      "owner": "Pilot owner",
+      "purpose": "Assign owners and due stages for unresolved actions.",
+      "privateOutput": "Private action log.",
+      "publicBoundary": "Public status only."
+    },
+    {
+      "id": "AGD-014",
+      "step": "Close decision posture",
+      "status": "Hold",
+      "owner": "Authority chair",
+      "purpose": "Choose hold, no-go, archive, second rehearsal, track-only rehearsal, provider route, or limited private pilot conditions.",
+      "privateOutput": "Private decision record.",
+      "publicBoundary": "Public decision posture only."
+    }
+  ],
+  "evidenceItems": [
+    {
+      "id": "EVD-001",
+      "evidence": "Authority pathway confirmation",
+      "track": "Cross-track",
+      "sensitivity": "Private restricted",
+      "status": "Blocked",
+      "custodian": "Authority chair",
+      "neededFor": "Authority pathway gate.",
+      "publicBoundary": "Status only."
+    },
+    {
+      "id": "EVD-002",
+      "evidence": "Privacy field schedule",
+      "track": "Cross-track",
+      "sensitivity": "Private restricted",
+      "status": "Blocked",
+      "custodian": "Privacy reviewer",
+      "neededFor": "Privacy decision.",
+      "publicBoundary": "No field evidence public."
+    },
+    {
+      "id": "EVD-003",
+      "evidence": "IDS/data governance conditions",
+      "track": "Cross-track",
+      "sensitivity": "Private restricted",
+      "status": "Blocked",
+      "custodian": "IDS/data reviewer",
+      "neededFor": "Data governance decision.",
+      "publicBoundary": "Aggregate status only."
+    },
+    {
+      "id": "EVD-004",
+      "evidence": "Support and incident protocol",
+      "track": "Cross-track",
+      "sensitivity": "Never public",
+      "status": "Blocked",
+      "custodian": "Support owner",
+      "neededFor": "Support gate.",
+      "publicBoundary": "No support/incident details public."
+    },
+    {
+      "id": "EVD-005",
+      "evidence": "Official Toastmasters boundary note",
+      "track": "FN Toastmasters",
+      "sensitivity": "Private restricted",
+      "status": "Blocked",
+      "custodian": "Official-route owner",
+      "neededFor": "Official boundary gate.",
+      "publicBoundary": "No member/club records public."
+    },
+    {
+      "id": "EVD-006",
+      "evidence": "Barayamal business-field minimisation note",
+      "track": "Barayamal",
+      "sensitivity": "Private restricted",
+      "status": "Hold",
+      "custodian": "Barayamal program operator",
+      "neededFor": "Barayamal-only rehearsal gate.",
+      "publicBoundary": "No business-sensitive details public."
+    },
+    {
+      "id": "EVD-007",
+      "evidence": "Dean advisory boundary note",
+      "track": "Cross-track",
+      "sensitivity": "Public summary",
+      "status": "Ready",
+      "custodian": "Pilot owner",
+      "neededFor": "Advisory boundary gate.",
+      "publicBoundary": "Can publish advisory boundary."
+    },
+    {
+      "id": "EVD-008",
+      "evidence": "Fake account roster",
+      "track": "Cross-track",
+      "sensitivity": "Private restricted",
+      "status": "Ready",
+      "custodian": "Technical/admin custodian",
+      "neededFor": "Sandbox readiness.",
+      "publicBoundary": "No names/emails public."
+    },
+    {
+      "id": "EVD-009",
+      "evidence": "Access revoke proof",
+      "track": "Cross-track",
+      "sensitivity": "Never public",
+      "status": "Hold",
+      "custodian": "Technical/admin custodian",
+      "neededFor": "Access gate.",
+      "publicBoundary": "No logs public."
+    },
+    {
+      "id": "EVD-010",
+      "evidence": "Backup/restore/export/delete proof",
+      "track": "Cross-track",
+      "sensitivity": "Never public",
+      "status": "Hold",
+      "custodian": "Technical/admin custodian",
+      "neededFor": "Technical gate.",
+      "publicBoundary": "No backups/exports public."
+    },
+    {
+      "id": "EVD-011",
+      "evidence": "Conflict and recusal register",
+      "track": "Cross-track",
+      "sensitivity": "Private restricted",
+      "status": "Hold",
+      "custodian": "Meeting chair",
+      "neededFor": "Meeting integrity.",
+      "publicBoundary": "No personal conflict details public."
+    },
+    {
+      "id": "EVD-012",
+      "evidence": "Redaction checklist",
+      "track": "Cross-track",
+      "sensitivity": "Public summary",
+      "status": "Hold",
+      "custodian": "Comms lead",
+      "neededFor": "Public update.",
+      "publicBoundary": "Checklist status only."
+    },
+    {
+      "id": "EVD-013",
+      "evidence": "Training completion note",
+      "track": "Cross-track",
+      "sensitivity": "Private restricted",
+      "status": "Hold",
+      "custodian": "Training owner",
+      "neededFor": "Facilitation gate.",
+      "publicBoundary": "Aggregate only."
+    },
+    {
+      "id": "EVD-014",
+      "evidence": "Provider access boundary note",
+      "track": "Cross-track",
+      "sensitivity": "Private restricted",
+      "status": "Hold",
+      "custodian": "Provider access owner",
+      "neededFor": "Provider route option.",
+      "publicBoundary": "No provider logs public."
+    },
+    {
+      "id": "EVD-015",
+      "evidence": "Public release note draft",
+      "track": "Cross-track",
+      "sensitivity": "Public summary",
+      "status": "Ready",
+      "custodian": "Comms lead",
+      "neededFor": "Public update.",
+      "publicBoundary": "Can publish if approved."
+    },
+    {
+      "id": "EVD-016",
+      "evidence": "Cultural protocol stop rule",
+      "track": "Cross-track",
+      "sensitivity": "Never public",
+      "status": "Blocked",
+      "custodian": "Cultural safety reviewer",
+      "neededFor": "Cultural safety risk.",
+      "publicBoundary": "No cultural material public."
+    }
+  ],
+  "decisionRecords": [
+    {
+      "id": "ODR-001",
+      "decision": "Authority pathway",
+      "track": "Cross-track",
+      "status": "Blocked",
+      "owner": "Authority chair",
+      "motion": "MOT-001",
+      "evidenceRef": "EVD-001",
+      "outcome": "Hold",
+      "nextAction": "Schedule private authority review.",
+      "publicSummary": "Authority pathway not public-ready."
+    },
+    {
+      "id": "ODR-002",
+      "decision": "Privacy field schedule",
+      "track": "Cross-track",
+      "status": "Blocked",
+      "owner": "Privacy reviewer",
+      "motion": "MOT-009",
+      "evidenceRef": "EVD-002",
+      "outcome": "Hold",
+      "nextAction": "Review and approve minimised fields.",
+      "publicSummary": "Privacy conditions unresolved."
+    },
+    {
+      "id": "ODR-003",
+      "decision": "IDS/data governance",
+      "track": "Cross-track",
+      "status": "Blocked",
+      "owner": "IDS/data reviewer",
+      "motion": "MOT-009",
+      "evidenceRef": "EVD-003",
+      "outcome": "Hold",
+      "nextAction": "Approve control/access/export/delete.",
+      "publicSummary": "Data governance unresolved."
+    },
+    {
+      "id": "ODR-004",
+      "decision": "Support and incident route",
+      "track": "Cross-track",
+      "status": "Blocked",
+      "owner": "Support owner",
+      "motion": "MOT-007",
+      "evidenceRef": "EVD-004",
+      "outcome": "Hold",
+      "nextAction": "Confirm support and safe stop rule.",
+      "publicSummary": "Support route unresolved."
+    },
+    {
+      "id": "ODR-005",
+      "decision": "Official Toastmasters member boundary",
+      "track": "FN Toastmasters",
+      "status": "Blocked",
+      "owner": "Official-route owner",
+      "motion": "MOT-004",
+      "evidenceRef": "EVD-005",
+      "outcome": "Hold member route",
+      "nextAction": "Keep member route closed.",
+      "publicSummary": "No official member records in Decidim."
+    },
+    {
+      "id": "ODR-006",
+      "decision": "Toastmasters guest-only rehearsal",
+      "track": "FN Toastmasters",
+      "status": "Hold",
+      "owner": "Official-route owner",
+      "motion": "MOT-005",
+      "evidenceRef": "EVD-005",
+      "outcome": "Hold",
+      "nextAction": "Review guest-only wording.",
+      "publicSummary": "Guest-only rehearsal under review."
+    },
+    {
+      "id": "ODR-007",
+      "decision": "Toastmasters meeting role sample",
+      "track": "FN Toastmasters",
+      "status": "Hold",
+      "owner": "Training owner",
+      "motion": "MOT-005",
+      "evidenceRef": "EVD-013",
+      "outcome": "Hold",
+      "nextAction": "Confirm non-official sample meeting role script.",
+      "publicSummary": "No official education record."
+    },
+    {
+      "id": "ODR-008",
+      "decision": "Toastmasters public update",
+      "track": "FN Toastmasters",
+      "status": "Ready",
+      "owner": "Comms lead",
+      "motion": "MOT-001",
+      "evidenceRef": "EVD-015",
+      "outcome": "Approved public-safe line",
+      "nextAction": "Publish hold status only.",
+      "publicSummary": "Member route remains closed."
+    },
+    {
+      "id": "ODR-009",
+      "decision": "Barayamal-only fake-data rehearsal",
+      "track": "Barayamal",
+      "status": "Hold",
+      "owner": "Barayamal program operator",
+      "motion": "MOT-003",
+      "evidenceRef": "EVD-006",
+      "outcome": "Hold",
+      "nextAction": "Approve business-field minimisation.",
+      "publicSummary": "Barayamal-only rehearsal under review."
+    },
+    {
+      "id": "ODR-010",
+      "decision": "Barayamal mentor/advisor boundary",
+      "track": "Barayamal",
+      "status": "Ready",
+      "owner": "Pilot owner",
+      "motion": "MOT-006",
+      "evidenceRef": "EVD-007",
+      "outcome": "Advisory accepted",
+      "nextAction": "Record advisory comments only.",
+      "publicSummary": "Advisor is not an approver."
+    },
+    {
+      "id": "ODR-011",
+      "decision": "Barayamal business-sensitive fields",
+      "track": "Barayamal",
+      "status": "Hold",
+      "owner": "Barayamal program operator",
+      "motion": "MOT-003",
+      "evidenceRef": "EVD-006",
+      "outcome": "Hold",
+      "nextAction": "Remove or minimise business-sensitive fields.",
+      "publicSummary": "No business-sensitive details public."
+    },
+    {
+      "id": "ODR-012",
+      "decision": "Barayamal public learning line",
+      "track": "Barayamal",
+      "status": "Ready",
+      "owner": "Comms lead",
+      "motion": "MOT-003",
+      "evidenceRef": "EVD-015",
+      "outcome": "Approved public-safe line",
+      "nextAction": "Publish aggregate learning only.",
+      "publicSummary": "No founder/business names."
+    },
+    {
+      "id": "ODR-013",
+      "decision": "Technical sandbox proof",
+      "track": "Cross-track",
+      "status": "Hold",
+      "owner": "Technical/admin custodian",
+      "motion": "MOT-008",
+      "evidenceRef": "EVD-009/EVD-010",
+      "outcome": "Hold",
+      "nextAction": "Run revoke and backup/export/delete proof.",
+      "publicSummary": "No logs, credentials, backups."
+    },
+    {
+      "id": "ODR-014",
+      "decision": "Provider-assisted sandbox route",
+      "track": "Cross-track",
+      "status": "Hold",
+      "owner": "Provider access owner",
+      "motion": "MOT-010",
+      "evidenceRef": "EVD-014",
+      "outcome": "Available with conditions",
+      "nextAction": "Decide provider access boundary.",
+      "publicSummary": "No provider logs public."
+    },
+    {
+      "id": "ODR-015",
+      "decision": "Public outcome line",
+      "track": "Cross-track",
+      "status": "Hold",
+      "owner": "Comms lead",
+      "motion": "MOT-001",
+      "evidenceRef": "EVD-012/EVD-015",
+      "outcome": "Hold",
+      "nextAction": "Approve redaction checklist.",
+      "publicSummary": "Public outcome says fake-data only."
+    },
+    {
+      "id": "ODR-016",
+      "decision": "Overall pilot posture",
+      "track": "Cross-track",
+      "status": "Hold",
+      "owner": "Authority chair",
+      "motion": "MOT-001",
+      "evidenceRef": "All evidence",
+      "outcome": "Hold",
+      "nextAction": "Close/carry forward every unresolved owner decision.",
+      "publicSummary": "Real intake remains closed."
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "CON-001",
+      "role": "Dean trusted reviewer",
+      "track": "Cross-track",
+      "status": "Ready",
+      "risk": "Advisory role mistaken for approval.",
+      "recusalRule": "May advise; must not vote owner approvals.",
+      "publicBoundary": "Advisory only."
+    },
+    {
+      "id": "CON-002",
+      "role": "Barayamal program operator",
+      "track": "Barayamal",
+      "status": "Hold",
+      "risk": "Program interest in Barayamal-only pathway.",
+      "recusalRule": "Can present facts; authority/privacy owners decide their gates.",
+      "publicBoundary": "No personal/business details."
+    },
+    {
+      "id": "CON-003",
+      "role": "Official-route owner",
+      "track": "FN Toastmasters",
+      "status": "Blocked",
+      "risk": "Official records may be confused with Decidim sample data.",
+      "recusalRule": "Can approve boundary; no Decidim member-record storage.",
+      "publicBoundary": "No member records."
+    },
+    {
+      "id": "CON-004",
+      "role": "Privacy reviewer",
+      "track": "Cross-track",
+      "status": "Blocked",
+      "risk": "Privacy owner may need separate evidence access.",
+      "recusalRule": "Access only required private evidence.",
+      "publicBoundary": "No evidence public."
+    },
+    {
+      "id": "CON-005",
+      "role": "Support owner",
+      "track": "Cross-track",
+      "status": "Blocked",
+      "risk": "Support records too sensitive for meeting room.",
+      "recusalRule": "Summarise route; keep details outside docket.",
+      "publicBoundary": "No support details."
+    },
+    {
+      "id": "CON-006",
+      "role": "Technical custodian",
+      "track": "Cross-track",
+      "status": "Hold",
+      "risk": "Admin may see more than needed.",
+      "recusalRule": "Prove least privilege and revoke.",
+      "publicBoundary": "No logs/credentials."
+    },
+    {
+      "id": "CON-007",
+      "role": "Provider access owner",
+      "track": "Cross-track",
+      "status": "Hold",
+      "risk": "Provider may gain excess access.",
+      "recusalRule": "Provider access requires contract controls.",
+      "publicBoundary": "No provider evidence public."
+    },
+    {
+      "id": "CON-008",
+      "role": "Comms lead",
+      "track": "Cross-track",
+      "status": "Ready",
+      "risk": "Public language could overstate readiness.",
+      "recusalRule": "Use approved redaction checklist.",
+      "publicBoundary": "Public-safe line only."
+    },
+    {
+      "id": "CON-009",
+      "role": "Training owner",
+      "track": "Cross-track",
+      "status": "Hold",
+      "risk": "Meeting script could imply official decisions.",
+      "recusalRule": "Use fake-data-only training script.",
+      "publicBoundary": "Aggregate only."
+    },
+    {
+      "id": "CON-010",
+      "role": "Authority chair",
+      "track": "Cross-track",
+      "status": "Blocked",
+      "risk": "Authority route not yet proven.",
+      "recusalRule": "Do not approve launch before route confirmed.",
+      "publicBoundary": "Status only."
+    },
+    {
+      "id": "CON-011",
+      "role": "Cultural safety reviewer",
+      "track": "Cross-track",
+      "status": "Blocked",
+      "risk": "Cultural material could be mishandled.",
+      "recusalRule": "Stop and route privately if triggered.",
+      "publicBoundary": "No cultural material."
+    },
+    {
+      "id": "CON-012",
+      "role": "Closeout archivist",
+      "track": "Cross-track",
+      "status": "Hold",
+      "risk": "Archive could include private evidence.",
+      "recusalRule": "Archive index only; evidence stays private.",
+      "publicBoundary": "Public status only."
+    }
+  ],
+  "redactionChecklist": [
+    {
+      "id": "RED-001",
+      "item": "Names and contact details",
+      "status": "Blocked",
+      "owner": "Privacy reviewer",
+      "redact": "All names, emails, phones.",
+      "allowedPublic": "Role labels only.",
+      "failureAction": "Do not publish."
+    },
+    {
+      "id": "RED-002",
+      "item": "Authority minutes",
+      "status": "Blocked",
+      "owner": "Authority chair",
+      "redact": "Minutes, attendees, motions detail.",
+      "allowedPublic": "Decision posture only.",
+      "failureAction": "Hold public update."
+    },
+    {
+      "id": "RED-003",
+      "item": "Consent evidence",
+      "status": "Blocked",
+      "owner": "Consent owner",
+      "redact": "Signatures, consent records, private acknowledgements.",
+      "allowedPublic": "Consent route status.",
+      "failureAction": "Do not publish."
+    },
+    {
+      "id": "RED-004",
+      "item": "Member numbers",
+      "status": "Blocked",
+      "owner": "Official-route owner",
+      "redact": "All member numbers and official records.",
+      "allowedPublic": "Boundary status only.",
+      "failureAction": "Do not publish."
+    },
+    {
+      "id": "RED-005",
+      "item": "Payments and signatures",
+      "status": "Blocked",
+      "owner": "Official-route owner",
+      "redact": "Payment/signature records.",
+      "allowedPublic": "External route status.",
+      "failureAction": "Do not publish."
+    },
+    {
+      "id": "RED-006",
+      "item": "Support and incident details",
+      "status": "Blocked",
+      "owner": "Support owner",
+      "redact": "Support needs, complaints, incidents.",
+      "allowedPublic": "Support route status.",
+      "failureAction": "Do not publish."
+    },
+    {
+      "id": "RED-007",
+      "item": "Business-sensitive fields",
+      "status": "Hold",
+      "owner": "Barayamal program operator",
+      "redact": "Business names/details unless approved.",
+      "allowedPublic": "Aggregate Barayamal learning.",
+      "failureAction": "Redact before public line."
+    },
+    {
+      "id": "RED-008",
+      "item": "Access logs and credentials",
+      "status": "Blocked",
+      "owner": "Technical/admin custodian",
+      "redact": "Logs, credentials, URLs, backups, exports.",
+      "allowedPublic": "Technical proof status.",
+      "failureAction": "Do not publish."
+    },
+    {
+      "id": "RED-009",
+      "item": "Provider logs",
+      "status": "Hold",
+      "owner": "Provider access owner",
+      "redact": "Provider tickets/logs/evidence.",
+      "allowedPublic": "Provider route status.",
+      "failureAction": "Redact before public line."
+    },
+    {
+      "id": "RED-010",
+      "item": "Cultural material",
+      "status": "Blocked",
+      "owner": "Cultural safety reviewer",
+      "redact": "Cultural material and protocol details.",
+      "allowedPublic": "Protocol trigger status only.",
+      "failureAction": "Stop publication."
+    },
+    {
+      "id": "RED-011",
+      "item": "Risk owner evidence",
+      "status": "Hold",
+      "owner": "Meeting chair",
+      "redact": "Private owner notes.",
+      "allowedPublic": "Risk category/status.",
+      "failureAction": "Redact notes."
+    },
+    {
+      "id": "RED-012",
+      "item": "Fake account details",
+      "status": "Hold",
+      "owner": "Technical/admin custodian",
+      "redact": "Fake emails/passwords and access paths.",
+      "allowedPublic": "Fake-data rehearsal status.",
+      "failureAction": "Redact access info."
+    },
+    {
+      "id": "RED-013",
+      "item": "Public outcome wording",
+      "status": "Ready",
+      "owner": "Comms lead",
+      "redact": "Overstatements of readiness.",
+      "allowedPublic": "Hold/fake-data-only wording.",
+      "failureAction": "Revise wording."
+    },
+    {
+      "id": "RED-014",
+      "item": "Screenshots and attachments",
+      "status": "Hold",
+      "owner": "Evidence custodian",
+      "redact": "Any screenshot showing private values.",
+      "allowedPublic": "Cropped/redacted public-safe proof.",
+      "failureAction": "Block attachment."
+    }
+  ],
+  "outcomeLines": [
+    {
+      "id": "OUT-001",
+      "audience": "Public",
+      "status": "Ready",
+      "line": "The public demo now includes a private decision evidence docket using fake/sample data only.",
+      "allowed": "Feature summary.",
+      "notAllowed": "Private decision evidence.",
+      "owner": "Comms lead"
+    },
+    {
+      "id": "OUT-002",
+      "audience": "Public",
+      "status": "Ready",
+      "line": "Real participant intake remains closed while private approvals are unresolved.",
+      "allowed": "Hold posture.",
+      "notAllowed": "Launch implication.",
+      "owner": "Comms lead"
+    },
+    {
+      "id": "OUT-003",
+      "audience": "Public",
+      "status": "Hold",
+      "line": "Barayamal-only fake-data rehearsal is under private review.",
+      "allowed": "Track status only.",
+      "notAllowed": "Founder/business details.",
+      "owner": "Barayamal program operator"
+    },
+    {
+      "id": "OUT-004",
+      "audience": "Public",
+      "status": "Hold",
+      "line": "First Nations Toastmasters member route remains blocked pending official boundary review.",
+      "allowed": "Boundary status.",
+      "notAllowed": "Member/club records.",
+      "owner": "Official-route owner"
+    },
+    {
+      "id": "OUT-005",
+      "audience": "Private owners",
+      "status": "Hold",
+      "line": "Please close, hold, or no-go each owner decision record.",
+      "allowed": "Private owner action.",
+      "notAllowed": "Public sharing.",
+      "owner": "Pilot owner"
+    },
+    {
+      "id": "OUT-006",
+      "audience": "Dean reviewer",
+      "status": "Ready",
+      "line": "Please provide advisory comments on boundaries and sample evidence quality.",
+      "allowed": "Advisory request.",
+      "notAllowed": "Approval request.",
+      "owner": "Pilot owner"
+    },
+    {
+      "id": "OUT-007",
+      "audience": "Support owner",
+      "status": "Blocked",
+      "line": "Support and incident route must be confirmed privately.",
+      "allowed": "Private request.",
+      "notAllowed": "Support details public.",
+      "owner": "Support owner"
+    },
+    {
+      "id": "OUT-008",
+      "audience": "Privacy/IDS reviewers",
+      "status": "Blocked",
+      "line": "Field, retention, export, delete, access, and evidence rules must be decided privately.",
+      "allowed": "Private request.",
+      "notAllowed": "Public evidence.",
+      "owner": "Privacy/IDS reviewers"
+    },
+    {
+      "id": "OUT-009",
+      "audience": "Technical custodian",
+      "status": "Hold",
+      "line": "Run fake-data access/revoke/backup/export/delete proof.",
+      "allowed": "Private technical task.",
+      "notAllowed": "Credentials/logs public.",
+      "owner": "Technical/admin custodian"
+    },
+    {
+      "id": "OUT-010",
+      "audience": "Provider access owner",
+      "status": "Hold",
+      "line": "Provider route is available only with private access controls.",
+      "allowed": "Private route status.",
+      "notAllowed": "Provider logs.",
+      "owner": "Provider access owner"
+    },
+    {
+      "id": "OUT-011",
+      "audience": "Authority chair",
+      "status": "Blocked",
+      "line": "Authority pathway must be confirmed before any live intake.",
+      "allowed": "Private authority request.",
+      "notAllowed": "Authority minutes public.",
+      "owner": "Authority chair"
+    },
+    {
+      "id": "OUT-012",
+      "audience": "Public",
+      "status": "Available",
+      "line": "A no-go or archive outcome can be published at public-safe status level only.",
+      "allowed": "Outcome status.",
+      "notAllowed": "Private reasons/evidence.",
+      "owner": "Comms lead"
+    }
+  ],
+  "carryActions": [
+    {
+      "id": "CAR-001",
+      "action": "Book private authority review",
+      "status": "Blocked",
+      "owner": "Authority chair",
+      "sourceDecision": "ODR-001",
+      "dueStage": "Before next meeting",
+      "acceptance": "Authority route confirmed or no-go.",
+      "publicBoundary": "Status only."
+    },
+    {
+      "id": "CAR-002",
+      "action": "Approve privacy field schedule",
+      "status": "Blocked",
+      "owner": "Privacy reviewer",
+      "sourceDecision": "ODR-002",
+      "dueStage": "Before any real intake",
+      "acceptance": "Minimum fields and retention rule approved.",
+      "publicBoundary": "No private fields public."
+    },
+    {
+      "id": "CAR-003",
+      "action": "Approve IDS/data controls",
+      "status": "Blocked",
+      "owner": "IDS/data reviewer",
+      "sourceDecision": "ODR-003",
+      "dueStage": "Before any data processing",
+      "acceptance": "Control/access/export/delete accepted.",
+      "publicBoundary": "Aggregate only."
+    },
+    {
+      "id": "CAR-004",
+      "action": "Confirm support route",
+      "status": "Blocked",
+      "owner": "Support owner",
+      "sourceDecision": "ODR-004",
+      "dueStage": "Before real intake",
+      "acceptance": "Pause/withdrawal/complaint/incident routes pass.",
+      "publicBoundary": "No support details."
+    },
+    {
+      "id": "CAR-005",
+      "action": "Confirm Toastmasters official boundary",
+      "status": "Blocked",
+      "owner": "Official-route owner",
+      "sourceDecision": "ODR-005",
+      "dueStage": "Before member route",
+      "acceptance": "Member/guest/official-record boundary accepted.",
+      "publicBoundary": "No official records."
+    },
+    {
+      "id": "CAR-006",
+      "action": "Draft Toastmasters guest-only wording",
+      "status": "Hold",
+      "owner": "Official-route owner",
+      "sourceDecision": "ODR-006",
+      "dueStage": "Before guest-only rehearsal",
+      "acceptance": "Guest path does not imply membership.",
+      "publicBoundary": "No member records."
+    },
+    {
+      "id": "CAR-007",
+      "action": "Approve Barayamal field minimisation",
+      "status": "Hold",
+      "owner": "Barayamal program operator",
+      "sourceDecision": "ODR-009",
+      "dueStage": "Before Barayamal-only rehearsal",
+      "acceptance": "Business-sensitive fields removed/minimised.",
+      "publicBoundary": "No business details."
+    },
+    {
+      "id": "CAR-008",
+      "action": "Collect Dean advisory comments",
+      "status": "Ready",
+      "owner": "Pilot owner",
+      "sourceDecision": "ODR-010",
+      "dueStage": "Before next meeting",
+      "acceptance": "Advisory comments captured as non-approval.",
+      "publicBoundary": "Advisory only."
+    },
+    {
+      "id": "CAR-009",
+      "action": "Run access revoke proof",
+      "status": "Hold",
+      "owner": "Technical/admin custodian",
+      "sourceDecision": "ODR-013",
+      "dueStage": "Before sandbox rehearsal",
+      "acceptance": "Fake-account revoke proof passes.",
+      "publicBoundary": "No logs."
+    },
+    {
+      "id": "CAR-010",
+      "action": "Run backup/export/delete proof",
+      "status": "Hold",
+      "owner": "Technical/admin custodian",
+      "sourceDecision": "ODR-013",
+      "dueStage": "Before sandbox rehearsal",
+      "acceptance": "Fake-data proof passes.",
+      "publicBoundary": "No backups/exports."
+    },
+    {
+      "id": "CAR-011",
+      "action": "Decide provider access boundary",
+      "status": "Hold",
+      "owner": "Provider access owner",
+      "sourceDecision": "ODR-014",
+      "dueStage": "Before provider route",
+      "acceptance": "Provider access is contract-bound and revocable.",
+      "publicBoundary": "No provider logs."
+    },
+    {
+      "id": "CAR-012",
+      "action": "Approve redaction checklist",
+      "status": "Hold",
+      "owner": "Comms lead",
+      "sourceDecision": "ODR-015",
+      "dueStage": "Before public update",
+      "acceptance": "All blocked/hold redactions closed.",
+      "publicBoundary": "Public-safe line only."
+    },
+    {
+      "id": "CAR-013",
+      "action": "Update public release note",
+      "status": "Ready",
+      "owner": "Comms lead",
+      "sourceDecision": "ODR-015",
+      "dueStage": "After approval meeting",
+      "acceptance": "Public update says fake/sample only and hold posture.",
+      "publicBoundary": "No private evidence."
+    },
+    {
+      "id": "CAR-014",
+      "action": "Archive unresolved evidence index",
+      "status": "Hold",
+      "owner": "Closeout archivist",
+      "sourceDecision": "ODR-016",
+      "dueStage": "After meeting",
+      "acceptance": "Private evidence index stored; public package updated.",
+      "publicBoundary": "Index status only."
+    },
+    {
+      "id": "CAR-015",
+      "action": "Run second fake-data decision meeting",
+      "status": "Available",
+      "owner": "Meeting chair",
+      "sourceDecision": "ODR-016",
+      "dueStage": "If blockers remain",
+      "acceptance": "Corrected evidence reviewed.",
+      "publicBoundary": "Public hold status."
+    },
+    {
+      "id": "CAR-016",
+      "action": "No-go or archive real intake",
+      "status": "Available",
+      "owner": "Authority chair",
+      "sourceDecision": "ODR-016",
+      "dueStage": "If critical owner declines",
+      "acceptance": "Real intake stopped and public-safe note issued.",
+      "publicBoundary": "No private reasons."
+    }
+  ],
+  "custodyRules": [
+    {
+      "id": "CUS-001",
+      "rule": "Private evidence folder access",
+      "status": "Blocked",
+      "custodian": "Evidence custodian",
+      "appliesTo": "Authority, privacy, IDS, support records.",
+      "control": "Owner-only access.",
+      "publicBoundary": "No folder links public."
+    },
+    {
+      "id": "CUS-002",
+      "rule": "Consent evidence storage",
+      "status": "Blocked",
+      "custodian": "Consent owner",
+      "appliesTo": "Consent acknowledgements.",
+      "control": "Private consent store.",
+      "publicBoundary": "No signatures public."
+    },
+    {
+      "id": "CUS-003",
+      "rule": "Official records exclusion",
+      "status": "Blocked",
+      "custodian": "Official-route owner",
+      "appliesTo": "Toastmasters member/club/payment records.",
+      "control": "External official route.",
+      "publicBoundary": "No official records in Decidim."
+    },
+    {
+      "id": "CUS-004",
+      "rule": "Support/incident separation",
+      "status": "Blocked",
+      "custodian": "Support owner",
+      "appliesTo": "Support, complaint, incident details.",
+      "control": "Separate private support system.",
+      "publicBoundary": "No details public."
+    },
+    {
+      "id": "CUS-005",
+      "rule": "Business-sensitive data minimisation",
+      "status": "Hold",
+      "custodian": "Barayamal program operator",
+      "appliesTo": "Founder/business owner details.",
+      "control": "Collect minimum private fields only.",
+      "publicBoundary": "No business details public."
+    },
+    {
+      "id": "CUS-006",
+      "rule": "Access log custody",
+      "status": "Hold",
+      "custodian": "Technical/admin custodian",
+      "appliesTo": "Access, revoke, admin proof.",
+      "control": "Private logs only.",
+      "publicBoundary": "No logs public."
+    },
+    {
+      "id": "CUS-007",
+      "rule": "Backup/export/delete proof custody",
+      "status": "Hold",
+      "custodian": "Technical/admin custodian",
+      "appliesTo": "Technical operations proof.",
+      "control": "Fake-data proof only.",
+      "publicBoundary": "No backups/exports public."
+    },
+    {
+      "id": "CUS-008",
+      "rule": "Conflict register custody",
+      "status": "Hold",
+      "custodian": "Meeting chair",
+      "appliesTo": "Conflicts and recusals.",
+      "control": "Private meeting record.",
+      "publicBoundary": "No personal details public."
+    },
+    {
+      "id": "CUS-009",
+      "rule": "Redaction checklist custody",
+      "status": "Hold",
+      "custodian": "Comms lead",
+      "appliesTo": "Public update approval.",
+      "control": "Checklist stored privately; outcome public.",
+      "publicBoundary": "Status only."
+    },
+    {
+      "id": "CUS-010",
+      "rule": "Advisory comments custody",
+      "status": "Ready",
+      "custodian": "Pilot owner",
+      "appliesTo": "Dean/advisory comments.",
+      "control": "Label as advisory only.",
+      "publicBoundary": "Public-safe comments only."
+    },
+    {
+      "id": "CUS-011",
+      "rule": "Cultural protocol custody",
+      "status": "Blocked",
+      "custodian": "Cultural safety reviewer",
+      "appliesTo": "Cultural protocol triggers/material.",
+      "control": "Stop and route privately.",
+      "publicBoundary": "No cultural material public."
+    },
+    {
+      "id": "CUS-012",
+      "rule": "Archive closeout custody",
+      "status": "Hold",
+      "custodian": "Closeout archivist",
+      "appliesTo": "Decision record and evidence index.",
+      "control": "Private archive, public-safe status.",
+      "publicBoundary": "No private archive public."
+    }
+  ],
+  "auditLog": [
+    {
+      "id": "AUD-001",
+      "auditEvent": "v4.3 gates imported",
+      "status": "Ready",
+      "owner": "Pilot owner",
+      "evidence": "Gate package v4.3",
+      "finding": "Gate room exists.",
+      "nextAction": "Use v4.4 docket."
+    },
+    {
+      "id": "AUD-002",
+      "auditEvent": "Meeting scope set to fake-data only",
+      "status": "Ready",
+      "owner": "Meeting chair",
+      "evidence": "AGD-001",
+      "finding": "Scope safe.",
+      "nextAction": "Read at meeting open."
+    },
+    {
+      "id": "AUD-003",
+      "auditEvent": "Authority evidence unavailable",
+      "status": "Blocked",
+      "owner": "Authority chair",
+      "evidence": "EVD-001",
+      "finding": "Blocks real intake.",
+      "nextAction": "Book authority review."
+    },
+    {
+      "id": "AUD-004",
+      "auditEvent": "Privacy field schedule unavailable",
+      "status": "Blocked",
+      "owner": "Privacy reviewer",
+      "evidence": "EVD-002",
+      "finding": "Blocks data collection.",
+      "nextAction": "Review field schedule."
+    },
+    {
+      "id": "AUD-005",
+      "auditEvent": "IDS/data conditions unavailable",
+      "status": "Blocked",
+      "owner": "IDS/data reviewer",
+      "evidence": "EVD-003",
+      "finding": "Blocks data processing.",
+      "nextAction": "Review controls."
+    },
+    {
+      "id": "AUD-006",
+      "auditEvent": "Support route unavailable",
+      "status": "Blocked",
+      "owner": "Support owner",
+      "evidence": "EVD-004",
+      "finding": "Blocks real intake.",
+      "nextAction": "Confirm support route."
+    },
+    {
+      "id": "AUD-007",
+      "auditEvent": "Official Toastmasters boundary unresolved",
+      "status": "Blocked",
+      "owner": "Official-route owner",
+      "evidence": "EVD-005",
+      "finding": "Blocks member route.",
+      "nextAction": "Review official boundary."
+    },
+    {
+      "id": "AUD-008",
+      "auditEvent": "Barayamal minimisation pending",
+      "status": "Hold",
+      "owner": "Barayamal program operator",
+      "evidence": "EVD-006",
+      "finding": "Blocks Barayamal-only rehearsal.",
+      "nextAction": "Minimise fields."
+    },
+    {
+      "id": "AUD-009",
+      "auditEvent": "Dean advisory boundary ready",
+      "status": "Ready",
+      "owner": "Pilot owner",
+      "evidence": "EVD-007",
+      "finding": "Advisory boundary clear.",
+      "nextAction": "Collect comments."
+    },
+    {
+      "id": "AUD-010",
+      "auditEvent": "Technical revoke proof pending",
+      "status": "Hold",
+      "owner": "Technical/admin custodian",
+      "evidence": "EVD-009",
+      "finding": "Blocks sandbox launch.",
+      "nextAction": "Run revoke proof."
+    },
+    {
+      "id": "AUD-011",
+      "auditEvent": "Technical backup/export/delete pending",
+      "status": "Hold",
+      "owner": "Technical/admin custodian",
+      "evidence": "EVD-010",
+      "finding": "Blocks closeout.",
+      "nextAction": "Run operations proof."
+    },
+    {
+      "id": "AUD-012",
+      "auditEvent": "Redaction checklist pending",
+      "status": "Hold",
+      "owner": "Comms lead",
+      "evidence": "EVD-012",
+      "finding": "Blocks public update.",
+      "nextAction": "Close checklist."
+    },
+    {
+      "id": "AUD-013",
+      "auditEvent": "Cultural protocol stop rule blocked",
+      "status": "Blocked",
+      "owner": "Cultural safety reviewer",
+      "evidence": "EVD-016",
+      "finding": "Blocks any cultural material handling.",
+      "nextAction": "Confirm stop rule."
+    },
+    {
+      "id": "AUD-014",
+      "auditEvent": "Overall posture remains hold",
+      "status": "Hold",
+      "owner": "Authority chair",
+      "evidence": "ODR-016",
+      "finding": "Real intake remains closed.",
+      "nextAction": "Run private meeting."
+    }
+  ],
+  "commsTemplates": [
+    {
+      "id": "COM-001",
+      "template": "Public v4.4 release note",
+      "status": "Ready",
+      "audience": "Public visitors",
+      "safeMessage": "The demo now includes a private decision evidence docket using fake/sample data only.",
+      "mustNotSay": "Real approvals have passed.",
+      "owner": "Comms lead"
+    },
+    {
+      "id": "COM-002",
+      "template": "Meeting invitation",
+      "status": "Hold",
+      "audience": "Approval owners",
+      "safeMessage": "Requests a private fake-data decision meeting.",
+      "mustNotSay": "Include private evidence in public links.",
+      "owner": "Meeting chair"
+    },
+    {
+      "id": "COM-003",
+      "template": "Evidence request",
+      "status": "Hold",
+      "audience": "Evidence custodians",
+      "safeMessage": "Requests owner evidence classification and custody status.",
+      "mustNotSay": "Ask for public upload of private evidence.",
+      "owner": "Evidence custodian"
+    },
+    {
+      "id": "COM-004",
+      "template": "Conflict/recusal request",
+      "status": "Hold",
+      "audience": "Meeting owners",
+      "safeMessage": "Asks owners to note conflicts privately.",
+      "mustNotSay": "Publish conflict details.",
+      "owner": "Meeting chair"
+    },
+    {
+      "id": "COM-005",
+      "template": "Authority follow-up",
+      "status": "Blocked",
+      "audience": "Authority chair",
+      "safeMessage": "Requests private authority route confirmation.",
+      "mustNotSay": "Publish authority minutes.",
+      "owner": "Pilot owner"
+    },
+    {
+      "id": "COM-006",
+      "template": "Privacy/IDS follow-up",
+      "status": "Blocked",
+      "audience": "Privacy/IDS reviewers",
+      "safeMessage": "Requests private field and data control decision.",
+      "mustNotSay": "Publish private evidence.",
+      "owner": "Pilot owner"
+    },
+    {
+      "id": "COM-007",
+      "template": "Support route follow-up",
+      "status": "Blocked",
+      "audience": "Support owner",
+      "safeMessage": "Requests support, complaint, incident, withdrawal route decision.",
+      "mustNotSay": "Collect details publicly.",
+      "owner": "Pilot owner"
+    },
+    {
+      "id": "COM-008",
+      "template": "Toastmasters boundary follow-up",
+      "status": "Blocked",
+      "audience": "Official-route owner",
+      "safeMessage": "Requests member/guest/official-record boundary decision.",
+      "mustNotSay": "Ask for member numbers.",
+      "owner": "Pilot owner"
+    },
+    {
+      "id": "COM-009",
+      "template": "Barayamal field follow-up",
+      "status": "Hold",
+      "audience": "Barayamal program operator",
+      "safeMessage": "Requests business-field minimisation decision.",
+      "mustNotSay": "Ask for business-sensitive records.",
+      "owner": "Pilot owner"
+    },
+    {
+      "id": "COM-010",
+      "template": "Dean advisory request",
+      "status": "Ready",
+      "audience": "Dean trusted reviewer",
+      "safeMessage": "Requests advisory comments on docket quality and public/private boundaries.",
+      "mustNotSay": "Ask for final owner approvals.",
+      "owner": "Pilot owner"
+    },
+    {
+      "id": "COM-011",
+      "template": "Public hold outcome",
+      "status": "Ready",
+      "audience": "Public visitors",
+      "safeMessage": "Real intake remains closed while private approvals are unresolved.",
+      "mustNotSay": "Pilot is open.",
+      "owner": "Comms lead"
+    },
+    {
+      "id": "COM-012",
+      "template": "No-go/archive notice",
+      "status": "Available",
+      "audience": "Private owners",
+      "safeMessage": "Summarises no-go/archive at safe status level.",
+      "mustNotSay": "Publish private reasons.",
+      "owner": "Authority chair"
+    }
+  ]
+}
