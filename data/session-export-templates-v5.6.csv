@@ -1,0 +1,9 @@
+id,template,owner,format,contains,excludes,useWhen
+XPT-001,Private session minute,Meeting chair,Markdown,"Agenda, attendance, decisions, blockers, actions",Real participant records,End of closeout session
+XPT-002,Owner evidence vote sheet,Meeting chair,CSV,Evidence placeholders and vote state,Private evidence files,During owner voting
+XPT-003,Provider refusal extract,Provider access owner,Markdown,Refusal lines and safe alternatives,Real provider data,Provider asks for records
+XPT-004,Public-safe status update,Comms lead,Markdown,Approved public lines only,Owner names or evidence,After comms approval
+XPT-005,Repeat-run hold notice,Authority chair,Markdown,Blocked checks and failure actions,Live access details,If repeat run remains blocked
+XPT-006,No-go/archive note,Authority chair,Markdown,No-go reason and archive path,Private records,If P0 cannot close
+XPT-007,Sample revision queue,Barayamal custodian / Training owner,CSV,Fake/sample records needing revision,Real identities,If sample blockers remain
+XPT-008,Advisor readout,Dean Foley / Barayamal,Markdown,Advisory observations and non-binding recommendations,Owner approvals,After trusted review

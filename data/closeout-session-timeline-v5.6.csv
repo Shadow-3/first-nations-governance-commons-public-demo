@@ -1,0 +1,13 @@
+id,order,timeboxMinutes,agendaItem,owner,defaultState,requiredOutput,stopIfMissing
+RTA-001,1,5,"Confirm meeting chair, scope, and authority",Meeting chair,Open,Authority and agenda accepted,Record hold and owner action
+RTA-002,2,5,Confirm attendance and quorum,Meeting chair,Open,Quorum roster accepted,Record hold and owner action
+RTA-003,3,10,Review P0 remediation sprint board,Authority chair,Open,P0 action owners confirmed,Record hold and owner action
+RTA-004,4,10,Privacy and consent evidence review,Privacy reviewer,Open,Privacy copy accepted or held,Record hold and owner action
+RTA-005,5,10,"IDS/data export, delete, retention, and custody review",IDS/data reviewer,Open,Data rights evidence accepted or held,Record hold and owner action
+RTA-006,6,8,Support pause and escalation drill review,Support owner,Open,Support route accepted or held,Record hold and owner action
+RTA-007,7,10,Official Toastmasters boundary review,Official-route owner,Blocked,Boundary accepted or no-go retained,Keep no-go or hold
+RTA-008,8,10,Provider real-record refusal review,Provider access owner,Open,Provider refusal accepted or held,Record hold and owner action
+RTA-009,9,10,Barayamal and First Nations Toastmasters sample review,Barayamal custodian / Training owner,Ready after revisions,Sample revisions accepted or held,Record hold and owner action
+RTA-010,10,7,Public status wording review,Comms lead,Ready,Public-safe lines accepted,Record hold and owner action
+RTA-011,11,10,Repeat-run go/no-go decision,Authority chair,Blocked until P0 closeout,"Repeat run approved, repeated, or held",Do not schedule repeat P0 run
+RTA-012,12,5,Final minute and next action assignment,Meeting chair,Open,Private minute completed,Record hold and owner action

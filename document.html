@@ -635,7 +635,7 @@
 <a class="btn" href="pilot-rehearsal-control-room.html">Control Room</a>
 <a class="btn" href="pilot-decision-build-handoff.html">Decision Handoff</a>
 <a class="btn" href="private-owner-decision-meeting.html">Owner Meeting</a>
-<a class="btn" href="private-decision-execution-control.html">Execution Control</a><a class="btn" href="private-evidence-stress-test-lab.html">Stress Lab</a><a class="btn" href="private-stress-lab-run-pack.html">Run Pack</a><a class="btn" href="private-run-results-decision-board.html">Results Board</a><a class="btn" href="p0-remediation-repeat-run-control.html">Repeat Control</a><a class="btn primary" href="owner-closeout-sprint-pack.html">Closeout Sprint</a>
+<a class="btn" href="private-decision-execution-control.html">Execution Control</a><a class="btn" href="private-evidence-stress-test-lab.html">Stress Lab</a><a class="btn" href="private-stress-lab-run-pack.html">Run Pack</a><a class="btn" href="private-run-results-decision-board.html">Results Board</a><a class="btn" href="p0-remediation-repeat-run-control.html">Repeat Control</a><a class="btn" href="owner-closeout-sprint-pack.html">Closeout Sprint</a><a class="btn" href="closeout-session-runner.html">Session Runner</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -686,6 +686,10 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Closeout session runner guide", path: "docs/closeout-session-runner-v5.6.md", type: "markdown", description: "How to use the v5.6 closeout session runner." },
+      { category: "Start Here", title: "Private session facilitation script", path: "docs/private-session-facilitation-script-v5.6.md", type: "markdown", description: "Private facilitation flow." },
+      { category: "Start Here", title: "Owner vote and blocker guide", path: "docs/owner-vote-and-blocker-resolution-guide-v5.6.md", type: "markdown", description: "Owner vote rules and blocker resolution." },
+      { category: "Start Here", title: "Session export and public status guide", path: "docs/session-export-and-public-status-guide-v5.6.md", type: "markdown", description: "Private exports and public-safe status lines." },
       { category: "Start Here", title: "Owner closeout sprint pack guide", path: "docs/owner-closeout-sprint-pack-v5.5.md", type: "markdown", description: "How to run the v5.5 owner closeout sprint." },
       { category: "Start Here", title: "Private owner agenda and minute template", path: "docs/private-owner-agenda-and-minute-template-v5.5.md", type: "markdown", description: "Private agenda and final minute structure." },
       { category: "Start Here", title: "P0 repeat-run readiness checklist", path: "docs/p0-repeat-run-readiness-checklist-v5.5.md", type: "markdown", description: "Go/no-go checks before repeat testing." },
@@ -815,6 +819,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v5.6", path: "docs/public-demo-release-notes-v5.6.md", type: "markdown", description: "Closeout Session Runner upgrade summary." },
       { category: "Release Notes", title: "Release notes v5.5", path: "docs/public-demo-release-notes-v5.5.md", type: "markdown", description: "Owner Closeout Sprint Pack upgrade summary." },
       { category: "Release Notes", title: "Release notes v5.4", path: "docs/public-demo-release-notes-v5.4.md", type: "markdown", description: "P0 Remediation Repeat-Run Control upgrade summary." },
       { category: "Release Notes", title: "Release notes v5.3", path: "docs/public-demo-release-notes-v5.3.md", type: "markdown", description: "Private Run Results Decision Board upgrade summary." },
@@ -1054,6 +1059,21 @@
       { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
       { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
       { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Closeout Session Runner", title: "Runner guide v5.6", path: "docs/closeout-session-runner-v5.6.md", type: "markdown", description: "How to use the closeout session runner." },
+      { category: "Closeout Session Runner", title: "Facilitation script v5.6", path: "docs/private-session-facilitation-script-v5.6.md", type: "markdown", description: "Private facilitation flow." },
+      { category: "Closeout Session Runner", title: "Vote and blocker guide v5.6", path: "docs/owner-vote-and-blocker-resolution-guide-v5.6.md", type: "markdown", description: "Owner vote rules and blocker resolution." },
+      { category: "Closeout Session Runner", title: "Export and public status guide v5.6", path: "docs/session-export-and-public-status-guide-v5.6.md", type: "markdown", description: "Private exports and public-safe lines." },
+      { category: "Closeout Session Runner", title: "Session timeline v5.6", path: "data/closeout-session-timeline-v5.6.csv", type: "csv", description: "Twelve agenda timeboxes." },
+      { category: "Closeout Session Runner", title: "Attendance and vote roster v5.6", path: "data/owner-attendance-and-vote-roster-v5.6.csv", type: "csv", description: "Twelve role and alternate checks." },
+      { category: "Closeout Session Runner", title: "Evidence vote simulator v5.6", path: "data/evidence-vote-simulator-v5.6.csv", type: "csv", description: "Eighteen evidence votes." },
+      { category: "Closeout Session Runner", title: "Closeout decision cards v5.6", path: "data/closeout-decision-cards-v5.6.csv", type: "csv", description: "Eighteen decision cards." },
+      { category: "Closeout Session Runner", title: "Blocker resolution drills v5.6", path: "data/blocker-resolution-drills-v5.6.csv", type: "csv", description: "Twelve blocker drills." },
+      { category: "Closeout Session Runner", title: "Provider boundary test cases v5.6", path: "data/provider-boundary-test-cases-v5.6.csv", type: "csv", description: "Ten provider boundary tests." },
+      { category: "Closeout Session Runner", title: "Sample acceptance tests v5.6", path: "data/sample-acceptance-tests-v5.6.csv", type: "csv", description: "Twelve sample acceptance tests." },
+      { category: "Closeout Session Runner", title: "Public minute line approvals v5.6", path: "data/public-minute-line-approvals-v5.6.csv", type: "csv", description: "Ten public-safe line approvals." },
+      { category: "Closeout Session Runner", title: "Session action export queue v5.6", path: "data/session-action-export-queue-v5.6.csv", type: "csv", description: "Sixteen session action items." },
+      { category: "Closeout Session Runner", title: "Session export templates v5.6", path: "data/session-export-templates-v5.6.csv", type: "csv", description: "Eight export templates." },
+      { category: "Closeout Session Runner", title: "Closeout session runner package v5.6", path: "data/closeout-session-runner-package-v5.6.json", type: "json", description: "Machine-readable v5.6 package." },
       { category: "Owner Closeout Sprint Pack", title: "Sprint pack guide v5.5", path: "docs/owner-closeout-sprint-pack-v5.5.md", type: "markdown", description: "How to run the owner closeout sprint." },
       { category: "Owner Closeout Sprint Pack", title: "Agenda and minute template v5.5", path: "docs/private-owner-agenda-and-minute-template-v5.5.md", type: "markdown", description: "Private agenda and final minute structure." },
       { category: "Owner Closeout Sprint Pack", title: "Repeat-run readiness checklist v5.5", path: "docs/p0-repeat-run-readiness-checklist-v5.5.md", type: "markdown", description: "Go/no-go checks before repeat testing." },

@@ -1,0 +1,1489 @@
+{
+  "title": "Closeout Session Runner v5.6",
+  "version": "5.6",
+  "date": "2026-06-07",
+  "mode": "public_demo_fake_sample_closeout_session_runner_only",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "previousPackage": "Owner Closeout Sprint Pack v5.5",
+  "trustedReviewer": "Dean Foley / Barayamal",
+  "primaryOrganisationTest": "Barayamal",
+  "controlledMemberTester": "First Nations Toastmasters",
+  "recommendedDecision": "Use v5.6 to rehearse the private owner closeout session, test attendance and evidence votes, resolve or hold blockers, export private minute shells, approve only public-safe lines, and then decide whether the repeat P0 run can be scheduled. Do not proceed to limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, or live Decidim access until v5.6 session minutes are privately accepted, v5.5 owner closeout passes, and the repeat P0 run also passes privately.",
+  "sessionRule": "Use v5.6 to rehearse and document the private owner closeout meeting before any repeat P0 run; it is a runner and minute-prep layer, not owner approval.",
+  "voteRule": "Each required owner must be present or represented by an accepted alternate before their evidence vote can be counted.",
+  "blockerRule": "Any blocked authority, privacy, IDS/data, official boundary, provider, security, support, quorum, or final-minute item keeps the repeat run on hold.",
+  "launchBlockRule": "Limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, and live Decidim access remain blocked until the v5.6 session minute is privately accepted, v5.5 owner closeout passes, and the repeat P0 run also passes privately.",
+  "sourceAnchors": [
+    {
+      "label": "Decidim first steps",
+      "url": "https://decidim.org/first-steps/"
+    },
+    {
+      "label": "Decidim GitHub example applications",
+      "url": "https://github.com/decidim/decidim#example-applications"
+    },
+    {
+      "label": "Decidim install overview",
+      "url": "https://docs.decidim.org/en/develop/install/index.html"
+    },
+    {
+      "label": "Decidim deployment docs",
+      "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+    },
+    {
+      "label": "Decidim authorizations",
+      "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+    },
+    {
+      "label": "Barayamal Toastmasters First Nations",
+      "url": "https://barayamal.com.au/toastmasters-first-nations/"
+    },
+    {
+      "label": "Toastmasters governing documents",
+      "url": "https://www.toastmasters.org/resources/governing-documents"
+    },
+    {
+      "label": "OAIC Notifiable Data Breaches",
+      "url": "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme"
+    },
+    {
+      "label": "AIATSIS ethical research",
+      "url": "https://aiatsis.gov.au/research/ethical-research"
+    },
+    {
+      "label": "v4.6 Controlled Pilot Execution Pack",
+      "url": "data/controlled-pilot-execution-pack-v4.6.json"
+    },
+    {
+      "label": "v4.7 Pilot Rehearsal Control Room",
+      "url": "data/pilot-rehearsal-control-room-package-v4.7.json"
+    },
+    {
+      "label": "Decidim deployment docs",
+      "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+    },
+    {
+      "label": "Decidim install checklist",
+      "url": "https://docs.decidim.org/en/develop/install/checklist.html"
+    },
+    {
+      "label": "v4.8 Pilot Decision and Build Handoff Room",
+      "url": "data/pilot-decision-build-handoff-package-v4.8.json"
+    },
+    {
+      "label": "v4.9 Private Owner Decision Meeting Pack",
+      "url": "data/private-owner-decision-meeting-package-v4.9.json"
+    },
+    {
+      "label": "v5.0 Private Decision Execution Control Pack",
+      "url": "data/private-decision-execution-control-package-v5.0.json"
+    },
+    {
+      "label": "v5.1 Private Evidence Stress Test Lab Pack",
+      "url": "data/private-evidence-stress-test-package-v5.1.json"
+    },
+    {
+      "label": "v5.2 Private Stress Lab Run Pack",
+      "url": "data/private-stress-lab-run-package-v5.2.json"
+    },
+    {
+      "label": "v5.3 Private Run Results Decision Package",
+      "url": "data/private-run-results-decision-package-v5.3.json"
+    },
+    {
+      "label": "v5.4 P0 Remediation Repeat-Run Control Package",
+      "url": "data/p0-remediation-repeat-run-control-package-v5.4.json"
+    },
+    {
+      "label": "v5.5 Owner Closeout Sprint Pack",
+      "url": "data/owner-closeout-sprint-pack-package-v5.5.json"
+    }
+  ],
+  "counts": {
+    "sessionTimelineItems": 12,
+    "attendanceChecks": 12,
+    "evidenceVotes": 18,
+    "closeoutDecisionCards": 18,
+    "blockerResolutionDrills": 12,
+    "providerBoundaryTests": 10,
+    "sampleAcceptanceTests": 12,
+    "publicMinuteLines": 10,
+    "actionQueueItems": 16,
+    "exportTemplates": 8,
+    "blockedEvidenceVotes": 1,
+    "holdEvidenceVotes": 14,
+    "totalRunnerRecords": 128
+  },
+  "sessionTimeline": [
+    {
+      "id": "RTA-001",
+      "order": "1",
+      "timeboxMinutes": 5,
+      "agendaItem": "Confirm meeting chair, scope, and authority",
+      "owner": "Meeting chair",
+      "defaultState": "Open",
+      "requiredOutput": "Authority and agenda accepted",
+      "stopIfMissing": "Record hold and owner action"
+    },
+    {
+      "id": "RTA-002",
+      "order": "2",
+      "timeboxMinutes": 5,
+      "agendaItem": "Confirm attendance and quorum",
+      "owner": "Meeting chair",
+      "defaultState": "Open",
+      "requiredOutput": "Quorum roster accepted",
+      "stopIfMissing": "Record hold and owner action"
+    },
+    {
+      "id": "RTA-003",
+      "order": "3",
+      "timeboxMinutes": 10,
+      "agendaItem": "Review P0 remediation sprint board",
+      "owner": "Authority chair",
+      "defaultState": "Open",
+      "requiredOutput": "P0 action owners confirmed",
+      "stopIfMissing": "Record hold and owner action"
+    },
+    {
+      "id": "RTA-004",
+      "order": "4",
+      "timeboxMinutes": 10,
+      "agendaItem": "Privacy and consent evidence review",
+      "owner": "Privacy reviewer",
+      "defaultState": "Open",
+      "requiredOutput": "Privacy copy accepted or held",
+      "stopIfMissing": "Record hold and owner action"
+    },
+    {
+      "id": "RTA-005",
+      "order": "5",
+      "timeboxMinutes": 10,
+      "agendaItem": "IDS/data export, delete, retention, and custody review",
+      "owner": "IDS/data reviewer",
+      "defaultState": "Open",
+      "requiredOutput": "Data rights evidence accepted or held",
+      "stopIfMissing": "Record hold and owner action"
+    },
+    {
+      "id": "RTA-006",
+      "order": "6",
+      "timeboxMinutes": 8,
+      "agendaItem": "Support pause and escalation drill review",
+      "owner": "Support owner",
+      "defaultState": "Open",
+      "requiredOutput": "Support route accepted or held",
+      "stopIfMissing": "Record hold and owner action"
+    },
+    {
+      "id": "RTA-007",
+      "order": "7",
+      "timeboxMinutes": 10,
+      "agendaItem": "Official Toastmasters boundary review",
+      "owner": "Official-route owner",
+      "defaultState": "Blocked",
+      "requiredOutput": "Boundary accepted or no-go retained",
+      "stopIfMissing": "Keep no-go or hold"
+    },
+    {
+      "id": "RTA-008",
+      "order": "8",
+      "timeboxMinutes": 10,
+      "agendaItem": "Provider real-record refusal review",
+      "owner": "Provider access owner",
+      "defaultState": "Open",
+      "requiredOutput": "Provider refusal accepted or held",
+      "stopIfMissing": "Record hold and owner action"
+    },
+    {
+      "id": "RTA-009",
+      "order": "9",
+      "timeboxMinutes": 10,
+      "agendaItem": "Barayamal and First Nations Toastmasters sample review",
+      "owner": "Barayamal custodian / Training owner",
+      "defaultState": "Ready after revisions",
+      "requiredOutput": "Sample revisions accepted or held",
+      "stopIfMissing": "Record hold and owner action"
+    },
+    {
+      "id": "RTA-010",
+      "order": "10",
+      "timeboxMinutes": 7,
+      "agendaItem": "Public status wording review",
+      "owner": "Comms lead",
+      "defaultState": "Ready",
+      "requiredOutput": "Public-safe lines accepted",
+      "stopIfMissing": "Record hold and owner action"
+    },
+    {
+      "id": "RTA-011",
+      "order": "11",
+      "timeboxMinutes": 10,
+      "agendaItem": "Repeat-run go/no-go decision",
+      "owner": "Authority chair",
+      "defaultState": "Blocked until P0 closeout",
+      "requiredOutput": "Repeat run approved, repeated, or held",
+      "stopIfMissing": "Do not schedule repeat P0 run"
+    },
+    {
+      "id": "RTA-012",
+      "order": "12",
+      "timeboxMinutes": 5,
+      "agendaItem": "Final minute and next action assignment",
+      "owner": "Meeting chair",
+      "defaultState": "Open",
+      "requiredOutput": "Private minute completed",
+      "stopIfMissing": "Record hold and owner action"
+    }
+  ],
+  "attendanceRoster": [
+    {
+      "id": "RVR-001",
+      "role": "Authority chair",
+      "required": "Yes",
+      "defaultAttendance": "Unconfirmed",
+      "acceptedAlternate": "To be named privately",
+      "votingPower": "Own gate only",
+      "cannotSubstitute": "Privacy approval",
+      "stopRule": "Cannot close Authority chair gate without role or accepted alternate."
+    },
+    {
+      "id": "RVR-002",
+      "role": "Privacy reviewer",
+      "required": "Yes",
+      "defaultAttendance": "Unconfirmed",
+      "acceptedAlternate": "To be named privately",
+      "votingPower": "Own gate only",
+      "cannotSubstitute": "Authority approval",
+      "stopRule": "Cannot close Privacy reviewer gate without role or accepted alternate."
+    },
+    {
+      "id": "RVR-003",
+      "role": "IDS/data reviewer",
+      "required": "Yes",
+      "defaultAttendance": "Unconfirmed",
+      "acceptedAlternate": "To be named privately",
+      "votingPower": "Own gate only",
+      "cannotSubstitute": "Provider approval",
+      "stopRule": "Cannot close IDS/data reviewer gate without role or accepted alternate."
+    },
+    {
+      "id": "RVR-004",
+      "role": "Support owner",
+      "required": "Yes",
+      "defaultAttendance": "Unconfirmed",
+      "acceptedAlternate": "To be named privately",
+      "votingPower": "Own gate only",
+      "cannotSubstitute": "Privacy approval",
+      "stopRule": "Cannot close Support owner gate without role or accepted alternate."
+    },
+    {
+      "id": "RVR-005",
+      "role": "Official-route owner",
+      "required": "Yes",
+      "defaultAttendance": "Missing",
+      "acceptedAlternate": "To be named privately",
+      "votingPower": "Own gate only",
+      "cannotSubstitute": "Training or Barayamal approval",
+      "stopRule": "Cannot close Official-route owner gate without role or accepted alternate."
+    },
+    {
+      "id": "RVR-006",
+      "role": "Security reviewer",
+      "required": "Yes",
+      "defaultAttendance": "Unconfirmed",
+      "acceptedAlternate": "To be named privately",
+      "votingPower": "Own gate only",
+      "cannotSubstitute": "Comms approval",
+      "stopRule": "Cannot close Security reviewer gate without role or accepted alternate."
+    },
+    {
+      "id": "RVR-007",
+      "role": "Provider access owner",
+      "required": "Yes",
+      "defaultAttendance": "Unconfirmed",
+      "acceptedAlternate": "To be named privately",
+      "votingPower": "Own gate only",
+      "cannotSubstitute": "Privacy or IDS/data approval",
+      "stopRule": "Cannot close Provider access owner gate without role or accepted alternate."
+    },
+    {
+      "id": "RVR-008",
+      "role": "Comms lead",
+      "required": "Yes",
+      "defaultAttendance": "Present",
+      "acceptedAlternate": "To be named privately",
+      "votingPower": "Own gate only",
+      "cannotSubstitute": "Private evidence approval",
+      "stopRule": "Cannot close Comms lead gate without role or accepted alternate."
+    },
+    {
+      "id": "RVR-009",
+      "role": "Barayamal custodian",
+      "required": "Yes",
+      "defaultAttendance": "Present",
+      "acceptedAlternate": "Barayamal delegate",
+      "votingPower": "Own gate only",
+      "cannotSubstitute": "Official Toastmasters approval",
+      "stopRule": "Cannot close Barayamal custodian gate without role or accepted alternate."
+    },
+    {
+      "id": "RVR-010",
+      "role": "Training owner",
+      "required": "Yes",
+      "defaultAttendance": "Unconfirmed",
+      "acceptedAlternate": "To be named privately",
+      "votingPower": "Own gate only",
+      "cannotSubstitute": "Official-route approval",
+      "stopRule": "Cannot close Training owner gate without role or accepted alternate."
+    },
+    {
+      "id": "RVR-011",
+      "role": "Meeting chair",
+      "required": "Yes",
+      "defaultAttendance": "Unconfirmed",
+      "acceptedAlternate": "To be named privately",
+      "votingPower": "Own gate only",
+      "cannotSubstitute": "Owner votes",
+      "stopRule": "Cannot close Meeting chair gate without role or accepted alternate."
+    },
+    {
+      "id": "RVR-012",
+      "role": "Dean Foley / Barayamal",
+      "required": "Advisory only",
+      "defaultAttendance": "Present",
+      "acceptedAlternate": "Barayamal delegate",
+      "votingPower": "Advisory only",
+      "cannotSubstitute": "Owner approvals",
+      "stopRule": "Advisory review cannot replace owner approval."
+    }
+  ],
+  "evidenceVotes": [
+    {
+      "id": "EVS-001",
+      "linkedOwnerSprint": "OSP-001",
+      "area": "Authority",
+      "priority": "P0",
+      "owner": "Authority chair",
+      "defaultVote": "Needs vote",
+      "evidenceNeed": "Private authority roster and minute placeholder.",
+      "acceptanceTest": "Chair and alternate recorded with quorum authority.",
+      "blocker": "No named chair or unclear authority route.",
+      "publicSafeLine": "Authority remains private and unresolved; no pilot has been approved.",
+      "countedForRepeat": "No"
+    },
+    {
+      "id": "EVS-002",
+      "linkedOwnerSprint": "OSP-002",
+      "area": "Privacy",
+      "priority": "P0",
+      "owner": "Privacy reviewer",
+      "defaultVote": "Needs vote",
+      "evidenceNeed": "Private privacy copy approval.",
+      "acceptanceTest": "Privacy reviewer accepts fake/sample-only wording.",
+      "blocker": "Copy implies real intake or unclear withdrawal.",
+      "publicSafeLine": "Privacy and consent controls remain under private owner review.",
+      "countedForRepeat": "No"
+    },
+    {
+      "id": "EVS-003",
+      "linkedOwnerSprint": "OSP-003",
+      "area": "Privacy",
+      "priority": "P0",
+      "owner": "Privacy reviewer",
+      "defaultVote": "Hold",
+      "evidenceNeed": "Disabled outbound-email proof.",
+      "acceptanceTest": "No real outbound email can send from the demo.",
+      "blocker": "Any real email sends or live invite is implied.",
+      "publicSafeLine": "No outbound email is active for real participants.",
+      "countedForRepeat": "No"
+    },
+    {
+      "id": "EVS-004",
+      "linkedOwnerSprint": "OSP-004",
+      "area": "IDS/data",
+      "priority": "P0",
+      "owner": "IDS/data reviewer",
+      "defaultVote": "Needs vote",
+      "evidenceNeed": "Private data-rights drill evidence placeholder.",
+      "acceptanceTest": "Export, delete, retention, and custody pass privately.",
+      "blocker": "Delete proof absent or retention unclear.",
+      "publicSafeLine": "Data export, deletion, and retention controls remain under private review.",
+      "countedForRepeat": "No"
+    },
+    {
+      "id": "EVS-005",
+      "linkedOwnerSprint": "OSP-005",
+      "area": "Support",
+      "priority": "P0",
+      "owner": "Support owner",
+      "defaultVote": "Needs vote",
+      "evidenceNeed": "Private support drill minute.",
+      "acceptanceTest": "Support owner confirms pause and escalation route.",
+      "blocker": "Complaint path has no owner or no pause route.",
+      "publicSafeLine": "Support routes are not live services.",
+      "countedForRepeat": "No"
+    },
+    {
+      "id": "EVS-006",
+      "linkedOwnerSprint": "OSP-006",
+      "area": "Official boundary",
+      "priority": "P0",
+      "owner": "Official-route owner",
+      "defaultVote": "Block",
+      "evidenceNeed": "Private official-boundary note.",
+      "acceptanceTest": "No official member, payment, education, officer, or club workflow is active.",
+      "blocker": "Any official Toastmasters workflow appears.",
+      "publicSafeLine": "First Nations Toastmasters remains a fake/sample guest and boundary tester only.",
+      "countedForRepeat": "No"
+    },
+    {
+      "id": "EVS-007",
+      "linkedOwnerSprint": "OSP-007",
+      "area": "Evidence",
+      "priority": "P0",
+      "owner": "IDS/data reviewer",
+      "defaultVote": "Needs vote",
+      "evidenceNeed": "Private custody index.",
+      "acceptanceTest": "Public package shows only aggregate status and custody placeholders.",
+      "blocker": "Private evidence details appear publicly.",
+      "publicSafeLine": "Private evidence is not published in the public package.",
+      "countedForRepeat": "No"
+    },
+    {
+      "id": "EVS-008",
+      "linkedOwnerSprint": "OSP-008",
+      "area": "Provider",
+      "priority": "P0",
+      "owner": "Provider access owner",
+      "defaultVote": "Needs vote",
+      "evidenceNeed": "Provider refusal proof and RFQ boundary approval.",
+      "acceptanceTest": "Provider real-record asks are rejected and redirected to fake/sample schemas only.",
+      "blocker": "Provider receives or is promised real records, official records, outbound email, credentials, logs, or live access.",
+      "publicSafeLine": "No provider has access to real participant, organisation, or Toastmasters records.",
+      "countedForRepeat": "No"
+    },
+    {
+      "id": "EVS-009",
+      "linkedOwnerSprint": "OSP-009",
+      "area": "FN Toastmasters",
+      "priority": "P1",
+      "owner": "Training owner",
+      "defaultVote": "Needs vote",
+      "evidenceNeed": "Private copy review.",
+      "acceptanceTest": "Guest support wording cannot read as official member service.",
+      "blocker": "Copy implies member service, officer, payment, education, or official record.",
+      "publicSafeLine": "First Nations Toastmasters sample records do not represent official member services.",
+      "countedForRepeat": "No"
+    },
+    {
+      "id": "EVS-010",
+      "linkedOwnerSprint": "OSP-010",
+      "area": "Security",
+      "priority": "P1",
+      "owner": "Security reviewer",
+      "defaultVote": "Hold",
+      "evidenceNeed": "Private security proof references.",
+      "acceptanceTest": "Security reviewer accepts fake/sample environment proof.",
+      "blocker": "Credential, log, restore, or revoke proof missing.",
+      "publicSafeLine": "No live Decidim access is approved by this public demo.",
+      "countedForRepeat": "No"
+    },
+    {
+      "id": "EVS-011",
+      "linkedOwnerSprint": "OSP-011",
+      "area": "Access",
+      "priority": "P1",
+      "owner": "Security reviewer",
+      "defaultVote": "Needs vote",
+      "evidenceNeed": "Private access expiry proof.",
+      "acceptanceTest": "Admin access has expiry, revoke route, and owner approval.",
+      "blocker": "Unrestricted or unowned admin access appears.",
+      "publicSafeLine": "No live admin access is approved by this public demo.",
+      "countedForRepeat": "No"
+    },
+    {
+      "id": "EVS-012",
+      "linkedOwnerSprint": "OSP-012",
+      "area": "Provider",
+      "priority": "P1",
+      "owner": "Provider access owner",
+      "defaultVote": "Needs vote",
+      "evidenceNeed": "Private RFQ approval reference.",
+      "acceptanceTest": "RFQ excludes real records, official Toastmasters data, outbound email, credentials, and live access.",
+      "blocker": "Provider scope implies live or real-record access.",
+      "publicSafeLine": "Provider or self-build options remain under fake/sample-only review.",
+      "countedForRepeat": "No"
+    },
+    {
+      "id": "EVS-013",
+      "linkedOwnerSprint": "OSP-013",
+      "area": "Owners",
+      "priority": "P2",
+      "owner": "Meeting chair",
+      "defaultVote": "Needs vote",
+      "evidenceNeed": "Private quorum roster.",
+      "acceptanceTest": "Every required owner has an alternate and attendance state.",
+      "blocker": "No quorum or missing owner alternate.",
+      "publicSafeLine": "Named owners must approve their own gates privately.",
+      "countedForRepeat": "No"
+    },
+    {
+      "id": "EVS-014",
+      "linkedOwnerSprint": "OSP-014",
+      "area": "Barayamal",
+      "priority": "P2",
+      "owner": "Barayamal custodian",
+      "defaultVote": "Accept",
+      "evidenceNeed": "Private Barayamal sample review.",
+      "acceptanceTest": "No real business-sensitive or contact fields appear.",
+      "blocker": "Real business-sensitive field appears.",
+      "publicSafeLine": "Barayamal remains a controlled fake/sample organisation test path.",
+      "countedForRepeat": "Yes after owner signs"
+    },
+    {
+      "id": "EVS-015",
+      "linkedOwnerSprint": "OSP-015",
+      "area": "Communications",
+      "priority": "P2",
+      "owner": "Comms lead",
+      "defaultVote": "Accept",
+      "evidenceNeed": "Private comms approval reference.",
+      "acceptanceTest": "Public line says preparation only and does not imply launch.",
+      "blocker": "Public wording implies approval, launch, or private evidence pass.",
+      "publicSafeLine": "The public demo remains a fake/sample preparation tool; no live pilot has been approved.",
+      "countedForRepeat": "Yes after owner signs"
+    },
+    {
+      "id": "EVS-016",
+      "linkedOwnerSprint": "OSP-016",
+      "area": "Documentation",
+      "priority": "P2",
+      "owner": "Documentation owner",
+      "defaultVote": "Accept",
+      "evidenceNeed": "Generated v5.5 package manifest.",
+      "acceptanceTest": "Reviewers can follow agenda, evidence, closeout, and decision paths.",
+      "blocker": "Reviewer pack lacks closeout sprint steps.",
+      "publicSafeLine": "The demo now includes an owner closeout sprint layer.",
+      "countedForRepeat": "Yes after owner signs"
+    },
+    {
+      "id": "EVS-017",
+      "linkedOwnerSprint": "OSP-017",
+      "area": "Final minutes",
+      "priority": "P0",
+      "owner": "Meeting chair",
+      "defaultVote": "Needs vote",
+      "evidenceNeed": "Private final minute placeholder.",
+      "acceptanceTest": "Proceed, repeat, and no-go/archive options are explicit.",
+      "blocker": "Decision minute implies proceed before closeout.",
+      "publicSafeLine": "The next valid step is closeout sprint, repeat testing, or no-go/archive.",
+      "countedForRepeat": "No"
+    },
+    {
+      "id": "EVS-018",
+      "linkedOwnerSprint": "OSP-018",
+      "area": "Repeat run",
+      "priority": "P1",
+      "owner": "Meeting chair",
+      "defaultVote": "Needs vote",
+      "evidenceNeed": "Private calendar hold and stop trigger register.",
+      "acceptanceTest": "Calendar, quorum, evidence folder, and stop triggers are confirmed.",
+      "blocker": "Repeat run starts before P0 closeout readiness.",
+      "publicSafeLine": "Preparation continues; no pilot has been approved.",
+      "countedForRepeat": "No"
+    }
+  ],
+  "closeoutDecisionCards": [
+    {
+      "id": "DSV-001",
+      "linkedDecision": "DCR-001",
+      "linkedOwnerSprint": "OSP-001",
+      "decision": "Proceed to limited private pilot",
+      "owner": "Authority chair",
+      "defaultOutcome": "No-go or hold",
+      "requiredInput": "Chair and alternate recorded with quorum authority.",
+      "blocker": "No named chair or unclear authority route.",
+      "allowedAction": "Do not proceed",
+      "publicOutcome": "No pilot approved"
+    },
+    {
+      "id": "DSV-002",
+      "linkedDecision": "DCR-002",
+      "linkedOwnerSprint": "OSP-002",
+      "decision": "Closeout decision for REM-002",
+      "owner": "Privacy reviewer",
+      "defaultOutcome": "Hold",
+      "requiredInput": "Privacy reviewer accepts fake/sample-only wording.",
+      "blocker": "Copy implies real intake or unclear withdrawal.",
+      "allowedAction": "Accept, hold, repeat, or no-go",
+      "publicOutcome": "Privacy and consent controls remain under private owner review."
+    },
+    {
+      "id": "DSV-003",
+      "linkedDecision": "DCR-003",
+      "linkedOwnerSprint": "OSP-003",
+      "decision": "Closeout decision for REM-003",
+      "owner": "Privacy reviewer",
+      "defaultOutcome": "Hold",
+      "requiredInput": "No real outbound email can send from the demo.",
+      "blocker": "Any real email sends or live invite is implied.",
+      "allowedAction": "Accept, hold, repeat, or no-go",
+      "publicOutcome": "No outbound email is active for real participants."
+    },
+    {
+      "id": "DSV-004",
+      "linkedDecision": "DCR-004",
+      "linkedOwnerSprint": "OSP-004",
+      "decision": "Closeout decision for REM-004",
+      "owner": "IDS/data reviewer",
+      "defaultOutcome": "Hold",
+      "requiredInput": "Export, delete, retention, and custody pass privately.",
+      "blocker": "Delete proof absent or retention unclear.",
+      "allowedAction": "Accept, hold, repeat, or no-go",
+      "publicOutcome": "Data export, deletion, and retention controls remain under private review."
+    },
+    {
+      "id": "DSV-005",
+      "linkedDecision": "DCR-005",
+      "linkedOwnerSprint": "OSP-005",
+      "decision": "Closeout decision for REM-005",
+      "owner": "Support owner",
+      "defaultOutcome": "Hold",
+      "requiredInput": "Support owner confirms pause and escalation route.",
+      "blocker": "Complaint path has no owner or no pause route.",
+      "allowedAction": "Accept, hold, repeat, or no-go",
+      "publicOutcome": "Support routes are not live services."
+    },
+    {
+      "id": "DSV-006",
+      "linkedDecision": "DCR-006",
+      "linkedOwnerSprint": "OSP-006",
+      "decision": "Closeout decision for REM-006",
+      "owner": "Official-route owner",
+      "defaultOutcome": "No-go or hold",
+      "requiredInput": "No official member, payment, education, officer, or club workflow is active.",
+      "blocker": "Any official Toastmasters workflow appears.",
+      "allowedAction": "Accept, hold, repeat, or no-go",
+      "publicOutcome": "First Nations Toastmasters remains a fake/sample guest and boundary tester only."
+    },
+    {
+      "id": "DSV-007",
+      "linkedDecision": "DCR-007",
+      "linkedOwnerSprint": "OSP-007",
+      "decision": "Closeout decision for REM-007",
+      "owner": "IDS/data reviewer",
+      "defaultOutcome": "Hold",
+      "requiredInput": "Public package shows only aggregate status and custody placeholders.",
+      "blocker": "Private evidence details appear publicly.",
+      "allowedAction": "Accept, hold, repeat, or no-go",
+      "publicOutcome": "Private evidence is not published in the public package."
+    },
+    {
+      "id": "DSV-008",
+      "linkedDecision": "DCR-008",
+      "linkedOwnerSprint": "OSP-008",
+      "decision": "Closeout decision for REM-008",
+      "owner": "Provider access owner",
+      "defaultOutcome": "Hold",
+      "requiredInput": "Provider real-record asks are rejected and redirected to fake/sample schemas only.",
+      "blocker": "Provider receives or is promised real records, official records, outbound email, credentials, logs, or live access.",
+      "allowedAction": "Accept, hold, repeat, or no-go",
+      "publicOutcome": "No provider has access to real participant, organisation, or Toastmasters records."
+    },
+    {
+      "id": "DSV-009",
+      "linkedDecision": "DCR-009",
+      "linkedOwnerSprint": "OSP-009",
+      "decision": "Closeout decision for REM-009",
+      "owner": "Training owner",
+      "defaultOutcome": "Hold",
+      "requiredInput": "Guest support wording cannot read as official member service.",
+      "blocker": "Copy implies member service, officer, payment, education, or official record.",
+      "allowedAction": "Accept, hold, repeat, or no-go",
+      "publicOutcome": "First Nations Toastmasters sample records do not represent official member services."
+    },
+    {
+      "id": "DSV-010",
+      "linkedDecision": "DCR-010",
+      "linkedOwnerSprint": "OSP-010",
+      "decision": "Closeout decision for REM-010",
+      "owner": "Security reviewer",
+      "defaultOutcome": "Hold",
+      "requiredInput": "Security reviewer accepts fake/sample environment proof.",
+      "blocker": "Credential, log, restore, or revoke proof missing.",
+      "allowedAction": "Accept, hold, repeat, or no-go",
+      "publicOutcome": "No live Decidim access is approved by this public demo."
+    },
+    {
+      "id": "DSV-011",
+      "linkedDecision": "DCR-011",
+      "linkedOwnerSprint": "OSP-011",
+      "decision": "Closeout decision for REM-011",
+      "owner": "Security reviewer",
+      "defaultOutcome": "Hold",
+      "requiredInput": "Admin access has expiry, revoke route, and owner approval.",
+      "blocker": "Unrestricted or unowned admin access appears.",
+      "allowedAction": "Accept, hold, repeat, or no-go",
+      "publicOutcome": "No live admin access is approved by this public demo."
+    },
+    {
+      "id": "DSV-012",
+      "linkedDecision": "DCR-012",
+      "linkedOwnerSprint": "OSP-012",
+      "decision": "Closeout decision for REM-012",
+      "owner": "Provider access owner",
+      "defaultOutcome": "Hold",
+      "requiredInput": "RFQ excludes real records, official Toastmasters data, outbound email, credentials, and live access.",
+      "blocker": "Provider scope implies live or real-record access.",
+      "allowedAction": "Accept, hold, repeat, or no-go",
+      "publicOutcome": "Provider or self-build options remain under fake/sample-only review."
+    },
+    {
+      "id": "DSV-013",
+      "linkedDecision": "DCR-013",
+      "linkedOwnerSprint": "OSP-013",
+      "decision": "Closeout decision for REM-013",
+      "owner": "Meeting chair",
+      "defaultOutcome": "Hold",
+      "requiredInput": "Every required owner has an alternate and attendance state.",
+      "blocker": "No quorum or missing owner alternate.",
+      "allowedAction": "Accept, hold, repeat, or no-go",
+      "publicOutcome": "Named owners must approve their own gates privately."
+    },
+    {
+      "id": "DSV-014",
+      "linkedDecision": "DCR-014",
+      "linkedOwnerSprint": "OSP-014",
+      "decision": "Closeout decision for REM-014",
+      "owner": "Barayamal custodian",
+      "defaultOutcome": "Accept after evidence",
+      "requiredInput": "No real business-sensitive or contact fields appear.",
+      "blocker": "Private owner acceptance still needed",
+      "allowedAction": "Accept, hold, repeat, or no-go",
+      "publicOutcome": "Barayamal remains a controlled fake/sample organisation test path."
+    },
+    {
+      "id": "DSV-015",
+      "linkedDecision": "DCR-015",
+      "linkedOwnerSprint": "OSP-015",
+      "decision": "Closeout decision for REM-015",
+      "owner": "Comms lead",
+      "defaultOutcome": "Accept after evidence",
+      "requiredInput": "Public line says preparation only and does not imply launch.",
+      "blocker": "Private owner acceptance still needed",
+      "allowedAction": "Accept, hold, repeat, or no-go",
+      "publicOutcome": "The public demo remains a fake/sample preparation tool; no live pilot has been approved."
+    },
+    {
+      "id": "DSV-016",
+      "linkedDecision": "DCR-016",
+      "linkedOwnerSprint": "OSP-016",
+      "decision": "Closeout decision for REM-016",
+      "owner": "Documentation owner",
+      "defaultOutcome": "Accept after evidence",
+      "requiredInput": "Reviewers can follow agenda, evidence, closeout, and decision paths.",
+      "blocker": "Private owner acceptance still needed",
+      "allowedAction": "Accept, hold, repeat, or no-go",
+      "publicOutcome": "The demo now includes an owner closeout sprint layer."
+    },
+    {
+      "id": "DSV-017",
+      "linkedDecision": "DCR-017",
+      "linkedOwnerSprint": "OSP-017",
+      "decision": "Closeout decision for REM-017",
+      "owner": "Meeting chair",
+      "defaultOutcome": "Hold",
+      "requiredInput": "Proceed, repeat, and no-go/archive options are explicit.",
+      "blocker": "Decision minute implies proceed before closeout.",
+      "allowedAction": "Accept, hold, repeat, or no-go",
+      "publicOutcome": "The next valid step is closeout sprint, repeat testing, or no-go/archive."
+    },
+    {
+      "id": "DSV-018",
+      "linkedDecision": "DCR-018",
+      "linkedOwnerSprint": "OSP-018",
+      "decision": "Closeout decision for REM-018",
+      "owner": "Meeting chair",
+      "defaultOutcome": "Hold",
+      "requiredInput": "Calendar, quorum, evidence folder, and stop triggers are confirmed.",
+      "blocker": "Repeat run starts before P0 closeout readiness.",
+      "allowedAction": "Accept, hold, repeat, or no-go",
+      "publicOutcome": "Preparation continues; no pilot has been approved."
+    }
+  ],
+  "blockerResolutionDrills": [
+    {
+      "id": "BRD-001",
+      "linkedCheck": "RGN-001",
+      "blocker": "Authority owner named",
+      "area": "Authority",
+      "owner": "Authority chair",
+      "currentState": "Blocked",
+      "mustResolve": "Chair and alternate privately recorded",
+      "failureAction": "Do not run repeat lab",
+      "sessionQuestion": "Can Authority chair accept this check today without using real records or official systems?"
+    },
+    {
+      "id": "BRD-002",
+      "linkedCheck": "RGN-002",
+      "blocker": "Consent and privacy copy accepted",
+      "area": "Privacy",
+      "owner": "Privacy reviewer",
+      "currentState": "Open",
+      "mustResolve": "Privacy copy accepted for fake/sample testing",
+      "failureAction": "Hold privacy tests",
+      "sessionQuestion": "Can Privacy reviewer accept this check today without using real records or official systems?"
+    },
+    {
+      "id": "BRD-003",
+      "linkedCheck": "RGN-003",
+      "blocker": "Outbound email disabled or contained",
+      "area": "Privacy",
+      "owner": "Privacy reviewer",
+      "currentState": "In review",
+      "mustResolve": "No real email can send",
+      "failureAction": "Hold invite path",
+      "sessionQuestion": "Can Privacy reviewer accept this check today without using real records or official systems?"
+    },
+    {
+      "id": "BRD-004",
+      "linkedCheck": "RGN-004",
+      "blocker": "Export/delete/retention proof accepted",
+      "area": "IDS/data",
+      "owner": "IDS/data reviewer",
+      "currentState": "Open",
+      "mustResolve": "Data rights drill passes privately",
+      "failureAction": "Hold data test",
+      "sessionQuestion": "Can IDS/data reviewer accept this check today without using real records or official systems?"
+    },
+    {
+      "id": "BRD-005",
+      "linkedCheck": "RGN-005",
+      "blocker": "Evidence custody index accepted",
+      "area": "IDS/data",
+      "owner": "IDS/data reviewer",
+      "currentState": "Open",
+      "mustResolve": "Private evidence map and redaction rule pass",
+      "failureAction": "Hold public summary",
+      "sessionQuestion": "Can IDS/data reviewer accept this check today without using real records or official systems?"
+    },
+    {
+      "id": "BRD-006",
+      "linkedCheck": "RGN-006",
+      "blocker": "Complaint/pause route accepted",
+      "area": "Support",
+      "owner": "Support owner",
+      "currentState": "Open",
+      "mustResolve": "Support pause and escalation route pass",
+      "failureAction": "Hold support test",
+      "sessionQuestion": "Can Support owner accept this check today without using real records or official systems?"
+    },
+    {
+      "id": "BRD-007",
+      "linkedCheck": "RGN-007",
+      "blocker": "Official Toastmasters boundary accepted",
+      "area": "Official boundary",
+      "owner": "Official-route owner",
+      "currentState": "Blocked",
+      "mustResolve": "No official workflow is active or implied",
+      "failureAction": "Keep no-go",
+      "sessionQuestion": "Can Official-route owner accept this check today without using real records or official systems?"
+    },
+    {
+      "id": "BRD-008",
+      "linkedCheck": "RGN-008",
+      "blocker": "Security restore and revoke proof accepted",
+      "area": "Security",
+      "owner": "Security reviewer",
+      "currentState": "In review",
+      "mustResolve": "Restore, revoke, credential, and log proof pass",
+      "failureAction": "Hold live access",
+      "sessionQuestion": "Can Security reviewer accept this check today without using real records or official systems?"
+    },
+    {
+      "id": "BRD-009",
+      "linkedCheck": "RGN-009",
+      "blocker": "Provider refusal script accepted",
+      "area": "Provider",
+      "owner": "Provider access owner",
+      "currentState": "Open",
+      "mustResolve": "Real-record asks are rejected",
+      "failureAction": "Hold provider test",
+      "sessionQuestion": "Can Provider access owner accept this check today without using real records or official systems?"
+    },
+    {
+      "id": "BRD-010",
+      "linkedCheck": "RGN-010",
+      "blocker": "Barayamal samples accepted",
+      "area": "Authority",
+      "owner": "Barayamal custodian",
+      "currentState": "Ready",
+      "mustResolve": "Blocked fields absent",
+      "failureAction": "Revise sample",
+      "sessionQuestion": "Can Barayamal custodian accept this check today without using real records or official systems?"
+    },
+    {
+      "id": "BRD-011",
+      "linkedCheck": "RGN-011",
+      "blocker": "First Nations Toastmasters guest samples accepted",
+      "area": "Authority",
+      "owner": "Training owner",
+      "currentState": "Open",
+      "mustResolve": "No official member service implied",
+      "failureAction": "Revise sample",
+      "sessionQuestion": "Can Training owner accept this check today without using real records or official systems?"
+    },
+    {
+      "id": "BRD-012",
+      "linkedCheck": "RGN-012",
+      "blocker": "Public wording accepted",
+      "area": "Communications",
+      "owner": "Comms lead",
+      "currentState": "Ready",
+      "mustResolve": "Preparation-only wording approved",
+      "failureAction": "Do not publish update",
+      "sessionQuestion": "Can Comms lead accept this check today without using real records or official systems?"
+    }
+  ],
+  "providerBoundaryTests": [
+    {
+      "id": "PBT-001",
+      "providerAsk": "Real participant records",
+      "owner": "Provider access owner",
+      "defaultOutcome": "Ready",
+      "refusalLine": "We cannot provide real participant records for this fake/sample review.",
+      "safeAlternative": "Use synthetic sample schema.",
+      "stopTrigger": "Provider repeats real-record request",
+      "minuteLine": "Provider request for Real participant records remains Ready; Use synthetic sample schema."
+    },
+    {
+      "id": "PBT-002",
+      "providerAsk": "Official Toastmasters member list",
+      "owner": "Official-route owner",
+      "defaultOutcome": "Ready",
+      "refusalLine": "Official Toastmasters records are out of scope.",
+      "safeAlternative": "Use fake guest/member-boundary sample records.",
+      "stopTrigger": "Provider asks for official member list",
+      "minuteLine": "Provider request for Official Toastmasters member list remains Ready; Use fake guest/member-boundary sample records."
+    },
+    {
+      "id": "PBT-003",
+      "providerAsk": "Outbound email invitations",
+      "owner": "Privacy reviewer",
+      "defaultOutcome": "In review",
+      "refusalLine": "Outbound email is not active for real people.",
+      "safeAlternative": "Use local fake invite preview only.",
+      "stopTrigger": "Any real email send is attempted",
+      "minuteLine": "Provider request for Outbound email invitations remains In review; Use local fake invite preview only."
+    },
+    {
+      "id": "PBT-004",
+      "providerAsk": "Admin credentials",
+      "owner": "Security reviewer",
+      "defaultOutcome": "In review",
+      "refusalLine": "Admin credentials cannot be shared outside the approved channel.",
+      "safeAlternative": "Use least-privilege temporary account after owner approval.",
+      "stopTrigger": "Credential shared outside approved channel",
+      "minuteLine": "Provider request for Admin credentials remains In review; Use least-privilege temporary account after owner approval."
+    },
+    {
+      "id": "PBT-005",
+      "providerAsk": "Live onboarding expansion",
+      "owner": "Authority chair",
+      "defaultOutcome": "Hold",
+      "refusalLine": "Live onboarding is not approved.",
+      "safeAlternative": "Keep scope fake/sample-only.",
+      "stopTrigger": "Provider implies live launch",
+      "minuteLine": "Provider request for Live onboarding expansion remains Hold; Keep scope fake/sample-only."
+    },
+    {
+      "id": "PBT-006",
+      "providerAsk": "Private logs",
+      "owner": "Security reviewer",
+      "defaultOutcome": "In review",
+      "refusalLine": "Private logs or evidence cannot be transferred.",
+      "safeAlternative": "Use redacted synthetic logs.",
+      "stopTrigger": "Log contains private evidence",
+      "minuteLine": "Provider request for Private logs remains In review; Use redacted synthetic logs."
+    },
+    {
+      "id": "PBT-007",
+      "providerAsk": "External sample export retention",
+      "owner": "IDS/data reviewer",
+      "defaultOutcome": "Hold",
+      "refusalLine": "External retention needs deletion and retention proof.",
+      "safeAlternative": "Use temporary synthetic export with deletion proof.",
+      "stopTrigger": "Retention proof missing",
+      "minuteLine": "Provider request for External sample export retention remains Hold; Use temporary synthetic export with deletion proof."
+    },
+    {
+      "id": "PBT-008",
+      "providerAsk": "Backup restore assumed",
+      "owner": "Security reviewer",
+      "defaultOutcome": "Hold",
+      "refusalLine": "Restore proof must be demonstrated privately.",
+      "safeAlternative": "Use private restore proof placeholder.",
+      "stopTrigger": "Backup is assumed but not proven",
+      "minuteLine": "Provider request for Backup restore assumed remains Hold; Use private restore proof placeholder."
+    },
+    {
+      "id": "PBT-009",
+      "providerAsk": "Invite real users",
+      "owner": "Authority chair",
+      "defaultOutcome": "Ready",
+      "refusalLine": "Real user invitations are blocked.",
+      "safeAlternative": "Use fake/sample participant aliases.",
+      "stopTrigger": "Any real invite sent",
+      "minuteLine": "Provider request for Invite real users remains Ready; Use fake/sample participant aliases."
+    },
+    {
+      "id": "PBT-010",
+      "providerAsk": "Public launch wording",
+      "owner": "Comms lead",
+      "defaultOutcome": "Ready",
+      "refusalLine": "Public wording must say preparation, not launch.",
+      "safeAlternative": "Use approved public status register.",
+      "stopTrigger": "Public wording implies launch",
+      "minuteLine": "Provider request for Public launch wording remains Ready; Use approved public status register."
+    }
+  ],
+  "sampleAcceptanceTests": [
+    {
+      "id": "SAT-001",
+      "track": "Barayamal",
+      "sample": "Barayamal founder/business-owner closeout sample 1",
+      "owner": "Barayamal custodian",
+      "defaultOutcome": "Ready",
+      "blockedFields": "Real name, ABN, revenue, phone, email, private business issue, cultural material",
+      "acceptanceTest": "Owner accepts that no real, official, sensitive, or live-service data is collected."
+    },
+    {
+      "id": "SAT-002",
+      "track": "Barayamal",
+      "sample": "Barayamal founder/business-owner closeout sample 2",
+      "owner": "Barayamal custodian",
+      "defaultOutcome": "Ready",
+      "blockedFields": "Real name, ABN, revenue, phone, email, private business issue, cultural material",
+      "acceptanceTest": "Owner accepts that no real, official, sensitive, or live-service data is collected."
+    },
+    {
+      "id": "SAT-003",
+      "track": "Barayamal",
+      "sample": "Barayamal founder/business-owner closeout sample 3",
+      "owner": "Barayamal custodian",
+      "defaultOutcome": "Ready",
+      "blockedFields": "Real name, ABN, revenue, phone, email, private business issue, cultural material",
+      "acceptanceTest": "Owner accepts that no real, official, sensitive, or live-service data is collected."
+    },
+    {
+      "id": "SAT-004",
+      "track": "Barayamal",
+      "sample": "Barayamal founder/business-owner closeout sample 4",
+      "owner": "Barayamal custodian",
+      "defaultOutcome": "Ready",
+      "blockedFields": "Real name, ABN, revenue, phone, email, private business issue, cultural material",
+      "acceptanceTest": "Owner accepts that no real, official, sensitive, or live-service data is collected."
+    },
+    {
+      "id": "SAT-005",
+      "track": "Barayamal",
+      "sample": "Barayamal founder/business-owner closeout sample 5",
+      "owner": "Barayamal custodian",
+      "defaultOutcome": "Ready",
+      "blockedFields": "Real name, ABN, revenue, phone, email, private business issue, cultural material",
+      "acceptanceTest": "Owner accepts that no real, official, sensitive, or live-service data is collected."
+    },
+    {
+      "id": "SAT-006",
+      "track": "Barayamal",
+      "sample": "Barayamal founder/business-owner closeout sample 6",
+      "owner": "Barayamal custodian",
+      "defaultOutcome": "Revise",
+      "blockedFields": "Real name, ABN, revenue, phone, email, private business issue, cultural material",
+      "acceptanceTest": "Owner accepts that no real, official, sensitive, or live-service data is collected."
+    },
+    {
+      "id": "SAT-007",
+      "track": "First Nations Toastmasters",
+      "sample": "First Nations Toastmasters guest/member-boundary closeout sample 1",
+      "owner": "Training owner",
+      "defaultOutcome": "Ready",
+      "blockedFields": "Member number, payment, education record, officer role, official club record, incident, election",
+      "acceptanceTest": "Owner accepts that no real, official, sensitive, or live-service data is collected."
+    },
+    {
+      "id": "SAT-008",
+      "track": "First Nations Toastmasters",
+      "sample": "First Nations Toastmasters guest/member-boundary closeout sample 2",
+      "owner": "Training owner",
+      "defaultOutcome": "Ready",
+      "blockedFields": "Member number, payment, education record, officer role, official club record, incident, election",
+      "acceptanceTest": "Owner accepts that no real, official, sensitive, or live-service data is collected."
+    },
+    {
+      "id": "SAT-009",
+      "track": "First Nations Toastmasters",
+      "sample": "First Nations Toastmasters guest/member-boundary closeout sample 3",
+      "owner": "Training owner",
+      "defaultOutcome": "Ready",
+      "blockedFields": "Member number, payment, education record, officer role, official club record, incident, election",
+      "acceptanceTest": "Owner accepts that no real, official, sensitive, or live-service data is collected."
+    },
+    {
+      "id": "SAT-010",
+      "track": "First Nations Toastmasters",
+      "sample": "First Nations Toastmasters guest/member-boundary closeout sample 4",
+      "owner": "Training owner",
+      "defaultOutcome": "Ready",
+      "blockedFields": "Member number, payment, education record, officer role, official club record, incident, election",
+      "acceptanceTest": "Owner accepts that no real, official, sensitive, or live-service data is collected."
+    },
+    {
+      "id": "SAT-011",
+      "track": "First Nations Toastmasters",
+      "sample": "First Nations Toastmasters guest/member-boundary closeout sample 5",
+      "owner": "Training owner",
+      "defaultOutcome": "Ready",
+      "blockedFields": "Member number, payment, education record, officer role, official club record, incident, election",
+      "acceptanceTest": "Owner accepts that no real, official, sensitive, or live-service data is collected."
+    },
+    {
+      "id": "SAT-012",
+      "track": "First Nations Toastmasters",
+      "sample": "First Nations Toastmasters guest/member-boundary closeout sample 6",
+      "owner": "Training owner",
+      "defaultOutcome": "Revise",
+      "blockedFields": "Member number, payment, education record, officer role, official club record, incident, election",
+      "acceptanceTest": "Owner accepts that no real, official, sensitive, or live-service data is collected."
+    }
+  ],
+  "publicMinuteLines": [
+    {
+      "id": "PML-001",
+      "topic": "Overall",
+      "owner": "Comms lead",
+      "defaultDecision": "Ready",
+      "approvedLine": "The public demo now includes an owner closeout sprint pack; no live pilot has been approved.",
+      "blockedLine": "The project is ready for pilot.",
+      "sessionInstruction": "Approve the public-safe line only if it does not imply launch, real onboarding, official Toastmasters workflow, provider data access, or evidence publication."
+    },
+    {
+      "id": "PML-002",
+      "topic": "Owner closeout",
+      "owner": "Meeting chair",
+      "defaultDecision": "Ready",
+      "approvedLine": "P0 owner closeout remains private and must pass before repeat testing.",
+      "blockedLine": "Owners have approved launch.",
+      "sessionInstruction": "Approve the public-safe line only if it does not imply launch, real onboarding, official Toastmasters workflow, provider data access, or evidence publication."
+    },
+    {
+      "id": "PML-003",
+      "topic": "Repeat run",
+      "owner": "Meeting chair",
+      "defaultDecision": "Ready",
+      "approvedLine": "The next valid operating step is repeat private fake/sample stress testing after owner closeout.",
+      "blockedLine": "Repeat testing has passed.",
+      "sessionInstruction": "Approve the public-safe line only if it does not imply launch, real onboarding, official Toastmasters workflow, provider data access, or evidence publication."
+    },
+    {
+      "id": "PML-004",
+      "topic": "Barayamal",
+      "owner": "Barayamal custodian",
+      "defaultDecision": "Ready",
+      "approvedLine": "Barayamal remains a controlled fake/sample organisation pathway.",
+      "blockedLine": "Barayamal founders are being onboarded.",
+      "sessionInstruction": "Approve the public-safe line only if it does not imply launch, real onboarding, official Toastmasters workflow, provider data access, or evidence publication."
+    },
+    {
+      "id": "PML-005",
+      "topic": "First Nations Toastmasters",
+      "owner": "Training owner",
+      "defaultDecision": "Ready",
+      "approvedLine": "First Nations Toastmasters remains a fake guest/member-boundary sample only.",
+      "blockedLine": "Official Toastmasters members are being onboarded.",
+      "sessionInstruction": "Approve the public-safe line only if it does not imply launch, real onboarding, official Toastmasters workflow, provider data access, or evidence publication."
+    },
+    {
+      "id": "PML-006",
+      "topic": "Provider",
+      "owner": "Provider access owner",
+      "defaultDecision": "Ready",
+      "approvedLine": "No provider has access to real participant, organisation, or Toastmasters records.",
+      "blockedLine": "A provider is reviewing real data.",
+      "sessionInstruction": "Approve the public-safe line only if it does not imply launch, real onboarding, official Toastmasters workflow, provider data access, or evidence publication."
+    },
+    {
+      "id": "PML-007",
+      "topic": "Evidence",
+      "owner": "IDS/data reviewer",
+      "defaultDecision": "Ready",
+      "approvedLine": "Private evidence remains outside the public package.",
+      "blockedLine": "Evidence can be shared publicly.",
+      "sessionInstruction": "Approve the public-safe line only if it does not imply launch, real onboarding, official Toastmasters workflow, provider data access, or evidence publication."
+    },
+    {
+      "id": "PML-008",
+      "topic": "Privacy",
+      "owner": "Privacy reviewer",
+      "defaultDecision": "Ready",
+      "approvedLine": "Privacy and consent controls remain under private owner review.",
+      "blockedLine": "Privacy approval is complete.",
+      "sessionInstruction": "Approve the public-safe line only if it does not imply launch, real onboarding, official Toastmasters workflow, provider data access, or evidence publication."
+    },
+    {
+      "id": "PML-009",
+      "topic": "Official boundary",
+      "owner": "Official-route owner",
+      "defaultDecision": "Ready",
+      "approvedLine": "Official Toastmasters workflows are not active or approved in this demo.",
+      "blockedLine": "Official Toastmasters processes are being tested live.",
+      "sessionInstruction": "Approve the public-safe line only if it does not imply launch, real onboarding, official Toastmasters workflow, provider data access, or evidence publication."
+    },
+    {
+      "id": "PML-010",
+      "topic": "Decision",
+      "owner": "Authority chair",
+      "defaultDecision": "Ready",
+      "approvedLine": "No-go/archive remains explicit if P0 closeout does not pass.",
+      "blockedLine": "Proceed is inevitable.",
+      "sessionInstruction": "Approve the public-safe line only if it does not imply launch, real onboarding, official Toastmasters workflow, provider data access, or evidence publication."
+    }
+  ],
+  "actionQueue": [
+    {
+      "id": "SAQ-001",
+      "owner": "Meeting chair",
+      "area": "Authority",
+      "priority": "P0",
+      "action": "Name chair, alternate, and quorum route in the private minute.",
+      "dueState": "Before session starts",
+      "publicLine": "Authority remains private and unresolved.",
+      "blocks": "Repeat P0 run"
+    },
+    {
+      "id": "SAQ-002",
+      "owner": "Privacy reviewer",
+      "area": "Privacy",
+      "priority": "P0",
+      "action": "Accept or rewrite consent, withdrawal, contact, and storage copy.",
+      "dueState": "During session",
+      "publicLine": "Privacy controls remain under private review.",
+      "blocks": "Privacy path"
+    },
+    {
+      "id": "SAQ-003",
+      "owner": "Privacy reviewer",
+      "area": "Outbound email",
+      "priority": "P0",
+      "action": "Confirm no real outbound email can send.",
+      "dueState": "During session",
+      "publicLine": "No outbound email is active for real participants.",
+      "blocks": "Invite path"
+    },
+    {
+      "id": "SAQ-004",
+      "owner": "IDS/data reviewer",
+      "area": "IDS/data",
+      "priority": "P0",
+      "action": "Accept export, delete, retention, custody, and redaction placeholders.",
+      "dueState": "During session",
+      "publicLine": "Data controls remain under private review.",
+      "blocks": "Data rights path"
+    },
+    {
+      "id": "SAQ-005",
+      "owner": "Support owner",
+      "area": "Support",
+      "priority": "P0",
+      "action": "Accept complaint, pause, escalation, and closeout route.",
+      "dueState": "During session",
+      "publicLine": "Support routes are not live services.",
+      "blocks": "Support path"
+    },
+    {
+      "id": "SAQ-006",
+      "owner": "Official-route owner",
+      "area": "Official boundary",
+      "priority": "P0",
+      "action": "Confirm no official Toastmasters workflow is active or implied.",
+      "dueState": "During session",
+      "publicLine": "First Nations Toastmasters remains fake/sample-only.",
+      "blocks": "Official boundary"
+    },
+    {
+      "id": "SAQ-007",
+      "owner": "IDS/data reviewer",
+      "area": "Evidence",
+      "priority": "P0",
+      "action": "Accept custody index and public redaction rules.",
+      "dueState": "During session",
+      "publicLine": "Private evidence is not published.",
+      "blocks": "Public summary"
+    },
+    {
+      "id": "SAQ-008",
+      "owner": "Provider access owner",
+      "area": "Provider",
+      "priority": "P0",
+      "action": "Accept provider refusal proof and fake/sample-only RFQ boundary.",
+      "dueState": "During session",
+      "publicLine": "No provider has access to real participant, organisation, or Toastmasters records.",
+      "blocks": "Provider test"
+    },
+    {
+      "id": "SAQ-009",
+      "owner": "Training owner",
+      "area": "FN Toastmasters",
+      "priority": "P1",
+      "action": "Accept guest/member-boundary sample copy or assign rewrite.",
+      "dueState": "During session",
+      "publicLine": "No official member service is active.",
+      "blocks": "Training sample"
+    },
+    {
+      "id": "SAQ-010",
+      "owner": "Security reviewer",
+      "area": "Security",
+      "priority": "P1",
+      "action": "Accept restore, revoke, credential, and log proof placeholders.",
+      "dueState": "During session",
+      "publicLine": "No live Decidim access is approved.",
+      "blocks": "Live access"
+    },
+    {
+      "id": "SAQ-011",
+      "owner": "Security reviewer",
+      "area": "Access",
+      "priority": "P1",
+      "action": "Accept temporary admin expiry and revoke route.",
+      "dueState": "During session",
+      "publicLine": "No live admin access is approved.",
+      "blocks": "Admin access"
+    },
+    {
+      "id": "SAQ-012",
+      "owner": "Provider access owner",
+      "area": "Provider",
+      "priority": "P1",
+      "action": "Confirm provider scope excludes live access, credentials, logs, outbound email, and real data.",
+      "dueState": "During session",
+      "publicLine": "Provider review remains fake/sample-only.",
+      "blocks": "Provider scope"
+    },
+    {
+      "id": "SAQ-013",
+      "owner": "Barayamal custodian",
+      "area": "Barayamal",
+      "priority": "P2",
+      "action": "Accept, revise, or retest Barayamal sample closeouts.",
+      "dueState": "During session",
+      "publicLine": "Barayamal remains controlled fake/sample.",
+      "blocks": "Barayamal sample"
+    },
+    {
+      "id": "SAQ-014",
+      "owner": "Comms lead",
+      "area": "Communications",
+      "priority": "P2",
+      "action": "Approve public-safe status lines.",
+      "dueState": "Before any public update",
+      "publicLine": "Preparation continues; no pilot approved.",
+      "blocks": "Public update"
+    },
+    {
+      "id": "SAQ-015",
+      "owner": "Authority chair",
+      "area": "Repeat run",
+      "priority": "P0",
+      "action": "Record proceed to repeat run, repeat remediation, or no-go/archive.",
+      "dueState": "End of session",
+      "publicLine": "No pilot approved by this session.",
+      "blocks": "Repeat scheduling"
+    },
+    {
+      "id": "SAQ-016",
+      "owner": "Meeting chair",
+      "area": "Final minutes",
+      "priority": "P0",
+      "action": "Export private minute shell and owner action queue.",
+      "dueState": "End of session",
+      "publicLine": "Private minute retained outside public package.",
+      "blocks": "Session close"
+    }
+  ],
+  "exportTemplates": [
+    {
+      "id": "XPT-001",
+      "template": "Private session minute",
+      "owner": "Meeting chair",
+      "format": "Markdown",
+      "contains": "Agenda, attendance, decisions, blockers, actions",
+      "excludes": "Real participant records",
+      "useWhen": "End of closeout session"
+    },
+    {
+      "id": "XPT-002",
+      "template": "Owner evidence vote sheet",
+      "owner": "Meeting chair",
+      "format": "CSV",
+      "contains": "Evidence placeholders and vote state",
+      "excludes": "Private evidence files",
+      "useWhen": "During owner voting"
+    },
+    {
+      "id": "XPT-003",
+      "template": "Provider refusal extract",
+      "owner": "Provider access owner",
+      "format": "Markdown",
+      "contains": "Refusal lines and safe alternatives",
+      "excludes": "Real provider data",
+      "useWhen": "Provider asks for records"
+    },
+    {
+      "id": "XPT-004",
+      "template": "Public-safe status update",
+      "owner": "Comms lead",
+      "format": "Markdown",
+      "contains": "Approved public lines only",
+      "excludes": "Owner names or evidence",
+      "useWhen": "After comms approval"
+    },
+    {
+      "id": "XPT-005",
+      "template": "Repeat-run hold notice",
+      "owner": "Authority chair",
+      "format": "Markdown",
+      "contains": "Blocked checks and failure actions",
+      "excludes": "Live access details",
+      "useWhen": "If repeat run remains blocked"
+    },
+    {
+      "id": "XPT-006",
+      "template": "No-go/archive note",
+      "owner": "Authority chair",
+      "format": "Markdown",
+      "contains": "No-go reason and archive path",
+      "excludes": "Private records",
+      "useWhen": "If P0 cannot close"
+    },
+    {
+      "id": "XPT-007",
+      "template": "Sample revision queue",
+      "owner": "Barayamal custodian / Training owner",
+      "format": "CSV",
+      "contains": "Fake/sample records needing revision",
+      "excludes": "Real identities",
+      "useWhen": "If sample blockers remain"
+    },
+    {
+      "id": "XPT-008",
+      "template": "Advisor readout",
+      "owner": "Dean Foley / Barayamal",
+      "format": "Markdown",
+      "contains": "Advisory observations and non-binding recommendations",
+      "excludes": "Owner approvals",
+      "useWhen": "After trusted review"
+    }
+  ]
+}

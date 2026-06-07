@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "5.5",
+  "version": "5.6",
   "date": "2026-06-07",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use v5.5 to run the private owner closeout sprint, accept or block P0 evidence placeholders, confirm quorum and stop triggers, then decide whether to run the repeat private fake/sample P0 stress lab, repeat remediation, or no-go/archive. Do not proceed to limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, or live Decidim access until every owner closeout passes and the repeat P0 run also passes privately.",
+  "recommendedDecision": "Use v5.6 to rehearse the private owner closeout session, test attendance and evidence votes, resolve or hold blockers, export private minute shells, approve only public-safe lines, and then decide whether the repeat P0 run can be scheduled. Do not proceed to limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, or live Decidim access until v5.6 session minutes are privately accepted, v5.5 owner closeout passes, and the repeat P0 run also passes privately.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -549,13 +549,30 @@
     "data/provider-boundary-closeout-v5.5.csv",
     "data/public-status-approval-lines-v5.5.csv",
     "data/final-decision-minute-template-v5.5.csv",
-    "data/owner-closeout-sprint-pack-package-v5.5.json"
+    "data/owner-closeout-sprint-pack-package-v5.5.json",
+    "closeout-session-runner.html",
+    "docs/closeout-session-runner-v5.6.md",
+    "docs/private-session-facilitation-script-v5.6.md",
+    "docs/owner-vote-and-blocker-resolution-guide-v5.6.md",
+    "docs/session-export-and-public-status-guide-v5.6.md",
+    "docs/public-demo-release-notes-v5.6.md",
+    "data/closeout-session-timeline-v5.6.csv",
+    "data/owner-attendance-and-vote-roster-v5.6.csv",
+    "data/evidence-vote-simulator-v5.6.csv",
+    "data/closeout-decision-cards-v5.6.csv",
+    "data/blocker-resolution-drills-v5.6.csv",
+    "data/provider-boundary-test-cases-v5.6.csv",
+    "data/sample-acceptance-tests-v5.6.csv",
+    "data/public-minute-line-approvals-v5.6.csv",
+    "data/session-action-export-queue-v5.6.csv",
+    "data/session-export-templates-v5.6.csv",
+    "data/closeout-session-runner-package-v5.6.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v5.5.md",
+    "releaseNotes": "docs/public-demo-release-notes-v5.6.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -919,7 +936,15 @@
       "qa-v55-deployed-owner-closeout-sprint-desktop.png",
       "qa-v55-deployed-owner-closeout-sprint-provider-filter.png",
       "qa-v55-deployed-owner-closeout-sprint-mobile.png",
-      "qa-v55-deployed-owner-closeout-package-mobile.png"
+      "qa-v55-deployed-owner-closeout-package-mobile.png",
+      "qa-v56-local-closeout-session-runner-desktop.png",
+      "qa-v56-local-closeout-session-runner-provider-vote.png",
+      "qa-v56-local-closeout-session-runner-mobile.png",
+      "qa-v56-local-closeout-session-runner-package-mobile.png",
+      "qa-v56-deployed-closeout-session-runner-desktop.png",
+      "qa-v56-deployed-closeout-session-runner-provider-vote.png",
+      "qa-v56-deployed-closeout-session-runner-mobile.png",
+      "qa-v56-deployed-closeout-session-runner-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -2162,6 +2187,25 @@
       "data/public-status-approval-lines-v5.5.csv",
       "data/final-decision-minute-template-v5.5.csv",
       "data/owner-closeout-sprint-pack-package-v5.5.json"
+    ],
+    "closeoutSessionRunner": [
+      "closeout-session-runner.html",
+      "docs/closeout-session-runner-v5.6.md",
+      "docs/private-session-facilitation-script-v5.6.md",
+      "docs/owner-vote-and-blocker-resolution-guide-v5.6.md",
+      "docs/session-export-and-public-status-guide-v5.6.md",
+      "docs/public-demo-release-notes-v5.6.md",
+      "data/closeout-session-timeline-v5.6.csv",
+      "data/owner-attendance-and-vote-roster-v5.6.csv",
+      "data/evidence-vote-simulator-v5.6.csv",
+      "data/closeout-decision-cards-v5.6.csv",
+      "data/blocker-resolution-drills-v5.6.csv",
+      "data/provider-boundary-test-cases-v5.6.csv",
+      "data/sample-acceptance-tests-v5.6.csv",
+      "data/public-minute-line-approvals-v5.6.csv",
+      "data/session-action-export-queue-v5.6.csv",
+      "data/session-export-templates-v5.6.csv",
+      "data/closeout-session-runner-package-v5.6.json"
     ]
   },
   "safetyRules": [
@@ -5200,5 +5244,45 @@
     "evidenceRule": "Each owner must accept or block their own private evidence placeholder, public-safe line, and repeat-run stop trigger.",
     "decisionRule": "The sprint can end only with a recorded private decision: proceed to repeat run, repeat remediation, or no-go/archive.",
     "launchBlockRule": "Limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, and live Decidim access remain blocked until the v5.5 owner closeout sprint and repeat P0 run both pass."
+  },
+  "closeoutSessionRunner": {
+    "entrypoint": "closeout-session-runner.html",
+    "runnerDoc": "docs/closeout-session-runner-v5.6.md",
+    "facilitationDoc": "docs/private-session-facilitation-script-v5.6.md",
+    "voteGuideDoc": "docs/owner-vote-and-blocker-resolution-guide-v5.6.md",
+    "exportGuideDoc": "docs/session-export-and-public-status-guide-v5.6.md",
+    "releaseNotes": "docs/public-demo-release-notes-v5.6.md",
+    "dataFiles": [
+      "data/closeout-session-timeline-v5.6.csv",
+      "data/owner-attendance-and-vote-roster-v5.6.csv",
+      "data/evidence-vote-simulator-v5.6.csv",
+      "data/closeout-decision-cards-v5.6.csv",
+      "data/blocker-resolution-drills-v5.6.csv",
+      "data/provider-boundary-test-cases-v5.6.csv",
+      "data/sample-acceptance-tests-v5.6.csv",
+      "data/public-minute-line-approvals-v5.6.csv",
+      "data/session-action-export-queue-v5.6.csv",
+      "data/session-export-templates-v5.6.csv",
+      "data/closeout-session-runner-package-v5.6.json"
+    ],
+    "counts": {
+      "sessionTimelineItems": 12,
+      "attendanceChecks": 12,
+      "evidenceVotes": 18,
+      "closeoutDecisionCards": 18,
+      "blockerResolutionDrills": 12,
+      "providerBoundaryTests": 10,
+      "sampleAcceptanceTests": 12,
+      "publicMinuteLines": 10,
+      "actionQueueItems": 16,
+      "exportTemplates": 8,
+      "blockedEvidenceVotes": 1,
+      "holdEvidenceVotes": 14,
+      "totalRunnerRecords": 128
+    },
+    "sessionRule": "Use v5.6 to rehearse and document the private owner closeout meeting before any repeat P0 run; it is a runner and minute-prep layer, not owner approval.",
+    "voteRule": "Each required owner must be present or represented by an accepted alternate before their evidence vote can be counted.",
+    "blockerRule": "Any blocked authority, privacy, IDS/data, official boundary, provider, security, support, quorum, or final-minute item keeps the repeat run on hold.",
+    "launchBlockRule": "Limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, and live Decidim access remain blocked until the v5.6 session minute is privately accepted, v5.5 owner closeout passes, and the repeat P0 run also passes privately."
   }
 }

@@ -1,0 +1,17 @@
+id,owner,area,priority,action,dueState,publicLine,blocks
+SAQ-001,Meeting chair,Authority,P0,"Name chair, alternate, and quorum route in the private minute.",Before session starts,Authority remains private and unresolved.,Repeat P0 run
+SAQ-002,Privacy reviewer,Privacy,P0,"Accept or rewrite consent, withdrawal, contact, and storage copy.",During session,Privacy controls remain under private review.,Privacy path
+SAQ-003,Privacy reviewer,Outbound email,P0,Confirm no real outbound email can send.,During session,No outbound email is active for real participants.,Invite path
+SAQ-004,IDS/data reviewer,IDS/data,P0,"Accept export, delete, retention, custody, and redaction placeholders.",During session,Data controls remain under private review.,Data rights path
+SAQ-005,Support owner,Support,P0,"Accept complaint, pause, escalation, and closeout route.",During session,Support routes are not live services.,Support path
+SAQ-006,Official-route owner,Official boundary,P0,Confirm no official Toastmasters workflow is active or implied.,During session,First Nations Toastmasters remains fake/sample-only.,Official boundary
+SAQ-007,IDS/data reviewer,Evidence,P0,Accept custody index and public redaction rules.,During session,Private evidence is not published.,Public summary
+SAQ-008,Provider access owner,Provider,P0,Accept provider refusal proof and fake/sample-only RFQ boundary.,During session,"No provider has access to real participant, organisation, or Toastmasters records.",Provider test
+SAQ-009,Training owner,FN Toastmasters,P1,Accept guest/member-boundary sample copy or assign rewrite.,During session,No official member service is active.,Training sample
+SAQ-010,Security reviewer,Security,P1,"Accept restore, revoke, credential, and log proof placeholders.",During session,No live Decidim access is approved.,Live access
+SAQ-011,Security reviewer,Access,P1,Accept temporary admin expiry and revoke route.,During session,No live admin access is approved.,Admin access
+SAQ-012,Provider access owner,Provider,P1,"Confirm provider scope excludes live access, credentials, logs, outbound email, and real data.",During session,Provider review remains fake/sample-only.,Provider scope
+SAQ-013,Barayamal custodian,Barayamal,P2,"Accept, revise, or retest Barayamal sample closeouts.",During session,Barayamal remains controlled fake/sample.,Barayamal sample
+SAQ-014,Comms lead,Communications,P2,Approve public-safe status lines.,Before any public update,Preparation continues; no pilot approved.,Public update
+SAQ-015,Authority chair,Repeat run,P0,"Record proceed to repeat run, repeat remediation, or no-go/archive.",End of session,No pilot approved by this session.,Repeat scheduling
+SAQ-016,Meeting chair,Final minutes,P0,Export private minute shell and owner action queue.,End of session,Private minute retained outside public package.,Session close

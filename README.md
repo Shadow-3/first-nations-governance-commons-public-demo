@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v5.5
+Current package version: v5.6
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -78,6 +78,7 @@ Open `private-stress-lab-run-pack.html` to run the first private fake/sample str
 Open `private-run-results-decision-board.html` after the controlled fake/sample run to record outcomes, evidence acceptance, issues, owner signoffs, public lines, final decisions, and next actions.
 Open `p0-remediation-repeat-run-control.html` to close P0 owner actions, prepare evidence, confirm quorum, run remediation scripts, and prepare the repeat private fake/sample stress run.
 Open `owner-closeout-sprint-pack.html` to run owner closeout, evidence intake, quorum checks, provider refusal, public status approval, and final proceed/repeat/no-go minutes.
+Open `closeout-session-runner.html` to rehearse attendance, evidence votes, blockers, provider boundary tests, public-line approvals, and private session exports.
 
 The demo shows:
 
@@ -109,6 +110,22 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v5.6.md`
+- `docs/closeout-session-runner-v5.6.md`
+- `docs/private-session-facilitation-script-v5.6.md`
+- `docs/owner-vote-and-blocker-resolution-guide-v5.6.md`
+- `docs/session-export-and-public-status-guide-v5.6.md`
+- `data/closeout-session-timeline-v5.6.csv`
+- `data/owner-attendance-and-vote-roster-v5.6.csv`
+- `data/evidence-vote-simulator-v5.6.csv`
+- `data/closeout-decision-cards-v5.6.csv`
+- `data/blocker-resolution-drills-v5.6.csv`
+- `data/provider-boundary-test-cases-v5.6.csv`
+- `data/sample-acceptance-tests-v5.6.csv`
+- `data/public-minute-line-approvals-v5.6.csv`
+- `data/session-action-export-queue-v5.6.csv`
+- `data/session-export-templates-v5.6.csv`
+- `data/closeout-session-runner-package-v5.6.json`
 - `docs/public-demo-release-notes-v5.5.md`
 - `docs/owner-closeout-sprint-pack-v5.5.md`
 - `docs/private-owner-agenda-and-minute-template-v5.5.md`
@@ -1153,6 +1170,25 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v5.6 Closeout Session Runner Upgrade
+
+The v5.6 package turns the v5.5 owner closeout sprint into a run-ready session rehearsal:
+
+- 12 agenda timeboxes.
+- 12 attendance and alternate checks.
+- 18 evidence votes.
+- 18 decision cards.
+- 12 blocker resolution drills.
+- 10 provider boundary tests.
+- 12 Barayamal and First Nations Toastmasters sample acceptance tests.
+- 10 public minute line approvals.
+- 16 session action export items.
+- 8 export templates.
+- 128 total runner records.
+
+The public runner can prepare private minute shells and action exports only. It does not approve limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, or live Decidim access.
+
 
 ## v5.5 Owner Closeout Sprint Pack Upgrade
 

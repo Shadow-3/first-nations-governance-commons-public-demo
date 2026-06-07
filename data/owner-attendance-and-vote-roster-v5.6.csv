@@ -1,0 +1,13 @@
+id,role,required,defaultAttendance,acceptedAlternate,votingPower,cannotSubstitute,stopRule
+RVR-001,Authority chair,Yes,Unconfirmed,To be named privately,Own gate only,Privacy approval,Cannot close Authority chair gate without role or accepted alternate.
+RVR-002,Privacy reviewer,Yes,Unconfirmed,To be named privately,Own gate only,Authority approval,Cannot close Privacy reviewer gate without role or accepted alternate.
+RVR-003,IDS/data reviewer,Yes,Unconfirmed,To be named privately,Own gate only,Provider approval,Cannot close IDS/data reviewer gate without role or accepted alternate.
+RVR-004,Support owner,Yes,Unconfirmed,To be named privately,Own gate only,Privacy approval,Cannot close Support owner gate without role or accepted alternate.
+RVR-005,Official-route owner,Yes,Missing,To be named privately,Own gate only,Training or Barayamal approval,Cannot close Official-route owner gate without role or accepted alternate.
+RVR-006,Security reviewer,Yes,Unconfirmed,To be named privately,Own gate only,Comms approval,Cannot close Security reviewer gate without role or accepted alternate.
+RVR-007,Provider access owner,Yes,Unconfirmed,To be named privately,Own gate only,Privacy or IDS/data approval,Cannot close Provider access owner gate without role or accepted alternate.
+RVR-008,Comms lead,Yes,Present,To be named privately,Own gate only,Private evidence approval,Cannot close Comms lead gate without role or accepted alternate.
+RVR-009,Barayamal custodian,Yes,Present,Barayamal delegate,Own gate only,Official Toastmasters approval,Cannot close Barayamal custodian gate without role or accepted alternate.
+RVR-010,Training owner,Yes,Unconfirmed,To be named privately,Own gate only,Official-route approval,Cannot close Training owner gate without role or accepted alternate.
+RVR-011,Meeting chair,Yes,Unconfirmed,To be named privately,Own gate only,Owner votes,Cannot close Meeting chair gate without role or accepted alternate.
+RVR-012,Dean Foley / Barayamal,Advisory only,Present,Barayamal delegate,Advisory only,Owner approvals,Advisory review cannot replace owner approval.

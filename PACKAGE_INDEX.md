@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v5.5  
+Version: v5.6  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -152,6 +152,27 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 142. `docs/public-demo-release-notes-v2.3.md` - v2.3 release summary.
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
+
+## v5.6 Closeout Session Runner Additions
+
+- `closeout-session-runner.html` interactive closeout session runner.
+- `docs/closeout-session-runner-v5.6.md` runner guide.
+- `docs/private-session-facilitation-script-v5.6.md` private facilitation script.
+- `docs/owner-vote-and-blocker-resolution-guide-v5.6.md` vote and blocker guide.
+- `docs/session-export-and-public-status-guide-v5.6.md` export and public status guide.
+- `docs/public-demo-release-notes-v5.6.md` release notes.
+- `data/closeout-session-timeline-v5.6.csv`
+- `data/owner-attendance-and-vote-roster-v5.6.csv`
+- `data/evidence-vote-simulator-v5.6.csv`
+- `data/closeout-decision-cards-v5.6.csv`
+- `data/blocker-resolution-drills-v5.6.csv`
+- `data/provider-boundary-test-cases-v5.6.csv`
+- `data/sample-acceptance-tests-v5.6.csv`
+- `data/public-minute-line-approvals-v5.6.csv`
+- `data/session-action-export-queue-v5.6.csv`
+- `data/session-export-templates-v5.6.csv`
+- `data/closeout-session-runner-package-v5.6.json`
+
 
 ## v5.5 Owner Closeout Sprint Pack Additions
 
