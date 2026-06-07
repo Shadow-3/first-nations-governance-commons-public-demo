@@ -1,0 +1,9 @@
+id,packet,owner,format,defaultState,contains,excludes,useWhen
+RX-001,Repeat P0 result minute,Meeting chair,Markdown,Hold,"Scenario outcomes, evidence acceptance, defects, signoffs, and decision options.",Private evidence contents and real records.,Immediately after repeat run.
+RX-002,Scenario results register,Meeting chair,CSV,Ready,Fourteen sample scenario result rows.,Private evidence contents.,Result review.
+RX-003,Evidence acceptance register,Evidence custodian,CSV,Hold,Eighteen evidence acceptance decisions and redaction notes.,The evidence itself.,Evidence review.
+RX-004,P0 defect register,Meeting chair,CSV,Ready,Sixteen defects and remediation owners.,Sensitive incident contents.,Defect closeout.
+RX-005,Owner signoff register,Authority chair,CSV,Hold,Twelve owner or advisory signoff states.,Private owner signatures.,Owner review.
+RX-006,Provider result packet,Provider access owner,Markdown,Blocked,"Provider refusal, RFQ boundary, access audit, public line, and owner signoff gates.","Real provider datasets, credentials, or private correspondence.",Provider review.
+RX-007,Public-safe status packet,Comms lead,CSV,Hold,Approved and held preparation-only lines.,Private decisions and evidence contents.,Before any public update.
+RX-008,Final private decision packet,Authority chair,Markdown,Blocked,"Decision options, blocked items, and next-action recommendation.",Pilot approval unless separately accepted.,Private decision meeting.

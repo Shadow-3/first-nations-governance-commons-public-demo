@@ -1,0 +1,1378 @@
+{
+  "title": "Repeat P0 Results and Decision Board Package v6.0",
+  "version": "6.0",
+  "date": "2026-06-07",
+  "mode": "public_demo_fake_sample_data_only",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "previousPackage": "Repeat P0 Run Planner Package v5.9",
+  "trustedReviewer": "Dean Foley / Barayamal",
+  "primaryOrganisationTest": "Barayamal",
+  "controlledMemberTester": "First Nations Toastmasters",
+  "recommendedDecision": "Use v6.0 as the public-safe sample result board after v5.9 planning: record pass, hold, block, evidence acceptance, defects, owner signoffs, provider boundary results, sample track outcomes, public-safe lines, and final private decision options. Current sample posture recommends continuing P0 remediation. Do not approve limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, public launch claims, or live Decidim from this board.",
+  "resultRule": "Use v6.0 after the v5.9 repeat P0 run plan to capture sample pass, hold, block, evidence acceptance, defect, owner signoff, provider-boundary, and private decision outcomes. The public demo is not proof of a real private run.",
+  "evidenceAcceptanceRule": "A repeat P0 item can count as passed only when its private evidence reference, redaction decision, defect state, owner signoff, public-safe line, and export packet are accepted by the accountable owner.",
+  "defectCloseoutRule": "Any P0 blocked or held defect keeps limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, public launch claims, and live Decidim blocked.",
+  "providerBoundaryRule": "Provider results must prove refusal of real participant, organisation, Barayamal, and Toastmasters records; provider RFQ work may use fake/sample requirements only.",
+  "finalDecisionRule": "The only public-safe v6.0 outcome is preparation status. Final pilot, provider, official workflow, and launch decisions remain private owner decisions.",
+  "launchBlockRule": "Limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, public launch claims, and live Decidim remain blocked until the v6.0 repeat P0 results are privately accepted and all v5.9, v5.8, v5.7, v5.6, and v5.5 gates pass.",
+  "sourceAnchors": [
+    {
+      "label": "Decidim first steps",
+      "url": "https://decidim.org/first-steps/"
+    },
+    {
+      "label": "Decidim GitHub example applications",
+      "url": "https://github.com/decidim/decidim#example-applications"
+    },
+    {
+      "label": "Decidim install overview",
+      "url": "https://docs.decidim.org/en/develop/install/index.html"
+    },
+    {
+      "label": "Decidim deployment docs",
+      "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+    },
+    {
+      "label": "Decidim authorizations",
+      "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+    },
+    {
+      "label": "Barayamal Toastmasters First Nations",
+      "url": "https://barayamal.com.au/toastmasters-first-nations/"
+    },
+    {
+      "label": "Toastmasters governing documents",
+      "url": "https://www.toastmasters.org/resources/governing-documents"
+    },
+    {
+      "label": "OAIC Notifiable Data Breaches",
+      "url": "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme"
+    },
+    {
+      "label": "AIATSIS ethical research",
+      "url": "https://aiatsis.gov.au/research/ethical-research"
+    },
+    {
+      "label": "v4.6 Controlled Pilot Execution Pack",
+      "url": "data/controlled-pilot-execution-pack-v4.6.json"
+    },
+    {
+      "label": "v4.7 Pilot Rehearsal Control Room",
+      "url": "data/pilot-rehearsal-control-room-package-v4.7.json"
+    },
+    {
+      "label": "Decidim deployment docs",
+      "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+    },
+    {
+      "label": "Decidim install checklist",
+      "url": "https://docs.decidim.org/en/develop/install/checklist.html"
+    },
+    {
+      "label": "v4.8 Pilot Decision and Build Handoff Room",
+      "url": "data/pilot-decision-build-handoff-package-v4.8.json"
+    },
+    {
+      "label": "v4.9 Private Owner Decision Meeting Pack",
+      "url": "data/private-owner-decision-meeting-package-v4.9.json"
+    },
+    {
+      "label": "v5.0 Private Decision Execution Control Pack",
+      "url": "data/private-decision-execution-control-package-v5.0.json"
+    },
+    {
+      "label": "v5.1 Private Evidence Stress Test Lab Pack",
+      "url": "data/private-evidence-stress-test-package-v5.1.json"
+    },
+    {
+      "label": "v5.2 Private Stress Lab Run Pack",
+      "url": "data/private-stress-lab-run-package-v5.2.json"
+    },
+    {
+      "label": "v5.3 Private Run Results Decision Package",
+      "url": "data/private-run-results-decision-package-v5.3.json"
+    },
+    {
+      "label": "v5.4 P0 Remediation Repeat-Run Control Package",
+      "url": "data/p0-remediation-repeat-run-control-package-v5.4.json"
+    },
+    {
+      "label": "v5.5 Owner Closeout Sprint Pack",
+      "url": "data/owner-closeout-sprint-pack-package-v5.5.json"
+    },
+    {
+      "label": "v5.6 Closeout Session Runner",
+      "url": "data/closeout-session-runner-package-v5.6.json"
+    },
+    {
+      "label": "v5.7 Post-Session Handoff Package",
+      "url": "data/post-session-handoff-package-v5.7.json"
+    },
+    {
+      "label": "v5.8 Private Handoff Acceptance Package",
+      "url": "data/private-handoff-acceptance-package-v5.8.json"
+    },
+    {
+      "label": "v5.9 Repeat P0 Run Planner Package",
+      "url": "data/repeat-p0-run-planner-package-v5.9.json"
+    }
+  ],
+  "counts": {
+    "scenarioResults": 14,
+    "evidenceAcceptance": 18,
+    "defectRegister": 16,
+    "ownerSignoffs": 12,
+    "providerResultGates": 8,
+    "sampleTrackResults": 12,
+    "publicStatusResults": 8,
+    "finalDecisionOptions": 6,
+    "exportPackets": 8,
+    "blockedResultItems": 27,
+    "heldResultItems": 45,
+    "totalResultRecords": 102
+  },
+  "scenarioResults": [
+    {
+      "id": "RES-001",
+      "linkedScenario": "SCN-001",
+      "linkedRunBlock": "RRS-001",
+      "area": "Authority",
+      "priority": "P0",
+      "owner": "Authority chair",
+      "resultState": "Blocked",
+      "evidenceState": "Missing authority minute evidence",
+      "decisionImpact": "No pilot decision can proceed.",
+      "defectLink": "DEF-001",
+      "publicSafeLine": "No pilot has been approved.",
+      "nextAction": "Authority chair must accept quorum and final decision rights."
+    },
+    {
+      "id": "RES-002",
+      "linkedScenario": "SCN-002",
+      "linkedRunBlock": "RRS-002",
+      "area": "Privacy",
+      "priority": "P0",
+      "owner": "Privacy reviewer",
+      "resultState": "Blocked",
+      "evidenceState": "Consent withdrawal proof held",
+      "decisionImpact": "Real participant intake remains blocked.",
+      "defectLink": "DEF-002",
+      "publicSafeLine": "No real participant records are used.",
+      "nextAction": "Privacy reviewer must accept consent, withdrawal, and outbound-contact controls."
+    },
+    {
+      "id": "RES-003",
+      "linkedScenario": "SCN-003",
+      "linkedRunBlock": "RRS-003",
+      "area": "IDS/data",
+      "priority": "P0",
+      "owner": "IDS/data steward",
+      "resultState": "Hold",
+      "evidenceState": "Custody export evidence held",
+      "decisionImpact": "Evidence and data-transfer decisions remain held.",
+      "defectLink": "DEF-003",
+      "publicSafeLine": "Private evidence is not published.",
+      "nextAction": "IDS/data steward must accept retention, deletion, redaction, and export evidence."
+    },
+    {
+      "id": "RES-004",
+      "linkedScenario": "SCN-004",
+      "linkedRunBlock": "RRS-004",
+      "area": "Official boundary",
+      "priority": "P0",
+      "owner": "Official-route owner",
+      "resultState": "Passed",
+      "evidenceState": "Accepted official no-record evidence",
+      "decisionImpact": "Official Toastmasters workflows still remain inactive.",
+      "defectLink": "DEF-004",
+      "publicSafeLine": "Official Toastmasters workflows are not active.",
+      "nextAction": "Keep official records excluded from every repeat path."
+    },
+    {
+      "id": "RES-005",
+      "linkedScenario": "SCN-005",
+      "linkedRunBlock": "RRS-005",
+      "area": "Barayamal",
+      "priority": "P1",
+      "owner": "Barayamal sample owner",
+      "resultState": "Passed with sample limits",
+      "evidenceState": "Accepted sample-only evidence",
+      "decisionImpact": "Barayamal can continue as fake/sample organisation tester only.",
+      "defectLink": "DEF-005",
+      "publicSafeLine": "Barayamal remains a controlled fake/sample organisation test.",
+      "nextAction": "Keep fake founder and fake business-owner records visibly labelled."
+    },
+    {
+      "id": "RES-006",
+      "linkedScenario": "SCN-006",
+      "linkedRunBlock": "RRS-005",
+      "area": "Barayamal",
+      "priority": "P1",
+      "owner": "Barayamal sample owner",
+      "resultState": "Hold",
+      "evidenceState": "Moderation evidence needs owner note",
+      "decisionImpact": "Barayamal moderation path needs one retest.",
+      "defectLink": "DEF-006",
+      "publicSafeLine": "Barayamal remains fake/sample only.",
+      "nextAction": "Close moderation appeal owner and sample redaction note."
+    },
+    {
+      "id": "RES-007",
+      "linkedScenario": "SCN-007",
+      "linkedRunBlock": "RRS-006",
+      "area": "FN Toastmasters",
+      "priority": "P1",
+      "owner": "FN Toastmasters sample owner",
+      "resultState": "Passed with sample limits",
+      "evidenceState": "Accepted sample-only evidence",
+      "decisionImpact": "First Nations Toastmasters can continue as unofficial fake/sample tester only.",
+      "defectLink": "DEF-007",
+      "publicSafeLine": "First Nations Toastmasters remains an unofficial fake/sample tester.",
+      "nextAction": "Keep guest inquiry outside official systems."
+    },
+    {
+      "id": "RES-008",
+      "linkedScenario": "SCN-008",
+      "linkedRunBlock": "RRS-006",
+      "area": "FN Toastmasters",
+      "priority": "P1",
+      "owner": "FN Toastmasters sample owner",
+      "resultState": "Hold",
+      "evidenceState": "Member-boundary script needs second owner check",
+      "decisionImpact": "Official Toastmasters records remain blocked.",
+      "defectLink": "DEF-008",
+      "publicSafeLine": "No official Toastmasters workflow is active.",
+      "nextAction": "Add official-route owner signoff for member-boundary support."
+    },
+    {
+      "id": "RES-009",
+      "linkedScenario": "SCN-009",
+      "linkedRunBlock": "RRS-008",
+      "area": "Provider",
+      "priority": "P0",
+      "owner": "Provider access owner",
+      "resultState": "Blocked",
+      "evidenceState": "Provider refusal proof not accepted",
+      "decisionImpact": "Provider real-record access and build activation remain blocked.",
+      "defectLink": "DEF-009",
+      "publicSafeLine": "No provider has access to real participant, organisation, or Toastmasters records.",
+      "nextAction": "Capture refusal/RFQ proof without sharing real records."
+    },
+    {
+      "id": "RES-010",
+      "linkedScenario": "SCN-010",
+      "linkedRunBlock": "RRS-007",
+      "area": "Communications",
+      "priority": "P0",
+      "owner": "Comms lead",
+      "resultState": "Hold",
+      "evidenceState": "Preparation-only wording held",
+      "decisionImpact": "External update remains held.",
+      "defectLink": "DEF-010",
+      "publicSafeLine": "Public status can say preparation only.",
+      "nextAction": "Remove wording that implies pilot, launch, provider access, or official workflow."
+    },
+    {
+      "id": "RES-011",
+      "linkedScenario": "SCN-011",
+      "linkedRunBlock": "RRS-009",
+      "area": "Evidence",
+      "priority": "P0",
+      "owner": "Evidence custodian",
+      "resultState": "Hold",
+      "evidenceState": "Evidence vault export not fully minute-linked",
+      "decisionImpact": "Private evidence publication remains blocked.",
+      "defectLink": "DEF-011",
+      "publicSafeLine": "Private evidence is not published.",
+      "nextAction": "Link redacted export shell to result minute and custody note."
+    },
+    {
+      "id": "RES-012",
+      "linkedScenario": "SCN-012",
+      "linkedRunBlock": "RRS-010",
+      "area": "Support",
+      "priority": "P1",
+      "owner": "Support owner",
+      "resultState": "Hold",
+      "evidenceState": "Offline import consent route held",
+      "decisionImpact": "Offline/yarning import remains fake/sample only.",
+      "defectLink": "DEF-012",
+      "publicSafeLine": "Offline import remains fake/sample only.",
+      "nextAction": "Owner must accept withdrawal marker and sensitive-material stop route."
+    },
+    {
+      "id": "RES-013",
+      "linkedScenario": "SCN-013",
+      "linkedRunBlock": "RRS-011",
+      "area": "Technical",
+      "priority": "P1",
+      "owner": "Technical custodian",
+      "resultState": "Passed with sample limits",
+      "evidenceState": "Accepted mobile/low-bandwidth sample evidence",
+      "decisionImpact": "Technical fake/sample rehearsal can continue.",
+      "defectLink": "DEF-013",
+      "publicSafeLine": "Technical test remains fake/sample only.",
+      "nextAction": "Keep live credentials and production systems excluded."
+    },
+    {
+      "id": "RES-014",
+      "linkedScenario": "SCN-014",
+      "linkedRunBlock": "RRS-012",
+      "area": "Decision",
+      "priority": "P0",
+      "owner": "Meeting chair",
+      "resultState": "Blocked",
+      "evidenceState": "Final decision lacks accepted P0 pass chain",
+      "decisionImpact": "Final decision stays private and blocked.",
+      "defectLink": "DEF-014",
+      "publicSafeLine": "Repeat P0 result is private until accepted.",
+      "nextAction": "Return to P0 remediation before any decision packet can proceed."
+    }
+  ],
+  "evidenceAcceptance": [
+    {
+      "id": "EVA-001",
+      "linkedAcceptance": "ACC-001",
+      "linkedHandoff": "HOF-001",
+      "area": "Authority",
+      "priority": "P0",
+      "owner": "Authority chair",
+      "acceptanceState": "Blocked",
+      "privateEvidenceReference": "Private evidence packet for OSP-001: Private authority roster and minute placeholder.",
+      "redactionDecision": "Capture a private evidence reference only; exclude private contents from public package.",
+      "requiredFix": "Add accepted private authority minute reference.",
+      "publicSafeLine": "Authority remains private and unresolved; no pilot has been approved."
+    },
+    {
+      "id": "EVA-002",
+      "linkedAcceptance": "ACC-002",
+      "linkedHandoff": "HOF-002",
+      "area": "Privacy",
+      "priority": "P0",
+      "owner": "Privacy reviewer",
+      "acceptanceState": "Blocked",
+      "privateEvidenceReference": "Private evidence packet for OSP-002: Private privacy copy approval.",
+      "redactionDecision": "Capture a private evidence reference only; exclude private contents from public package.",
+      "requiredFix": "Add consent, withdrawal, and outbound-contact acceptance proof.",
+      "publicSafeLine": "Privacy and consent controls remain under private owner review."
+    },
+    {
+      "id": "EVA-003",
+      "linkedAcceptance": "ACC-003",
+      "linkedHandoff": "HOF-003",
+      "area": "Privacy",
+      "priority": "P0",
+      "owner": "Privacy reviewer",
+      "acceptanceState": "Blocked",
+      "privateEvidenceReference": "Private evidence packet for OSP-003: Disabled outbound-email proof.",
+      "redactionDecision": "Capture a private evidence reference only; exclude private contents from public package.",
+      "requiredFix": "Add consent, withdrawal, and outbound-contact acceptance proof.",
+      "publicSafeLine": "No outbound email is active for real participants."
+    },
+    {
+      "id": "EVA-004",
+      "linkedAcceptance": "ACC-004",
+      "linkedHandoff": "HOF-004",
+      "area": "IDS/data",
+      "priority": "P0",
+      "owner": "IDS/data reviewer",
+      "acceptanceState": "Hold",
+      "privateEvidenceReference": "Private evidence packet for OSP-004: Private data-rights drill evidence placeholder.",
+      "redactionDecision": "Capture a private evidence reference only; exclude private contents from public package.",
+      "requiredFix": "Add custody, deletion, and export evidence linkage.",
+      "publicSafeLine": "Data export, deletion, and retention controls remain under private review."
+    },
+    {
+      "id": "EVA-005",
+      "linkedAcceptance": "ACC-005",
+      "linkedHandoff": "HOF-005",
+      "area": "Support",
+      "priority": "P0",
+      "owner": "Support owner",
+      "acceptanceState": "Hold",
+      "privateEvidenceReference": "Private evidence packet for OSP-005: Private support drill minute.",
+      "redactionDecision": "Capture a private evidence reference only; exclude private contents from public package.",
+      "requiredFix": "Keep accepted evidence sample-only and privately referenced.",
+      "publicSafeLine": "Support routes are not live services."
+    },
+    {
+      "id": "EVA-006",
+      "linkedAcceptance": "ACC-006",
+      "linkedHandoff": "HOF-006",
+      "area": "Official boundary",
+      "priority": "P0",
+      "owner": "Official-route owner",
+      "acceptanceState": "Accepted with sample limits",
+      "privateEvidenceReference": "Private evidence packet for OSP-006: Private official-boundary note.",
+      "redactionDecision": "Capture a private evidence reference only; exclude private contents from public package.",
+      "requiredFix": "Keep accepted evidence sample-only and privately referenced.",
+      "publicSafeLine": "First Nations Toastmasters remains a fake/sample guest and boundary tester only."
+    },
+    {
+      "id": "EVA-007",
+      "linkedAcceptance": "ACC-007",
+      "linkedHandoff": "HOF-007",
+      "area": "Evidence",
+      "priority": "P0",
+      "owner": "IDS/data reviewer",
+      "acceptanceState": "Hold",
+      "privateEvidenceReference": "Private evidence packet for OSP-007: Private custody index.",
+      "redactionDecision": "Capture a private evidence reference only; exclude private contents from public package.",
+      "requiredFix": "Keep accepted evidence sample-only and privately referenced.",
+      "publicSafeLine": "Private evidence is not published in the public package."
+    },
+    {
+      "id": "EVA-008",
+      "linkedAcceptance": "ACC-008",
+      "linkedHandoff": "HOF-008",
+      "area": "Provider",
+      "priority": "P0",
+      "owner": "Provider access owner",
+      "acceptanceState": "Blocked",
+      "privateEvidenceReference": "Private evidence packet for OSP-008: Provider refusal proof and RFQ boundary approval.",
+      "redactionDecision": "Capture refusal/RFQ boundary only; exclude real provider records and real datasets.",
+      "requiredFix": "Add refusal/RFQ proof that excludes all real records.",
+      "publicSafeLine": "No provider has access to real participant, organisation, or Toastmasters records."
+    },
+    {
+      "id": "EVA-009",
+      "linkedAcceptance": "ACC-009",
+      "linkedHandoff": "HOF-009",
+      "area": "FN Toastmasters",
+      "priority": "P1",
+      "owner": "Training owner",
+      "acceptanceState": "Accepted with sample limits",
+      "privateEvidenceReference": "Private evidence packet for OSP-009: Private copy review.",
+      "redactionDecision": "Capture fake guest/member-boundary evidence only; exclude official member, payment, officer, club, incident, election, and education records.",
+      "requiredFix": "Keep accepted evidence sample-only and privately referenced.",
+      "publicSafeLine": "First Nations Toastmasters sample records do not represent official member services."
+    },
+    {
+      "id": "EVA-010",
+      "linkedAcceptance": "ACC-010",
+      "linkedHandoff": "HOF-010",
+      "area": "Security",
+      "priority": "P1",
+      "owner": "Security reviewer",
+      "acceptanceState": "Hold",
+      "privateEvidenceReference": "Private evidence packet for OSP-010: Private security proof references.",
+      "redactionDecision": "Capture a private evidence reference only; exclude private contents from public package.",
+      "requiredFix": "Keep accepted evidence sample-only and privately referenced.",
+      "publicSafeLine": "No live Decidim access is approved by this public demo."
+    },
+    {
+      "id": "EVA-011",
+      "linkedAcceptance": "ACC-011",
+      "linkedHandoff": "HOF-011",
+      "area": "Access",
+      "priority": "P1",
+      "owner": "Security reviewer",
+      "acceptanceState": "Hold",
+      "privateEvidenceReference": "Private evidence packet for OSP-011: Private access expiry proof.",
+      "redactionDecision": "Capture a private evidence reference only; exclude private contents from public package.",
+      "requiredFix": "Keep accepted evidence sample-only and privately referenced.",
+      "publicSafeLine": "No live admin access is approved by this public demo."
+    },
+    {
+      "id": "EVA-012",
+      "linkedAcceptance": "ACC-012",
+      "linkedHandoff": "HOF-012",
+      "area": "Provider",
+      "priority": "P1",
+      "owner": "Provider access owner",
+      "acceptanceState": "Blocked",
+      "privateEvidenceReference": "Private evidence packet for OSP-012: Private RFQ approval reference.",
+      "redactionDecision": "Capture refusal/RFQ boundary only; exclude real provider records and real datasets.",
+      "requiredFix": "Add refusal/RFQ proof that excludes all real records.",
+      "publicSafeLine": "Provider or self-build options remain under fake/sample-only review."
+    },
+    {
+      "id": "EVA-013",
+      "linkedAcceptance": "ACC-013",
+      "linkedHandoff": "HOF-013",
+      "area": "Owners",
+      "priority": "P2",
+      "owner": "Meeting chair",
+      "acceptanceState": "Hold",
+      "privateEvidenceReference": "Private evidence packet for OSP-013: Private quorum roster.",
+      "redactionDecision": "Capture a private evidence reference only; exclude private contents from public package.",
+      "requiredFix": "Keep accepted evidence sample-only and privately referenced.",
+      "publicSafeLine": "Named owners must approve their own gates privately."
+    },
+    {
+      "id": "EVA-014",
+      "linkedAcceptance": "ACC-014",
+      "linkedHandoff": "HOF-014",
+      "area": "Barayamal",
+      "priority": "P2",
+      "owner": "Barayamal custodian",
+      "acceptanceState": "Accepted with sample limits",
+      "privateEvidenceReference": "Private evidence packet for OSP-014: Private Barayamal sample review.",
+      "redactionDecision": "Capture fake founder/business-owner evidence only; exclude real ABNs, revenue, contacts, clients, private business records, and cultural material.",
+      "requiredFix": "Keep accepted evidence sample-only and privately referenced.",
+      "publicSafeLine": "Barayamal remains a controlled fake/sample organisation test path."
+    },
+    {
+      "id": "EVA-015",
+      "linkedAcceptance": "ACC-015",
+      "linkedHandoff": "HOF-015",
+      "area": "Communications",
+      "priority": "P2",
+      "owner": "Comms lead",
+      "acceptanceState": "Hold",
+      "privateEvidenceReference": "Private evidence packet for OSP-015: Private comms approval reference.",
+      "redactionDecision": "Capture a private evidence reference only; exclude private contents from public package.",
+      "requiredFix": "Keep accepted evidence sample-only and privately referenced.",
+      "publicSafeLine": "The public demo remains a fake/sample preparation tool; no live pilot has been approved."
+    },
+    {
+      "id": "EVA-016",
+      "linkedAcceptance": "ACC-016",
+      "linkedHandoff": "HOF-016",
+      "area": "Documentation",
+      "priority": "P2",
+      "owner": "Documentation owner",
+      "acceptanceState": "Hold",
+      "privateEvidenceReference": "Private evidence packet for OSP-016: Generated v5.5 package manifest.",
+      "redactionDecision": "Capture a private evidence reference only; exclude private contents from public package.",
+      "requiredFix": "Keep accepted evidence sample-only and privately referenced.",
+      "publicSafeLine": "The demo now includes an owner closeout sprint layer."
+    },
+    {
+      "id": "EVA-017",
+      "linkedAcceptance": "ACC-017",
+      "linkedHandoff": "HOF-017",
+      "area": "Final minutes",
+      "priority": "P0",
+      "owner": "Meeting chair",
+      "acceptanceState": "Hold",
+      "privateEvidenceReference": "Private evidence packet for OSP-017: Private final minute placeholder.",
+      "redactionDecision": "Capture a private evidence reference only; exclude private contents from public package.",
+      "requiredFix": "Keep accepted evidence sample-only and privately referenced.",
+      "publicSafeLine": "The next valid step is closeout sprint, repeat testing, or no-go/archive."
+    },
+    {
+      "id": "EVA-018",
+      "linkedAcceptance": "ACC-018",
+      "linkedHandoff": "HOF-018",
+      "area": "Repeat run",
+      "priority": "P1",
+      "owner": "Meeting chair",
+      "acceptanceState": "Hold",
+      "privateEvidenceReference": "Private evidence packet for OSP-018: Private calendar hold and stop trigger register.",
+      "redactionDecision": "Capture a private evidence reference only; exclude private contents from public package.",
+      "requiredFix": "Keep accepted evidence sample-only and privately referenced.",
+      "publicSafeLine": "Preparation continues; no pilot has been approved."
+    }
+  ],
+  "defectRegister": [
+    {
+      "id": "DEF-001",
+      "linkedResult": "RES-001",
+      "area": "Authority",
+      "severity": "P0",
+      "owner": "Authority chair",
+      "defaultState": "Blocked",
+      "defect": "Authority quorum and final-decision evidence is not accepted.",
+      "remediation": "Record private authority minute, alternate rule, and decision rights.",
+      "acceptanceNeeded": "Authority chair signoff.",
+      "publicSafeLine": "No pilot has been approved."
+    },
+    {
+      "id": "DEF-002",
+      "linkedResult": "RES-002",
+      "area": "Privacy",
+      "severity": "P0",
+      "owner": "Privacy reviewer",
+      "defaultState": "Blocked",
+      "defect": "Consent withdrawal and outbound-contact proof is incomplete.",
+      "remediation": "Close consent, withdrawal, deletion, and no-email acceptance note.",
+      "acceptanceNeeded": "Privacy reviewer signoff.",
+      "publicSafeLine": "No real participant records are used."
+    },
+    {
+      "id": "DEF-003",
+      "linkedResult": "RES-003",
+      "area": "IDS/data",
+      "severity": "P0",
+      "owner": "IDS/data steward",
+      "defaultState": "Hold",
+      "defect": "Evidence custody export is not fully linked to retention and deletion rules.",
+      "remediation": "Attach custody index, deletion rule, redaction rule, and private export reference.",
+      "acceptanceNeeded": "IDS/data steward signoff.",
+      "publicSafeLine": "Data controls remain private."
+    },
+    {
+      "id": "DEF-004",
+      "linkedResult": "RES-004",
+      "area": "Official boundary",
+      "severity": "P0",
+      "owner": "Official-route owner",
+      "defaultState": "Accepted",
+      "defect": "Official no-record check passed in sample path.",
+      "remediation": "Keep official records and endorsement claims excluded.",
+      "acceptanceNeeded": "Monitor only.",
+      "publicSafeLine": "Official Toastmasters workflows are not active."
+    },
+    {
+      "id": "DEF-005",
+      "linkedResult": "RES-005",
+      "area": "Barayamal",
+      "severity": "P1",
+      "owner": "Barayamal sample owner",
+      "defaultState": "Accepted",
+      "defect": "Founder/business-owner sample path passed with fake labels.",
+      "remediation": "Keep sample labels and excluded-data warnings visible.",
+      "acceptanceNeeded": "Monitor only.",
+      "publicSafeLine": "Barayamal remains a controlled fake/sample organisation test."
+    },
+    {
+      "id": "DEF-006",
+      "linkedResult": "RES-006",
+      "area": "Barayamal",
+      "severity": "P1",
+      "owner": "Barayamal sample owner",
+      "defaultState": "Hold",
+      "defect": "Moderation appeal route lacks final owner note.",
+      "remediation": "Add moderation owner note and appeal evidence reference.",
+      "acceptanceNeeded": "Barayamal sample owner signoff.",
+      "publicSafeLine": "Barayamal remains fake/sample only."
+    },
+    {
+      "id": "DEF-007",
+      "linkedResult": "RES-007",
+      "area": "FN Toastmasters",
+      "severity": "P1",
+      "owner": "FN Toastmasters sample owner",
+      "defaultState": "Accepted",
+      "defect": "Guest inquiry path passed with sample limits.",
+      "remediation": "Keep guest path outside official Toastmasters systems.",
+      "acceptanceNeeded": "Monitor only.",
+      "publicSafeLine": "First Nations Toastmasters remains an unofficial fake/sample tester."
+    },
+    {
+      "id": "DEF-008",
+      "linkedResult": "RES-008",
+      "area": "FN Toastmasters",
+      "severity": "P1",
+      "owner": "Official-route owner",
+      "defaultState": "Hold",
+      "defect": "Member-boundary support script needs second official-boundary check.",
+      "remediation": "Add official-route owner note that no member, officer, payment, club, incident, election, or education data is used.",
+      "acceptanceNeeded": "Official-route owner signoff.",
+      "publicSafeLine": "No official Toastmasters workflow is active."
+    },
+    {
+      "id": "DEF-009",
+      "linkedResult": "RES-009",
+      "area": "Provider",
+      "severity": "P0",
+      "owner": "Provider access owner",
+      "defaultState": "Blocked",
+      "defect": "Provider refusal/RFQ evidence is not accepted.",
+      "remediation": "Capture provider refusal proof, RFQ fake/sample boundary, access audit, and no-real-record public line.",
+      "acceptanceNeeded": "Provider access owner signoff.",
+      "publicSafeLine": "No provider has access to real participant, organisation, or Toastmasters records."
+    },
+    {
+      "id": "DEF-010",
+      "linkedResult": "RES-010",
+      "area": "Communications",
+      "severity": "P0",
+      "owner": "Comms lead",
+      "defaultState": "Hold",
+      "defect": "Public wording could imply readiness beyond preparation.",
+      "remediation": "Replace with preparation-only wording and block launch/provider/official claims.",
+      "acceptanceNeeded": "Comms lead signoff.",
+      "publicSafeLine": "Public status can say preparation only."
+    },
+    {
+      "id": "DEF-011",
+      "linkedResult": "RES-011",
+      "area": "Evidence",
+      "severity": "P0",
+      "owner": "Evidence custodian",
+      "defaultState": "Hold",
+      "defect": "Evidence vault export is not linked to final result minute.",
+      "remediation": "Add redacted export shell, index id, and minute reference.",
+      "acceptanceNeeded": "Evidence custodian signoff.",
+      "publicSafeLine": "Private evidence is not published."
+    },
+    {
+      "id": "DEF-012",
+      "linkedResult": "RES-012",
+      "area": "Support",
+      "severity": "P1",
+      "owner": "Support owner",
+      "defaultState": "Hold",
+      "defect": "Offline/yarning import needs consent and stop route acceptance.",
+      "remediation": "Add withdrawal marker, sensitive-material stop trigger, and support route.",
+      "acceptanceNeeded": "Support owner signoff.",
+      "publicSafeLine": "Offline import remains fake/sample only."
+    },
+    {
+      "id": "DEF-013",
+      "linkedResult": "RES-013",
+      "area": "Technical",
+      "severity": "P1",
+      "owner": "Technical custodian",
+      "defaultState": "Accepted",
+      "defect": "Mobile/low-bandwidth sample check passed.",
+      "remediation": "Keep production credentials absent and mobile screenshot evidence private.",
+      "acceptanceNeeded": "Monitor only.",
+      "publicSafeLine": "Technical test remains fake/sample only."
+    },
+    {
+      "id": "DEF-014",
+      "linkedResult": "RES-014",
+      "area": "Decision",
+      "severity": "P0",
+      "owner": "Meeting chair",
+      "defaultState": "Blocked",
+      "defect": "Final decision packet lacks accepted P0 pass chain.",
+      "remediation": "Return to remediation and rerun blocked P0 items.",
+      "acceptanceNeeded": "Meeting chair and authority chair signoff.",
+      "publicSafeLine": "Repeat P0 result is private until accepted."
+    },
+    {
+      "id": "DEF-015",
+      "linkedResult": "RES-002",
+      "area": "Outbound email",
+      "severity": "P0",
+      "owner": "Privacy reviewer",
+      "defaultState": "Accepted",
+      "defect": "Outbound email stayed disabled in sample result.",
+      "remediation": "Keep no-email lock until private privacy owner approves.",
+      "acceptanceNeeded": "Monitor only.",
+      "publicSafeLine": "No outbound email is active for real participants."
+    },
+    {
+      "id": "DEF-016",
+      "linkedResult": "RES-013",
+      "area": "Live Decidim",
+      "severity": "P0",
+      "owner": "Technical custodian",
+      "defaultState": "Accepted",
+      "defect": "No live credentials or production systems entered the sample run.",
+      "remediation": "Keep live Decidim blocked until owner decision.",
+      "acceptanceNeeded": "Monitor only.",
+      "publicSafeLine": "Live Decidim access remains blocked."
+    }
+  ],
+  "ownerSignoffs": [
+    {
+      "id": "SGN-001",
+      "role": "Authority chair",
+      "owner": "Authority chair",
+      "requiredFor": "Authority and final decision",
+      "signoffState": "Blocked",
+      "defaultState": "Blocked",
+      "canApprove": "Private owner acceptance for Authority and final decision.",
+      "cannotApprove": "Community/owner authority.",
+      "nextAction": "Owner must accept, hold, or block the result minute privately.",
+      "publicSafeLine": "Authority acceptance remains private."
+    },
+    {
+      "id": "SGN-002",
+      "role": "Privacy reviewer",
+      "owner": "Privacy reviewer",
+      "requiredFor": "Consent, withdrawal, outbound contact, evidence disclosure",
+      "signoffState": "Blocked",
+      "defaultState": "Blocked",
+      "canApprove": "Private owner acceptance for Consent, withdrawal, outbound contact, evidence disclosure.",
+      "cannotApprove": "Privacy owner signoff.",
+      "nextAction": "Owner must accept, hold, or block the result minute privately.",
+      "publicSafeLine": "Privacy acceptance remains private."
+    },
+    {
+      "id": "SGN-003",
+      "role": "IDS/data steward",
+      "owner": "IDS/data steward",
+      "requiredFor": "Evidence custody, export, retention, deletion",
+      "signoffState": "Hold",
+      "defaultState": "Hold",
+      "canApprove": "Private owner acceptance for Evidence custody, export, retention, deletion.",
+      "cannotApprove": "Data sovereignty signoff.",
+      "nextAction": "Owner must accept, hold, or block the result minute privately.",
+      "publicSafeLine": "IDS/data controls remain private."
+    },
+    {
+      "id": "SGN-004",
+      "role": "Official-route owner",
+      "owner": "Official-route owner",
+      "requiredFor": "Official Toastmasters boundary",
+      "signoffState": "Hold",
+      "defaultState": "Hold",
+      "canApprove": "Private owner acceptance for Official Toastmasters boundary.",
+      "cannotApprove": "Official Toastmasters approval.",
+      "nextAction": "Owner must accept, hold, or block the result minute privately.",
+      "publicSafeLine": "Official Toastmasters workflows are not active."
+    },
+    {
+      "id": "SGN-005",
+      "role": "Provider access owner",
+      "owner": "Provider access owner",
+      "requiredFor": "Provider refusal and RFQ boundary",
+      "signoffState": "Blocked",
+      "defaultState": "Blocked",
+      "canApprove": "Private owner acceptance for Provider refusal and RFQ boundary.",
+      "cannotApprove": "Provider real-record authority.",
+      "nextAction": "Owner must accept, hold, or block the result minute privately.",
+      "publicSafeLine": "No provider has real-record access."
+    },
+    {
+      "id": "SGN-006",
+      "role": "Meeting chair",
+      "owner": "Meeting chair",
+      "requiredFor": "Run flow and minute lock",
+      "signoffState": "Blocked",
+      "defaultState": "Blocked",
+      "canApprove": "Private owner acceptance for Run flow and minute lock.",
+      "cannotApprove": "Authority approval.",
+      "nextAction": "Owner must accept, hold, or block the result minute privately.",
+      "publicSafeLine": "Repeat P0 remains private."
+    },
+    {
+      "id": "SGN-007",
+      "role": "Evidence custodian",
+      "owner": "Evidence custodian",
+      "requiredFor": "Evidence capture and export packet",
+      "signoffState": "Hold",
+      "defaultState": "Hold",
+      "canApprove": "Private owner acceptance for Evidence capture and export packet.",
+      "cannotApprove": "IDS/data or privacy signoff.",
+      "nextAction": "Owner must accept, hold, or block the result minute privately.",
+      "publicSafeLine": "Private evidence is not published."
+    },
+    {
+      "id": "SGN-008",
+      "role": "Communications lead",
+      "owner": "Comms lead",
+      "requiredFor": "Public line approval",
+      "signoffState": "Hold",
+      "defaultState": "Hold",
+      "canApprove": "Private owner acceptance for Public line approval.",
+      "cannotApprove": "Authority or privacy approval.",
+      "nextAction": "Owner must accept, hold, or block the result minute privately.",
+      "publicSafeLine": "Public status says preparation only."
+    },
+    {
+      "id": "SGN-009",
+      "role": "Technical custodian",
+      "owner": "Technical custodian",
+      "requiredFor": "Fake/sample Decidim dry run",
+      "signoffState": "Accepted",
+      "defaultState": "Accepted",
+      "canApprove": "Private owner acceptance for Fake/sample Decidim dry run.",
+      "cannotApprove": "Live Decidim approval.",
+      "nextAction": "Keep sample-only evidence and monitor.",
+      "publicSafeLine": "Live Decidim access remains blocked."
+    },
+    {
+      "id": "SGN-010",
+      "role": "Barayamal sample owner",
+      "owner": "Barayamal sample owner",
+      "requiredFor": "Founder/business-owner sample track",
+      "signoffState": "Accepted with sample limits",
+      "defaultState": "Accepted with sample limits",
+      "canApprove": "Private owner acceptance for Founder/business-owner sample track.",
+      "cannotApprove": "Real business authority.",
+      "nextAction": "Keep sample-only evidence and monitor.",
+      "publicSafeLine": "Barayamal remains fake/sample only."
+    },
+    {
+      "id": "SGN-011",
+      "role": "FN Toastmasters sample owner",
+      "owner": "FN Toastmasters sample owner",
+      "requiredFor": "Guest/member-boundary sample track",
+      "signoffState": "Accepted with sample limits",
+      "defaultState": "Accepted with sample limits",
+      "canApprove": "Private owner acceptance for Guest/member-boundary sample track.",
+      "cannotApprove": "Official Toastmasters authority.",
+      "nextAction": "Keep sample-only evidence and monitor.",
+      "publicSafeLine": "First Nations Toastmasters remains fake/sample only."
+    },
+    {
+      "id": "SGN-012",
+      "role": "Dean Foley / Barayamal trusted reviewer",
+      "owner": "Dean Foley / Barayamal",
+      "requiredFor": "Advisory technical/usefulness review",
+      "signoffState": "Advisory accepted",
+      "defaultState": "Advisory accepted",
+      "canApprove": "Advisory usefulness and technical review only.",
+      "cannotApprove": "Owner/community authority.",
+      "nextAction": "Owner must accept, hold, or block the result minute privately.",
+      "publicSafeLine": "Dean/Barayamal review is advisory, not approval."
+    }
+  ],
+  "providerResultGates": [
+    {
+      "id": "PRG-001",
+      "linkedProviderTest": "PBT-001",
+      "linkedScenario": "SCN-009",
+      "owner": "Provider access owner",
+      "defaultState": "Blocked",
+      "resultNote": "Refusal proof has not been accepted by provider access owner.",
+      "mustProve": "Provider path refuses real participant, organisation, and Toastmasters records.",
+      "mustRemainBlocked": "Send real records to a provider.",
+      "nextAction": "Keep provider path blocked and collect private refusal/RFQ evidence.",
+      "publicSafeLine": "No provider has access to real participant, organisation, or Toastmasters records."
+    },
+    {
+      "id": "PRG-002",
+      "linkedProviderTest": "PBT-002",
+      "linkedScenario": "SCN-009",
+      "owner": "Provider access owner",
+      "defaultState": "Blocked",
+      "resultNote": "RFQ safe-alternative boundary needs sample-only evidence.",
+      "mustProve": "RFQ or quote path uses fake/sample requirements only.",
+      "mustRemainBlocked": "Upload private records or credentials.",
+      "nextAction": "Keep provider path blocked and collect private refusal/RFQ evidence.",
+      "publicSafeLine": "Provider work remains fake/sample-only."
+    },
+    {
+      "id": "PRG-003",
+      "linkedProviderTest": "PBT-003",
+      "linkedScenario": "SCN-009",
+      "owner": "Evidence custodian",
+      "defaultState": "Hold",
+      "resultNote": "Provider evidence redaction needs export reference.",
+      "mustProve": "Provider evidence packet contains only refusal proof and boundary notes.",
+      "mustRemainBlocked": "Publish provider correspondence with private details.",
+      "nextAction": "Hold until owner signs provider boundary result.",
+      "publicSafeLine": "Private provider evidence is not published."
+    },
+    {
+      "id": "PRG-004",
+      "linkedProviderTest": "PBT-004",
+      "linkedScenario": "SCN-009",
+      "owner": "Technical custodian",
+      "defaultState": "Hold",
+      "resultNote": "Access audit is clean but needs owner lock.",
+      "mustProve": "No provider account, API key, production credential, or live environment access exists.",
+      "mustRemainBlocked": "Create provider live access.",
+      "nextAction": "Hold until owner signs provider boundary result.",
+      "publicSafeLine": "Live Decidim and provider access remain blocked."
+    },
+    {
+      "id": "PRG-005",
+      "linkedProviderTest": "PBT-005",
+      "linkedScenario": "SCN-009",
+      "owner": "Comms lead",
+      "defaultState": "Hold",
+      "resultNote": "Public line needs comms signoff.",
+      "mustProve": "Public line says no provider has real-record access.",
+      "mustRemainBlocked": "Claim provider selection, launch, or access approval.",
+      "nextAction": "Hold until owner signs provider boundary result.",
+      "publicSafeLine": "No provider has real-record access."
+    },
+    {
+      "id": "PRG-006",
+      "linkedProviderTest": "PBT-006",
+      "linkedScenario": "SCN-009",
+      "owner": "Support owner",
+      "defaultState": "Hold",
+      "resultNote": "Provider incident route needs support owner note.",
+      "mustProve": "Incident route exists if provider boundary fails.",
+      "mustRemainBlocked": "Continue after provider asks for real records.",
+      "nextAction": "Hold until owner signs provider boundary result.",
+      "publicSafeLine": "Provider boundary failures stop the run."
+    },
+    {
+      "id": "PRG-007",
+      "linkedProviderTest": "PBT-007",
+      "linkedScenario": "SCN-009",
+      "owner": "Provider access owner",
+      "defaultState": "Blocked",
+      "resultNote": "Provider owner signoff not accepted.",
+      "mustProve": "Provider owner accepts the repeat test result privately.",
+      "mustRemainBlocked": "Let advisory review replace provider-owner signoff.",
+      "nextAction": "Keep provider path blocked and collect private refusal/RFQ evidence.",
+      "publicSafeLine": "Provider acceptance remains private."
+    },
+    {
+      "id": "PRG-008",
+      "linkedProviderTest": "PBT-008",
+      "linkedScenario": "SCN-009",
+      "owner": "Authority chair",
+      "defaultState": "Blocked",
+      "resultNote": "Authority decision lock keeps provider approval blocked.",
+      "mustProve": "Final authority decision keeps provider real-record access blocked.",
+      "mustRemainBlocked": "Treat fake/sample provider retest as real provider approval.",
+      "nextAction": "Keep provider path blocked and collect private refusal/RFQ evidence.",
+      "publicSafeLine": "Provider approval has not been granted."
+    }
+  ],
+  "sampleTrackResults": [
+    {
+      "id": "SMR-001",
+      "linkedSampleTest": "SMP-001",
+      "track": "Barayamal",
+      "owner": "Barayamal sample owner",
+      "resultState": "Passed with sample limits",
+      "fakeInput": "Fake founder name, fake venture, fake priority.",
+      "acceptedEvidence": "Sample owner confirms profile path works.",
+      "excludedData": "Real names, ABNs, revenue, contacts, clients, private business records.",
+      "nextAction": "Continue fake/sample testing only.",
+      "publicSafeLine": "Barayamal remains fake/sample only."
+    },
+    {
+      "id": "SMR-002",
+      "linkedSampleTest": "SMP-002",
+      "track": "Barayamal",
+      "owner": "Barayamal sample owner",
+      "resultState": "Passed with sample limits",
+      "fakeInput": "Fake proposal for founder support priority.",
+      "acceptedEvidence": "Proposal captured, moderated, and evidence referenced.",
+      "excludedData": "Real private business issues or cultural material.",
+      "nextAction": "Continue fake/sample testing only.",
+      "publicSafeLine": "Barayamal remains fake/sample only."
+    },
+    {
+      "id": "SMR-003",
+      "linkedSampleTest": "SMP-003",
+      "track": "Barayamal",
+      "owner": "Barayamal sample owner",
+      "resultState": "Passed with sample limits",
+      "fakeInput": "Fake support action and comment.",
+      "acceptedEvidence": "Support count and evidence note captured.",
+      "excludedData": "Real participant identity or contact details.",
+      "nextAction": "Continue fake/sample testing only.",
+      "publicSafeLine": "Barayamal remains fake/sample only."
+    },
+    {
+      "id": "SMR-004",
+      "linkedSampleTest": "SMP-004",
+      "track": "Barayamal",
+      "owner": "Barayamal sample owner",
+      "resultState": "Hold",
+      "fakeInput": "Fake flagged comment.",
+      "acceptedEvidence": "Private sample evidence held or blocked.",
+      "excludedData": "Real disputes or sensitive material.",
+      "nextAction": "Retest with owner signoff and excluded-data proof.",
+      "publicSafeLine": "Barayamal remains fake/sample only."
+    },
+    {
+      "id": "SMR-005",
+      "linkedSampleTest": "SMP-005",
+      "track": "Barayamal",
+      "owner": "Evidence custodian",
+      "resultState": "Hold",
+      "fakeInput": "Fake evidence record linked to Barayamal sample.",
+      "acceptedEvidence": "Private sample evidence held or blocked.",
+      "excludedData": "Private evidence contents.",
+      "nextAction": "Retest with owner signoff and excluded-data proof.",
+      "publicSafeLine": "Private evidence is not published."
+    },
+    {
+      "id": "SMR-006",
+      "linkedSampleTest": "SMP-006",
+      "track": "Barayamal",
+      "owner": "Comms lead",
+      "resultState": "Hold",
+      "fakeInput": "Fake public status line.",
+      "acceptedEvidence": "Private sample evidence held or blocked.",
+      "excludedData": "Pilot or launch claim.",
+      "nextAction": "Retest with owner signoff and excluded-data proof.",
+      "publicSafeLine": "Public status can say preparation only."
+    },
+    {
+      "id": "SMR-007",
+      "linkedSampleTest": "SMP-007",
+      "track": "First Nations Toastmasters",
+      "owner": "FN Toastmasters sample owner",
+      "resultState": "Passed with sample limits",
+      "fakeInput": "Fake guest inquiry.",
+      "acceptedEvidence": "Guest-boundary result captured.",
+      "excludedData": "Official member or club records.",
+      "nextAction": "Continue fake/sample testing only.",
+      "publicSafeLine": "First Nations Toastmasters remains unofficial fake/sample only."
+    },
+    {
+      "id": "SMR-008",
+      "linkedSampleTest": "SMP-008",
+      "track": "First Nations Toastmasters",
+      "owner": "FN Toastmasters sample owner",
+      "resultState": "Hold",
+      "fakeInput": "Fake support action without member number.",
+      "acceptedEvidence": "Private sample evidence held or blocked.",
+      "excludedData": "Official member numbers, payments, officer roles, club records, incidents, elections, or education records.",
+      "nextAction": "Retest with owner signoff and excluded-data proof.",
+      "publicSafeLine": "No official Toastmasters workflow is active."
+    },
+    {
+      "id": "SMR-009",
+      "linkedSampleTest": "SMP-009",
+      "track": "First Nations Toastmasters",
+      "owner": "FN Toastmasters sample owner",
+      "resultState": "Hold",
+      "fakeInput": "Fake RSVP record.",
+      "acceptedEvidence": "Private sample evidence held or blocked.",
+      "excludedData": "Official Toastmasters meeting records.",
+      "nextAction": "Retest with owner signoff and excluded-data proof.",
+      "publicSafeLine": "First Nations Toastmasters remains unofficial fake/sample only."
+    },
+    {
+      "id": "SMR-010",
+      "linkedSampleTest": "SMP-010",
+      "track": "First Nations Toastmasters",
+      "owner": "Official-route owner",
+      "resultState": "Blocked",
+      "fakeInput": "Fake role label only.",
+      "acceptedEvidence": "Private sample evidence held or blocked.",
+      "excludedData": "Officer roles or club records.",
+      "nextAction": "Retest with owner signoff and excluded-data proof.",
+      "publicSafeLine": "Official Toastmasters workflows are not active."
+    },
+    {
+      "id": "SMR-011",
+      "linkedSampleTest": "SMP-011",
+      "track": "First Nations Toastmasters",
+      "owner": "Official-route owner",
+      "resultState": "Blocked",
+      "fakeInput": "No education or payment data entered.",
+      "acceptedEvidence": "Private sample evidence held or blocked.",
+      "excludedData": "Education records, payments, member dues.",
+      "nextAction": "Retest with owner signoff and excluded-data proof.",
+      "publicSafeLine": "Official Toastmasters workflows are not active."
+    },
+    {
+      "id": "SMR-012",
+      "linkedSampleTest": "SMP-012",
+      "track": "First Nations Toastmasters",
+      "owner": "Comms lead",
+      "resultState": "Hold",
+      "fakeInput": "Fake public status line.",
+      "acceptedEvidence": "Private sample evidence held or blocked.",
+      "excludedData": "Official endorsement or launch claim.",
+      "nextAction": "Retest with owner signoff and excluded-data proof.",
+      "publicSafeLine": "First Nations Toastmasters remains a tester only."
+    }
+  ],
+  "publicStatusResults": [
+    {
+      "id": "PUB-001",
+      "topic": "Repeat P0 status",
+      "owner": "Comms lead",
+      "defaultState": "Hold",
+      "approvedLine": "A private fake/sample repeat P0 result board has been prepared for owner review.",
+      "blockedClaim": "The repeat P0 run passed or pilot is approved.",
+      "useWhen": "Public status questions.",
+      "resultNote": "Hold until comms and authority owner accept wording."
+    },
+    {
+      "id": "PUB-002",
+      "topic": "Provider boundary",
+      "owner": "Comms lead",
+      "defaultState": "Hold",
+      "approvedLine": "No provider has access to real participant, organisation, Barayamal, or Toastmasters records.",
+      "blockedClaim": "A provider has been approved for real records.",
+      "useWhen": "Provider questions.",
+      "resultNote": "Use only after provider owner accepts the refusal line."
+    },
+    {
+      "id": "PUB-003",
+      "topic": "Barayamal sample",
+      "owner": "Comms lead",
+      "defaultState": "Accepted with sample limits",
+      "approvedLine": "Barayamal is being used as a controlled fake/sample organisation test.",
+      "blockedClaim": "Barayamal participants or real businesses have been onboarded.",
+      "useWhen": "Sample track explanation.",
+      "resultNote": "Accepted for fake/sample status only."
+    },
+    {
+      "id": "PUB-004",
+      "topic": "First Nations Toastmasters sample",
+      "owner": "Comms lead",
+      "defaultState": "Accepted with sample limits",
+      "approvedLine": "First Nations Toastmasters is being used as an unofficial fake/sample tester.",
+      "blockedClaim": "Official Toastmasters workflows are active.",
+      "useWhen": "Sample track explanation.",
+      "resultNote": "Accepted for fake/sample status only."
+    },
+    {
+      "id": "PUB-005",
+      "topic": "Evidence",
+      "owner": "Comms lead",
+      "defaultState": "Hold",
+      "approvedLine": "Private evidence is not published in the public demo.",
+      "blockedClaim": "Evidence has been publicly released.",
+      "useWhen": "Evidence questions.",
+      "resultNote": "Hold until evidence export is accepted."
+    },
+    {
+      "id": "PUB-006",
+      "topic": "Live Decidim",
+      "owner": "Comms lead",
+      "defaultState": "Accepted",
+      "approvedLine": "Live Decidim access remains blocked.",
+      "blockedClaim": "A live platform is open.",
+      "useWhen": "Technical status.",
+      "resultNote": "Accepted as a blocked-status line."
+    },
+    {
+      "id": "PUB-007",
+      "topic": "Outbound email",
+      "owner": "Comms lead",
+      "defaultState": "Accepted",
+      "approvedLine": "No outbound email is active for real participants.",
+      "blockedClaim": "Emails have been sent to participants.",
+      "useWhen": "Comms status.",
+      "resultNote": "Accepted as a blocked-status line."
+    },
+    {
+      "id": "PUB-008",
+      "topic": "Decision status",
+      "owner": "Comms lead",
+      "defaultState": "Hold",
+      "approvedLine": "Any pilot decision remains private until owners accept the repeat P0 result.",
+      "blockedClaim": "A pilot decision has been made.",
+      "useWhen": "Post-run status.",
+      "resultNote": "Hold until final private decision minute exists."
+    }
+  ],
+  "finalDecisionOptions": [
+    {
+      "id": "FDO-001",
+      "option": "Continue P0 remediation",
+      "owner": "Meeting chair",
+      "decisionState": "Recommended",
+      "whenAllowed": "Any P0 result is blocked or held.",
+      "blockedBy": "None.",
+      "nextAction": "Close DEF-001, DEF-002, DEF-003, DEF-009, DEF-010, DEF-011, and DEF-014 before a further repeat.",
+      "publicSafeLine": "Repeat P0 remediation is continuing."
+    },
+    {
+      "id": "FDO-002",
+      "option": "Repeat blocked P0 subset",
+      "owner": "Meeting chair",
+      "decisionState": "Available",
+      "whenAllowed": "Authority, privacy, provider, evidence, communications, and decision owners confirm attendance.",
+      "blockedBy": "Missing owner quorum.",
+      "nextAction": "Schedule a short repeat run for blocked P0 items only.",
+      "publicSafeLine": "A private repeat of blocked items may be prepared."
+    },
+    {
+      "id": "FDO-003",
+      "option": "Archive or no-go",
+      "owner": "Authority chair",
+      "decisionState": "Available",
+      "whenAllowed": "Owners decide the risk, authority, or evidence gaps should not proceed.",
+      "blockedBy": "Private authority decision still required.",
+      "nextAction": "Prepare no-go minute and public-safe archive line.",
+      "publicSafeLine": "No pilot has been approved."
+    },
+    {
+      "id": "FDO-004",
+      "option": "Prepare owner-only limited pilot decision packet",
+      "owner": "Authority chair",
+      "decisionState": "Blocked",
+      "whenAllowed": "Every P0 result, evidence acceptance, defect, signoff, provider gate, public line, and export packet passes privately.",
+      "blockedBy": "Current blocked and held P0 items.",
+      "nextAction": "Do not prepare until all P0 items pass.",
+      "publicSafeLine": "Limited private pilot has not been approved."
+    },
+    {
+      "id": "FDO-005",
+      "option": "Provider RFQ preparation with fake/sample requirements only",
+      "owner": "Provider access owner",
+      "decisionState": "Hold",
+      "whenAllowed": "Provider refusal and RFQ boundary evidence is accepted.",
+      "blockedBy": "Provider gate PRG-001, PRG-002, PRG-007, and PRG-008 blocked.",
+      "nextAction": "Prepare sample-only RFQ language after owner acceptance.",
+      "publicSafeLine": "Provider work remains fake/sample-only."
+    },
+    {
+      "id": "FDO-006",
+      "option": "Public launch or live Decidim opening",
+      "owner": "Authority chair",
+      "decisionState": "Blocked",
+      "whenAllowed": "Separate owner authority, privacy, IDS/data, technical, support, provider, and comms acceptance exists.",
+      "blockedBy": "All current P0 blocks and live Decidim lock.",
+      "nextAction": "Keep blocked.",
+      "publicSafeLine": "Public launch and live Decidim remain blocked."
+    }
+  ],
+  "exportPackets": [
+    {
+      "id": "RX-001",
+      "packet": "Repeat P0 result minute",
+      "owner": "Meeting chair",
+      "format": "Markdown",
+      "defaultState": "Hold",
+      "contains": "Scenario outcomes, evidence acceptance, defects, signoffs, and decision options.",
+      "excludes": "Private evidence contents and real records.",
+      "useWhen": "Immediately after repeat run."
+    },
+    {
+      "id": "RX-002",
+      "packet": "Scenario results register",
+      "owner": "Meeting chair",
+      "format": "CSV",
+      "defaultState": "Ready",
+      "contains": "Fourteen sample scenario result rows.",
+      "excludes": "Private evidence contents.",
+      "useWhen": "Result review."
+    },
+    {
+      "id": "RX-003",
+      "packet": "Evidence acceptance register",
+      "owner": "Evidence custodian",
+      "format": "CSV",
+      "defaultState": "Hold",
+      "contains": "Eighteen evidence acceptance decisions and redaction notes.",
+      "excludes": "The evidence itself.",
+      "useWhen": "Evidence review."
+    },
+    {
+      "id": "RX-004",
+      "packet": "P0 defect register",
+      "owner": "Meeting chair",
+      "format": "CSV",
+      "defaultState": "Ready",
+      "contains": "Sixteen defects and remediation owners.",
+      "excludes": "Sensitive incident contents.",
+      "useWhen": "Defect closeout."
+    },
+    {
+      "id": "RX-005",
+      "packet": "Owner signoff register",
+      "owner": "Authority chair",
+      "format": "CSV",
+      "defaultState": "Hold",
+      "contains": "Twelve owner or advisory signoff states.",
+      "excludes": "Private owner signatures.",
+      "useWhen": "Owner review."
+    },
+    {
+      "id": "RX-006",
+      "packet": "Provider result packet",
+      "owner": "Provider access owner",
+      "format": "Markdown",
+      "defaultState": "Blocked",
+      "contains": "Provider refusal, RFQ boundary, access audit, public line, and owner signoff gates.",
+      "excludes": "Real provider datasets, credentials, or private correspondence.",
+      "useWhen": "Provider review."
+    },
+    {
+      "id": "RX-007",
+      "packet": "Public-safe status packet",
+      "owner": "Comms lead",
+      "format": "CSV",
+      "defaultState": "Hold",
+      "contains": "Approved and held preparation-only lines.",
+      "excludes": "Private decisions and evidence contents.",
+      "useWhen": "Before any public update."
+    },
+    {
+      "id": "RX-008",
+      "packet": "Final private decision packet",
+      "owner": "Authority chair",
+      "format": "Markdown",
+      "defaultState": "Blocked",
+      "contains": "Decision options, blocked items, and next-action recommendation.",
+      "excludes": "Pilot approval unless separately accepted.",
+      "useWhen": "Private decision meeting."
+    }
+  ]
+}

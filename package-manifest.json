@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "5.9",
+  "version": "6.0",
   "date": "2026-06-07",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use v5.9 as the private repeat P0 run planner after v5.8 acceptance. Build the run schedule, confirm attendance and quorum, execute only fake/sample scenarios, capture private evidence references, enforce stop triggers, retest provider refusal boundaries, and prepare post-run decisions. Do not approve limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, public launch claims, or live Decidim from this planner.",
+  "recommendedDecision": "Use v6.0 as the public-safe sample result board after v5.9 planning: record pass, hold, block, evidence acceptance, defects, owner signoffs, provider boundary results, sample track outcomes, public-safe lines, and final private decision options. Current sample posture recommends continuing P0 remediation. Do not approve limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, public launch claims, or live Decidim from this board.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -614,13 +614,31 @@
     "data/repeat-p0-post-run-decision-gates-v5.9.csv",
     "data/repeat-p0-communications-holds-v5.9.csv",
     "data/repeat-p0-export-packets-v5.9.csv",
-    "data/repeat-p0-run-planner-package-v5.9.json"
+    "data/repeat-p0-run-planner-package-v5.9.json",
+    "repeat-p0-results-decision-board.html",
+    "docs/repeat-p0-results-decision-board-v6.0.md",
+    "docs/repeat-p0-results-minute-template-v6.0.md",
+    "docs/evidence-acceptance-and-defect-closeout-v6.0.md",
+    "docs/provider-result-and-public-boundary-v6.0.md",
+    "docs/blocked-p0-remediation-backlog-v6.0.md",
+    "docs/final-private-decision-options-v6.0.md",
+    "docs/public-demo-release-notes-v6.0.md",
+    "data/repeat-p0-scenario-results-v6.0.csv",
+    "data/repeat-p0-evidence-acceptance-v6.0.csv",
+    "data/repeat-p0-defect-register-v6.0.csv",
+    "data/repeat-p0-owner-signoffs-v6.0.csv",
+    "data/repeat-p0-provider-result-gates-v6.0.csv",
+    "data/repeat-p0-sample-track-results-v6.0.csv",
+    "data/repeat-p0-public-status-results-v6.0.csv",
+    "data/repeat-p0-final-decision-options-v6.0.csv",
+    "data/repeat-p0-results-export-packets-v6.0.csv",
+    "data/repeat-p0-results-package-v6.0.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v5.9.md",
+    "releaseNotes": "docs/public-demo-release-notes-v6.0.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -1016,7 +1034,15 @@
       "qa-v59-deployed-repeat-p0-run-planner-desktop.png",
       "qa-v59-deployed-repeat-p0-run-planner-provider.png",
       "qa-v59-deployed-repeat-p0-run-planner-mobile.png",
-      "qa-v59-deployed-repeat-p0-run-planner-package-mobile.png"
+      "qa-v59-deployed-repeat-p0-run-planner-package-mobile.png",
+      "qa-v60-local-repeat-p0-results-desktop.png",
+      "qa-v60-local-repeat-p0-results-provider.png",
+      "qa-v60-local-repeat-p0-results-mobile.png",
+      "qa-v60-local-repeat-p0-results-package-mobile.png",
+      "qa-v60-deployed-repeat-p0-results-desktop.png",
+      "qa-v60-deployed-repeat-p0-results-provider.png",
+      "qa-v60-deployed-repeat-p0-results-mobile.png",
+      "qa-v60-deployed-repeat-p0-results-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -2332,6 +2358,26 @@
       "data/repeat-p0-communications-holds-v5.9.csv",
       "data/repeat-p0-export-packets-v5.9.csv",
       "data/repeat-p0-run-planner-package-v5.9.json"
+    ],
+    "repeatP0ResultsDecision": [
+      "repeat-p0-results-decision-board.html",
+      "docs/repeat-p0-results-decision-board-v6.0.md",
+      "docs/repeat-p0-results-minute-template-v6.0.md",
+      "docs/evidence-acceptance-and-defect-closeout-v6.0.md",
+      "docs/provider-result-and-public-boundary-v6.0.md",
+      "docs/blocked-p0-remediation-backlog-v6.0.md",
+      "docs/final-private-decision-options-v6.0.md",
+      "docs/public-demo-release-notes-v6.0.md",
+      "data/repeat-p0-scenario-results-v6.0.csv",
+      "data/repeat-p0-evidence-acceptance-v6.0.csv",
+      "data/repeat-p0-defect-register-v6.0.csv",
+      "data/repeat-p0-owner-signoffs-v6.0.csv",
+      "data/repeat-p0-provider-result-gates-v6.0.csv",
+      "data/repeat-p0-sample-track-results-v6.0.csv",
+      "data/repeat-p0-public-status-results-v6.0.csv",
+      "data/repeat-p0-final-decision-options-v6.0.csv",
+      "data/repeat-p0-results-export-packets-v6.0.csv",
+      "data/repeat-p0-results-package-v6.0.json"
     ]
   },
   "safetyRules": [
@@ -5523,5 +5569,47 @@
     "evidenceRule": "Every repeat scenario needs an owner, private evidence reference, redaction rule, stop trigger, public-safe line, and post-run decision gate before it can count as passed.",
     "stopRule": "The repeat P0 run must stop immediately if real participant data, official Toastmasters records, provider real-record access, cultural/sensitive material, live credentials, or an unapproved public claim enters the session.",
     "launchBlockRule": "Limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, public launch claims, and live Decidim remain blocked until the v5.9 repeat P0 run is privately completed and passed after v5.8, v5.7, v5.6, and v5.5 acceptance gates pass."
+  },
+  "repeatP0ResultsDecision": {
+    "entrypoint": "repeat-p0-results-decision-board.html",
+    "boardDoc": "docs/repeat-p0-results-decision-board-v6.0.md",
+    "minuteDoc": "docs/repeat-p0-results-minute-template-v6.0.md",
+    "evidenceDoc": "docs/evidence-acceptance-and-defect-closeout-v6.0.md",
+    "providerDoc": "docs/provider-result-and-public-boundary-v6.0.md",
+    "remediationDoc": "docs/blocked-p0-remediation-backlog-v6.0.md",
+    "decisionDoc": "docs/final-private-decision-options-v6.0.md",
+    "releaseNotes": "docs/public-demo-release-notes-v6.0.md",
+    "dataFiles": [
+      "data/repeat-p0-scenario-results-v6.0.csv",
+      "data/repeat-p0-evidence-acceptance-v6.0.csv",
+      "data/repeat-p0-defect-register-v6.0.csv",
+      "data/repeat-p0-owner-signoffs-v6.0.csv",
+      "data/repeat-p0-provider-result-gates-v6.0.csv",
+      "data/repeat-p0-sample-track-results-v6.0.csv",
+      "data/repeat-p0-public-status-results-v6.0.csv",
+      "data/repeat-p0-final-decision-options-v6.0.csv",
+      "data/repeat-p0-results-export-packets-v6.0.csv",
+      "data/repeat-p0-results-package-v6.0.json"
+    ],
+    "counts": {
+      "scenarioResults": 14,
+      "evidenceAcceptance": 18,
+      "defectRegister": 16,
+      "ownerSignoffs": 12,
+      "providerResultGates": 8,
+      "sampleTrackResults": 12,
+      "publicStatusResults": 8,
+      "finalDecisionOptions": 6,
+      "exportPackets": 8,
+      "blockedResultItems": 27,
+      "heldResultItems": 45,
+      "totalResultRecords": 102
+    },
+    "resultRule": "Use v6.0 after the v5.9 repeat P0 run plan to capture sample pass, hold, block, evidence acceptance, defect, owner signoff, provider-boundary, and private decision outcomes. The public demo is not proof of a real private run.",
+    "evidenceAcceptanceRule": "A repeat P0 item can count as passed only when its private evidence reference, redaction decision, defect state, owner signoff, public-safe line, and export packet are accepted by the accountable owner.",
+    "defectCloseoutRule": "Any P0 blocked or held defect keeps limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, public launch claims, and live Decidim blocked.",
+    "providerBoundaryRule": "Provider results must prove refusal of real participant, organisation, Barayamal, and Toastmasters records; provider RFQ work may use fake/sample requirements only.",
+    "finalDecisionRule": "The only public-safe v6.0 outcome is preparation status. Final pilot, provider, official workflow, and launch decisions remain private owner decisions.",
+    "launchBlockRule": "Limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, public launch claims, and live Decidim remain blocked until the v6.0 repeat P0 results are privately accepted and all v5.9, v5.8, v5.7, v5.6, and v5.5 gates pass."
   }
 }

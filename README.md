@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v5.9
+Current package version: v6.0
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -82,6 +82,7 @@ Open `closeout-session-runner.html` to rehearse attendance, evidence votes, bloc
 Open `post-session-handoff-console.html` after the private closeout session to assemble owner actions, evidence custody, repeat-run gates, public release approvals, calendar holds, and export bundles.
 Open `private-handoff-acceptance-room.html` after the v5.7 handoff packet to accept, hold, or block owner actions, custody, repeat eligibility, public lines, launch locks, decisions, and export packets.
 Open `repeat-p0-run-planner.html` after v5.8 private acceptance to prepare a controlled fake/sample repeat P0 run schedule, scenario deck, attendance roster, evidence plan, stop triggers, provider retest, communications holds, and post-run decision gates.
+Open `repeat-p0-results-decision-board.html` after v5.9 planning to capture public-safe sample results, evidence acceptance, defects, owner signoffs, provider gates, sample outcomes, public lines, final decision options, and export packets.
 
 The demo shows:
 
@@ -113,6 +114,24 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v6.0.md`
+- `docs/repeat-p0-results-decision-board-v6.0.md`
+- `docs/repeat-p0-results-minute-template-v6.0.md`
+- `docs/evidence-acceptance-and-defect-closeout-v6.0.md`
+- `docs/provider-result-and-public-boundary-v6.0.md`
+- `docs/blocked-p0-remediation-backlog-v6.0.md`
+- `docs/final-private-decision-options-v6.0.md`
+- `data/repeat-p0-scenario-results-v6.0.csv`
+- `data/repeat-p0-evidence-acceptance-v6.0.csv`
+- `data/repeat-p0-defect-register-v6.0.csv`
+- `data/repeat-p0-owner-signoffs-v6.0.csv`
+- `data/repeat-p0-provider-result-gates-v6.0.csv`
+- `data/repeat-p0-sample-track-results-v6.0.csv`
+- `data/repeat-p0-public-status-results-v6.0.csv`
+- `data/repeat-p0-final-decision-options-v6.0.csv`
+- `data/repeat-p0-results-export-packets-v6.0.csv`
+- `data/repeat-p0-results-package-v6.0.json`
+
 - `docs/public-demo-release-notes-v5.9.md`
 - `docs/repeat-p0-run-planner-v5.9.md`
 - `docs/repeat-p0-session-script-v5.9.md`
@@ -1220,6 +1239,15 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v6.0 Repeat P0 Results and Decision Board Upgrade
+
+v6.0 adds `repeat-p0-results-decision-board.html` as the public-safe sample result layer after v5.9 repeat P0 planning.
+
+It includes 14 scenario results, 18 evidence acceptance decisions, 16 defects, 12 owner signoffs, 8 provider result gates, 12 Barayamal and First Nations Toastmasters sample outcomes, 8 public status lines, 6 final private decision options, 8 export packets, and 102 total result records.
+
+Current sample posture recommends continuing P0 remediation. The board cannot approve limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, public launch claims, or live Decidim.
+
 
 ## v5.9 Repeat P0 Run Planner Upgrade
 

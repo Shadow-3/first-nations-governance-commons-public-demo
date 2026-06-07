@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v5.9  
+Version: v6.0  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -152,6 +152,28 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 142. `docs/public-demo-release-notes-v2.3.md` - v2.3 release summary.
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
+
+## v6.0 Repeat P0 Results and Decision Board Additions
+
+- `repeat-p0-results-decision-board.html` interactive repeat P0 results and decision board.
+- `docs/repeat-p0-results-decision-board-v6.0.md`
+- `docs/repeat-p0-results-minute-template-v6.0.md`
+- `docs/evidence-acceptance-and-defect-closeout-v6.0.md`
+- `docs/provider-result-and-public-boundary-v6.0.md`
+- `docs/blocked-p0-remediation-backlog-v6.0.md`
+- `docs/final-private-decision-options-v6.0.md`
+- `docs/public-demo-release-notes-v6.0.md`
+- `data/repeat-p0-scenario-results-v6.0.csv`
+- `data/repeat-p0-evidence-acceptance-v6.0.csv`
+- `data/repeat-p0-defect-register-v6.0.csv`
+- `data/repeat-p0-owner-signoffs-v6.0.csv`
+- `data/repeat-p0-provider-result-gates-v6.0.csv`
+- `data/repeat-p0-sample-track-results-v6.0.csv`
+- `data/repeat-p0-public-status-results-v6.0.csv`
+- `data/repeat-p0-final-decision-options-v6.0.csv`
+- `data/repeat-p0-results-export-packets-v6.0.csv`
+- `data/repeat-p0-results-package-v6.0.json`
+
 
 ## v5.9 Repeat P0 Run Planner Additions
 

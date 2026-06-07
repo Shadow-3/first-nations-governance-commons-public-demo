@@ -1,0 +1,9 @@
+id,topic,owner,defaultState,approvedLine,blockedClaim,useWhen,resultNote
+PUB-001,Repeat P0 status,Comms lead,Hold,A private fake/sample repeat P0 result board has been prepared for owner review.,The repeat P0 run passed or pilot is approved.,Public status questions.,Hold until comms and authority owner accept wording.
+PUB-002,Provider boundary,Comms lead,Hold,"No provider has access to real participant, organisation, Barayamal, or Toastmasters records.",A provider has been approved for real records.,Provider questions.,Use only after provider owner accepts the refusal line.
+PUB-003,Barayamal sample,Comms lead,Accepted with sample limits,Barayamal is being used as a controlled fake/sample organisation test.,Barayamal participants or real businesses have been onboarded.,Sample track explanation.,Accepted for fake/sample status only.
+PUB-004,First Nations Toastmasters sample,Comms lead,Accepted with sample limits,First Nations Toastmasters is being used as an unofficial fake/sample tester.,Official Toastmasters workflows are active.,Sample track explanation.,Accepted for fake/sample status only.
+PUB-005,Evidence,Comms lead,Hold,Private evidence is not published in the public demo.,Evidence has been publicly released.,Evidence questions.,Hold until evidence export is accepted.
+PUB-006,Live Decidim,Comms lead,Accepted,Live Decidim access remains blocked.,A live platform is open.,Technical status.,Accepted as a blocked-status line.
+PUB-007,Outbound email,Comms lead,Accepted,No outbound email is active for real participants.,Emails have been sent to participants.,Comms status.,Accepted as a blocked-status line.
+PUB-008,Decision status,Comms lead,Hold,Any pilot decision remains private until owners accept the repeat P0 result.,A pilot decision has been made.,Post-run status.,Hold until final private decision minute exists.
