@@ -1,0 +1,11 @@
+id,lane,owner,defaultState,mustAccept,cannotApprove,publicSafeLine
+OSL-001,Authority minute,Authority chair,Blocked,Final private acceptance minute and quorum lock.,"Live Decidim, public launch, or real participant intake.",Authority acceptance remains private; no pilot has been approved.
+OSL-002,Privacy acceptance,Privacy reviewer,Blocked,"Consent, disclosure, outbound-email, and private evidence boundaries.",Publishing private evidence or real participant records.,Privacy acceptance remains private.
+OSL-003,IDS/data acceptance,IDS/data steward,Blocked,"Evidence custody, retention, export, deletion, and data sovereignty controls.",Real data transfer or provider access.,IDS/data controls remain under private owner acceptance.
+OSL-004,Provider boundary,Provider access owner,Blocked,Provider refusal proof and safe-alternative/RFQ boundary.,"Provider access to real participant, organisation, or Toastmasters records.","No provider has access to real participant, organisation, or Toastmasters records."
+OSL-005,Barayamal sample,Barayamal sample owner,Accepted with sample limits,Fake founder/business-owner acceptance path.,"Real ABNs, revenue, client, contact, or private business records.",Barayamal remains a controlled fake/sample organisation test.
+OSL-006,First Nations Toastmasters sample,FN Toastmasters sample owner,Accepted with sample limits,Fake guest/member-boundary acceptance path.,"Official member records, payments, officer roles, club records, incidents, elections, or education records.",First Nations Toastmasters remains an unofficial fake/sample tester.
+OSL-007,Public release,Comms lead,Hold,Preparation-only wording and blocked-claims check.,"Pilot-ready, official-workflow, or provider-access claims.",Public status can say preparation only.
+OSL-008,Technical repeat readiness,Technical custodian,Hold,Repeat-run evidence plan and no live access.,Live Decidim or production credentials.,Technical work remains fake/sample-only.
+OSL-009,Support and escalation,Support owner,Hold,"Support route, incident route, withdrawal path, and stop trigger.",Real participant support intake.,Support pathways remain rehearsed only.
+OSL-010,Dean / Barayamal trusted review,Dean Foley / Barayamal,Advisory only,Technical and usefulness review notes.,Replacing owner/community authority.,"Dean/Barayamal review is advisory, not owner approval."

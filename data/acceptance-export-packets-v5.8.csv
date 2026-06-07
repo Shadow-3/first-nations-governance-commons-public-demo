@@ -1,0 +1,9 @@
+id,packet,owner,format,defaultState,contains,excludes,useWhen
+AEP-001,Private acceptance minute shell,Meeting chair,Markdown,Ready,"Selected acceptance, owner, custody, signoff, decision, launch locks.","Real records, credentials, official Toastmasters data.",During v5.8 acceptance review.
+AEP-002,Owner acceptance register,Action coordinator,CSV,Ready,All owner acceptance items and states.,Private evidence contents.,Before any repeat schedule discussion.
+AEP-003,Custody acceptance index,Evidence custodian,CSV,Hold,"Private location, retention, disclosure and repeat impact.",The evidence itself.,Before repeat P0 scheduling.
+AEP-004,Repeat eligibility register,Meeting chair,CSV,Hold,"Eligibility gates, pass conditions, fail actions.",Calendar invites or owner private details.,Before scheduling repeat P0.
+AEP-005,Launch lock register,Authority chair,CSV,Blocked,Each blocked launch condition and release rule.,Approval to launch.,Before any pilot decision.
+AEP-006,Provider boundary packet,Provider access owner,Markdown,Blocked,ACC-008 / HOF-008 / EVS-008 / OSP-008 chain and no-real-record line.,Provider credentials or real datasets.,Before provider retest.
+AEP-007,Controlled sample acceptance packet,Sample owners,Markdown,Ready,Barayamal and First Nations Toastmasters fake/sample acceptance lines.,Real business or official member records.,Before controlled sample retest.
+AEP-008,Final owner decision shell,Authority chair,Markdown,Blocked,Proceed/repeat/no-go options and unresolved blockers.,Final approval until owners sign privately.,After repeat P0 results.

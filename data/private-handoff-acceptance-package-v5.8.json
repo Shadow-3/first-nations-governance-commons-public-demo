@@ -1,0 +1,1159 @@
+{
+  "title": "Private Handoff Acceptance Package v5.8",
+  "version": "5.8",
+  "date": "2026-06-07",
+  "mode": "public_demo_fake_sample_data_only",
+  "initialDeveloperCustodian": "Barayamal / Dean Foley",
+  "previousPackage": "Post-Session Handoff Package v5.7",
+  "trustedReviewer": "Dean Foley / Barayamal",
+  "primaryOrganisationTest": "Barayamal",
+  "controlledMemberTester": "First Nations Toastmasters",
+  "recommendedDecision": "Use v5.8 as the private owner acceptance layer after v5.7 handoff. Accept, hold, or block each owner action, custody item, repeat gate, public line, launch lock, decision option, and export packet. Do not schedule repeat P0 testing, prepare a limited private pilot decision, grant provider real-record access, send outbound email, run official Toastmasters workflows, or open live Decidim until v5.8 acceptance and all previous private gates pass.",
+  "acceptanceRule": "Use v5.8 after the v5.7 handoff packet is assembled to privately accept, hold, or block each owner action, custody item, repeat-run gate, public release line, launch lock, and export packet; it is an acceptance control layer, not pilot approval.",
+  "signoffRule": "Every P0 owner acceptance must have an accepted owner or alternate, private evidence reference, custody acceptance, repeat impact, and public-safe line before it can count toward repeat P0 eligibility.",
+  "repeatRule": "Repeat P0 scheduling remains blocked while any P0 acceptance, custody item, provider boundary, authority minute, privacy signoff, IDS/data signoff, public-release line, launch lock, or export packet is blocked or held.",
+  "launchBlockRule": "Limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, and live Decidim access remain blocked until v5.8 acceptance is privately signed, v5.7 handoff is accepted, v5.6 session minute is accepted, v5.5 owner closeout passes, and the repeat P0 run also passes privately.",
+  "sourceAnchors": [
+    {
+      "label": "Decidim first steps",
+      "url": "https://decidim.org/first-steps/"
+    },
+    {
+      "label": "Decidim GitHub example applications",
+      "url": "https://github.com/decidim/decidim#example-applications"
+    },
+    {
+      "label": "Decidim install overview",
+      "url": "https://docs.decidim.org/en/develop/install/index.html"
+    },
+    {
+      "label": "Decidim deployment docs",
+      "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+    },
+    {
+      "label": "Decidim authorizations",
+      "url": "https://docs.decidim.org/en/develop/admin/participants/authorizations.html"
+    },
+    {
+      "label": "Barayamal Toastmasters First Nations",
+      "url": "https://barayamal.com.au/toastmasters-first-nations/"
+    },
+    {
+      "label": "Toastmasters governing documents",
+      "url": "https://www.toastmasters.org/resources/governing-documents"
+    },
+    {
+      "label": "OAIC Notifiable Data Breaches",
+      "url": "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme"
+    },
+    {
+      "label": "AIATSIS ethical research",
+      "url": "https://aiatsis.gov.au/research/ethical-research"
+    },
+    {
+      "label": "v4.6 Controlled Pilot Execution Pack",
+      "url": "data/controlled-pilot-execution-pack-v4.6.json"
+    },
+    {
+      "label": "v4.7 Pilot Rehearsal Control Room",
+      "url": "data/pilot-rehearsal-control-room-package-v4.7.json"
+    },
+    {
+      "label": "Decidim deployment docs",
+      "url": "https://docs.decidim.org/en/develop/develop/deploy.html"
+    },
+    {
+      "label": "Decidim install checklist",
+      "url": "https://docs.decidim.org/en/develop/install/checklist.html"
+    },
+    {
+      "label": "v4.8 Pilot Decision and Build Handoff Room",
+      "url": "data/pilot-decision-build-handoff-package-v4.8.json"
+    },
+    {
+      "label": "v4.9 Private Owner Decision Meeting Pack",
+      "url": "data/private-owner-decision-meeting-package-v4.9.json"
+    },
+    {
+      "label": "v5.0 Private Decision Execution Control Pack",
+      "url": "data/private-decision-execution-control-package-v5.0.json"
+    },
+    {
+      "label": "v5.1 Private Evidence Stress Test Lab Pack",
+      "url": "data/private-evidence-stress-test-package-v5.1.json"
+    },
+    {
+      "label": "v5.2 Private Stress Lab Run Pack",
+      "url": "data/private-stress-lab-run-package-v5.2.json"
+    },
+    {
+      "label": "v5.3 Private Run Results Decision Package",
+      "url": "data/private-run-results-decision-package-v5.3.json"
+    },
+    {
+      "label": "v5.4 P0 Remediation Repeat-Run Control Package",
+      "url": "data/p0-remediation-repeat-run-control-package-v5.4.json"
+    },
+    {
+      "label": "v5.5 Owner Closeout Sprint Pack",
+      "url": "data/owner-closeout-sprint-pack-package-v5.5.json"
+    },
+    {
+      "label": "v5.6 Closeout Session Runner",
+      "url": "data/closeout-session-runner-package-v5.6.json"
+    },
+    {
+      "label": "v5.7 Post-Session Handoff Package",
+      "url": "data/post-session-handoff-package-v5.7.json"
+    }
+  ],
+  "counts": {
+    "ownerAcceptanceItems": 18,
+    "custodyAcceptanceItems": 16,
+    "repeatEligibilityGates": 12,
+    "ownerSignoffLanes": 10,
+    "publicReleaseAcceptanceGates": 10,
+    "launchLockChecks": 8,
+    "decisionOptions": 4,
+    "exportPackets": 8,
+    "blockedAcceptanceItems": 5,
+    "heldAcceptanceItems": 9,
+    "totalAcceptanceRecords": 86
+  },
+  "ownerAcceptanceItems": [
+    {
+      "id": "ACC-001",
+      "linkedHandoff": "HOF-001",
+      "linkedEvidenceVote": "EVS-001",
+      "linkedOwnerSprint": "OSP-001",
+      "area": "Authority",
+      "priority": "P0",
+      "owner": "Authority chair",
+      "acceptanceState": "Blocked",
+      "requiredPrivateAction": "Block repeat eligibility until owner resolves: Accept, revise, or hold evidence need: Private authority roster and minute placeholder.",
+      "privateEvidenceReference": "Private evidence packet for OSP-001: Private authority roster and minute placeholder.",
+      "custodyNeed": "Private evidence vault reference, retention rule, and public disclosure rule required.",
+      "repeatEligibility": "Not eligible for repeat P0 schedule.",
+      "publicSafeLine": "Authority remains private and unresolved; no pilot has been approved.",
+      "launchStatus": "Pilot remains blocked"
+    },
+    {
+      "id": "ACC-002",
+      "linkedHandoff": "HOF-002",
+      "linkedEvidenceVote": "EVS-002",
+      "linkedOwnerSprint": "OSP-002",
+      "area": "Privacy",
+      "priority": "P0",
+      "owner": "Privacy reviewer",
+      "acceptanceState": "Blocked",
+      "requiredPrivateAction": "Block repeat eligibility until owner resolves: Accept, revise, or hold evidence need: Private privacy copy approval.",
+      "privateEvidenceReference": "Private evidence packet for OSP-002: Private privacy copy approval.",
+      "custodyNeed": "Private evidence vault reference, retention rule, and public disclosure rule required.",
+      "repeatEligibility": "Not eligible for repeat P0 schedule.",
+      "publicSafeLine": "Privacy and consent controls remain under private owner review.",
+      "launchStatus": "Pilot remains blocked"
+    },
+    {
+      "id": "ACC-003",
+      "linkedHandoff": "HOF-003",
+      "linkedEvidenceVote": "EVS-003",
+      "linkedOwnerSprint": "OSP-003",
+      "area": "Privacy",
+      "priority": "P0",
+      "owner": "Privacy reviewer",
+      "acceptanceState": "Blocked",
+      "requiredPrivateAction": "Block repeat eligibility until owner resolves: Accept, revise, or hold evidence need: Disabled outbound-email proof.",
+      "privateEvidenceReference": "Private evidence packet for OSP-003: Disabled outbound-email proof.",
+      "custodyNeed": "Private evidence vault reference, retention rule, and public disclosure rule required.",
+      "repeatEligibility": "Not eligible for repeat P0 schedule.",
+      "publicSafeLine": "No outbound email is active for real participants.",
+      "launchStatus": "Pilot remains blocked"
+    },
+    {
+      "id": "ACC-004",
+      "linkedHandoff": "HOF-004",
+      "linkedEvidenceVote": "EVS-004",
+      "linkedOwnerSprint": "OSP-004",
+      "area": "IDS/data",
+      "priority": "P0",
+      "owner": "IDS/data reviewer",
+      "acceptanceState": "Blocked",
+      "requiredPrivateAction": "Block repeat eligibility until owner resolves: Accept, revise, or hold evidence need: Private data-rights drill evidence placeholder.",
+      "privateEvidenceReference": "Private evidence packet for OSP-004: Private data-rights drill evidence placeholder.",
+      "custodyNeed": "Private evidence vault reference, retention rule, and public disclosure rule required.",
+      "repeatEligibility": "Not eligible for repeat P0 schedule.",
+      "publicSafeLine": "Data export, deletion, and retention controls remain under private review.",
+      "launchStatus": "Pilot remains blocked"
+    },
+    {
+      "id": "ACC-005",
+      "linkedHandoff": "HOF-005",
+      "linkedEvidenceVote": "EVS-005",
+      "linkedOwnerSprint": "OSP-005",
+      "area": "Support",
+      "priority": "P0",
+      "owner": "Support owner",
+      "acceptanceState": "Owner review",
+      "requiredPrivateAction": "Hold for owner acceptance: Accept, revise, or hold evidence need: Private support drill minute.",
+      "privateEvidenceReference": "Private evidence packet for OSP-005: Private support drill minute.",
+      "custodyNeed": "Private evidence vault reference, retention rule, and public disclosure rule required.",
+      "repeatEligibility": "Not eligible for repeat P0 schedule.",
+      "publicSafeLine": "Support routes are not live services.",
+      "launchStatus": "Pilot remains blocked"
+    },
+    {
+      "id": "ACC-006",
+      "linkedHandoff": "HOF-006",
+      "linkedEvidenceVote": "EVS-006",
+      "linkedOwnerSprint": "OSP-006",
+      "area": "Official boundary",
+      "priority": "P0",
+      "owner": "Official-route owner",
+      "acceptanceState": "Hold",
+      "requiredPrivateAction": "Hold for owner acceptance: Resolve blocker before any repeat scheduling: Any official Toastmasters workflow appears.",
+      "privateEvidenceReference": "Private evidence packet for OSP-006: Private official-boundary note.",
+      "custodyNeed": "Private evidence vault reference, retention rule, and public disclosure rule required.",
+      "repeatEligibility": "Not eligible for repeat P0 schedule.",
+      "publicSafeLine": "First Nations Toastmasters remains a fake/sample guest and boundary tester only.",
+      "launchStatus": "Pilot remains blocked"
+    },
+    {
+      "id": "ACC-007",
+      "linkedHandoff": "HOF-007",
+      "linkedEvidenceVote": "EVS-007",
+      "linkedOwnerSprint": "OSP-007",
+      "area": "Evidence",
+      "priority": "P0",
+      "owner": "IDS/data reviewer",
+      "acceptanceState": "Owner review",
+      "requiredPrivateAction": "Hold for owner acceptance: Accept, revise, or hold evidence need: Private custody index.",
+      "privateEvidenceReference": "Private evidence packet for OSP-007: Private custody index.",
+      "custodyNeed": "Private evidence vault reference, retention rule, and public disclosure rule required.",
+      "repeatEligibility": "Not eligible for repeat P0 schedule.",
+      "publicSafeLine": "Private evidence is not published in the public package.",
+      "launchStatus": "Pilot remains blocked"
+    },
+    {
+      "id": "ACC-008",
+      "linkedHandoff": "HOF-008",
+      "linkedEvidenceVote": "EVS-008",
+      "linkedOwnerSprint": "OSP-008",
+      "area": "Provider",
+      "priority": "P0",
+      "owner": "Provider access owner",
+      "acceptanceState": "Blocked",
+      "requiredPrivateAction": "Block repeat eligibility until owner resolves: Accept, revise, or hold evidence need: Provider refusal proof and RFQ boundary approval.",
+      "privateEvidenceReference": "Private evidence packet for OSP-008: Provider refusal proof and RFQ boundary approval.",
+      "custodyNeed": "Private evidence vault reference, retention rule, and public disclosure rule required.",
+      "repeatEligibility": "Not eligible for repeat P0 schedule.",
+      "publicSafeLine": "No provider has access to real participant, organisation, or Toastmasters records.",
+      "launchStatus": "Pilot remains blocked"
+    },
+    {
+      "id": "ACC-009",
+      "linkedHandoff": "HOF-009",
+      "linkedEvidenceVote": "EVS-009",
+      "linkedOwnerSprint": "OSP-009",
+      "area": "FN Toastmasters",
+      "priority": "P1",
+      "owner": "Training owner",
+      "acceptanceState": "Accepted with sample limits",
+      "requiredPrivateAction": "Confirm private acceptance and preserve fake/sample-only conditions.",
+      "privateEvidenceReference": "Private evidence packet for OSP-009: Private copy review.",
+      "custodyNeed": "Private evidence vault reference, retention rule, and public disclosure rule required.",
+      "repeatEligibility": "Eligible after custody acceptance and signoff lane approval.",
+      "publicSafeLine": "First Nations Toastmasters sample records do not represent official member services.",
+      "launchStatus": "Pilot remains blocked"
+    },
+    {
+      "id": "ACC-010",
+      "linkedHandoff": "HOF-010",
+      "linkedEvidenceVote": "EVS-010",
+      "linkedOwnerSprint": "OSP-010",
+      "area": "Security",
+      "priority": "P1",
+      "owner": "Security reviewer",
+      "acceptanceState": "Owner review",
+      "requiredPrivateAction": "Hold for owner acceptance: Accept, revise, or hold evidence need: Private security proof references.",
+      "privateEvidenceReference": "Private evidence packet for OSP-010: Private security proof references.",
+      "custodyNeed": "Private evidence vault reference, retention rule, and public disclosure rule required.",
+      "repeatEligibility": "Not eligible for repeat P0 schedule.",
+      "publicSafeLine": "No live Decidim access is approved by this public demo.",
+      "launchStatus": "Pilot remains blocked"
+    },
+    {
+      "id": "ACC-011",
+      "linkedHandoff": "HOF-011",
+      "linkedEvidenceVote": "EVS-011",
+      "linkedOwnerSprint": "OSP-011",
+      "area": "Access",
+      "priority": "P1",
+      "owner": "Security reviewer",
+      "acceptanceState": "Owner review",
+      "requiredPrivateAction": "Hold for owner acceptance: Accept, revise, or hold evidence need: Private access expiry proof.",
+      "privateEvidenceReference": "Private evidence packet for OSP-011: Private access expiry proof.",
+      "custodyNeed": "Private evidence vault reference, retention rule, and public disclosure rule required.",
+      "repeatEligibility": "Not eligible for repeat P0 schedule.",
+      "publicSafeLine": "No live admin access is approved by this public demo.",
+      "launchStatus": "Pilot remains blocked"
+    },
+    {
+      "id": "ACC-012",
+      "linkedHandoff": "HOF-012",
+      "linkedEvidenceVote": "EVS-012",
+      "linkedOwnerSprint": "OSP-012",
+      "area": "Provider",
+      "priority": "P1",
+      "owner": "Provider access owner",
+      "acceptanceState": "Hold",
+      "requiredPrivateAction": "Hold for owner acceptance: Accept, revise, or hold evidence need: Private RFQ approval reference.",
+      "privateEvidenceReference": "Private evidence packet for OSP-012: Private RFQ approval reference.",
+      "custodyNeed": "Private evidence vault reference, retention rule, and public disclosure rule required.",
+      "repeatEligibility": "Not eligible for repeat P0 schedule.",
+      "publicSafeLine": "Provider or self-build options remain under fake/sample-only review.",
+      "launchStatus": "Pilot remains blocked"
+    },
+    {
+      "id": "ACC-013",
+      "linkedHandoff": "HOF-013",
+      "linkedEvidenceVote": "EVS-013",
+      "linkedOwnerSprint": "OSP-013",
+      "area": "Owners",
+      "priority": "P2",
+      "owner": "Meeting chair",
+      "acceptanceState": "Owner review",
+      "requiredPrivateAction": "Hold for owner acceptance: Accept, revise, or hold evidence need: Private quorum roster.",
+      "privateEvidenceReference": "Private evidence packet for OSP-013: Private quorum roster.",
+      "custodyNeed": "Private evidence vault reference, retention rule, and public disclosure rule required.",
+      "repeatEligibility": "Not eligible for repeat P0 schedule.",
+      "publicSafeLine": "Named owners must approve their own gates privately.",
+      "launchStatus": "Pilot remains blocked"
+    },
+    {
+      "id": "ACC-014",
+      "linkedHandoff": "HOF-014",
+      "linkedEvidenceVote": "EVS-014",
+      "linkedOwnerSprint": "OSP-014",
+      "area": "Barayamal",
+      "priority": "P2",
+      "owner": "Barayamal custodian",
+      "acceptanceState": "Accepted with sample limits",
+      "requiredPrivateAction": "Confirm private acceptance and preserve fake/sample-only conditions.",
+      "privateEvidenceReference": "Private evidence packet for OSP-014: Private Barayamal sample review.",
+      "custodyNeed": "Private evidence vault reference, retention rule, and public disclosure rule required.",
+      "repeatEligibility": "Eligible after custody acceptance and signoff lane approval.",
+      "publicSafeLine": "Barayamal remains a controlled fake/sample organisation test path.",
+      "launchStatus": "Pilot remains blocked"
+    },
+    {
+      "id": "ACC-015",
+      "linkedHandoff": "HOF-015",
+      "linkedEvidenceVote": "EVS-015",
+      "linkedOwnerSprint": "OSP-015",
+      "area": "Communications",
+      "priority": "P2",
+      "owner": "Comms lead",
+      "acceptanceState": "Accepted with sample limits",
+      "requiredPrivateAction": "Confirm private acceptance and preserve fake/sample-only conditions.",
+      "privateEvidenceReference": "Private evidence packet for OSP-015: Private comms approval reference.",
+      "custodyNeed": "Private evidence vault reference, retention rule, and public disclosure rule required.",
+      "repeatEligibility": "Eligible after custody acceptance and signoff lane approval.",
+      "publicSafeLine": "The public demo remains a fake/sample preparation tool; no live pilot has been approved.",
+      "launchStatus": "Pilot remains blocked"
+    },
+    {
+      "id": "ACC-016",
+      "linkedHandoff": "HOF-016",
+      "linkedEvidenceVote": "EVS-016",
+      "linkedOwnerSprint": "OSP-016",
+      "area": "Documentation",
+      "priority": "P2",
+      "owner": "Documentation owner",
+      "acceptanceState": "Accepted with sample limits",
+      "requiredPrivateAction": "Confirm private acceptance and preserve fake/sample-only conditions.",
+      "privateEvidenceReference": "Private evidence packet for OSP-016: Generated v5.5 package manifest.",
+      "custodyNeed": "Private evidence vault reference, retention rule, and public disclosure rule required.",
+      "repeatEligibility": "Eligible after custody acceptance and signoff lane approval.",
+      "publicSafeLine": "The demo now includes an owner closeout sprint layer.",
+      "launchStatus": "Pilot remains blocked"
+    },
+    {
+      "id": "ACC-017",
+      "linkedHandoff": "HOF-017",
+      "linkedEvidenceVote": "EVS-017",
+      "linkedOwnerSprint": "OSP-017",
+      "area": "Final minutes",
+      "priority": "P0",
+      "owner": "Meeting chair",
+      "acceptanceState": "Owner review",
+      "requiredPrivateAction": "Hold for owner acceptance: Accept, revise, or hold evidence need: Private final minute placeholder.",
+      "privateEvidenceReference": "Private evidence packet for OSP-017: Private final minute placeholder.",
+      "custodyNeed": "Private evidence vault reference, retention rule, and public disclosure rule required.",
+      "repeatEligibility": "Not eligible for repeat P0 schedule.",
+      "publicSafeLine": "The next valid step is closeout sprint, repeat testing, or no-go/archive.",
+      "launchStatus": "Pilot remains blocked"
+    },
+    {
+      "id": "ACC-018",
+      "linkedHandoff": "HOF-018",
+      "linkedEvidenceVote": "EVS-018",
+      "linkedOwnerSprint": "OSP-018",
+      "area": "Repeat run",
+      "priority": "P1",
+      "owner": "Meeting chair",
+      "acceptanceState": "Owner review",
+      "requiredPrivateAction": "Hold for owner acceptance: Accept, revise, or hold evidence need: Private calendar hold and stop trigger register.",
+      "privateEvidenceReference": "Private evidence packet for OSP-018: Private calendar hold and stop trigger register.",
+      "custodyNeed": "Private evidence vault reference, retention rule, and public disclosure rule required.",
+      "repeatEligibility": "Not eligible for repeat P0 schedule.",
+      "publicSafeLine": "Preparation continues; no pilot has been approved.",
+      "launchStatus": "Pilot remains blocked"
+    }
+  ],
+  "custodyAcceptanceItems": [
+    {
+      "id": "ECA-001",
+      "linkedCustody": "CUS-001",
+      "area": "Authority",
+      "priority": "P0",
+      "owner": "Meeting chair",
+      "acceptanceState": "Required",
+      "privateLocation": "Private owner minute/evidence vault only",
+      "retentionBoundary": "Do not publish private owner names, participant records, official Toastmasters records, credentials, or live access details.",
+      "publicDisclosure": "Authority remains private and unresolved.",
+      "acceptanceCondition": "Owner must confirm private location, retention boundary, redaction rule, and public-safe disclosure before repeat scheduling.",
+      "repeatImpact": "Can trail repeat P0 run after owner acceptance."
+    },
+    {
+      "id": "ECA-002",
+      "linkedCustody": "CUS-002",
+      "area": "Privacy",
+      "priority": "P0",
+      "owner": "Privacy reviewer",
+      "acceptanceState": "Hold",
+      "privateLocation": "Private owner minute/evidence vault only",
+      "retentionBoundary": "Do not publish private owner names, participant records, official Toastmasters records, credentials, or live access details.",
+      "publicDisclosure": "Privacy controls remain under private review.",
+      "acceptanceCondition": "Owner must confirm private location, retention boundary, redaction rule, and public-safe disclosure before repeat scheduling.",
+      "repeatImpact": "Can trail repeat P0 run after owner acceptance."
+    },
+    {
+      "id": "ECA-003",
+      "linkedCustody": "CUS-003",
+      "area": "Outbound email",
+      "priority": "P0",
+      "owner": "Privacy reviewer",
+      "acceptanceState": "Required",
+      "privateLocation": "Private owner minute/evidence vault only",
+      "retentionBoundary": "Do not publish private owner names, participant records, official Toastmasters records, credentials, or live access details.",
+      "publicDisclosure": "No outbound email is active for real participants.",
+      "acceptanceCondition": "Owner must confirm private location, retention boundary, redaction rule, and public-safe disclosure before repeat scheduling.",
+      "repeatImpact": "Can trail repeat P0 run after owner acceptance."
+    },
+    {
+      "id": "ECA-004",
+      "linkedCustody": "CUS-004",
+      "area": "IDS/data",
+      "priority": "P0",
+      "owner": "IDS/data reviewer",
+      "acceptanceState": "Hold",
+      "privateLocation": "Private owner minute/evidence vault only",
+      "retentionBoundary": "Do not publish private owner names, participant records, official Toastmasters records, credentials, or live access details.",
+      "publicDisclosure": "Data controls remain under private review.",
+      "acceptanceCondition": "Owner must confirm private location, retention boundary, redaction rule, and public-safe disclosure before repeat scheduling.",
+      "repeatImpact": "Can trail repeat P0 run after owner acceptance."
+    },
+    {
+      "id": "ECA-005",
+      "linkedCustody": "CUS-005",
+      "area": "Support",
+      "priority": "P0",
+      "owner": "Support owner",
+      "acceptanceState": "Required",
+      "privateLocation": "Private owner minute/evidence vault only",
+      "retentionBoundary": "Do not publish private owner names, participant records, official Toastmasters records, credentials, or live access details.",
+      "publicDisclosure": "Support routes are not live services.",
+      "acceptanceCondition": "Owner must confirm private location, retention boundary, redaction rule, and public-safe disclosure before repeat scheduling.",
+      "repeatImpact": "Can trail repeat P0 run after owner acceptance."
+    },
+    {
+      "id": "ECA-006",
+      "linkedCustody": "CUS-006",
+      "area": "Official boundary",
+      "priority": "P0",
+      "owner": "Official-route owner",
+      "acceptanceState": "Required",
+      "privateLocation": "Private owner minute/evidence vault only",
+      "retentionBoundary": "Do not publish private owner names, participant records, official Toastmasters records, credentials, or live access details.",
+      "publicDisclosure": "First Nations Toastmasters remains fake/sample-only.",
+      "acceptanceCondition": "Owner must confirm private location, retention boundary, redaction rule, and public-safe disclosure before repeat scheduling.",
+      "repeatImpact": "Can trail repeat P0 run after owner acceptance."
+    },
+    {
+      "id": "ECA-007",
+      "linkedCustody": "CUS-007",
+      "area": "Evidence",
+      "priority": "P0",
+      "owner": "IDS/data reviewer",
+      "acceptanceState": "Required",
+      "privateLocation": "Private owner minute/evidence vault only",
+      "retentionBoundary": "Do not publish private owner names, participant records, official Toastmasters records, credentials, or live access details.",
+      "publicDisclosure": "Private evidence is not published.",
+      "acceptanceCondition": "Owner must confirm private location, retention boundary, redaction rule, and public-safe disclosure before repeat scheduling.",
+      "repeatImpact": "Can trail repeat P0 run after owner acceptance."
+    },
+    {
+      "id": "ECA-008",
+      "linkedCustody": "CUS-008",
+      "area": "Provider",
+      "priority": "P0",
+      "owner": "Provider access owner",
+      "acceptanceState": "Hold",
+      "privateLocation": "Private owner minute/evidence vault only",
+      "retentionBoundary": "Do not publish private owner names, participant records, official Toastmasters records, credentials, or live access details.",
+      "publicDisclosure": "No provider has access to real participant, organisation, or Toastmasters records.",
+      "acceptanceCondition": "Owner must confirm private location, retention boundary, redaction rule, and public-safe disclosure before repeat scheduling.",
+      "repeatImpact": "Can trail repeat P0 run after owner acceptance."
+    },
+    {
+      "id": "ECA-009",
+      "linkedCustody": "CUS-009",
+      "area": "FN Toastmasters",
+      "priority": "P1",
+      "owner": "Training owner",
+      "acceptanceState": "Queue",
+      "privateLocation": "Private owner minute/evidence vault only",
+      "retentionBoundary": "Do not publish private owner names, participant records, official Toastmasters records, credentials, or live access details.",
+      "publicDisclosure": "No official member service is active.",
+      "acceptanceCondition": "Owner must confirm private location, retention boundary, redaction rule, and public-safe disclosure before repeat scheduling.",
+      "repeatImpact": "Can trail repeat P0 run after owner acceptance."
+    },
+    {
+      "id": "ECA-010",
+      "linkedCustody": "CUS-010",
+      "area": "Security",
+      "priority": "P1",
+      "owner": "Security reviewer",
+      "acceptanceState": "Queue",
+      "privateLocation": "Private owner minute/evidence vault only",
+      "retentionBoundary": "Do not publish private owner names, participant records, official Toastmasters records, credentials, or live access details.",
+      "publicDisclosure": "No live Decidim access is approved.",
+      "acceptanceCondition": "Owner must confirm private location, retention boundary, redaction rule, and public-safe disclosure before repeat scheduling.",
+      "repeatImpact": "Can trail repeat P0 run after owner acceptance."
+    },
+    {
+      "id": "ECA-011",
+      "linkedCustody": "CUS-011",
+      "area": "Access",
+      "priority": "P1",
+      "owner": "Security reviewer",
+      "acceptanceState": "Queue",
+      "privateLocation": "Private owner minute/evidence vault only",
+      "retentionBoundary": "Do not publish private owner names, participant records, official Toastmasters records, credentials, or live access details.",
+      "publicDisclosure": "No live admin access is approved.",
+      "acceptanceCondition": "Owner must confirm private location, retention boundary, redaction rule, and public-safe disclosure before repeat scheduling.",
+      "repeatImpact": "Can trail repeat P0 run after owner acceptance."
+    },
+    {
+      "id": "ECA-012",
+      "linkedCustody": "CUS-012",
+      "area": "Provider",
+      "priority": "P1",
+      "owner": "Provider access owner",
+      "acceptanceState": "Hold",
+      "privateLocation": "Private owner minute/evidence vault only",
+      "retentionBoundary": "Do not publish private owner names, participant records, official Toastmasters records, credentials, or live access details.",
+      "publicDisclosure": "Provider review remains fake/sample-only.",
+      "acceptanceCondition": "Owner must confirm private location, retention boundary, redaction rule, and public-safe disclosure before repeat scheduling.",
+      "repeatImpact": "Can trail repeat P0 run after owner acceptance."
+    },
+    {
+      "id": "ECA-013",
+      "linkedCustody": "CUS-013",
+      "area": "Barayamal",
+      "priority": "P2",
+      "owner": "Barayamal custodian",
+      "acceptanceState": "Queue",
+      "privateLocation": "Private owner minute/evidence vault only",
+      "retentionBoundary": "Do not publish private owner names, participant records, official Toastmasters records, credentials, or live access details.",
+      "publicDisclosure": "Barayamal remains controlled fake/sample.",
+      "acceptanceCondition": "Owner must confirm private location, retention boundary, redaction rule, and public-safe disclosure before repeat scheduling.",
+      "repeatImpact": "Can trail repeat P0 run after owner acceptance."
+    },
+    {
+      "id": "ECA-014",
+      "linkedCustody": "CUS-014",
+      "area": "Communications",
+      "priority": "P2",
+      "owner": "Comms lead",
+      "acceptanceState": "Queue",
+      "privateLocation": "Private owner minute/evidence vault only",
+      "retentionBoundary": "Do not publish private owner names, participant records, official Toastmasters records, credentials, or live access details.",
+      "publicDisclosure": "Preparation continues; no pilot approved.",
+      "acceptanceCondition": "Owner must confirm private location, retention boundary, redaction rule, and public-safe disclosure before repeat scheduling.",
+      "repeatImpact": "Can trail repeat P0 run after owner acceptance."
+    },
+    {
+      "id": "ECA-015",
+      "linkedCustody": "CUS-015",
+      "area": "Repeat run",
+      "priority": "P0",
+      "owner": "Authority chair",
+      "acceptanceState": "Required",
+      "privateLocation": "Private owner minute/evidence vault only",
+      "retentionBoundary": "Do not publish private owner names, participant records, official Toastmasters records, credentials, or live access details.",
+      "publicDisclosure": "No pilot approved by this session.",
+      "acceptanceCondition": "Owner must confirm private location, retention boundary, redaction rule, and public-safe disclosure before repeat scheduling.",
+      "repeatImpact": "Can trail repeat P0 run after owner acceptance."
+    },
+    {
+      "id": "ECA-016",
+      "linkedCustody": "CUS-016",
+      "area": "Final minutes",
+      "priority": "P0",
+      "owner": "Meeting chair",
+      "acceptanceState": "Required",
+      "privateLocation": "Private owner minute/evidence vault only",
+      "retentionBoundary": "Do not publish private owner names, participant records, official Toastmasters records, credentials, or live access details.",
+      "publicDisclosure": "Private minute retained outside public package.",
+      "acceptanceCondition": "Owner must confirm private location, retention boundary, redaction rule, and public-safe disclosure before repeat scheduling.",
+      "repeatImpact": "Can trail repeat P0 run after owner acceptance."
+    }
+  ],
+  "repeatEligibilityGates": [
+    {
+      "id": "REG-001",
+      "linkedRepeatGate": "RRG-001",
+      "area": "Authority",
+      "owner": "Authority chair",
+      "gate": "Authority owner named",
+      "eligibilityState": "Blocked",
+      "passCondition": "Chair and alternate privately recorded",
+      "failAction": "Do not run repeat lab",
+      "decisionImpact": "Repeat P0 run remains blocked."
+    },
+    {
+      "id": "REG-002",
+      "linkedRepeatGate": "RRG-002",
+      "area": "Privacy",
+      "owner": "Privacy reviewer",
+      "gate": "Consent and privacy copy accepted",
+      "eligibilityState": "Hold",
+      "passCondition": "Privacy copy accepted for fake/sample testing",
+      "failAction": "Hold privacy tests",
+      "decisionImpact": "Repeat P0 run remains blocked."
+    },
+    {
+      "id": "REG-003",
+      "linkedRepeatGate": "RRG-003",
+      "area": "Privacy",
+      "owner": "Privacy reviewer",
+      "gate": "Outbound email disabled or contained",
+      "eligibilityState": "Hold",
+      "passCondition": "No real email can send",
+      "failAction": "Hold invite path",
+      "decisionImpact": "Repeat P0 run remains blocked."
+    },
+    {
+      "id": "REG-004",
+      "linkedRepeatGate": "RRG-004",
+      "area": "IDS/data",
+      "owner": "IDS/data reviewer",
+      "gate": "Export/delete/retention proof accepted",
+      "eligibilityState": "Hold",
+      "passCondition": "Data rights drill passes privately",
+      "failAction": "Hold data test",
+      "decisionImpact": "Repeat P0 run remains blocked."
+    },
+    {
+      "id": "REG-005",
+      "linkedRepeatGate": "RRG-005",
+      "area": "IDS/data",
+      "owner": "IDS/data reviewer",
+      "gate": "Evidence custody index accepted",
+      "eligibilityState": "Hold",
+      "passCondition": "Private evidence map and redaction rule pass",
+      "failAction": "Hold public summary",
+      "decisionImpact": "Repeat P0 run remains blocked."
+    },
+    {
+      "id": "REG-006",
+      "linkedRepeatGate": "RRG-006",
+      "area": "Support",
+      "owner": "Support owner",
+      "gate": "Complaint/pause route accepted",
+      "eligibilityState": "Hold",
+      "passCondition": "Support pause and escalation route pass",
+      "failAction": "Hold support test",
+      "decisionImpact": "Repeat P0 run remains blocked."
+    },
+    {
+      "id": "REG-007",
+      "linkedRepeatGate": "RRG-007",
+      "area": "Official boundary",
+      "owner": "Official-route owner",
+      "gate": "Official Toastmasters boundary accepted",
+      "eligibilityState": "Blocked",
+      "passCondition": "No official workflow is active or implied",
+      "failAction": "Keep no-go",
+      "decisionImpact": "Repeat P0 run remains blocked."
+    },
+    {
+      "id": "REG-008",
+      "linkedRepeatGate": "RRG-008",
+      "area": "Security",
+      "owner": "Security reviewer",
+      "gate": "Security restore and revoke proof accepted",
+      "eligibilityState": "Hold",
+      "passCondition": "Restore, revoke, credential, and log proof pass",
+      "failAction": "Hold live access",
+      "decisionImpact": "Repeat P0 run remains blocked."
+    },
+    {
+      "id": "REG-009",
+      "linkedRepeatGate": "RRG-009",
+      "area": "Provider",
+      "owner": "Provider access owner",
+      "gate": "Provider refusal script accepted",
+      "eligibilityState": "Hold",
+      "passCondition": "Real-record asks are rejected",
+      "failAction": "Hold provider test",
+      "decisionImpact": "Repeat P0 run remains blocked."
+    },
+    {
+      "id": "REG-010",
+      "linkedRepeatGate": "RRG-010",
+      "area": "Authority",
+      "owner": "Barayamal custodian",
+      "gate": "Barayamal samples accepted",
+      "eligibilityState": "Conditional",
+      "passCondition": "Blocked fields absent",
+      "failAction": "Revise sample",
+      "decisionImpact": "May join repeat P0 run only after matching acceptance and custody records pass."
+    },
+    {
+      "id": "REG-011",
+      "linkedRepeatGate": "RRG-011",
+      "area": "Authority",
+      "owner": "Training owner",
+      "gate": "First Nations Toastmasters guest samples accepted",
+      "eligibilityState": "Hold",
+      "passCondition": "No official member service implied",
+      "failAction": "Revise sample",
+      "decisionImpact": "Repeat P0 run remains blocked."
+    },
+    {
+      "id": "REG-012",
+      "linkedRepeatGate": "RRG-012",
+      "area": "Communications",
+      "owner": "Comms lead",
+      "gate": "Public wording accepted",
+      "eligibilityState": "Conditional",
+      "passCondition": "Preparation-only wording approved",
+      "failAction": "Do not publish update",
+      "decisionImpact": "May join repeat P0 run only after matching acceptance and custody records pass."
+    }
+  ],
+  "ownerSignoffLanes": [
+    {
+      "id": "OSL-001",
+      "lane": "Authority minute",
+      "owner": "Authority chair",
+      "defaultState": "Blocked",
+      "mustAccept": "Final private acceptance minute and quorum lock.",
+      "cannotApprove": "Live Decidim, public launch, or real participant intake.",
+      "publicSafeLine": "Authority acceptance remains private; no pilot has been approved."
+    },
+    {
+      "id": "OSL-002",
+      "lane": "Privacy acceptance",
+      "owner": "Privacy reviewer",
+      "defaultState": "Blocked",
+      "mustAccept": "Consent, disclosure, outbound-email, and private evidence boundaries.",
+      "cannotApprove": "Publishing private evidence or real participant records.",
+      "publicSafeLine": "Privacy acceptance remains private."
+    },
+    {
+      "id": "OSL-003",
+      "lane": "IDS/data acceptance",
+      "owner": "IDS/data steward",
+      "defaultState": "Blocked",
+      "mustAccept": "Evidence custody, retention, export, deletion, and data sovereignty controls.",
+      "cannotApprove": "Real data transfer or provider access.",
+      "publicSafeLine": "IDS/data controls remain under private owner acceptance."
+    },
+    {
+      "id": "OSL-004",
+      "lane": "Provider boundary",
+      "owner": "Provider access owner",
+      "defaultState": "Blocked",
+      "mustAccept": "Provider refusal proof and safe-alternative/RFQ boundary.",
+      "cannotApprove": "Provider access to real participant, organisation, or Toastmasters records.",
+      "publicSafeLine": "No provider has access to real participant, organisation, or Toastmasters records."
+    },
+    {
+      "id": "OSL-005",
+      "lane": "Barayamal sample",
+      "owner": "Barayamal sample owner",
+      "defaultState": "Accepted with sample limits",
+      "mustAccept": "Fake founder/business-owner acceptance path.",
+      "cannotApprove": "Real ABNs, revenue, client, contact, or private business records.",
+      "publicSafeLine": "Barayamal remains a controlled fake/sample organisation test."
+    },
+    {
+      "id": "OSL-006",
+      "lane": "First Nations Toastmasters sample",
+      "owner": "FN Toastmasters sample owner",
+      "defaultState": "Accepted with sample limits",
+      "mustAccept": "Fake guest/member-boundary acceptance path.",
+      "cannotApprove": "Official member records, payments, officer roles, club records, incidents, elections, or education records.",
+      "publicSafeLine": "First Nations Toastmasters remains an unofficial fake/sample tester."
+    },
+    {
+      "id": "OSL-007",
+      "lane": "Public release",
+      "owner": "Comms lead",
+      "defaultState": "Hold",
+      "mustAccept": "Preparation-only wording and blocked-claims check.",
+      "cannotApprove": "Pilot-ready, official-workflow, or provider-access claims.",
+      "publicSafeLine": "Public status can say preparation only."
+    },
+    {
+      "id": "OSL-008",
+      "lane": "Technical repeat readiness",
+      "owner": "Technical custodian",
+      "defaultState": "Hold",
+      "mustAccept": "Repeat-run evidence plan and no live access.",
+      "cannotApprove": "Live Decidim or production credentials.",
+      "publicSafeLine": "Technical work remains fake/sample-only."
+    },
+    {
+      "id": "OSL-009",
+      "lane": "Support and escalation",
+      "owner": "Support owner",
+      "defaultState": "Hold",
+      "mustAccept": "Support route, incident route, withdrawal path, and stop trigger.",
+      "cannotApprove": "Real participant support intake.",
+      "publicSafeLine": "Support pathways remain rehearsed only."
+    },
+    {
+      "id": "OSL-010",
+      "lane": "Dean / Barayamal trusted review",
+      "owner": "Dean Foley / Barayamal",
+      "defaultState": "Advisory only",
+      "mustAccept": "Technical and usefulness review notes.",
+      "cannotApprove": "Replacing owner/community authority.",
+      "publicSafeLine": "Dean/Barayamal review is advisory, not owner approval."
+    }
+  ],
+  "publicReleaseAcceptanceGates": [
+    {
+      "id": "PRA-001",
+      "linkedReleaseGate": "PRG-001",
+      "topic": "Overall",
+      "owner": "Comms lead",
+      "acceptanceState": "Accepted line with conditions",
+      "approvedLine": "The public demo now includes an owner closeout sprint pack; no live pilot has been approved.",
+      "blockedLine": "The project is ready for pilot.",
+      "releaseCondition": "Release only after the private handoff packet is accepted and the line does not imply launch, official Toastmasters workflows, provider data access, or evidence publication.",
+      "acceptanceLimit": "May be used only after private acceptance and only if it does not imply launch, official Toastmasters workflows, provider access, or evidence publication."
+    },
+    {
+      "id": "PRA-002",
+      "linkedReleaseGate": "PRG-002",
+      "topic": "Owner closeout",
+      "owner": "Meeting chair",
+      "acceptanceState": "Accepted line with conditions",
+      "approvedLine": "P0 owner closeout remains private and must pass before repeat testing.",
+      "blockedLine": "Owners have approved launch.",
+      "releaseCondition": "Release only after the private handoff packet is accepted and the line does not imply launch, official Toastmasters workflows, provider data access, or evidence publication.",
+      "acceptanceLimit": "May be used only after private acceptance and only if it does not imply launch, official Toastmasters workflows, provider access, or evidence publication."
+    },
+    {
+      "id": "PRA-003",
+      "linkedReleaseGate": "PRG-003",
+      "topic": "Repeat run",
+      "owner": "Meeting chair",
+      "acceptanceState": "Accepted line with conditions",
+      "approvedLine": "The next valid operating step is repeat private fake/sample stress testing after owner closeout.",
+      "blockedLine": "Repeat testing has passed.",
+      "releaseCondition": "Release only after the private handoff packet is accepted and the line does not imply launch, official Toastmasters workflows, provider data access, or evidence publication.",
+      "acceptanceLimit": "May be used only after private acceptance and only if it does not imply launch, official Toastmasters workflows, provider access, or evidence publication."
+    },
+    {
+      "id": "PRA-004",
+      "linkedReleaseGate": "PRG-004",
+      "topic": "Barayamal",
+      "owner": "Barayamal custodian",
+      "acceptanceState": "Accepted line with conditions",
+      "approvedLine": "Barayamal remains a controlled fake/sample organisation pathway.",
+      "blockedLine": "Barayamal founders are being onboarded.",
+      "releaseCondition": "Release only after the private handoff packet is accepted and the line does not imply launch, official Toastmasters workflows, provider data access, or evidence publication.",
+      "acceptanceLimit": "May be used only after private acceptance and only if it does not imply launch, official Toastmasters workflows, provider access, or evidence publication."
+    },
+    {
+      "id": "PRA-005",
+      "linkedReleaseGate": "PRG-005",
+      "topic": "First Nations Toastmasters",
+      "owner": "Training owner",
+      "acceptanceState": "Accepted line with conditions",
+      "approvedLine": "First Nations Toastmasters remains a fake guest/member-boundary sample only.",
+      "blockedLine": "Official Toastmasters members are being onboarded.",
+      "releaseCondition": "Release only after the private handoff packet is accepted and the line does not imply launch, official Toastmasters workflows, provider data access, or evidence publication.",
+      "acceptanceLimit": "May be used only after private acceptance and only if it does not imply launch, official Toastmasters workflows, provider access, or evidence publication."
+    },
+    {
+      "id": "PRA-006",
+      "linkedReleaseGate": "PRG-006",
+      "topic": "Provider",
+      "owner": "Provider access owner",
+      "acceptanceState": "Accepted line with conditions",
+      "approvedLine": "No provider has access to real participant, organisation, or Toastmasters records.",
+      "blockedLine": "A provider is reviewing real data.",
+      "releaseCondition": "Release only after the private handoff packet is accepted and the line does not imply launch, official Toastmasters workflows, provider data access, or evidence publication.",
+      "acceptanceLimit": "May be used only after private acceptance and only if it does not imply launch, official Toastmasters workflows, provider access, or evidence publication."
+    },
+    {
+      "id": "PRA-007",
+      "linkedReleaseGate": "PRG-007",
+      "topic": "Evidence",
+      "owner": "IDS/data reviewer",
+      "acceptanceState": "Accepted line with conditions",
+      "approvedLine": "Private evidence remains outside the public package.",
+      "blockedLine": "Evidence can be shared publicly.",
+      "releaseCondition": "Release only after the private handoff packet is accepted and the line does not imply launch, official Toastmasters workflows, provider data access, or evidence publication.",
+      "acceptanceLimit": "May be used only after private acceptance and only if it does not imply launch, official Toastmasters workflows, provider access, or evidence publication."
+    },
+    {
+      "id": "PRA-008",
+      "linkedReleaseGate": "PRG-008",
+      "topic": "Privacy",
+      "owner": "Privacy reviewer",
+      "acceptanceState": "Accepted line with conditions",
+      "approvedLine": "Privacy and consent controls remain under private owner review.",
+      "blockedLine": "Privacy approval is complete.",
+      "releaseCondition": "Release only after the private handoff packet is accepted and the line does not imply launch, official Toastmasters workflows, provider data access, or evidence publication.",
+      "acceptanceLimit": "May be used only after private acceptance and only if it does not imply launch, official Toastmasters workflows, provider access, or evidence publication."
+    },
+    {
+      "id": "PRA-009",
+      "linkedReleaseGate": "PRG-009",
+      "topic": "Official boundary",
+      "owner": "Official-route owner",
+      "acceptanceState": "Accepted line with conditions",
+      "approvedLine": "Official Toastmasters workflows are not active or approved in this demo.",
+      "blockedLine": "Official Toastmasters processes are being tested live.",
+      "releaseCondition": "Release only after the private handoff packet is accepted and the line does not imply launch, official Toastmasters workflows, provider data access, or evidence publication.",
+      "acceptanceLimit": "May be used only after private acceptance and only if it does not imply launch, official Toastmasters workflows, provider access, or evidence publication."
+    },
+    {
+      "id": "PRA-010",
+      "linkedReleaseGate": "PRG-010",
+      "topic": "Decision",
+      "owner": "Authority chair",
+      "acceptanceState": "Accepted line with conditions",
+      "approvedLine": "No-go/archive remains explicit if P0 closeout does not pass.",
+      "blockedLine": "Proceed is inevitable.",
+      "releaseCondition": "Release only after the private handoff packet is accepted and the line does not imply launch, official Toastmasters workflows, provider data access, or evidence publication.",
+      "acceptanceLimit": "May be used only after private acceptance and only if it does not imply launch, official Toastmasters workflows, provider access, or evidence publication."
+    }
+  ],
+  "launchLockChecks": [
+    {
+      "id": "LLC-001",
+      "lock": "Limited private pilot",
+      "owner": "Authority chair",
+      "defaultState": "Blocked",
+      "reason": "Final authority minute and repeat P0 pass do not exist yet.",
+      "releaseCondition": "Only after v5.8, v5.7, v5.6, v5.5, and repeat P0 all pass privately.",
+      "publicSafeLine": "No limited private pilot has been approved."
+    },
+    {
+      "id": "LLC-002",
+      "lock": "Provider real-record access",
+      "owner": "Provider access owner",
+      "defaultState": "Blocked",
+      "reason": "Provider boundary proof is not privately accepted.",
+      "releaseCondition": "Only after owner-approved provider agreement and real-record authority, outside this demo.",
+      "publicSafeLine": "No provider has real-record access."
+    },
+    {
+      "id": "LLC-003",
+      "lock": "Outbound email",
+      "owner": "Privacy reviewer",
+      "defaultState": "Blocked",
+      "reason": "Outbound participant communication remains disabled for real people.",
+      "releaseCondition": "Only after privacy and consent approval in a private environment.",
+      "publicSafeLine": "No outbound email is active for real participants."
+    },
+    {
+      "id": "LLC-004",
+      "lock": "Official Toastmasters workflows",
+      "owner": "Official-route owner",
+      "defaultState": "Blocked",
+      "reason": "Official member, officer, club, education, payment, and governance records are out of scope.",
+      "releaseCondition": "Only after official approval route outside this fake/sample demo.",
+      "publicSafeLine": "Official Toastmasters workflows are not active."
+    },
+    {
+      "id": "LLC-005",
+      "lock": "Live Decidim access",
+      "owner": "Technical custodian",
+      "defaultState": "Blocked",
+      "reason": "No production credentials, hosting, or real access have been approved.",
+      "releaseCondition": "Only after private technical acceptance and authority approval.",
+      "publicSafeLine": "Live Decidim access remains blocked."
+    },
+    {
+      "id": "LLC-006",
+      "lock": "Real participant records",
+      "owner": "Privacy reviewer",
+      "defaultState": "Blocked",
+      "reason": "The public package is fake/sample-only.",
+      "releaseCondition": "Only after private pilot intake approval outside the public package.",
+      "publicSafeLine": "No real participant records are in this package."
+    },
+    {
+      "id": "LLC-007",
+      "lock": "Public launch claims",
+      "owner": "Comms lead",
+      "defaultState": "Blocked",
+      "reason": "Public lines must remain preparation-only.",
+      "releaseCondition": "Only after final private owner approval and release line acceptance.",
+      "publicSafeLine": "Public claims must say preparation only."
+    },
+    {
+      "id": "LLC-008",
+      "lock": "Repeat P0 scheduling",
+      "owner": "Meeting chair",
+      "defaultState": "Blocked",
+      "reason": "Blocked/held acceptance and custody items remain.",
+      "releaseCondition": "Only after P0 owner acceptance, custody, signoff, and launch-lock checks pass.",
+      "publicSafeLine": "Repeat P0 run is not scheduled publicly."
+    }
+  ],
+  "decisionOptions": [
+    {
+      "id": "PDO-001",
+      "option": "Continue remediation",
+      "defaultState": "Available",
+      "owner": "Meeting chair",
+      "condition": "Any blocked or held item remains.",
+      "allowedAction": "Assign owner actions and repeat v5.8 acceptance review.",
+      "blockedAction": "Pilot approval.",
+      "publicLine": "Preparation continues."
+    },
+    {
+      "id": "PDO-002",
+      "option": "Schedule repeat P0 run",
+      "defaultState": "Blocked",
+      "owner": "Meeting chair",
+      "condition": "Every P0 acceptance, custody item, signoff lane, launch lock, and export packet passes privately.",
+      "allowedAction": "Schedule fake/sample repeat run.",
+      "blockedAction": "Real participant intake or provider access.",
+      "publicLine": "Repeat P0 is not yet scheduled."
+    },
+    {
+      "id": "PDO-003",
+      "option": "Prepare limited private pilot decision",
+      "defaultState": "Blocked",
+      "owner": "Authority chair",
+      "condition": "Repeat P0 run passes privately and final authority minute is accepted.",
+      "allowedAction": "Prepare decision packet for owners.",
+      "blockedAction": "Treating preparation as approval.",
+      "publicLine": "No pilot decision has been made."
+    },
+    {
+      "id": "PDO-004",
+      "option": "No-go / archive",
+      "defaultState": "Available",
+      "owner": "Authority chair",
+      "condition": "Any non-negotiable P0 item remains blocked.",
+      "allowedAction": "Archive or redesign the pilot path.",
+      "blockedAction": "Quietly proceeding despite blockers.",
+      "publicLine": "No-go/archive remains available."
+    }
+  ],
+  "exportPackets": [
+    {
+      "id": "AEP-001",
+      "packet": "Private acceptance minute shell",
+      "owner": "Meeting chair",
+      "format": "Markdown",
+      "defaultState": "Ready",
+      "contains": "Selected acceptance, owner, custody, signoff, decision, launch locks.",
+      "excludes": "Real records, credentials, official Toastmasters data.",
+      "useWhen": "During v5.8 acceptance review."
+    },
+    {
+      "id": "AEP-002",
+      "packet": "Owner acceptance register",
+      "owner": "Action coordinator",
+      "format": "CSV",
+      "defaultState": "Ready",
+      "contains": "All owner acceptance items and states.",
+      "excludes": "Private evidence contents.",
+      "useWhen": "Before any repeat schedule discussion."
+    },
+    {
+      "id": "AEP-003",
+      "packet": "Custody acceptance index",
+      "owner": "Evidence custodian",
+      "format": "CSV",
+      "defaultState": "Hold",
+      "contains": "Private location, retention, disclosure and repeat impact.",
+      "excludes": "The evidence itself.",
+      "useWhen": "Before repeat P0 scheduling."
+    },
+    {
+      "id": "AEP-004",
+      "packet": "Repeat eligibility register",
+      "owner": "Meeting chair",
+      "format": "CSV",
+      "defaultState": "Hold",
+      "contains": "Eligibility gates, pass conditions, fail actions.",
+      "excludes": "Calendar invites or owner private details.",
+      "useWhen": "Before scheduling repeat P0."
+    },
+    {
+      "id": "AEP-005",
+      "packet": "Launch lock register",
+      "owner": "Authority chair",
+      "format": "CSV",
+      "defaultState": "Blocked",
+      "contains": "Each blocked launch condition and release rule.",
+      "excludes": "Approval to launch.",
+      "useWhen": "Before any pilot decision."
+    },
+    {
+      "id": "AEP-006",
+      "packet": "Provider boundary packet",
+      "owner": "Provider access owner",
+      "format": "Markdown",
+      "defaultState": "Blocked",
+      "contains": "ACC-008 / HOF-008 / EVS-008 / OSP-008 chain and no-real-record line.",
+      "excludes": "Provider credentials or real datasets.",
+      "useWhen": "Before provider retest."
+    },
+    {
+      "id": "AEP-007",
+      "packet": "Controlled sample acceptance packet",
+      "owner": "Sample owners",
+      "format": "Markdown",
+      "defaultState": "Ready",
+      "contains": "Barayamal and First Nations Toastmasters fake/sample acceptance lines.",
+      "excludes": "Real business or official member records.",
+      "useWhen": "Before controlled sample retest."
+    },
+    {
+      "id": "AEP-008",
+      "packet": "Final owner decision shell",
+      "owner": "Authority chair",
+      "format": "Markdown",
+      "defaultState": "Blocked",
+      "contains": "Proceed/repeat/no-go options and unresolved blockers.",
+      "excludes": "Final approval until owners sign privately.",
+      "useWhen": "After repeat P0 results."
+    }
+  ]
+}

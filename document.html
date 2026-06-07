@@ -635,7 +635,7 @@
 <a class="btn" href="pilot-rehearsal-control-room.html">Control Room</a>
 <a class="btn" href="pilot-decision-build-handoff.html">Decision Handoff</a>
 <a class="btn" href="private-owner-decision-meeting.html">Owner Meeting</a>
-<a class="btn" href="private-decision-execution-control.html">Execution Control</a><a class="btn" href="private-evidence-stress-test-lab.html">Stress Lab</a><a class="btn" href="private-stress-lab-run-pack.html">Run Pack</a><a class="btn" href="private-run-results-decision-board.html">Results Board</a><a class="btn" href="p0-remediation-repeat-run-control.html">Repeat Control</a><a class="btn" href="owner-closeout-sprint-pack.html">Closeout Sprint</a><a class="btn" href="closeout-session-runner.html">Session Runner</a><a class="btn" href="post-session-handoff-console.html">Handoff</a>
+<a class="btn" href="private-decision-execution-control.html">Execution Control</a><a class="btn" href="private-evidence-stress-test-lab.html">Stress Lab</a><a class="btn" href="private-stress-lab-run-pack.html">Run Pack</a><a class="btn" href="private-run-results-decision-board.html">Results Board</a><a class="btn" href="p0-remediation-repeat-run-control.html">Repeat Control</a><a class="btn" href="owner-closeout-sprint-pack.html">Closeout Sprint</a><a class="btn" href="closeout-session-runner.html">Session Runner</a><a class="btn" href="post-session-handoff-console.html">Handoff</a><a class="btn" href="private-handoff-acceptance-room.html">Acceptance</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -686,6 +686,11 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Private handoff acceptance guide", path: "docs/private-handoff-acceptance-room-v5.8.md", type: "markdown", description: "How to use the v5.8 acceptance room." },
+      { category: "Start Here", title: "Owner acceptance and signoff rules", path: "docs/owner-acceptance-and-signoff-rules-v5.8.md", type: "markdown", description: "Owner acceptance, alternates, and Dean advisory limits." },
+      { category: "Start Here", title: "Evidence custody acceptance", path: "docs/evidence-custody-acceptance-v5.8.md", type: "markdown", description: "Private evidence custody acceptance rules." },
+      { category: "Start Here", title: "Repeat-run and pilot decision locks", path: "docs/repeat-run-and-pilot-decision-locks-v5.8.md", type: "markdown", description: "Repeat-run eligibility and launch-block rules." },
+      { category: "Start Here", title: "Public release acceptance rules", path: "docs/public-release-acceptance-rules-v5.8.md", type: "markdown", description: "Preparation-only public line approvals." },
       { category: "Start Here", title: "Post-session handoff guide", path: "docs/post-session-handoff-console-v5.7.md", type: "markdown", description: "How to use the v5.7 handoff console." },
       { category: "Start Here", title: "Private owner action handoff", path: "docs/private-owner-action-handoff-v5.7.md", type: "markdown", description: "Owner actions and unresolved blockers." },
       { category: "Start Here", title: "Evidence custody and repeat schedule", path: "docs/evidence-custody-and-repeat-schedule-v5.7.md", type: "markdown", description: "Evidence custody and repeat-run gates." },
@@ -1064,6 +1069,20 @@
       { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
       { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
       { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Private Handoff Acceptance", title: "Acceptance room guide v5.8", path: "docs/private-handoff-acceptance-room-v5.8.md", type: "markdown", description: "How to use the private handoff acceptance room." },
+      { category: "Private Handoff Acceptance", title: "Owner acceptance and signoff rules v5.8", path: "docs/owner-acceptance-and-signoff-rules-v5.8.md", type: "markdown", description: "Owner acceptance, alternates, and advisory limits." },
+      { category: "Private Handoff Acceptance", title: "Evidence custody acceptance v5.8", path: "docs/evidence-custody-acceptance-v5.8.md", type: "markdown", description: "Custody acceptance rules." },
+      { category: "Private Handoff Acceptance", title: "Repeat-run and pilot locks v5.8", path: "docs/repeat-run-and-pilot-decision-locks-v5.8.md", type: "markdown", description: "Repeat-run eligibility and launch locks." },
+      { category: "Private Handoff Acceptance", title: "Public release acceptance v5.8", path: "docs/public-release-acceptance-rules-v5.8.md", type: "markdown", description: "Public-safe release rules." },
+      { category: "Private Handoff Acceptance", title: "Private owner acceptance v5.8", path: "data/private-owner-acceptance-register-v5.8.csv", type: "csv", description: "Eighteen owner acceptance records." },
+      { category: "Private Handoff Acceptance", title: "Evidence custody acceptance v5.8", path: "data/evidence-custody-acceptance-v5.8.csv", type: "csv", description: "Sixteen custody acceptance records." },
+      { category: "Private Handoff Acceptance", title: "Repeat-run eligibility gates v5.8", path: "data/repeat-run-eligibility-gates-v5.8.csv", type: "csv", description: "Twelve repeat eligibility gates." },
+      { category: "Private Handoff Acceptance", title: "Owner signoff lanes v5.8", path: "data/owner-signoff-lanes-v5.8.csv", type: "csv", description: "Ten signoff lanes." },
+      { category: "Private Handoff Acceptance", title: "Public release acceptance v5.8", path: "data/public-release-acceptance-v5.8.csv", type: "csv", description: "Ten release acceptance gates." },
+      { category: "Private Handoff Acceptance", title: "Launch lock checks v5.8", path: "data/launch-lock-checks-v5.8.csv", type: "csv", description: "Eight launch lock checks." },
+      { category: "Private Handoff Acceptance", title: "Private pilot decision options v5.8", path: "data/private-pilot-decision-options-v5.8.csv", type: "csv", description: "Four decision options." },
+      { category: "Private Handoff Acceptance", title: "Acceptance export packets v5.8", path: "data/acceptance-export-packets-v5.8.csv", type: "csv", description: "Eight export packets." },
+      { category: "Private Handoff Acceptance", title: "Private handoff acceptance package v5.8", path: "data/private-handoff-acceptance-package-v5.8.json", type: "json", description: "Machine-readable v5.8 package." },
       { category: "Post-Session Handoff", title: "Handoff guide v5.7", path: "docs/post-session-handoff-console-v5.7.md", type: "markdown", description: "How to use the post-session handoff console." },
       { category: "Post-Session Handoff", title: "Private owner action handoff v5.7", path: "docs/private-owner-action-handoff-v5.7.md", type: "markdown", description: "Owner actions and unresolved blockers." },
       { category: "Post-Session Handoff", title: "Evidence custody and repeat schedule v5.7", path: "docs/evidence-custody-and-repeat-schedule-v5.7.md", type: "markdown", description: "Evidence custody and repeat schedule gates." },

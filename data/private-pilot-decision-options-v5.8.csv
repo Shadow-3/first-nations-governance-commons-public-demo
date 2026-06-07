@@ -1,0 +1,5 @@
+id,option,defaultState,owner,condition,allowedAction,blockedAction,publicLine
+PDO-001,Continue remediation,Available,Meeting chair,Any blocked or held item remains.,Assign owner actions and repeat v5.8 acceptance review.,Pilot approval.,Preparation continues.
+PDO-002,Schedule repeat P0 run,Blocked,Meeting chair,"Every P0 acceptance, custody item, signoff lane, launch lock, and export packet passes privately.",Schedule fake/sample repeat run.,Real participant intake or provider access.,Repeat P0 is not yet scheduled.
+PDO-003,Prepare limited private pilot decision,Blocked,Authority chair,Repeat P0 run passes privately and final authority minute is accepted.,Prepare decision packet for owners.,Treating preparation as approval.,No pilot decision has been made.
+PDO-004,No-go / archive,Available,Authority chair,Any non-negotiable P0 item remains blocked.,Archive or redesign the pilot path.,Quietly proceeding despite blockers.,No-go/archive remains available.

@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v5.7  
+Version: v5.8  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -152,6 +152,26 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 142. `docs/public-demo-release-notes-v2.3.md` - v2.3 release summary.
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
+
+## v5.8 Private Handoff Acceptance Room Additions
+
+- `private-handoff-acceptance-room.html` interactive private handoff acceptance room.
+- `docs/private-handoff-acceptance-room-v5.8.md`
+- `docs/owner-acceptance-and-signoff-rules-v5.8.md`
+- `docs/evidence-custody-acceptance-v5.8.md`
+- `docs/repeat-run-and-pilot-decision-locks-v5.8.md`
+- `docs/public-release-acceptance-rules-v5.8.md`
+- `docs/public-demo-release-notes-v5.8.md`
+- `data/private-owner-acceptance-register-v5.8.csv`
+- `data/evidence-custody-acceptance-v5.8.csv`
+- `data/repeat-run-eligibility-gates-v5.8.csv`
+- `data/owner-signoff-lanes-v5.8.csv`
+- `data/public-release-acceptance-v5.8.csv`
+- `data/launch-lock-checks-v5.8.csv`
+- `data/private-pilot-decision-options-v5.8.csv`
+- `data/acceptance-export-packets-v5.8.csv`
+- `data/private-handoff-acceptance-package-v5.8.json`
+
 
 ## v5.7 Post-Session Handoff Console Additions
 

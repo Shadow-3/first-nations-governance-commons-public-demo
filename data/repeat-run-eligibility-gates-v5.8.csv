@@ -1,0 +1,13 @@
+id,linkedRepeatGate,area,owner,gate,eligibilityState,passCondition,failAction,decisionImpact
+REG-001,RRG-001,Authority,Authority chair,Authority owner named,Blocked,Chair and alternate privately recorded,Do not run repeat lab,Repeat P0 run remains blocked.
+REG-002,RRG-002,Privacy,Privacy reviewer,Consent and privacy copy accepted,Hold,Privacy copy accepted for fake/sample testing,Hold privacy tests,Repeat P0 run remains blocked.
+REG-003,RRG-003,Privacy,Privacy reviewer,Outbound email disabled or contained,Hold,No real email can send,Hold invite path,Repeat P0 run remains blocked.
+REG-004,RRG-004,IDS/data,IDS/data reviewer,Export/delete/retention proof accepted,Hold,Data rights drill passes privately,Hold data test,Repeat P0 run remains blocked.
+REG-005,RRG-005,IDS/data,IDS/data reviewer,Evidence custody index accepted,Hold,Private evidence map and redaction rule pass,Hold public summary,Repeat P0 run remains blocked.
+REG-006,RRG-006,Support,Support owner,Complaint/pause route accepted,Hold,Support pause and escalation route pass,Hold support test,Repeat P0 run remains blocked.
+REG-007,RRG-007,Official boundary,Official-route owner,Official Toastmasters boundary accepted,Blocked,No official workflow is active or implied,Keep no-go,Repeat P0 run remains blocked.
+REG-008,RRG-008,Security,Security reviewer,Security restore and revoke proof accepted,Hold,"Restore, revoke, credential, and log proof pass",Hold live access,Repeat P0 run remains blocked.
+REG-009,RRG-009,Provider,Provider access owner,Provider refusal script accepted,Hold,Real-record asks are rejected,Hold provider test,Repeat P0 run remains blocked.
+REG-010,RRG-010,Authority,Barayamal custodian,Barayamal samples accepted,Conditional,Blocked fields absent,Revise sample,May join repeat P0 run only after matching acceptance and custody records pass.
+REG-011,RRG-011,Authority,Training owner,First Nations Toastmasters guest samples accepted,Hold,No official member service implied,Revise sample,Repeat P0 run remains blocked.
+REG-012,RRG-012,Communications,Comms lead,Public wording accepted,Conditional,Preparation-only wording approved,Do not publish update,May join repeat P0 run only after matching acceptance and custody records pass.

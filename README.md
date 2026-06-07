@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v5.7
+Current package version: v5.8
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -80,6 +80,7 @@ Open `p0-remediation-repeat-run-control.html` to close P0 owner actions, prepare
 Open `owner-closeout-sprint-pack.html` to run owner closeout, evidence intake, quorum checks, provider refusal, public status approval, and final proceed/repeat/no-go minutes.
 Open `closeout-session-runner.html` to rehearse attendance, evidence votes, blockers, provider boundary tests, public-line approvals, and private session exports.
 Open `post-session-handoff-console.html` after the private closeout session to assemble owner actions, evidence custody, repeat-run gates, public release approvals, calendar holds, and export bundles.
+Open `private-handoff-acceptance-room.html` after the v5.7 handoff packet to accept, hold, or block owner actions, custody, repeat eligibility, public lines, launch locks, decisions, and export packets.
 
 The demo shows:
 
@@ -111,6 +112,22 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v5.8.md`
+- `docs/private-handoff-acceptance-room-v5.8.md`
+- `docs/owner-acceptance-and-signoff-rules-v5.8.md`
+- `docs/evidence-custody-acceptance-v5.8.md`
+- `docs/repeat-run-and-pilot-decision-locks-v5.8.md`
+- `docs/public-release-acceptance-rules-v5.8.md`
+- `data/private-owner-acceptance-register-v5.8.csv`
+- `data/evidence-custody-acceptance-v5.8.csv`
+- `data/repeat-run-eligibility-gates-v5.8.csv`
+- `data/owner-signoff-lanes-v5.8.csv`
+- `data/public-release-acceptance-v5.8.csv`
+- `data/launch-lock-checks-v5.8.csv`
+- `data/private-pilot-decision-options-v5.8.csv`
+- `data/acceptance-export-packets-v5.8.csv`
+- `data/private-handoff-acceptance-package-v5.8.json`
+
 - `docs/public-demo-release-notes-v5.7.md`
 - `docs/post-session-handoff-console-v5.7.md`
 - `docs/private-owner-action-handoff-v5.7.md`
@@ -1184,6 +1201,15 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v5.8 Private Handoff Acceptance Room Upgrade
+
+v5.8 adds `private-handoff-acceptance-room.html` as the private owner acceptance layer after the v5.7 handoff packet.
+
+It includes 18 owner acceptance records, 16 custody acceptance records, 12 repeat eligibility gates, 10 owner signoff lanes, 10 public release acceptance gates, 8 launch lock checks, 4 decision options, 8 export packets, and 86 total acceptance records.
+
+The acceptance room can prepare private acceptance minutes and repeat-run eligibility, but it cannot approve limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, or live Decidim.
+
 
 ## v5.7 Post-Session Handoff Console Upgrade
 

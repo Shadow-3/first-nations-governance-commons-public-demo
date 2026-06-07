@@ -1,0 +1,9 @@
+id,lock,owner,defaultState,reason,releaseCondition,publicSafeLine
+LLC-001,Limited private pilot,Authority chair,Blocked,Final authority minute and repeat P0 pass do not exist yet.,"Only after v5.8, v5.7, v5.6, v5.5, and repeat P0 all pass privately.",No limited private pilot has been approved.
+LLC-002,Provider real-record access,Provider access owner,Blocked,Provider boundary proof is not privately accepted.,"Only after owner-approved provider agreement and real-record authority, outside this demo.",No provider has real-record access.
+LLC-003,Outbound email,Privacy reviewer,Blocked,Outbound participant communication remains disabled for real people.,Only after privacy and consent approval in a private environment.,No outbound email is active for real participants.
+LLC-004,Official Toastmasters workflows,Official-route owner,Blocked,"Official member, officer, club, education, payment, and governance records are out of scope.",Only after official approval route outside this fake/sample demo.,Official Toastmasters workflows are not active.
+LLC-005,Live Decidim access,Technical custodian,Blocked,"No production credentials, hosting, or real access have been approved.",Only after private technical acceptance and authority approval.,Live Decidim access remains blocked.
+LLC-006,Real participant records,Privacy reviewer,Blocked,The public package is fake/sample-only.,Only after private pilot intake approval outside the public package.,No real participant records are in this package.
+LLC-007,Public launch claims,Comms lead,Blocked,Public lines must remain preparation-only.,Only after final private owner approval and release line acceptance.,Public claims must say preparation only.
+LLC-008,Repeat P0 scheduling,Meeting chair,Blocked,Blocked/held acceptance and custody items remain.,"Only after P0 owner acceptance, custody, signoff, and launch-lock checks pass.",Repeat P0 run is not scheduled publicly.
