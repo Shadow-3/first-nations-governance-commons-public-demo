@@ -1,0 +1,9 @@
+id,linkedScenario,test,owner,defaultState,mustProve,mustNotDo,publicSafeLine
+PBT-001,SCN-009,Provider real-record refusal,Provider access owner,Blocked,"Provider path refuses real participant, organisation, and Toastmasters records.",Send real records to a provider.,"No provider has access to real participant, organisation, or Toastmasters records."
+PBT-002,SCN-009,Provider RFQ safe-alternative boundary,Provider access owner,Blocked,RFQ or quote path uses fake/sample requirements only.,Upload private records or credentials.,Provider work remains fake/sample-only.
+PBT-003,SCN-009,Provider evidence redaction,Evidence custodian,Hold,Provider evidence packet contains only refusal proof and boundary notes.,Publish provider correspondence with private details.,Private provider evidence is not published.
+PBT-004,SCN-009,Provider access audit,Technical custodian,Hold,"No provider account, API key, production credential, or live environment access exists.",Create provider live access.,Live Decidim and provider access remain blocked.
+PBT-005,SCN-009,Provider public-line check,Comms lead,Hold,Public line says no provider has real-record access.,"Claim provider selection, launch, or access approval.",No provider has real-record access.
+PBT-006,SCN-009,Provider incident route,Support owner,Hold,Incident route exists if provider boundary fails.,Continue after provider asks for real records.,Provider boundary failures stop the run.
+PBT-007,SCN-009,Provider owner signoff,Provider access owner,Blocked,Provider owner accepts the repeat test result privately.,Let advisory review replace provider-owner signoff.,Provider acceptance remains private.
+PBT-008,SCN-009,Provider decision lock,Authority chair,Blocked,Final authority decision keeps provider real-record access blocked.,Treat fake/sample provider retest as real provider approval.,Provider approval has not been granted.

@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v5.8
+Current package version: v5.9
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -81,6 +81,7 @@ Open `owner-closeout-sprint-pack.html` to run owner closeout, evidence intake, q
 Open `closeout-session-runner.html` to rehearse attendance, evidence votes, blockers, provider boundary tests, public-line approvals, and private session exports.
 Open `post-session-handoff-console.html` after the private closeout session to assemble owner actions, evidence custody, repeat-run gates, public release approvals, calendar holds, and export bundles.
 Open `private-handoff-acceptance-room.html` after the v5.7 handoff packet to accept, hold, or block owner actions, custody, repeat eligibility, public lines, launch locks, decisions, and export packets.
+Open `repeat-p0-run-planner.html` after v5.8 private acceptance to prepare a controlled fake/sample repeat P0 run schedule, scenario deck, attendance roster, evidence plan, stop triggers, provider retest, communications holds, and post-run decision gates.
 
 The demo shows:
 
@@ -112,6 +113,24 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v5.9.md`
+- `docs/repeat-p0-run-planner-v5.9.md`
+- `docs/repeat-p0-session-script-v5.9.md`
+- `docs/evidence-capture-and-stop-triggers-v5.9.md`
+- `docs/provider-boundary-repeat-test-v5.9.md`
+- `docs/post-run-decision-rules-v5.9.md`
+- `data/repeat-p0-run-schedule-v5.9.csv`
+- `data/repeat-p0-scenario-deck-v5.9.csv`
+- `data/repeat-p0-attendance-roster-v5.9.csv`
+- `data/repeat-p0-evidence-capture-v5.9.csv`
+- `data/repeat-p0-stop-triggers-v5.9.csv`
+- `data/repeat-p0-provider-boundary-tests-v5.9.csv`
+- `data/repeat-p0-sample-track-tests-v5.9.csv`
+- `data/repeat-p0-post-run-decision-gates-v5.9.csv`
+- `data/repeat-p0-communications-holds-v5.9.csv`
+- `data/repeat-p0-export-packets-v5.9.csv`
+- `data/repeat-p0-run-planner-package-v5.9.json`
+
 - `docs/public-demo-release-notes-v5.8.md`
 - `docs/private-handoff-acceptance-room-v5.8.md`
 - `docs/owner-acceptance-and-signoff-rules-v5.8.md`
@@ -1201,6 +1220,15 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v5.9 Repeat P0 Run Planner Upgrade
+
+v5.9 adds `repeat-p0-run-planner.html` as the private repeat P0 planning layer after v5.8 acceptance.
+
+It includes 12 schedule blocks, 14 scenarios, 12 attendance roster records, 18 evidence capture records, 10 stop triggers, 8 provider boundary tests, 12 Barayamal and First Nations Toastmasters sample tests, 10 post-run decision gates, 8 communications holds, 8 export packets, and 112 total run records.
+
+The planner prepares a fake/sample repeat P0 run only. It cannot approve limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, public launch claims, or live Decidim.
+
 
 ## v5.8 Private Handoff Acceptance Room Upgrade
 

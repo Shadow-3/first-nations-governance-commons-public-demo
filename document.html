@@ -635,7 +635,7 @@
 <a class="btn" href="pilot-rehearsal-control-room.html">Control Room</a>
 <a class="btn" href="pilot-decision-build-handoff.html">Decision Handoff</a>
 <a class="btn" href="private-owner-decision-meeting.html">Owner Meeting</a>
-<a class="btn" href="private-decision-execution-control.html">Execution Control</a><a class="btn" href="private-evidence-stress-test-lab.html">Stress Lab</a><a class="btn" href="private-stress-lab-run-pack.html">Run Pack</a><a class="btn" href="private-run-results-decision-board.html">Results Board</a><a class="btn" href="p0-remediation-repeat-run-control.html">Repeat Control</a><a class="btn" href="owner-closeout-sprint-pack.html">Closeout Sprint</a><a class="btn" href="closeout-session-runner.html">Session Runner</a><a class="btn" href="post-session-handoff-console.html">Handoff</a><a class="btn" href="private-handoff-acceptance-room.html">Acceptance</a>
+<a class="btn" href="private-decision-execution-control.html">Execution Control</a><a class="btn" href="private-evidence-stress-test-lab.html">Stress Lab</a><a class="btn" href="private-stress-lab-run-pack.html">Run Pack</a><a class="btn" href="private-run-results-decision-board.html">Results Board</a><a class="btn" href="p0-remediation-repeat-run-control.html">Repeat Control</a><a class="btn" href="owner-closeout-sprint-pack.html">Closeout Sprint</a><a class="btn" href="closeout-session-runner.html">Session Runner</a><a class="btn" href="post-session-handoff-console.html">Handoff</a><a class="btn" href="private-handoff-acceptance-room.html">Acceptance</a><a class="btn" href="repeat-p0-run-planner.html">Repeat Run</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -686,6 +686,11 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Repeat P0 run planner guide", path: "docs/repeat-p0-run-planner-v5.9.md", type: "markdown", description: "How to use the v5.9 repeat P0 run planner." },
+      { category: "Start Here", title: "Repeat P0 session script", path: "docs/repeat-p0-session-script-v5.9.md", type: "markdown", description: "Private repeat-run agenda and minute flow." },
+      { category: "Start Here", title: "Evidence capture and stop triggers", path: "docs/evidence-capture-and-stop-triggers-v5.9.md", type: "markdown", description: "Evidence capture and stop-trigger rules." },
+      { category: "Start Here", title: "Provider boundary repeat test", path: "docs/provider-boundary-repeat-test-v5.9.md", type: "markdown", description: "Provider no-real-record repeat test." },
+      { category: "Start Here", title: "Post-run decision rules", path: "docs/post-run-decision-rules-v5.9.md", type: "markdown", description: "Pass, hold, block, no-go, and decision-prep rules." },
       { category: "Start Here", title: "Private handoff acceptance guide", path: "docs/private-handoff-acceptance-room-v5.8.md", type: "markdown", description: "How to use the v5.8 acceptance room." },
       { category: "Start Here", title: "Owner acceptance and signoff rules", path: "docs/owner-acceptance-and-signoff-rules-v5.8.md", type: "markdown", description: "Owner acceptance, alternates, and Dean advisory limits." },
       { category: "Start Here", title: "Evidence custody acceptance", path: "docs/evidence-custody-acceptance-v5.8.md", type: "markdown", description: "Private evidence custody acceptance rules." },
@@ -1069,6 +1074,22 @@
       { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
       { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
       { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Repeat P0 Run Planner", title: "Run planner guide v5.9", path: "docs/repeat-p0-run-planner-v5.9.md", type: "markdown", description: "How to use the repeat P0 planner." },
+      { category: "Repeat P0 Run Planner", title: "Session script v5.9", path: "docs/repeat-p0-session-script-v5.9.md", type: "markdown", description: "Private repeat-run agenda and minute flow." },
+      { category: "Repeat P0 Run Planner", title: "Evidence and stop triggers v5.9", path: "docs/evidence-capture-and-stop-triggers-v5.9.md", type: "markdown", description: "Evidence capture and stop triggers." },
+      { category: "Repeat P0 Run Planner", title: "Provider boundary repeat test v5.9", path: "docs/provider-boundary-repeat-test-v5.9.md", type: "markdown", description: "Provider no-real-record retest path." },
+      { category: "Repeat P0 Run Planner", title: "Post-run decision rules v5.9", path: "docs/post-run-decision-rules-v5.9.md", type: "markdown", description: "Post-run decision rules." },
+      { category: "Repeat P0 Run Planner", title: "Run schedule v5.9", path: "data/repeat-p0-run-schedule-v5.9.csv", type: "csv", description: "Twelve schedule blocks." },
+      { category: "Repeat P0 Run Planner", title: "Scenario deck v5.9", path: "data/repeat-p0-scenario-deck-v5.9.csv", type: "csv", description: "Fourteen scenarios." },
+      { category: "Repeat P0 Run Planner", title: "Attendance roster v5.9", path: "data/repeat-p0-attendance-roster-v5.9.csv", type: "csv", description: "Twelve required or advisory roles." },
+      { category: "Repeat P0 Run Planner", title: "Evidence capture v5.9", path: "data/repeat-p0-evidence-capture-v5.9.csv", type: "csv", description: "Eighteen evidence capture records." },
+      { category: "Repeat P0 Run Planner", title: "Stop triggers v5.9", path: "data/repeat-p0-stop-triggers-v5.9.csv", type: "csv", description: "Ten armed stop triggers." },
+      { category: "Repeat P0 Run Planner", title: "Provider boundary tests v5.9", path: "data/repeat-p0-provider-boundary-tests-v5.9.csv", type: "csv", description: "Eight provider retests." },
+      { category: "Repeat P0 Run Planner", title: "Sample track tests v5.9", path: "data/repeat-p0-sample-track-tests-v5.9.csv", type: "csv", description: "Twelve Barayamal and First Nations Toastmasters tests." },
+      { category: "Repeat P0 Run Planner", title: "Post-run decision gates v5.9", path: "data/repeat-p0-post-run-decision-gates-v5.9.csv", type: "csv", description: "Ten post-run decision gates." },
+      { category: "Repeat P0 Run Planner", title: "Communications holds v5.9", path: "data/repeat-p0-communications-holds-v5.9.csv", type: "csv", description: "Eight preparation-only public lines." },
+      { category: "Repeat P0 Run Planner", title: "Export packets v5.9", path: "data/repeat-p0-export-packets-v5.9.csv", type: "csv", description: "Eight repeat-run export packets." },
+      { category: "Repeat P0 Run Planner", title: "Repeat P0 run planner package v5.9", path: "data/repeat-p0-run-planner-package-v5.9.json", type: "json", description: "Machine-readable v5.9 package." },
       { category: "Private Handoff Acceptance", title: "Acceptance room guide v5.8", path: "docs/private-handoff-acceptance-room-v5.8.md", type: "markdown", description: "How to use the private handoff acceptance room." },
       { category: "Private Handoff Acceptance", title: "Owner acceptance and signoff rules v5.8", path: "docs/owner-acceptance-and-signoff-rules-v5.8.md", type: "markdown", description: "Owner acceptance, alternates, and advisory limits." },
       { category: "Private Handoff Acceptance", title: "Evidence custody acceptance v5.8", path: "docs/evidence-custody-acceptance-v5.8.md", type: "markdown", description: "Custody acceptance rules." },

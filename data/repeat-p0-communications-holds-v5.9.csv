@@ -1,0 +1,9 @@
+id,topic,owner,defaultState,approvedLine,blockedLine,useWhen
+COM-001,Repeat P0 status,Comms lead,Hold,A private fake/sample repeat P0 run is being prepared.,The pilot is approved or live.,Before repeat run.
+COM-002,Provider boundary,Comms lead,Hold,"No provider has access to real participant, organisation, or Toastmasters records.",A provider has been approved for real records.,Provider questions.
+COM-003,Barayamal sample,Comms lead,Hold,Barayamal is being used as a controlled fake/sample organisation test.,Barayamal participants or real businesses have been onboarded.,Sample track explanation.
+COM-004,First Nations Toastmasters sample,Comms lead,Hold,First Nations Toastmasters is being used as an unofficial fake/sample tester.,Official Toastmasters workflows are active.,Sample track explanation.
+COM-005,Evidence,Comms lead,Hold,Private evidence is not published in the public demo.,Evidence has been publicly released.,Evidence questions.
+COM-006,Live Decidim,Comms lead,Hold,Live Decidim access remains blocked.,A live platform is open.,Technical status.
+COM-007,Outbound email,Comms lead,Hold,No outbound email is active for real participants.,Emails have been sent to participants.,Comms status.
+COM-008,Decision status,Comms lead,Hold,Any pilot decision remains private until owners accept the repeat P0 result.,A pilot decision has been made.,Post-run status.

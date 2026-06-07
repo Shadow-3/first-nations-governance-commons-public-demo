@@ -1,0 +1,11 @@
+id,gate,owner,defaultState,mustPass,ifFails,blockedAction,publicSafeLine
+PRD-001,All P0 scenarios pass,Meeting chair,Blocked,"SCN-001 to SCN-004, SCN-009 to SCN-011, and SCN-014 pass privately.",Repeat remediation.,Pilot decision preparation.,Repeat P0 has not passed.
+PRD-002,Authority final minute accepted,Authority chair,Blocked,Authority chair signs private post-run decision minute.,No-go or repeat remediation.,Pilot approval claims.,No pilot has been approved.
+PRD-003,Privacy signoff accepted,Privacy reviewer,Blocked,"Consent, withdrawal, evidence, and outbound-contact controls pass.",Stop or repeat privacy remediation.,Real participant intake.,No real participant records are used.
+PRD-004,IDS/data signoff accepted,IDS/data steward,Blocked,"Custody, redaction, export, retention, and deletion controls pass.",Repeat data remediation.,Data transfer or provider access.,Data controls remain private.
+PRD-005,Provider boundary accepted,Provider access owner,Blocked,PBT-001 to PBT-008 pass privately.,Provider path remains blocked.,Provider real-record access.,No provider has real-record access.
+PRD-006,Official boundary accepted,Official-route owner,Blocked,Official Toastmasters exclusion remains clean.,Official track remains blocked.,Official workflows.,Official Toastmasters workflows are not active.
+PRD-007,Sample tracks accepted,Sample owners,Hold,Barayamal and FN Toastmasters sample tracks pass with fake/sample data.,Repeat sample remediation.,Real onboarding.,Controlled sample tests remain fake/sample only.
+PRD-008,Public line accepted,Comms lead,Hold,Every public line says preparation only.,Hold external update.,Public launch or pilot claim.,Public status can say preparation only.
+PRD-009,Export packet accepted,Evidence custodian,Hold,"Private minute, evidence index, scenario result, stop-trigger log, and decision packet are complete.",Repeat export preparation.,Public evidence publication.,Private evidence is not published.
+PRD-010,Decision option selected,Authority chair,Blocked,"Proceed to repeat remediation, no-go/archive, or prepare owner-only limited pilot decision after all P0 gates pass.",Continue remediation.,Treating planner as approval.,Any final decision remains private.

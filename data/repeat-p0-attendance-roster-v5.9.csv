@@ -1,0 +1,13 @@
+id,role,owner,requiredFor,defaultState,alternateRule,cannotReplace,publicSafeLine
+ATT-001,Authority chair,Authority chair,Authority and final decision,Blocked,Accepted authority alternate only.,Community/owner authority.,Authority acceptance remains private.
+ATT-002,Privacy reviewer,Privacy reviewer,"Consent, withdrawal, outbound contact, evidence disclosure",Blocked,Accepted privacy alternate only.,Privacy owner signoff.,Privacy acceptance remains private.
+ATT-003,IDS/data steward,IDS/data steward,"Evidence custody, export, retention, deletion",Blocked,Accepted IDS/data alternate only.,Data sovereignty signoff.,IDS/data controls remain private.
+ATT-004,Official-route owner,Official-route owner,Official Toastmasters boundary,Blocked,Accepted official-route alternate only.,Official Toastmasters approval.,Official Toastmasters workflows are not active.
+ATT-005,Provider access owner,Provider access owner,Provider refusal and RFQ boundary,Blocked,Accepted provider alternate only.,Provider real-record authority.,No provider has real-record access.
+ATT-006,Meeting chair,Meeting chair,Run flow and minute lock,Hold,Accepted chair alternate.,Authority approval.,Repeat P0 remains private.
+ATT-007,Evidence custodian,Evidence custodian,Evidence capture and export packet,Hold,Accepted evidence alternate.,IDS/data or privacy signoff.,Private evidence is not published.
+ATT-008,Communications lead,Comms lead,Public line approval,Hold,Accepted comms alternate.,Authority or privacy approval.,Public status says preparation only.
+ATT-009,Technical custodian,Technical custodian,Fake/sample Decidim dry run,Hold,Accepted technical alternate.,Live Decidim approval.,Live Decidim access remains blocked.
+ATT-010,Barayamal sample owner,Barayamal sample owner,Founder/business-owner sample track,Conditional,Accepted Barayamal sample alternate.,Real business authority.,Barayamal remains fake/sample only.
+ATT-011,FN Toastmasters sample owner,FN Toastmasters sample owner,Guest/member-boundary sample track,Conditional,Accepted FN Toastmasters sample alternate.,Official Toastmasters authority.,First Nations Toastmasters remains fake/sample only.
+ATT-012,Dean Foley / Barayamal trusted reviewer,Dean Foley / Barayamal,Advisory technical/usefulness review,Advisory only,Nominated trusted reviewer.,Owner/community authority.,"Dean/Barayamal review is advisory, not approval."

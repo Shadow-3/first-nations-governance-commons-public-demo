@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v5.8  
+Version: v5.9  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -152,6 +152,28 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 142. `docs/public-demo-release-notes-v2.3.md` - v2.3 release summary.
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
+
+## v5.9 Repeat P0 Run Planner Additions
+
+- `repeat-p0-run-planner.html` interactive repeat P0 run planner.
+- `docs/repeat-p0-run-planner-v5.9.md`
+- `docs/repeat-p0-session-script-v5.9.md`
+- `docs/evidence-capture-and-stop-triggers-v5.9.md`
+- `docs/provider-boundary-repeat-test-v5.9.md`
+- `docs/post-run-decision-rules-v5.9.md`
+- `docs/public-demo-release-notes-v5.9.md`
+- `data/repeat-p0-run-schedule-v5.9.csv`
+- `data/repeat-p0-scenario-deck-v5.9.csv`
+- `data/repeat-p0-attendance-roster-v5.9.csv`
+- `data/repeat-p0-evidence-capture-v5.9.csv`
+- `data/repeat-p0-stop-triggers-v5.9.csv`
+- `data/repeat-p0-provider-boundary-tests-v5.9.csv`
+- `data/repeat-p0-sample-track-tests-v5.9.csv`
+- `data/repeat-p0-post-run-decision-gates-v5.9.csv`
+- `data/repeat-p0-communications-holds-v5.9.csv`
+- `data/repeat-p0-export-packets-v5.9.csv`
+- `data/repeat-p0-run-planner-package-v5.9.json`
+
 
 ## v5.8 Private Handoff Acceptance Room Additions
 

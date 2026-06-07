@@ -1,0 +1,11 @@
+id,trigger,area,owner,severity,defaultState,immediateAction,publicSafeLine
+STP-001,Authority or quorum unresolved,Authority,Authority chair,P0,Armed,"Pause run, mark authority scenario blocked, and reschedule only after private authority minute.",No pilot has been approved.
+STP-002,Real participant data appears,Privacy,Privacy reviewer,P0,Armed,"Stop run, isolate record, delete/redact as approved, and record privacy incident route.",No real participant records are used.
+STP-003,IDS/data custody unresolved,IDS/data,IDS/data steward,P0,Armed,Stop evidence export and return to custody acceptance.,Private evidence is not published.
+STP-004,Official Toastmasters record or endorsement appears,Official boundary,Official-route owner,P0,Armed,Stop run and remove official workflow from scope.,Official Toastmasters workflows are not active.
+STP-005,Provider asks for or receives real records,Provider,Provider access owner,P0,Armed,Stop provider path and require refusal/RFQ boundary proof.,No provider has real-record access.
+STP-006,Cultural or sensitive material appears,Cultural safety,Authority chair,P0,Armed,Stop run and escalate to private cultural/data authority.,No cultural or sensitive material is in the public package.
+STP-007,Live credential or production system appears,Technical,Technical custodian,P0,Armed,Stop technical test and revoke/remove credential from the fake/sample environment.,Live Decidim access remains blocked.
+STP-008,Public wording overclaims status,Communications,Comms lead,P0,Armed,Hold public line and replace with preparation-only wording.,Public status can say preparation only.
+STP-009,Support or withdrawal route missing,Support,Support owner,P0,Armed,Stop participant-facing scenario until support and withdrawal route exists.,Support pathways remain rehearsed only.
+STP-010,Any P0 evidence lacks owner signoff,Decision,Meeting chair,P0,Armed,Block final decision minute and return to owner acceptance.,Repeat P0 result is private until accepted.

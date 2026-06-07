@@ -1,0 +1,9 @@
+id,packet,owner,format,defaultState,contains,excludes,useWhen
+REP-001,Repeat P0 run minute shell,Meeting chair,Markdown,Ready,"Run schedule, attendance, selected scenarios, stop triggers, and decision gates.","Real records, credentials, official Toastmasters data.",During repeat run.
+REP-002,Scenario result register,Meeting chair,CSV,Hold,Scenario pass/hold/block outcomes and owner notes.,Private evidence contents.,After each scenario.
+REP-003,Evidence capture index,Evidence custodian,CSV,Hold,"Evidence references, redaction rules, stop triggers, and public-safe lines.",The evidence itself.,During evidence capture.
+REP-004,Provider boundary packet,Provider access owner,Markdown,Blocked,PBT-001 to PBT-008 and ACC-008/HOF-008/EVS-008/OSP-008 chain.,"Provider credentials, real datasets, or private provider correspondence.",During provider retest.
+REP-005,Sample track result packet,Sample owners,Markdown,Ready,Barayamal and FN Toastmasters fake/sample results.,Real business or official member records.,After sample retests.
+REP-006,Stop trigger log,Support owner,CSV,Ready,Triggered or armed stop rules and owner actions.,Private incident contents.,During run.
+REP-007,Public-safe line register,Comms lead,CSV,Hold,Approved preparation-only lines and blocked claims.,Private decisions.,Before any public update.
+REP-008,Post-run decision packet,Authority chair,Markdown,Blocked,Final owner decision options and P0 pass/fail summary.,Pilot approval unless separately accepted.,After repeat P0 run.
