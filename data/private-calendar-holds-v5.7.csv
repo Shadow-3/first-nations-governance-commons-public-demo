@@ -1,0 +1,9 @@
+id,hold,owner,earliestUse,prerequisite,blockedUntil,publicLine,defaultState
+CAL-001,Repeat P0 run,Meeting chair,After v5.7 packet acceptance,All P0 owner handoffs accepted privately,"Authority, privacy, IDS/data, provider, and final-minute gates pass",Repeat P0 run not scheduled publicly.,Hold
+CAL-002,Provider refusal replay,Provider access owner,Before repeat P0 run,Provider safe-alternative and no-real-record line accepted,Provider boundary proof accepted,Provider access remains fake/sample-only.,Hold
+CAL-003,Barayamal sample retest,Barayamal sample owner,During repeat P0 run,Fake founder/business-owner sample accepted or revised,No real business-sensitive fields included,Barayamal sample remains controlled and fake/sample-only.,Queue
+CAL-004,First Nations Toastmasters sample retest,FN Toastmasters sample owner,During repeat P0 run,Guest/member-boundary sample accepted or revised,No official Toastmasters records included,First Nations Toastmasters sample remains unofficial and fake/sample-only.,Queue
+CAL-005,Privacy signoff,Privacy reviewer,Before repeat P0 run,Evidence custody and disclosure rules accepted,Privacy owner signs private minute,Privacy evidence remains private.,Hold
+CAL-006,IDS/data signoff,IDS/data steward,Before repeat P0 run,Custody and data-sovereignty boundaries accepted,IDS/data owner signs private minute,IDS/data controls remain private.,Hold
+CAL-007,Public status release,Comms lead,After private minute acceptance,Only approved public lines selected,Any public line implies launch or official workflows,Public update says preparation only.,Hold
+CAL-008,Final authority minute,Authority chair,After repeat P0 result,All repeat P0 outcomes pass privately,Any blocked owner action remains open,No pilot decision has been made.,Blocked

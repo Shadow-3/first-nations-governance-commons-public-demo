@@ -1,0 +1,9 @@
+id,bundle,owner,format,contains,excludes,useWhen,defaultState
+XHB-001,Private handoff packet,Meeting chair,Markdown,"Selected owner action, evidence custody, repeat gate, and launch block rules","Real records, credentials, official Toastmasters data",End of v5.7 review,Ready
+XHB-002,Owner action register,Action coordinator,CSV,All owner handoff items and required next actions,Private evidence details,Before repeat P0 schedule,Ready
+XHB-003,Evidence custody index,Evidence custodian,CSV,"Private location, owner, disclosure and retention boundaries",The evidence itself,Before repeat P0 schedule,Hold
+XHB-004,Repeat-run schedule gate list,Meeting chair,CSV,"Repeat gate, pass condition, fail action and schedule impact",Calendar invites or private attendee names,Before repeat P0 schedule,Hold
+XHB-005,Public release approval list,Comms lead,CSV,"Approved line, blocked line, release condition",Private owner evidence,Before any public update,Hold
+XHB-006,Provider boundary handoff,Provider access owner,Markdown,"Provider refusal, safe alternative, no-real-record line",Provider credentials or real datasets,Before provider retest,Hold
+XHB-007,Controlled sample handoff,Sample owners,Markdown,Barayamal and First Nations Toastmasters sample checks,Real business or official member records,Before sample retest,Queue
+XHB-008,Final authority decision shell,Authority chair,Markdown,Proceed/repeat/no-go options and unresolved blockers,Final decision until owners approve,After repeat P0 run,Blocked

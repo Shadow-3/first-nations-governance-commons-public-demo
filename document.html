@@ -635,7 +635,7 @@
 <a class="btn" href="pilot-rehearsal-control-room.html">Control Room</a>
 <a class="btn" href="pilot-decision-build-handoff.html">Decision Handoff</a>
 <a class="btn" href="private-owner-decision-meeting.html">Owner Meeting</a>
-<a class="btn" href="private-decision-execution-control.html">Execution Control</a><a class="btn" href="private-evidence-stress-test-lab.html">Stress Lab</a><a class="btn" href="private-stress-lab-run-pack.html">Run Pack</a><a class="btn" href="private-run-results-decision-board.html">Results Board</a><a class="btn" href="p0-remediation-repeat-run-control.html">Repeat Control</a><a class="btn" href="owner-closeout-sprint-pack.html">Closeout Sprint</a><a class="btn" href="closeout-session-runner.html">Session Runner</a>
+<a class="btn" href="private-decision-execution-control.html">Execution Control</a><a class="btn" href="private-evidence-stress-test-lab.html">Stress Lab</a><a class="btn" href="private-stress-lab-run-pack.html">Run Pack</a><a class="btn" href="private-run-results-decision-board.html">Results Board</a><a class="btn" href="p0-remediation-repeat-run-control.html">Repeat Control</a><a class="btn" href="owner-closeout-sprint-pack.html">Closeout Sprint</a><a class="btn" href="closeout-session-runner.html">Session Runner</a><a class="btn" href="post-session-handoff-console.html">Handoff</a>
     <a class="btn" href="index.html">Open Demo</a>
     <a class="btn" href="docs-index.html">Review Pack</a>
     <div class="label">Public demo - fake data only</div>
@@ -686,6 +686,10 @@
       { category: "Start Here", title: "Readme", path: "README.md", type: "markdown", description: "Overview and demo review instructions." },
       { category: "Start Here", title: "Package manifest", path: "package-manifest.json", type: "json", description: "Machine-readable package, deployment, and evidence metadata." },
       { category: "Start Here", title: "Contributing guide", path: "CONTRIBUTING.md", type: "markdown", description: "Contributor lanes, pull request checklist, and fake-data boundary." },
+      { category: "Start Here", title: "Post-session handoff guide", path: "docs/post-session-handoff-console-v5.7.md", type: "markdown", description: "How to use the v5.7 handoff console." },
+      { category: "Start Here", title: "Private owner action handoff", path: "docs/private-owner-action-handoff-v5.7.md", type: "markdown", description: "Owner actions and unresolved blockers." },
+      { category: "Start Here", title: "Evidence custody and repeat schedule", path: "docs/evidence-custody-and-repeat-schedule-v5.7.md", type: "markdown", description: "Evidence custody and repeat-run gates." },
+      { category: "Start Here", title: "Public status release gates", path: "docs/public-status-and-release-gates-v5.7.md", type: "markdown", description: "Public-safe release rules." },
       { category: "Start Here", title: "Closeout session runner guide", path: "docs/closeout-session-runner-v5.6.md", type: "markdown", description: "How to use the v5.6 closeout session runner." },
       { category: "Start Here", title: "Private session facilitation script", path: "docs/private-session-facilitation-script-v5.6.md", type: "markdown", description: "Private facilitation flow." },
       { category: "Start Here", title: "Owner vote and blocker guide", path: "docs/owner-vote-and-blocker-resolution-guide-v5.6.md", type: "markdown", description: "Owner vote rules and blocker resolution." },
@@ -819,6 +823,7 @@
       { category: "Start Here", title: "Sandbox readiness gates", path: "docs/sandbox-readiness-gates-v1.2.md", type: "markdown", description: "Decision gates for moving from review to fake-data sandbox." },
       { category: "Start Here", title: "Next steps action plan", path: "docs/next-steps-action-plan-v1.1.md", type: "markdown", description: "30-day workplan from public review to sandbox decision." },
       { category: "Start Here", title: "Decision memo", path: "docs/decision-memo-v0.7.md", type: "markdown", description: "Recommended decision and no-go rule for the next step." },
+      { category: "Release Notes", title: "Release notes v5.7", path: "docs/public-demo-release-notes-v5.7.md", type: "markdown", description: "Post-Session Handoff upgrade summary." },
       { category: "Release Notes", title: "Release notes v5.6", path: "docs/public-demo-release-notes-v5.6.md", type: "markdown", description: "Closeout Session Runner upgrade summary." },
       { category: "Release Notes", title: "Release notes v5.5", path: "docs/public-demo-release-notes-v5.5.md", type: "markdown", description: "Owner Closeout Sprint Pack upgrade summary." },
       { category: "Release Notes", title: "Release notes v5.4", path: "docs/public-demo-release-notes-v5.4.md", type: "markdown", description: "P0 Remediation Repeat-Run Control upgrade summary." },
@@ -1059,6 +1064,18 @@
       { category: "Pilot Control Tower", title: "Owner actions v3.3", path: "data/control-tower-owner-actions-v3.3.csv", type: "csv", description: "Twelve owner action rows." },
       { category: "Pilot Control Tower", title: "Decision routes v3.3", path: "data/control-tower-decision-routes-v3.3.csv", type: "csv", description: "Eight decision route options." },
       { category: "Pilot Control Tower", title: "Pilot Control Tower package v3.3", path: "data/pilot-control-tower-package-v3.3.json", type: "json", description: "Machine-readable v3.3 control package summary, counts, no-go triggers, source anchors, and control arrays." },
+      { category: "Post-Session Handoff", title: "Handoff guide v5.7", path: "docs/post-session-handoff-console-v5.7.md", type: "markdown", description: "How to use the post-session handoff console." },
+      { category: "Post-Session Handoff", title: "Private owner action handoff v5.7", path: "docs/private-owner-action-handoff-v5.7.md", type: "markdown", description: "Owner actions and unresolved blockers." },
+      { category: "Post-Session Handoff", title: "Evidence custody and repeat schedule v5.7", path: "docs/evidence-custody-and-repeat-schedule-v5.7.md", type: "markdown", description: "Evidence custody and repeat schedule gates." },
+      { category: "Post-Session Handoff", title: "Public status release gates v5.7", path: "docs/public-status-and-release-gates-v5.7.md", type: "markdown", description: "Public-safe release gates." },
+      { category: "Post-Session Handoff", title: "Owner handoff v5.7", path: "data/post-session-owner-handoff-v5.7.csv", type: "csv", description: "Eighteen owner handoff items." },
+      { category: "Post-Session Handoff", title: "Evidence custody checks v5.7", path: "data/evidence-custody-checks-v5.7.csv", type: "csv", description: "Sixteen custody checks." },
+      { category: "Post-Session Handoff", title: "Repeat-run schedule gates v5.7", path: "data/repeat-run-schedule-gates-v5.7.csv", type: "csv", description: "Twelve repeat-run gates." },
+      { category: "Post-Session Handoff", title: "Final decision packet v5.7", path: "data/final-decision-packet-v5.7.csv", type: "csv", description: "Eighteen decision packet items." },
+      { category: "Post-Session Handoff", title: "Private calendar holds v5.7", path: "data/private-calendar-holds-v5.7.csv", type: "csv", description: "Eight private calendar holds." },
+      { category: "Post-Session Handoff", title: "Public release gates v5.7", path: "data/public-release-gates-v5.7.csv", type: "csv", description: "Ten public release gates." },
+      { category: "Post-Session Handoff", title: "Handoff export bundles v5.7", path: "data/handoff-export-bundles-v5.7.csv", type: "csv", description: "Eight export bundles." },
+      { category: "Post-Session Handoff", title: "Post-session handoff package v5.7", path: "data/post-session-handoff-package-v5.7.json", type: "json", description: "Machine-readable v5.7 package." },
       { category: "Closeout Session Runner", title: "Runner guide v5.6", path: "docs/closeout-session-runner-v5.6.md", type: "markdown", description: "How to use the closeout session runner." },
       { category: "Closeout Session Runner", title: "Facilitation script v5.6", path: "docs/private-session-facilitation-script-v5.6.md", type: "markdown", description: "Private facilitation flow." },
       { category: "Closeout Session Runner", title: "Vote and blocker guide v5.6", path: "docs/owner-vote-and-blocker-resolution-guide-v5.6.md", type: "markdown", description: "Owner vote rules and blocker resolution." },

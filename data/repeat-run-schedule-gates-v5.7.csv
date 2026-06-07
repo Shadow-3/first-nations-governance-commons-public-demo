@@ -1,0 +1,13 @@
+id,linkedBlocker,area,owner,gate,defaultState,passCondition,failAction,scheduleImpact
+RRG-001,BRD-001,Authority,Authority chair,Authority owner named,Blocked,Chair and alternate privately recorded,Do not run repeat lab,Do not schedule repeat P0 run.
+RRG-002,BRD-002,Privacy,Privacy reviewer,Consent and privacy copy accepted,Hold,Privacy copy accepted for fake/sample testing,Hold privacy tests,Do not schedule repeat P0 run.
+RRG-003,BRD-003,Privacy,Privacy reviewer,Outbound email disabled or contained,Hold,No real email can send,Hold invite path,Do not schedule repeat P0 run.
+RRG-004,BRD-004,IDS/data,IDS/data reviewer,Export/delete/retention proof accepted,Hold,Data rights drill passes privately,Hold data test,Do not schedule repeat P0 run.
+RRG-005,BRD-005,IDS/data,IDS/data reviewer,Evidence custody index accepted,Hold,Private evidence map and redaction rule pass,Hold public summary,Do not schedule repeat P0 run.
+RRG-006,BRD-006,Support,Support owner,Complaint/pause route accepted,Hold,Support pause and escalation route pass,Hold support test,Do not schedule repeat P0 run.
+RRG-007,BRD-007,Official boundary,Official-route owner,Official Toastmasters boundary accepted,Blocked,No official workflow is active or implied,Keep no-go,Do not schedule repeat P0 run.
+RRG-008,BRD-008,Security,Security reviewer,Security restore and revoke proof accepted,Hold,"Restore, revoke, credential, and log proof pass",Hold live access,Do not schedule repeat P0 run.
+RRG-009,BRD-009,Provider,Provider access owner,Provider refusal script accepted,Hold,Real-record asks are rejected,Hold provider test,Do not schedule repeat P0 run.
+RRG-010,BRD-010,Authority,Barayamal custodian,Barayamal samples accepted,Ready,Blocked fields absent,Revise sample,May schedule linked repeat item after custody check.
+RRG-011,BRD-011,Authority,Training owner,First Nations Toastmasters guest samples accepted,Hold,No official member service implied,Revise sample,Do not schedule repeat P0 run.
+RRG-012,BRD-012,Communications,Comms lead,Public wording accepted,Ready,Preparation-only wording approved,Do not publish update,May schedule linked repeat item after custody check.

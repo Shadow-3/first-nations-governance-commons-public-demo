@@ -1,12 +1,12 @@
 {
   "packageName": "First Nations Governance Commons Public Demo",
-  "version": "5.6",
+  "version": "5.7",
   "date": "2026-06-07",
   "initialDeveloperCustodian": "Barayamal / Dean Foley",
   "mode": "public_demo_fake_sample_data_only",
   "publicUrl": "https://shadow-3.github.io/first-nations-governance-commons-public-demo/",
   "repositoryUrl": "https://github.com/Shadow-3/first-nations-governance-commons-public-demo",
-  "recommendedDecision": "Use v5.6 to rehearse the private owner closeout session, test attendance and evidence votes, resolve or hold blockers, export private minute shells, approve only public-safe lines, and then decide whether the repeat P0 run can be scheduled. Do not proceed to limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, or live Decidim access until v5.6 session minutes are privately accepted, v5.5 owner closeout passes, and the repeat P0 run also passes privately.",
+  "recommendedDecision": "Use v5.7 after the private closeout session to assemble private owner handoff packets, evidence custody checks, repeat-run gates, calendar holds, public release approvals, and export bundles. Do not schedule repeat P0 testing, public updates, limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, or live Decidim access until the v5.7 handoff packet is privately accepted.",
   "localDecidimStatus": {
     "git": "ready: git 2.53.0.windows.2 detected",
     "githubCliAuth": "hold: logged in as Shadow-3 without project scope",
@@ -566,13 +566,27 @@
     "data/public-minute-line-approvals-v5.6.csv",
     "data/session-action-export-queue-v5.6.csv",
     "data/session-export-templates-v5.6.csv",
-    "data/closeout-session-runner-package-v5.6.json"
+    "data/closeout-session-runner-package-v5.6.json",
+    "post-session-handoff-console.html",
+    "docs/post-session-handoff-console-v5.7.md",
+    "docs/private-owner-action-handoff-v5.7.md",
+    "docs/evidence-custody-and-repeat-schedule-v5.7.md",
+    "docs/public-status-and-release-gates-v5.7.md",
+    "docs/public-demo-release-notes-v5.7.md",
+    "data/post-session-owner-handoff-v5.7.csv",
+    "data/evidence-custody-checks-v5.7.csv",
+    "data/repeat-run-schedule-gates-v5.7.csv",
+    "data/final-decision-packet-v5.7.csv",
+    "data/private-calendar-holds-v5.7.csv",
+    "data/public-release-gates-v5.7.csv",
+    "data/handoff-export-bundles-v5.7.csv",
+    "data/post-session-handoff-package-v5.7.json"
   ],
   "deployment": {
     "host": "GitHub Pages",
     "publicBranch": "main",
     "publicPath": "/",
-    "releaseNotes": "docs/public-demo-release-notes-v5.6.md",
+    "releaseNotes": "docs/public-demo-release-notes-v5.7.md",
     "excludedPublicArtifacts": [
       "qa-desktop.png",
       "qa-mobile.png",
@@ -944,7 +958,15 @@
       "qa-v56-deployed-closeout-session-runner-desktop.png",
       "qa-v56-deployed-closeout-session-runner-provider-vote.png",
       "qa-v56-deployed-closeout-session-runner-mobile.png",
-      "qa-v56-deployed-closeout-session-runner-package-mobile.png"
+      "qa-v56-deployed-closeout-session-runner-package-mobile.png",
+      "qa-v57-local-post-session-handoff-desktop.png",
+      "qa-v57-local-post-session-handoff-provider.png",
+      "qa-v57-local-post-session-handoff-mobile.png",
+      "qa-v57-local-post-session-handoff-package-mobile.png",
+      "qa-v57-deployed-post-session-handoff-desktop.png",
+      "qa-v57-deployed-post-session-handoff-provider.png",
+      "qa-v57-deployed-post-session-handoff-mobile.png",
+      "qa-v57-deployed-post-session-handoff-package-mobile.png"
     ]
   },
   "documentViewer": {
@@ -2206,6 +2228,22 @@
       "data/session-action-export-queue-v5.6.csv",
       "data/session-export-templates-v5.6.csv",
       "data/closeout-session-runner-package-v5.6.json"
+    ],
+    "postSessionHandoff": [
+      "post-session-handoff-console.html",
+      "docs/post-session-handoff-console-v5.7.md",
+      "docs/private-owner-action-handoff-v5.7.md",
+      "docs/evidence-custody-and-repeat-schedule-v5.7.md",
+      "docs/public-status-and-release-gates-v5.7.md",
+      "docs/public-demo-release-notes-v5.7.md",
+      "data/post-session-owner-handoff-v5.7.csv",
+      "data/evidence-custody-checks-v5.7.csv",
+      "data/repeat-run-schedule-gates-v5.7.csv",
+      "data/final-decision-packet-v5.7.csv",
+      "data/private-calendar-holds-v5.7.csv",
+      "data/public-release-gates-v5.7.csv",
+      "data/handoff-export-bundles-v5.7.csv",
+      "data/post-session-handoff-package-v5.7.json"
     ]
   },
   "safetyRules": [
@@ -5284,5 +5322,39 @@
     "voteRule": "Each required owner must be present or represented by an accepted alternate before their evidence vote can be counted.",
     "blockerRule": "Any blocked authority, privacy, IDS/data, official boundary, provider, security, support, quorum, or final-minute item keeps the repeat run on hold.",
     "launchBlockRule": "Limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, and live Decidim access remain blocked until the v5.6 session minute is privately accepted, v5.5 owner closeout passes, and the repeat P0 run also passes privately."
+  },
+  "postSessionHandoff": {
+    "entrypoint": "post-session-handoff-console.html",
+    "handoffDoc": "docs/post-session-handoff-console-v5.7.md",
+    "ownerActionDoc": "docs/private-owner-action-handoff-v5.7.md",
+    "custodyDoc": "docs/evidence-custody-and-repeat-schedule-v5.7.md",
+    "publicStatusDoc": "docs/public-status-and-release-gates-v5.7.md",
+    "releaseNotes": "docs/public-demo-release-notes-v5.7.md",
+    "dataFiles": [
+      "data/post-session-owner-handoff-v5.7.csv",
+      "data/evidence-custody-checks-v5.7.csv",
+      "data/repeat-run-schedule-gates-v5.7.csv",
+      "data/final-decision-packet-v5.7.csv",
+      "data/private-calendar-holds-v5.7.csv",
+      "data/public-release-gates-v5.7.csv",
+      "data/handoff-export-bundles-v5.7.csv",
+      "data/post-session-handoff-package-v5.7.json"
+    ],
+    "counts": {
+      "ownerHandoffItems": 18,
+      "evidenceCustodyChecks": 16,
+      "repeatRunGates": 12,
+      "decisionPacketItems": 18,
+      "calendarHolds": 8,
+      "publicReleaseGates": 10,
+      "exportBundles": 8,
+      "blockedHandoffItems": 1,
+      "ownerActionHandoffItems": 14,
+      "totalHandoffRecords": 90
+    },
+    "handoffRule": "Use v5.7 after the private closeout session to assemble owner handoff packets, evidence custody checks, repeat-run schedule gates, public release gates, and export bundles; it is a handoff control layer, not launch approval.",
+    "custodyRule": "Every private evidence item must have an owner, private location, retention boundary, and public disclosure rule before it can support repeat P0 scheduling.",
+    "scheduleRule": "Repeat P0 scheduling remains blocked while any P0 owner action, evidence custody item, provider boundary, authority, privacy, IDS/data, support, security, public release, or final minute item is blocked or held.",
+    "launchBlockRule": "Limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, and live Decidim access remain blocked until the v5.7 handoff packet is privately accepted, the v5.6 session minute is accepted, the v5.5 owner closeout passes, and the repeat P0 run also passes privately."
   }
 }

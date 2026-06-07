@@ -3,7 +3,7 @@
 Status: public demo package  
 Initial developer/custodian: Barayamal / Dean Foley  
 Data status: fake/sample data only
-Current package version: v5.6
+Current package version: v5.7
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/  
 GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-public-demo
 
@@ -79,6 +79,7 @@ Open `private-run-results-decision-board.html` after the controlled fake/sample 
 Open `p0-remediation-repeat-run-control.html` to close P0 owner actions, prepare evidence, confirm quorum, run remediation scripts, and prepare the repeat private fake/sample stress run.
 Open `owner-closeout-sprint-pack.html` to run owner closeout, evidence intake, quorum checks, provider refusal, public status approval, and final proceed/repeat/no-go minutes.
 Open `closeout-session-runner.html` to rehearse attendance, evidence votes, blockers, provider boundary tests, public-line approvals, and private session exports.
+Open `post-session-handoff-console.html` after the private closeout session to assemble owner actions, evidence custody, repeat-run gates, public release approvals, calendar holds, and export bundles.
 
 The demo shows:
 
@@ -110,6 +111,19 @@ The demo shows:
 - `docs/security-baseline-checklist-v0.8.md`
 - `docs/data-classification-matrix-v0.8.md`
 - `docs/static-demo-deployment-checklist-v0.8.md`
+- `docs/public-demo-release-notes-v5.7.md`
+- `docs/post-session-handoff-console-v5.7.md`
+- `docs/private-owner-action-handoff-v5.7.md`
+- `docs/evidence-custody-and-repeat-schedule-v5.7.md`
+- `docs/public-status-and-release-gates-v5.7.md`
+- `data/post-session-owner-handoff-v5.7.csv`
+- `data/evidence-custody-checks-v5.7.csv`
+- `data/repeat-run-schedule-gates-v5.7.csv`
+- `data/final-decision-packet-v5.7.csv`
+- `data/private-calendar-holds-v5.7.csv`
+- `data/public-release-gates-v5.7.csv`
+- `data/handoff-export-bundles-v5.7.csv`
+- `data/post-session-handoff-package-v5.7.json`
 - `docs/public-demo-release-notes-v5.6.md`
 - `docs/closeout-session-runner-v5.6.md`
 - `docs/private-session-facilitation-script-v5.6.md`
@@ -1170,6 +1184,22 @@ The v3.0 package adds the end-of-pilot decision layer needed after the first con
 - Package manifest coverage for the new private pilot closeout evidence group.
 
 Use this version after v2.9 launch learning. Private Pilot Closeout Decision still uses public fake/sample templates only. Real closeout requires a separate approved private environment, deletion/retention proof, access revocation or renewal, incident closeout, official Toastmasters handoff boundary, public summary redaction QA, and an accountable proceed, hold, no-go, archive, or second-pilot decision.
+
+## v5.7 Post-Session Handoff Console Upgrade
+
+The v5.7 package turns the v5.6 session runner output into a private handoff control layer:
+
+- 18 owner handoff items.
+- 16 evidence custody checks.
+- 12 repeat-run schedule gates.
+- 18 final decision packet items.
+- 8 private calendar holds.
+- 10 public release gates.
+- 8 export bundles.
+- 90 total handoff records.
+
+The public console prepares private handoff artifacts only. It does not approve limited private pilot, provider real-record access, outbound email, official Toastmasters workflows, or live Decidim access.
+
 
 ## v5.6 Closeout Session Runner Upgrade
 

@@ -1,6 +1,6 @@
 # First Nations Governance Commons Public Demo Package Index
 
-Version: v5.6  
+Version: v5.7  
 Initial developer/custodian: Barayamal / Dean Foley  
 Mode: public demo with fake/sample data only
 Public demo: https://shadow-3.github.io/first-nations-governance-commons-public-demo/
@@ -152,6 +152,24 @@ GitHub repository: https://github.com/Shadow-3/first-nations-governance-commons-
 142. `docs/public-demo-release-notes-v2.3.md` - v2.3 release summary.
 143. `docs/public-demo-release-notes-v2.2.md` - v2.2 release summary.
 144. `docs/public-demo-release-notes-v2.1.md` - v2.1 release summary.
+
+## v5.7 Post-Session Handoff Console Additions
+
+- `post-session-handoff-console.html` interactive post-session handoff console.
+- `docs/post-session-handoff-console-v5.7.md` handoff guide.
+- `docs/private-owner-action-handoff-v5.7.md` owner action handoff guide.
+- `docs/evidence-custody-and-repeat-schedule-v5.7.md` custody and repeat schedule guide.
+- `docs/public-status-and-release-gates-v5.7.md` public status gate guide.
+- `docs/public-demo-release-notes-v5.7.md` release notes.
+- `data/post-session-owner-handoff-v5.7.csv`
+- `data/evidence-custody-checks-v5.7.csv`
+- `data/repeat-run-schedule-gates-v5.7.csv`
+- `data/final-decision-packet-v5.7.csv`
+- `data/private-calendar-holds-v5.7.csv`
+- `data/public-release-gates-v5.7.csv`
+- `data/handoff-export-bundles-v5.7.csv`
+- `data/post-session-handoff-package-v5.7.json`
+
 
 ## v5.6 Closeout Session Runner Additions
 
